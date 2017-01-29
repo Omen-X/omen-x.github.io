@@ -6,3 +6,4 @@ gulpfile.js
 package.json
 semantic.json
 *.psd
+*.png
