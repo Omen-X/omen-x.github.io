@@ -5,18 +5,6 @@
 // Define touch devices
 var isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
 
-// Preload images
-
-var imgSrc = [];
-
-var imgItems = [];
-
-imgSrc.forEach(function (val, i) {
-	var img = new Image();
-	img.src = val;
-	imgItems.push(img);
-});
-
 // ========>> DOCUMENT READY <<========
 
 
@@ -24,10 +12,12 @@ $(document).ready(function () {
 
 	// Preloader
 
-	$('#loader').fadeOut(200);
-	setTimeout(function () {
-		$('#loader').remove();
-	}, 210);
+	if ($('#loader').length) {
+		$('#loader').fadeOut(200);
+		setTimeout(function () {
+			$('#loader').remove();
+		}, 1000);
+	}
 
 	// Equal height
 
@@ -56,13 +46,6 @@ $(document).ready(function () {
 	}
 
 	showScroll();
-
-	// ========>> CUSTOM <<========
-
-	var currentYear = new Date().getFullYear();
-	$(document).ready(function () {
-		$("#copyright-year").text(new Date().getFullYear());
-	});
 
 	// ========>> MAIN-NAV <<========
 
@@ -109,7 +92,7 @@ $(document).ready(function () {
 	if ($('.flexslider').length) {
 		setInterval(function () {
 			$('.flexslider').flexslider("next"); //Go to next slide`
-		}, 5000);
+		}, 10000);
 	}
 
 	// ========>> GALLERY <<========
@@ -118,12 +101,16 @@ $(document).ready(function () {
 		$('.auto__items a').touchTouch();
 	}
 
+	// ========>> FORMS <<========
+
+
 	// ========>> ORDER FORM <<========
 
 	var formLayer = $('.forms-layer');
 	var orderName = $('.order__name');
 	var order = $('.order');
 	var orderBtn = $('.services__item-btn');
+	var orderNameHidden = $('#order_name');
 
 	orderBtn.on('click', function (e) {
 		var currName = $(e.target).siblings('.services__item-title').text();
@@ -131,11 +118,40 @@ $(document).ready(function () {
 		order.fadeIn(250);
 		orderName.text(currName);
 		formLayer.fadeIn(200);
+
+		// set order name in hidden input
+		orderNameHidden.val(currName);
 	});
 
 	formLayer.on('click', function (e) {
 		order.fadeOut(200);
+		$('.forms-succes').fadeOut();
 		$(this).fadeOut(250);
+	});
+
+	// ========>> COLLABORATE FORM <<========
+
+	var collaborateBtn = $('.collaborate__btn');
+	var collaborateForm = $('.collaborate__form');
+	var collaborateSubmit = $('.collaborate__submit');
+
+	collaborateBtn.on('click', function () {
+		collaborateForm.fadeIn(200);
+		formLayer.fadeIn(200);
+	});
+
+	formLayer.on('click', function (e) {
+		collaborateForm.fadeOut(200);
+		$(this).fadeOut(250);
+	});
+
+	// ========>> MAP FORM <<========
+
+	var mapGetBtn = $('.map__get-btn');
+	var mapOrder = $('.map__order');
+
+	mapGetBtn.on('click', function (e) {
+		mapOrder.fadeToggle(200);
 	});
 
 	// ========>> RESIZE <<========

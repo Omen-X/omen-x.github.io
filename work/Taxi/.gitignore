@@ -9,3 +9,6 @@ semantic.json
 *.psd
 gulpfile.babel.js
 .babelrc
+wp
+.settings
+documents
