@@ -91,8 +91,8 @@ $(document).ready(function () {
 
 	if ($('.flexslider').length) {
 		setInterval(function () {
-			$('.flexslider').flexslider("next"); //Go to next slide`
-		}, 10000);
+			$('.flexslider').flexslider("next"); //Go to next slider
+		}, 14000);
 	}
 
 	// ========>> GALLERY <<========
@@ -133,7 +133,6 @@ $(document).ready(function () {
 
 	var collaborateBtn = $('.collaborate__btn');
 	var collaborateForm = $('.collaborate__form');
-	var collaborateSubmit = $('.collaborate__submit');
 
 	collaborateBtn.on('click', function () {
 		collaborateForm.fadeIn(200);
@@ -145,14 +144,48 @@ $(document).ready(function () {
 		$(this).fadeOut(250);
 	});
 
+	setTimeout(function () {
+		// location.reload(true);
+	}, 10);
+
 	// ========>> MAP FORM <<========
 
-	var mapGetBtn = $('.map__get-btn');
-	var mapOrder = $('.map__order');
+	// disable class remove in deliveryCalculator.js (route func)
 
-	mapGetBtn.on('click', function (e) {
-		mapOrder.fadeToggle(200);
+	var mapOrder = $('.map__order'),
+	    mapFromInput = $('.map__from'),
+	    mapToInput = $('.map__to'),
+	    mapCost = $('.map__cost'),
+	    mapBtns = $('.map__btns'),
+	    mapRoute = $('#route'),
+	    mapSubmit = $('.map__submit');
+
+	// Date picker
+
+	$('.map__order-date').intimidatetime();
+
+	// Default disable map
+	mapOrder.find('input, textarea').attr('disabled', '');
+
+	mapBtns.on('click', function (e) {
+		if ($(e.target)[0] == mapRoute[0]) {
+			mapFromInput.val($('#suggest_start').val());
+			mapToInput.val($('#suggest_finish').val());
+
+			// reserve, set cost value (if mapOrder click happen after submit form)
+			mapCost.val($('#cost').text());
+		}
 	});
+
+	mapOrder.on('click', function (e) {
+		if ($(e.target)[0] == mapSubmit[0]) {
+			mapCost.val($('#cost').text());
+		}
+	});
+
+	// Masked input
+
+	$('.form__tel').mask('+7 (999) 999 9999');
 
 	// ========>> RESIZE <<========
 
