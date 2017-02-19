@@ -4,10 +4,10 @@
 
 	"default": {
 
-		"host": "ftp.projects.nichost.ru",
-		"username": "projects_ftp",  // or null for anonymous login
-		"password": "k-w2OWAt",
-		"path": "/projects.nichost.ru/",
+		"host": "Road.ru.com",
+		"username": "u0305339",  // or null for anonymous login
+		"password": "wGxv896p",
+		"path": "/www/road.ru.com/",
 
 		"upload_on_save": true, // set *false* if you do not want to upload on save!
 
