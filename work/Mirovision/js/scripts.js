@@ -1,6 +1,32 @@
 // JavaScript Document
 $(document).ready(function(){
 
+// ========>> SCROLL TO TOP BTN <<========
+
+var toTop = $('#to-top');
+
+toTop.on('click', function () {
+  $('html, body').animate({scrollTop: 0}, 550);
+});
+
+window.addEventListener('scroll', function(e) {
+  showScroll();
+});
+
+function showScroll() {
+  if (window.pageYOffset > document.documentElement.clientHeight) {
+    toTop.addClass('to-top_visible');
+  } else {
+    toTop.removeClass('to-top_visible');
+  }
+}
+
+showScroll();
+
+
+
+/* end scroll to top btn */
+
 	
 $('.pull').click(function(){
 		 $(this).parents('.top').find('ul').slideToggle(400);  
