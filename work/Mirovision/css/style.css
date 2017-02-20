@@ -436,7 +436,7 @@ transform: rotate(193deg);}
 
 
 .uslugi_txt p{font-size: 16px;line-height: 24px;font-family: 'MullerRegular';}
-.block9{padding-bottom: 40px;background: url(../img/bg/4.jpg) no-repeat top right;background-size: cover;}
+.block9{padding-bottom: 40px;background: url(../img/bg/iphone_sms.jpg) no-repeat right ;}
 	
 .uvedomlenie_txt {text-align: center;width: 100%;max-width: 970px;margin: 0 auto;padding: 25px 10px;position: relative;color:#0A1720;}
 .uvedomlenie_txt:before{content: '';position: absolute;bottom: -25px;left:0;width: 100%;height: 16%; border-bottom: 1px solid  #7667CD; border-right: 1px solid  #7667CD; }
