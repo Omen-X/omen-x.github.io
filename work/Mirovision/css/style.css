@@ -857,7 +857,7 @@ position: absolute;top:50%;margin-top:-23px;width: 64px;height: 46px;opacity: 0.
 }
 @media (max-width: 666px){
 	.online_item {
-    width: 49%;margin-bottom: 35px;
+    width: 49%;margin-bottom: 35px; float: none; display: inline-block; vertical-align: top;
 }
 
 	.clients_txt:after{
@@ -957,6 +957,11 @@ transition:  all 0.3s ease-out;}
 
 }
 @media (max-width: 567px){
+
+	.online_item {
+	    display: block; width: 100%;margin-bottom: 35px; 
+	}
+
 	.wrap_tarifu p {
     font-size: 14px;
     line-height: 32px;
