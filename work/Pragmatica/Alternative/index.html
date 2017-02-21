@@ -40,10 +40,7 @@
 		document.body.insertAdjacentHTML('afterbegin', '<div id="loader"></d')
 	</script>
 
-	
-
-
-<header class="header">
+	<header class="header">
 	<div class="header__top content-w">
 		<div class="nav-mob-button"></div>
 		<div class="logo">
@@ -54,38 +51,41 @@
 		</div>
 		<div class="header__info hidden-phone">
 			<div class="short-info">
-				<a href="mailto:alternativa.sibirnsk@gmеail.com" class="short-info__text">alternativa.sibirnsk@gmеail.com</a href="#">
-				</div>
-				<a href="tel:3833304567" class="header__phone h5">
-					<span class="header__phone-indx ">(383) </span>330-45-67
-				</a>
-			</div><!-- end header__info -->
-			<button class="cta-btn">Подать заявку</button>
-			<div class="header__msg visible-phone"></div>
-		</div><!-- end header__top -->
-		<div class="header__nav">
-			<div class="header__nav-wrap content-w">
-				<nav class="nav">
-					<div class="nav__shade"></div>
-					<div class="nav__list-wrap">
-						<ul class="nav__list">
-							<li class="active"><a href="#">Главная</a></li>
-							<li><a href="./inner.html">О компании</a></li>
-							<li><a href="./inner.html">Услуги</a></li>
-							<li><a href="./inner.html">Стоимость обслуживания</a></li>
-							<li><a href="./inner.html">контакты</a></li>
-						</ul>
-						<div class="nav__contacts">
-							<span class="nav__contacts-city">г.Новосибирск</span>
-							<span class="nav__contacts-phone">219-13-45</span>
-						</div>
+				<a href="mailto:alternativa.sibirnsk@gmеail.com" class="short-info__text">alternativa.sibirnsk@gmеail.com</a>
+			</div>
+			<a href="tel:3833304567" class="header__phone h5">
+				<span class="header__phone-indx ">(383) </span>330-45-67
+			</a>
+		</div><!-- end header__info -->
+		<button class="cta-btn">Подать заявку</button>
+		<div class="header__msg visible-phone"></div>
+	</div><!-- end header__top -->
+	<div class="header__nav">
+		<div class="header__nav-wrap content-w">
+			<nav class="nav">
+				<div class="nav__shade"></div>
+				<div class="nav__list-wrap">
+					<ul class="nav__list">
+						<li class="active"><a href="#">Главная</a></li>
+						<li><a href="./inner.html">О компании</a></li>
+						<li><a href="./inner.html">Услуги</a></li>
+						<li><a href="./inner.html">Стоимость обслуживания</a></li>
+						<li><a href="./inner.html">контакты</a></li>
+					</ul>
+					<div class="nav__contacts">
+						<span class="nav__contacts-city">г.Новосибирск</span>
+						<span class="nav__contacts-phone">219-13-45</span>
 					</div>
-					<div class="nav__mob-button"></div>
-				</nav>
-				<button class="cta-btn">Подать заявку</button>
-			</div><!-- end header__nav-wrap -->
-		</div><!-- end header__nav -->
-	</header>
+				</div>
+				<div class="nav__mob-button"></div>
+			</nav>
+			<button class="cta-btn">Подать заявку</button>
+		</div><!-- end header__nav-wrap -->
+	</div><!-- end header__nav -->
+</header>
+
+
+	
 
 	<main class="main">
 		<!-- WELCOME SECTION -->
@@ -273,7 +273,13 @@
 <!-- end sheme -->
 </main>
 
-<footer class="footer">
+
+
+
+
+	<button id="to-top" class="to-top"></button>
+
+	<footer class="footer">
 	<div class="footer__content content-w">
 		<div class="logo footer__logo"><a href="./index.html" class="logo__link h6">Альтернатива</a>	<div class="footer__copy">
 		<p>&copy;2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
@@ -283,19 +289,19 @@
 		<div class="footer__nav">
 			<h3 class="footer__title h9">Разделы</h3>
 			<ul class="footer__nav-list">
-				<li><a href="#" class="t5">Главная</a></li>
-				<li><a href="#" class="t5">о компании</a></li>
-				<li><a href="#" class="t5">Услуги</a></li>
-				<li><a href="#" class="t5">Стоимость оБслуживания</a></li>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">о компании</a></li>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#">Стоимость оБслуживания</a></li>
 			</ul>
 		</div>
 		<div class="footer__contacts">
 			<h3 class="h9 footer__title">Контакты</h3>
-			<p class="footer__contacts__item t4">Новосибирск, ул. Центральная офис 54</p>
-			<p class="footer__contacts__item t4">(383) 337 - 04 - 27</p>
-			<p class="footer__contacts__item t4">
-				<a href="mailto:alternativa.sibirnsk@gmеail.com">alternativa.sibirnsk@gmail.com</a>
-			</p>
+			<div class="footer__contacts-items">
+				<p>Новосибирск, ул. Центральная офис 54</p>
+				<p>(383) 337 - 04 - 27</p>
+				<p>alternativa.sibirnsk@gmail.com</p>
+			</div>
 		</div>
 	</div><!-- end footer__content -->
 	<div class="footer__copy content-w">
@@ -304,9 +310,6 @@
 </footer>
 
 
-
-
-	<button id="to-top" class="to-top"></button>
 	<!-- Optimized loading JS Start -->
 	<script>
 		var ver = 1;

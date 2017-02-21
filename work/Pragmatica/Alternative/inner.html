@@ -40,33 +40,24 @@
 		document.body.insertAdjacentHTML('afterbegin', '<div id="loader"></d')
 	</script>
 
-	
-
-
-<header class="header">
+	<header class="header">
 	<div class="header__top content-w">
 		<div class="nav-mob-button"></div>
-		<div class="logo"><a href="./" class="logo__link h6">Ваш логотип</a></div>
+		<div class="logo">
+			<a href="./index.html" class="logo__link h6">
+				<span>Альтернатива</span><br>
+				<span>бухгалтерские услуги</span>
+			</a>
+		</div>
 		<div class="header__info hidden-phone">
 			<div class="short-info">
-				<div class="icon-rounded short-info__img"></div>
-				<p class="short-info__text">Контактная информация</p>
+				<a href="mailto:alternativa.sibirnsk@gmеail.com" class="short-info__text">alternativa.sibirnsk@gmеail.com</a>
 			</div>
-			<div class="short-info hidden-tbl">
-				<div class="icon-rounded short-info__img"></div>
-				<p class="short-info__text">
-					<a href="#" class="short-info__link">Дополнительная ссылка</a>
-				</p>
-			</div>
-		</div><!-- end header__info -->
-		<div class="header__contacts hidden-phone">
-			<p class="header__phone h5">
+			<a href="tel:3833304567" class="header__phone h5">
 				<span class="header__phone-indx ">(383) </span>330-45-67
-			</p>
-			<p class="header__visiting">
-				пн.-пт.: с 9-00 до 18-00
-			</p>
-		</div>
+			</a>
+		</div><!-- end header__info -->
+		<button class="cta-btn">Подать заявку</button>
 		<div class="header__msg visible-phone"></div>
 	</div><!-- end header__top -->
 	<div class="header__nav">
@@ -75,11 +66,11 @@
 				<div class="nav__shade"></div>
 				<div class="nav__list-wrap">
 					<ul class="nav__list">
-						<li class="active"><a href="#">Название меню</a></li>
-						<li><a href="#">Название меню_2</a></li>
-						<li><a href="#">Название меню_3</a></li>
-						<li><a href="#">Название меню_4</a></li>
-						<li><a href="#">Название меню_5</a></li>
+						<li class="active"><a href="#">Главная</a></li>
+						<li><a href="./inner.html">О компании</a></li>
+						<li><a href="./inner.html">Услуги</a></li>
+						<li><a href="./inner.html">Стоимость обслуживания</a></li>
+						<li><a href="./inner.html">контакты</a></li>
 					</ul>
 					<div class="nav__contacts">
 						<span class="nav__contacts-city">г.Новосибирск</span>
@@ -93,15 +84,16 @@
 	</div><!-- end header__nav -->
 </header>
 
+
+	
+
+
 <main class="main">
 	<section class="welcome welcome_inner">
 		<div class="welcome-slider__item" style="background-image: url('img/content/slide-1.jpg')">
 			<div class="welcome__content content-w">
-				<h3 class="welcome-slider__sub-title s1">Маленький заголовок</h3>
-				<h2 class="welcome-slider__title h1">Нужен заголовок?<br> Получите уже сегодня</h2>
-				<p class="welcome-slider__text t2">
-					Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.
-				</p>
+				<h3 class="welcome-slider__sub-title s1">Деятельность</h3>
+				<h2 class="welcome-slider__title h1">Бухгалтерские услуги в Новосибирске</h2>
 			</div>
 		</div>
 	</section>
@@ -118,105 +110,79 @@
 				<div class="articles__items">
 					<article class="articles__item">
 						<div class="articles__img"><img src="img/content/article.jpg" alt="article-image"></div>
-						<h4 class="articles__date s5">19 Сентября 2016</h4>
-						<h3 class="h8 articles__name">Заголовок рубрики</h3>
-						<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
+						<div class="articles__content">
+							<h3 class="h8 articles__name">Заголовок рубрики</h3>
+							<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
+						</div>
 					</article>
 					<article class="articles__item">
 						<div class="articles__img"><img src="img/content/article.jpg" alt="article-image"></div>
-						<h4 class="articles__date s5">19 Сентября 2016</h4>
-						<h3 class="h8 articles__name">Заголовок рубрики</h3>
-						<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
+						<div class="articles__content">
+							<h3 class="h8 articles__name">Заголовок рубрики</h3>
+							<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой lorem44 точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
+						</div>
 					</article>
 					<article class="articles__item">
 						<div class="articles__img"><img src="img/content/article.jpg" alt="article-image"></div>
-						<h4 class="articles__date s5">19 Сентября 2016</h4>
-						<h3 class="h8 articles__name">Заголовок рубрики</h3>
-						<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
+						<div class="articles__content">
+							<h3 class="h8 articles__name">Заголовок рубрики</h3>
+							<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
+						</div>
 					</article>
-					<article class="articles__item">
-						<div class="articles__img"><img src="img/content/article.jpg" alt="article-image"></div>
-						<h4 class="articles__date s5">19 Сентября 2016</h4>
-						<h3 class="h8 articles__name">Заголовок рубрики</h3>
-						<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
-					</article>
-					<article class="articles__item">
-						<div class="articles__img"><img src="img/content/article.jpg" alt="article-image"></div>
-						<h4 class="articles__date s5">19 Сентября 2016</h4>
-						<h3 class="h8 articles__name">Заголовок рубрики</h3>
-						<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
-					</article>
-					<article class="articles__item">
-						<div class="articles__img"><img src="img/content/article.jpg" alt="article-image"></div>
-						<h4 class="articles__date s5">19 Сентября 2016</h4>
-						<h3 class="h8 articles__name">Заголовок рубрики</h3>
-						<p class="t3 articles__text">Новые приложения для мобильных устройств, которые позволят вам работать из любой точки мира. Теперь все ваши ресурсы всегда под рукой.</p>
-					</article>
+
 				</div><!-- end articles__items -->
 				<div class="articles__more"><button>Загрузить еще</button></div>
 			</div><!-- end articles -->
 		</div><!-- end inner-content -->
 		<div class="sidebar">
 			<div class="sidebar-block">
-				<h3 class="s1">Название раздела</h3>
-				<a href="" class="sidebar-block__link">Подраздел номер 1</a>
-				<a href="" class="sidebar-block__link">Подраздел номер 2</a>
-				<a href="" class="sidebar-block__link">Подраздел номер 3</a>
-				<a href="" class="sidebar-block__link">Подраздел номер 4</a>
-			</div>
-			<div class="sidebar-block">
-				<h3 class="s1">Название раздела</h3>
-				<a href="" class="sidebar-block__link">Подраздел номер 1</a>
-				<a href="" class="sidebar-block__link">Подраздел номер 2</a>
-				<a href="" class="sidebar-block__link">Подраздел номер 3</a>
-				<a href="" class="sidebar-block__link">Подраздел номер 4</a>
-			</div>
-			<div class="sidebar-adv">
-				<h3 class="h5">Рекламный слоган</h3>
-				<p class="t3">
-					Покупайте уже сегодня нашу самую качественную продукцию
-				</p>
-				<a href="#" class="sidebar-adv__link">Узнайте больше</a>
+				<h3 class="s1">Услуги</h3>
+				<div class="sidebar-block__links">
+					<a href="#">Подраздел номер 1</a>
+					<a href="#">Другой номер подраздела</a>
+					<a href="#">Очень длинный заголовок раздела</a>
+					<a href="#">Еще один раздел</a>
+				</div>
 			</div>
 		</div><!-- end sidebar -->
 	</section>
 </main>
-<footer class="footer section">
-	<div class="footer__content content-w">
-		<div class="logo footer__logo"><a href="./" class="logo__link h6">Ваш логотип</a></div>
-		<div class="footer__nav">
-			<h3 class="footer__title h9">Разделы</h3>
-			<ul class="footer__nav-list">
-				<li><a href="#" class="t4">Название меню 1</a></li>
-				<li><a href="#" class="t4">Название меню 2</a></li>
-				<li><a href="#" class="t4">Название меню 3</a></li>
-				<li><a href="#" class="t4">Название меню 4</a></li>
-			</ul>
-		</div>
-		<div class="footer__contacts">
-			<h3 class="h9 footer__title">Контакты</h3>
-			<p class="footer__contacts__item t4">Город, фактический адрес, офис</p>
-			<p class="footer__contacts__item t4">Контактный телефон</p>
-			<p class="footer__contacts__item t4">E-mail</p>
-		</div>
-		<div class="footer__social">
-			<h3 class="h9 footer__title">Мы в соцсетях</h3>
-			<ul class="footer__social-list">
-				<li><a href="#" style="background-position: 0 0;" ></a></li>
-				<li><a href="#" style="background-position: 0 -40px;"></a></li>
-				<li><a href="#" style="background-position: 0 -80px;"></a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="footer__copy content-w">
-		<p>&copy;2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
-	</div>
-</footer>
-
 
 
 
 	<button id="to-top" class="to-top"></button>
+
+	<footer class="footer">
+	<div class="footer__content content-w">
+		<div class="logo footer__logo"><a href="./index.html" class="logo__link h6">Альтернатива</a>	<div class="footer__copy">
+		<p>&copy;2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+	</div>
+
+		</div>
+		<div class="footer__nav">
+			<h3 class="footer__title h9">Разделы</h3>
+			<ul class="footer__nav-list">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">о компании</a></li>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#">Стоимость оБслуживания</a></li>
+			</ul>
+		</div>
+		<div class="footer__contacts">
+			<h3 class="h9 footer__title">Контакты</h3>
+			<div class="footer__contacts-items">
+				<p>Новосибирск, ул. Центральная офис 54</p>
+				<p>(383) 337 - 04 - 27</p>
+				<p>alternativa.sibirnsk@gmail.com</p>
+			</div>
+		</div>
+	</div><!-- end footer__content -->
+	<div class="footer__copy content-w">
+		<p>&copy;2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+	</div>
+</footer>
+
+
 	<!-- Optimized loading JS Start -->
 	<script>
 		var ver = 1;
