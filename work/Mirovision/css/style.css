@@ -691,6 +691,10 @@ position: absolute;top:50%;margin-top:-23px;width: 64px;height: 46px;opacity: 0.
     height: 384px;
 }
 	
+	.block9 {
+		background: #FFF;
+	}
+
 
 }
 @media (max-width: 1099px){
