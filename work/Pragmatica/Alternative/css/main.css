@@ -1674,6 +1674,7 @@ a {
     margin-bottom: 0;
     padding: 1.5625rem 1.25rem 0.9375rem;
     background-color: #66b4dd;
+    text-transform: uppercase;
     color: #FFF; }
 
 .sidebar-block__links {
