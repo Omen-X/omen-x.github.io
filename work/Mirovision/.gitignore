@@ -12,3 +12,4 @@ gulpfile.babel.js
 documents
 docs
 ftpsync.settings
+dist
