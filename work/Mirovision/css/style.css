@@ -658,7 +658,7 @@ position: absolute;top:50%;margin-top:-23px;width: 64px;height: 46px;opacity: 0.
 	}
 
 	.mob_img {
-		width: 27%;
+		width: 25%;
 	}
 
 	.block5 .wrap_monitor {
@@ -709,6 +709,10 @@ position: absolute;top:50%;margin-top:-23px;width: 64px;height: 46px;opacity: 0.
     width: 347px;
     height: 283px;
 }
+
+	.mob_img {
+		width: 22%;
+	}
 }
 @media (max-width: 1023px){
 
