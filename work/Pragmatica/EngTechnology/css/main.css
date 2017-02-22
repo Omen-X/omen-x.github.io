@@ -749,7 +749,8 @@ a {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  min-height: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   -ms-flex-align: center;
       align-items: center; }
 
@@ -1556,7 +1557,7 @@ a {
   body.no-touch .footer__nav-list a:hover {
     color: #FD7721; }
 
-.breadcrumbs a, .breadcrumbs span {
+.breadcrumbs a, .breadcrumbs span1 {
   color: #0263b2; }
 
 .articles-row .articles__title {
