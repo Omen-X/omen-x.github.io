@@ -12,3 +12,4 @@ gulpfile.babel.js
 wp
 .settings
 documents
+ftpsync.settings

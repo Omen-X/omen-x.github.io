@@ -136,17 +136,26 @@ $(document).ready(function () {
 
 	collaborateBtn.on('click', function () {
 		collaborateForm.fadeIn(200);
+		$(document.body).addClass('modal-open');
+		$(document.documentElement).addClass('modal-open');
 		formLayer.fadeIn(200);
 	});
 
 	formLayer.on('click', function (e) {
 		collaborateForm.fadeOut(200);
 		$(this).fadeOut(250);
+		$(document.body).removeClass('modal-open');
+		$(document.documentElement).removeClass('modal-open');
 	});
 
-	setTimeout(function () {
-		// location.reload(true);
-	}, 10);
+	collaborateForm.on('click', function (e) {
+		if ($(e.target)[0] == collaborateForm[0]) {
+			$(this).fadeOut(250);
+			formLayer.fadeOut(250);
+			$(document.body).removeClass('modal-open');
+			$(document.documentElement).removeClass('modal-open');
+		}
+	});
 
 	// ========>> MAP FORM <<========
 

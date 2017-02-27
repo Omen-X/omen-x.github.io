@@ -6,7 +6,7 @@
 
 		"host": "Road.ru.com",
 		"username": "u0305339",  // or null for anonymous login
-		"password": "wGxv896p",
+		"password": "hUzSJHIo",
 		"path": "/www/road.ru.com/",
 
 		"upload_on_save": true, // set *false* if you do not want to upload on save!
