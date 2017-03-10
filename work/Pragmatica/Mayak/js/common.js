@@ -32,7 +32,7 @@ function welcomeSlider() {
 			fade: true,
 			dots: true,
 			arrows: false,
-			// autoplay: true,
+			autoplay: true,
 			autoplaySpeed: 5000,
 			speed: 1100,
 			cssEase: 'cubic-bezier(.38,.2,.25,.97)'
