@@ -1230,7 +1230,9 @@ button.welcome__call {
 .comment__author {
   margin-right: 25px;
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; }
+      flex-basis: 100%;
+  max-width: 132px;
+  min-width: 100px; }
 
 .comment__text {
   margin-bottom: 20px;
