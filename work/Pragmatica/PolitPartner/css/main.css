@@ -1286,8 +1286,10 @@ button.welcome__call {
 
 .developed {
   margin-top: 40px; }
-  .developed span span {
-    color: #be1e2d; }
+  .developed span {
+    color: #FFF; }
+    .developed span span {
+      color: #be1e2d; }
 
 /**
  * =============================
