@@ -1226,6 +1226,8 @@ button.welcome__call {
       flex: auto; }
 
 .comment__text {
+  -ms-flex: 1;
+      flex: 1;
   margin-bottom: 20px;
   font-size: 1.125rem;
   line-height: 1.3; }
@@ -1304,7 +1306,7 @@ button.welcome__call {
   opacity: .8;
   margin-bottom: 35px;
   font-size: 1.125rem;
-  text-align: center;
+  text-align: right;
   font-family: 'Arial', sans-serif; }
 
 .content-w {
