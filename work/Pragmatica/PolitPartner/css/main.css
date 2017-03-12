@@ -1221,7 +1221,9 @@ button.welcome__call {
     bottom: 60%; }
 
 .comment__author {
-  margin-right: 25px; }
+  margin-right: 25px;
+  -ms-flex: auto;
+      flex: auto; }
 
 .comment__text {
   margin-bottom: 20px;
