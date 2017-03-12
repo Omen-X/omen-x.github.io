@@ -50,8 +50,8 @@ function eventsSlider() {
 			slidesToScroll: 1,
 			dots: false,
 			arrows: true,
-			autoplay: true,
-			autoplaySpeed: 5000,
+			// autoplay: true,
+			// autoplaySpeed: 5000,
 			speed: 1100,
 			cssEase: 'cubic-bezier(.38,.2,.25,.97)'
 		});
