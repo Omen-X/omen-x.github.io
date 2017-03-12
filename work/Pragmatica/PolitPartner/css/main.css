@@ -291,7 +291,7 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
-  font-family: "Times New Roman", serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   color: #110f0f; }
 
@@ -322,7 +322,7 @@ button {
     font-size: 16px; } }
 
 button {
-  font-family: "Times New Roman", serif; }
+  font-family: Arial, sans-serif; }
 
 /* FONTS */
 /* BLOCKS */
@@ -405,10 +405,8 @@ button {
  */
 .s1, .s2, .s3, .s4, .s5,
 .h1, .h2, .h3, .h4, .h5, .h6, .h7, .h8, .h9 {
-  font-family: "Times New Roman", serif; }
-
-.s1, .s2, .s3, .s4, .s5 {
-  color: #878787; }
+  font-family: "Sitka Banner", sans-serif;
+  font-weight: 700; }
 
 .s1 {
   font-size: 1.375rem; }
@@ -601,7 +599,7 @@ html.modal-open {
   overflow: hidden; }
 
 a {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Sitka Banner", sans-serif; }
 
 #first-time,
 .ajax-progress {
@@ -649,7 +647,7 @@ form {
       margin-bottom: 0; }
     form .form-item input, form .form-item textarea {
       font-size: 0.875rem;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Sitka Banner", sans-serif;
       border: 1px solid #be1e2d;
       padding: 8px 10px;
       width: 100%; }
@@ -665,7 +663,7 @@ form {
     text-align: center;
     padding: 8px 30px;
     font-size: 1.0625rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Sitka Banner", sans-serif;
     color: #FFF; }
     body.no-touch form input[type=submit]:hover {
       background: #de3141; }
@@ -736,7 +734,7 @@ form {
 
 .header__visiting {
   font-size: 1.0625rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Sitka Banner", sans-serif;
   color: #878787; }
 
 .header__msg {
@@ -801,7 +799,7 @@ form {
       color: #2F8FFC; }
   .nav__list a {
     text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Sitka Banner", sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
     transition: color .2s;
@@ -812,7 +810,7 @@ form {
 .cta-btn {
   padding: 20px 35px;
   background: #921723;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Sitka Banner", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #FFF;
@@ -960,7 +958,8 @@ form {
   position: relative;
   margin-bottom: 25px;
   padding-bottom: 15px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: "Sitka Banner", sans-serif;
   font-size: 2.25rem; }
   @media only screen and (max-width: 899px) {
     .section-title {
@@ -1075,6 +1074,7 @@ form {
   margin-left: auto;
   margin-right: 30px;
   font-size: 1.125rem;
+  font-family: "Sitka Banner", sans-serif;
   color: #FFF; }
 
 .header__social-list a {
@@ -1099,6 +1099,7 @@ form {
   margin-bottom: 50px; }
   .welcome__head h3, .welcome__head h2 {
     margin-bottom: 10px;
+    font-family: "Sitka Banner", sans-serif;
     font-size: 1.0625rem; }
   .welcome__head h1 {
     margin-bottom: 5px;
@@ -1106,7 +1107,10 @@ form {
 
 .welcome__text {
   margin-bottom: 90px;
-  font-size: 3rem; }
+  font-size: 3rem;
+  font-family: "Sitka Banner", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .welcome__phone {
   margin-bottom: 20px;
@@ -1118,6 +1122,8 @@ form {
   background: #be1e2d;
   text-transform: uppercase;
   text-align: center;
+  font-family: "Sitka Banner", sans-serif;
+  font-weight: 700;
   font-size: 1.125rem;
   color: #FFF;
   transition: background .2s; }
@@ -1168,6 +1174,7 @@ button.welcome__call {
   line-height: 42px;
   margin-bottom: 25px;
   font-size: 1.875rem;
+  font-family: 'Times New Roman', serif;
   background: url("../img/decor/service-title.png") no-repeat center;
   background-size: contain;
   text-align: center; }
@@ -1256,7 +1263,9 @@ button.welcome__call {
   margin-bottom: 35px; }
 
 .advantages__item-desc {
-  font-size: 1.3125rem; }
+  font-size: 1.3125rem;
+  font-family: "Sitka Banner", sans-serif;
+  font-weight: 700; }
 
 /**
  * =============================
@@ -1274,7 +1283,7 @@ button.welcome__call {
   color: #FFF; }
 
 .footer__contacts-items p {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Sitka Banner", sans-serif; }
 
 .footer__copy p {
   opacity: .5;
@@ -1615,7 +1624,7 @@ button.welcome__call {
     -ms-flex-pack: end;
         justify-content: flex-end;
     padding: 30px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Sitka Banner", sans-serif;
     font-weight: 600;
     font-size: 0.8125rem;
     color: #FFF; }
