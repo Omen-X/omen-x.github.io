@@ -1954,7 +1954,9 @@ button.welcome__call {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-    margin-right: 0; }
+    margin-right: 0;
+    max-width: none;
+    min-width: auto; }
   .comment__text {
     font-size: 0.9375rem; }
   .comment__author-post {
