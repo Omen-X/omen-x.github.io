@@ -1221,13 +1221,11 @@ button.welcome__call {
     bottom: 60%; }
 
 .comment__author {
-  margin-right: 25px;
-  -ms-flex: auto;
-      flex: auto; }
+  margin-right: 25px; }
+  .comment__author img {
+    width: 100%; }
 
 .comment__text {
-  -ms-flex: 1;
-      flex: 1;
   margin-bottom: 20px;
   font-size: 1.125rem;
   line-height: 1.3; }
