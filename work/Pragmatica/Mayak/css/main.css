@@ -540,13 +540,13 @@ button {
     .h9 {
       font-size: 0.9375rem; } }
 
-.t1, .t2, .t3, .t4, .footer__nav-list a, .footer__contacts-items p, .t5 {
+.t1, .t2, .t3, .t4, footer .nav__list a, .footer__contacts-items p, .t5 {
   line-height: 24px; }
   @media only screen and (max-width: 899px) {
-    .t1, .t2, .t3, .t4, .footer__nav-list a, .footer__contacts-items p, .t5 {
+    .t1, .t2, .t3, .t4, footer .nav__list a, .footer__contacts-items p, .t5 {
       line-height: 20px; } }
   @media only screen and (max-width: 599px) {
-    .t1, .t2, .t3, .t4, .footer__nav-list a, .footer__contacts-items p, .t5 {
+    .t1, .t2, .t3, .t4, footer .nav__list a, .footer__contacts-items p, .t5 {
       line-height: 17px; } }
 
 .t1 {
@@ -576,13 +576,13 @@ button {
     .t3 {
       font-size: 0.8125rem; } }
 
-.t4, .footer__nav-list a, .footer__contacts-items p {
+.t4, footer .nav__list a, .footer__contacts-items p {
   font-size: 1rem; }
   @media only screen and (max-width: 899px) {
-    .t4, .footer__nav-list a, .footer__contacts-items p {
+    .t4, footer .nav__list a, .footer__contacts-items p {
       font-size: 0.875rem; } }
   @media only screen and (max-width: 599px) {
-    .t4, .footer__nav-list a, .footer__contacts-items p {
+    .t4, footer .nav__list a, .footer__contacts-items p {
       font-size: 0.8125rem; } }
 
 .t5 {
@@ -886,25 +886,25 @@ form {
 .nav__contacts {
   display: none; }
 
-.nav__list {
+header .nav__list {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding-right: 15px; }
-  .nav__list li {
+  header .nav__list li {
     margin-right: 10px; }
-    .nav__list li.active a {
+    header .nav__list li.active a {
       font-weight: 700;
-      color: #ff743b; }
-  .nav__list a {
+      color: #FFF; }
+  header .nav__list a {
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
     transition: color .2s;
     color: #000000; }
-    body.no-touch .nav__list a:hover {
+    body.no-touch header .nav__list a:hover {
       color: #ff5008; }
 
 .cta-btn {
@@ -1025,7 +1025,7 @@ form {
       justify-content: space-between; }
   .block-3 .h6 {
     margin-top: 20px; }
-  .block-3 .t4, .block-3 .footer__nav-list a, .footer__nav-list .block-3 a, .block-3 .footer__contacts-items p, .footer__contacts-items .block-3 p {
+  .block-3 .t4, .block-3 footer .nav__list a, footer .nav__list .block-3 a, .block-3 .footer__contacts-items p, .footer__contacts-items .block-3 p {
     margin-top: 15px; }
 
 .block-3__item {
@@ -1156,10 +1156,10 @@ form {
     .footer__logo .footer__copy p {
       text-align: left; }
 
-.footer__nav-list a {
+footer .nav__list a {
   color: #878787;
   transition: color .2s; }
-  body.no-touch .footer__nav-list a:hover {
+  body.no-touch footer .nav__list a:hover {
     color: #3a3a3a; }
 
 .footer__contacts {
@@ -1332,10 +1332,10 @@ form {
   margin-left: 25px;
   margin-right: 25px; }
 
-.nav__list {
+header .nav__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .nav__list li {
+  header .nav__list li {
     margin-bottom: 12px; }
 
 .nav__mob-button {
@@ -1679,9 +1679,9 @@ form {
 	 *
 	 * =============================
 	 */
-  .nav__list li {
+  header .nav__list li {
     margin-right: 7px; }
-  .nav__list a {
+  header .nav__list a {
     font-size: 0.75rem; }
   /**
 	 * =============================
@@ -1766,17 +1766,17 @@ form {
       transform: translate3d(-200px, 0, 0); }
     .nav__list-wrap.trs {
       transition: transform .6s; }
-  .nav__list {
+  header .nav__list {
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
     -ms-flex-pack: start;
         justify-content: flex-start;
     padding-right: 0; }
-    .nav__list li {
+    header .nav__list li {
       display: block;
       margin-right: 0;
       width: 100%; }
-    .nav__list a {
+    header .nav__list a {
       display: block;
       border-bottom: 1px solid #5C5C5C;
       padding: 20px 30px;
@@ -1940,13 +1940,13 @@ form {
     background-position: center; }
   .nav__list-wrap.animate:after {
     display: none; }
-  .nav__list {
+  header .nav__list {
     padding-top: 65px;
     background-image: url("../img/decor/mob-menu_light.png");
     background-position: 20px 20px;
     background-repeat: no-repeat;
     background-size: 20px 20px; }
-    .nav__list a {
+    header .nav__list a {
       padding-left: 12px;
       padding-right: 12px; }
   .nav__contacts {
