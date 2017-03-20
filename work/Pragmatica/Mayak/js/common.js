@@ -43,16 +43,29 @@ function welcomeSlider() {
 // ========>> EVENTS SLIDER <<========
 
 function eventsSlider() {
-	if ($('.events-slider').length) {
-		$('.events-slider').slick({
+	if ($('.events__items').length) {
+		$('.events__items').slick({
 			infiniti: true,
-			slidesToShow: 1,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 			dots: false,
 			arrows: true,
-			// autoplay: true,
-			// autoplaySpeed: 5000,
+			prevArrow: $('.events__buttons button:first-child'),
+			nextArrow: $('.events__buttons button:last-child'),
+			autoplay: true,
+			autoplaySpeed: 5000,
 			speed: 1100,
+			responsive: [{
+				breakpoint: 899,
+				settings: {
+					slidesToShow: 2
+				}
+			}, {
+				breakpoint: 599,
+				settings: {
+					slidesToShow: 1
+				}
+			}],
 			cssEase: 'cubic-bezier(.38,.2,.25,.97)'
 		});
 	}
