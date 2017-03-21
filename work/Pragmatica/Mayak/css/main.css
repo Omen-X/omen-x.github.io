@@ -1405,6 +1405,10 @@ header .nav__list {
     margin-bottom: -70px;
     padding: 25px 30px;
     background: #FFF; }
+    .events__items .block-3__content a {
+      transition: all .2s; }
+      .events__items .block-3__content a:hover {
+        color: #0da2e4; }
 
 .banners,
 .banners__container {
@@ -1598,6 +1602,12 @@ header .nav__list {
 .articles-events .articles__data {
   margin-bottom: 10px;
   font-size: 1rem; }
+
+.articles-events .articles__name {
+  color: #0da2e4;
+  transition: all .2s; }
+  .articles-events .articles__name:hover {
+    color: #ff743b; }
 
 .sidebar-block {
   background-color: transparent;
