@@ -82,5 +82,39 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/widgets.min.js"></script>
+
+	<script >
+	const optionsSingle = {
+		activeItem: 0,
+		duration: 300,
+		single: true,
+		callbacks: {
+			afterSlideDown: afterDown,
+			afterSlideUp: afterUp
+		}
+	};
+	const optionsMulti = {
+		activeItem: 2,
+		duration: 500,
+		single: false,
+		callbacks: {
+			afterSlideDown: afterDown,
+			afterSlideUp: afterUp
+		}
+	};
+
+	$('.accordion.single').accordion(optionsSingle);
+	$('.accordion.multi').accordion(optionsMulti);
+
+
+	function afterDown(){
+		console.log('slide-down complete');
+	}
+
+	function afterUp() {
+		console.log('slide-up complete');
+	}
+
+	</script>
 </body>
 </html>

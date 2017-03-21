@@ -149,25 +149,3 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 		});
 	};
 })(jQuery);
-
-var optionsSingle = {
-	activeItem: 0,
-	duration: 300,
-	single: true
-};
-var optionsMulti = {
-	activeItem: 2,
-	duration: 500,
-	single: false
-};
-
-$('.accordion.single').accordion(optionsSingle);
-$('.accordion.multi').accordion(optionsMulti);
-
-// function afterDown(){
-// 	console.log('slide-down complete');
-// }
-
-// function afterUp() {
-// 	console.log('slide-up complete');
-// }
