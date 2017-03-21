@@ -1585,6 +1585,20 @@ header .nav__list {
     margin-bottom: 25px;
     color: #010101; }
 
+.articles-events .articles__item {
+  width: 100%; }
+
+.articles-events .articles__img {
+  width: 20%;
+  float: left; }
+
+.articles-events .articles__content {
+  margin-left: calc(20% + 20px); }
+
+.articles-events .articles__data {
+  margin-bottom: 10px;
+  font-size: 1rem; }
+
 .sidebar-block {
   background-color: transparent;
   border: 1px solid #ff743b; }
@@ -2360,7 +2374,23 @@ header .nav__list {
   .article__text p {
     font-size: 0.9375rem; }
   .article__text h4 {
-    font-size: 1.125rem; } }
+    font-size: 1.125rem; }
+  /**
+	 * =============================
+	 *
+	 * 		#INNER PAGE
+	 *
+	 * =============================
+	 */
+  .articles-events .articles__img {
+    float: none;
+    width: 100%;
+    max-width: 160px; }
+  .articles-events .articles__content {
+    margin-left: 0; }
+  .articles-events .articles__data {
+    margin-top: 20px;
+    font-size: 0.75rem; } }
 
 @media only screen and (max-width: 479px) {
   /**/ }
