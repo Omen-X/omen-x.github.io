@@ -143,8 +143,8 @@ $(function () {
 	}, 250);
 
 	setTimeout(function () {
-		// $('html, body').removeClass('loading');
-		// $('#loader_home').fadeOut(500);
+		$('html, body').removeClass('loading');
+		$('#loader_home').fadeOut(500);
 	}, 1800);
 
 	// ========>> ANIMATION <<========
