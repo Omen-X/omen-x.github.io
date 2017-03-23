@@ -904,12 +904,10 @@ form {
     color: #3a3a3a; }
 
 .header__contacts {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  width: 25px;
+  height: 20px; }
+  .header__contacts a {
+    display: block; }
 
 .header__phone-indx {
   font-size: 1.125rem; }
@@ -2042,9 +2040,6 @@ header .nav__list {
     padding-bottom: 20px; }
   .logo__link {
     font-size: 1.125rem; }
-  .header__contacts {
-    -ms-flex-pack: center;
-        justify-content: center; }
   .header__phone {
     margin-bottom: 5px;
     font-size: 1.25rem; }
@@ -2462,7 +2457,7 @@ header .nav__list {
 	 */
   .header__top,
   .footer__content {
-    max-width: 280px;
+    max-width: none;
     min-width: auto; }
   .logo {
     width: 50%; }
@@ -2545,7 +2540,8 @@ header .nav__list {
 	 *
 	 * =============================
 	 */
-  .news .block-1-img-left__img {
+  .news .block-1-img-left__img,
+  .news .block-1-img-left__content {
     width: 100%; } }
 
 @media only screen and (max-width: 479px) {
