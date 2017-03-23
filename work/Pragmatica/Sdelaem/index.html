@@ -29,6 +29,12 @@
       	z-index:9999;
       	background: url('img/decor/loader-bg.png') no-repeat center, #131313;
       }
+      @media only screen and (max-width: 599px) {
+      	#loader_home {
+      		background-size: 80% auto;
+      	}
+      }
+      
       #loader_home:before,
       #loader_home:after {
       	content: '';
@@ -41,7 +47,7 @@
       	height: 10px;
       	transform: translateX(-50%);
       	max-width: 1170px;
-      	background-image: url('../img/decor/header-top.png');
+      	background-image: url('img/decor/header-top.png');
       	background-position: center;
       	background-repeat: repeat-x;
       }
