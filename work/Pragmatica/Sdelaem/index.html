@@ -63,7 +63,6 @@
       .loader12 {
         width: 20px;
         height: 20px;
-        border-radius: 50%;
         position: relative;
         animation: loader12 1s linear alternate infinite;
         top: 70%;
@@ -71,15 +70,15 @@
       
       @keyframes loader12 {
         0% {
-          box-shadow: -60px 40px 0 2px #0052ec, -30px 40px 0 0 rgba(0, 82, 236, 0.2), 0 40px 0 0 rgba(0, 82, 236, 0.2), 30px 40px 0 0 rgba(0, 82, 236, 0.2), 60px 40px 0 0 rgba(0, 82, 236, 0.2); }
+          box-shadow: -60px 40px 0 2px #FFF, -30px 40px 0 0 rgba(255, 255, 255, 0.2), 0 40px 0 0 rgba(255, 255, 255, 0.2), 30px 40px 0 0 rgba(255, 255 , 255, 0.2), 60px 40px 0 0 rgba(255, 255 , 255, 0.2); }
         25% {
-          box-shadow: -60px 40px 0 0 rgba(0, 82, 236, 0.2), -30px 40px 0 2px #0052ec, 0 40px 0 0 rgba(0, 82, 236, 0.2), 30px 40px 0 0 rgba(0, 82, 236, 0.2), 60px 40px 0 0 rgba(0, 82, 236, 0.2); }
+          box-shadow: -60px 40px 0 0 rgba(255, 255 , 255, 0.2), -30px 40px 0 2px #FFF, 0 40px 0 0 rgba(255, 255 , 255, 0.2), 30px 40px 0 0 rgba(255, 255 , 255, 0.2), 60px 40px 0 0 rgba(255, 255 , 255, 0.2); }
         50% {
-          box-shadow: -60px 40px 0 0 rgba(0, 82, 236, 0.2), -30px 40px 0 0 rgba(0, 82, 236, 0.2), 0 40px 0 2px #0052ec, 30px 40px 0 0 rgba(0, 82, 236, 0.2), 60px 40px 0 0 rgba(0, 82, 236, 0.2); }
+          box-shadow: -60px 40px 0 0 rgba(255, 255 , 255, 0.2), -30px 40px 0 0 rgba(255, 255 , 255, 0.2), 0 40px 0 2px #FFF, 30px 40px 0 0 rgba(255, 255 , 255, 0.2), 60px 40px 0 0 rgba(255, 255 , 255, 0.2); }
         75% {
-          box-shadow: -60px 40px 0 0 rgba(0, 82, 236, 0.2), -30px 40px 0 0 rgba(0, 82, 236, 0.2), 0 40px 0 0 rgba(0, 82, 236, 0.2), 30px 40px 0 2px #0052ec, 60px 40px 0 0 rgba(0, 82, 236, 0.2); }
+          box-shadow: -60px 40px 0 0 rgba(255, 255 , 255, 0.2), -30px 40px 0 0 rgba(255, 255 , 255, 0.2), 0 40px 0 0 rgba(255, 255 , 255, 0.2), 30px 40px 0 2px #FFF, 60px 40px 0 0 rgba(255, 255 , 255, 0.2); }
         100% {
-          box-shadow: -60px 40px 0 0 rgba(0, 82, 236, 0.2), -30px 40px 0 0 rgba(0, 82, 236, 0.2), 0 40px 0 0 rgba(0, 82, 236, 0.2), 30px 40px 0 0 rgba(0, 82, 236, 0.2), 60px 40px 0 2px #0052ec; } }
+          box-shadow: -60px 40px 0 0 rgba(255, 255 , 255, 0.2), -30px 40px 0 0 rgba(255, 255 , 255, 0.2), 0 40px 0 0 rgba(255, 255, 255, 0.2), 30px 40px 0 0 rgba(255, 255, 255, 0.2), 60px 40px 0  #FFF; } }
       
       
     </style>
@@ -94,14 +93,15 @@
         <nav class="nav">
           <div class="nav__shade"></div>
           <div class="nav__list-wrap">
+            <div class="nav__head"><span class="nav__head-close"></span><span>МЕНЮ</span></div>
             <ul class="nav__list">
               <li class="active"><a href="./index.html">Главная</a></li>
               <li><a href="./news.html">Новости</a></li>
-              <li><a href="./inner.html">Вакансии</a></li>
-              <li><a href="./inner.html">Компания</a></li>
-              <li><a href="./inner.html">Услуги</a></li>
-              <li><a href="./inner.html">Партнеры</a></li>
-              <li><a href="./inner.html">Контакты</a></li>
+              <li><a href="./vacancy.html">Вакансии</a></li>
+              <li><a href="./about.html">Компания</a></li>
+              <li><a href="./services.html">Услуги</a></li>
+              <li><a href="./projects.html">Партнеры</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
             </ul>
             <div class="nav__contacts"><span class="nav__contacts-phone">8 800 700 5000</span></div>
           </div>

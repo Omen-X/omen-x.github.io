@@ -292,7 +292,7 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
-  font-family: "Arial", sans-serif;
+  font-family: "AvantGardeGothicC", sans-serif;
   font-size: 16px;
   color: #101010; }
 
@@ -323,9 +323,27 @@ button {
     font-size: 16px; } }
 
 button {
-  font-family: "Arial", sans-serif; }
+  font-family: "AvantGardeGothicC", sans-serif; }
 
 /* FONTS */
+@font-face {
+  font-family: "AvantGardeGothicC";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/AvantGardeGothicC/regular/AvantGardeGothicC-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvantGardeGothicC/regular/AvantGardeGothicC-regular.woff") format("woff"), url("../fonts/AvantGardeGothicC/regular/AvantGardeGothicC-regular.ttf") format("truetype"), url("../fonts/AvantGardeGothicC/regular/AvantGardeGothicC-regular.svg#AvantGardeGothicC") format("svg"); }
+
+@font-face {
+  font-family: "AvantGardeGothicC";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/AvantGardeGothicC/regular-italic/AvantGardeGothicC-regular-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvantGardeGothicC/regular-italic/AvantGardeGothicC-regular-italic.woff") format("woff"), url("../fonts/AvantGardeGothicC/regular-italic/AvantGardeGothicC-regular-italic.ttf") format("truetype"), url("../fonts/AvantGardeGothicC/regular-italic/AvantGardeGothicC-regular-italic.svg#AvantGardeGothicC") format("svg"); }
+
+@font-face {
+  font-family: "AvantGardeGothicC";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/AvantGardeGothicC/bold/AvantGardeGothicC-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvantGardeGothicC/bold/AvantGardeGothicC-bold.woff") format("woff"), url("../fonts/AvantGardeGothicC/bold/AvantGardeGothicC-bold.ttf") format("truetype"), url("../fonts/AvantGardeGothicC/bold/AvantGardeGothicC-bold.svg#AvantGardeGothicC") format("svg"); }
+
 /* BLOCKS */
 /* TEMPLATE BLOCKS */
 .content-w {
@@ -406,7 +424,7 @@ button {
  */
 .s1, .s2, .s3, .s4, .s5,
 .h1, .h2, .h3, .h4, .h5, .block-text h2, .h6, .h7, .h8, .h9 {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "AvantGardeGothicC", sans-serif; }
 
 .s1, .s2, .s3, .s4, .s5 {
   color: #878787; }
@@ -605,7 +623,7 @@ html.modal-open {
   overflow: hidden; }
 
 a {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "AvantGardeGothicC", sans-serif; }
 
 #first-time,
 .ajax-progress {
@@ -756,7 +774,7 @@ form {
       margin-bottom: 0; }
     form .form-item input, form .form-item textarea {
       font-size: 0.875rem;
-      font-family: "Open Sans", sans-serif;
+      font-family: "AvantGardeGothicC", sans-serif;
       border: 1px solid #d1a38b;
       padding: 8px 10px;
       width: 100%; }
@@ -775,7 +793,7 @@ form {
     text-align: center;
     padding: 8px 30px;
     font-size: 1.0625rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "AvantGardeGothicC", sans-serif;
     color: #FFF; }
     body.no-touch form input[type=submit]:hover {
       background: #dfc0b0; }
@@ -807,7 +825,7 @@ form {
       text-align: center; }
       #colorbox .node-webform header a {
         font-size: 1.375rem;
-        font-family: "Open Sans", sans-serif;
+        font-family: "AvantGardeGothicC", sans-serif;
         text-transform: uppercase;
         font-weight: 700;
         color: #FFF; }
@@ -840,7 +858,7 @@ form {
           padding-top: 15px;
           padding-bottom: 15px;
           font-weight: 700;
-          font-family: "Open Sans", sans-serif;
+          font-family: "AvantGardeGothicC", sans-serif;
           font-size: 1.375rem;
           text-transform: uppercase;
           background: #d1a38b;
@@ -914,7 +932,7 @@ form {
 
 .header__visiting {
   font-size: 1.0625rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "AvantGardeGothicC", sans-serif;
   color: #878787; }
 
 .header__msg {
@@ -974,7 +992,7 @@ header .nav__list {
       color: #FFF; }
   header .nav__list a {
     text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
+    font-family: "AvantGardeGothicC", sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
     transition: color .2s;
@@ -985,7 +1003,7 @@ header .nav__list {
 .cta-btn {
   padding: 20px 35px;
   background: #c38666;
-  font-family: "Open Sans", sans-serif;
+  font-family: "AvantGardeGothicC", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #FFF;
@@ -1536,7 +1554,7 @@ footer .nav__list a {
     padding: 1.0625rem 1.875rem;
     background-color: #d1a38b;
     font-weight: 600;
-    font-family: "Open Sans", sans-serif;
+    font-family: "AvantGardeGothicC", sans-serif;
     font-size: 1.0625rem;
     color: #FFF;
     transition: background .2s, color .2s; }
@@ -1616,10 +1634,30 @@ header .nav__list {
     width: 100%; }
   header .nav__list a {
     display: block;
-    padding: 20px 30px;
+    padding: 10px 30px;
     text-align: left;
-    font-size: 1.125rem;
+    font-size: 1.3125rem;
+    font-weight: 400;
     line-height: 1.5; }
+
+.nav__head {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  padding-top: 85px; }
+  .nav__head span:last-child {
+    padding-left: 30px;
+    background: url("../img/decor/mob-menu.png") no-repeat left center;
+    background-size: 16px 16px; }
+
+.nav__head-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 17px;
+  height: 17px;
+  background: url("../img/decor/close.png") no-repeat center;
+  cursor: pointer; }
 
 .header__contacts a {
   width: 24px;
@@ -1636,7 +1674,7 @@ header .nav__list {
   padding: 30px;
   padding-right: 5px;
   padding-top: 60px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "AvantGardeGothicC", sans-serif;
   font-weight: 600;
   font-size: 0.8125rem;
   color: #FFF; }
@@ -1668,7 +1706,8 @@ header .nav__list {
 .welcome {
   position: relative;
   min-height: calc(100vh - 100px);
-  padding-top: 10%; }
+  padding-top: 10%;
+  padding-bottom: 35px; }
   .welcome:after {
     content: '';
     display: block;
@@ -2401,6 +2440,8 @@ header .nav__list {
 
 @media only screen and (max-width: 899px) {
   /**/
+  .welcome-slider__item-content {
+    padding-bottom: 85px; }
   /**
 	 * =============================
 	 *

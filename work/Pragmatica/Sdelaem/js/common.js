@@ -35,7 +35,7 @@ function welcomeSlider() {
 				var thumb = $(slider.$slides[i]).data('thumb');
 				return '<a>0' + (i + 1) + '</a>';
 			},
-			autoplay: true,
+			// autoplay: true,
 			autoplaySpeed: 5000,
 			speed: 1100,
 			cssEase: 'cubic-bezier(.38,.2,.25,.97)'
@@ -100,6 +100,7 @@ function scrollToTop() {
 
 var navList = $('nav .nav__list-wrap');
 var navButton = $('nav .nav__mob-button, .nav-mob-button');
+var navClose = $('.nav__head-close');
 var navShade = $('nav .nav__shade');
 
 function mainNavMenu() {
@@ -130,6 +131,7 @@ function mainNavMenu() {
 	}
 
 	$(navButton).on('click', navToggle);
+	$(navClose).on('click', navToggle);
 }
 
 // ========>> DOCUMENT READY <<========
@@ -147,7 +149,7 @@ $(function () {
 	}, 1800);
 
 	setTimeout(function () {
-		$('html, body').removeClass('loading');
+		// $('html, body').removeClass('loading');
 	}, 250);
 
 	// ========>> ANIMATION <<========
