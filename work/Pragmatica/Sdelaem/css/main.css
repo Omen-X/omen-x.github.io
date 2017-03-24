@@ -2026,7 +2026,10 @@ header .nav__list {
   header .nav__list li {
     margin-right: 7px; }
   header .nav__list a {
-    font-size: 0.75rem; }
+    font-size: 1.0625rem; }
+  .nav__head {
+    padding-top: 35px;
+    padding-bottom: 30px; }
   /**
 	 * =============================
 	 *
@@ -2244,15 +2247,12 @@ header .nav__list {
     background-position: center; }
   .nav__list-wrap.animate:after {
     display: none; }
-  header .nav__list {
-    padding-top: 65px;
-    background-image: url("../img/decor/mob-menu_light.png");
-    background-position: 20px 20px;
-    background-repeat: no-repeat;
-    background-size: 20px 20px; }
-    header .nav__list a {
-      padding-left: 12px;
-      padding-right: 12px; }
+  .nav__head {
+    padding-left: 12px; }
+  header .nav__list a {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 0.875rem; }
   /**
 	 * =============================
 	 *
