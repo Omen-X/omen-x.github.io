@@ -140,6 +140,16 @@ function mainNavMenu() {
 	$(navButton).on('click', navToggle);
 }
 
+// ========>> FIXED SIDE-BAR <<========
+
+function fixedNav() {
+	if ($('.side-nav').length) {
+		var sideNav = $('.side-nav');
+
+		sideNav.stick_in_parent();
+	}
+}
+
 // ========>> DOCUMENT READY <<========
 
 $(function () {
@@ -187,6 +197,7 @@ $(function () {
 	mainGallery();
 	scrollToTop();
 	mainNavMenu();
+	fixedNav();
 
 	// ========>> RESIZE <<========
 
@@ -200,6 +211,9 @@ $(function () {
 	}).resize(); // end resize
 }); // end document ready
 
+$(window).on('scroll', function () {
+	fixedNav();
+});
 
 // ========>> DETECT CLIENT CONFIG <<========
 
