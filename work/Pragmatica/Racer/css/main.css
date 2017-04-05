@@ -1387,9 +1387,17 @@ footer .nav__list a {
   .header__social a {
     margin-left: 15px; }
 
-.header__search input {
-  border: 1px solid  #FFF;
-  color: #FFF; }
+.header__search {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  max-width: 280px; }
+  .header__search input {
+    width: 100%;
+    padding: 5px 10px !important;
+    border: 1px solid  #FFF;
+    background-image: url("../img/decor/search.png");
+    background-repeat: no-repeat;
+    background-position: right 5px center; }
 
 .header__top {
   padding-top: 20px;
@@ -1919,7 +1927,7 @@ body.catalog .header__top {
   .catalog__breadcrumbs span {
     color: #f04753; }
 
-.product {
+.product, .questions {
   margin-top: 90px;
   padding-left: 35px; }
 
