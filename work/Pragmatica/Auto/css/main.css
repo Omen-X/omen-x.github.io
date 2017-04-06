@@ -1841,8 +1841,11 @@ footer .nav__list a {
       padding: 0; }
 
 .article ol {
-  list-style-type: decimal;
-  color: #2175de; }
+  list-style-type: decimal; }
+  .article ol li {
+    color: #2175de; }
+    .article ol li span {
+      color: #28282e; }
 
 .article ul li {
   position: relative; }
