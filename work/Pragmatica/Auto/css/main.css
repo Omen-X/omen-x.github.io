@@ -1648,6 +1648,7 @@ footer .nav__list a {
   color: #FFF; }
 
 .welcome-slider__title {
+  max-width: 480px;
   position: relative;
   padding-bottom: 30px;
   font-weight: 700;
@@ -1725,6 +1726,9 @@ footer .nav__list a {
  *
  * =============================
  */
+.welcome_inner .welcome-slider__item-content, .welcome_inner .welcome__content {
+  min-height: 360px; }
+
 .breadcrumbs a {
   color: #2175de; }
 
