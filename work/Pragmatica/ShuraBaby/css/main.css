@@ -1688,6 +1688,11 @@ footer .nav__list a {
 .main {
   padding-top: 40px; }
 
+.welcome-slider__item {
+  background-size: auto 90%;
+  background-position: 10% 20px;
+  background-color: #EAEAE7; }
+
 .welcome-slider__item-content, .welcome__content {
   min-height: 450px;
   padding-left: 580px; }
