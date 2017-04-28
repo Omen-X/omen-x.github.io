@@ -1,0 +1,23 @@
+{
+	"name": "project",
+	"description": "",
+	"main": "index.js",
+	"authors": [
+		"Omen-x"
+	],
+	"license": "ISC",
+	"homepage": "",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"src/libs/",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"slick-carousel": "^1.6.0",
+		"lightbox2": "^2.9.0"
+	},
+	"devDependencies": {}
+}
