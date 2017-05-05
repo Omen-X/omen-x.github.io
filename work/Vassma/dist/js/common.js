@@ -170,28 +170,6 @@ $(function () {
 		$('#loader').remove();
 	}, 210);
 
-	// ========>> ANIMATION <<========
-
-	// Adding animation classes
-
-	var animClasses = ['.select'];
-
-	animClasses.forEach(function (select) {
-		$(select).addClass('animate');
-	});
-
-	// fix transition effect after reload page,
-	// transition added after animation class,
-	// all transitions must be placed in this selector
-
-	setTimeout(function () {
-		$('selector').addClass('trs');
-	}, 0);
-
-	// Hide elemetns when click outside elements
-
-	document.body.addEventListener('click', function (e) {});
-
 	// ========>> FUNCTIONS CALL <<========
 
 	mainNav();

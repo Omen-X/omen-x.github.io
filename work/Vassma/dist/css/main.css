@@ -840,7 +840,7 @@ body.no-touch .sidebar_blog .sidebar-block__list a:hover:after {
   .choice__list li {
     position: relative;
     min-height: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     padding-bottom: 50px;
     padding-left: 100px;
     padding-right: 60px;
@@ -1662,12 +1662,14 @@ textarea {
       width: 15px;
       height: 15px; }
   .choice__list li {
-    padding-right: 30px;
+    padding-right: 15px;
     padding-left: 80px; }
+    .choice__list li span {
+      font-size: 0.9375rem; }
   .choice__list_text-left li {
     margin-bottom: 15px;
     padding-right: 80px;
-    padding-left: 30px; }
+    padding-left: 15px; }
   .choice__list_2 {
     padding-top: 0; }
   /**
