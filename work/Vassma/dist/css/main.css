@@ -732,8 +732,8 @@ body.no-touch .sidebar_blog .sidebar-block__list a:hover:after {
   .search form {
     overflow: hidden;
     margin-right: 10px;
-    transition: all 1.2s;
-    max-width: 500px; }
+    max-width: 500px;
+    transition: all 1.2s; }
     .search form.hidden {
       max-width: 0;
       min-width: auto; }
@@ -2228,7 +2228,7 @@ textarea {
     position: relative;
     right: 0;
     top: 0;
-    min-width: none;
+    min-width: auto;
     transition: all 1s; }
   .search input {
     border: none; }
