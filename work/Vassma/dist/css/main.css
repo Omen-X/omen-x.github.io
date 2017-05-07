@@ -677,7 +677,7 @@ body.no-touch .sidebar_blog .sidebar-block__list a:hover:after {
         position: relative;
         border-bottom: none;
         padding-left: 13px;
-        color: #5129FF; }
+        color: #fed87c; }
         .nav__list > li:nth-child(3) ul a:before {
           content: '';
           display: block;
@@ -697,7 +697,8 @@ body.no-touch .sidebar_blog .sidebar-block__list a:hover:after {
     padding: 10px 15px;
     border-radius: 6px;
     transition: background .2s;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #6131FF; }
 
 .nav__overlay {
   position: fixed;
