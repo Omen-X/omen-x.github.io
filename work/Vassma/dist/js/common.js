@@ -58,6 +58,17 @@ function mainNav() {
 	$(navButton).on('click', navToggle);
 }
 
+// Mobile catalog
+
+var mobCatButton = $('.header .nav__list li:nth-child(3) a');
+var mobCatList = $('.header .nav__list li:nth-child(3) ul');
+
+mobCatButton.on('click', function () {
+	e.preventDefault();
+	mobCatButton.toggleClass('active');
+	mobCatList.slideToggle(250);
+});
+
 // ========>> WELCOME CAROUSEL <<========
 
 function welcomeCarousel() {
@@ -76,6 +87,29 @@ function welcomeCarousel() {
 		});
 	}
 }
+
+// ========>> SIDEBAR <<========
+
+var sidebarCatItems = $('.sidebar-block__list > li');
+var sidebarCatSubLists = $('.sidebar-block__list .sidebar-block__sublist');
+var sidebarCatLink = $('.sidebar-block__list > li > a');
+
+sidebarCatLink.on('click', function (e) {
+	e.preventDefault();
+	var currSidebarListItem = $(e.target).closest('li');
+	var currSidebarSubList = $(e.target).siblings('.sidebar-block__sublist');
+
+	sidebarCatSubLists.stop().slideUp(250);
+
+	if (currSidebarListItem.hasClass('active')) {
+		currSidebarListItem.removeClass('active');
+	} else {
+		sidebarCatItems.removeClass('active');
+		currSidebarListItem.addClass('active');
+	}
+
+	currSidebarSubList.stop().slideToggle(250);
+});
 
 // ========>> FIXED HEADER <<========
 
