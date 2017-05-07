@@ -473,7 +473,9 @@ a {
     content: '';
     display: block;
     position: absolute;
-    top: 6px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     left: 0;
     height: 0;
     width: 0;
@@ -504,7 +506,7 @@ a {
   display: none;
   margin-left: 15px;
   padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 10px; }
   .sidebar-block__sublist li {
     position: relative;
     margin-bottom: 8px;

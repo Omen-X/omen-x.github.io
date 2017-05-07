@@ -59,7 +59,7 @@ function mainNav() {
 
 	// Mobile catalog
 
-	var mobCatButton = $('.header .nav__list li:nth-child(3) a');
+	var mobCatButton = $('.header .nav__list li:nth-child(3) > a');
 	var mobCatList = $('.header .nav__list li:nth-child(3) ul');
 
 	mobCatButton.on('click', function (e) {
