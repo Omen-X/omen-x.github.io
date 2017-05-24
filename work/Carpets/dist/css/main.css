@@ -1282,6 +1282,22 @@ html.modal-open {
       font-weight: 700; }
   .tech__item-text:before {
     display: none !important; }
+  .parallax-2 .bubble {
+    display: none !important; }
+    .parallax-2 .bubble:first-child {
+      display: block !important;
+      background-repeat: no-repeat;
+      background-position: bottom center !important;
+      background-size: 100% auto !important;
+      background-image: url("../img/decor/bubbles-2_mob.png"); }
+  .parallax-3 .bubble {
+    display: none !important; }
+    .parallax-3 .bubble:first-child {
+      display: block !important;
+      background-repeat: no-repeat;
+      background-position: bottom center !important;
+      background-size: 100% auto !important;
+      background-image: url("../img/decor/bubbles-3_mob.png"); }
   .footer {
     padding: 55px 0 25px;
     background-position: left 30% bottom 270%, center; }

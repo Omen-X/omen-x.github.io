@@ -65,10 +65,12 @@ function parallax2Config() {
 		}
 
 		[].concat(_toConsumableArray(bubbles)).map(function (e, i) {
-			$(e).css({
-				'background-size': config[i].width + 'px  auto',
-				'background-position': config[i].left / 1920 * 100 + '% ' + config[i].top + 'px'
-			});
+			if ($(e).css('display') !== 'none') {
+				$(e).css({
+					'background-size': config[i].width + 'px  auto',
+					'background-position': config[i].left / 1920 * 100 + '% ' + config[i].top + 'px'
+				});
+			}
 		});
 	}
 }
@@ -82,7 +84,9 @@ function parallax2() {
 		// parallax on curr section
 		if (scrollTop >= offsetTop) {
 			[].concat(_toConsumableArray(bubbles)).map(function (e, i) {
-				e.style.top = -(scrollTop - offsetTop) * (i * 3 * 0.01) + 'px';
+				if ($(e).css('display') !== 'none') {
+					e.style.top = -(scrollTop - offsetTop) * (i * 3 * 0.01) + 'px';
+				}
 			});
 		}
 	}
@@ -104,10 +108,12 @@ function parallax3Config() {
 		}
 
 		[].concat(_toConsumableArray(bubbles)).map(function (e, i) {
-			$(e).css({
-				'background-size': config[i].width + 'px  auto',
-				'background-position': 'left ' + config[i].left / 1920 * 100 + '% bottom ' + config[i].bottom + 'px'
-			});
+			if ($(e).css('display') !== 'none') {
+				$(e).css({
+					'background-size': config[i].width + 'px  auto',
+					'background-position': 'left ' + config[i].left / 1920 * 100 + '% bottom ' + config[i].bottom + 'px'
+				});
+			}
 		});
 	}
 }
@@ -121,7 +127,9 @@ function parallax3() {
 		// parallax on curr section
 		if (scrollTop >= offsetTop) {
 			[].concat(_toConsumableArray(bubbles)).map(function (e, i) {
-				e.style.top = -(scrollTop - offsetTop) * (i * 3 * 0.01) + 'px';
+				if ($(e).css('display') !== 'none') {
+					e.style.top = -(scrollTop - offsetTop) * (i * 3 * 0.01) + 'px';
+				}
 			});
 		}
 	}
