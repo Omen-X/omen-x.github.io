@@ -59,6 +59,9 @@ function parallax2Config() {
 
 		var config = [{ width: 110, left: 40, top: 820 }, { width: 180, left: 150, top: 620 }, { width: 30, left: 280, top: 860 }, { width: 100, left: 540, top: 910 }, { width: 60, left: 770, top: 880 }, { width: 35, left: 860, top: 900 }, { width: 60, left: 1270, top: 880 }, { width: 120, left: 1500, top: 780 }, { width: 70, left: 1600, top: 610 }, { width: 110, left: 1550, top: 445 }, { width: 35, left: 1690, top: 560 }, { width: 96, left: 1750, top: 720 }, { width: 200, left: 1760, top: 830 }, { width: 120, left: 190, top: 1010 }, { width: 70, left: 30, top: 1200 }, { width: 60, left: 270, top: 1160 }, { width: 70, left: 1700, top: 1080 }, { width: 50, left: 1800, top: 1180 }, { width: 100, left: 1870, top: 1150 }, { width: 120, left: 30, top: 1500 }, { width: 220, left: 200, top: 1400 }, { width: 70, left: 600, top: 1570 }, { width: 170, left: 900, top: 1400 }, { width: 100, left: 1400, top: 1500 }, { width: 150, left: 1650, top: 1320 }, { width: 80, left: 1800, top: 1500 }];
 
+		if (window.matchMedia) {
+			alert('matchMedia');
+		}
 		// mobile config
 		if (window.matchMedia('(max-width: 1199px)').matches) {
 			config = [{ width: 25, left: 40, top: 820 }, { width: 60, left: 150, top: 620 }, { width: 30, left: 280, top: 860 }, { width: 30, left: 540, top: 910 }, { width: 60, left: 770, top: 880 }, { width: 35, left: 860, top: 900 }, { width: 60, left: 1270, top: 880 }, { width: 40, left: 1500, top: 780 }, { width: 70, left: 1600, top: 610 }, { width: 50, left: 1550, top: 445 }, { width: 35, left: 1690, top: 560 }, { width: 96, left: 1750, top: 720 }, { width: 25, left: 1760, top: 830 }, { width: 66, left: 190, top: 1010 }, { width: 70, left: 30, top: 1200 }, { width: 60, left: 270, top: 1160 }, { width: 70, left: 1700, top: 1080 }, { width: 50, left: 1800, top: 1180 }, { width: 30, left: 1870, top: 1150 }, { width: 40, left: 30, top: 1500 }, { width: 50, left: 200, top: 1400 }, { width: 70, left: 600, top: 1570 }, { width: 15, left: 900, top: 1400 }, { width: 20, left: 1400, top: 1500 }, { width: 30, left: 1650, top: 1320 }, { width: 80, left: 1800, top: 1500 }];
@@ -95,7 +98,6 @@ function parallax3Config() {
 		var bubbles = document.querySelectorAll('.parallax-3 .bubble');
 
 		var config = [{ width: 35, left: 100, bottom: 580 }, { width: 25, left: 190, bottom: 450 }, { width: 65, left: 200, bottom: 390 }, { width: 100, left: 1000, bottom: 50 }, { width: 120, left: 35, bottom: 200 }, { width: 75, left: 700, bottom: 360 }, { width: 70, left: 80, bottom: 30 }, { width: 70, left: 600, bottom: 190 }, { width: 20, left: 800, bottom: 80 }, { width: 190, left: 1600, bottom: 50 }, { width: 90, left: 1650, bottom: 400 }, { width: 40, left: 1400, bottom: 300 }, { width: 230, left: 200, bottom: 150 }, { width: 70, left: 530, bottom: 20 }, { width: 180, left: 955, bottom: 250 }, { width: 100, left: 1300, bottom: 240 }, { width: 30, left: 1700, bottom: 300 }, { width: 70, left: 1400, bottom: 130 }, { width: 30, left: 1500, bottom: 70 }];
-		console.log(config.length);
 
 		// mobile config
 		if (window.matchMedia('(max-width: 1199px)').matches) {
