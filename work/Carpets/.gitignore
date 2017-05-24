@@ -7,6 +7,7 @@ gulpfile.js
 package.json
 semantic.json
 *.psd
+*.php
 gulpfile.babel.js
 .babelrc
 documents
