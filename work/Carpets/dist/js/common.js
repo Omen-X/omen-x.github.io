@@ -220,6 +220,15 @@ function parallax3() {
 	}
 }
 
+// ========>> FIXED HEADER <<========
+
+function fixedHeader() {
+	var scrollTop = $(window).scrollTop();
+	var header = $('.header');
+
+	scrollTop > 0 ? header.addClass('fixed') : header.removeClass('fixed');
+}
+
 // ========>> SCROLL TO TOP <<========
 
 var toTop = $('#to-top');
@@ -237,8 +246,6 @@ function showScroll() {
 		toTop.removeClass('to-top_visible');
 	}
 }
-
-showScroll();
 
 // ========>> DOCUMENT READY <<========
 
@@ -284,10 +291,59 @@ $(function () {
 
 	$(navButton).on('click', navToggle);
 
+	// Anchors
+
+	var navLinks = $('.header .nav__list a');
+
+	navLinks.on('click', function (e) {
+		e.preventDefault();
+		var section = $(this).attr('href');
+
+		if (window.matchMedia('(max-width: 767px)').matches) {
+			navToggle();
+		}
+
+		// advantages have negative margin
+		if (section === '#advantages') {
+			$('html, body').stop().animate({
+				scrollTop: $(section).offset().top + $('.main').width() * 0.26 - 100
+			}, 600);
+		} else {
+			$('html, body').stop().animate({
+				scrollTop: $(section).offset().top - 70
+			}, 600);
+		}
+	});
+
+	// ========>> FORM <<========
+
+	var feedback = $('.form');
+
+	feedback.submit(function (e) {
+		e.preventDefault();
+		$.ajax({
+			url: 'mail.php',
+			type: 'POST',
+			data: $(this).serialize()
+		}).done(function () {
+			// callback.fadeOut(200);
+			// callbackThank.fadeIn(200);
+			// setTimeout(function() {
+			//    callbackThank.fadeOut(200);
+			// }, 1500);
+			$(".form").trigger("reset");
+		}).fail(function () {
+			$(".form").trigger("reset");
+			alert("Ошибка отправки формы");
+		});
+	});
+
 	// ========>> FUNCTIONS CALL <<========
 
 	parallax2Config();
 	parallax3Config();
+	showScroll();
+	fixedHeader();
 
 	// ========>> RESIZE <<========
 
@@ -310,6 +366,7 @@ $(window).on('scroll', function () {
 	requestAnimationFrame(parallax2);
 	requestAnimationFrame(parallax3);
 	showScroll();
+	fixedHeader();
 });
 
 // ========>> MODERNIZR <<========

@@ -431,7 +431,8 @@ textarea {
   background: url("../img/decor/to-top-btn.png") no-repeat center;
   background-size: contain;
   transition: opacity .2s, box-shadow .2s;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   body.no-touch .to-top:hover {
     opacity: 1 !important; }
   .to-top.to-top_visible {
@@ -460,11 +461,17 @@ textarea {
  * =============================
  */
 .header {
-  position: relative;
-  background: #FFF;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
   padding: 40px 0;
   box-shadow: 0 3px 32px rgba(0, 0, 0, 0.35);
-  z-index: 10; }
+  background: #FFF;
+  transition: padding .2s;
+  height: 110px; }
+  .header.fixed {
+    padding: 15px 0;
+    height: auto; }
   .header .row {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
@@ -525,7 +532,8 @@ body.no-touch .header__contacts:hover a {
  * =============================
  */
 .main {
-  position: relative; }
+  position: relative;
+  margin-top: 110px; }
 
 .parallax {
   position: absolute;
@@ -770,6 +778,8 @@ body.no-touch .header__contacts:hover a {
   position: relative;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center;
   max-width: 371px;
   min-height: 364px;
   margin-left: auto;
@@ -953,7 +963,8 @@ body.no-touch .header__contacts:hover a {
   padding: 125px 0 25px;
   background-image: url("../img/decor/footer-bg-water.png"), url("../img/decor/footer-bg.png");
   background-repeat: no-repeat;
-  background-position: center bottom 30%, center; }
+  background-position: center bottom 30%, center;
+  background-size: cover; }
 
 .form-feedback {
   padding-bottom: 29%; }
@@ -1357,8 +1368,9 @@ html.modal-open {
 
 @media only screen and (max-width: 37.4375em) {
   .header {
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto; }
   .nav__mob-button {
     display: block; }
   .nav__list {
@@ -1384,6 +1396,8 @@ html.modal-open {
       margin-right: 0;
       padding: 12px 20px;
       text-align: left; }
+  .main {
+    margin-top: 65px; }
   .parallax-1 .bubble-1 {
     background-position: 8% 35px;
     background-size: 40px auto; }
