@@ -1,0 +1,9 @@
+{
+  "require": {
+    "phpmailer/phpmailer": "^5.2"
+  },
+  "config": {
+   "disable-tls": true,
+   "secure-http": false
+ }
+}
