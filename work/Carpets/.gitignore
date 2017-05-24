@@ -13,3 +13,4 @@ gulpfile.babel.js
 documents
 docs
 ftpsync.settings
+vendor
