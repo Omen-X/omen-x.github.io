@@ -721,6 +721,28 @@ body.no-touch .header__contacts:hover a {
   .form-main .form-security {
     font-weight: 500; }
 
+.advantages__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.advantages__line {
+  position: absolute;
+  z-index: 4;
+  width: 100vw;
+  left: 0;
+  top: 20px;
+  width: 100vw;
+  height: 4px;
+  padding-top: 26%;
+  border-bottom: 4px solid #7F7F7F; }
+  .advantages__line:nth-child(2) {
+    top: 485px; }
+  .advantages__line:nth-child(3), .advantages__line:nth-child(4), .advantages__line:nth-child(5), .advantages__line:nth-child(6) {
+    display: none; }
+
 .advantages {
   position: relative;
   z-index: 2;
@@ -731,22 +753,13 @@ body.no-touch .header__contacts:hover a {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto; }
+  .advantages:before {
+    top: 20px; }
+  .advantages:after {
+    top: 485px; }
   .advantages .container-fluid {
     position: relative;
     z-index: 5; }
-  .advantages .col-12:first-child,
-  .advantages .col-12:nth-child(4) {
-    position: relative; }
-    .advantages .col-12:first-child:before,
-    .advantages .col-12:nth-child(4):before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: -2000px;
-      width: 4500px;
-      height: 4px;
-      background: #7F7F7F; }
 
 .advantages__item {
   display: -ms-flexbox;
@@ -1205,20 +1218,11 @@ html.modal-open {
     margin-left: auto;
     margin-right: auto;
     background-image: url("../img/decor/carpet-form_tablet.png"); }
-  .advantages .col-12:first-child:before,
-  .advantages .col-12:nth-child(4):before {
-    display: none; }
-  .advantages .col-12:nth-child(odd) {
-    position: relative; }
-    .advantages .col-12:nth-child(odd):before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: 0;
-      width: 1300px;
-      height: 4px;
-      background: #7F7F7F; }
+  .advantages__line:nth-child(3) {
+    display: block;
+    top: 950px; }
+  .advantages {
+    padding-bottom: 50px; }
   .advantages__title {
     font-size: 1.25rem; } }
 
@@ -1307,22 +1311,22 @@ html.modal-open {
   .form-main input[type=submit] {
     padding: 15px 0;
     font-size: 1.125rem; }
+  .advantages__line {
+    padding-top: 40%; }
+    .advantages__line:nth-child(3), .advantages__line:nth-child(4), .advantages__line:nth-child(5), .advantages__line:nth-child(6) {
+      display: block; }
+    .advantages__line:nth-child(3) {
+      top: 935px; }
+    .advantages__line:nth-child(4) {
+      top: 1390px; }
+    .advantages__line:nth-child(5) {
+      top: 1845px; }
+    .advantages__line:nth-child(6) {
+      top: 2300px; }
   .advantages {
     padding-top: 40%; }
     .advantages .col-xl-4:last-child .advantages__item {
       margin-bottom: 20px; }
-    .advantages .col-12:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: 0;
-      width: 1300px;
-      height: 4px;
-      background: #7F7F7F; }
-    .advantages .col-12:first-child:before,
-    .advantages .col-12:nth-child(4):before {
-      display: block; }
   .advantages__item {
     margin-bottom: 90px;
     background: url("../img/decor/carpet-advantage_mobile.png") no-repeat center top;
@@ -1411,7 +1415,6 @@ html.modal-open {
   .advantages__quote {
     font-size: 1.875rem; }
   .tech {
-    margin-top: 90px;
     padding-bottom: 70px; }
     .tech .container-fluid:first-child .row {
       margin-bottom: 0; }
