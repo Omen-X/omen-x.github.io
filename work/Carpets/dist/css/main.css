@@ -327,19 +327,19 @@ html.modal-open {
 
 /* TYPOGRAPHY */
 *::-webkit-input-placeholder {
-  color: #BABABA;
+  color: #FFF;
   opacity: 1; }
 
 *:-moz-placeholder {
-  color: #BABABA;
+  color: #FFF;
   opacity: 1; }
 
 *::-moz-placeholder {
-  color: #BABABA;
+  color: #FFF;
   opacity: 1; }
 
 *:-ms-input-placeholder {
-  color: #BABABA;
+  color: #FFF;
   opacity: 1; }
 
 * {
@@ -347,15 +347,15 @@ html.modal-open {
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-  color: #FC5E5E; }
+  color: red; }
 
 body input:required:valid,
 body textarea:required:valid {
-  color: #000; }
+  color: #FF; }
 
 input:focus,
 textarea:focus {
-  color: #000; }
+  color: #FF; }
 
 html {
   overflow-x: hidden; }
@@ -402,12 +402,14 @@ textarea {
   src: url("../fonts/StrokeGapIcons/StrokeGapIcons.eot?#iefix") format("embedded-opentype"), url("../fonts/StrokeGapIcons/StrokeGapIcons.woff2") format("woff2"), url("../fonts/StrokeGapIcons/StrokeGapIcons.woff") format("woff"), url("../fonts/StrokeGapIcons/StrokeGapIcons.ttf") format("truetype"), url("../fonts/StrokeGapIcons/StrokeGapIcons.svg#StrokeGapIcons") format("svg"); }
 
 /* BLOCKS */
+body {
+  overflow-y: hidden; }
+
 .quote {
   font-family: "Marck Script", cursive; }
 
 .section {
-  position: relative;
-  z-index: 2; }
+  position: relative; }
 
 .section-title {
   margin-bottom: 45px;
@@ -533,82 +535,13 @@ body.no-touch .header__contacts:hover a {
  */
 .main {
   position: relative;
-  margin-top: 110px; }
-
-.parallax {
-  position: absolute;
-  overflow: hidden;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-height: 100%; }
-
-.bubble {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-image: url("../img/decor/bubbles/bubble.png"); }
-
-.parallax-1 .bubble-12,
-.parallax-1 .bubble-13,
-.parallax-1 .bubble-14,
-.parallax-1 .bubble-15,
-.parallax-1 .bubble-16 {
-  display: none; }
-
-.parallax-1 .bubble-1 {
-  background-position: 10px 25px;
-  background-image: url("../img/decor/bubbles/bubble-1.png") !important; }
-
-.parallax-1 .bubble-2 {
-  background-position: 40% 20px;
-  background-size: 80px auto; }
-
-.parallax-1 .bubble-3 {
-  background-position: 48% 130px;
-  background-size: 180px auto; }
-
-.parallax-1 .bubble-4 {
-  background-position: 81% 70px;
-  background-size: 100px auto; }
-
-.parallax-1 .bubble-5 {
-  background-position: 102% -20px;
-  background-size: 180px auto; }
-
-.parallax-1 .bubble-6 {
-  background-position: 85% 185px;
-  background-size: 50px auto; }
-
-.parallax-1 .bubble-7 {
-  background-position: 96% 230px;
-  background-size: 200px auto; }
-
-.parallax-1 .bubble-8 {
-  background-position: 8% 380px;
-  background-size: 60px auto; }
-
-.parallax-1 .bubble-9 {
-  background-position: 30% 480px;
-  background-size: 90px auto; }
-
-.parallax-1 .bubble-10 {
-  background-position: 36% 460px;
-  background-size: 40px auto; }
-
-.parallax-1 .bubble-11 {
-  background-position: 46% 350px;
-  background-size: 60px auto; }
+  margin-top: 110px;
+  overflow-x: hidden; }
 
 .welcome {
   position: relative;
   padding-bottom: 6%;
-  background: #59D7FB;
+  background-color: #59D7FB;
   box-shadow: 0 40px 40px rgba(89, 215, 251, 0.9); }
   .welcome .container-fluid {
     position: relative;
@@ -635,6 +568,7 @@ body.no-touch .header__contacts:hover a {
   color: #ee0101; }
 
 .welcome__feedback {
+  position: relative;
   min-height: 560px;
   max-width: 500px;
   padding: 55px 70px 0;
@@ -643,44 +577,80 @@ body.no-touch .header__contacts:hover a {
   background-repeat: no-repeat;
   background-size: 100% auto; }
 
-.form input {
-  width: 100%;
-  outline: none;
-  font-family: "Exo 2", "Helvetica", "Arial", sans-serif; }
+.form {
+  position: relative; }
+  .form input {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    outline: none;
+    font-family: "Exo 2", "Helvetica", "Arial", sans-serif; }
+  .form input[type=text],
+  .form input[type=tel] {
+    opacity: .6;
+    margin-bottom: 10px;
+    padding: 25px 40px;
+    border-radius: 35px;
+    background: #000;
+    transition: opacity .3s;
+    font-size: 18px;
+    color: #FFF; }
+    .form input[type=text]:focus,
+    .form input[type=tel]:focus {
+      opacity: .8; }
+  .form input[type=submit] {
+    border-radius: 35px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    box-shadow: 0 8px 10px rgba(4, 4, 4, 0.4);
+    background: #ee0101;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #FFF;
+    transition: background .2s; }
+    body.no-touch .form input[type=submit]:hover {
+      background: #fe3d3d; }
+    .form input[type=submit]:active {
+      background: #a20101; }
+  .form .form-security {
+    font-weight: 500;
+    text-align: center; }
 
-.form input[type=text],
-.form input[type=tel] {
-  opacity: .6;
-  margin-bottom: 10px;
-  padding: 25px 40px;
-  border-radius: 35px;
-  background: #000;
-  transition: opacity .3s;
+.form__thank {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+  bottom: 10px;
+  padding: 25px 30px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.7);
   font-size: 18px;
-  color: #FFF; }
-  .form input[type=text]:focus,
-  .form input[type=tel]:focus {
-    opacity: .8; }
-
-.form input[type=submit] {
-  border-radius: 35px;
-  margin-bottom: 20px;
-  padding: 20px 0;
-  box-shadow: 0 8px 10px rgba(4, 4, 4, 0.4);
-  background: #ee0101;
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 1px;
   color: #FFF;
-  transition: background .2s; }
-  body.no-touch .form input[type=submit]:hover {
-    background: #fe3d3d; }
-  .form input[type=submit]:active {
-    background: #a20101; }
-
-.form .form-security {
-  font-weight: 500;
-  text-align: center; }
+  transition: all .3s; }
+  .form__thank.active {
+    z-index: 10;
+    opacity: 1;
+    bottom: -50px; }
+  .form__thank p {
+    white-space: nowrap; }
+  .form-feedback .form__thank {
+    right: 0;
+    left: auto;
+    -ms-transform: none;
+        transform: none;
+    bottom: -50px; }
+    .form-feedback .form__thank.active {
+      bottom: -80px; }
 
 .form-main {
   max-width: 370px;
@@ -960,6 +930,7 @@ body.no-touch .header__contacts:hover a {
  * =============================
  */
 .footer {
+  z-index: 5;
   padding: 125px 0 25px;
   background-image: url("../img/decor/footer-bg-water.png"), url("../img/decor/footer-bg.png");
   background-repeat: no-repeat;
@@ -971,6 +942,7 @@ body.no-touch .header__contacts:hover a {
   .form-feedback .form-fields {
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -ms-flex-pack: justify;
         justify-content: space-between;
     margin-bottom: 25px; }
@@ -1158,61 +1130,6 @@ html.modal-open {
     display: none !important; } }
 
 @media only screen and (max-width: 74.9375em) {
-  .parallax-1 .bubble-12,
-  .parallax-1 .bubble-13,
-  .parallax-1 .bubble-14,
-  .parallax-1 .bubble-15,
-  .parallax-1 .bubble-16 {
-    display: block; }
-  .parallax-1 .bubble-1 {
-    background-image: url("../img/decor/bubbles/bubble.png") !important;
-    background-position: 20px 70px;
-    background-size: 80px auto; }
-  .parallax-1 .bubble-2 {
-    background-position: 42% 20px;
-    background-size: 35px auto; }
-  .parallax-1 .bubble-3 {
-    background-position: 82% -30px;
-    background-size: 180px auto; }
-  .parallax-1 .bubble-4 {
-    background-position: 27% 110px;
-    background-size: 110px auto; }
-  .parallax-1 .bubble-5 {
-    background-position: 25px 150px;
-    background-size: 150px auto; }
-  .parallax-1 .bubble-6 {
-    background-position: 88% 155px;
-    background-size: 75px auto; }
-  .parallax-1 .bubble-7 {
-    background-position: 67% 240px;
-    background-size: 45px auto; }
-  .parallax-1 .bubble-8 {
-    background-position: 80% 285px;
-    background-size: 180px auto; }
-  .parallax-1 .bubble-9 {
-    background-position: 6% 380px;
-    background-size: 60px auto; }
-  .parallax-1 .bubble-10 {
-    background-position: 12% 380px;
-    background-size: 100px auto; }
-  .parallax-1 .bubble-11 {
-    background-position: 16% 520px;
-    background-size: 30px auto; }
-  .parallax-1 .bubble-12 {
-    background-position: 35px 560px;
-    background-size: 85px auto; }
-  .parallax-1 .bubble-13 {
-    background-position: 10% 670px;
-    background-size: 60px auto; }
-  .parallax-1 .bubble-14 {
-    background-position: 90% 540px;
-    background-size: 90px auto; }
-  .parallax-1 .bubble-15 {
-    background-position: 82% 700px;
-    background-size: 50px auto; }
-  .parallax-1 .bubble-16 {
-    background-position: 90% 690px;
-    background-size: 40px auto; }
   .welcome__title {
     margin-bottom: 20px;
     padding-top: 75px; }
@@ -1245,6 +1162,19 @@ html.modal-open {
     margin-right: 10px; }
   .header__contacts a {
     font-size: 1.25rem; }
+  .welcome {
+    background-image: url("../img/decor/welcome-bubbles_mob.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center -30px; }
+  .advantages {
+    background-image: url("../img/decor/advantages-water.png"), url("../img/decor/advantages-bubbles_mob.png");
+    background-position: center top, center bottom; }
+  .tech {
+    background-image: url("../img/decor/tech-bubbles_mob.png");
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom; }
   .tech__item-desc {
     padding-left: 0;
     padding-right: 0;
@@ -1293,22 +1223,6 @@ html.modal-open {
       font-weight: 700; }
   .tech__item-text:before {
     display: none !important; }
-  .parallax-2 .bubble {
-    display: none !important; }
-    .parallax-2 .bubble:first-child {
-      display: block !important;
-      background-repeat: no-repeat;
-      background-position: bottom center !important;
-      background-size: 100% auto !important;
-      background-image: url("../img/decor/bubbles-2_mob.png"); }
-  .parallax-3 .bubble {
-    display: none !important; }
-    .parallax-3 .bubble:first-child {
-      display: block !important;
-      background-repeat: no-repeat;
-      background-position: bottom center !important;
-      background-size: 100% auto !important;
-      background-image: url("../img/decor/bubbles-3_mob.png"); }
   .footer {
     padding: 55px 0 25px;
     background-position: left 30% bottom 270%, center; }
@@ -1320,7 +1234,12 @@ html.modal-open {
     .form-feedback .form-fields input {
       margin-bottom: 10px !important;
       width: 100%;
-      max-width: 370px; } }
+      max-width: 370px; }
+  .form-feedback .form__thank {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    right: auto; } }
 
 @media only screen and (max-width: 47.9375em) {
   .header__contacts {
@@ -1371,6 +1290,8 @@ html.modal-open {
     padding-top: 15px;
     padding-bottom: 15px;
     height: auto; }
+    .header .container-fluid .row .col:nth-child(2) {
+      margin-left: auto; }
   .nav__mob-button {
     display: block; }
   .nav__list {
@@ -1398,27 +1319,6 @@ html.modal-open {
       text-align: left; }
   .main {
     margin-top: 65px; }
-  .parallax-1 .bubble-1 {
-    background-position: 8% 35px;
-    background-size: 40px auto; }
-  .parallax-1 .bubble-2 {
-    background-position: 40% 35px;
-    background-size: 20px auto; }
-  .parallax-1 .bubble-3 {
-    background-position: 90% 20px;
-    background-size: 90px auto; }
-  .parallax-1 .bubble-4 {
-    background-position: 55% 75px;
-    background-size: 60px auto; }
-  .parallax-1 .bubble-5 {
-    background-position: 25% 100px;
-    background-size: 40px auto; }
-  .parallax-1 .bubble-6 {
-    background-position: 15px 160px;
-    background-size: 110px auto; }
-  .parallax-1 .bubble-7 {
-    background-position: 85% 160px;
-    background-size: 70px auto; }
   .welcome__title {
     padding-top: 40px; }
     .welcome__title h4 {
@@ -1479,7 +1379,26 @@ html.modal-open {
     line-height: 1.5;
     font-size: 1.125rem; }
     .footer__contacts p:first-child {
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+  .form__thank {
+    bottom: 30px;
+    padding: 10px 15px;
+    font-size: 1rem; }
+    .form__thank.active {
+      bottom: 10px; }
+    .form-feedback .form__thank {
+      bottom: -30px; }
+      .form-feedback .form__thank.active {
+        bottom: -50px; } }
+
+@media only screen and (max-width: 29.9375em) {
+  .welcome {
+    background-position: center 50px; }
+  .advantages {
+    background-size: 100% auto, 130% auto; }
+  .tech {
+    background-size: 150% auto;
+    background-position: center bottom 50px; } }
 
 @media only screen and (min-width: 47.9375em) {
   .flex-sm-last {
