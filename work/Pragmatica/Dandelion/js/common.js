@@ -63,6 +63,16 @@ function mainGallery() {
 	}
 }
 
+function innerGallery() {
+	if ($('.gallery-inner').length) {
+		lightbox.option({
+			'resizeDuration': 400,
+			'fadeDuration': 400,
+			'showImageNumberLabel': false
+		});
+	}
+}
+
 // ========>> SCROLL TO TOP <<========
 
 function scrollToTop() {
@@ -138,6 +148,7 @@ $(function () {
 
 	welcomeSlider();
 	mainGallery();
+	innerGallery();
 	scrollToTop();
 	mainNavMenu();
 
