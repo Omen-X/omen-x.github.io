@@ -50,41 +50,32 @@
       </div>
     </header>
     <main class="main">
-      <section class="welcome section">
-        <div class="welcome__content content-width">
-          <h1 class="welcome__title"><span>Ремонт</span><span>Продажа</span><span>Покупка</span><br>
-            <p>Электрооборудования</p>
-          </h1>
-          <div class="welcome__items">
-            <div class="welcome__item">
-              <h2>Электродвигатели</h2>
-            </div>
-            <div class="welcome__item">
-              <h2>Электронасосы</h2>
-            </div>
-            <div class="welcome__item">
-              <h2>Редукторы</h2>
-            </div>
-            <div class="welcome__item">
-              <h2>Генераторы</h2>
-            </div>
-            <div class="welcome__item">
-              <h2>Редукторы</h2>
-            </div>
-            <div class="welcome__item">
-              <h2>Роторы</h2>
-            </div>
-          </div>
+      <section class="page-head">
+        <div class="page-head__content content-width">
+          <h2 class="page-head__title">Контакты</h2>
         </div>
       </section>
-      <section class="about-us section content-width">
-        <h2 class="section-title">О нас</h2>
-        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного те</p>
-        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного те</p>
-        <p>
-          Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного те
-          
-        </p>
+      <section class="contacts section content-width">
+        <div class="contacts__items">
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Наш адрес</h3>
+            <p class="contacts__item-text">г.Вологда, Ананьинский пер.61, цех &#8470; 6</p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Часы работы</h3>
+            <p class="contacts__item-text">Понедельник - Пятница:<span>9:00 - 18:00</span></p>
+            <p class="contacts__item-text">Суббота, Воскресенье:<span>Выходные дни</span></p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">E-mail</h3>
+            <p class="contacts__item-text"> <a href="mailto:kontur35@bk.ru">kontur35@bk.ru</a></p>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Телефон</h3>
+            <p class="contacts__item-text">8-921-124-69-67</p>
+          </div>
+        </div>
+        <div class="contacts__map" id="map"></div>
       </section>
       <section class="feedback section">
         <div class="feedback__content content-width">
@@ -126,6 +117,20 @@
         </div>
       </div>
     </footer>
+    <script>
+      function initMap() {
+        const uluru = { lat: 59.226406, lng: 39.786556 };
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQzkUEiAW-0yoaDtJSRqQP5R85n0rRH20&amp;callback=initMap"></script>
     <script>
       var ver = 1;
       // comment on final version and change version above

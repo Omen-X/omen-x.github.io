@@ -4,6 +4,8 @@
 
 // Define touch devices
 var isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
+// For scrollinkg optimization
+var didScroll = false;
 
 // ========>> DOCUMENT READY <<========
 
@@ -70,6 +72,47 @@ $(function () {
   }
 
   $(navButton).on('click', navToggle);
+
+  // end main nav
+
+
+  // COPYRIGHT
+
+  var copyrightDate = document.querySelector('.footer__copy p span');
+  var today = new Date();
+
+  copyrightDate.textContent = today.getFullYear();
+
+  // end copyright
+
+
+  // HEADER
+
+  var header = document.querySelector('.header');
+  var raf = window.requestAnimationFrame;
+  var lastScrollTop = window.scrollX;
+
+  function resizeHeader(scrollTop) {
+    if (scrollTop > 0) header.classList.add('header_dense');else header.classList.remove('header_dense');
+  }
+
+  function loop() {
+    // eslint-disable-line
+    var scrollTop = window.scrollY;
+
+    if (lastScrollTop === scrollTop) {
+      raf(loop);
+    } else {
+      lastScrollTop = scrollTop;
+      resizeHeader(scrollTop);
+      raf(loop);
+    }
+  }
+
+  if (raf) loop();
+
+  // end header
+
 
   // ========>> GLOBAL EVENTS <<========
 
