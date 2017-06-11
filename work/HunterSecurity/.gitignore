@@ -1,9 +1,0 @@
-node_modules
-src
-.bowerrc
-bower.json
-gulpfile.js
-package.json
-semantic.json
-*.psd
-*.png
