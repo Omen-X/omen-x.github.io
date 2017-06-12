@@ -630,9 +630,9 @@ body.no-touch a:hover {
   .welcome__title p {
     display: inline-block;
     position: relative;
-    margin-top: 35px;
+    margin-bottom: 50px;
     padding: 15px 100px;
-    font-size: 3.4375rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #FFB74D; }
     .welcome__title p:before, .welcome__title p:after {
