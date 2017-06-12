@@ -1,9 +1,9 @@
 'use strict';
 
 // ========>> DEFAULT VARIABLES <<========
+// Detect disabled JS
 
 // Define touch devices
-var isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
 
 /**
  * detect IE
@@ -41,6 +41,7 @@ if (explorer) document.body.classList.add('ie');
 // Svg polyfill, for external usage
 svg4everybody(); // eslint-disable-line
 
+
 // ========>> DOCUMENT READY <<========
 
 $(function () {
@@ -77,35 +78,31 @@ $(function () {
 
   // MAIN-NAV
 
-  var navList = $('nav .nav__list');
-  var navButton = $('nav .nav__mob-button');
-  var navShade = $('nav .nav__overlay');
+  var navList = document.querySelector('nav .nav__list');
+  var navButton = document.querySelector('nav .nav__mob-button');
+  var navOverlay = document.querySelector('nav .nav__overlay');
 
-  navList.addClass('animate');
-  setTimeout(function () {
-    navList.addClass('trs');
-  }, 0);
+  // navList.classList.add('animate');
+  // setTimeout(() => navList.classList.add('trs'), 0);
 
   function navToggle() {
-    if (navList.hasClass('animate')) {
-      $(navShade).on('click', navToggle);
-      $(navList).toggleClass('animate');
-
-      $(navShade).css('display', 'block');
-      $(navShade).stop().animate({ opacity: '.7' }, 300);
+    if (navList.classList.contains('animate')) {
+      navOverlay.addEventListener('click', navToggle);
+      navList.classList.toggle('animate');
+      navOverlay.classList.add('nav__overlay_visible', 'nav__overlay_animate');
     } else {
-      $(navList).toggleClass('animate');
-      $(navShade).stop().animate({ opacity: '0' }, 300);
+      navList.classList.toggle('animate');
+      navOverlay.classList.remove('nav__overlay_animate');
 
-      $(navShade).off('click', navToggle); // fix fast double-click
+      // fix fast double-click on overlay
+      navOverlay.removeEventListener('click', navToggle);
 
       setTimeout(function () {
-        $(navShade).css('display', 'none');
+        return navOverlay.classList.remove('nav__overlay_visible');
       }, 300);
     }
   }
-
-  $(navButton).on('click', navToggle);
+  navButton.onclick = navToggle;
 
   // end main nav
 
@@ -124,35 +121,65 @@ $(function () {
 
   var header = document.querySelector('.header');
   var raf = window.requestAnimationFrame;
-  var lastScrollTop = window.pageYOffset;
 
-  function resizeHeader(scrollTop) {
-    if (scrollTop > 0) header.classList.add('header_dense');else header.classList.remove('header_dense');
+  function resizeHeader(currentScrollTop) {
+    if (currentScrollTop > 0) header.classList.add('header_dense');else header.classList.remove('header_dense');
   }
+
+  // end header
+
+
+  // TO-TOP
+
+  var toTop = document.getElementById('to-top');
+
+  function scrollToTop() {
+    var timer2 = setInterval(function () {
+      var currentScrollTop = window.pageYOffset;
+      if (currentScrollTop > 0) {
+        if (currentScrollTop < 500) window.scrollTo(0, currentScrollTop - 25);else window.scrollTo(0, currentScrollTop - currentScrollTop / 13);
+      } else clearInterval(timer2);
+    }, 16);
+  }
+
+  toTop.onclick = scrollToTop;
+
+  // shows button when window scroll > 100vh
+  function showToTopBtn(currentScrollTop) {
+    if (currentScrollTop > document.documentElement.clientHeight) toTop.classList.add('to-top_visible');else toTop.classList.remove('to-top_visible');
+  }
+  showToTopBtn();
+
+  // end to-top
+
+
+  // ========>> GLOBAL EVENTS <<========
+
+  // Performance handling window scroll with requestAnimationFrame
+  var lastScrollTop = window.pageYOffset;
 
   function handleWindowScroll() {
     // eslint-disable-line
-    var scrollTop = window.pageYOffset;
+    var currentScrollTop = window.pageYOffset;
 
-    if (lastScrollTop === scrollTop) raf(handleWindowScroll);else {
-      lastScrollTop = scrollTop;
-      resizeHeader(scrollTop);
+    if (lastScrollTop === currentScrollTop) raf(handleWindowScroll);else {
+      lastScrollTop = currentScrollTop;
       raf(handleWindowScroll);
+
+      // resize header
+      resizeHeader(currentScrollTop);
+      // show to-top button
+      showToTopBtn(currentScrollTop);
     }
   }
 
   if (raf) handleWindowScroll();
 
-  // end header
-
-
-  // ========>> GLOBAL EVENTS <<========
-
   $(window).on('resize', function () {
     // MAIN NAV
     if ($(window).width() >= 768) {
-      $(navList).addClass('animate');
-      $(navShade).css('display', '');
+      navList.classList.add('animate');
+      navOverlay.classList.remove('nav__overlay_visible');
     }
   }).resize(); // end resize
 }); // end document ready
@@ -160,12 +187,5 @@ $(function () {
 
 // ========>> DETECTING CLIENT CONFIG <<========
 
-// Detect touch devices
-
-if (isTouch) $(document.body).addClass('touch');else $(document.body).addClass('no-touch');
-
-// Detect disabled JS
-
-$(document.body).removeClass('no-js');
 
 // ========>> UTILS <<========

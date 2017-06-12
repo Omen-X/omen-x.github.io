@@ -31,7 +31,13 @@
   </head>
   <body class="no-js">
     <script>
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
       //- document.body.insertAdjacentHTML('afterbegin', '<div id="loader"></d')
+      
       
     </script>
         <header class="header">
@@ -39,11 +45,11 @@
             <div class="logo header__logo"><a class="logo__link" href="/"><img src="img/decor/logo.png" alt="Логотип"><span>РемЭлектроСервис</span></a></div>
             <nav class="nav">
               <div class="nav__overlay"></div>
-              <ul class="nav__list">
-                <li class="nav__item active"><a class="nav__link" href="./">Главная</a></li>
+              <ul class="nav__list animate trs">
+                <li class="nav__item active"><a class="nav__link" href="././index.html">Главная</a></li>
                 <li class="nav__item"><a class="nav__link" href="./repair.html">Ремонт</a></li>
-                <li class="nav__item"><a class="nav__link" href="./sale.html">Продать</a></li>
                 <li class="nav__item"><a class="nav__link" href="./buy.html">Купить</a></li>
+                <li class="nav__item"><a class="nav__link" href="./sale.html">Продать</a></li>
                 <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакты</a></li>
               </ul>
               <div class="nav__mob-button"></div>
@@ -53,7 +59,7 @@
     <main class="main">
       <section class="welcome section">
         <div class="welcome__content content-width">
-          <h1 class="welcome__title"><span>Ремонт</span><span>Продажа</span><span>Покупка</span><br>
+          <h1 class="welcome__title"><span>Ремонт</span><span>Диагностика</span><span>Продажа</span><span>Покупка</span><br>
             <p>Электрооборудования</p>
           </h1>
           <div class="welcome-2__items">
@@ -78,9 +84,9 @@
           </div>
         </div>
       </section>
-      <section class="about-us section content-width">
+      <section class="company section content-width">
         <h2 class="section-title">Наша компания</h2>
-        <article class="about-us__article">
+        <article class="company__article">
           <h3> </h3>
           <p>
              Далеко-далеко засловесными горами в стране гласных и согласных живут рыбные тексты. <strong> Вдали </strong> от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленькийручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже <strong>всемогущая пунктуация не имеет власти</strong> над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного те</p>
@@ -90,6 +96,44 @@
       </section>
       <section class="advantages section content-width">
         <h2 class="section-title">Наши преимущества</h2>
+        <div class="advantages__items">
+          <div class="advantages__item">
+            <div class="advantages__item-head">
+              <svg class="advantages__item-icon">
+                <use xlink:href="img/decor/icons.svg#wrench"></use>
+              </svg>
+              <h3 class="advantages__item-title">Гарантия</h3>
+            </div>
+            <p class="advantages__item-text">Далеко-далеко засловесными горами в стране гласных и согласных живут рыбные тексты. От всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленькийручеек Даль журчит по всей стране и обеспечивает </p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-head">
+              <svg class="advantages__item-icon">
+                <use xlink:href="img/decor/icons.svg#cogs"></use>
+              </svg>
+              <h3 class="advantages__item-title">Опыт работы более 10 лет</h3>
+            </div>
+            <p class="advantages__item-text">Далеко-далеко засловесными горами в стране гласных и согласных живут рыбные тексты. От всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленькийручеек Даль журчит по всей стране и обеспечивает </p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-head">
+              <svg class="advantages__item-icon">
+                <use xlink:href="img/decor/icons.svg#mechanic"></use>
+              </svg>
+              <h3 class="advantages__item-title">Выезд на предприятия</h3>
+            </div>
+            <p class="advantages__item-text">Далеко-далеко засловесными горами в стране гласных и согласных живут рыбные тексты. От всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленькийручеек Даль журчит по всей стране и обеспечивает </p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-head">
+              <svg class="advantages__item-icon">
+                <use xlink:href="img/decor/icons.svg#delivery"></use>
+              </svg>
+              <h3 class="advantages__item-title">Доставка</h3>
+            </div>
+            <p class="advantages__item-text">Далеко-далеко засловесными горами в стране гласных и согласных живут рыбные тексты. От всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленькийручеек Даль журчит по всей стране и обеспечивает </p>
+          </div>
+        </div>
       </section>
       <section class="clients section content-width">
         <h2 class="section-title">Наши клиенты</h2>
@@ -134,6 +178,11 @@
         </div>
       </div>
     </footer>
+    <button class="to-top" id="to-top">
+      <svg>
+        <use xlink:href="img/decor/icons.svg#to-top"></use>
+      </svg>
+    </button>
     <script>
       var ver = 1;
       // comment on final version and change version above
