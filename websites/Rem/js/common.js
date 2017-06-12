@@ -78,31 +78,29 @@ $(function () {
 
   // MAIN-NAV
 
-  var navList = document.querySelector('nav .nav__list');
-  var navButton = document.querySelector('nav .nav__mob-button');
-  var navOverlay = document.querySelector('nav .nav__overlay');
+  // const navList = document.querySelector('nav .nav__list');
+  // const navButton = document.querySelector('nav .nav__mob-button');
+  // const navOverlay = document.querySelector('nav .nav__overlay');
 
   // navList.classList.add('animate');
   // setTimeout(() => navList.classList.add('trs'), 0);
 
-  function navToggle() {
-    if (navList.classList.contains('animate')) {
-      navOverlay.addEventListener('click', navToggle);
-      navList.classList.toggle('animate');
-      navOverlay.classList.add('nav__overlay_visible', 'nav__overlay_animate');
-    } else {
-      navList.classList.toggle('animate');
-      navOverlay.classList.remove('nav__overlay_animate');
+  // function navToggle() {
+  //   if (navList.classList.contains('animate')) {
+  //     navOverlay.addEventListener('click', navToggle);
+  //     navList.classList.toggle('animate');
+  //     navOverlay.classList.add('nav__overlay_visible', 'nav__overlay_animate');
+  //   } else {
+  //     navList.classList.toggle('animate');
+  //     navOverlay.classList.remove('nav__overlay_animate');
 
-      // fix fast double-click on overlay
-      navOverlay.removeEventListener('click', navToggle);
+  //     // fix fast double-click on overlay
+  //     navOverlay.removeEventListener('click', navToggle);
 
-      setTimeout(function () {
-        return navOverlay.classList.remove('nav__overlay_visible');
-      }, 300);
-    }
-  }
-  navButton.onclick = navToggle;
+  //     setTimeout(() => navOverlay.classList.remove('nav__overlay_visible'), 300);
+  //   }
+  // }
+  // navButton.onclick = navToggle;
 
   // end main nav
 
@@ -174,14 +172,6 @@ $(function () {
   }
 
   if (raf) handleWindowScroll();
-
-  $(window).on('resize', function () {
-    // MAIN NAV
-    if ($(window).width() >= 768) {
-      navList.classList.add('animate');
-      navOverlay.classList.remove('nav__overlay_visible');
-    }
-  }).resize(); // end resize
 }); // end document ready
 
 

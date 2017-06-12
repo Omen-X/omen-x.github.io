@@ -43,17 +43,16 @@
         <header class="header">
           <div class="header__content content-width">
             <div class="logo header__logo"><a class="logo__link" href="/"><img src="img/decor/logo.png" alt="Логотип"><span>РемЭлектроСервис</span></a></div>
-            <nav class="nav">
-              <div class="nav__overlay"></div>
-              <ul class="nav__list animate trs">
-                <li class="nav__item active"><a class="nav__link" href="././index.html">Главная</a></li>
-                <li class="nav__item"><a class="nav__link" href="./repair.html">Ремонт</a></li>
-                <li class="nav__item"><a class="nav__link" href="./buy.html">Купить</a></li>
-                <li class="nav__item"><a class="nav__link" href="./sale.html">Продать</a></li>
-                <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакты</a></li>
-              </ul>
-              <div class="nav__mob-button"></div>
-            </nav>
+            <div class="header__contacts">
+              <div class="header__contacts-item"><i>
+                  <svg>
+                    <use xlink:href="img/decor/icons.svg#phone-header"></use>
+                  </svg></i><span>8-921-123-97-31</span></div>
+              <div class="header__contacts-item"><i>
+                  <svg>
+                    <use xlink:href="img/decor/icons.svg#email-header"></use>
+                  </svg></i><span><a href="mailto:kontur35@bk.ru">kontur35@bk.ru</a></span></div>
+            </div>
           </div>
         </header>
     <main class="main">
@@ -89,7 +88,7 @@
         <article class="company__article">
           <h3> </h3>
           <p>
-             Занимаемся капитальным ремонтом электродвигателей от <strong>0.37 кВт до 800 кВт</strong>, электронасосы от 1 кВт до 250 кВт, в том числе импортные. Ремонтируем крановые электродвигатели, ходовую часть башенных кранов (403, 405, 408), а также продажа ходовых редукторов с электродвигателями в сборе и колес.</p>
+             <strong>Занимаемся капитальным ремонтом</strong> электродвигателей от 0.37 кВт до 800 кВт, электронасосы от 1 кВт до 250 кВт, в том числе импортные. Ремонтируем крановые электродвигатели, ходовую часть башенных кранов (403, 405, 408), а также продажа ходовых редукторов с электродвигателями в сборе и колес.</p>
         </article>
       </section>
       <section class="advantages section content-width">
@@ -137,7 +136,7 @@
           <div class="advantages__item">
             <div class="advantages__item-head">
               <svg class="advantages__item-icon">
-                <use xlink:href="img/decor/icons.svg#delivery"></use>
+                <use xlink:href="img/decor/icons.svg#sales"></use>
               </svg>
               <h3 class="advantages__item-title">Гибкая система скидок</h3>
             </div>
@@ -146,7 +145,7 @@
           <div class="advantages__item">
             <div class="advantages__item-head">
               <svg class="advantages__item-icon">
-                <use xlink:href="img/decor/icons.svg#delivery"></use>
+                <use xlink:href="img/decor/icons.svg#exchange"></use>
               </svg>
               <h3 class="advantages__item-title">Обменный фонд</h3>
             </div>
@@ -156,6 +155,45 @@
       </section>
       <section class="clients section content-width">
         <h2 class="section-title">Наши клиенты</h2>
+      </section>
+      <section class="contacts section content-width">
+        <h2 class="section-title">Наши контакты</h2>
+        <div class="contacts__content">
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="img/decor/contacts.svg#marker"></use>
+              </svg>
+              <h3 class="contacts__item-title">Наш адрес</h3>
+              <p class="contacts__item-text">г.Вологда, Ананьинский пер.61, цех &#8470; 6</p>
+              <p>* База ВологдаЭлектроТеплоСеть</p>
+            </div>
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="img/decor/contacts.svg#clock"></use>
+              </svg>
+              <h3 class="contacts__item-title">Часы работы</h3>
+              <p class="contacts__item-text">Понедельник - Воскресенье:<span>8:00 - 18:00</span></p>
+              <p>* Без выходных</p>
+            </div>
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="img/decor/contacts.svg#email"></use>
+              </svg>
+              <h3 class="contacts__item-title">E-mail</h3>
+              <p class="contacts__item-text"> <a href="mailto:kontur35@bk.ru">kontur35@bk.ru</a></p>
+            </div>
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="img/decor/contacts.svg#phone"></use>
+              </svg>
+              <h3 class="contacts__item-title">Телефон (круглосуточный)</h3>
+              <p class="contacts__item-text">8-921-123-97-31</p>
+              <p class="contacts__item-text">8-921-12-232-12</p>
+            </div>
+          </div>
+          <div class="contacts__map" id="map"></div>
+        </div>
       </section>
       <section class="feedback section">
         <div class="feedback__content content-width">
@@ -174,7 +212,6 @@
     </main>
     <footer class="footer">
       <div class="footer__content content-width">
-        <div class="logo footer__logo"><a class="logo__link" href="/"><img src="img/decor/logo.png" alt="Логотип"><span>РемЭлектроСервис</span></a></div>
         <div class="footer__contacts">
           <h3 class="footer__title">Контактная информация</h3>
           <ul class="footer__list">
@@ -184,19 +221,26 @@
             <li class="footer__list-item">Режим работы:<span>Пн-Пт с 9:00 до 18:00</span></li>
           </ul>
         </div>
-        <div class="footer__links">
-          <h3 class="footer__title">Реквизиты</h3>
-          <ul class="footer__list">
-            <li class="footer__list-item">ИНН:<span>8123123192378</span></li>
-            <li class="footer__list-item">ОГРН:<span>0812301238012</span></li>
-            <li class="footer__list-item">ФАКС:<span>81920312937</span></li>
-          </ul>
-        </div>
+        <div class="logo footer__logo"><a class="logo__link" href="/"><img src="img/decor/logo.png" alt="Логотип"><span>РемЭлектроСервис</span></a></div>
         <div class="footer__copy">
           <p>&copy; ООО &laquo;РемЭлектроСервис&raquo;,  2000—<span>2016</span></p>
         </div>
       </div>
     </footer>
+    <script>
+      function initMap() {
+        const uluru = { lat: 59.226406, lng: 39.786556 };
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
     <button class="to-top" id="to-top">
       <svg>
         <use xlink:href="img/decor/icons.svg#to-top"></use>
