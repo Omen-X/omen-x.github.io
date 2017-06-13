@@ -1,0 +1,23 @@
+{
+	"name": "Project",
+	"description": "",
+	"main": "index.js",
+	"authors": [
+		"Omen-x"
+	],
+	"license": "ISC",
+	"homepage": "",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"src/libs/",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "^3.1.1"
+	},
+	"devDependencies": {
+	}
+}
