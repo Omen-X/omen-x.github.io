@@ -44,65 +44,33 @@ svg4everybody(); // eslint-disable-line
 
 // ========>> DOCUMENT READY <<========
 
-$(function () {
-  // Preloader
-  $('#loader').fadeOut(200);
-  setTimeout(function () {
-    $('#loader').remove();
-  }, 210);
+var checkLoad = function checkLoad() {
+  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);else documentReady(); // eslint-disable-line
+};
 
-  // Prevent dragging img
-  $('img').on('dragstart', function (event) {
-    return event.preventDefault();
-  });
+checkLoad();
 
+function documentReady() {
   // ========>> ANIMATION <<========
 
-  // Adding animation classes
+  // // Adding animation classes
 
-  var animClasses = ['.select'];
+  // const animClasses = [
+  // '.select',
+  // ];
 
-  animClasses.forEach(function (select) {
-    $(select).addClass('animate');
-  });
+  // animClasses.forEach((select) => {
+  //   $(select).addClass('animate');
+  // });
 
-  // fix transition effect after page reloading,
-  // transition adds after animation class,
-  // all transitions must be listed in this selector
+  // // fix transition effect after page reloading,
+  // // transition adds after animation class,
+  // // all transitions must be listed in this selector
 
-  setTimeout(function () {
-    $('selector').addClass('trs');
-  }, 0);
-
-  // ========>> FUNCTIONS CALL <<========
-
-  // MAIN-NAV
-
-  // const navList = document.querySelector('nav .nav__list');
-  // const navButton = document.querySelector('nav .nav__mob-button');
-  // const navOverlay = document.querySelector('nav .nav__overlay');
-
-  // navList.classList.add('animate');
-  // setTimeout(() => navList.classList.add('trs'), 0);
-
-  // function navToggle() {
-  //   if (navList.classList.contains('animate')) {
-  //     navOverlay.addEventListener('click', navToggle);
-  //     navList.classList.toggle('animate');
-  //     navOverlay.classList.add('nav__overlay_visible', 'nav__overlay_animate');
-  //   } else {
-  //     navList.classList.toggle('animate');
-  //     navOverlay.classList.remove('nav__overlay_animate');
-
-  //     // fix fast double-click on overlay
-  //     navOverlay.removeEventListener('click', navToggle);
-
-  //     setTimeout(() => navOverlay.classList.remove('nav__overlay_visible'), 300);
-  //   }
-  // }
-  // navButton.onclick = navToggle;
-
-  // end main nav
+  // setTimeout(() => {
+  //   $('selector')
+  //   .addClass('trs');
+  // }, 0);
 
 
   // COPYRIGHT
@@ -172,10 +140,4 @@ $(function () {
   }
 
   if (raf) handleWindowScroll();
-}); // end document ready
-
-
-// ========>> DETECTING CLIENT CONFIG <<========
-
-
-// ========>> UTILS <<========
+} // end document ready
