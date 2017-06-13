@@ -7,20 +7,6 @@ var isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
 
 // Preload images
 
-var imgSrc = [];
-
-// Iterate over all
-// $('.main-slider__item img').each(function(i, e){
-// 	imgSrc.push('../' + $(e).attr('src'));
-// });
-
-// let imgItems = [];
-
-// imgSrc.forEach(function(val, i) {
-// 	let img = new Image();
-// 	img.src = val;
-// 	imgItems.push(img);
-// });
 
 // ========>> DOCUMENT READY <<========
 
@@ -210,11 +196,11 @@ $(document).ready(function () {
 		}
 	}).focusout(function () {
 		$(this).trigger('keyup');
-	});
+	}
 
 	// ========>> SCROLL TO TOP <<========
 
-	var toTop = $('#to-top');
+	);var toTop = $('#to-top');
 
 	toTop.on('click', function () {
 		$('html, body').animate({ scrollTop: 0 }, 550);

@@ -288,7 +288,6 @@ template, [hidden] {
 .advantages__slider .owl-nav,
 .questions__slider .owl-nav {
   position: absolute;
-  top: -webkit-calc(50% - 25px);
   top: calc(50% - 25px);
   left: 0;
   width: 100%;
@@ -308,7 +307,6 @@ template, [hidden] {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: .5;
-  -webkit-transition: opacity .25s;
   transition: opacity .25s; }
   body.no-touch .advantages__slider .owl-prev:hover,
   body.touch .advantages__slider .owl-prev, body.no-touch
@@ -370,7 +368,6 @@ template, [hidden] {
   background: #8B8B8B;
   background: url("../img/decor/scroll-btn.png") no-repeat center;
   background-size: contain;
-  -webkit-transition: opacity .8s, box-shadow .2s;
   transition: opacity .8s, box-shadow .2s;
   cursor: pointer; }
   body.no-touch .to-top:hover {
@@ -501,7 +498,6 @@ template, [hidden] {
 .advantages__slider .owl-nav,
 .questions__slider .owl-nav {
   position: absolute;
-  top: -webkit-calc(50% - 25px);
   top: calc(50% - 25px);
   left: 0;
   width: 100%;
@@ -521,7 +517,6 @@ template, [hidden] {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: .5;
-  -webkit-transition: opacity .25s;
   transition: opacity .25s; }
   body.no-touch .advantages__slider .owl-prev:hover,
   body.touch .advantages__slider .owl-prev, body.no-touch
@@ -583,7 +578,6 @@ template, [hidden] {
   background: #8B8B8B;
   background: url("../img/decor/scroll-btn.png") no-repeat center;
   background-size: contain;
-  -webkit-transition: opacity .8s, box-shadow .2s;
   transition: opacity .8s, box-shadow .2s;
   cursor: pointer; }
   body.no-touch .to-top:hover {
@@ -715,12 +709,13 @@ button {
  *
  * =============================
  */
+body {
+  padding: 100px; }
+
 .header {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -743,11 +738,9 @@ button {
   background-size: contain; }
 
 .nav__list {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -761,7 +754,6 @@ button {
   font-size: 0.875em;
   text-transform: uppercase;
   color: #61656f;
-  -webkit-transition: color .2s;
   transition: color .2s;
   white-space: nowrap; }
   .nav__link:hover,
@@ -903,7 +895,6 @@ button {
   padding: 15px;
   border-radius: 4px;
   font-size: 1em;
-  -webkit-transition: box-shadow .25s;
   transition: box-shadow .25s; }
   .form-feedback input[name=name]:focus,
   .form-feedback input[name=tel]:focus {
@@ -926,7 +917,6 @@ button {
   color: #FFF;
   letter-spacing: 1px;
   font-size: 1.125em;
-  -webkit-transition: background .2s;
   transition: background .2s; }
   .form-feedback__submit:hover, .feedback__mob-button:hover {
     background: #ff5e4d; }
@@ -953,7 +943,6 @@ button {
     padding-left: 0;
     padding-right: 0; }
   .advantages.sect .row {
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
@@ -1073,7 +1062,6 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #FF4B39;
-  -webkit-transition: color .25s, background .3s;
   transition: color .25s, background .3s; }
   body.no-touch .cta__btn:hover {
     color: #FFF; }
@@ -1088,7 +1076,6 @@ button {
   height: 100%;
   background: #385B71;
   pointer-events: none;
-  -webkit-transition: width .4s;
   transition: width .4s; }
   body.no-touch .cta__btn:hover .cta__btn-bg {
     width: 100%; }
@@ -1124,7 +1111,6 @@ button {
 .certificates {
   background-color: #f9f9f9; }
   .certificates .row .row {
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
@@ -1140,7 +1126,6 @@ button {
   background: #FFF;
   box-shadow: 0px 8px 32px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px #ebebeb;
-  -webkit-transition: box-shadow .25s;
   transition: box-shadow .25s; }
   .certificate__item:hover {
     box-shadow: 0px 2px 22px 0 rgba(0, 0, 0, 0.3); }
@@ -1190,7 +1175,6 @@ button {
   width: 100%;
   height: 100%; }
   .footer__content-wrap .row {
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
@@ -1209,11 +1193,9 @@ button {
   max-width: 500px; }
 
 .contacts__item {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1237,7 +1219,6 @@ button {
     width: 100%;
     font-family: "BloggerSans", "Blogger Sans", "Helvetica", "Arial", sans-serif;
     font-size: 1em;
-    -webkit-transition: all .25s;
     transition: all .25s;
     padding: 20px 15px 8px; }
     .form-contact input:focus + .form-contact__placeholder,
@@ -1268,7 +1249,6 @@ button {
   position: absolute;
   left: 15px;
   top: 17px;
-  -webkit-transition: all .25s;
   transition: all .25s;
   cursor: text;
   font-size: 0.9375em; }
@@ -1284,7 +1264,6 @@ button {
   overflow: hidden;
   text-transform: uppercase;
   background: none;
-  -webkit-transition: border-bottom-color .2s;
   transition: border-bottom-color .2s; }
   .form-contact__submit:hover {
     border-bottom-color: #FF4B39; }
@@ -1425,7 +1404,6 @@ button {
 .advantages__slider .owl-nav,
 .questions__slider .owl-nav {
   position: absolute;
-  top: -webkit-calc(50% - 25px);
   top: calc(50% - 25px);
   left: 0;
   width: 100%;
@@ -1445,7 +1423,6 @@ button {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: .5;
-  -webkit-transition: opacity .25s;
   transition: opacity .25s; }
   body.no-touch .advantages__slider .owl-prev:hover,
   body.touch .advantages__slider .owl-prev, body.no-touch
@@ -1507,7 +1484,6 @@ button {
   background: #8B8B8B;
   background: url("../img/decor/scroll-btn.png") no-repeat center;
   background-size: contain;
-  -webkit-transition: opacity .8s, box-shadow .2s;
   transition: opacity .8s, box-shadow .2s;
   cursor: pointer; }
   body.no-touch .to-top:hover {
@@ -1607,7 +1583,6 @@ button {
       -webkit-transform: translate3d(200px, 0, 0);
               transform: translate3d(200px, 0, 0); }
     .nav__list.trs {
-      -webkit-transition: -webkit-transform .6s;
       transition: -webkit-transform .6s;
       transition: transform .6s;
       transition: transform .6s, -webkit-transform .6s; }
@@ -1919,7 +1894,6 @@ button {
     opacity: 0;
     top: 35px; }
   .advantages.trs .advantages__item {
-    -webkit-transition: opacity .25s, top .45s;
     transition: opacity .25s, top .45s; } }
 
 @media only screen and (min-width: 1200px) {
