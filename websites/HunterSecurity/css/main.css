@@ -709,9 +709,6 @@ button {
  *
  * =============================
  */
-body {
-  padding: 100px; }
-
 .header {
   display: -webkit-flex;
   display: -ms-flexbox;

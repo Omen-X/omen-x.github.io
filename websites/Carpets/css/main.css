@@ -401,7 +401,6 @@ textarea {
   font-weight: normal;
   src: url("../fonts/StrokeGapIcons/StrokeGapIcons.eot?#iefix") format("embedded-opentype"), url("../fonts/StrokeGapIcons/StrokeGapIcons.woff2") format("woff2"), url("../fonts/StrokeGapIcons/StrokeGapIcons.woff") format("woff"), url("../fonts/StrokeGapIcons/StrokeGapIcons.ttf") format("truetype"), url("../fonts/StrokeGapIcons/StrokeGapIcons.svg#StrokeGapIcons") format("svg"); }
 
-/* BLOCKS */
 body {
   overflow-y: hidden; }
 
