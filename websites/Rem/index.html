@@ -24,8 +24,7 @@
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <link rel="stylesheet" href="css/main.min.css">
-    <style>#loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999}</style><link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css"><link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
@@ -35,8 +34,6 @@
       var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
       if (isTouch) document.body.classList.add('touch');
       else document.body.classList.add('no-touch');
-      
-      //- document.body.insertAdjacentHTML('afterbegin', '<div id="loader"></d')
       
       
     </script>
@@ -260,7 +257,18 @@
       <svg>
         <use xlink:href="img/decor/icons.svg#to-top"></use>
       </svg>
-    </button>
+    </button><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            'Ubuntu:400,500,700:cyrillic,cyrillic-ext',
+            'Play:400,700:cyrillic,cyrillic-ext',
+            'Exo+2:400,600,700:cyrillic'
+          ]
+        }
+      });
+    </script>
     <script>
       var ver = 1;
       // comment on final version and change version above

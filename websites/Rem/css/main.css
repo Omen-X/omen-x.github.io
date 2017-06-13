@@ -417,6 +417,7 @@ body.no-touch a:hover {
   position: fixed;
   z-index: 100;
   opacity: 0;
+  outline: none;
   right: 30px;
   bottom: 80px;
   padding: 0;
