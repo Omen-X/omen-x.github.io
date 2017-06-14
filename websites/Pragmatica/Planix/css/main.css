@@ -1232,7 +1232,8 @@ footer .nav__list a {
 
 .footer__social-list li {
   display: inline-block;
-  margin-right: 6px; }
+  margin-right: 6px;
+  vertical-align: top; }
   .footer__social-list li:last-child {
     margin-right: 0; }
   .footer__social-list li a {
@@ -1248,9 +1249,6 @@ footer .nav__list a {
     background-color: #00aec6;
     border-radius: 50%;
     transition: background-color .2s; }
-    .footer__social-list li a i {
-      position: absolute;
-      z-index: 1; }
     body.no-touch .footer__social-list li a:hover {
       background-color: #00dbf9; }
 
@@ -1765,8 +1763,7 @@ footer .nav__list a {
       flex-flow: row wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex: 2;
-      flex: 2;
+  width: calc(100% - 250px);
   max-width: 815px; }
 
 .service__item {
@@ -1886,6 +1883,8 @@ footer .nav__list a {
       flex-grow: 2; }
   .dev p {
     max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.25rem;
     line-height: 1.5;
     color: #7d8393; }
