@@ -1073,6 +1073,7 @@ header .nav__list {
 .block-text {
   text-align: center; }
   .block-text h2 {
+    font-weight: 300;
     margin-top: 25px; }
   .block-text p {
     margin: 35px auto 0;
