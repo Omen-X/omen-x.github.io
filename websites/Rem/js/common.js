@@ -137,7 +137,6 @@ var checkLoad = function checkLoad() {
 checkLoad();
 
 function documentReady() {
-
   // COPYRIGHT
 
   var copyrightDate = document.querySelector('.footer__copy p span');
@@ -190,7 +189,6 @@ function documentReady() {
   var feedbackSuccesMsg = document.querySelector('.feedback__succes');
 
   feedback.addEventListener('submit', function (e) {
-    // const formThank = $('.form__thank', e.target);
     e.preventDefault();
 
     // feedbackSuccesMsg.classList.add('active');
