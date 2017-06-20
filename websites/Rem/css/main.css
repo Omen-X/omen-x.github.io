@@ -99,6 +99,8 @@ html.modal-open {
     background: -webkit-gradient(linear, left top, right top, from(rgba(43, 46, 216, 0)), color-stop(50%, #2b2ed8), to(rgba(43, 46, 216, 0)));
     background: -o-linear-gradient(left, rgba(43, 46, 216, 0) 0%, #2b2ed8 50%, rgba(43, 46, 216, 0) 100%);
     background: linear-gradient(to right, rgba(43, 46, 216, 0) 0%, #2b2ed8 50%, rgba(43, 46, 216, 0) 100%); }
+  .advantages__item:last-child {
+    margin-left: auto; }
   @media only screen and (max-width: 56.1875em) {
     .advantages__item {
       width: calc(50% - 20px);
@@ -418,7 +420,11 @@ html.modal-open {
       padding: 15px 20px; } }
   @media only screen and (max-width: 37.4375em) {
     .feedback__succes {
+      position: fixed;
+      top: 40px;
       width: 100%; }
+      .feedback__succes.active {
+        top: 70px; }
       .feedback__succes p {
         text-align: center;
         line-height: 1.3;

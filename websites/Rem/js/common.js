@@ -167,7 +167,7 @@ function documentReady() {
     var timer2 = setInterval(function () {
       var currentScrollTop = window.pageYOffset;
       if (currentScrollTop > 0) {
-        if (currentScrollTop < 500) window.scrollTo(0, currentScrollTop - 25);else window.scrollTo(0, currentScrollTop - currentScrollTop / 13);
+        if (currentScrollTop < 500) window.scrollTo(0, currentScrollTop - 35);else window.scrollTo(0, currentScrollTop - currentScrollTop / 13);
       } else clearInterval(timer2);
     }, 16);
   }
@@ -219,7 +219,7 @@ function documentReady() {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('SUCCES Request');
+          // console.log('SUCCES Request');
           feedback.reset();
           feedbackSuccesMsg.classList.remove('hidden');
           feedbackSuccesMsg.classList.add('active');
