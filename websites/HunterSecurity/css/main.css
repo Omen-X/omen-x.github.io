@@ -727,6 +727,7 @@ button {
   color: #3e3e3e; }
 
 .logo__link {
+  position: relative;
   color: #3d3d3d; }
 
 .logo__left {
@@ -973,9 +974,15 @@ button {
     height: 100%;
     background: rgba(51, 61, 74, 0.45); }
 
-.services.content-w {
+.services .content-w {
   padding-left: 0;
   padding-right: 0; }
+
+.services.animate .services__item {
+  -webkit-transform: translateY(100px);
+      -ms-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0; }
 
 .services__item {
   position: relative;
@@ -1013,6 +1020,11 @@ button {
 .process.content-w {
   padding-left: 0;
   padding-right: 0; }
+  .process.content-w.animate .process__item {
+    -webkit-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+            transform: translateX(-300px);
+    opacity: 0; }
 
 .process__item {
   margin-bottom: 60px; }

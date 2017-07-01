@@ -220,6 +220,42 @@ $(document).ready(function () {
 
 	showScroll();
 
+	// ========>> ANIMATION <<========
+
+	if (window.matchMedia('(min-width: 993px)').matches) {
+		var welcomeHeader = document.querySelector('.welcome__info-header');
+		var welcomeText = document.querySelector('.welcome__info-text');
+
+		var processItems = [$('.process .row:first-child .process__item'), $('.process .row:nth-child(2) .process__item'), $('.process .row:nth-child(3) .process__item')];
+		var servicesItems1 = [$('.services .col-xs-12:nth-child(1) .services__item'), $('.services .col-xs-12:nth-child(2) .services__item')];
+		var servicesItems2 = [$('.services .col-xs-12:nth-child(3) .services__item'), $('.services .col-xs-12:nth-child(4) .services__item')];
+
+		['.process', '.services'].map(function (item) {
+			$(item).addClass('animate');
+		});
+
+		TweenLite.from(feedback, 1, { transform: 'translateX(300px)' });
+		TweenLite.from(welcomeHeader, 1, { transform: 'translateX(-600px)' });
+		TweenLite.from(welcomeText, 1, { transform: 'translateX(-600px)', delay: 0.2 });
+
+		var servicesWaypoint = $('.services').waypoint({
+			handler: function handler() {
+				TweenLite.to(servicesItems1, .7, { transform: 'translateY(0)', opacity: '1' });
+				TweenLite.to(servicesItems2, .7, { transform: 'translateY(0)', opacity: '1', delay: 0.2 });
+				this.destroy();
+			},
+			offset: '60%'
+		});
+
+		var processWaypoint = $('.process').waypoint({
+			handler: function handler() {
+				TweenMax.staggerTo(processItems, 1.4, { transform: 'translateX(0)', opacity: '1' }, .25);
+				this.destroy();
+			},
+			offset: '60%'
+		});
+	}
+
 	// ========>> RESIZE <<========
 
 
