@@ -76,19 +76,19 @@ $(document).ready(function () {
 
 	// ========>> QUESTIONS SLIDER <<========
 
+	function questionSlider() {
+		if (window.matchMedia('(min-width: 768px)').matches) {
 
-	if (window.matchMedia('(min-width: 768px)').matches) {
-
-		$('.questions__slider .owl-carousel').owlCarousel({
-			items: 1,
-			loop: true,
-			autoplay: false,
-			nav: true,
-			navText: ''
-		});
-	} else {}
-	// $('.questions__slider > .owl-carousel').removeClass('owl-carousel');
-
+			$('.questions__slider .owl-carousel').owlCarousel({
+				items: 1,
+				loop: true,
+				autoplay: false,
+				nav: true,
+				navText: ''
+			});
+		}
+	}
+	questionSlider();
 
 	// ========>> CERTIFICATES POP-UP <<========
 
@@ -265,9 +265,9 @@ $(document).ready(function () {
 
 			$(navList).addClass('animate');
 			$(navShade).css('display', '');
-		} else {
-			$('.questions__slider > .owl-carousel').removeClass('owl-carousel');
 		}
+
+		questionSlider();
 	}).resize(); // end resize
 }); // end document ready
 
