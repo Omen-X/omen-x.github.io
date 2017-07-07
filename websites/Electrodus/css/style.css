@@ -2363,6 +2363,7 @@ border-top: none;
 
 /*NEW STYLES*/
 
+
 .owl-dots .owl-dot {
   width: 8px;
   height: 8px;
@@ -2388,13 +2389,14 @@ border-top: none;
 }
 
 
-.t_nav.mob {
+.searchbox_top,
+.item__mob-info,
+.t_nav.mob,
+.slidebox-mob {
   display: none;
 }
 
-.searchbox_top {
-  display: none;
-}
+
 
 @media screen and (max-width: 1160px) {
   .title {
@@ -2567,6 +2569,276 @@ border-top: none;
 
   .searchbox_top .relsearch {
     display: none !important;
+  }
+
+  .sibebar > * {
+    display: none;
+  }
+
+  .sibebar .searchbox,
+  .sibebar .sb_title,
+  .sibebar .subcat {
+    display: block;
+  }
+
+  .sb_title {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .sb_title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    width: 10px;
+    height: 10px;
+    background-image: url('../images/arr_down.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .subcat li a {
+    display: block;
+  }
+  .subcat li a:after {
+    right: 20px;
+    top: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .maincontent .in {
+    padding: 0 10px;
+  }
+
+  .maincontent .morebox {
+    display: none;
+  }
+
+  .innerbox {
+    margin: 15px -20px;
+    padding: 0;
+  }
+
+  .title,
+  .tab_header,
+  .tab_content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .tab_header {
+    margin-bottom: 20px;
+  }
+
+  .owlproduct .owl-item strong {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .owlproduct .owl-item img {
+    width: 40%;
+    display: inline-block;
+    /*float: left;*/
+  }
+
+  .th_p {
+    padding: 0;
+    float: none;
+    width: calc(100% - 1px);
+    padding-top: 10px;
+  }
+  .th_p strong,
+  .th_p .clearfix {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+
+  .th_p img {
+    padding-left: 20px;
+  }
+  .th_p .clearfix {
+    position: relative;
+  }
+  .th_p .clearfix .aval {
+    display: none;
+  }
+
+  .th_p .clearfix .r {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .th_p .btn_red {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .tab_content .owl-carousel .owl-item {
+    margin: 0;
+  }
+
+  .item__mob-info {
+    /*display: inline-block;*/
+    display: block;
+    text-align: right;
+    float: right;
+    padding-right: 20px;
+    font-family: 'rubik', sans-serif;
+    font-size: 14px;
+  }
+
+  .item__mob-info span {
+    display: block;
+  }
+
+  .item__mob-info > span {
+    margin-bottom: 15px;
+    color: #209600;
+  }
+
+  .item__mob-info p span {
+    color: #3d5467;
+  }
+
+  .naborholder {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .th_sm {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    margin-bottom: 15px;
+  }
+
+  .th_sm:after {
+    bottom: -30px;
+    top: auto;
+    left: 50%;
+  }
+
+  .th_sm img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .th_sm strong,
+  .th_sm i {
+    float: right;
+    width: 100%;
+    max-width: 160px;
+  }
+
+  .th_sm strong {
+    order: 1;
+    max-width: 160px;
+  }
+
+  .th_sm strong p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #3d5467;
+  }
+
+  .th_sm i {
+    order: 2;
+    max-width: 160px;
+    display: none;
+  }
+
+  .owlnabor .th_sm {
+    width: 100%;
+    float: none;
+  }
+
+  .ps-img-wrap {
+    position: relative;
+    width: 40%;
+    text-align: center;
+  }
+
+  .naborbox {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .naborholder {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .naborbuy {
+    position: relative;
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding-top: 55px;
+  }
+
+  .naborbuy .cbbox {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+
+  .naborprice {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+
+  .naborprice .price,
+  .naborprice .econ {
+    display: inline-block;
+  }
+
+  .naborprice .oldprice {
+    display: block;
+    max-width: 50%;
+    /*float: left;*/
+  }
+
+  .naborprice .econ {
+    max-width: 130px;
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  .naborbuy .btn_red {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hidden-mob,
+  .sertbox,
+  .resumebox {
+    display: none !important;
+  }
+
+  .slidebox-mob {
+    display: block;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 15px;
+    margin-bottom: 70px;
+  }
+
+  .slidebox-mob .item {
+    border: 1px solid #d9e1e3
+  }
+
+  .slidebox-mob .l_arr{
+    display: none;
   }
 
 }
