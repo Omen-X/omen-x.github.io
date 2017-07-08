@@ -78,7 +78,8 @@ $(document).ready(function () {
           dots: false
         },
         1530: {
-          items: 5
+          items: 5,
+          dots: false
         }
       }
     });
@@ -303,6 +304,13 @@ $(document).ready(function () {
 
     $(this).siblings('.level2').stop().slideToggle(220);
   });
+
+  // $('.tab_item').matchHeight({
+  //   byRow: true,
+  //   property: 'height',
+  //   target: null,
+  //   remove: false
+  // });
 }); // end document ready
 
 
