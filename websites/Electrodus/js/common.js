@@ -238,19 +238,19 @@ $(document).ready(function () {
   // TABS
   var tabHeader = $('.tab_header');
 
-  $(".tab_header .tab_item").click(function (a) {
-    a.preventDefault();
-
+  tabHeader.on('click', function (event) {
     // tablet
     if (window.matchMedia('(max-width: 1209px)').matches) {
-      if ($(this).hasClass('active') && !tabHeader.hasClass('opened')) {
-
-        tabHeader.addClass('opened');
-      } else {
-
+      if (tabHeader.hasClass('opened')) {
         tabHeader.removeClass('opened');
+      } else {
+        tabHeader.addClass('opened');
       }
     }
+  });
+
+  $(".tab_header .tab_item").click(function (a) {
+    a.preventDefault();
 
     $(".tab_header .tab_item").removeClass('active');
     $(this).addClass('active');
