@@ -6,9 +6,6 @@
 var isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
 /*eslint-disable*/
 
-// ========>> FUNCTIONS <<========
-
-
 // ========>> DOCUMENT READY <<========
 $(document).ready(function () {
 
@@ -232,9 +229,7 @@ $(document).ready(function () {
     }
   }
 
-  owl.on('initialized.owl.carousel', function (event) {
-    //  console.log('ini');
-  });
+  owl.on('initialized.owl.carousel', function (event) {});
 
   // TABS
 

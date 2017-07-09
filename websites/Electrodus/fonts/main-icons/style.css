@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'main-icons';
+  src:  url('fonts/main-icons.eot?bqaa07');
+  src:  url('fonts/main-icons.eot?bqaa07#iefix') format('embedded-opentype'),
+    url('fonts/main-icons.ttf?bqaa07') format('truetype'),
+    url('fonts/main-icons.woff?bqaa07') format('woff'),
+    url('fonts/main-icons.svg?bqaa07#main-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="main-icons-"], [class*=" main-icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'main-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-icons-Arrow-up:before {
+  content: "\e912";
+}
+.main-icons-delivery:before {
+  content: "\e913";
+}
+.main-icons-noun_16980_cc-copy-29:before {
+  content: "\e914";
+}
+.main-icons-noun_16980_cc-copy-42:before {
+  content: "\e915";
+}
+.main-icons-noun_16980_cc-copy-43:before {
+  content: "\e916";
+}
+.main-icons-search:before {
+  content: "\e90d";
+}
+.main-icons-basket:before {
+  content: "\e910";
+}
+.main-icons-Polygon541:before {
+  content: "\e911";
+}
+.main-icons-Rectangle585:before {
+  content: "\e917";
+}
