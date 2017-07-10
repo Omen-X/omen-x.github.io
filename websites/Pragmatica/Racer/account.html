@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Racer</title>
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#4754C2">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Content title">
+    <meta property="og:description" content="Content description">
+    <meta property="og:image" content="img">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999}
+      
+    </style>
+  </head>
+  <body class="no-js catalog">
+    <script>document.body.insertAdjacentHTML('afterbegin', '<div id="loader"></d')</script>
+    <header class="header">
+      <div class="header__nav">
+        <div class="header__nav-wrap content-w">
+          <nav class="nav">
+            <div class="nav__shade"></div>
+            <div class="nav__list-wrap">
+              <ul class="nav__list">
+                <li class="active"><a href="./index.html">Главная</a></li>
+                <li><a href="./inner.html">Ваши вопросы</a></li>
+                <li><a href="./inner.html">Отзывы</a></li>
+                <li><a href="./inner.html">Видео</a></li>
+                <li><a href="./inner.html">Контакты</a></li>
+              </ul>
+              <div class="nav__search"></div>
+              <div class="nav__contacts">
+                <div class="nav__contacts-social"><a href="#"><img src="img/decor/viber_mob.png">Viber</a><a href="#"><img src="img/decor/whatsapp_mob.png">WhatsApp</a></div><span class="nav__contacts-phone">219-13-45</span>
+              </div>
+            </div>
+            <div class="nav__mob-button"></div>
+          </nav>
+          <div class="header__search">
+            <input type="search" placeholder="Поиск по каталогу">
+          </div>
+          <div class="header__social"><a href="#"><img src="img/decor/soc-youtube.png" alt="youtube"></a><a href="#"><img src="img/decor/soc-vk.png" alt="vk"></a><a href="#"><img src="img/decor/soc-od.png" alt="odnoklassniki"></a></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="content-w">
+        <seciton class="side-nav">
+          <h2 class="side-nav__item-title">ЛИЧНЫЙ КАБИНЕТ</h2>
+          <ul class="side-nav__links">
+            <li><a href="#">Сменить логин/пароль</a><a href="#">Адрес доставки</a><a class="active" href="#">Личные сообщения</a><a href="#">Мои заказы</a><a href="#">Корзина заказов (0)</a></li>
+          </ul>
+        </seciton>
+        <div class="main-content">
+          <div class="header__top content-w">
+            <div class="nav-mob-button"></div>
+            <div class="logo"><a class="logo__link h6" href="./index.html"><img src="img/decor/logo.png"></a></div>
+            <div class="header__contacts hidden-phone">
+              <div class="header__contacts-social"><a href="#"><img src="img/decor/soc-viber.png"></a><a href="#"><img src="img/decor/soc-wap.png"></a></div>
+              <p class="header__phone h7">+7 (913) 330-45-67</p>
+            </div><a class="cta-btn" href="#">КАТАЛОГ ЗАПЧАСТЕЙ</a><a class="cta-btn light" href="#"><span>КАБИНЕТ</span></a>
+            <div class="header__order"><a href="#"><span>(<span>0</span>)</span></a></div>
+          </div>
+          <div class="catalog__breadcrumbs"><a href="./index.html">Каталог /</a><span> Двигатели</span></div>
+          <div class="account__item">
+            <div class="product__logo"><img src="img/decor/logo.png"></div>
+            <h3 class="product__name">Личные сообщения</h3><a class="cta-btn" href="#">НАПИСАТЬ ПИСЬМО</a>
+            <table class="account__table account__table_msg">
+              <tr>
+                <th></th>
+                <th>Тема</th>
+                <th>Отправитель</th>
+                <th>Дата</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="order" checked id="account-msg-1">
+                  <label for="account-msg-1"></label>
+                </td>
+                <td>Оформление заказа</td>
+                <td>Info@usermail.ru</td>
+                <td>14.12.2017</td>
+                <td>
+                  <button>Удалить</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="order" id="account-msg-2">
+                  <label for="account-msg-2"></label>
+                </td>
+                <td>Нужна запчасть, которой нет на сайте</td>
+                <td>Info@usermail.ru</td>
+                <td>14.12.2017</td>
+                <td>
+                  <button>Удалить</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="order" id="account-msg-3">
+                  <label for="account-msg-3"></label>
+                </td>
+                <td>Очень интересный вопрос от пользователя</td>
+                <td>Info@usermail.ru</td>
+                <td>14.12.2017</td>
+                <td>
+                  <button>Удалить</button>
+                </td>
+              </tr>
+            </table>
+            <p class="account__delete-msg">
+              <button>Удалить</button>выбранные
+            </p>
+          </div>
+          <div class="account__item">
+            <div class="product__logo"><img src="img/decor/logo.png"></div>
+            <h3 class="product__name">Мои заказы</h3>
+            <table class="account__table account__table_orders">
+              <tr>
+                <th>Дата</th>
+                <th>Номер заказа</th>
+                <th>Статус</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>14.12.2017</td>
+                <td>134</td>
+                <td>Оформлен</td>
+                <td>
+                  <button>посмотреть заказ</button>
+                </td>
+              </tr>
+              <tr>
+                <td>14.12.2017</td>
+                <td>134</td>
+                <td>Оплачен</td>
+                <td>
+                  <button>посмотреть заказ</button>
+                </td>
+              </tr>
+              <tr>
+                <td>14.12.2017</td>
+                <td>134</td>
+                <td>Отдан в доставку</td>
+                <td>
+                  <button>посмотреть заказ</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="account__item account__item_delivery">
+            <div class="product__logo"><img src="img/decor/logo.png"></div>
+            <h3 class="product__name">Адрес доставки</h3>
+            <form>
+              <label>ФИО</label>
+              <input type="text">
+              <label>Телефон</label>
+              <input type="text">
+              <label>Почтовый индекс</label>
+              <input type="text">
+              <label>Страна и город</label>
+              <input type="text">
+              <label>Адрес доставки</label>
+              <input type="text">
+              <button class="cta-btn">ИЗМЕНИТЬ АДРЕС</button>
+            </form>
+          </div>
+          <footer class="footer section">
+            <div class="footer__content content-w">
+              <div class="logo footer__logo"><a class="logo__link h6" href="./index.html"><img src="img/decor/logo.png"></a>
+                <div class="footer__copy">
+                  <p>©2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+                </div>
+              </div>
+              <div class="footer__widget">Виджет одноклассники</div>
+              <div class="footer__widget">Виджет вконтакте</div>
+            </div>
+            <div class="footer__copy content-w">
+              <p>©2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <button class="to-top" id="to-top"></button>
+    <!-- Optimized loading JS Start-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      // comment on final version and change version above
+      ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+    <!-- Optimized loading JS End-->
+  </body>
+</html>
