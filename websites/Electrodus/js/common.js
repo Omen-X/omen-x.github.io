@@ -55,9 +55,6 @@ $(document).ready(function () {
       nav: true,
       dots: false,
       smartSpeed: 400,
-      onInitialized: function onInitialized(e) {
-        console.log('init');
-      },
       responsive: {
         0: {
           items: 1,

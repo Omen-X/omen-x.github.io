@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'catalog';
-  src:  url('fonts/catalog.eot?lon6ly');
-  src:  url('fonts/catalog.eot?lon6ly#iefix') format('embedded-opentype'),
-    url('fonts/catalog.ttf?lon6ly') format('truetype'),
-    url('fonts/catalog.woff?lon6ly') format('woff'),
-    url('fonts/catalog.svg?lon6ly#catalog') format('svg');
+  src:  url('fonts/catalog.eot?32qhlz');
+  src:  url('fonts/catalog.eot?32qhlz#iefix') format('embedded-opentype'),
+    url('fonts/catalog.ttf?32qhlz') format('truetype'),
+    url('fonts/catalog.woff?32qhlz') format('woff'),
+    url('fonts/catalog.svg?32qhlz#catalog') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,39 +24,61 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.catalog-Group-5:before {
+.catalog-Avtotovaru:before {
   content: "\e900";
 }
-.catalog-Group-8:before {
+.catalog-Electrika:before {
+  content: "\e901";
+  color: #000;
+}
+.catalog-Elektroinstrument:before {
   content: "\e902";
 }
 .catalog-Group-9:before {
   content: "\e903";
 }
-.catalog-Group-11:before {
+.catalog-Group-14:before {
+  content: "\e904";
+}
+.catalog-Kabel-i-provoda:before {
   content: "\e905";
 }
-.catalog-Group-12:before {
+.catalog-kabel-kanaku:before {
   content: "\e906";
+  color: #000;
 }
-.catalog-Group-13:before {
+.catalog-Klimat-sistemu:before {
   content: "\e907";
 }
-.catalog-Group-14:before {
+.catalog-Krepez:before {
   content: "\e908";
 }
-.catalog-Group-15:before {
+.catalog-Osveshenije:before {
   content: "\e909";
 }
-.catalog-Group-17:before {
+.catalog-Rozetki:before {
+  content: "\e90a";
+}
+.catalog-Ruchnoj-instrument:before {
   content: "\e90b";
 }
-.catalog-Group-19:before {
+.catalog-Sad-i-Dacha:before {
+  content: "\e90c";
+}
+.catalog-Santehnika:before {
   content: "\e90d";
 }
-.catalog-Group-20:before {
+.catalog-Shit:before {
   content: "\e90e";
 }
-.catalog-Group-22:before {
+.catalog-Svet:before {
+  content: "\e90f";
+}
+.catalog-turizm:before {
   content: "\e910";
+  color: #000;
+}
+.catalog-vodosnabzenije:before {
+  content: "\e911";
+  color: #000;
 }

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'main-icons';
-  src:  url('fonts/main-icons.eot?bqaa07');
-  src:  url('fonts/main-icons.eot?bqaa07#iefix') format('embedded-opentype'),
-    url('fonts/main-icons.ttf?bqaa07') format('truetype'),
-    url('fonts/main-icons.woff?bqaa07') format('woff'),
-    url('fonts/main-icons.svg?bqaa07#main-icons') format('svg');
+  src:  url('fonts/main-icons.eot?cuke33');
+  src:  url('fonts/main-icons.eot?cuke33#iefix') format('embedded-opentype'),
+    url('fonts/main-icons.ttf?cuke33') format('truetype'),
+    url('fonts/main-icons.woff?cuke33') format('woff'),
+    url('fonts/main-icons.svg?cuke33#main-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main-icons-Arrow-up2:before {
+  content: "\e900";
+}
+.main-icons-noun_16980_cc-copy-292:before {
+  content: "\e901";
+}
+.main-icons-noun_16980_cc-copy-422:before {
+  content: "\e902";
+}
+.main-icons-noun_16980_cc-copy-432:before {
+  content: "\e903";
+}
+.main-icons-Polygon-541:before {
+  content: "\e904";
+}
+.main-icons-Rectangle-585-copy-2:before {
+  content: "\e905";
+}
 .main-icons-Arrow-up:before {
   content: "\e912";
 }
