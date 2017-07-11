@@ -162,27 +162,29 @@ $(document).ready(function () {
     });
   }
 
-  if ($(window).scrollTop() > headerHeight) {
-    $('.header').addClass('fixedSiteHeader');
+  // show fixed header for tablet, desctop
+  if (window.matchMedia('(min-width: 740px)').matches) {
+    if ($(window).scrollTop() > headerHeight) {
+      $('.header').addClass('fixedSiteHeader');
+    }
+
+    var $windScrl = $(window);
+    $windScrl.scroll(function () {
+      checkInView();
+      checkInFade();
+      if ($windScrl.scrollTop() > headerHeight) {
+        if (!$sitehead.hasClass('fixedSiteHeader')) {
+          $sitehead.addClass('fixedSiteHeader');
+        }
+        $('.scrlTopPg').addClass('shw-scrlTopPg');
+      } else if ($windScrl.scrollTop() < headerHeight) {
+        if ($sitehead.hasClass('fixedSiteHeader')) {
+          $sitehead.removeClass('fixedSiteHeader');
+        }
+        $('.scrlTopPg').removeClass('shw-scrlTopPg');
+      };
+    });
   }
-
-  var $windScrl = $(window);
-  $windScrl.scroll(function () {
-    checkInView();
-    checkInFade();
-    if ($windScrl.scrollTop() > headerHeight) {
-      if (!$sitehead.hasClass('fixedSiteHeader')) {
-        $sitehead.addClass('fixedSiteHeader');
-      }
-      $('.scrlTopPg').addClass('shw-scrlTopPg');
-    } else if ($windScrl.scrollTop() < headerHeight) {
-      if ($sitehead.hasClass('fixedSiteHeader')) {
-        $sitehead.removeClass('fixedSiteHeader');
-      }
-      $('.scrlTopPg').removeClass('shw-scrlTopPg');
-    };
-  });
-
   /** checks if an area is visible on the screen or not or not **/
   function checkInView() {
     var elems = [];
