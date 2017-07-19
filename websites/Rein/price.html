@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Rein</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>#loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999}</style>
+  </head>
+  <body class="no-js">
+    <script>
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top content-width">
+        <div class="logo"><a href="/"><img src="img/decor/logo.png" alt="Logo"></a></div>
+        <button class="cta-btn cta-btn_header form-trigger">Записаться в школу</button>
+        <div class="header__contacts"><span>+7 (978) 090 44 94</span><span>+7 (978) 840 64 99</span></div>
+      </div>
+      <div class="header__nav">
+        <nav class="nav content-width">
+          <div class="nav__overlay"></div>
+          <ul class="nav__list animate trs">
+            <li><a href="././price.html">Цена и обучение</a></li>
+            <li><a href="./gallery.html">Галерея</a></li>
+            <li><a href="./buy.html">Акции и скидки</a></li>
+            <li><a href="./sale.html">Об организации</a></li>
+            <li><a href="./contacts.html">Интересное</a></li>
+            <li><a href="./undefined">Контакты</a></li>
+          </ul>
+          <div class="nav__mob-button"></div>
+          <div class="nav__contacts"><span>+7 (978) 090 44 94</span><span>+7 (978) 840 64 99</span></div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <!-- BEGIN PRICE-->
+      <section class="price section">
+        <div class="price__content content-width">
+          <h2 class="section-title">цены на обучение</h2>
+          <div class="price__desc">
+            <p>ВОЗМОЖНА РАССРОЧКА.</p>
+            <p>Оплату можно производить в период обучения. До начала обучения необходимо внести предоплату. Полная оплата вносится за 20 дней до внутреннего экзамена.</p>
+          </div>
+          <div class="price__items">
+            <div class="price__item">
+              <div class="price__item-title">
+                <h3>Категория<span>А</span></h3>
+              </div>
+              <p class="price__item-desc">
+                Мотоциклы и другие двухколесные транспортные средства, которые имеют двигатель с рабочим объемом 50 куб. см и больше или электродвигатель мощностью
+                4 кВт и больше.
+                
+              </p>
+              <div class="price__item-bonus">
+                <h4>+Бонус -<br>Категория A1</h4>
+                <p>
+                  Мопеды, мотороллеры и другие двухколесные транспортные средства, которые имеют двигатель с рабочим объемом до 50 куб. см или электродвигатель мощностью до 4 кВт
+                  
+                </p>
+              </div>
+              <div class="price__item-field">
+                <h4>Срок обучения:</h4><span>2 месяца обучения, с 16 лет</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Экзамен в ГАИ:</h4><span>Правила дорожного движения. Практическое вождение А</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Стоимость обучения:</h4><span>15000 руб., включая бензин</span>
+              </div>
+              <p class="price__item-details"><span>Примерная программа профессиональной подготовки водителей транспортных средств категории “А” (утв. приказом</span>Министерства образования и науки РФ от 26 декабря 2013 г. № 1408</p>
+            </div>
+            <div class="price__item vip">
+              <div class="price__item-title">
+                <h3>Категория<span>VIP</span></h3>
+              </div>
+              <p class="price__item-desc">
+                Легковые автомобили, вместимостью до 8-ми человек, грузовые автомобили массой до 3,5 тонн.
+                4 кВт и больше.
+              </p>
+              <div class="price__item-field">
+                <h4>Срок обучения:</h4><span>3,5 месяца, с 18 лет.</span>
+                <p>(3 раза в неделю - теория)</p>
+              </div>
+              <div class="price__item-field">
+                <h4>Экзамен в ГАИ:</h4><span>Правила дорожного движения. Практическое вождение В</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Стоимость обучения:</h4><span>от 30000 руб., включая бензин</span>
+              </div>
+            </div>
+            <div class="price__item">
+              <div class="price__item-title">
+                <h3>Категория<span>B</span></h3>
+              </div>
+              <p class="price__item-desc">Легковые автомобили, вместимостью до 8-ми человек, грузовые автомобили массой до 3,5 тонн.</p>
+              <div class="price__item-field">
+                <h4>Срок обучения:</h4><span>3,5 месяца, с 18 лет. (3 раза в неделю - теория)</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Экзамен в ГАИ:</h4><span>Правила дорожного движения. Практическое вождение В.</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Стоимость обучения:</h4><span>от 30000 руб., включая бензин</span>
+              </div>
+              <p class="price__item-details"><span>Примерная программа профессиональной подготовки водителей транспортных средств категории “А” (утв. приказом</span>Министерства образования и науки РФ от 26 декабря 2013 г. № 1408</p>
+            </div>
+            <div class="price__item">
+              <div class="price__item-title">
+                <h3>Категория<span>C</span></h3>
+              </div>
+              <p class="price__item-desc">Грузовые автомобили, масса которых превышает 3,5 тонны, в том числе с прицепом до 750 кг.</p>
+              <div class="price__item-field">
+                <h4>Срок обучения:</h4><span>3,5 месяца.</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Экзамен в ГАИ:</h4><span>Правила дорожного движения. Практическое вождение С.</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Стоимость обучения:</h4><span>при наличии</span>
+                <p>категории В - 20000 руб.</p>
+                <p>без категории В - 40000 руб.</p>
+                <p>Цены указаны с учётом бензина.</p>
+              </div>
+              <p class="price__item-details"><span>Примерная программа профессиональной подготовки водителей транспортных средств категории “А” (утв. приказом</span>Министерства образования и науки РФ от 26 декабря 2013 г. № 1408</p>
+            </div>
+            <div class="price__item">
+              <div class="price__item-title">
+                <h3>Категория<span>D</span></h3>
+              </div>
+              <p class="price__item-desc">Грузовые автомобили, масса которых превышает 3,5 тонны, в том числе с прицепом до 750 кг.</p>
+              <div class="price__item-field">
+                <h4>Срок обучения:</h4><span>3,5 месяца.</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Экзамен в ГАИ:</h4><span>Правила дорожного движения. Практическое вождение С.</span>
+              </div>
+              <div class="price__item-field">
+                <h4>Стоимость обучения:</h4><span>при наличии</span>
+                <p>категории В - 20000 руб.</p>
+                <p>без категории В - 40000 руб.</p>
+                <p>Цены указаны с учётом бензина.</p>
+              </div>
+              <p class="price__item-details"><span>Примерная программа профессиональной подготовки водителей транспортных средств категории “А” (утв. приказом</span>Министерства образования и науки РФ от 26 декабря 2013 г. № 1408</p>
+            </div>
+          </div>
+          <div class="books">
+            <h3 class="books__title">учебная литература</h3>
+            <div class="books__items">
+              <div class="books__item">
+                <div class="books__item-img"><img src="img/content/book-1.png" alt="book"></div>
+                <p class="books__item-desc">
+                  Настоящее пособие является официальным изданием экзаменационных билетов, которые используются при приеме теоретических экзаменов на право управления транспортными средствами категорий «А» и «В» в подразделениях Государственной инспекции безопасности дорожного движения.
+                  Экзаменационные билеты для приема теоретических экзаменов на право управления транспортными средствами категорий «А» и «В» с изменениями на 01.07. 2015 г.
+                  
+                </p>
+              </div>
+              <div class="books__item">
+                <div class="books__item-img"><img src="img/content/book-2.png" alt="book"></div>
+                <p class="books__item-desc">
+                  Правила дорожного движения Российской Федерации. Официальный текст с изменениями на 1 января 2015 года и цветными иллюстрациями
+                  
+                  
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end price-->
+      <!-- BEGIN DOCS-->
+      <section class="docs section">
+        <div class="triangle-top"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 100 103" preserveAspectRatio="none">
+<path d="M0,0 L0,102 L50,102 " ></path>
+<path d="M50,102 L100,102 L100,0 " ></path>
+</svg>
+        </div>
+        <div class="docs__content content-width">
+          <div class="docs__items">
+            <div class="docs__item docs__item_docs">
+              <h4 class="docs__title">список документов</h4>
+              <ul>
+                <li>Паспорт</li>
+                <li>1 фото 3,5х4,5</li>
+                <li>Шоферская мед. комиссия</li>
+              </ul>
+            </div>
+            <div class="docs__item docs__item_info">
+              <h4 class="docs__title">Полезная информация</h4>
+              <ul>
+                <li>Теория</li>
+                <li>Практика</li>
+                <li>Автопарк</li>
+                <li>Экзамены</li>
+                <li>Учебная литература</li>
+                <li>ПДД онлайн</li>
+                <li>О госуслугах</li>
+              </ul>
+            </div>
+          </div>
+          <div class="docs__form">
+            <h4 class="docs__title">записаться в автошколу</h4>
+            <form class="form">
+              <div class="form__fields">
+                <input type="text" name="name" placeholder="Ваши ФИО">
+                <input type="tel" name="phone" placeholder="Ваш телефон">
+              </div>
+              <div class="form__category">
+                <p>Категория прав:</p>
+                <div>
+                  <input type="radio" id="category-a" name="category" value="A">
+                  <label for="category-a"></label><span>A</span>
+                </div>
+                <div>
+                  <input type="radio" id="category-b" name="category" value="B">
+                  <label for="category-b"></label><span>B</span>
+                </div>
+                <div>
+                  <input type="radio" id="category-c" name="category" value="C">
+                  <label for="category-c"></label><span>C</span>
+                </div>
+                <div>
+                  <input type="radio" id="category-d" name="category" value="D">
+                  <label for="category-d"></label><span>D</span>
+                </div>
+                <div>
+                  <input type="radio" id="category-vip" name="category" value="VIP">
+                  <label for="category-vip"></label><span>VIP</span>
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__group-item">
+                  <input type="radio" id="group-morning" name="group">
+                  <label for="group-morning"></label><span>Утренняя группа</span><span>(9.00 - 12.00)</span>
+                </div>
+                <div class="form__group-item">
+                  <input type="radio" id="group-day" name="group">
+                  <label for="group-day"></label><span>Дневная группа</span><span>(13.00 - 16.00)</span>
+                </div>
+                <div class="form__group-item">
+                  <input type="radio" id="group-evening" name="group">
+                  <label for="group-evening"></label><span>Вечерняя группа</span><span>(18.00 - 21.00)</span>
+                </div>
+                <div class="form__group-item">
+                  <input type="radio" id="group-weekend" name="group">
+                  <label for="group-weekend"></label><span>Группа выходного дня</span><span>(9.00 - 14.00)</span>
+                </div>
+              </div>
+              <div class="form__submit">
+                <button class="cta-btn form-trigger">оставить заявку онлайн</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="triangle-bottom"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 100 103" preserveAspectRatio="none">
+<path d="M0,0 L0,102 L50,102 " fill="#000"></path>
+<path d="M50,102 L100,102 L100,0 " fill="#000"></path>
+</svg>
+        </div>
+      </section>
+      <!-- end docs-->
+    </main>
+    <footer class="footer">
+      <div class="footer__content content-width">
+        <div class="logo logo_footer"><a href="/"><img src="img/decor/logo_footer.png" alt="Logo"></a></div>
+        <div class="footer__copy">
+          <p>Лицензия Министерства образования 82Л01 №0000190 от 30.05.2016 года, Государственная аккредитация ГАИ МВД Украины №1 от 10.08.2010года</p>
+          <p>&copy; 2017 автошкола "РЕЙН - АВТО"</p>
+        </div>
+        <div class="footer__soc"><a href="#"><span class="icon-vk"></span></a><a href="#"><span class="icon-odnoklassniki-logo"></span></a></div>
+      </div>
+    </footer>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>

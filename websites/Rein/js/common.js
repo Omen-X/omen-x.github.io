@@ -37,6 +37,35 @@ function homeVideo() {
   }
 }
 
+// ========>> GALLERY <<========
+
+function gallery() {
+  if ($('.gallery').length) {
+    lightbox.option({
+      'resizeDuration': 200,
+      'disableScrolling': true,
+      'wrapAround': true,
+      albumLabel: ''
+    });
+
+    // Tabs
+
+    var tabs = $('.gallery__tab');
+    var tabLinks = $('.gallery__link');
+
+    tabLinks.click(function (event) {
+      var target = $(event.target);
+      var currTab = target.attr('data-tab');
+
+      tabLinks.removeClass('active');
+      tabs.removeClass('active');
+
+      target.addClass('active');
+      $('.gallery__tab:nth-child(' + currTab + ')').addClass('active');
+    });
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 $(function () {
@@ -90,6 +119,7 @@ $(function () {
   welcomeCarousel();
   categoriesEqualHeight();
   homeVideo();
+  gallery();
 
   $(window).on('resize', function () {
 
