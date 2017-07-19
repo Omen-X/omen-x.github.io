@@ -41,8 +41,8 @@
         <span class="main_menu__close"></span>
         <div class="main_menu__mob-info">
           <div class="main_menu__mob-links">
-            <a href="#">Узнать о состоянии заказа</a>
-            <a href="#">Оплатить заказ онлайн</a>
+            <a href="#" class="order-state-trigger">Узнать о состоянии заказа</a>
+            <a href="#"  class="order-pay-trigger">Оплатить заказ онлайн</a>
           </div>
           <p>8 (495) 120 05 00</p>
           <div class="main_menu__mob-social f_soc">
@@ -66,12 +66,57 @@
         <div class="detailbox">
           <div class="clearfix">
             <div class="h_bonus">Бонус: 500 <sup>руб</sup> </div>
-            <div class="h_login"><a href="#">Вход</a> / <a href="#">Регистрация</a> </div>
+            <div class="h_login"><a href="#" class="login-link">Вход</a> / <a href="#" id="reg-link">Регистрация</a> </div>
           </div>
           <div class="cart_btn">
-            <a href="#" >
+            <a href="#" class="basket-trigger" >
             <i class="main-icons-basket"></i>
             <span>3 Товара / 12 000 <sup>руб</sup></span> <i class="cart_num">3</i> </a>
+
+
+            <div class="basket-modal">
+              <ul>
+                <li>
+                  <div class="basket-modal__rm"></div>
+                  <div class="basket-modal__img">
+                    <img src="images/p_1.png" alt="">
+                  </div>
+                  <div class="basket-modal__desc">
+                    <h3>SHTOK Набор инструментов для электрика</h3>
+                    <span>5 0020.47</span>
+                    <p>4 9020.06 <sup>руб</sup></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="basket-modal__rm"></div>
+                  <div class="basket-modal__img">
+                    <img src="images/p_1.png" alt="">
+                  </div>
+                  <div class="basket-modal__desc">
+                    <h3>SHTOK Набор инструментов для электрика</h3>
+                    <span>5 0020.47</span>
+                    <p>4 9020.06 <sup>руб</sup></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="basket-modal__rm"></div>
+                  <div class="basket-modal__img">
+                    <img src="images/p_1.png" alt="">
+                  </div>
+                  <div class="basket-modal__desc">
+                    <h3>SHTOK Набор инструментов для электрика</h3>
+                    <span>5 0020.47</span>
+                    <p>4 9020.06 <sup>руб</sup></p>
+                  </div>
+                </li>
+              </ul>
+              <div class="basket-modal__btn">
+                <button>оформить заказ</button>
+              </div>
+            </div>
+
+
+
           </div>
         </div>
         <div class="tablet">
@@ -82,9 +127,52 @@
             <div class="t_login">
               <i class="icon_pupel"></i>
             </div>
-            <div class="t_cart">
-              <i class="icon_cart"></i>
+            <div class="t_cart basket-wrap">
+              <i class="icon_cart basket-trigger"></i>
               <span class="number_cart">3</span>
+
+              <div class="basket-modal">
+                <ul>
+                  <li>
+                    <div class="basket-modal__rm"></div>
+                    <div class="basket-modal__img">
+                      <img src="images/p_1.png" alt="">
+                    </div>
+                    <div class="basket-modal__desc">
+                      <h3>SHTOK Набор инструментов для электрика</h3>
+                      <span>5 0020.47</span>
+                      <p>4 9020.06 <sup>руб</sup></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="basket-modal__rm"></div>
+                    <div class="basket-modal__img">
+                      <img src="images/p_1.png" alt="">
+                    </div>
+                    <div class="basket-modal__desc">
+                      <h3>SHTOK Набор инструментов для электрика</h3>
+                      <span>5 0020.47</span>
+                      <p>4 9020.06 <sup>руб</sup></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="basket-modal__rm"></div>
+                    <div class="basket-modal__img">
+                      <img src="images/p_1.png" alt="">
+                    </div>
+                    <div class="basket-modal__desc">
+                      <h3>SHTOK Набор инструментов для электрика</h3>
+                      <span>5 0020.47</span>
+                      <p>4 9020.06 <sup>руб</sup></p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="basket-modal__btn">
+                  <button>оформить заказ</button>
+                </div>
+              </div>
+
+
             </div>
             <div class="t_nav desc">
               <div class="menuswicher1"> <i class="t"></i> <i class="m"></i> <i class="b"></i> </div>
@@ -358,8 +446,8 @@
               <li><a href="#">Набор инструментов для <b>эле</b>ктрика</a> </li>
             </ul>
           </div>
-          <a href="#" class="order_pay">Оплатить заказ онлайн</a>
-          <a href="#" class="order_state">Узнать о состоянии заказа</a>
+          <a href="#" class="order_pay  order-pay-trigger">Оплатить заказ онлайн</a>
+          <a href="#" class="order_state order-state-trigger">Узнать о состоянии заказа</a>
         </div>
       </div>
       <div class="in">
@@ -430,7 +518,7 @@
           <div class="tab_item" id="s3" data-tab="tab1"><span>Кабель и провода</span> </div>
           <div class="tab_item" id="s4" data-tab="tab1"><span>Инструмент</span> </div>
           <div class="tab_item" id="s5" data-tab="tab1"><span>Светотехника</span> </div>
-          <div class="tab_item all"><span>Посмотреть все</span> </div>
+          <div class="tab_item all" id="s6" data-tab="tab1"><span>Посмотреть все</span> </div>
         </div>
         <!-- ##################################################                 -->
         <div class="tabover">
@@ -1920,6 +2008,271 @@
               <!-- item -->
             </div>
           </div>
+          <!-- tab cont -->
+          <!-- #################################################################################### -->
+          <div class="tab_content tab1 clearfix hid" id="t6">
+            <div class="owl-carousel owlproduct">
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_1.png" alt="">
+
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox1331" /><label for="checkbox1331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_2.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox2331" /><label for="checkbox2331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_3.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox3331" /><label for="checkbox3331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_4.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox4331" /><label for="checkbox4331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_5.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox5331" /><label for="checkbox5331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_1.png" alt="">
+
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox1441" /><label for="checkbox1441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_2.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox2441" /><label for="checkbox2441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_3.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox3441" /><label for="checkbox3441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_4.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox4441" /><label for="checkbox4441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_5.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox544" /><label for="checkbox544">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_1.png" alt="">
+
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox155" /><label for="checkbox155">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_2.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox255" /><label for="checkbox255">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_3.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox355" /><label for="checkbox355">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_4.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox455" /><label for="checkbox455">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_5.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox5551" /><label for="checkbox5551">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+            </div>
+          </div>
         </div>
         <!-- tabover -->
         <!-- tab cont -->
@@ -2450,7 +2803,7 @@
           <div class="tab_item" id="s31" data-tab="tab2"><span>Кабель и провода</span> </div>
           <div class="tab_item" id="s41" data-tab="tab2"><span>Инструмент</span> </div>
           <div class="tab_item" id="s51" data-tab="tab2"><span>Светотехника</span> </div>
-          <div class="tab_item all"><span>Посмотреть все</span> </div>
+          <div class="tab_item all" id="s61" data-tab="tab2"><span>Посмотреть все</span> </div>
         </div>
         <!-- ##################################################                 -->
         <div class="tabover">
@@ -3876,6 +4229,271 @@
               <!-- item -->
             </div>
           </div>
+          <!-- tab cont -->
+          <!-- #################################################################################### -->
+          <div class="tab_content tab2 clearfix hid" id="t61">
+            <div class="owl-carousel owlproduct">
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_1.png" alt="">
+
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox1331" /><label for="checkbox1331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_2.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox2331" /><label for="checkbox2331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_3.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox3331" /><label for="checkbox3331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_4.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox4331" /><label for="checkbox4331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_5.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox5331" /><label for="checkbox5331">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_1.png" alt="">
+
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox1441" /><label for="checkbox1441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_2.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox2441" /><label for="checkbox2441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_3.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox3441" /><label for="checkbox3441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_4.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox4441" /><label for="checkbox4441">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_5.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox544" /><label for="checkbox544">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_1.png" alt="">
+
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox155" /><label for="checkbox155">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_2.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox255" /><label for="checkbox255">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_3.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox355" /><label for="checkbox355">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_4.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox455" /><label for="checkbox455">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="th_p">
+                  <div class="over"> <strong>6 SHTOK Набор инструментов для электрика</strong> <img src="images/p_5.png" alt="">
+                    <div class="clearfix">
+                      <div class="l">
+                        <div class="cbbox">
+                          <div class="cb sl"><i class="icon i_pe"></i><span>Скидки</span> </div>
+                          <div class="cb bk"><i class="icon i_gb"></i><span>Улучшенные <br>условия возврата</span> </div>
+                          <div class="cb gf"><i class="icon i_gf"></i><span>Подарок&nbsp;при <br>покупке</span> </div>
+                          <div class="cb wr"><i class="icon i_li"></i><span>Увеличенная <br>гарантия</span> </div>
+                        </div> <i class="oldprice">5 0020.47</i> <i class="price">4 9020.06 <sup>руб</sup></i> </div>
+                      <div class="r"> <i class="bon">250 <sup>руб</sup><br>бонус</i> <i class="aval">В наличии</i> </div>
+                    </div>
+                    <div class="th_hid"> <i class="comp"><input type="checkbox" class="checkbox" id="checkbox5551" /><label for="checkbox5551">Сравнить</label></i> <i class="art">Артикул:<br>07002SHTOK</i> <a href="#" class="btn_red">купить</a> </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+            </div>
+          </div>
         </div>
         <!-- tab cont -->
         <!-- #######################################################       -->
@@ -4144,6 +4762,191 @@
 
 
   </footer>
+  <!-- MODALS -->
+  <div class="modals">
+  <!-- ОБРАТНЫЙ ЗВОНОК -->
+    <div class="modal-wrap modal-callback">
+      <div class="modal modal_callback">
+        <h2 class="modal__title">заказать обратный звонок</h2>
+        <form action="" class="modal-form">
+          <div class="modal-form__fields">
+            <span>Имя</span>
+            <input type="text" placeholder="Введите ваше имя">
+            <span>Номер телефона</span>
+            <input type="tel" placeholder="+7 (__) __-__-__">
+          </div>
+          <div class="modal__agreement">
+            <input type="checkbox" id="modal-agreement-1">
+            <label for="modal-agreement-1">
+            </label>
+            <span>Я согласен на обработку персональных данных</span>
+          </div>
+          <button>Заказать звонок</button>
+        </form>
+        <div class="modal__hide"></div>
+      </div>
+    </div>
+
+  <!-- ОПЛАТА ЗАКАЗА ОНЛАЙН -->
+    <div class="modal-wrap modal-pay">
+      <div class="modal modal_callback">
+        <h2 class="modal__title">оплатить заказ онлайн</h2>
+        <p>
+          Здесь вы можете оплатить электронным способом любой заказ, подтвержденный менеджером. Оплата доступна только для физических лиц.
+        </p>
+        <form action="" class="modal-form">
+          <div class="modal-form__fields">
+            <span>Номер заказа</span>
+            <input type="text" id="input-order" placeholder="___-___-___">
+            <span>Номер телефона</span>
+            <input type="tel" placeholder="+7 (__) __-__-__">
+          </div>
+          <div class="modal__agreement">
+            <input type="checkbox" id="modal-agreement-2">
+            <label for="modal-agreement-2">
+            </label>
+            <span>Я согласен на обработку персональных данных</span>
+          </div>
+          <button>Перейти к оплате</button>
+        </form>
+        <div class="modal__hide"></div>
+      </div>
+    </div>
+
+  <!-- РЕГИСТРАЦИЯ -->
+    <div class="modal-wrap modal-reg">
+      <div class="modal modal_callback">
+        <h2 class="modal__title">РЕГИСТРАЦИЯ</h2>
+        <form action="" class="modal-form">
+          <div class="modal-form__fields">
+            <span>Имя</span>
+            <input type="text" placeholder="Введите имя">
+            <span>Фамилия</span>
+            <input type="text" placeholder="Введите фамилию">
+            <span>Email</span>
+            <input type="email" placeholder="Введите ваш email">
+            <span>Пароль</span>
+            <input type="text" class="modal-form__password" placeholder="**********">
+            <span>Повторите пароль</span>
+            <input type="text" class="modal-form__password" placeholder="**********">
+          </div>
+          <div class="modal__agreement">
+            <input type="checkbox" id="modal-agreement-3">
+            <label for="modal-agreement-3">
+            </label>
+            <span>Я согласен на обработку персональных данных</span>
+          </div>
+          <button>Зарегистрироваться</button>
+        </form>
+        <p class="modal-form__login">Если вы уже зарегистрировались - <a href="#" class="login-link">войдите в аккаунт</a></p>
+        <div class="modal__hide"></div>
+      </div>
+    </div>
+
+  <!-- УЗНАТЬ СОСТОЯНИЕ ЗАКАЗА -->
+    <div class="modal-wrap modal-order">
+      <div class="modal modal_callback">
+        <h2 class="modal__title">узнать о состоянии заказа</h2>
+        <form action="" class="modal-form">
+          <div class="modal-form__fields">
+            <span>Номер накладной</span>
+            <input type="text" placeholder="Введите номер накладной">
+          </div>
+          <button>Узнать</button>
+        </form>
+        <div class="modal__order-result">
+          <h3>Заказ 34123123123</h3>
+          <ul>
+            <li>
+              Статус заказа:
+              <span>В пути</span>
+            </li>
+            <li>
+              Ориентировочная дата доставки:
+              <span>12/05/2017</span>
+            </li>
+            <li>
+              Условия доставки:
+              <span>Доставка в офис</span>
+            </li>
+            <li>
+              Менеджер:
+              <span>Иванова Ольга</span>
+            </li>
+            <li>
+              Контактный телефон:
+              <span>+7 (980) 43-34-56</span>
+            </li>
+          </ul>
+        </div>
+        <div class="modal__hide"></div>
+      </div>
+    </div>
+
+  <!-- ТОВАР В КОРЗИНЕ -->
+    <div class="modal-wrap modal-basket">
+      <div class="modal modal_callback">
+        <h2 class="modal__title">товар успешно добавлен в корзину</h2>
+        <p>В вашей корзине <span>1</span> товар на сумму <span>4 9020.06 <sup>руб</sup></span></p>
+        <form action="" class="modal-form">
+          <button>оформить заказ</button>
+        </form>
+        <div class="modal__hide"></div>
+      </div>
+    </div>
+
+  <!-- ВХОД -->
+    <div class="modal-wrap modal-login">
+      <div class="modal modal_callback">
+        <h2 class="modal__title">вход / регистрация</h2>
+        <form action="" class="modal-form">
+          <div class="modal-form__fields">
+            <span>Логин</span>
+            <input type="text" placeholder="Введите логин">
+            <span>Пароль</span>
+            <input type="text" class="modal-form__password" placeholder="*********">
+          </div>
+          <a class="modal__forget" href="#">Забыли пароль?</a>
+          <div class="modal__reg-btns">
+            <button>войти</button>
+            <a class="modal__reg" href="#">зарегистрироваться</a>
+          </div>
+        </form>
+        <div class="modal__soc">
+          <p>Войти через соцсеть</p>
+          <ul>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="modal__hide"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </div>
+  <!-- END MODALS -->
   <script type="text/javascript" src="js/libs.min.js"></script>
   <script type="text/javascript" src="js/common.min.js"></script>
 </body>
