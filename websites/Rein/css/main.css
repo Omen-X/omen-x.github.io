@@ -313,8 +313,8 @@ textarea {
  */
 @font-face {
   font-family: 'icons';
-  src: url("../../fonts/icons/icons.eot?4tz35e");
-  src: url("../../fonts/icons/icons.eot?4tz35e#iefix") format("embedded-opentype"), url("../../fonts/icons/icons.ttf?4tz35e") format("truetype"), url("../../fonts/icons/icons.woff?4tz35e") format("woff"), url("../../fonts/icons/icons.svg?4tz35e#icons") format("svg");
+  src: url("../fonts/icons/icons.eot?4tz35e");
+  src: url("../fonts/icons/icons.eot?4tz35e#iefix") format("embedded-opentype"), url("../fonts/icons/icons.ttf?4tz35e") format("truetype"), url("../fonts/icons/icons.woff?4tz35e") format("woff"), url("../fonts/icons/icons.svg?4tz35e#icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -355,29 +355,29 @@ textarea {
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../../fonts/Raleway/regular/raleway-regular.eot?4tz35e");
-  src: url("../../fonts/Raleway/regular/raleway-regular.eot?4tz35e#iefix") format("embedded-opentype"), url("../../fonts/Raleway/regular/raleway-regular.ttf?4tz35e") format("truetype"), url("../../fonts/Raleway/regular/raleway-regular.woff?4tz35e") format("woff"), url("../../fonts/Raleway/regular/raleway-regular.svg?4tz35e#icons") format("svg");
+  src: url("../fonts/Raleway/regular/raleway-regular.eot?4tz35e");
+  src: url("../fonts/Raleway/regular/raleway-regular.eot?4tz35e#iefix") format("embedded-opentype"), url("../fonts/Raleway/regular/raleway-regular.ttf?4tz35e") format("truetype"), url("../fonts/Raleway/regular/raleway-regular.woff?4tz35e") format("woff"), url("../fonts/Raleway/regular/raleway-regular.svg?4tz35e#icons") format("svg");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../../fonts/Raleway/medium/raleway-medium.eot?4tz35e");
-  src: url("../../fonts/Raleway/medium/raleway-medium.eot?4tz35e#iefix") format("embedded-opentype"), url("../../fonts/Raleway/medium/raleway-medium.ttf?4tz35e") format("truetype"), url("../../fonts/Raleway/medium/raleway-medium.woff?4tz35e") format("woff"), url("../../fonts/Raleway/medium/raleway-medium.svg?4tz35e#icons") format("svg");
+  src: url("../fonts/Raleway/medium/raleway-medium.eot?4tz35e");
+  src: url("../fonts/Raleway/medium/raleway-medium.eot?4tz35e#iefix") format("embedded-opentype"), url("../fonts/Raleway/medium/raleway-medium.ttf?4tz35e") format("truetype"), url("../fonts/Raleway/medium/raleway-medium.woff?4tz35e") format("woff"), url("../fonts/Raleway/medium/raleway-medium.svg?4tz35e#icons") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../../fonts/Raleway/bold/raleway-bold.eot?4tz35e");
-  src: url("../../fonts/Raleway/bold/raleway-bold.eot?4tz35e#iefix") format("embedded-opentype"), url("../../fonts/Raleway/bold/raleway-bold.ttf?4tz35e") format("truetype"), url("../../fonts/Raleway/bold/raleway-bold.woff?4tz35e") format("woff"), url("../../fonts/Raleway/bold/raleway-bold.svg?4tz35e#icons") format("svg");
+  src: url("../fonts/Raleway/bold/raleway-bold.eot?4tz35e");
+  src: url("../fonts/Raleway/bold/raleway-bold.eot?4tz35e#iefix") format("embedded-opentype"), url("../fonts/Raleway/bold/raleway-bold.ttf?4tz35e") format("truetype"), url("../fonts/Raleway/bold/raleway-bold.woff?4tz35e") format("woff"), url("../fonts/Raleway/bold/raleway-bold.svg?4tz35e#icons") format("svg");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../../fonts/Raleway/extra-bold/raleway-extra-bold.eot?4tz35e");
-  src: url("../../fonts/Raleway/extra-bold/raleway-extra-bold.eot?4tz35e#iefix") format("embedded-opentype"), url("../../fonts/Raleway/extra-bold/raleway-extra-bold.ttf?4tz35e") format("truetype"), url("../../fonts/Raleway/extra-bold/raleway-extra-bold.woff?4tz35e") format("woff"), url("../../fonts/Raleway/extra-bold/raleway-extra-bold.svg?4tz35e#icons") format("svg");
+  src: url("../fonts/Raleway/extra-bold/raleway-extra-bold.eot?4tz35e");
+  src: url("../fonts/Raleway/extra-bold/raleway-extra-bold.eot?4tz35e#iefix") format("embedded-opentype"), url("../fonts/Raleway/extra-bold/raleway-extra-bold.ttf?4tz35e") format("truetype"), url("../fonts/Raleway/extra-bold/raleway-extra-bold.woff?4tz35e") format("woff"), url("../fonts/Raleway/extra-bold/raleway-extra-bold.svg?4tz35e#icons") format("svg");
   font-weight: 900;
   font-style: normal; }
 
@@ -490,6 +490,8 @@ a {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px; }
+    .nav__list li.active a {
+      color: #e40424; }
   .nav__list a {
     color: #FFF; }
     body.no-touch .nav__list a:hover {
@@ -1022,7 +1024,6 @@ a {
   box-shadow: 0 5px 13px rgba(1, 1, 1, 0.32); }
   .form input[type=radio] {
     position: absolute;
-    left: -9999px;
     opacity: 0;
     z-index: -1; }
     .form input[type=radio]:checked + label:after {
@@ -1165,7 +1166,7 @@ a {
  */
 .price {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 110px;
   background-image: url("../img/decor/price-bg.png"), linear-gradient(to top, #575757 0%, #f9f9f9 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center;
@@ -1785,7 +1786,8 @@ a {
 
 #map {
   height: 600px;
-  width: 100%; }
+  width: 100%;
+  background-color: #898989; }
 
 .contacts-feedback {
   padding-top: 70px;
@@ -2041,7 +2043,7 @@ html.modal-open {
     background-position: center bottom, center;
     padding-bottom: 255px; }
     .docs .triangle-top {
-      top: -14px; }
+      top: -39px; }
   .docs__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
@@ -2086,7 +2088,7 @@ html.modal-open {
       -ms-transform: rotate(-6deg);
           transform: rotate(-6deg); }
   .about:after {
-    background-position: center bottom;
+    background-position: center top 100%;
     background-size: 100% auto; }
   .about__content {
     -ms-flex-wrap: wrap;
@@ -2133,7 +2135,7 @@ html.modal-open {
   .contacts-feedback {
     padding-top: 50px;
     padding-bottom: 320px;
-    background-position: center bottom;
+    background-position: center top 100%;
     background-size: 70% auto; }
   .contacts-feedback__content {
     -ms-flex-wrap: wrap;
@@ -2166,6 +2168,8 @@ html.modal-open {
   .welcome__slide {
     background-position: 85% 50%;
     background-size: auto 450px; }
+  .docs .triangle-top {
+    top: -14px; }
   .about__right .triangle-top {
     top: -14px; }
   .education .triangle-top {
