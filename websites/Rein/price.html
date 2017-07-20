@@ -31,10 +31,10 @@
           <ul class="nav__list animate trs">
             <li><a href="././price.html">Цена и обучение</a></li>
             <li><a href="./gallery.html">Галерея</a></li>
-            <li><a href="./buy.html">Акции и скидки</a></li>
-            <li><a href="./sale.html">Об организации</a></li>
-            <li><a href="./contacts.html">Интересное</a></li>
-            <li><a href="./undefined">Контакты</a></li>
+            <li><a href="./sale.html">Акции и скидки</a></li>
+            <li><a href="./about.html">Об организации</a></li>
+            <li><a href="./articles.html">Интересное</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
           </ul>
           <div class="nav__mob-button"></div>
           <div class="nav__contacts"><span>+7 (978) 090 44 94</span><span>+7 (978) 840 64 99</span></div>
@@ -197,13 +197,13 @@
             <div class="docs__item docs__item_info">
               <h4 class="docs__title">Полезная информация</h4>
               <ul>
-                <li>Теория</li>
-                <li>Практика</li>
-                <li>Автопарк</li>
-                <li>Экзамены</li>
-                <li>Учебная литература</li>
-                <li>ПДД онлайн</li>
-                <li>О госуслугах</li>
+                <li><a href="#">Теория</a></li>
+                <li><a href="#">Практика</a></li>
+                <li><a href="#">Автопарк</a></li>
+                <li><a href="#">Экзамены</a></li>
+                <li><a href="#">Учебная литература</a></li>
+                <li><a href="#">ПДД онлайн</a></li>
+                <li><a href="#">О госуслугах</a></li>
               </ul>
             </div>
           </div>
@@ -256,7 +256,7 @@
                 </div>
               </div>
               <div class="form__submit">
-                <button class="cta-btn form-trigger">оставить заявку онлайн</button>
+                <button class="cta-btn">оставить заявку онлайн</button>
               </div>
             </form>
           </div>
@@ -279,6 +279,60 @@
         <div class="footer__soc"><a href="#"><span class="icon-vk"></span></a><a href="#"><span class="icon-odnoklassniki-logo"></span></a></div>
       </div>
     </footer>
+    <!-- FORM-->
+    <div class="form-wrap">
+      <form class="form">
+        <div class="form__fields">
+          <input type="text" name="name" placeholder="Ваши ФИО">
+          <input type="tel" name="phone" placeholder="Ваш телефон">
+        </div>
+        <div class="form__category">
+          <p>Категория прав:</p>
+          <div>
+            <input type="radio" id="category-a" name="category" value="A">
+            <label for="category-a"></label><span>A</span>
+          </div>
+          <div>
+            <input type="radio" id="category-b" name="category" value="B">
+            <label for="category-b"></label><span>B</span>
+          </div>
+          <div>
+            <input type="radio" id="category-c" name="category" value="C">
+            <label for="category-c"></label><span>C</span>
+          </div>
+          <div>
+            <input type="radio" id="category-d" name="category" value="D">
+            <label for="category-d"></label><span>D</span>
+          </div>
+          <div>
+            <input type="radio" id="category-vip" name="category" value="VIP">
+            <label for="category-vip"></label><span>VIP</span>
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__group-item">
+            <input type="radio" id="group-morning" name="group">
+            <label for="group-morning"></label><span>Утренняя группа</span><span>(9.00 - 12.00)</span>
+          </div>
+          <div class="form__group-item">
+            <input type="radio" id="group-day" name="group">
+            <label for="group-day"></label><span>Дневная группа</span><span>(13.00 - 16.00)</span>
+          </div>
+          <div class="form__group-item">
+            <input type="radio" id="group-evening" name="group">
+            <label for="group-evening"></label><span>Вечерняя группа</span><span>(18.00 - 21.00)</span>
+          </div>
+          <div class="form__group-item">
+            <input type="radio" id="group-weekend" name="group">
+            <label for="group-weekend"></label><span>Группа выходного дня</span><span>(9.00 - 14.00)</span>
+          </div>
+        </div>
+        <div class="form__submit">
+          <button class="cta-btn form-trigger">оставить заявку онлайн</button>
+        </div>
+        <div class="form__close"><span class="icon-close"></span></div>
+      </form>
+    </div>
     <script>
       var ver = 1;
       //- ver = Math.floor(Math.random() * 100);

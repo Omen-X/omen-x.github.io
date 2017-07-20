@@ -31,10 +31,10 @@
           <ul class="nav__list animate trs">
             <li><a href="././price.html">Цена и обучение</a></li>
             <li><a href="./gallery.html">Галерея</a></li>
-            <li><a href="./buy.html">Акции и скидки</a></li>
-            <li><a href="./sale.html">Об организации</a></li>
-            <li><a href="./contacts.html">Интересное</a></li>
-            <li><a href="./undefined">Контакты</a></li>
+            <li><a href="./sale.html">Акции и скидки</a></li>
+            <li><a href="./about.html">Об организации</a></li>
+            <li><a href="./articles.html">Интересное</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
           </ul>
           <div class="nav__mob-button"></div>
           <div class="nav__contacts"><span>+7 (978) 090 44 94</span><span>+7 (978) 840 64 99</span></div>
@@ -167,23 +167,24 @@
     <!-- BEGIN VIDEO-->
     <section class="video section">
       <div class="triangle-top">
-        <div class="block"></div><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 103" preserveAspectRatio="none">
+        <div class="block"></div><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 100 103" preserveAspectRatio="none">
 <path d="M0,0 L50,0 L50,102 " fill="#FFF"></path>
 <path d="M50,102 L0,0 L100,0 " fill="#FFF"></path>
 </svg>
       </div>
-      <div class="player" id="videostream" data-property="{videoURL:'https://youtu.be/v6c-IcMo_FI',containment:'#videostream',startAt:0,mute:true,autoPlay:true,loop:true,opacity:1}"><div id="pattern-bg"></div></div>
+      <div id="pattern-bg"></div>
+      <div class="player" id="videostream" data-property="{videoURL:'https://youtu.be/v6c-IcMo_FI',containment:'#videostream',startAt:0,mute:true,autoPlay:true,loop:true,opacity:1}"></div>
       <div class="video__content content-width">
         <div class="video__btn">
-          <button>оставить заявку онлайн</button>
+          <button class="form-trigger">оставить заявку онлайн</button>
         </div>
       </div>
     </section>
     <!-- end video-->
     <!-- BEGIN EDUCATION-->
     <section class="education section">
-      <div class="triangle-top"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 103" preserveAspectRatio="none">
-<path d="M0,0 L0,102 L50,102 " fill="#A7041A"></path>
+      <div class="triangle-top"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 100 103" preserveAspectRatio="none">
+<path d="M0,0 L0,102 L50,102 " fill="#b2031c"></path>
 <path d="M50,102 L100,102 L100,0 " fill="#FFF"></path>
 </svg>
       </div>
@@ -222,6 +223,11 @@
         <p>Мы накопили<br><strong>большой опыт</strong><br>обучив и выпустив<br><span>123 000</span><br><span class="accent">человек</span></p>
         <p>получили более<br><span>1 000</span><br><strong>благодарных</strong><br>отзывов</p>
         <p>Создали<strong> качественную</strong><br><strong> современную</strong> материальную<br> базу, чтобы ваше обучение<br> стало<span class="accent">  комфортным,</span><br><span class="accent">  интересным и эффективным</span></p>
+      </div>
+      <div class="triangle-bottom"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 100 103" preserveAspectRatio="none">
+<path d="M0,0 L0,102 L50,102 " fill="#e3e3e3"></path>
+<path d="M50,102 L100,102 L100,0 " fill="#e3e3e3"></path>
+</svg>
       </div>
     </section>
     <!-- end education-->
@@ -276,7 +282,7 @@
             </div>
           </div>
           <div class="form__submit">
-            <button class="cta-btn form-trigger">оставить заявку онлайн</button>
+            <button class="cta-btn">оставить заявку онлайн</button>
           </div>
         </form>
       </div>
@@ -297,6 +303,60 @@
         <div class="footer__soc"><a href="#"><span class="icon-vk"></span></a><a href="#"><span class="icon-odnoklassniki-logo"></span></a></div>
       </div>
     </footer>
+    <!-- FORM-->
+    <div class="form-wrap">
+      <form class="form">
+        <div class="form__fields">
+          <input type="text" name="name" placeholder="Ваши ФИО">
+          <input type="tel" name="phone" placeholder="Ваш телефон">
+        </div>
+        <div class="form__category">
+          <p>Категория прав:</p>
+          <div>
+            <input type="radio" id="category-a" name="category" value="A">
+            <label for="category-a"></label><span>A</span>
+          </div>
+          <div>
+            <input type="radio" id="category-b" name="category" value="B">
+            <label for="category-b"></label><span>B</span>
+          </div>
+          <div>
+            <input type="radio" id="category-c" name="category" value="C">
+            <label for="category-c"></label><span>C</span>
+          </div>
+          <div>
+            <input type="radio" id="category-d" name="category" value="D">
+            <label for="category-d"></label><span>D</span>
+          </div>
+          <div>
+            <input type="radio" id="category-vip" name="category" value="VIP">
+            <label for="category-vip"></label><span>VIP</span>
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__group-item">
+            <input type="radio" id="group-morning" name="group">
+            <label for="group-morning"></label><span>Утренняя группа</span><span>(9.00 - 12.00)</span>
+          </div>
+          <div class="form__group-item">
+            <input type="radio" id="group-day" name="group">
+            <label for="group-day"></label><span>Дневная группа</span><span>(13.00 - 16.00)</span>
+          </div>
+          <div class="form__group-item">
+            <input type="radio" id="group-evening" name="group">
+            <label for="group-evening"></label><span>Вечерняя группа</span><span>(18.00 - 21.00)</span>
+          </div>
+          <div class="form__group-item">
+            <input type="radio" id="group-weekend" name="group">
+            <label for="group-weekend"></label><span>Группа выходного дня</span><span>(9.00 - 14.00)</span>
+          </div>
+        </div>
+        <div class="form__submit">
+          <button class="cta-btn form-trigger">оставить заявку онлайн</button>
+        </div>
+        <div class="form__close"><span class="icon-close"></span></div>
+      </form>
+    </div>
     <script>
       var ver = 1;
       //- ver = Math.floor(Math.random() * 100);
