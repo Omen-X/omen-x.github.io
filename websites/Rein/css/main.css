@@ -683,7 +683,7 @@ a {
   .categories .triangle-top {
     position: absolute;
     z-index: 3;
-    top: 0;
+    top: -1px;
     left: 0;
     right: 0; }
   .categories .triangle-bottom {
@@ -2232,7 +2232,7 @@ html.modal-open {
         order: 3;
     padding: 8px; }
   .welcome__tag {
-    margin-bottom: 65%; }
+    margin-bottom: 65vw; }
   .categories {
     padding-top: 100px;
     padding-bottom: 80px;
