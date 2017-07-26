@@ -547,7 +547,7 @@ textarea {
       display: block;
       position: absolute;
       bottom: -15px;
-      left: 4px;
+      left: 3.5px;
       width: 100%;
       height: 15px;
       background: #66503c;
@@ -1066,8 +1066,7 @@ html.modal-open {
       width: 20px; }
   .welcome-carousel__title {
     margin-bottom: 15px;
-    font-size: 1.5rem;
-    color: #935ab9; }
+    font-size: 1.5rem; }
   .advantages__item {
     margin-bottom: 40px; }
   .advantages__item-img {
