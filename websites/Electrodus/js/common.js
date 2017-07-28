@@ -307,25 +307,40 @@ $(document).ready(function () {
 
 
   // Sidebar categories
-
   // level1
   $('.subcat-trigger').click(function () {
     $(this).toggleClass('open');
     $('.sibebar .subcat.b').stop().slideToggle(250);
   });
 
-  //level2
+  if (window.matchMedia('(max-width: 740px)').matches) {
 
-  var level2Cat = $('.level2');
+    //level2
 
-  $('.subcat a').click(function (event) {
-    event.preventDefault();
+    var level2Cat = $('.level2');
 
-    $(this).toggleClass('open');
-    level2Cat.stop().slideUp(200);
+    $('.subcat > li > a').click(function (event) {
+      event.preventDefault();
 
-    $(this).siblings('.level2').stop().slideToggle(220);
-  });
+      $(this).toggleClass('open');
+      level2Cat.stop().slideUp(200);
+
+      $(this).siblings('.level2').stop().slideToggle(220);
+    });
+
+    //level3
+
+    // const level3Cat = $('.level3');
+
+    // $('.level2 > li > a').click(function(event) {
+    //   event.preventDefault();
+
+    //   $(this).toggleClass('open');
+    //   level3Cat.stop().slideUp(200);
+
+    //   $(this).siblings('.level3').stop().slideToggle(220);
+    // });
+  }
 
   // Expanded product blocks
 
@@ -425,7 +440,7 @@ $(document).ready(function () {
   });
 
   // Mask for inputs
-  $('input[type="tel"]', modal).mask("+7 (000) 00-00-00");
+  $('input[type="tel"]', modal).mask("+7 (000) 000-00-00");
   $('#input-order', modal).mask("000-000-000");
 
   // shot an order-result for the order modal
@@ -442,7 +457,18 @@ $(document).ready(function () {
 
   var basket = $('.basket-modal');
   var basketTrigger = $('.basket-trigger');
+  var basketClose = $('.basket-modal__close');
   var basketRm = $('.basket-modal__rm');
+
+  basketClose.click(function () {
+    basket.fadeOut(150);
+  });
+
+  basket.click(function (e) {
+    if ($(e.target).hasClass('basket-modal')) {
+      $('.basket-modal').fadeOut(150);
+    }
+  });
 
   basketTrigger.click(function () {
     $(_this).find('.basket-modal').fadeToggle(150);
@@ -459,6 +485,21 @@ $(document).ready(function () {
   });
 
   // end basket
+
+  // ========>> SEARCH <<========
+
+  if (window.matchMedia('(max-width: 740px)').matches) {
+    var searchInput = $('input[name="search1"]');
+    var searchList = $('.relsearch');
+
+    searchInput.focus(function (e) {
+      searchList.slideDown(200);
+    });
+
+    searchInput.blur(function (e) {
+      searchList.slideUp(200);
+    });
+  }
 }); // end document ready
 
 
