@@ -381,23 +381,23 @@ textarea {
         transform: translateY(-50%);
     background-image: url("../img/decor/product-info.png");
     background-repeat: no-repeat; }
-  .product__info-list li:nth-child(1):before {
+  .product__info-list li.manager:before {
     background-position: 0 -22px;
     width: 21px;
     height: 28px; }
-  .product__info-list li:nth-child(2):before {
+  .product__info-list li.marker:before {
     width: 19px;
     height: 27px;
     background-position: 0 -50px; }
-  .product__info-list li:nth-child(3):before {
+  .product__info-list li.location:before {
     width: 23px;
     height: 22px;
     background-position: 0 0; }
-  .product__info-list li:nth-child(4):before {
+  .product__info-list li.street:before {
     width: 24px;
     height: 24px;
     background-position: 0 -98px; }
-  .product__info-list li:nth-child(5):before {
+  .product__info-list li.area:before {
     width: 21px;
     height: 21px;
     background-position: 0 -77px; }
@@ -453,18 +453,25 @@ textarea {
   background: #FFF; }
   .product__controls li {
     position: relative;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #546e7a;
-    border-radius: 3px;
     margin-bottom: 10px;
-    cursor: pointer;
-    transition: all .2s; }
-    body.no-touch .product__controls li:hover {
-      box-shadow: 0 1px 3px #6D6E6F; }
+    border: 1px solid #546e7a;
+    border-radius: 3px; }
     .product__controls li:last-child {
       margin-bottom: 0; }
-    .product__controls li:after {
+    .product__controls li:nth-child(1) {
+      border: none; }
+  .product__controls button {
+    display: block;
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    transition: all .2s; }
+    body.no-touch .product__controls button:hover {
+      box-shadow: 0 2px 3px 2px rgba(109, 110, 111, 0.6); }
+    .product__controls button:after {
       content: '';
       display: block;
       position: absolute;
@@ -475,27 +482,25 @@ textarea {
       background-image: url("../img/decor/product-controls.png");
       background-repeat: no-repeat;
       background-position: center; }
-    .product__controls li:nth-child(1) {
-      border: none; }
-      body.no-touch .product__controls li:nth-child(1):hover {
-        box-shadow: none; }
-      .product__controls li:nth-child(1):after {
-        width: 31px;
-        height: 30px;
-        background-position: 0 -42px; }
-    .product__controls li:nth-child(2):after {
+    body.no-touch .product__controls button.star:hover {
+      box-shadow: none; }
+    .product__controls button.star:after {
+      width: 31px;
+      height: 30px;
+      background-position: 0 -42px; }
+    .product__controls button.blueprint:after {
       width: 24px;
       height: 17px;
       background-position: 0 -97px; }
-    .product__controls li:nth-child(3):after {
+    .product__controls button.marker:after {
       width: 20px;
       height: 25px;
       background-position: 0 -72px; }
-    .product__controls li:nth-child(4):after {
+    .product__controls button.mail:after {
       width: 25px;
       height: 18px;
       background-position: 0 -24px; }
-    .product__controls li:nth-child(5):after {
+    .product__controls button.fax:after {
       width: 23px;
       height: 24px;
       background-position: 0 0; }
