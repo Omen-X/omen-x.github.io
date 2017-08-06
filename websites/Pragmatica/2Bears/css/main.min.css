@@ -4,7 +4,7 @@
  *     #HEADER
  *
  * =============================
- */.header__top{padding-top:20px;padding-bottom:20px}.header__adress{max-width:210px}.header__contacts p{font-family:"Open Sans",sans-serif;font-weight:600;margin-bottom:8px}.header__contacts p:last-child{margin-bottom:0}.header__contacts p span:first-child{padding-right:5px;font-size:.875rem}.header__contacts p span:last-child{font-size:1.375rem}.nav{max-width:none}.nav__list{-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:start;justify-content:flex-start}header .nav__list{padding-right:0}header .nav__list li{text-align:center}header .nav__list a{text-transform:uppercase;font-weight:700;font-size:.875rem;color:#fff}/*!
+ */.header__top{padding-top:20px;padding-bottom:20px}.header__adress{max-width:210px}.header__contacts{-ms-flex-negative:0;flex-shrink:0}.header__contacts p{font-family:"Open Sans",sans-serif;font-weight:600;margin-bottom:8px}.header__contacts p:last-child{margin-bottom:0}.header__contacts p span:first-child{padding-right:5px;font-size:.875rem}.header__contacts p span:last-child{font-size:1.375rem}.nav{max-width:none}.nav__list{-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:start;justify-content:flex-start}header .nav__list{padding-right:0}header .nav__list li{text-align:center}header .nav__list a{text-transform:uppercase;font-weight:700;font-size:.875rem;color:#fff}/*!
  * =============================
  *
  *     #INFO
