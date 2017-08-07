@@ -19,64 +19,304 @@
       else document.body.classList.add('no-touch');
       
     </script>
-    <section class="catalog-items content-width">
-      <div class="product">
-        <div class="product__img"><img src="img/content/product-img.jpg" alt="product"></div>
-        <div class="product__info">
-          <ul class="info-list">
-            <li class="info-list__item info-list__item_icon_manager"><span class="info-list__prop">Арендатор:</span><span class="info-list__value">Магазина</span></li>
-            <li class="info-list__item info-list__item_icon_marker"><span class="info-list__prop">Город:</span><span class="info-list__value">Москва</span></li>
-            <li class="info-list__item info-list__item_icon_location"><span class="info-list__prop">Район:</span><span class="info-list__value">Николаевский</span></li>
-            <li class="info-list__item info-list__item_icon_street"><span class="info-list__prop">Улица:</span><span class="info-list__value">Ленина, 85</span></li>
-            <li class="info-list__item info-list__item_icon_area"><span class="info-list__prop">Площадь:</span><span class="info-list__value">20 м2</span></li>
-          </ul>
+    <div class="main-content">
+      <header class="header">
+        <div class="header__top">
+          <div class="mobile-nav">
+            <button class="mobile-nav__trigger"></button>
+          </div>
         </div>
-        <div class="product__price">
-          <div class="product__price-item">
-            <h3 class="product__price-title">Стоимость:</h3>
-            <p class="product__price-value"><span>300000</span>руб.</p>
-            <p>за 1 м2 - 400 руб.</p>
+        <div class="header__content content-width">
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png" alt="Logo"></a></div>
+          <p class="header__slogan">Недвижимость сбережет и приумножит ваши деньги выгодней банка</p>
+        </div>
+      </header>
+      <main class="main">
+        <!-- catalog begin-->
+        <section class="catalog content-width">
+          <section class="filter">
+            <h2 class="block-title filter__title">ПРОДАЖА АРЕНДНОГО БИЗНЕСА В ЕКАТЕРИНБУРГЕ</h2>
+            <div class="filter__form">
+              <div class="filter__submit-wrap">
+                <button class="filter__submit">ПОКАЗАТЬ</button>
+              </div>
+            </div>
+          </section>
+          <section class="tabs" id="catalog-tabs">
+            <button class="tabs__btn tabs__btn_active" data-tab-for="catalog-1"># БЛОКИ</button>
+            <button class="tabs__btn" data-tab-for="catalog-2"># КАРТА</button>
+          </section>
+          <section class="products tab tab_visible" data-tab="catalog-1">
+            <div class="product">
+              <div class="product__img"><img src="img/content/product-img.jpg" alt="product"></div>
+              <div class="product__info">
+                <ul class="info-list">
+                  <li class="info-list__item info-list__item_icon_manager"><span class="info-list__prop">Арендатор:</span><span class="info-list__value">Магазина</span></li>
+                  <li class="info-list__item info-list__item_icon_marker"><span class="info-list__prop">Город:</span><span class="info-list__value">Москва</span></li>
+                  <li class="info-list__item info-list__item_icon_location"><span class="info-list__prop">Район:</span><span class="info-list__value">Николаевский</span></li>
+                  <li class="info-list__item info-list__item_icon_street"><span class="info-list__prop">Улица:</span><span class="info-list__value">Ленина, 85</span></li>
+                  <li class="info-list__item info-list__item_icon_area"><span class="info-list__prop">Площадь:</span><span class="info-list__value">20 м2</span></li>
+                </ul>
+              </div>
+              <div class="product__price">
+                <div class="product__price-item">
+                  <h3 class="product__price-title">Стоимость:</h3>
+                  <p class="product__price-value"><span>300000</span> руб.</p>
+                  <p class="product__price-text">за 1 м2 - 400 руб.</p>
+                </div>
+                <div class="product__price-item">
+                  <h3 class="product__price-title">Аренда:</h3>
+                  <p class="product__price-value"><span>300000</span> руб. а/мес.</p>
+                </div>
+                <div class="product__price-item product__price-item_size_inline">
+                  <h3 class="product__price-title">Окупаемость:</h3>
+                  <p class="product__price-value">5 лет</p>
+                </div>
+                <div class="product__price-item product__price-item_size_inline">
+                  <h3 class="product__price-title">Доходность:</h3>
+                  <p class="product__price-value">
+                    10 %
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="product__controls">
+                <button class="btn-rounded">ПЕРЕЙТИ</button>
+              </div>
+              <ul class="control-buttons product__control-buttons">
+                <li class="control-buttons__item control-buttons__item_star">
+                  <button class="control-buttons__button control-buttons__button_icon_star"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_blueprint"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_marker"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_mail"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_fax"></button>
+                </li>
+              </ul>
+            </div>
+            <div class="product">
+              <div class="product__img"><img src="img/content/product-img.jpg" alt="product"></div>
+              <div class="product__info">
+                <ul class="info-list">
+                  <li class="info-list__item info-list__item_icon_manager"><span class="info-list__prop">Арендатор:</span><span class="info-list__value">Магазина</span></li>
+                  <li class="info-list__item info-list__item_icon_marker"><span class="info-list__prop">Город:</span><span class="info-list__value">Москва</span></li>
+                  <li class="info-list__item info-list__item_icon_location"><span class="info-list__prop">Район:</span><span class="info-list__value">Николаевский</span></li>
+                  <li class="info-list__item info-list__item_icon_street"><span class="info-list__prop">Улица:</span><span class="info-list__value">Ленина, 85</span></li>
+                  <li class="info-list__item info-list__item_icon_area"><span class="info-list__prop">Площадь:</span><span class="info-list__value">20 м2</span></li>
+                </ul>
+              </div>
+              <div class="product__price">
+                <div class="product__price-item">
+                  <h3 class="product__price-title">Стоимость:</h3>
+                  <p class="product__price-value"><span>300000</span> руб.</p>
+                  <p class="product__price-text">за 1 м2 - 400 руб.</p>
+                </div>
+                <div class="product__price-item">
+                  <h3 class="product__price-title">Аренда:</h3>
+                  <p class="product__price-value"><span>300000</span> руб. а/мес.</p>
+                </div>
+                <div class="product__price-item product__price-item_size_inline">
+                  <h3 class="product__price-title">Окупаемость:</h3>
+                  <p class="product__price-value">5 лет</p>
+                </div>
+                <div class="product__price-item product__price-item_size_inline">
+                  <h3 class="product__price-title">Доходность:</h3>
+                  <p class="product__price-value">
+                    10 %
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="product__controls">
+                <button class="btn-rounded">ПЕРЕЙТИ</button>
+              </div>
+              <ul class="control-buttons product__control-buttons">
+                <li class="control-buttons__item control-buttons__item_star">
+                  <button class="control-buttons__button control-buttons__button_icon_star"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_blueprint"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_marker"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_mail"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_fax"></button>
+                </li>
+              </ul>
+            </div>
+            <div class="product">
+              <div class="product__img"><img src="img/content/product-img.jpg" alt="product"></div>
+              <div class="product__info">
+                <ul class="info-list">
+                  <li class="info-list__item info-list__item_icon_manager"><span class="info-list__prop">Арендатор:</span><span class="info-list__value">Магазина</span></li>
+                  <li class="info-list__item info-list__item_icon_marker"><span class="info-list__prop">Город:</span><span class="info-list__value">Москва</span></li>
+                  <li class="info-list__item info-list__item_icon_location"><span class="info-list__prop">Район:</span><span class="info-list__value">Николаевский</span></li>
+                  <li class="info-list__item info-list__item_icon_street"><span class="info-list__prop">Улица:</span><span class="info-list__value">Ленина, 85</span></li>
+                  <li class="info-list__item info-list__item_icon_area"><span class="info-list__prop">Площадь:</span><span class="info-list__value">20 м2</span></li>
+                </ul>
+              </div>
+              <div class="product__price">
+                <div class="product__price-item">
+                  <h3 class="product__price-title">Стоимость:</h3>
+                  <p class="product__price-value"><span>300000</span> руб.</p>
+                  <p class="product__price-text">за 1 м2 - 400 руб.</p>
+                </div>
+                <div class="product__price-item">
+                  <h3 class="product__price-title">Аренда:</h3>
+                  <p class="product__price-value"><span>300000</span> руб. а/мес.</p>
+                </div>
+                <div class="product__price-item product__price-item_size_inline">
+                  <h3 class="product__price-title">Окупаемость:</h3>
+                  <p class="product__price-value">5 лет</p>
+                </div>
+                <div class="product__price-item product__price-item_size_inline">
+                  <h3 class="product__price-title">Доходность:</h3>
+                  <p class="product__price-value">
+                    10 %
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="product__controls">
+                <button class="btn-rounded">ПЕРЕЙТИ</button>
+              </div>
+              <ul class="control-buttons product__control-buttons">
+                <li class="control-buttons__item control-buttons__item_star">
+                  <button class="control-buttons__button control-buttons__button_icon_star"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_blueprint"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_marker"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_mail"></button>
+                </li>
+                <li class="control-buttons__item">
+                  <button class="control-buttons__button control-buttons__button_icon_fax"></button>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="products-map tab" data-tab="catalog-2">
+            <h3 class="block-title products-map__title">КАРТА НЕДВИЖИМОСТИ ПО ВЫБРАННЫМ КРИТЕРИЯМ</h3>
+            <div class="map">
+              <div class="card products-map__card">
+                <div class="card__info">
+                  <div class="card__img"><img src="img/content/card-img.jpg" alt="card-img"></div>
+                  <ul class="card__info-list">
+                    <li class="card__info-item"><span class="card__info-prop">Арендатор:</span><span class="card__info-value">Магазина</span></li>
+                    <li class="card__info-item"><span class="card__info-prop">Город:</span><span class="card__info-value">Москва</span></li>
+                    <li class="card__info-item"><span class="card__info-prop">Район:</span><span class="card__info-value">Николаевский</span></li>
+                    <li class="card__info-item"><span class="card__info-prop">Улица:</span><span class="card__info-value">Ленина, 85</span></li>
+                    <li class="card__info-item"><span class="card__info-prop">Площадь:</span><span class="card__info-value">20 м2</span></li>
+                  </ul>
+                </div>
+                <div class="card__price">
+                  <div class="card__price-item">
+                    <h4 class="card__price-title">Стоимость:</h4><span class="card__price-value">300000 руб.</span><span class="card__price-text">за 1 м2 - 400 руб.</span>
+                  </div>
+                  <div class="card__price-item">
+                    <h4 class="card__price-title">Аренда:</h4><span class="card__price-value">300000 а/мес.</span>
+                  </div>
+                  <div class="card__price-item">
+                    <h4 class="card__price-title">Окупаемость:</h4><span class="card__price-value">5 лет.</span>
+                  </div>
+                  <div class="card__price-item">
+                    <h4 class="card__price-title">Доходность:</h4><span class="card__price-value">10%</span>
+                  </div>
+                </div>
+                <div class="card__controls">
+                  <div class="card__controls-btn">
+                    <button class="btn-rounded">ПЕРЕЙТИ</button>
+                  </div>
+                  <ul class="control-buttons control-buttons_landscape card__control-buttons">
+                    <li class="control-buttons__item control-buttons__item_last">
+                      <button class="control-buttons__button control-buttons__button_icon_star"></button>
+                    </li>
+                    <li class="control-buttons__item">
+                      <button class="control-buttons__button control-buttons__button_icon_blueprint"></button>
+                    </li>
+                    <li class="control-buttons__item">
+                      <button class="control-buttons__button control-buttons__button_icon_marker"></button>
+                    </li>
+                    <li class="control-buttons__item">
+                      <button class="control-buttons__button control-buttons__button_icon_mail"></button>
+                    </li>
+                    <li class="control-buttons__item">
+                      <button class="control-buttons__button control-buttons__button_icon_fax"></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="map__img" style="background-image: url('img/content/map.jpg');"></div>
+            </div>
+          </section>
+          <div class="pagination">
+            <button class="pagination__nav pagination__nav_prev"></button>
+            <div class="pagination__items">
+              <button class="pagination__item pagination__item_active">1</button>
+              <button class="pagination__item">2</button>
+              <button class="pagination__item">3</button>
+            </div>
+            <button class="pagination__nav pagination__nav_next"></button>
           </div>
-          <div class="product__price-item">
-            <h3 class="product__price-title">Аренда:</h3>
-            <p class="product__price-value"><span>300000</span> руб. а/мес.</p>
+          <div class="pagination-more">
+            <button class="btn-rounded">ОТКРЫТЬ ЕЩЕ</button>
           </div>
-          <div class="product__price-item product__price-item_size_inline">
-            <h3 class="product__price-title">Окупаемость:</h3>
-            <p class="product__price-value">5 лет</p>
-          </div>
-          <div class="product__price-item product__price-item_size_inline">
-            <h3 class="product__price-title">Доходность:</h3>
-            <p class="product__price-value">
-              10 %
+        </section>
+        <!-- catalog end-->
+        <!-- about-us begin-->
+        <section class="about-us content-width">
+          <div class="about-us__content">
+            <h2 class="about-us__title">Компания 66 Street Retail</h2>
+            <p class="about-us__text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же сложившаяся структура организации способствует подготовки и реализации новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Равным образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации соответствующий условий активизации.</p>
+            <p class="about-us__text">
+              Задача организации, в особенности же рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же сложившаяся структура организации способствует подготовки и реализации новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Равным образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации соответствующий условий активизации.
               
             </p>
           </div>
+        </section>
+        <!-- about-us end-->
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer__content content-width"><a class="footer__logo" href="./index.html"><img src="img/decor/logo_footer.png" alt="logo"></a>
+        <div class="footer__contacts">
+          <p>+7 (565) 353-56-74</p>
+          <p>pochta@mail.ru</p>
         </div>
-        <ul class="control-buttons">
-          <li class="control-buttons__item">
-            <button class="control-buttons__button control-buttons__button_icon_star"></button>
-          </li>
-          <li class="control-buttons__item">
-            <button class="control-buttons__button control-buttons__button_icon_blueprint"></button>
-          </li>
-          <li class="control-buttons__item">
-            <button class="control-buttons__button control-buttons__button_icon_marker"></button>
-          </li>
-          <li class="control-buttons__item">
-            <button class="control-buttons__button control-buttons__button_icon_mail"></button>
-          </li>
-          <li class="control-buttons__item">
-            <button class="control-buttons__button control-buttons__button_icon_fax"></button>
-          </li>
-        </ul>
+        <div class="footer__adress">
+          <p>г. Город<br>ул. Улица, 6</p>
+        </div>
       </div>
-    </section>
+    </footer>
+    <div class="sidebar">
+      <ul class="sidebar__nav">
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#"><span class="sidebar__nav-counter">5</span><span class="sidebar__nav-icon sidebar__nav-icon_star"></span><span class="sidebar__nav-title">ИЗБРАННОЕ</span></a></li>
+        <li class="sidebar__nav-item sidebar__nav-item_disabled"><a class="sidebar__nav-link" href="#"><span class="sidebar__nav-icon sidebar__nav-icon_msg"></span><span class="sidebar__nav-title">СООБЩЕНИЯ</span></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#"><span class="sidebar__nav-icon sidebar__nav-icon_company"></span><span class="sidebar__nav-title">О КОМПАНИИ</span></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#"><span class="sidebar__nav-icon sidebar__nav-icon_bank"></span><span class="sidebar__nav-title">ИНВЕСТОРАМ</span></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#"><span class="sidebar__nav-icon sidebar__nav-icon_contacts"></span><span class="sidebar__nav-title">КОНТАКТЫ</span></a></li>
+      </ul>
+    </div>
     <script>
       var ver = 1;
       //- ver = Math.floor(Math.random() * 100);
       var scr = {"scripts":[
-      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      //- {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
       {"src" : "js/common.min.js?dev=" + ver, "async" : false},
       ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
     </script>

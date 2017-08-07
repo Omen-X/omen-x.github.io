@@ -2,61 +2,53 @@
 
 // ========>> DEFAULT VARIABLES <<========
 
-// Define touch devices
-var isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
 
 // ========>> FUNCTIONS <<========
 
+function catalogTabs() {
+  if (document.getElementById('catalog-tabs')) {
+    var tabsButtonsWrap = document.getElementById('catalog-tabs');
+    var tabsButtons = document.querySelectorAll('#catalog-tabs .tabs__btn');
+    var tabs = document.querySelectorAll('*[data-tab^="catalog"]');
+
+    tabsButtonsWrap.addEventListener('click', function (event) {
+      if (event.target.classList.contains('tabs__btn')) {
+        var target = event.target;
+        var currTabId = target.getAttribute('data-tab-for');
+        var currTab = document.querySelector('[data-tab=' + currTabId + ']');
+
+        tabsButtons.forEach(function (btn) {
+          btn.classList.remove('tabs__btn_active');
+        });
+        target.classList.add('tabs__btn_active');
+
+        tabs.forEach(function (tab) {
+          tab.classList.remove('tab_visible');
+        });
+        currTab.classList.add('tab_visible');
+      }
+    });
+  }
+}
 
 // ========>> DOCUMENT READY <<========
 
-$(function () {
-  // Preloader
-  $('#loader').fadeOut(200);
-  setTimeout(function () {
-    $('#loader').remove();
-  }, 210);
-
-  // Prevent dragging img
-  $('img').on('dragstart', function (event) {
-    return event.preventDefault();
-  });
-
-  // ========>> ANIMATION <<========
-
-  // Adding animation classes
-
-  var animClasses = ['.select'];
-
-  animClasses.forEach(function (select) {
-    $(select).addClass('animate');
-  });
-
-  // fix transition effect after page reloading,
-  // transition adds after animation class,
-  // all transitions must be listed in this selector
-
-  setTimeout(function () {
-    $('selector').addClass('trs');
-  }, 0);
+function documentReady() {
 
   // ========>> FUNCTIONS CALL <<========
 
+  catalogTabs();
+} // end document ready
 
-  // ========>> GLOBAL EVENTS <<========
-
-  $(window).on('resize', function () {}).resize(); // end resize
-}); // end document ready
-
-
-// ========>> DETECTING CLIENT CONFIG <<========
-
-// Detect touch devices
-
-if (isTouch) $(document.body).addClass('touch');else $(document.body).addClass('no-touch');
-
-// Detect disabled JS
-
-$(document.body).removeClass('no-js');
 
 // ========>> UTILS <<========
+
+(function checkLoad() {
+  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);else documentReady();
+})();
+
+// Polyfill for IE
+(function () {
+  if (typeof NodeList.prototype.forEach === "function") return false;
+  NodeList.prototype.forEach = Array.prototype.forEach;
+})();
