@@ -52,6 +52,30 @@ function lazyLoadMap() {
   }
 }
 
+// ========>> TECHNOLOGY NAV <<========
+
+function technologyNav() {
+  if ($('.technology__nav').length) {
+    var nav = $('.technology__nav');
+    var navLinks = $('.technology__link');
+    var tabs = $('[data-technology-nav]', '.technology');
+
+    navLinks.click(function (event) {
+      event.preventDefault();
+      navLinks.removeClass('technology__link_active');
+
+      var target = $(event.target);
+      target.addClass('technology__link_active');
+
+      var curr = target.attr('href');
+      if (curr === '#') $('html, body').animate({ scrollTop: 0 }, 750);else {
+        var scroll = $('[data-technology-nav="' + curr + '"]').offset().top - 30;
+        $('html, body').animate({ scrollTop: scroll }, 750);
+      }
+    });
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 $(function () {
@@ -73,6 +97,7 @@ $(function () {
   setSection();
   priceSection();
   lazyLoadMap();
+  technologyNav();
 
   // ========>> GLOBAL EVENTS <<========
 
