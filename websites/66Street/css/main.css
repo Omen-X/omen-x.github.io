@@ -1384,7 +1384,8 @@ body.no-touch .control-buttons__button_icon_star:hover {
 .card-info__card {
   margin-left: 15px;
   margin-right: 15px;
-  max-width: 365px; }
+  max-width: none;
+  width: calc(100 / 3 * 1% - 30px); }
 
 .content-width {
   max-width: 1170px;
@@ -1489,7 +1490,8 @@ html.modal-open {
     margin-right: -5px; }
   .card-info__card {
     margin-left: 10px;
-    margin-right: 10px; } }
+    margin-right: 10px;
+    width: calc(100 / 3 * 1% - 20px); } }
 
 @media only screen and (max-width: 56.1875em) {
   .main-content {
@@ -1699,7 +1701,9 @@ html.modal-open {
   .card-info__card {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 370px; }
     .card-info__card:last-child {
       margin-bottom: 0; } }
 
