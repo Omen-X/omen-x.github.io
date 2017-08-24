@@ -31,17 +31,44 @@ function catalogTabs() {
   }
 }
 
+function scrollBar() {
+  if (document.querySelector('.sidebar')) {
+    $('.sidebar').mCustomScrollbar({
+      // theme: 'minimal-dark'
+    });
+  }
+}
+
+function cardCarousel() {
+  if (document.querySelector('.card-info')) {
+    $('#light-slider').lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      slideMargin: 0,
+      thumbItem: 3
+    });
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
+  $('#loader').fadeOut(200);
+  setTimeout(function () {
+    $('#loader').remove();
+  }, 210);
 
   // ========>> FUNCTIONS CALL <<========
 
+  scrollBar();
   catalogTabs();
+  cardCarousel();
 } // end document ready
 
 
 // ========>> UTILS <<========
+/* eslint-disable */
 
 (function checkLoad() {
   if (document.readyState !== 'complete') setTimeout(checkLoad, 10);else documentReady();
@@ -49,6 +76,6 @@ function documentReady() {
 
 // Polyfill for IE
 (function () {
-  if (typeof NodeList.prototype.forEach === "function") return false;
+  if (typeof NodeList.prototype.forEach === 'function') return false;
   NodeList.prototype.forEach = Array.prototype.forEach;
 })();
