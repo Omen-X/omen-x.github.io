@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Агенство Безопасных Систем</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header-top">
+        <div class="header-top__content content-width">
+          <div class="header-top__logo"><a class="header-top__logo-link" href="#"><img src="img/decor/logo_light.png" alt="logo"></a></div>
+          <button class="btn-form header-top__calc-btn">КАЛЬКУЛЯТОР</button>
+          <div class="header-top__contacts"><span class="header-top__email">pochta@mail.ru</span><span class="header-top__phone">8 (922) 222-22-22</span></div>
+          <button class="btn-form header-top__btn-form">ЗАКАЗАТЬ ЗВОНОК</button>
+          <button class="nav-mob-button"></button>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="header-main__content content-width">
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png" alt="logo"></a></div>
+          <h2 class="header-main__title">Видеонаблюдение под ключ</h2>
+          <button class="btn-main btn-main_icon_calc header-main__btn-main">КАЛЬКУЛЯТОР</button>
+          <div class="basket">
+            <button class="btn-round btn-round_basket"></button>
+            <div class="basket__text"><span class="basket__title">Товаров:</span><span class="basket__value">Нет</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav">
+        <div class="header-nav__content content-width">
+          <nav class="nav">
+            <div class="nav__overlay"></div>
+            <ul class="nav__list animate trs">
+              <li class="nav__item nav__item_active"><a class="nav__link" href="././index.html">ГЛАВНАЯ</a></li>
+              <li class="nav__item"><a class="nav__link" href="./catalog.html">КАТАЛОГ</a></li>
+              <li class="nav__item"><a class="nav__link" href="./mounting.html">УСТАНОВКА</a></li>
+              <li class="nav__item"><a class="nav__link" href="./support.html">ТЕХПОДДЕРЖКА</a></li>
+              <li class="nav__item"><a class="nav__link" href="./company.html">О КОМПАНИИ</a></li>
+              <li class="nav__item"><a class="nav__link" href="./contacts.html">КОНТАКТЫ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="offers offers_home">
+        <div class="offers__content content-width">
+          <h2 class="section-title offers__title">ГОТОВЫЕ ПРЕДЛОЖЕНИЯ:</h2>
+          <div class="offers__items"><a class="offer" href="#">
+              <div class="offer__img"><img src="img/content/offer-1.png" alt="offer"></div>
+              <h3 class="offer__title">ТСЖ УПРАВЛЯЮЩИЕ КОМПАНИИ</h3></a><a class="offer" href="#">
+              <div class="offer__img"><img src="img/content/offer-2.png" alt="offer"></div>
+              <h3 class="offer__title">КОТТЕДЖИ</h3></a><a class="offer" href="#">
+              <div class="offer__img"><img src="img/content/offer-3.png" alt="offer"></div>
+              <h3 class="offer__title">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</h3></a><a class="offer" href="#">
+              <div class="offer__img"><img src="img/content/offer-4.png" alt="offer"></div>
+              <h3 class="offer__title">МУНИЦИПАЛЬНЫЕ УЧРЕЖДЕНИЯ</h3></a></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <!-- home-carousel begin-->
+      <section class="home-carousel">
+        <div class="home-carousel__items">
+          <div class="home-carousel__item home-carousel__item_1">
+            <div class="home-carousel__item-content content-width">
+              <h2 class="section-title home-carousel__title">КОМПЛЕКТ ВИДЕОНАБЛЮДЕНИЯ ДЛЯ ТСЖ</h2>
+              <ul class="home-carousel__list">
+                <li class="home-carousel__list-item">Регистратор на 4 канала с поддержкой камер высокого разрешения</li>
+                <li class="home-carousel__list-item">Уличная камера с разрешением</li>
+                <li class="home-carousel__list-item">Жесткий диск объемом 500 ГБ</li>
+                <li class="home-carousel__list-item">Блок питания на 2 камеры</li>
+                <li class="home-carousel__list-item">Разветвитель питания на 2 камеры</li>
+                <li class="home-carousel__list-item">Блок питания для регистратора</li>
+              </ul>
+              <div class="home-carousel__link-wrap"><a class="btn-main home-carousel__link" href="#">УЗНАТЬ ДЕТАЛИ</a></div>
+              <div class="home-carousel__item-plan">
+                <div class="home-carousel__item-img"><img src="img/content/slide-1.png" alt="slide"></div>
+                <div class="carousel-marks">
+                  <div class="carousel-mark">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark">
+                    <p class="carousel-mark__title carousel-mark__title_pos_left">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-carousel__item home-carousel__item_2">
+            <div class="home-carousel__item-content content-width">
+              <h2 class="section-title home-carousel__title">КОТТЕДЖИ <br> ЗАГОРОДНЫЕ ДОМА</h2>
+              <ul class="home-carousel__list">
+                <li class="home-carousel__list-item">Регистратор на 4 канала с поддержкой камер высокого разрешения</li>
+                <li class="home-carousel__list-item">Уличная камера с разрешением</li>
+                <li class="home-carousel__list-item">Жесткий диск объемом 500 ГБ</li>
+                <li class="home-carousel__list-item">Блок питания на 2 камеры</li>
+                <li class="home-carousel__list-item">Разветвитель питания на 2 камеры</li>
+                <li class="home-carousel__list-item">Блок питания для регистратора</li>
+              </ul>
+              <div class="home-carousel__link-wrap"><a class="btn-main home-carousel__link" href="#">УЗНАТЬ ДЕТАЛИ</a></div>
+              <div class="home-carousel__item-plan">
+                <div class="home-carousel__item-img"><img src="img/content/slide-2.png" alt="slide"></div>
+                <div class="carousel-marks">
+                  <div class="carousel-mark">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark carousel-mark_inverse">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark carousel-mark_inverse">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-carousel__item home-carousel__item_3">
+            <div class="home-carousel__item-content content-width">
+              <h2 class="section-title home-carousel__title">КОММЕРЧЕСКАЯ <br> НЕДВИЖИМОСТЬ</h2>
+              <ul class="home-carousel__list">
+                <li class="home-carousel__list-item">Цифровой AHD регистратор на 4 камеры</li>
+                <li class="home-carousel__list-item">Купольная цветная камера 2 Мпикс с ИК подсветкой</li>
+                <li class="home-carousel__list-item">Блок питания для камеры</li>
+                <li class="home-carousel__list-item">Комплект разъемов для камер</li>
+                <li class="home-carousel__list-item">Кабель 20 метров</li>
+                <li class="home-carousel__list-item">Жесткий диск 500 Гб</li>
+              </ul>
+              <div class="home-carousel__link-wrap"><a class="btn-main home-carousel__link" href="#">УЗНАТЬ ДЕТАЛИ</a></div>
+              <div class="home-carousel__item-plan">
+                <div class="home-carousel__item-img"><img src="img/content/slide-3.png" alt="slide"></div>
+                <div class="carousel-marks">
+                  <div class="carousel-mark carousel-mark_inverse">
+                    <p class="carousel-mark__title carousel-mark__title_pos_left">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark carousel-mark_inverse">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-carousel__item home-carousel__item_4">
+            <div class="home-carousel__item-content content-width">
+              <h2 class="section-title home-carousel__title">МУНИЦИПАЛЬНЫЕ <br>УЧРЕЖДЕНИЯ</h2>
+              <ul class="home-carousel__list">
+                <li class="home-carousel__list-item">Цифровой AHD регистратор на 4 камеры</li>
+                <li class="home-carousel__list-item">Купольная цветная камера 2 Мпикс с ИК подсветкой</li>
+                <li class="home-carousel__list-item">Блок питания для камеры</li>
+                <li class="home-carousel__list-item">Комплект разъемов для камер</li>
+                <li class="home-carousel__list-item">Кабель 20 метров</li>
+                <li class="home-carousel__list-item">Жесткий диск 500 Гб</li>
+              </ul>
+              <div class="home-carousel__link-wrap"><a class="btn-main home-carousel__link" href="#">УЗНАТЬ ДЕТАЛИ</a></div>
+              <div class="home-carousel__item-plan">
+                <div class="home-carousel__item-img"><img src="img/content/slide-4.png" alt="slide"></div>
+                <div class="carousel-marks">
+                  <div class="carousel-mark carousel-mark_inverse">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark">
+                    <p class="carousel-mark__title">Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения</p>
+                  </div>
+                  <div class="carousel-mark carousel-mark_inverse">
+                    <p class="carousel-mark__title carousel-mark__title_pos_left">
+                      Maxi-Cam MCI-1001 "Alfa" – купольная камера видеонаблюдения
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home-carousel end-->
+      <div class="pagination pagination_indent">
+        <div class="pagination__content content-width"><span class="pagination__curr" href="./index.html">Главная &gt;&gt;</span></div>
+      </div>
+      <!-- product-block begin-->
+      <section class="product-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">ВИДЕОНАБЛЮДЕНИЕ ПОД КЛЮЧ</h2>
+          <p class="product-block__text">Камеры наблюдения это неотъемлемая часть каждой системы безопасности. В зависимости от места наблюдения различаются камеры наблюдения, которые рассчитаны на работы в самых разнообразных условиях, например при высокой влажности, и большом диапазоне температур. Стоит понимать, что под обеспечением безопасности подразумевается не только защита охраняемой территории от несанкционированного проникновения, но и полный контроль за соблюдением порядка в общественных местах.</p>
+          <p class="product-block__text">
+            Для достижения оптимальной стоимости и качества такой охранной системы необходимо применение различных типов камер наблюдения в зависимости от места, где они будут установлены и требования к изображению, которое должно быть получено с их помощью.
+            
+          </p>
+        </div>
+      </section>
+      <!-- product-block end-->
+      <!-- product-block begin-->
+      <section class="product-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">КАМЕРЫ ВИДЕОНАБЛЮДЕНИЯ</h2>
+          <p class="product-block__text">Камеры наблюдения это неотъемлемая часть каждой системы безопасности. В зависимости от места наблюдения различаются камеры наблюдения, которые рассчитаны на работы в самых разнообразных условиях, например при высокой влажности, и большом диапазоне температур. Стоит понимать, что под обеспечением безопасности подразумевается не только защита охраняемой территории от несанкционированного проникновения, но и полный контроль за соблюдением порядка в общественных местах.</p>
+          <p class="product-block__text">
+            Для достижения оптимальной стоимости и качества такой охранной системы необходимо применение различных типов камер наблюдения в зависимости от места, где они будут установлены и требования к изображению, которое должно быть получено с их помощью.
+            
+          </p>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-1.jpg');"></div><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-2.jpg');"></div><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- product-block end-->
+      <!-- product-block begin-->
+      <section class="product-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">ВИДЕОРЕГИСТРАТОРЫ</h2>
+          <p class="product-block__text">Камеры наблюдения это неотъемлемая часть каждой системы безопасности. В зависимости от места наблюдения различаются камеры наблюдения, которые рассчитаны на работы в самых разнообразных условиях, например при высокой влажности, и большом диапазоне температур. Стоит понимать, что под обеспечением безопасности подразумевается не только защита охраняемой территории от несанкционированного проникновения, но и полный контроль за соблюдением порядка в общественных местах.</p>
+          <p class="product-block__text">
+            Для достижения оптимальной стоимости и качества такой охранной системы необходимо применение различных типов камер наблюдения в зависимости от места, где они будут установлены и требования к изображению, которое должно быть получено с их помощью.
+            
+          </p>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-1.jpg');"></div><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-2.jpg');"></div><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- product-block end-->
+      <!-- products-block begin-->
+      <section class="products-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">КОМПЛЕКТЫ</h2>
+          <p class="product-block__text">Камеры наблюдения это неотъемлемая часть каждой системы безопасности. В зависимости от места наблюдения различаются камеры наблюдения, которые рассчитаны на работы в самых разнообразных условиях, например при высокой влажности, и большом диапазоне температур. Стоит понимать, что под обеспечением безопасности подразумевается не только защита охраняемой территории от несанкционированного проникновения, но и полный контроль за соблюдением порядка в общественных местах.</p>
+          <p class="product-block__text">
+            Для достижения оптимальной стоимости и качества такой охранной системы необходимо применение различных типов камер наблюдения в зависимости от места, где они будут установлены и требования к изображению, которое должно быть получено с их помощью.
+            
+          </p>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-1.jpg');"></div><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-2.jpg');"></div><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- products-block end-->
+      <!-- products-block begin-->
+      <section class="products-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">СЕТЕВОЕ ОБОРУДОВАНИЕ</h2>
+          <p class="product-block__text">Камеры наблюдения это неотъемлемая часть каждой системы безопасности. В зависимости от места наблюдения различаются камеры наблюдения, которые рассчитаны на работы в самых разнообразных условиях, например при высокой влажности, и большом диапазоне температур. Стоит понимать, что под обеспечением безопасности подразумевается не только защита охраняемой территории от несанкционированного проникновения, но и полный контроль за соблюдением порядка в общественных местах.</p>
+          <p class="product-block__text">
+            Для достижения оптимальной стоимости и качества такой охранной системы необходимо применение различных типов камер наблюдения в зависимости от места, где они будут установлены и требования к изображению, которое должно быть получено с их помощью.
+            
+          </p>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-1.jpg');"></div><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-2.jpg');"></div><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- products-block end-->
+      <!-- products-block begin-->
+      <section class="products-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">КАТАЛОГ</h2>
+          <p class="product-block__text">Камеры наблюдения это неотъемлемая часть каждой системы безопасности. В зависимости от места наблюдения различаются камеры наблюдения, которые рассчитаны на работы в самых разнообразных условиях, например при высокой влажности, и большом диапазоне температур. Стоит понимать, что под обеспечением безопасности подразумевается не только защита охраняемой территории от несанкционированного проникновения, но и полный контроль за соблюдением порядка в общественных местах.</p>
+          <p class="product-block__text">
+            Для достижения оптимальной стоимости и качества такой охранной системы необходимо применение различных типов камер наблюдения в зависимости от места, где они будут установлены и требования к изображению, которое должно быть получено с их помощью.
+            
+          </p>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-1.jpg');"></div><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img">
+                  <div class="product__tag" style="background-image: url('img/decor/tag-2.jpg');"></div><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-1.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-2.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-3.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-4.jpg" alt="product">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- products-block end-->
+    </main>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
