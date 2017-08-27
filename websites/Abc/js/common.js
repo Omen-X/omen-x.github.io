@@ -93,8 +93,7 @@ function documentReady() {
     lastScrollTop = currentScrollTop;
 
     // fixed header
-    // if (window.matchMedia('(min-width: 899px)').matches) fixedHeader(currentScrollTop);
-
+    if (window.matchMedia('(min-width: 899px)').matches) fixedHeader(currentScrollTop);
 
     return raf(handleWindowScroll);
   };
