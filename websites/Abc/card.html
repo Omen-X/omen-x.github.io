@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Агенство Безопасных Систем</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+        <header class="header">
+          <div class="header-top">
+            <div class="header-top__content content-width">
+              <div class="header-top__logo"><a class="header-top__logo-link" href="#"><img src="img/decor/logo_light.png" alt="logo"></a></div>
+              <button class="btn-form header-top__calc-btn">КАЛЬКУЛЯТОР</button>
+              <div class="header-top__contacts"><span class="header-top__email">pochta@mail.ru</span><span class="header-top__phone">8 (922) 222-22-22</span></div>
+              <button class="btn-form header-top__btn-form">ЗАКАЗАТЬ ЗВОНОК</button>
+              <button class="nav-mob-button"></button>
+            </div>
+          </div>
+          <div class="header-main">
+            <div class="header-main__content content-width">
+              <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png" alt="logo"></a></div>
+              <h2 class="header-main__title">Видеонаблюдение под ключ</h2>
+              <button class="btn-main btn-main_icon_calc header-main__btn-main">КАЛЬКУЛЯТОР</button>
+              <div class="basket">
+                <button class="btn-round btn-round_basket"></button>
+                <div class="basket__text"><span class="basket__title">Товаров:</span><span class="basket__value">Нет</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav">
+            <div class="header-nav__content content-width">
+              <nav class="nav">
+                <div class="nav__overlay"></div>
+                <ul class="nav__list animate trs">
+                  <li class="nav__item nav__item_active"><a class="nav__link" href="././index.html">ГЛАВНАЯ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./catalog.html">КАТАЛОГ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./complects.html">КОМПЛЕКТЫ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./card.html">КАРТОЧКА</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./company.html">О КОМПАНИИ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./contacts.html">КОНТАКТЫ</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="offers offers_header offers_size_compact">
+            <div class="offers__content content-width">
+              <h2 class="section-title offers__title">ГОТОВЫЕ ПРЕДЛОЖЕНИЯ:</h2>
+              <div class="offers__items"><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-1.png" alt="offer"></div>
+                  <h3 class="offer__title">ТСЖ УПРАВЛЯЮЩИЕ КОМПАНИИ</h3></a><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-2.png" alt="offer"></div>
+                  <h3 class="offer__title">КОТТЕДЖИ</h3></a><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-3.png" alt="offer"></div>
+                  <h3 class="offer__title">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</h3></a><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-4.png" alt="offer"></div>
+                  <h3 class="offer__title">МУНИЦИПАЛЬНЫЕ УЧРЕЖДЕНИЯ</h3></a></div>
+            </div>
+          </div>
+        </header>
+    <main class="main">
+      <div class="pagination pagination_indent">
+        <div class="pagination__content content-width"><a class="pagination__link" href="./index.html">Главная</a><a class="pagination__link" href="./index.html">Каталог</a><span class="pagination__curr" href="./index.html">DS-2CE16D1T-IR</span></div>
+      </div>
+      <!-- card begin-->
+      <section class="card">
+        <div class="card__content content-width">
+          <h2 class="section-title">DS-2CE16D1T-IR</h2>
+          <div class="card__content-wrap">
+            <div class="card__main">
+              <div class="card__photos">
+                <ul id="light-slider">
+                  <li data-thumb="img/content/product-5.jpg">
+                    <div class="card__photos-img">
+                      <div class="product-tag" style="background-image: url('img/decor/tag-1.jpg');"></div><img src="img/content/product-5.jpg" alt="card-img">
+                    </div>
+                  </li>
+                  <li data-thumb="img/content/product-5.jpg">
+                    <div class="card__photos-img">
+                      <div class="product-tag" style="background-image: url('img/decor/tag-2.jpg');"></div><img src="img/content/product-5.jpg" alt="card-img">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">Уличная hd-tvi камера с ик подсветкой до 20 метров, 3d-dnr, dss, blc и разрешение 2 мпикс</h3>
+                <ul class="info-list">
+                  <li class="info-list__item"><span>Модель:</span><span>DS-2CE16D1T-IR</span></li>
+                  <li class="info-list__item"><span>Артикул:</span><span>4524</span></li>
+                  <li class="info-list__item"><span>Производитель:</span><span>HikVision</span></li>
+                  <li class="info-list__item"><span>Наличие:</span><span class="c-accent">В наличии</span></li>
+                </ul>
+                <div class="card__price">
+                  <div class="card__price-wrap"><span class="card__price-old">25 320 руб.</span><span class="card__price-curr section-title">22 320 руб.</span></div>
+                  <div class="card__price-complect">
+                    <p>Цена в комплекте:</p><span>35 320 руб.</span>
+                  </div>
+                </div>
+                <div class="card__buttons">
+                  <button class="btn-main btn-main_color_revert">В КОРЗИНУ</button>
+                  <button class="btn-main">КУПИТЬ В 1 КЛИК</button>
+                </div>
+              </div>
+              <div class="card__soc-links">
+                <ul class="soc-list card__soc-list">
+                  <li class="soc-list__item"><a class="soc-list__link soc-list__link_vk" href="#"></a></li>
+                  <li class="soc-list__item"><a class="soc-list__link soc-list__link_inst" href="#"></a></li>
+                  <li class="soc-list__item"><a class="soc-list__link soc-list__link_fb" href="#"></a></li>
+                  <li class="soc-list__item"><a class="soc-list__link soc-list__link_od" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tabs card__tabs">
+              <div class="tabs__nav">
+                <div class="tabs__nav-item tabs__nav-item_active"><span>ОПИСАНИЕ</span></div>
+                <div class="tabs__nav-item"><span>ХАРАКТЕРИСТИКИ</span></div>
+                <div class="tabs__nav-item"><span>ДОКУМЕНТАЦИЯ</span></div>
+              </div>
+              <div class="tabs__items">
+                <div class="tabs__item tabs__item_active">
+                  <div class="card__desc">
+                    <h3 class="card__title">Уличная hd-tvi камера с ик подсветкой до 20 метров, 3d-dnr, dss, blc и разрешение 2 мпикс</h3>
+                    <p class="card__desc-text">Сенсор 1/3" CMOS Sony IMX238</p>
+                    <p class="card__desc-text">Количество эффективных пикселей 720P(1280X720)</p>
+                    <p class="card__desc-text">Общее количество пикселей 1.3Мп</p>
+                    <p class="card__desc-text">Объектив 10X оптическое увеличение</p>
+                    <p class="card__desc-text">Цифровое увеличение 16X</p>
+                    <p class="card__desc-text">Фокусное расстояние 5,1мм~51мм</p>
+                    <p class="card__desc-text">Диафрагма F2</p>
+                    <p class="card__desc-text">Минимальная освещенность Цвет: 0.5 Lux Ч/б: 0.05 Lux</p>
+                    <p class="card__desc-text">BLC Да</p>
+                    <p class="card__desc-text">ИК фильтр Механический</p>
+                    <p class="card__desc-text">Отношение сигнал/шум 50dB</p>
+                    <p class="card__desc-text">Поворот 360° круговое вращение</p>
+                    <p class="card__desc-text">Наклон 0°~93° авто разворот на 180°</p>
+                    <p class="card__desc-text">Скорость поворота 0.02~200°/сек</p>
+                    <p class="card__desc-text">Скорость наклона 0.02~80°/сек</p>
+                    <p class="card__desc-text">Количество пресетов 220</p>
+                    <p class="card__desc-text">Количество туров 3</p>
+                    <p class="card__desc-text">Количество точек в туре Макс.16 точек, регулируемое время задержки, выбор скорости</p>
+                    <p class="card__desc-text">Рабочие температура -40C+60C</p>
+                    <p class="card__desc-text">Язык интерфейса English</p>
+                    <p class="card__desc-text">Отображение позиции Да</p>
+                    <p class="card__desc-text">Влажность 95% без образования конденсата</p>
+                    <p class="card__desc-text">Питание DC12V (БП12V 3A в комплекте)</p>
+                    <p class="card__desc-text">Потребляемая мощность 15Вт</p>
+                    <p class="card__desc-text">Грозозащита Переходные напряжения до 6000В</p>
+                    <p class="card__desc-text">Видеовыход AHD BNC</p>
+                    <p class="card__desc-text">Управление камерой RS485</p>
+                    <p class="card__desc-text">Сертификаты IP66,CE,FCC,RoHs</p>
+                    <p class="card__desc-text">ИК подсветка Автоматический контроль IR LED PWM</p>
+                    <p class="card__desc-text">ИК светодиоды Ф16=6</p>
+                    <p class="card__desc-text">Дистанция подсветки До 50 метров</p>
+                    <p class="card__desc-text">Датчик внешнего освещения Регулируемая ИК подсветка 1-15 уровней</p>
+                    <p class="card__desc-text">Прочее Размеры</p>
+                    <p class="card__desc-text">
+                      235x200x141мм
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="tabs__item ">
+                  <div class="card__desc">
+                    <h3 class="card__title">Скоростная камера GT-SDA10X с х10 кратным оптичесим зумом и ИК подсветкой до 50 метров</h3>
+                    <p class="card__desc-text">Сенсор 1/3" CMOS Sony IMX238</p>
+                    <p class="card__desc-text">Количество эффективных пикселей 720P(1280X720)</p>
+                    <p class="card__desc-text">Общее количество пикселей 1.3Мп</p>
+                    <p class="card__desc-text">Объектив 10X оптическое увеличение</p>
+                    <p class="card__desc-text">Цифровое увеличение 16X</p>
+                    <p class="card__desc-text">Фокусное расстояние 5,1мм~51мм</p>
+                    <p class="card__desc-text">Диафрагма F2</p>
+                    <p class="card__desc-text">Минимальная освещенность Цвет: 0.5 Lux Ч/б: 0.05 Lux</p>
+                    <p class="card__desc-text">BLC Да</p>
+                    <p class="card__desc-text">ИК фильтр Механический</p>
+                    <p class="card__desc-text">Отношение сигнал/шум 50dB</p>
+                    <p class="card__desc-text">Поворот 360° круговое вращение</p>
+                    <p class="card__desc-text">Наклон 0°~93° авто разворот на 180°</p>
+                    <p class="card__desc-text">Скорость поворота 0.02~200°/сек</p>
+                    <p class="card__desc-text">Скорость наклона 0.02~80°/сек</p>
+                    <p class="card__desc-text">Количество пресетов 220</p>
+                    <p class="card__desc-text">Количество туров 3</p>
+                    <p class="card__desc-text">Количество точек в туре Макс.16 точек, регулируемое время задержки, выбор скорости</p>
+                    <p class="card__desc-text">Рабочие температура -40C+60C</p>
+                    <p class="card__desc-text">Язык интерфейса English</p>
+                    <p class="card__desc-text">Отображение позиции Да</p>
+                    <p class="card__desc-text">Влажность 95% без образования конденсата</p>
+                    <p class="card__desc-text">Питание DC12V (БП12V 3A в комплекте)</p>
+                    <p class="card__desc-text">Потребляемая мощность 15Вт</p>
+                    <p class="card__desc-text">Грозозащита Переходные напряжения до 6000В</p>
+                    <p class="card__desc-text">Видеовыход AHD BNC</p>
+                    <p class="card__desc-text">Управление камерой RS485</p>
+                    <p class="card__desc-text">Сертификаты IP66,CE,FCC,RoHs</p>
+                    <p class="card__desc-text">ИК подсветка Автоматический контроль IR LED PWM</p>
+                    <p class="card__desc-text">ИК светодиоды Ф16=6</p>
+                    <p class="card__desc-text">Дистанция подсветки До 50 метров</p>
+                    <p class="card__desc-text">Датчик внешнего освещения Регулируемая ИК подсветка 1-15 уровней</p>
+                    <p class="card__desc-text">Прочее Размеры</p>
+                    <p class="card__desc-text">
+                      235x200x141мм
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="tabs__item ">
+                  <div class="card__desc">
+                    <h3 class="card__title">Уличная hd-tvi камера с ик подсветкой до 20 метров, 3d-dnr, dss, blc и разрешение 2 мпикс</h3>
+                    <p class="card__desc-text">Сенсор 1/3" CMOS Sony IMX238</p>
+                    <p class="card__desc-text">Количество эффективных пикселей 720P(1280X720)</p>
+                    <p class="card__desc-text">Общее количество пикселей 1.3Мп</p>
+                    <p class="card__desc-text">Объектив 10X оптическое увеличение</p>
+                    <p class="card__desc-text">Цифровое увеличение 16X</p>
+                    <p class="card__desc-text">Фокусное расстояние 5,1мм~51мм</p>
+                    <p class="card__desc-text">Диафрагма F2</p>
+                    <p class="card__desc-text">Минимальная освещенность Цвет: 0.5 Lux Ч/б: 0.05 Lux</p>
+                    <p class="card__desc-text">BLC Да</p>
+                    <p class="card__desc-text">ИК фильтр Механический</p>
+                    <p class="card__desc-text">Отношение сигнал/шум 50dB</p>
+                    <p class="card__desc-text">Поворот 360° круговое вращение</p>
+                    <p class="card__desc-text">Наклон 0°~93° авто разворот на 180°</p>
+                    <p class="card__desc-text">Скорость поворота 0.02~200°/сек</p>
+                    <p class="card__desc-text">Скорость наклона 0.02~80°/сек</p>
+                    <p class="card__desc-text">Количество пресетов 220</p>
+                    <p class="card__desc-text">Количество туров 3</p>
+                    <p class="card__desc-text">Количество точек в туре Макс.16 точек, регулируемое время задержки, выбор скорости</p>
+                    <p class="card__desc-text">Рабочие температура -40C+60C</p>
+                    <p class="card__desc-text">Язык интерфейса English</p>
+                    <p class="card__desc-text">Отображение позиции Да</p>
+                    <p class="card__desc-text">Влажность 95% без образования конденсата</p>
+                    <p class="card__desc-text">Питание DC12V (БП12V 3A в комплекте)</p>
+                    <p class="card__desc-text">Потребляемая мощность 15Вт</p>
+                    <p class="card__desc-text">Грозозащита Переходные напряжения до 6000В</p>
+                    <p class="card__desc-text">Видеовыход AHD BNC</p>
+                    <p class="card__desc-text">Управление камерой RS485</p>
+                    <p class="card__desc-text">Сертификаты IP66,CE,FCC,RoHs</p>
+                    <p class="card__desc-text">ИК подсветка Автоматический контроль IR LED PWM</p>
+                    <p class="card__desc-text">ИК светодиоды Ф16=6</p>
+                    <p class="card__desc-text">Дистанция подсветки До 50 метров</p>
+                    <p class="card__desc-text">Датчик внешнего освещения Регулируемая ИК подсветка 1-15 уровней</p>
+                    <p class="card__desc-text">Прочее Размеры</p>
+                    <p class="card__desc-text">
+                      235x200x141мм
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- card end-->
+      <!-- product-block begin-->
+      <section class="product-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title section-title_padded">СМОТРИТЕ ТАКЖЕ:</h2>
+          <h2 class="section-title product-block__title">КАМЕРЫ ВИДЕОНАБЛЮДЕНИЯ</h2>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- product-block end-->
+      <!-- product-block begin-->
+      <section class="product-block">
+        <div class="product-block__content content-width">
+          <h2 class="section-title product-block__title">КОМПЛЕКТЫ</h2>
+          <div class="products">
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="product__content">
+                <div class="product__img"><img src="img/content/product-7.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">ERG-IP573F-2M</h3>
+                  <p class="product__id"><span class="product__id-title">артикул:</span><span class="product__id-value"> вн1141</span></p><a class="product__ip" href="#">IP камеры</a>
+                  <p class="product__price"><span class="product__price-value">1500</span><span class="product__price-unit">руб.</span></p>
+                </div>
+                <div class="product__add">
+                  <button class="btn-main product__add-btn">В КОРЗИНУ</button>
+                </div>
+              </div>
+              <div class="product__desc">
+                <p class="product__desc-text">Уличная (-40…+60) беспроводная компактная сетевая камера-цилиндр, 1/2.9" CMOS</p>
+                <p class="product__desc-text">Видео H.264 с разрешением 1920x1080 25 Fps</p>
+                <p class="product__desc-text">DualStream, объектив 3.6 мм, чувствительность 0.005 Люкс при F1.8, режим «день/ночь» с ICR Широкий динамический диапазон (DWDR)</p>
+                <p class="product__desc-text">Цифровое шумоподавление (3D DNR), BLC, Defog, ROI, ИК-подсветка до 30 м MicroSD до 128 ГБ, Wi-Fi Легкое подключение к TRASSIR Cloud, IP66, поворотный кронштейн в комплекте</p>
+                <p class="product__desc-text product__desc-text_color_accent">
+                  Гарантия 2 года
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- product-block end-->
+      <!-- about-us begin-->
+      <section class="about-us">
+        <div class="about-us__content content-width">
+          <h2 class="section-title">КОМПАНИЯ АБС</h2>
+          <div class="about-us__content-wrap">
+            <div class="about-us__photos">
+              <div class="about-us__photo"><img src="img/content/about-us-1.png" alt="photo"></div>
+              <div class="about-us__photo"><img src="img/content/about-us-2.png" alt="photo"></div>
+              <div class="about-us__photo"><img src="img/content/about-us-3.png" alt="photo"></div>
+              <div class="about-us__photo"><img src="img/content/about-us-4.png" alt="photo"></div>
+            </div>
+            <div class="about-us__desc">
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2008</span>
+                <p class="about-us__desc-text">Днем Рождения Компании принято считать 30 апреля 2008 года. На тот момент деятельность компании включала в себя производство охранных видеокамер и реализацию оборудования для видеонаблюдения.</p>
+              </div>
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2009 – 2011</span>
+                <p class="about-us__desc-text">Штат компании расширяется. Основные усилия направлены на определение продаваемой линейки продуктов, далее - на завоевание региональных рынков сбыта. Формируется активная клиентская группа, использующих аналоговые системы видеонаблюдения.</p>
+                <p class="about-us__desc-text">В 2011 году открывается первый фирменный магазин розничных продаж, одноименный с главным брендом Компании в г. Москва</p>
+              </div>
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2012</span>
+                <p class="about-us__desc-text">Важным событием для компании в этот период стало внедрение в производство высококачественных комплектующих собственной разработки, изготавливаемых по нашим спецификациям на заводах в Корее и Тайване, и как следствие – увеличение срока гарантии на оборудование до двух лет. Расширяется линейка аналогового оборудования, одновременно формируется новое направление: производство IP-оборудования. Увеличиваются  производственные мощности - запускается новая производственная линия в г. Воронеж с мощностью до 50 000 ед. изделий в квартал.</p>
+                <p class="about-us__desc-text">Открывается новый офис в Китае, фирменные магазины в Воронеже и Новосибирске.</p>
+              </div>
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2013</span>
+                <p class="about-us__desc-text">Продолжается активное развитие. Запускаются новые проекты и открываются новые направления. В этот год была Компания вводит в ассортиментную линейку новый бренд – производитель видеонаблюдения для широкого потребителя.</p>
+                <p class="about-us__desc-text">В декабре 2013 г. запущен собственный учебный центр, направленный на организацию и проведение внутреннего и внешнего обучения (сотрудники компании, персонал дилеров и партнеров) основам построения систем видеонаблюдения и технологиям безопасности.</p>
+              </div>
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2014</span>
+                <p class="about-us__desc-text">Одним из важных моментов в жизни компании стало открытие нового Центрального офиса. Запущено новое направление в деятельности в рамках третьего бренда, специализирующегося на производстве унифицированного профессионального оборудования для государственных заказов и тендерных закупок. Компания принимает участие в федеральном проекте «Безопасный город». Активно развивается направление по работе с ТСЖ и УК.</p>
+                <p class="about-us__desc-text">Для поддержки уровня качества, сервиса и инновационного подхода к производству и реализации выпускаемой продукции, наши сотрудники постоянно обучаются на специализированных семинарах и курсах.</p>
+              </div>
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2016</span>
+                <p class="about-us__desc-text">За 8 лет компания вышла и уверенно занимает лидирующие позиции на Российском рынке видеонаблюдения, продолжая активно развиваться и успешно осваивать новые направления. Численность сотрудников превысила 150 человек и продолжает неизменно расти, постоянно пополняясь новыми ценными кадрами. За всё это время компания (несмотря на кризис, повальные банкротства и сокращения) существенно нарастила производство, сферу присутствия и влияния на рынке.</p>
+                <p class="about-us__desc-text">Компания начинала, как и большинство аналогичных бизнес-структур, с перепродажи оборудования, сейчас мы входим в топ-10 крупнейших производителей оборудования для видеонаблюдения в России, выпускаем и реализуем в среднем около 15 000 единиц оборудования в месяц.</p>
+              </div>
+              <div class="about-us__desc-block"><span class="about-us__desc-period">2017</span>
+                <p class="about-us__desc-text">
+                  Несмотря на сложные внешние факторы развития бизнеса, Компания четко понимает и неукоснительно идет к своим стратегическим целям. Помимо развития трех существующих брендов, Компания активно развивает новый бренд с ориентацией на конечного потребителя, существенно расширяет сою географию присутствия в сегментах розничной торговли и ритейла. Среди наших партнеров такие партнеры как сеть АВС-Электро и Леруа Мерлен.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about-us end-->
+      <!-- feedback begin-->
+      <section class="feedback">
+        <div class="feedback__content content-width">
+          <form class="feedback__item form form-feedback">
+            <h3 class="section-title form-feedback__title">НАПИСАТЬ НАМ</h3>
+            <div class="form-feedback__fields">
+              <input class="form-field form-feedback__form-field" placeholder="Ваше Имя">
+              <input class="form-field form-field_width_half form-feedback__form-field" placeholder="Номер Вашего телефона">
+              <input class="form-field form-field_width_half form-feedback__form-field" placeholder="Ваш E-mail">
+              <textarea class="form-field form-field_textarea form-field_text-align_left" placeholder="Текст Вашего сообщения..."></textarea>
+            </div>
+            <div class="form-feedback__submit">
+              <button class="btn-main btn-main_color_revert">ОТПРАВИТЬ СООБЩЕНИЕ</button>
+            </div>
+          </form>
+          <div class="feedback__item feedback-soc">
+            <div class="feedback-soc__photos">
+              <div class="feedback-soc__photo-main"><img src="img/content/feedback-photo-1.jpg" alt="feedback"></div>
+              <div class="feedback-soc__photo-tiny"><img src="img/content/feedback-photo-2.jpg" alt="feedback"><img src="img/content/feedback-photo-3.jpg" alt="feedback">
+                <div class="feedback-soc__info"><span class="feedback-soc__info-title">НАС УЖЕ:</span><span class="feedback-soc__info-value">1500</span></div>
+              </div>
+            </div>
+            <div class="feedback-soc__link-wrap">
+              <button class="btn-main btn-main_soc_instagram">ПРИСОЕДИНИТЬСЯ</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- feedback end-->
+    </main>
+    <footer class="footer">
+      <div class="footer__content content-width">
+        <!-- footer contacts begin-->
+        <div class="footer__contacts">
+          <div class="footer__logo"><a class="footer__logo-link" href="./index.html"><img src="img/decor/logo_light.png" alt="logo"></a></div>
+          <h4 class="footer__title">ООО “АБС” © 2017</h4>
+          <h4 class="footer__title">Видеонаблюдение под ключ</h4>
+          <div class="footer__feedback">
+            <h4 class="footer__title">8 (922) 222-22-22</h4>
+            <button class="btn-main btn-main_color_light footer__feedback-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+          </div>
+          <div class="footer__social">
+            <ul class="soc-list footer__soc-list">
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_vk" href="#"></a></li>
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_inst" href="#"></a></li>
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_fb" href="#"></a></li>
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_od" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer contacts end-->
+        <!-- footer nav begin-->
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Главная</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Каталог</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Установка</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Техподдержка</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">О Компании</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+        </ul>
+        <!-- footer nav end-->
+        <!-- footer nav begin-->
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Видеонаблюдение (cctv)</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Ip камеры видеонаблюдения</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Ip видеорегистраторы</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Ahd, tvi, cvi и аналоговые камеры видеонаблюдения</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Видеорегистраторы dvr</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Комплекты видеонаблюдения</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Жесткие диски hdd</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Микрофоны</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Кабели и коннекторы</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Блоки питания и акб</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Дополнительное оборудование</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Распродажа</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Домофоны</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Системы контроля доступа</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Охранные сигнализации</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Системы записи разговоров</a></li>
+        </ul>
+        <!-- footer nav end-->
+        <!-- footer-offers begin-->
+        <div class="footer__offers"><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-1.png" alt="offer"></div>
+            <h3 class="offer__title">ТСЖ УПРАВЛЯЮЩИЕ КОМПАНИИ</h3></a><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-2.png" alt="offer"></div>
+            <h3 class="offer__title">КОТТЕДЖИ</h3></a><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-3.png" alt="offer"></div>
+            <h3 class="offer__title">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</h3></a><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-4.png" alt="offer"></div>
+            <h3 class="offer__title">МУНИЦИПАЛЬНЫЕ УЧРЕЖДЕНИЯ</h3></a></div>
+        <!-- footer-offers end-->
+      </div>
+    </footer>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
