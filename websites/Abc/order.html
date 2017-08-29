@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Агенство Безопасных Систем</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+        <header class="header">
+          <div class="header-top">
+            <div class="header-top__content content-width">
+              <div class="header-top__logo"><a class="header-top__logo-link" href="#"><img src="img/decor/logo_light.png" alt="logo"></a></div>
+              <button class="btn-form header-top__calc-btn">КАЛЬКУЛЯТОР</button>
+              <div class="header-top__contacts"><span class="header-top__email">pochta@mail.ru</span><span class="header-top__phone">8 (922) 222-22-22</span></div>
+              <button class="btn-form header-top__btn-form">ЗАКАЗАТЬ ЗВОНОК</button>
+              <button class="nav-mob-button"></button>
+            </div>
+          </div>
+          <div class="header-main">
+            <div class="header-main__content content-width">
+              <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png" alt="logo"></a></div>
+              <h2 class="header-main__title">Видеонаблюдение под ключ</h2>
+              <button class="btn-main btn-main_icon_calc header-main__btn-main">КАЛЬКУЛЯТОР</button>
+              <div class="basket">
+                <button class="btn-round btn-round_basket"></button>
+                <div class="basket__text"><span class="basket__title">Товаров:</span><span class="basket__value">Нет</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav">
+            <div class="header-nav__content content-width">
+              <nav class="nav">
+                <div class="nav__overlay"></div>
+                <ul class="nav__list animate trs">
+                  <li class="nav__item nav__item_active"><a class="nav__link" href="././index.html">ГЛАВНАЯ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./catalog.html">КАТАЛОГ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./complects.html">КОМПЛЕКТЫ</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./card.html">КАРТОЧКА</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./order.html">ЗАЯВКА</a></li>
+                  <li class="nav__item"><a class="nav__link" href="./contacts.html">КОНТАКТЫ</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="offers offers_header offers_size_compact">
+            <div class="offers__content content-width">
+              <h2 class="section-title offers__title">ГОТОВЫЕ ПРЕДЛОЖЕНИЯ:</h2>
+              <div class="offers__items"><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-1.png" alt="offer"></div>
+                  <h3 class="offer__title">ТСЖ УПРАВЛЯЮЩИЕ КОМПАНИИ</h3></a><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-2.png" alt="offer"></div>
+                  <h3 class="offer__title">КОТТЕДЖИ</h3></a><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-3.png" alt="offer"></div>
+                  <h3 class="offer__title">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</h3></a><a class="offer" href="#">
+                  <div class="offer__img"><img src="img/content/offer-4.png" alt="offer"></div>
+                  <h3 class="offer__title">МУНИЦИПАЛЬНЫЕ УЧРЕЖДЕНИЯ</h3></a></div>
+            </div>
+          </div>
+        </header>
+    <main class="main">
+      <div class="pagination pagination_indent">
+        <div class="pagination__content content-width"><a class="pagination__link" href="./index.html">Главная</a><a class="pagination__link" href="./index.html">Каталог</a><span class="pagination__curr" href="./index.html">DS-2CE16D1T-IR</span></div>
+      </div>
+      <!-- order begin-->
+      <section class="order">
+        <div class="order__content content-width">
+          <h2 class="section-title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+          <!-- order-items begin-->
+          <div class="order__items">
+            <div class="order-product">
+              <div class="order-product__remove">&#215;</div>
+              <div class="order-product__img"><img src="img/content/product-5.jpg" alt="product"></div>
+              <ul class="info-list order-product__info-list">
+                <li class="info-list__item"><span>Модель:</span><span>DS-2CE16D1T-IR</span></li>
+                <li class="info-list__item"><span>Артикул:</span><span>4524</span></li>
+                <li class="info-list__item"><span>Производитель:</span><span>HikVision</span></li>
+                <li class="info-list__item"><span>Наличие:</span><span class="info-list__text_accent">В наличии</span></li>
+              </ul>
+              <div class="order-product__counter">
+                <button class="btn-round order-product__counter-btn order-product__counter-btn_remove">-</button><span class="order-product__counter-value">1</span>
+                <button class="btn-round order-product__counter-btn order-product__counter-btn_add">+</button>
+              </div>
+              <div class="order-product__price"><span class="order-product__price-curr">1500 руб.</span><span class="order-product__price-old">1500 руб.</span>
+                <div class="order-product__service order-product__service_active">
+                  <div class="order-product__service-text"><span class="order-product__service-title">Монтаж:</span><span class="order-product__service-price">1500 руб.</span></div>
+                  <div class="order-product__service-check"></div>
+                </div>
+              </div>
+            </div>
+            <div class="order-product">
+              <div class="order-product__remove">&#215;</div>
+              <div class="order-product__img"><img src="img/content/product-3.jpg" alt="product"></div>
+              <ul class="info-list order-product__info-list">
+                <li class="info-list__item"><span>Модель:</span><span>DS-2CE16D1T-IR</span></li>
+                <li class="info-list__item"><span>Артикул:</span><span>4524</span></li>
+                <li class="info-list__item"><span>Производитель:</span><span>HikVision</span></li>
+                <li class="info-list__item"><span>Наличие:</span><span class="info-list__text_warn">Последняя модель!</span></li>
+              </ul>
+              <div class="order-product__counter">
+                <button class="btn-round order-product__counter-btn order-product__counter-btn_remove">-</button><span class="order-product__counter-value">5</span>
+                <button class="btn-round order-product__counter-btn order-product__counter-btn_add">+</button>
+              </div>
+              <div class="order-product__price"><span class="order-product__price-curr">1500 руб.</span><span class="order-product__price-old">1500 руб.</span>
+                <div class="order-product__service">
+                  <div class="order-product__service-text"><span class="order-product__service-title">Монтаж:</span><span class="order-product__service-price">1500 руб.</span></div>
+                  <div class="order-product__service-check"></div>
+                </div>
+              </div>
+            </div>
+            <div class="order-product">
+              <div class="order-product__remove">&#215;</div>
+              <div class="order-product__img"><img src="img/content/product-5.jpg" alt="product"></div>
+              <ul class="info-list order-product__info-list">
+                <li class="info-list__item"><span>Модель:</span><span>DS-2CE16D1T-IR</span></li>
+                <li class="info-list__item"><span>Артикул:</span><span>4524</span></li>
+                <li class="info-list__item"><span>Производитель:</span><span>HikVision</span></li>
+                <li class="info-list__item"><span>Наличие:</span><span class="info-list__text_warn">Последняя модель!</span></li>
+              </ul>
+              <div class="order-product__counter">
+                <button class="btn-round order-product__counter-btn order-product__counter-btn_remove">-</button><span class="order-product__counter-value">2</span>
+                <button class="btn-round order-product__counter-btn order-product__counter-btn_add">+</button>
+              </div>
+              <div class="order-product__price"><span class="order-product__price-curr">1500 руб.</span><span class="order-product__price-old">1500 руб.</span>
+                <div class="order-product__service">
+                  <div class="order-product__service-text"><span class="order-product__service-title">Монтаж:</span><span class="order-product__service-price">1500 руб.</span></div>
+                  <div class="order-product__service-check"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- order-items end-->
+          <!-- order-form begin-->
+          <div class="order__form">
+            <form class="form-order">
+              <div class="form-order__row"><span class="form-order__field-title">Номер Вашего телефона</span>
+                <input class="form-field" placeholder="">
+              </div>
+              <div class="form-order__row"><span class="form-order__field-title">Населенный пункт</span>
+                <input class="form-field" type="text" placeholder="">
+              </div>
+              <div class="form-order__row"><span class="form-order__field-title">Адрес</span>
+                <input class="form-field" type="text" placeholder="Улица">
+                <input class="form-field" type="text" placeholder="Дом">
+                <input class="form-field" type="text" placeholder="Квартира">
+              </div>
+              <div class="form-order__row"><span class="form-order__field-title">Имя</span>
+                <input class="form-field" type="text" placeholder="">
+              </div>
+              <div class="form-order__row"><span class="form-order__field-title">Фамилия</span>
+                <input class="form-field" type="text" placeholder="">
+              </div>
+              <div class="form-order__row"><span class="form-order__field-title">Электронная почта</span>
+                <input class="form-field" type="text" placeholder="">
+                <div class="form-order__label">
+                  <input type="checkbox" value="Подписаться на новости о новых поступлениях и скидках" id="form-order-email-check" checked>
+                  <label for="form-order-email-check">Подписаться на новости о новых поступлениях и скидках</label>
+                </div>
+              </div>
+              <div class="form-order__row"><span class="form-order__field-title">Комментарий</span>
+                <textarea class="form-field form-field_textarea form-field_text-align_left"></textarea>
+              </div>
+            </form>
+          </div>
+          <!-- order-form end-->
+          <!-- order-summary begin-->
+          <div class="order__summary">
+            <div class="order__price">
+              <div class="order__price-item">
+                <p class="order__price-title"><span>3</span><span> товара:</span></p>
+                <p class="order__price-value"><span>на&nbsp;</span><span>4000</span><span> рублей.</span></p>
+              </div>
+              <div class="order__price-item order__price-item_service">
+                <p class="order__price-title">Стоимость с монтажом:</p>
+                <p class="order__price-value"><span>10 000</span><span> рублей.</span></p>
+              </div>
+            </div>
+            <div class="order__submit">
+              <button class="btn-main btn-main_color_revert">ОФОРМИТЬ ЗАКАЗ</button>
+            </div>
+          </div>
+          <!-- order-summary end-->
+        </div>
+      </section>
+      <!-- order end-->
+      <!-- feedback begin-->
+      <section class="feedback">
+        <div class="feedback__content content-width">
+          <form class="feedback__item form form-feedback">
+            <h3 class="section-title form-feedback__title">НАПИСАТЬ НАМ</h3>
+            <div class="form-feedback__fields">
+              <input class="form-field form-feedback__form-field" type="text" placeholder="Ваше Имя">
+              <input class="form-field form-field_width_half form-feedback__form-field" type="text" placeholder="Номер Вашего телефона">
+              <input class="form-field form-field_width_half form-feedback__form-field" type="text" placeholder="Ваш E-mail">
+              <textarea class="form-field form-field_textarea form-field_text-align_left" placeholder="Текст Вашего сообщения..."></textarea>
+            </div>
+            <div class="form-feedback__submit">
+              <button class="btn-main btn-main_color_revert">ОТПРАВИТЬ СООБЩЕНИЕ</button>
+            </div>
+          </form>
+          <div class="feedback__item feedback-soc">
+            <div class="feedback-soc__photos">
+              <div class="feedback-soc__photo-main"><img src="img/content/feedback-photo-1.jpg" alt="feedback"></div>
+              <div class="feedback-soc__photo-tiny"><img src="img/content/feedback-photo-2.jpg" alt="feedback"><img src="img/content/feedback-photo-3.jpg" alt="feedback">
+                <div class="feedback-soc__info"><span class="feedback-soc__info-title">НАС УЖЕ:</span><span class="feedback-soc__info-value">1500</span></div>
+              </div>
+            </div>
+            <div class="feedback-soc__link-wrap">
+              <button class="btn-main btn-main_soc_instagram">ПРИСОЕДИНИТЬСЯ</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- feedback end-->
+    </main>
+    <footer class="footer">
+      <div class="footer__content content-width">
+        <!-- footer contacts begin-->
+        <div class="footer__contacts">
+          <div class="footer__logo"><a class="footer__logo-link" href="./index.html"><img src="img/decor/logo_light.png" alt="logo"></a></div>
+          <h4 class="footer__title">ООО “АБС” © 2017</h4>
+          <h4 class="footer__title">Видеонаблюдение под ключ</h4>
+          <div class="footer__feedback">
+            <h4 class="footer__title">8 (922) 222-22-22</h4>
+            <button class="btn-main btn-main_color_light footer__feedback-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+          </div>
+          <div class="footer__social">
+            <ul class="soc-list footer__soc-list">
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_vk" href="#"></a></li>
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_inst" href="#"></a></li>
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_fb" href="#"></a></li>
+              <li class="soc-list__item"><a class="soc-list__link soc-list__link_od" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer contacts end-->
+        <!-- footer nav begin-->
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Главная</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Каталог</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Установка</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Техподдержка</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">О Компании</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+        </ul>
+        <!-- footer nav end-->
+        <!-- footer nav begin-->
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Видеонаблюдение (cctv)</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Ip камеры видеонаблюдения</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Ip видеорегистраторы</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Ahd, tvi, cvi и аналоговые камеры видеонаблюдения</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Видеорегистраторы dvr</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Комплекты видеонаблюдения</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Жесткие диски hdd</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Микрофоны</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Кабели и коннекторы</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Блоки питания и акб</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Дополнительное оборудование</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Распродажа</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Домофоны</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Системы контроля доступа</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Охранные сигнализации</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="#">Системы записи разговоров</a></li>
+        </ul>
+        <!-- footer nav end-->
+        <!-- footer-offers begin-->
+        <div class="footer__offers"><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-1.png" alt="offer"></div>
+            <h3 class="offer__title">ТСЖ УПРАВЛЯЮЩИЕ КОМПАНИИ</h3></a><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-2.png" alt="offer"></div>
+            <h3 class="offer__title">КОТТЕДЖИ</h3></a><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-3.png" alt="offer"></div>
+            <h3 class="offer__title">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</h3></a><a class="offer" href="#">
+            <div class="offer__img"><img src="img/content/offer-4.png" alt="offer"></div>
+            <h3 class="offer__title">МУНИЦИПАЛЬНЫЕ УЧРЕЖДЕНИЯ</h3></a></div>
+        <!-- footer-offers end-->
+      </div>
+    </footer>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>

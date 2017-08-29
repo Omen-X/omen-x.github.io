@@ -9,7 +9,9 @@ var homeCarousel = function homeCarousel() {
     $('.home-carousel__items').slick({
       infinity: true,
       slidesToShow: 1,
-      speed: 1400
+      speed: 1400,
+      prevArrow: '<button class="slick-prev"></button>',
+      nextArrow: '<button class="slick-next"></button>'
     });
   }
 };
@@ -62,7 +64,6 @@ var tabsNav = function tabsNav() {
       tabsLinks.removeClass('tabs__nav-item_active');
       tabs.removeClass(activeClass);
 
-      console.log('.tabs__item:nth-child(' + currTabNum + ')');
       target.addClass('tabs__nav-item_active');
       target.closest('.tabs').find('.tabs__item:nth-child(' + currTabNum + ')').addClass(activeClass);
     });
@@ -82,6 +83,79 @@ var cardCarousel = function cardCarousel() {
     });
   }
 };
+
+// ========>> ORDER <<========
+
+var orderSection = function orderSection() {
+  if ($('.order').length) {
+    // ========>> COUNTER <<========
+
+    var counterAdd = $('.order-product__counter-btn_add');
+    var counterRemove = $('.order-product__counter-btn_remove');
+    var counters = $('.order-product__counter-value');
+    var disabledClass = 'order-product__counter-btn_disabled';
+
+    // Handler for removeButton-status
+    counters.on('changeValue', function (event) {
+      var $counter = $(event.target);
+      var value = parseInt($counter.text(), 10);
+
+      if (value < 2) {
+        $counter.siblings('.order-product__counter-btn_remove').addClass(disabledClass);
+      } else {
+        $counter.siblings('.order-product__counter-btn_remove').removeClass(disabledClass);
+      }
+
+      // fallback
+      if (value < 0) $counter.text('1');
+    });
+
+    // Init
+
+    // adds disabled class
+    counters.each(function (i, counter) {
+      $(counter).trigger('changeValue');
+    });
+
+    // Change value
+
+    counterAdd.click(function (event) {
+      var currCounter = $(event.target).siblings('.order-product__counter-value');
+      var currValue = parseInt(currCounter.text(), 10);
+
+      currCounter.text(currValue + 1);
+      currCounter.trigger('changeValue');
+    });
+
+    counterRemove.click(function (event) {
+      var currCounter = $(event.target).siblings('.order-product__counter-value');
+      var currValue = parseInt(currCounter.text(), 10);
+
+      if (currValue > 1) currCounter.text(currValue - 1);
+      currCounter.trigger('changeValue');
+    });
+  }
+
+  // ========>> CHECKBOX(mounting) <<========
+
+  var service = $('.order-product__service');
+
+  service.click(function () {
+    $(this).toggleClass('order-product__service_active');
+  });
+
+  // ========>> DELETING ITEM <<========
+
+  var orderItems = $('.order__items .order-product');
+  var orderRemove = $('.order-product__remove', orderItems);
+
+  orderRemove.click(function (event) {
+    var target = $(event.target);
+
+    target.closest('.order-product').slideUp(320);
+  });
+}; // end order-section
+
 
 // ========>> DOCUMENT READY <<========
 
@@ -135,7 +209,9 @@ function documentReady() {
 
   var headerTop = $('.header-top');
 
-  // if (window.pageYOffset > 0) headerTop.addClass('header-top_fixed');
+  if (window.matchMedia('(min-width: 899px)').matches) {
+    if (window.pageYOffset > 0) headerTop.addClass('header-top_fixed');
+  }
 
   var fixedHeader = function fixedHeader(currentScrollTop) {
     if (currentScrollTop > 0) headerTop.addClass('header-top_fixed');else headerTop.removeClass('header-top_fixed');
@@ -162,8 +238,7 @@ function documentReady() {
     lastScrollTop = currentScrollTop;
 
     // fixed header
-    // if (window.matchMedia('(min-width: 899px)').matches) fixedHeader(currentScrollTop);
-
+    if (window.matchMedia('(min-width: 899px)').matches) fixedHeader(currentScrollTop);
 
     return raf(handleWindowScroll);
   };
@@ -186,6 +261,7 @@ function documentReady() {
   catalogNav();
   tabsNav();
   cardCarousel();
+  orderSection();
 } // end document ready
 
 
