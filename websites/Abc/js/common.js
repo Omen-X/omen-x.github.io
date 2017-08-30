@@ -157,6 +157,16 @@ var orderSection = function orderSection() {
 }; // end order-section
 
 
+// ========>> LAZY LOADING FOR MAP <<========
+
+function lazyLoadMap() {
+  if ($('.map').length) {
+    var mapFrame = $('.map iframe');
+    var src = mapFrame.attr('data-src');
+    mapFrame.attr('src', src);
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -262,6 +272,7 @@ function documentReady() {
   tabsNav();
   cardCarousel();
   orderSection();
+  lazyLoadMap();
 } // end document ready
 
 
