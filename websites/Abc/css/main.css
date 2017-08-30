@@ -319,7 +319,7 @@ textarea {
 @font-face {
   font-family: 'Acrom';
   src: url("../fonts/Acrom/regular/Acrom-regular.eot");
-  src: url("../fonts/Acrom/regular/Acrom-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Acrom/regular/Acrom-regular.ttf") format("truetype"), url("../fonts/Acrom/regular/Acrom-regular.woff") format("woff"), url("../fonts/Acrom/regular/Acrom-regular.svg") format("svg");
+  src: url("../fonts/Acrom/regular/Acrom-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Acrom/regular/Acrom-regular.svg") format("svg"), url("../fonts/Acrom/regular/Acrom-regular.woff") format("woff"), url("../fonts/Acrom/regular/Acrom-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 

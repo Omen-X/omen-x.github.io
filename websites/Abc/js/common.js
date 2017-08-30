@@ -188,28 +188,32 @@ function documentReady() {
   // setTimeout(() => navList.classList.add('trs'), 0);
 
   function navToggle() {
-    if (navList.classList.contains('animate')) {
-      $(document.documentElement).addClass('modal-open');
-      navOverlay.addEventListener('click', navToggle);
-      navList.classList.toggle('animate');
+    //  Nav-button works only for the static header?
+    if (!$('.header-top').hasClass('header-top_fixed')) {
+      if (navList.classList.contains('animate')) {
+        $(document.documentElement).addClass('modal-open');
+        navOverlay.addEventListener('click', navToggle);
+        navList.classList.toggle('animate');
 
-      navOverlay.classList.add('nav__overlay_visible');
-      setTimeout(function () {
-        navOverlay.classList.add('nav__overlay_animate');
-      }, 10);
-    } else {
-      $(document.documentElement).removeClass('modal-open');
-      navList.classList.toggle('animate');
-      navOverlay.classList.remove('nav__overlay_animate');
+        navOverlay.classList.add('nav__overlay_visible');
+        setTimeout(function () {
+          navOverlay.classList.add('nav__overlay_animate');
+        }, 10);
+      } else {
+        $(document.documentElement).removeClass('modal-open');
+        navList.classList.toggle('animate');
+        navOverlay.classList.remove('nav__overlay_animate');
 
-      // fix fast double-click on overlay
-      navOverlay.removeEventListener('click', navToggle);
+        // fix fast double-click on overlay
+        navOverlay.removeEventListener('click', navToggle);
 
-      setTimeout(function () {
-        return navOverlay.classList.remove('nav__overlay_visible');
-      }, 300);
+        setTimeout(function () {
+          return navOverlay.classList.remove('nav__overlay_visible');
+        }, 300);
+      }
     }
   }
+
   navButton.onclick = navToggle;
 
   // end main-nav
