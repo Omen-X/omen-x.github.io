@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Kleimo</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__nav">
+        <div class="header__nav-wrap content-width">
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png"></a></div>
+          <nav class="nav">
+            <div class="nav__shade"></div>
+            <div class="nav__list-wrap">
+              <ul class="nav__list">
+                <li><a href="./index.html">О компании</a></li>
+                <li><a href="./inner.html">Услуги</a></li>
+                <li><a href="./inner.html">Статьи</a></li>
+                <li><a href="./inner.html">Контакты</a></li>
+              </ul>
+              <div class="nav__contacts"><span class="nav__contacts-city">г.Новосибирск</span><span class="nav__contacts-phone">219-13-45</span></div>
+            </div>
+            <div class="nav__mob-button"></div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome">
+        <div class="content-width">
+          <div class="content-inner">
+            <div class="welcome-slider">
+              <div class="welcome-slider__item" style="background-image: url(img/content/slide-1.png);">
+                <div class="welcome-slider__item-content content-w">
+                  <h2 class="welcome-slider__title">Клеймо ударное -<span class="c-accent"> за 1 день!</span></h2>
+                  <p class="welcome-slider__text">
+                    Специальное предложение по изготовлению ударного клейма на выгоднях условиях
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="welcome-slider__item" style="background-image: url(img/content/slide-1.png);">
+                <div class="welcome-slider__item-content content-w">
+                  <h2 class="welcome-slider__title">Клеймо ударное -<span class="c-accent"> за 1 день!</span></h2>
+                  <p class="welcome-slider__text">
+                    Специальное предложение по изготовлению ударного клейма на выгоднях условиях
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="welcome-slider__item" style="background-image: url(img/content/slide-1.png);">
+                <div class="welcome-slider__item-content content-w">
+                  <h2 class="welcome-slider__title">Клеймо ударное -<span class="c-accent"> за 1 день!</span></h2>
+                  <p class="welcome-slider__text">
+                    Специальное предложение по изготовлению ударного клейма на выгоднях условиях
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="content-width">
+          <div class="content-inner advantages__content">
+            <h2 class="advantages__title">Делаем клейма оперативно</h2>
+            <div class="advantages__items">
+              <div class="advantage">
+                <div class="advantage__img"><img src="img/decor/advantages-1.png" alt="advantge"></div>
+                <h3 class="advantage__title">Срок изготовления - 24 часа</h3>
+                <p class="advantage__text">
+                  Изготовим в сжатые сроки по индивидуальному заказу
+                  
+                </p>
+              </div>
+              <div class="advantage">
+                <div class="advantage__img"><img src="img/decor/advantages-2.png" alt="advantge"></div>
+                <h3 class="advantage__title">Доставка по всей России</h3>
+                <p class="advantage__text">
+                  Организуем доставку удобной для вас транспортной компанией
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="content-width">
+          <div class="content-inner feedback__content">
+            <h2 class="section-title">Закажите клеймо</h2>
+            <div class="feedback__form">
+              <button class="btn-main">ОТПРАВИТЬ</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="content-width">
+          <div class="content-inner product__content">
+            <h2 class="section-title section-title_underline">ЗАКАЗЧИКАМ<a class="section-title__link" href="#">Все статьи</a></h2>
+            <div class="products__items">
+              <div class="product-link">
+                <div class="product-link__img"><img src="img/content/product.png" alt="product"></div><a class="product-link__title" href="#">Клеймо сварщика<i class="icon-arr-right"></i></a>
+              </div>
+              <div class="product-link">
+                <div class="product-link__img"><img src="img/content/product.png" alt="product"></div><a class="product-link__title" href="#">Клеймо для маркировки баллонов<i class="icon-arr-right"></i></a>
+              </div>
+              <div class="product-link">
+                <div class="product-link__img"><img src="img/content/product.png" alt="product"></div><a class="product-link__title" href="#">Клеймо каллибровочное<i class="icon-arr-right"></i></a>
+              </div>
+              <div class="product-link">
+                <div class="product-link__img"><img src="img/content/product.png" alt="product"></div><a class="product-link__title" href="#">Клеймо особенное<i class="icon-arr-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="seo-text">
+        <div class="content-width">
+          <div class="content-inner seo-text__content">
+            <p>
+              Здесь идет SEO текст заполняемый в визуальном редакторе. В тексте можно вставлять <a href='#'>активные ссылки</a> а можно и не вставлять, редактор главное чтобы позволял это делать. Здесь идет SEO текст заполняемый в визуальном редакторе. В тексте можно вставлять <a href='#'>активные ссылки</a> а можно и не вставлять, редактор главное чтобы позволял это делать. Здесь идет SEO текст заполняемый в визуальном редакторе. В тексте можно вставлять <a href='#'>активные ссылки</a> а можно и не вставлять, редактор главное чтобы позволял это делать.
+              
+            </p>
+          </div>
+        </div>
+      </section>
+      <aside class="side-bar">
+        <div class="side-products side-bar_fixed"><a class="side-product" href="#">
+            <div class="side-product__img"><img src="img/content/side-product.png" alt="product"></div>
+            <h3 class="side-product__title">Ударное клеймо</h3></a><a class="side-product" href="#">
+            <div class="side-product__img"><img src="img/content/side-product.png" alt="product"></div>
+            <h3 class="side-product__title">Каучуковое клеймо</h3></a><a class="side-product" href="#">
+            <div class="side-product__img"><img src="img/content/side-product.png" alt="product"></div>
+            <h3 class="side-product__title">Клеймо для тиснения</h3></a><a class="side-product" href="#">
+            <div class="side-product__img"><img src="img/content/side-product.png" alt="product"></div>
+            <h3 class="side-product__title">Клеймо - сварщика</h3></a></div>
+      </aside>
+    </main>
+    <footer class="footer section">
+      <div class="footer__content content-width">
+        <div class="logo footer__logo"><a class="logo__link h6" href="./index.html"><img src="img/decor/logo_footer.png" alt="logo"></a>
+          <div class="footer__copy">
+            <p>©2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__title h9">Разделы</h3>
+          <ul class="nav__list">
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="h9 footer__title">Контакты</h3>
+          <div class="footer__contacts-items">
+            <p>Единая справочная служба</p>
+            <p>Контакты филиалов</p>
+            <p>обратная связь</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy content-width">
+        <p>©2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+      </div>
+    </footer>
+    <button class="to-top" id="to-top"></button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
