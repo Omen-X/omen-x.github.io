@@ -967,7 +967,7 @@ footer .nav__list .presentation__right a, .presentation__right .footer__contacts
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: url("/img/decor/to-top-btn.png") no-repeat center;
+  background: url("../img/decor/to-top-btn.png") no-repeat center;
   background-size: contain;
   -webkit-transition: opacity .2s, -webkit-box-shadow .2s;
   transition: opacity .2s, -webkit-box-shadow .2s;
@@ -1643,6 +1643,8 @@ body.no-touch .link-more:hover {
     font-size: 1.25rem; }
 
 .footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
   background-color: transparent; }
   .footer .nav__list a {
     color: #424242; }
