@@ -813,7 +813,7 @@ body.no-touch header .nav__list a:hover {
   overflow: hidden;
   white-space: nowrap;
   background-color: transparent;
-  background-image: url("/img/decor/arr-slider.png");
+  background-image: url("../img/decor/arr-slider.png");
   background-repeat: no-repeat;
   background-size: contain; }
 
@@ -965,7 +965,7 @@ footer .nav__list .presentation__right a, .presentation__right .footer__contacts
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: url("/img/decor/to-top-btn.png") no-repeat center;
+  background: url("../img/decor/to-top-btn.png") no-repeat center;
   background-size: contain;
   -webkit-transition: opacity .2s, -webkit-box-shadow .2s;
   transition: opacity .2s, -webkit-box-shadow .2s;
@@ -1432,7 +1432,7 @@ body.no-touch .link-more:hover {
   margin-left: auto;
   padding-bottom: 5px;
   padding-right: 35px;
-  background-image: url("/img/decor/arr-right.png");
+  background-image: url("../img/decor/arr-right.png");
   background-repeat: no-repeat;
   background-position: right top 30%;
   font-weight: 500;
@@ -1467,7 +1467,7 @@ body.no-touch .link-more:hover {
   display: inline-block;
   width: 15px;
   height: 10px;
-  background-image: url("/img/decor/arr-right.png");
+  background-image: url("../img/decor/arr-right.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
@@ -1481,7 +1481,7 @@ body.no-touch .link-more:hover {
   font-weight: 700;
   font-size: 1.125rem;
   background-color: #3FFFFE;
-  background-image: url("/img/decor/arr-right_dark.png");
+  background-image: url("../img/decor/arr-right_dark.png");
   background-repeat: no-repeat;
   background-position: right 25px center;
   background-size: auto;
@@ -1680,7 +1680,7 @@ body.no-touch .link-more:hover {
   max-width: 165px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("/img/decor/product-img-bg.png");
+  background-image: url("../img/decor/product-img-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
