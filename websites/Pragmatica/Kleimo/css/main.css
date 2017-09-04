@@ -2216,7 +2216,7 @@ html.modal-open {
   a.articles__name {
     font-size: 1.375rem; }
   .nav__mob-button {
-    background-image: url("/img/decor/mob-menu_light.png");
+    background-image: url("../img/decor/mob-menu_light.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
