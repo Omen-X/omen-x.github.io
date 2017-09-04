@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Alfazashita</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top">
+        <div class="content-width">
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png"></a></div>
+          <nav class="nav">
+            <div class="nav__shade"></div>
+            <div class="nav__list-wrap nav__list-wrap_pos_right">
+              <ul class="nav__list">
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./inner.html">О компании</a></li>
+                <li><a href="./inner.html">Услуги</a></li>
+                <li><a href="./inner.html">Контакты</a></li>
+              </ul>
+              <div class="nav__contacts"><span class="nav__contacts-city">г.Новосибирск</span><span class="nav__contacts-phone">219-13-45</span></div>
+            </div>
+            <div class="nav__mob-button"></div>
+          </nav>
+          <div class="header__contacts">
+            <p>8 (913) 468-41-41</p>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav">
+        <div class="header__nav-wrap content-width">
+          <div class="header__title">
+            <h2>Частная охранная организация Альфа-Защита"</h2>
+            <h3>Номер лицензии ЧО №028088 ГУ МВД России по Новосибирской области</h3>
+          </div>
+          <button class="btn-main">Подать заявку</button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome">
+        <div class="welcome-slider">
+          <div class="welcome-slider__item" style="background-image: url(&quot;img/content/slide.png&quot;);">
+            <div class="welcome-slider__item-content content-width">
+              <div class="welcome-slider__logo"><img src="img/decor/logo.png" alt="Logo"></div>
+              <h2 class="welcome-slider__title"><span>с 2005 года</span><br>Защищаем вас и ваш бизнес</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services section">
+        <div class="services__content content-width">
+          <h2 class="section-title">Наши услуги</h2>
+          <div class="services__items">
+            <div class="service">
+              <div class="service__img"><img src="img/content/services-1.jpg" alt="service"></div>
+              <h3 class="service__title">Охрана объектов с кнопкой экстренного вызова ГБР</h3><a class="service__link" href="#">подробнее</a>
+            </div>
+            <div class="service">
+              <div class="service__img"><img src="img/content/services-2.jpg" alt="service"></div>
+              <h3 class="service__title">Охрана строек, строительных площадок</h3><a class="service__link" href="#">подробнее</a>
+            </div>
+            <div class="service">
+              <div class="service__img"><img src="img/content/services-3.jpg" alt="service"></div>
+              <h3 class="service__title">Охрана офисов и офисных центров</h3><a class="service__link" href="#">подробнее</a>
+            </div>
+            <div class="service">
+              <div class="service__img"><img src="img/content/services-4.jpg" alt="service"></div>
+              <h3 class="service__title">Охрана магазинов и торговых центров</h3><a class="service__link" href="#">подробнее</a>
+            </div>
+          </div>
+          <div class="link-more-wrap"><a class="link-more" href="#">Все услуги</a></div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages__content content-width">
+          <div class="advantages__items">
+            <div class="advantage">
+              <div class="advantage__img"><img src="img/decor/briefcase.png" alt="adv"></div>
+              <p>Большой опыт работы на различных объектах г. Новосибирска</p>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="img/decor/timer.png" alt="adv"></div>
+              <p>
+                Быстрое реагирование и качественный клиентский сервис
+                
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback section">
+        <div class="content-width feedback__content">
+          <h2 class="feedback__title">Оставьте запрос на коммерческое предложение</h2>
+          <form class="feedback__form">
+            <input type="text" placeholder="+7___ _____">
+            <button class="btn-main">Перезвонить мне</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section">
+      <div class="footer__content content-width">
+        <div class="logo footer__logo"><a class="logo__link h6" href="./index.html"><img src="img/decor/logo.png" alt="logo"></a>
+          <div class="footer__copy">
+            <p>© 2013 - 2017 <br> Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__title h9">Разделы</h3>
+          <ul class="nav__list">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="h9 footer__title">Контакты</h3>
+          <div class="footer__contacts-items">
+            <p>г. Новосибирск, пр. Карла Маркса, 24, оф. 38</p>
+            <p>(383) 263-13-20,</p>
+            <p>(383) 292-54-05,</p>
+            <p>8-913-468-41-41</p>
+          </div>
+        </div><a class="developed" href="#">
+          <h3 class="s4">Разработано в</h3><span><span class="c-accent-2_l">[</span>ПРАГМАТИКА<span class="c-accent-2_l">]</span></span></a>
+      </div>
+      <div class="footer__copy content-width">
+        <p>©2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+      </div>
+    </footer>
+    <button class="to-top" id="to-top"></button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      //- {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
