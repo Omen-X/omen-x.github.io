@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>AlfaPromo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      //- document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top content-width">
+        <div class="nav-mob-button"></div>
+        <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png"></a></div>
+        <div class="header__adress hidden-phone">
+          <p>г.Новосибирск</p>
+        </div>
+        <nav class="nav">
+          <div class="nav__shade"></div>
+          <div class="nav__list-wrap">
+            <ul class="nav__list">
+              <li><a href="./index.html">Преимущества</a></li>
+              <li class="active"><a href="./inner.html">Каталог</a></li>
+              <li><a href="./inner.html">Заказать</a></li>
+              <li><a href="./inner.html">Контакты</a></li>
+            </ul>
+            <div class="nav__contacts"><span class="nav__contacts-city">г.Новосибирск</span><span class="nav__contacts-phone">219-13-45</span></div>
+          </div>
+        </nav>
+        <div class="header__contacts">
+          <p><span>(383)</span>330-45-67</p>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome">
+        <div class="welcome-slider">
+          <div class="welcome-slider__item">
+            <div class="welcome-slider__item-content content-width">
+              <div class="welcome__card">
+                <h2>Доступные шкафы-купе в Новосибирске</h2>
+                <h3>Доступная цена наших шкафов - от<span> 8700</span> р.</h3>
+                <h3>ВРЕМЯ ИЗГОТОВЛЕНИЯ - от<span> 5</span> дней</h3><a class="link-more" href="#">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advntages__content content-width section">
+          <h2 class="section-title">Шкафы-купе по доступной цене</h2>
+          <div class="advantages__items">
+            <div class="advantage">
+              <div class="advantage__img"><img src="img/decor/advantage-1.png" alt="advantage"></div>
+              <h3 class="advantage__title">Собственное производство</h3>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="img/decor/advantage-2.png" alt="advantage"></div>
+              <h3 class="advantage__title">Гарантия от 1 года</h3>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="img/decor/advantage-3.png" alt="advantage"></div>
+              <h3 class="advantage__title">Работем на рынке Новосибирска 15 лет</h3>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="img/decor/advantage-4.png" alt="advantage"></div>
+              <h3 class="advantage__title">4 шоу-рума в г. Новосибирске</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offer section_bg_accent">
+        <div class="offer__content content-width">
+          <h2 class="offer__title">Выезд дизайнера <br><span>БЕСПЛАТНО!</span></h2>
+          <p class="offer__text">
+            заключение договора <br>
+            на дому
+          </p>
+          <div class="offer__designer"></div>
+        </div>
+      </section>
+      <section class="products section">
+        <div class="product__content content-width">
+          <h2 class="section-title">Шкафы-купе по доступной цене</h2>
+          <div class="products__wrap">
+            <div class="product product_main">
+              <div class="product__img"><img src="img/content/cupboard-main.jpg" alt="product"></div>
+              <div class="product__info">
+                <h3 class="product__title">Зеркальный 2-х створчатый шкаф</h3>
+                <ul class="product__params">
+                  <li>
+                    <h4>Ширина</h4><span>1206</span>
+                  </li>
+                  <li>
+                    <h4>Длина</h4><span>1820</span>
+                  </li>
+                  <li>
+                    <h4>Высота</h4><span>1700</span>
+                  </li>
+                </ul>
+                <p class="product__price">от<span> 8500</span> р.</p>
+              </div>
+            </div>
+            <div class="products__items">
+              <div class="product">
+                <div class="product__img"><img src="img/content/cupboard-1.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">Зеркальный 2-х створчатый шкаф</h3>
+                  <ul class="product__params">
+                    <li>
+                      <h4>Ширина</h4><span>1206</span>
+                    </li>
+                    <li>
+                      <h4>Длина</h4><span>1820</span>
+                    </li>
+                    <li>
+                      <h4>Высота</h4><span>1700</span>
+                    </li>
+                  </ul>
+                  <p class="product__price">от<span> 8500</span> р.</p>
+                </div>
+              </div>
+              <div class="product">
+                <div class="product__img"><img src="img/content/cupboard-2.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">Зеркальный 2-х створчатый шкаф</h3>
+                  <ul class="product__params">
+                    <li>
+                      <h4>Ширина</h4><span>1206</span>
+                    </li>
+                    <li>
+                      <h4>Длина</h4><span>1820</span>
+                    </li>
+                    <li>
+                      <h4>Высота</h4><span>1700</span>
+                    </li>
+                  </ul>
+                  <p class="product__price">от<span> 8500</span> р.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-main-wrap"><a class="btn-main products__more" href="#">Смотреть все шкафы</a></div>
+        </div>
+      </section>
+      <section class="products section">
+        <div class="product__content content-width">
+          <h2 class="section-title">Недорогие и стильные кухни</h2>
+          <div class="products__wrap">
+            <div class="products__items">
+              <div class="product">
+                <div class="product__img"><img src="img/content/kitchen-1.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">Современная кухня дубовый шпон</h3>
+                  <ul class="product__params">
+                    <li>
+                      <h4>Ширина</h4><span>1206</span>
+                    </li>
+                    <li>
+                      <h4>Длина</h4><span>1820</span>
+                    </li>
+                    <li>
+                      <h4>Высота</h4><span>1700</span>
+                    </li>
+                  </ul>
+                  <p class="product__price">от<span> 8500</span> р.</p>
+                </div>
+              </div>
+              <div class="product">
+                <div class="product__img"><img src="img/content/kitchen-2.jpg" alt="product"></div>
+                <div class="product__info">
+                  <h3 class="product__title">Кухня в классическом стиле</h3>
+                  <ul class="product__params">
+                    <li>
+                      <h4>Ширина</h4><span>1206</span>
+                    </li>
+                    <li>
+                      <h4>Длина</h4><span>1820</span>
+                    </li>
+                    <li>
+                      <h4>Высота</h4><span>1700</span>
+                    </li>
+                  </ul>
+                  <p class="product__price">от<span> 8500</span> р.</p>
+                </div>
+              </div>
+            </div>
+            <div class="product product_main">
+              <div class="product__img"><img src="img/content/kitchen-main.jpg" alt="product"></div>
+              <div class="product__info">
+                <h3 class="product__title">Кухня с глянцевой отделкой</h3>
+                <ul class="product__params">
+                  <li>
+                    <h4>Ширина</h4><span>1206</span>
+                  </li>
+                  <li>
+                    <h4>Длина</h4><span>1820</span>
+                  </li>
+                  <li>
+                    <h4>Высота</h4><span>1700</span>
+                  </li>
+                </ul>
+                <p class="product__price">от<span> 8500</span> р.</p>
+              </div>
+            </div>
+          </div>
+          <div class="btn-main-wrap"><a class="btn-main products__more" href="#">Смотреть все кухни</a></div>
+        </div>
+      </section>
+      <section class="feedback section_bg_accent">
+        <div class="feedback__content content-width">
+          <h2 class="feedback__title">Не нашли подходящую модель? Подберем по вашим желаниям!</h2>
+          <div class="feedback__form"><a class="link-more" href="#">Начать сейчас</a></div>
+        </div>
+      </section>
+      <section class="section main-gallery">
+        <div class="content-width">
+          <div class="gallery">
+            <h2 class="section-title">Галерея наших дизайнов</h2>
+            <div class="gallery__items">
+              <div class="gallery__item"><a class="gallery__link" href="img/content/gallery-1.jpg" data-lightbox="gallery-1"><img src="img/content/gallery-1.jpg"></a></div>
+              <div class="gallery__item"><a class="gallery__link" href="img/content/gallery-1.jpg" data-lightbox="gallery-1"><img src="img/content/gallery-2.jpg"></a></div>
+              <div class="gallery__item"><a class="gallery__link" href="img/content/gallery-1.jpg" data-lightbox="gallery-1"><img src="img/content/gallery-3.jpg"></a></div>
+              <div class="gallery__item"><a class="gallery__link" href="img/content/gallery-1.jpg" data-lightbox="gallery-1"><img src="img/content/gallery-1.jpg"></a></div>
+              <div class="gallery__item"><a class="gallery__link" href="img/content/gallery-1.jpg" data-lightbox="gallery-1"><img src="img/content/gallery-2.jpg"></a></div>
+              <div class="gallery__item"><a class="gallery__link" href="img/content/gallery-1.jpg" data-lightbox="gallery-1"><img src="img/content/gallery-3.jpg"></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__content content-width">
+          <h2 class="contacts__title">Наши адреса</h2>
+          <div class="contacts__items">
+            <div class="contact">
+              <p>ул. Светлановская, 50, эт. 2</p>
+              <p>+7 (383) 230-43-31</p>
+              <p>открыты пн-вс 10:00 - 21:00</p>
+            </div>
+            <div class="contact">
+              <p>ул. Светлановская, 50, эт. 2</p>
+              <p>+7 (383) 230-43-31</p>
+              <p>открыты пн-вс 10:00 - 21:00</p>
+            </div>
+            <div class="contact">
+              <p>ул. Светлановская, 50, эт. 2</p>
+              <p>+7 (383) 230-43-31</p>
+              <p>открыты пн-вс 10:00 - 21:00</p>
+            </div>
+            <div class="contact">
+              <p>ул. Светлановская, 50, эт. 2</p>
+              <p>+7 (383) 230-43-31</p>
+              <p>
+                открыты пн-вс 10:00 - 21:00
+                
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="map__content content-width"></div>
+      </section>
+    </main>
+    <footer class="footer section">
+      <div class="footer__content content-width">
+        <div class="logo footer__logo"><a class="logo__link h6" href="./index.html"><img src="img/decor/logo.png" alt="logo"></a>
+          <div class="footer__copy">
+            <p>©2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__title h9">Разделы</h3>
+          <ul class="nav__list">
+            <li><a href="#">Преимущества</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Заказать</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="h9 footer__title">Отдел продаж</h3>
+          <p>+7 (913) 314-41-11</p>
+          <p>+7 (383) 230-43-31</p>
+        </div>
+        <div class="footer__soc">
+          <h3 class="footer__title">МЫ В СОЦ.СЕТЯХ</h3><a class="footer__soc-link" href="#"></a><a class="footer__soc-link" href="#"></a><a class="developed" href="#">
+            <h3 class="s4">Разработано в</h3><span class="c-accent"><span>[</span><span>ПРАГМАТИКА</span><span>]</span></span></a>
+        </div>
+      </div>
+      <div class="footer__copy content-width">
+        <p>©2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+      </div>
+    </footer>
+    <button class="to-top" id="to-top"></button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
