@@ -1529,7 +1529,7 @@ body.no-touch .articles__more button:hover {
           align-items: flex-end;
   position: relative;
   height: 620px;
-  background-image: url("/img/decor/welcome-bg.jpg");
+  background-image: url("../img/decor/welcome-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
