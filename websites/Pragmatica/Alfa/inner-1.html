@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Alfa</title>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top content-w">
+        <div class="nav-mob-button"></div>
+        <div class="logo"><a class="logo__link h6" href="./index.html">А</a></div><a class="header__catalog-link" href="#">КАТАЛОГ</a>
+        <ul class="header__top-nav">
+          <li><a href="#">Покупателю</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Адреса магазинов</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="header__contacts hidden-phone">
+          <p class="header__phone h5"><span class="header__phone-indx">(383)</span> 330-45-67</p>
+        </div>
+      </div>
+      <div class="header__nav">
+        <div class="header__nav-wrap content-w">
+          <nav class="nav">
+            <div class="nav__shade"></div>
+            <div class="nav__list-wrap">
+              <ul class="nav__list">
+                <li class="active"><a href="./index.html">Шкафы-Купе</a></li>
+                <li><a href="./inner.html">Мебель на заказ</a></li>
+                <li><a href="./inner-1.html">Гардеробные</a></li>
+                <li><a href="./inner-2.html">Кухни</a></li>
+              </ul>
+              <div class="nav__contacts"><span class="nav__contacts-city">г.Новосибирск</span><span class="nav__contacts-phone">219-13-45</span></div>
+            </div>
+            <div class="nav__mob-button"></div>
+          </nav>
+          <button class="accent-btn">Перезвонить мне</button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="products">
+        <div class="service__items content-w">
+          <div class="service__item">
+            <div class="service__item-img" style="background-image: url('img/content/service-1.jpg');"></div>
+            <div class="service__item-desc">
+              <h4>Доступное качество</h4>
+              <h3>шкафы-купе Клевер</h3>
+              <p>Воплощаем ваши идеи в реальность. Исключительное качество по вашим индивидуальным желаниям. Ваши идеи в реальность. Исключительное качество по вашим индивидуальным желаниям. Ваши идеи в реальность.</p>
+              <h5>Изготовим за 3 дня</h5><a class="cta-btn cta-btn_transparent" href="#">Перейти к серии</a>
+            </div>
+          </div>
+          <div class="service__item">
+            <div class="service__item-img" style="background-image: url('img/content/product-1.png');"></div>
+            <div class="service__item-desc">
+              <h4>Доступное Немецкое качество</h4>
+              <h3>шкафы-купе Stern</h3>
+              <p>Воплощаем ваши идеи в реальность. Исключительное качество по вашим индивидуальным желаниям. Ваши идеи в реальность. Исключительное качество по вашим индивидуальным желаниям. Ваши идеи в реальность.</p>
+              <h5>Изготовим за 4 дня</h5><a class="cta-btn cta-btn_transparent" href="#">Перейти к серии</a>
+            </div>
+          </div>
+          <div class="service__item">
+            <div class="service__item-img" style="background-image: url('img/content/product-2.png');"></div>
+            <div class="service__item-desc">
+              <h4>Лучшее качество</h4>
+              <h3>шкафы-купе оптима</h3>
+              <p>Воплощаем ваши идеи в реальность. Исключительное качество по вашим индивидуальным желаниям. Ваши идеи в реальность. Исключительное качество по вашим индивидуальным желаниям. Ваши идеи в реальность.</p>
+              <h5>Изготовим за 3 дня</h5><a class="cta-btn cta-btn_transparent" href="#">Перейти к серии</a>
+            </div>
+          </div>
+        </div>
+        <div class="dimensions content-w">
+          <h2 class="dimensions__title">Выберите размер своего шкафа-купе</h2>
+          <div class="dimensions__items">
+            <div class="dimension">
+              <h3 class="dimension__title">2-х<span> створчатые:</span></h3>
+              <div class="dimension__options"><a href="#">1208</a><a href="#">1248</a><a href="#">1308</a><a href="#">1410</a></div>
+            </div>
+            <div class="dimension">
+              <h3 class="dimension__title">3-х<span> створчатые:</span></h3>
+              <div class="dimension__options"><a href="#">1208</a><a href="#">1248</a><a href="#">1308</a></div>
+            </div>
+            <div class="dimension">
+              <h3 class="dimension__title">4-х<span> створчатые:</span></h3>
+              <div class="dimension__options"><a href="#">1208</a><a href="#">1248</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section">
+      <div class="footer__content content-w">
+        <div class="logo footer__logo"><a class="logo__link h6" href="./index.html">Альфа дизайн</a>
+          <div class="footer__copy">
+            <p>©2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__title h9">Продукция</h3>
+          <ul class="nav__list">
+            <li class="active"><a href="#">Шкафы-купы</a>
+              <ul>
+                <li><a href="#">Серия Клевер</a></li>
+                <li><a href="#">Серия Оптима</a></li>
+                <li><a href="#">Серия Штерн</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Изготовление на заказ</a>
+              <ul>
+                <li><a href="#">Серия Клевер</a></li>
+                <li><a href="#">Серия Оптима</a></li>
+                <li><a href="#">Серия Штерн</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Гардеробные</a></li>
+            <li><a href="#">Кухни</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="h9 footer__title">Покупателю</h3>
+          <ul>
+            <li><a href="#">Доставка и сборка</a></li>
+            <li><a href="#">Гарантии</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="footer__sub">
+          <h3 class="h9 footer__title">подписаться</h3>
+        </div>
+      </div>
+      <div class="footer__copy content-w">
+        <p>©2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+      </div>
+    </footer>
+    <button class="to-top" id="to-top"></button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
