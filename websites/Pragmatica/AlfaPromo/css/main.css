@@ -527,6 +527,9 @@ article a, .content a {
     letter-spacing: .5px;
     color: #FFF; }
 
+form .form-item label .form-required {
+  display: none; }
+
 .ui-dialog {
   top: 5% !important;
   left: 50% !important;
@@ -1491,6 +1494,10 @@ body.no-touch .articles__more button:hover {
     color: #FFF; }
     .feedback__form form > div .form-type-checkbox label {
       font-family: "Arial", sans-serif; }
+      .feedback__form form > div .form-type-checkbox label a {
+        color: #FDB242; }
+        body.no-touch .feedback__form form > div .form-type-checkbox label a:hover {
+          text-decoration: underline; }
 
 .feedback__form input.form-text {
   outline: none;
@@ -1651,7 +1658,9 @@ body.no-touch .articles__more button:hover {
   line-height: 1.3; }
 
 .offer {
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .offer__content {
   display: -webkit-box;
@@ -1976,6 +1985,31 @@ footer .nav__list a {
 .developed {
   display: block;
   margin-top: 40px; }
+
+.info {
+  margin-bottom: 130px; }
+
+.info__content {
+  font-size: 1.25rem;
+  line-height: 34px; }
+
+.info__text {
+  margin-bottom: 35px; }
+
+.info__list {
+  padding-left: 17px;
+  list-style: decimal;
+  margin-bottom: 40px; }
+  .info__list li {
+    color: #FC583D; }
+    .info__list li p {
+      margin-left: 7px;
+      color: #2c2b31; }
+
+.info__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700; }
 
 .content-width {
   max-width: 1170px;
@@ -2554,7 +2588,12 @@ html.modal-open {
   .map__content {
     height: 320px; }
   .footer__soc {
-    width: 50%; } }
+    width: 50%; }
+  .info {
+    margin-bottom: 30px; }
+  .info__content {
+    line-height: 1.4;
+    font-size: 1rem; } }
 
 @media only screen and (max-width: 37.4375em) {
   .section {
