@@ -24,13 +24,18 @@ function mainGallery() {
   if ($('.gallery__items').length) {
     $('.gallery__items').slick({
       infiniti: true,
-      slidesToShow: 6,
-      slidesToScroll: 2,
+      slidesToShow: 4,
+      slidesToScroll: 1,
       dots: false,
-      arrows: false,
+      arrows: true,
       autoplay: true,
       autoplaySpeed: 4000,
       responsive: [{
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 1
+        }
+      }, {
         breakpoint: 899,
         settings: {
           slidesToShow: 3
@@ -117,6 +122,9 @@ var sideProducts = function sideProducts() {
     }, function () {
       $('.side-product').not(this).stop().animate({ opacity: 1 }, 250);
     });
+
+    // fix sidebar height
+    $('.main').css('min-height', $('.side-products').innerHeight());
   }
 };
 
@@ -134,7 +142,7 @@ $(function () {
   // ========>> FUNCTION'S CALL <<========
 
   welcomeSlider();
-  // mainGallery();
+  mainGallery();
   scrollToTop();
   mainNavMenu();
   sideProducts();
