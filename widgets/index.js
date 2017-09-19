@@ -1102,6 +1102,8 @@ __webpack_require__(62);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var select = new _select2.default('#select', {});
+
 /***/ }),
 /* 59 */
 /***/ (function(module, exports) {
