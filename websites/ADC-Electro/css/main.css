@@ -352,6 +352,7 @@ body {
     width: 42px;
     height: 42px;
     border: none;
+    top: 0;
     right: 0;
     color: #FFF; }
     .form-search button:after {
