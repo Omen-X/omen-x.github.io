@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>ADC-Electro</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top-content container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-9 col-xs-12 d-none d-md-block">
+              <h2 class="header__slogan">СБОРКА ЭЛЕКТРОЩИТОВ ЛЮБОЙ СЛОЖНОСТИ В ЕКАТЕРИНБУРГЕ</h2>
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <div class="form-call header__form-call">
+                <button class="form-call__btn">ЗАКАЗАТЬ ЗВОНОК</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__top-border"></div>
+      </div>
+      <div class="header__main">
+        <div class="header__main-content container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-3 d-none d-lg-block">
+              <div class="logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png" alt="Logo"></a></div>
+            </div>
+            <div class="col-lg-7 col-md-9 order-2 order-md-1">
+              <div class="header__main-center">
+                <div class="contacts-block">
+                  <p class="contacts-item contacts-item_phone">+7 (343) 287-17-62</p>
+                  <p class="contacts-item contacts-item_email"> info@ads-elektro.ru</p>
+                </div>
+                <div class="search header__search">
+                  <form class="form-search">
+                    <input type="text" placeholder="Поиск по каталогу">
+                    <button></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 order-1 order-md-2">
+              <div class="basket header__basket"><span class="basket__title">Корзина:</span><span class="basket__value">ПУСТА</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav">
+        <div class="header__nav-content container-fluid">
+          <div class="row">
+            <div class="col">
+              <nav class="nav">
+                <div class="nav__overlay">
+                  <div class="nav__close"></div>
+                </div>
+                <ul class="nav__list animate trs">
+                  <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
+                  <li class="nav__item"><span class="nav__list-title">Каталог</span>
+                    <ul class="nav__list-inner">
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Главная</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Каталог</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Услуги</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Информация</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><span class="nav__list-title" href="./inner.html">Услуги</span>
+                    <ul class="nav__list-inner">
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Главная</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Каталог</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Услуги</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Информация</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><span class="nav__list-title" href="./inner.html">Информация</span>
+                    <ul class="nav__list-inner">
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Главная</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Каталог</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Услуги</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Информация</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><span class="nav__list-title" href="./inner.html">Контакты</span>
+                    <ul class="nav__list-inner">
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Главная</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Каталог</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Услуги</a></li>
+                      <li class="nav__item-inner"><a class="nav__link-inner" href="./index.html">Информация</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="nav__mob-button"></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <footer class="footer">
+      <div class="footer__content container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="logo footer__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png" alt="Logo"><span class="logo__text">ООО &laquo;АДС-ЭЛЕКТРО&raquo; 2017</span></a></div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Каталог</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Услуги</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Информация</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <div class="footer__contacts">
+              <div class="contacts-block contacts-block_color_light footer__contacts-block">
+                <p class="contacts-item contacts-item_phone">+7 (343) 287-17-62</p>
+                <p class="contacts-item contacts-item_email"> info@ads-elektro.ru</p>
+              </div>
+              <div class="social-block footer__social-block"><a class="social-item social-item_fb" href="#"></a><a class="social-item social-item_vk" href="#"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
