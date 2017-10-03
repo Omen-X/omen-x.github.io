@@ -6,7 +6,7 @@
 
 function welcomeCarousel() {
   if ($('.welcome-carousel').length) {
-    $('.welcome-carousel #lightSlider').lightSlider({
+    $('.welcome-carousel .lightSlider').lightSlider({
       item: 1,
       loop: true,
       speed: 800
@@ -18,7 +18,7 @@ function welcomeCarousel() {
 
 function clientsCarousel() {
   if ($('.clients-carousel').length) {
-    var carousel = $('.clients-carousel #lightSlider').lightSlider({
+    var carousel = $('.clients-carousel .lightSlider').lightSlider({
       pager: false,
       controls: false,
       item: 5,
