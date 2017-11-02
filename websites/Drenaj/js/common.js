@@ -18,25 +18,11 @@ function welcomeScroll() {
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
-  // Loader
-  function loader() {
-    var loader = document.getElementById('loader');
-
-    loader.classList.remove('active');
-    setTimeout(function () {
-      document.body.removeChild(loader);
-    }, 300);
-  }
-  // loader();
-
   // ========>> MAIN NAV <<========
 
   var navList = document.querySelector('nav .nav__list');
   var navButton = document.querySelector('nav .nav__mob-button');
   var navOverlay = document.querySelector('nav .nav__overlay');
-
-  // navList.classList.add('animate');
-  // setTimeout(() => navList.classList.add('trs'), 0);
 
   function navToggle() {
     // open
@@ -71,13 +57,49 @@ function documentReady() {
     var navListTitle = $('nav .nav__list-title');
     var navListInner = $('nav .nav__list-inner');
 
-    navListTitle.click(function (event) {
+    navListTitle.click(function () {
       var currInnerList = $(this).siblings('.nav__list-inner');
 
       navListInner.not(currInnerList).stop().slideUp(200);
       currInnerList.stop().slideToggle(200);
     });
   }
+
+  // end main-nav
+
+  // ========>> FIXED NAV <<========
+
+  var headerNav = document.querySelector('.header-nav');
+  var top = document.documentElement.scrollTop + headerNav.getBoundingClientRect().top;
+
+  function fixedNav() {
+    if (document.documentElement.scrollTop > top) headerNav.classList.add('fixed');else headerNav.classList.remove('fixed');
+  }
+  fixedNav();
+
+  // ========>> FORMS <<========
+
+  var formMain = document.querySelector('.form-main');
+  var formWrap = document.querySelector('.form-wrap');
+  var formMainClose = document.querySelector('form-main__close');
+
+  document.body.addEventListener('click', function (event) {
+    if (event.target.classList.contains('form-trigger')) {
+      formWrap.classList.add('visible');
+      document.documentElement.classList.add('modal-open');
+    }
+  });
+
+  formWrap.addEventListener('click', function (event) {
+    if (event.target.classList.contains('form-wrap') || event.target.classList.contains('form-main__close')) {
+      formWrap.classList.remove('visible');
+      document.documentElement.classList.remove('modal-open');
+    }
+  });
+
+  // ========>> FUNCTIONS CALL <<========
+
+  welcomeScroll();
 
   $(window).on('resize', function () {
     if ($(window).width() >= 768) {
@@ -86,15 +108,13 @@ function documentReady() {
     }
   }).resize();
 
-  // end main-nav
-
-  // ========>> FUNCTIONS CALL <<========
-
-  welcomeScroll();
+  $(window).on('scroll', function () {
+    fixedNav();
+  });
 } // end document ready
 
 // ========>> UTILS <<========
 
 !function checkLoad() {
-  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);else documentReady(); // eslint-disable-line
+  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);else documentReady();
 }();

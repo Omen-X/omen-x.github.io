@@ -160,8 +160,15 @@ textarea {
  *
  * =============================
  */
+html.modal-open {
+  overflow: hidden; }
+
 body {
   min-height: 100vh; }
+
+p {
+  margin-bottom: 24px;
+  line-height: 24px; }
 
 .contact {
   display: -webkit-box;
@@ -228,9 +235,17 @@ body {
   -o-transition: all .2s;
   transition: all .2s;
   letter-spacing: .7px; }
-  .btn-main:hover {
+  body.no-touch .btn-main:hover {
     background: #669933;
     color: #FFF; }
+
+.btn-main_color_revert {
+  background: #669933;
+  color: #FFF; }
+  body.no-touch .btn-main_color_revert:hover {
+    background: #80bf40; }
+  .btn-main_color_revert:active {
+    background: #4d7326 !important; }
 
 .section {
   padding-top: 75px;
@@ -267,10 +282,6 @@ body {
     background: #FFF;
     padding-left: 20px;
     padding-right: 20px; }
-
-.section-text {
-  margin-bottom: 24px;
-  line-height: 24px; }
 
 .form-feedback {
   max-width: 363px;
@@ -345,6 +356,8 @@ body {
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s; }
+  body.no-touch .form-submit-btn:hover {
+    background: #dcdcdc; }
 
 /*!
  * =============================
@@ -383,6 +396,16 @@ body {
   margin-left: auto; }
   .header__contacts .contact_adress {
     margin-right: 62px; }
+
+.header-nav.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  background: #FFF;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
 
 .nav__list {
   margin-bottom: 0;
@@ -434,7 +457,7 @@ body {
   top: 62px;
   left: 0;
   list-style: none;
-  padding: 25px;
+  padding: 30px 40px;
   background: #FFF;
   border: 1px solid #dcdcdc;
   -webkit-transition: opacity .2s, -webkit-transform .2s;
@@ -446,7 +469,8 @@ body {
       -ms-transform: translateY(-10px);
           transform: translateY(-10px);
   min-width: 100%;
-  text-align: left; }
+  text-align: left;
+  cursor: default; }
 
 .nav__item-inner {
   margin-bottom: 10px; }
@@ -455,7 +479,6 @@ body {
 
 .nav__link-inner {
   display: inline-block;
-  padding-bottom: 4px;
   font-size: 0.875rem;
   text-transform: uppercase;
   white-space: nowrap;
@@ -463,10 +486,11 @@ body {
   border-bottom: 1px solid transparent;
   -webkit-transition: color .2s, border-color .2s;
   -o-transition: color .2s, border-color .2s;
-  transition: color .2s, border-color .2s; }
+  transition: color .2s, border-color .2s;
+  line-height: 1.3; }
   .nav__link-inner:hover {
     border-bottom-color: #669933;
-    color: #669933; }
+    color: #666666; }
 
 .nav__overlay {
   position: fixed;
@@ -573,7 +597,7 @@ body {
   font-weight: 700; }
 
 .welcome__text {
-  max-width: 660px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 59px;
@@ -831,19 +855,26 @@ body {
   margin-bottom: 30px; }
 
 .article-preview__title {
-  display: inline-block;
+  display: inline;
   max-width: 310px;
-  margin-bottom: 41px;
   font-family: "Roboto Slab", serif;
-  text-decoration: underline;
+  -webkit-box-shadow: inset 0 -0.08em white, inset 0 -0.14em #669933;
+          box-shadow: inset 0 -0.08em white, inset 0 -0.14em #669933;
   line-height: 36px;
   font-size: 1.875rem;
-  color: #669933; }
+  color: #669933;
+  -webkit-transition: color .2s, -webkit-box-shadow .2s;
+  transition: color .2s, -webkit-box-shadow .2s;
+  -o-transition: color .2s, box-shadow .2s;
+  transition: color .2s, box-shadow .2s;
+  transition: color .2s, box-shadow .2s, -webkit-box-shadow .2s; }
   body.no-touch .article-preview__title:hover {
-    text-decoration: underline;
-    color: #80bf40; }
+    color: #80bf40;
+    -webkit-box-shadow: inset 0 -0.08em white, inset 0 -0.14em #80bf40;
+            box-shadow: inset 0 -0.08em white, inset 0 -0.14em #80bf40; }
 
 .article-preview__text {
+  margin-top: 41px;
   line-height: 24px;
   letter-spacing: .1px; }
 
@@ -1108,6 +1139,85 @@ body {
   margin-right: 26px;
   font-size: 3rem;
   color: #333333; }
+
+/*!
+ * =============================
+ *
+ *     #FORM
+ *
+ * =============================
+ */
+.form-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -10;
+  height: 0;
+  width: 0;
+  -webkit-transition: opacity .35s;
+  -o-transition: opacity .35s;
+  transition: opacity .35s; }
+  .form-wrap.visible {
+    display: block;
+    visibility: visible;
+    height: auto;
+    width: auto;
+    z-index: 150;
+    opacity: 1; }
+
+.form-main {
+  position: relative;
+  background: #FFF;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px 70px 60px;
+  top: 15%; }
+
+.form-main__title {
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700; }
+
+.form-main__desc {
+  margin-bottom: 25px;
+  line-height: 24px;
+  text-align: center; }
+
+.form-main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.form-main__field {
+  border: 1px solid #cccccc;
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 0;
+  padding-left: 25px;
+  font-size: 0.875rem; }
+
+.form-main__close {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 33px;
+  height: 33px;
+  background-image: url("../img/decor/icons.png");
+  background-position: 0 -261px;
+  cursor: pointer; }
 
 .content-width {
   max-width: 1147px;
@@ -1477,7 +1587,31 @@ html.modal-open {
     font-size: 0.875rem; }
   .product-card__price-value {
     margin-right: 15px;
-    font-size: 1.375rem; } }
+    font-size: 1.375rem; }
+  .form-main {
+    margin-left: 15px;
+    margin-right: 15px;
+    top: 20px; }
+  .form-main__close {
+    top: 15px;
+    right: 15px; }
+  .form-main {
+    padding: 60px 20px 30px; }
+  .form-main__title {
+    margin-bottom: 15px; }
+  .form-main__desc {
+    font-size: 0.875rem;
+    line-height: 18px; }
+  .form-main__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+  .form-main__field {
+    margin-bottom: 15px; }
+  .form-main__field,
+  .form-main__submit {
+    height: 43px; } }
 
 @media only screen and (max-width: 30em) {
   .header__contacts {
