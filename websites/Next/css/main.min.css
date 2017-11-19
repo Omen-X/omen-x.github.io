@@ -37,7 +37,7 @@
  *     #WELCOME
  *
  * =============================
- */.welcome{background:url(../img/decor/welcome-bg.png) no-repeat center;background-size:cover}.welcome__content{padding-bottom:40px}.welcome__text{padding-top:11%;padding-bottom:8%;background:url(../img/decor/term-welcome.png) no-repeat right 30px;font-size:2.625rem;line-height:1.2}.welcome__text p span{font-size:3.75rem}.welcome__advantages{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-10px;margin-right:-10px;margin-bottom:50px}.welcome__advantages>*{-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;width:calc(100 / 3 * 1% - 20px);margin-left:10px;margin-right:10px}.welcome__advantages p{min-height:160px;padding:30px;font-size:1.3125rem;line-height:1.2;color:#fff;background-color:#72caf2;background-position:right bottom;background-repeat:no-repeat}.welcome__advantages p:nth-child(1){background-image:url(../img/decor/welcome-advantages-1.png)}.welcome__advantages p:nth-child(2){background-image:url(../img/decor/welcome-advantages-2.png)}.welcome__advantages p:nth-child(3){background-image:url(../img/decor/welcome-advantages-3.png)}/*!
+ */.welcome{background:url(../img/decor/welcome-bg.png) no-repeat center;background-size:cover}.welcome__content{padding-bottom:40px}.welcome__text{padding-top:11%;padding-bottom:8%;background:url(../img/decor/term-welcome.png) no-repeat right 30px;font-size:2.625rem;line-height:1.2}.welcome__text p span{font-size:3.75rem}.welcome__advantages{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-9px;margin-right:-9px;margin-bottom:50px}.welcome__advantages>*{-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;width:calc(100 / 3 * 1% - 18px);margin-left:9px;margin-right:9px}.welcome__advantages p{min-height:160px;padding:30px;font-size:1.3125rem;line-height:1.2;color:#fff;background-color:#72caf2;background-position:right bottom;background-repeat:no-repeat}.welcome__advantages p:nth-child(1){background-image:url(../img/decor/welcome-advantages-1.png)}.welcome__advantages p:nth-child(2){background-image:url(../img/decor/welcome-advantages-2.png)}.welcome__advantages p:nth-child(3){background-image:url(../img/decor/welcome-advantages-3.png)}/*!
  * =============================
  *
  *     #SERVICE
@@ -61,7 +61,7 @@
  *     #GALLERY
  *
  * =============================
- */.gallery{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap}.gallery a{border:1px solid #e6e6e6;max-width:240px;margin-left:15px;margin-right:15px;margin-bottom:30px}/*!
+ */.gallery{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap}.gallery a{display:block;border:1px solid #e6e6e6;max-width:240px;margin-left:15px;margin-right:15px;margin-bottom:30px}.gallery a img{width:100%}/*!
  * =============================
  *
  *     #ACTION

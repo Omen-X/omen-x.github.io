@@ -86,7 +86,7 @@ function documentReady() {
       $form.trigger("reset");
 
       var loc = window.location;
-      window.location.href = loc.origin + '/thank-you.html';
+      // window.location.href = `${loc.origin}/thank-you.html`;
     }).fail(function () {
       $formMain.trigger("reset");
       alert("Ошибка отправки формы");
