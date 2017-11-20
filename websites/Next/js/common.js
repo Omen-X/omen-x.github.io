@@ -13,10 +13,19 @@ function mainGallery() {
   }
 }
 
+// ========>> PRODUCTS GALLERY <<========
+
+function productsGallery() {
+  if ($('.products__items').length) {
+    $('.products__items').lightGallery({
+      loop: true
+    });
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
-
   // ========>> FORMS <<========
 
   var $form = $('.form');
@@ -83,13 +92,13 @@ function documentReady() {
       type: 'POST',
       data: $target.serialize() + '&title=' + encodeURIComponent(title)
     }).done(function () {
-      $form.trigger("reset");
+      $form.trigger('reset');
 
-      var loc = window.location;
+      // const loc = window.location;
       // window.location.href = `${loc.origin}/thank-you.html`;
     }).fail(function () {
-      $formMain.trigger("reset");
-      alert("Ошибка отправки формы");
+      $formMain.trigger('reset');
+      alert('Ошибка отправки формы');
     });
   });
 
@@ -98,6 +107,7 @@ function documentReady() {
   // ========>> FUNCTIONS CALL <<========
 
   mainGallery();
+  productsGallery();
 } // end document ready
 
 // ========>> UTILS <<========

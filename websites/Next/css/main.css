@@ -613,9 +613,10 @@ textarea {
  * =============================
  */
 .products {
-  background: #F5F5F5; }
-  .products .section-bg {
-    background-image: url("../img/decor/products-bg.jpg"); }
+  background-image: url("../img/decor/products-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .products__items {
   display: -webkit-box;
@@ -639,7 +640,8 @@ textarea {
   border-radius: 6px;
   padding: 25px;
   -webkit-box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1); }
+          box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+  color: #111111; }
 
 .product__img {
   display: -webkit-box;
