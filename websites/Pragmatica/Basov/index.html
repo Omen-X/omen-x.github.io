@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top">
+        <div class="content-width">
+          <div class="nav-mob-button"></div>
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="img/decor/logo.png"></a></div>
+          <div class="header__adress">
+            <p>г. Санкт-Петербург</p>
+            <p>Красногвардейский пер., д. 15</p>
+          </div>
+          <div class="header__top-links"><a href="#">схема проезда</a><a href="#">контакты</a></div>
+          <div class="header__contacts">
+            <div class="soc-contacts"><a class="soc-contacts__vk" href="#"></a><a class="soc-contacts__fb" href="#"></a><a class="soc-contacts__insta" href="#"></a></div>
+          </div>
+          <div class="header__phone">
+            <p><span>(812)</span> 407 27 78</p>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav">
+        <div class="header__nav-wrap content-width">
+          <nav class="nav">
+            <div class="nav__shade"></div>
+            <div class="nav__list-wrap">
+              <ul class="nav__list">
+                <li><a href="./index.html">О нас</a></li>
+                <li><a href="./inner.html">Аренда</a></li>
+                <li><a href="./inner.html">Услуги</a></li>
+                <li><a href="./inner.html">Хоккей</a></li>
+                <li><a href="./inner.html">Фигурное катание</a></li>
+                <li><a href="./inner.html">Детский сад</a></li>
+              </ul>
+              <div class="nav__contacts"><span class="nav__contacts-city">г.Новосибирск</span><span class="nav__contacts-phone">219-13-45</span></div>
+            </div>
+            <div class="nav__mob-button"></div>
+          </nav><a class="btn-main" href="#">РАСПИСАНИЕ ЗАНЯТИЙ</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome welcome_full-height">
+        <div class="welcome-slider">
+          <div class="welcome-slider__item" style="background-image: url(img/content/slide-1.jpg);">
+            <div class="welcome-slider__item-content content-width">
+              <h2 class="welcome-slider__title">квартал для семьи и спорта</h2>
+              <p class="welcome-slider__text">
+                Станьте частью команды, занимаясь под руководством высококвалифицированных тренеров
+                
+              </p>
+            </div>
+          </div>
+          <div class="welcome-slider__item" style="background-image: url(img/content/slide-2.jpg);">
+            <div class="welcome-slider__item-content content-width">
+              <h2 class="welcome-slider__title">квартал для семьи и спорта</h2>
+              <p class="welcome-slider__text">
+                Станьте частью команды, занимаясь под руководством высококвалифицированных тренеров
+                
+              </p>
+            </div>
+          </div>
+          <div class="welcome-slider__item" style="background-image: url(img/content/slide-3.jpg);">
+            <div class="welcome-slider__item-content content-width">
+              <h2 class="welcome-slider__title">квартал для семьи и спорта</h2>
+              <p class="welcome-slider__text">
+                Станьте частью команды, занимаясь под руководством высококвалифицированных тренеров
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- services begin-->
+      <section class="services">
+        <div class="content-width content-width_wide">
+          <div class="services__items">
+            <div class="service" style="background-image: url(&quot;./img/content/service-1.jpg&quot;);">
+              <h2 class="service__title">Большой Хоккей</h2><a class="btn-main btn-main_transparent" href="#">узнать больше</a>
+            </div>
+            <div class="service" style="background-image: url(&quot;./img/content/service-2.jpg&quot;);">
+              <h2 class="service__title">Детский сад</h2><a class="btn-main btn-main_transparent" href="#">узнать больше</a>
+            </div>
+            <div class="service" style="background-image: url(&quot;./img/content/service-3.jpg&quot;);">
+              <h2 class="service__title">фигурное катание</h2><a class="btn-main btn-main_transparent" href="#">узнать больше</a>
+            </div>
+            <div class="service" style="background-image: url(&quot;./img/content/service-4.jpg&quot;);">
+              <h2 class="service__title">свободный лед</h2><a class="btn-main btn-main_transparent" href="#">выбрать дату</a>
+            </div>
+            <div class="service" style="background-image: url(&quot;./img/content/service-5.jpg&quot;);">
+              <h2 class="service__title">группа продленного дня <br> школьные каникулы</h2><a class="btn-main btn-main_transparent" href="#">наши предложения</a>
+            </div>
+            <div class="service" style="background-image: url(&quot;./img/content/service-6.jpg&quot;);">
+              <h2 class="service__title">центр изучения основ китая</h2><a class="btn-main btn-main_transparent" href="#">о центре</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- services end-->
+      <!-- advantges begin-->
+      <section class="advantges section">
+        <div class="content-width">
+          <h2 class="section-title">Почему именно наш центр?</h2>
+          <div class="advantages__items">
+            <div class="advantage">
+              <div class="advantage__img"><img src="./img/decor/advantages-1.png" alt="Преимущество"></div>
+              <h3>Бережное отношение квалифицированных тренеров</h3>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="./img/decor/advantages-2.png" alt="Преимущество"></div>
+              <h3>Профессиональная подготовка для детей от 3х лет</h3>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="./img/decor/advantages-3.png" alt="Преимущество"></div>
+              <h3>Все необходимое для полноценных тренировок в одном комплексе</h3>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><img src="./img/decor/advantages-4.png" alt="Преимущество"></div>
+              <h3>Отдыхайте всей семьей. Большой выбор занятий для разного возраста.</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- advantages end-->
+      <!-- offers begin-->
+      <section class="offers">
+        <div class="content-width">
+          <h3 class="offers__title">Спорт для всех:</h3>
+          <div class="offers__items">
+            <button class="btn-main">Детские направления</button>
+            <button class="btn-main">Мужчинам</button>
+            <button class="btn-main">женщинам</button>
+          </div>
+        </div>
+      </section>
+      <!-- offers end-->
+      <!-- events begin-->
+      <section class="events section">
+        <div class="content-width">
+          <h2 class="section-title">Новости и события</h2>
+          <div class="events__nav">
+            <button>события</button>
+            <button>анонсы</button>
+            <button>мероприятия</button>
+          </div>
+          <div class="events__items"><a class="event" style="background-image: url(&quot;./img/content/news-1.png&quot;);" href="#">
+              <p class="event__date">15 июля</p>
+              <h3 class="event__title">Изменения в расписания детской группы до 8 лет</h3></a><a class="event" style="background-image: url(&quot;./img/content/news-2.png&quot;);" href="#">
+              <p class="event__date">15 ноября</p>
+              <h3 class="event__title">Турнир «Кубок Победы» С 1 по 3 мая 2017 года в Санкт-Петербурге</h3></a></div>
+        </div>
+      </section>
+      <!-- events end-->
+      <!-- rent begin-->
+      <section class="rent">
+        <div class="content-width">
+          <h3 class="rent__title">Проведите праздник с нами!</h3>
+          <button class="btn-main">аренда зала</button>
+        </div>
+      </section>
+      <!-- rent end-->
+      <!-- photos begin-->
+      <section class="photos section">
+        <div class="content-width">
+          <h2 class="section-title">Мы в инстаграмм</h2>
+          <div class="photos__items"><img src="./img/content/insta-1.jpg" alt="фото"><img src="./img/content/insta-2.jpg" alt="фото"><img src="./img/content/insta-3.jpg" alt="фото"><img src="./img/content/insta-4.jpg" alt="фото"></div>
+        </div>
+      </section>
+      <!-- photos end-->
+      <!-- order begin-->
+      <section class="order">
+        <div class="content-width content-width_wide">
+          <div class="order__content">
+            <h3 class="order__sub-title">Basovсenter приглашает</h3>
+            <h2 class="order__title">
+              запишитесь <br>
+              на ознакомительное занятие
+            </h2><a class="btn-main" href="#">запишитесь сегодня</a>
+          </div>
+        </div>
+      </section>
+      <!-- order end-->
+      <!-- feedback begin-->
+      <!-- feedback end-->
+    </main>
+    <footer class="footer section">
+      <div class="footer__content content-width">
+        <div class="logo footer__logo"><a class="logo__link h6" href="./index.html"><img src="img/decor/logo.png" alt="logo"></a>
+          <div class="footer__copy">
+            <p>©2017 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__title h9">Разделы</h3>
+          <ul class="nav__list">
+            <li><a href="#">Номера</a></li>
+            <li><a href="#">Кафе</a></li>
+            <li><a href="#">Беседки</a></li>
+            <li><a href="#">Экскурсии</a></li>
+            <li><a href="#">Активный_отдых</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="h9 footer__title">Контакты</h3>
+          <div class="footer__contacts-items">
+            <p>Город, фактический адрес, офис</p>
+            <p>Контактный телефон</p>
+            <p>E-mail</p>
+          </div>
+        </div><a class="developed" href="#">
+          <h3 class="s4">Разработано в</h3><span><span>[</span>ПРАГМАТИКА<span>]</span></span></a>
+      </div>
+      <div class="footer__copy content-width">
+        <p>©2015 Использование материалов сайта запрещено без письменного согласия владельца сайта</p>
+      </div>
+    </footer>
+    <button class="to-top" id="to-top"></button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
