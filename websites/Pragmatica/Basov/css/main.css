@@ -285,15 +285,14 @@ html.modal-open {
   color: #37423c; }
   body.no-touch .btn-main:hover, body.no-touch .ui-dialog .form-actions input[type=submit]:hover, .ui-dialog .form-actions body.no-touch input[type=submit]:hover, body.no-touch .inner-content form input[type=submit]:hover, .inner-content form body.no-touch input[type=submit]:hover {
     background: #dcdc28;
-    color: #37423c; }
+    color: #FFF; }
 
 .btn-main_transparent {
   background-color: transparent;
   border: 2px solid #E3E354;
   color: #E3E354; }
   body.no-touch .btn-main_transparent:hover {
-    background: #E3E354;
-    color: #55a6de; }
+    background: #E3E354; }
 
 body.no-touch a:hover {
   color: #55a6de; }
@@ -1364,9 +1363,9 @@ body.no-touch .breadcrumbs a:hover {
 a.articles__name {
   font-weight: 700;
   font-family: "ProximaNovaExCn", sans-serif;
-  color: #E3E354; }
+  color: #55a6de; }
   a.articles__name:hover {
-    color: #2D4EF5; }
+    color: #E3E354 !important; }
 
 .articles__text {
   margin-top: 0.75rem;
@@ -1408,7 +1407,7 @@ body.no-touch .articles__more button:hover {
   font-family: "Open Sans",sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  color: #E3E354; }
+  color: #55a6de; }
 
 .article h3 {
   margin-top: 40px;
@@ -1440,7 +1439,7 @@ body.no-touch .articles__more button:hover {
     font-weight: 700;
     font-size: 1.6875rem;
     font-weight: 600;
-    color: #E3E354; }
+    color: #55a6de; }
 
 .article > p {
   margin-top: 70px;
@@ -1487,7 +1486,7 @@ body.no-touch .articles__more button:hover {
 .article ol {
   list-style-type: decimal; }
   .article ol li {
-    color: #E3E354; }
+    color: #55a6de; }
     .article ol li span {
       color: #37423c; }
 
@@ -1500,14 +1499,14 @@ body.no-touch .articles__more button:hover {
     width: 13px;
     height: 2px;
     top: 10px;
-    background: #E3E354; }
+    background: #55a6de; }
 
 .article table {
   width: 100%;
   margin-top: 70px;
   margin-bottom: 70px; }
   .article table td {
-    border: 1px solid #E3E354;
+    border: 1px solid #55a6de;
     padding: 15px 20px;
     font-size: 1.0625rem;
     color: #28282e; }
@@ -2348,15 +2347,14 @@ html.modal-open {
   color: #37423c; }
   body.no-touch .btn-main:hover {
     background: #dcdc28;
-    color: #37423c; }
+    color: #FFF; }
 
 .btn-main_transparent {
   background-color: transparent;
   border: 2px solid #E3E354;
   color: #E3E354; }
   body.no-touch .btn-main_transparent:hover {
-    background: #E3E354;
-    color: #55a6de; }
+    background: #E3E354; }
 
 body.no-touch a:hover {
   color: #55a6de; }
