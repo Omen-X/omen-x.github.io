@@ -7,7 +7,7 @@ function documentReady() {
   // ========>> MAIN NAV <<========
 
   var navListWrap = document.querySelector('nav .nav__list-wrap');
-  var navButton = document.querySelector('.nav__mob-button');
+  var $navButton = $('.nav__mob-button');
   var navOverlay = document.querySelector('nav .nav__overlay');
 
   function navToggle() {
@@ -36,7 +36,7 @@ function documentReady() {
       }, 300);
     }
   }
-  navButton.onclick = navToggle;
+  $navButton.click(navToggle);
 
   // Nested nav
   if (window.matchMedia('(max-width: 899px)').matches) {
@@ -53,6 +53,16 @@ function documentReady() {
 
   // end main-nav
 
+
+  // ========>> FIXED NAV <<========
+
+  var headerNav = document.querySelector('.header__nav');
+  var top = document.documentElement.scrollTop + headerNav.getBoundingClientRect().top;
+
+  function fixedNav() {
+    if (document.documentElement.scrollTop > top) headerNav.classList.add('fixed');else headerNav.classList.remove('fixed');
+  }
+  fixedNav();
 
   // ========>> FORMS <<========
 
@@ -73,6 +83,10 @@ function documentReady() {
   });
 
   // ========>> FUNCTIONS CALL <<========
+
+  $(window).on('scroll', function () {
+    fixedNav();
+  });
 } // end document ready
 
 // ========>> UTILS <<========
