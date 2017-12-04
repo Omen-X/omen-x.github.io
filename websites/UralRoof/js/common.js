@@ -1,17 +1,8 @@
 'use strict';
 
-// ========>> FUNCTIONS <<========
-
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
-  // Loader
-  // const loader = document.getElementById('loader');
-
-  // loader.classList.remove('active');
-  // setTimeout(() => {
-  //   document.body.removeChild(loader);
-  // }, 300);
 
   // ========>> MAIN NAV <<========
 
@@ -65,9 +56,7 @@ function documentReady() {
 
   // ========>> FORMS <<========
 
-  var formMain = document.querySelector('.form-main');
   var formWrap = document.querySelector('.form-wrap');
-  var formMainClose = document.querySelector('form-main__close');
 
   document.body.addEventListener('click', function (event) {
     if (event.target.classList.contains('form-trigger')) {
