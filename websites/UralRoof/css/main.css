@@ -408,9 +408,13 @@ textarea {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+    .header_home .header__nav.fixed .nav__item:after {
+      background: #999B9D; }
     .header__nav.fixed .nav__item {
       padding-top: 8px;
       padding-bottom: 18px; }
+      .header__nav.fixed .nav__item:after {
+        top: 8px; }
     .header__nav.fixed .nav__list-inner {
       top: 43px; }
     .header__nav.fixed .nav__link,
