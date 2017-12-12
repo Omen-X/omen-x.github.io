@@ -169,9 +169,21 @@ textarea {
  * =============================
  */
 body {
+  position: relative;
   min-height: 100vh;
-  background: url("../img/decor/body-full.jpg") no-repeat center top;
+  background: url("../img/decor/body-bg.jpg") no-repeat center top;
   background-size: cover; }
+  body:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/decor/welcome-bg.png") no-repeat center top;
+    background-size: contain; }
 
 .main {
   position: relative; }
@@ -569,7 +581,13 @@ html.modal-open {
 
 @media only screen and (max-width: 93.6875em) {
   .sidebar {
-    display: none; } }
+    display: none; }
+  body:before {
+    top: 5%; } }
+
+@media only screen and (max-width: 56.1875em) {
+  body:before {
+    top: 6%; } }
 
 @media only screen and (max-width: 48em) {
   .sub-title {
@@ -634,6 +652,8 @@ html.modal-open {
       left: calc(50% - 16px); } }
 
 @media only screen and (max-width: 37.4375em) {
+  body:before {
+    top: 4.5%; }
   .buy .accent-title {
     margin-bottom: 25px; }
   .footer {
