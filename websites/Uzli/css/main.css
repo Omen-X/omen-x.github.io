@@ -214,6 +214,9 @@ textarea {
   margin-bottom: 0;
   color: #FFF; }
 
+a.contact__text:hover {
+  color: #bc2628; }
+
 .btn-main {
   padding: 12px 35px;
   font-family: "Cambria", serif;
@@ -1008,11 +1011,30 @@ textarea {
   display: inline-block;
   border-radius: 50%;
   margin-right: 10px;
-  border: 4px solid  #FFF;
+  border: 3px solid  #FFF;
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; }
+  .footer__soc-list a:hover {
+    -webkit-box-shadow: 0 0 2px 1px #FFF;
+            box-shadow: 0 0 2px 1px #FFF; }
   .footer__soc-list a:last-child {
     margin-right: 0; }
+  .footer__soc-list a:nth-child(1) {
+    background-image: url("../img/decor/vk.png");
+    background-color: #FFF;
+    background-size: contain; }
+  .footer__soc-list a:nth-child(2) {
+    background-image: url("../img/decor/fb.png"); }
+  .footer__soc-list a:nth-child(3) {
+    background-image: url("../img/decor/twit.png"); }
+  .footer__soc-list a:nth-child(4) {
+    background-image: url("../img/decor/od.png"); }
 
 .footer__links {
   display: -webkit-box;
@@ -1345,8 +1367,7 @@ textarea {
     background: #FFF; }
   .spec-table td {
     border: 1px solid #ccc;
-    height: 50px;
-    padding: 10px 15px 8px;
+    padding: 14px 15px 11px;
     vertical-align: middle; }
     .spec-table td:first-child {
       width: 65%; }
@@ -1990,7 +2011,8 @@ html.modal-open {
 
 @media only screen and (max-width: 37.4375em) {
   .section-title {
-    font-size: 22px; }
+    font-size: 22px;
+    text-align: left; }
   .page-title {
     font-size: 20px;
     text-align: center; }
