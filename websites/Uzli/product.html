@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>UZLI</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top">
+        <div class="content-width">
+          <div class="contact contact_adress">
+            <p class="contact__text">Екатеринбург, ул. Фронтовых Бригад, 35</p>
+          </div>
+          <div class="contact contact_email"><a class="contact__text" href="#">uzli2000@mail.ru</a></div>
+          <div class="contact contact_phone">
+            <p class="contact__text">+7 (343) 344-34-96</p>
+          </div>
+        </div>
+      </div>
+      <div class="header__main content-width">
+        <div class="logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo.png" alt="logo">
+            <p class="logo__text">УРАЛЬСКИЙ ЗАВОД ЛАКОКРАСОЧНЫХ ИЗДЕЛИЙ</p></a></div>
+        <nav class="nav">
+          <div class="nav__overlay">
+            <div class="nav__close"></div>
+          </div>
+          <div class="nav__list-wrap animate trs">
+            <ul class="nav__list">
+              <li class="nav__item nav__item_catalog"><span class="nav__list-title">КАТАЛОГ</span>
+                <ul class="nav__list-inner">
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Акриловые краски</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Алкидные эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Грунтовки</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Автомобильные эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Кремнийорганические эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Органосиликатные эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Химстойкие эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Дорожные эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Эпоксидные эмали</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Нитроэмаль</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Лаки</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Растворители</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="./category.html">Прочее</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#">Для поставщиков</a></li>
+              <li class="nav__item"><span class="nav__list-title">О компании</span>
+                <ul class="nav__list-inner">
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Сертификаты</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Отзывы</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Акции</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Контакты</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><span class="nav__list-title">Полезно знать</span>
+                <ul class="nav__list-inner">
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Сертификаты</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Отзывы</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Акции</a></li>
+                  <li class="nav__item-inner"><a class="nav__link-inner" href="#">Контакты</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__mob-button"></div>
+        </nav>
+        <form class="my-search" action="">
+          <input class="my-search__field" type="text" placeholder="Введите название или артикул">
+          <input class="my-search__submit" type="submit" value="">
+        </form>
+        <div class="my-basket"><span class="my-basket__counter visible">3</span></div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="breadcrumbs">
+        <div class="breadcrumbs__content content-width"><a class="breadcrumb__link" href="./index.html">Главная</a><a class="breadcrumb__link" href="./catalog.html">Каталог</a><a class="breadcrumb__link" href="./catalog.html">Автомобильные эмали</a><span class="breadcrumb__current">ЭМАЛЬ МЛ-1110</span></div>
+      </section>
+      <section class="product-sect">
+        <div class="content-width">
+          <h2 class="page-title">ЭМАЛЬ МЛ-1110</h2>
+          <section class="section-with-nav section_decor-bottom">
+            <aside class="catalog-nav">
+              <button class="catalog-nav__link">Акриловые краски</button>
+              <button class="catalog-nav__link catalog-nav__link_active">Алкидные эмали</button>
+              <button class="catalog-nav__link">Грунтовки</button>
+              <button class="catalog-nav__link">Автомобильные эмали</button>
+              <button class="catalog-nav__link">Кремнийорганические эмали</button>
+              <button class="catalog-nav__link">Органосиликатные эмали</button>
+              <button class="catalog-nav__link">Химстойкие эмали</button>
+              <button class="catalog-nav__link">Дорожные эмали</button>
+              <button class="catalog-nav__link">Эпоксидные эмали</button>
+              <button class="catalog-nav__link">Нитроэмаль</button>
+              <button class="catalog-nav__link">Лаки</button>
+              <button class="catalog-nav__link">Растворители</button>
+              <button class="catalog-nav__link">Прочее</button>
+            </aside>
+            <div class="product-wrap">
+              <div class="product">
+                <div class="product__img"><img src="./img/content/product-1.png" alt="product"></div>
+                <div class="product__info">
+                  <p class="product__id">Артикул: МЛ-1110</p>
+                  <p class="product__id">ТУ 6-10-2048-85</p>
+                  <p class="product__price"><strong class="product__price-value">85.00</strong><span class="product__price-unit"> руб.</span></p>
+                  <div class="product__config">
+                    <div class="my-counter"><span class="my-counter__btn my-counter__btn-down">-</span><span class="my-counter__value">1</span><span class="my-counter__btn my-counter__btn-up">+</span></div>
+                    <div class="my-select"><span class="my-select__value">Черный</span>
+                      <div class="my-select__values"><span>Красный</span><span>Зеленый</span><span>Желтый</span><span>Красный</span><span>Зеленый</span><span>Желтый</span></div>
+                    </div>
+                    <button class="product__btn btn-main">В корзину</button>
+                  </div>
+                </div>
+                <div class="product__rules">
+                  <div class="product__rule">
+                    <div class="product__rule-img"><img src="./img/decor/delivery.png" alt="delivery"></div>
+                    <p class="product__rule-title">ДОСТАВКА</p>
+                    <p class="product__rule-text">Доставка до ТК ПЭК бесплатно</p>
+                  </div>
+                  <div class="product__rule">
+                    <div class="product__rule-img"><img src="./img/decor/refund.png" alt="refund"></div>
+                    <p class="product__rule-title">Условия возврата</p>
+                    <p class="product__rule-text">Товар возврату и обмену не подлежит</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product-desc">
+                <p>Эмаль МЛ-1110 предназначена для окраски, предварительно обработанной грунтовкой и шпатлевкой, металлической поверхности кузова, деталей салона легковых автомобилей, а также для подкраски небольших повреждений лакокрасочных покрытий. Покрытия из эмали МЛ-1110 по внешнему виду превосходят покрытия из эмали МЛ-12, они имеют высокие защитные свойства в различных атмосферных условиях, обладают влагостойкостью, повышенным блеском. Пленка эмали не меняет своего декоративного вида при пересушке.</p>
+              </div>
+              <div class="product-spec">
+                <h3 class="sub-title">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h3>
+                <table class="spec-table">
+                  <tr>
+                    <td>Цвет покрытия</td>
+                    <td>любой</td>
+                  </tr>
+                  <tr>
+                    <td>Массовая доля нелетучих веществ, %</td>
+                    <td>от 47 до 64 в зависимости от цвета</td>
+                  </tr>
+                  <tr>
+                    <td>Условная вязкость по вискозиметру типа ВЗ – 246 (4) или ВЗ – 4 при Т=(20+5)С, с</td>
+                    <td>70-120</td>
+                  </tr>
+                  <tr>
+                    <td>Степень перетира, мкм</td>
+                    <td>не более 30-35</td>
+                  </tr>
+                  <tr>
+                    <td>Стойкость пленки при Т=(20 + 2)С к статическому воздействию, ч</td>
+                    <td>не менее 48</td>
+                  </tr>
+                  <tr>
+                    <td>Время высыхания при температуре (20+ 2)оС до степени 3, ч</td>
+                    <td>не более 30</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product-desc">
+                <h3 class="sub-title">ПРИМЕНЕНИЕ</h3>
+                <p>
+                  В условиях автосервиса или гаража эту эмаль наносят методом пневматического распыления. Для сушки можно применять рефлектор с бесцветной лампой. Эмаль МЛ-1110 ложится на поверхности, обработанные грунтовкой ГФ-021. При первичной окраске наносят 3-4 слоя, а при ремонтной подкраске по старой эмали — 2-3. Первый слой эмали наносят на предварительно высушенный слой грунтовки, второй — на недосушенный первый слой эмали после 5—7-минутной выдержки при 18-22 *С.
+                  
+                </p>
+                <p>
+                  После высыхания эмаль должна образовывать однородную пленку без морщин, «кратеров» посторонних включений.
+                  
+                </p>
+                <p>
+                  При применении пользуются пневматическим распылением и распылением в электрополе на сухую, предварительно очищенную от пыли, ржавчины и других загрязнений поверхность.
+                  
+                </p>
+                <p>
+                  При необходимости используют растворитель № 647, 650, сольвент, РЭ-1В, РЭ-2В.
+                  
+                </p>
+                <p>
+                  Расход эмали на однослойное покрытие составляет: 100г/м2
+                  
+                </p>
+                <p>
+                  Срок хранения – 6 месяцев со дня изготовления.
+                  
+                </p>
+                <p>
+                  Эмаль хранят в плотно закрытой таре, предохраняя от влаги и прямых солнечных лучей.
+                  
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="similar section section_decor-bottom">
+            <div class="content-width">
+              <h2 class="section-title section-title_align_left">Похожие товары</h2>
+              <div class="similar__items"><a class="catalog-product catalog-product_borderless" href="./product.html">
+                  <div class="catalog-product__img"><img src="./img/content/product-1.png" alt="product"></div>
+                  <p class="catalog-product__title">Грунтовка ГФ-017</p>
+                  <p class="catalog-product__desc">ТУ 2312-007-881698636-2012</p>
+                  <p class="catalog-product__price">
+                    Цена: 75.00 руб.
+                    
+                  </p></a><a class="catalog-product catalog-product_borderless" href="./product.html">
+                  <div class="catalog-product__img"><img src="./img/content/product-1.png" alt="product"></div>
+                  <p class="catalog-product__title">Грунтовка ГФ-017</p>
+                  <p class="catalog-product__desc">ТУ 2312-007-881698636-2012</p>
+                  <p class="catalog-product__price">
+                    Цена: 75.00 руб.
+                    
+                  </p></a><a class="catalog-product catalog-product_borderless" href="./product.html">
+                  <div class="catalog-product__img"><img src="./img/content/product-1.png" alt="product"></div>
+                  <p class="catalog-product__title">Грунтовка ГФ-017</p>
+                  <p class="catalog-product__desc">ТУ 2312-007-881698636-2012</p>
+                  <p class="catalog-product__price">
+                    Цена: 75.00 руб.
+                    
+                  </p></a><a class="catalog-product catalog-product_borderless" href="./product.html">
+                  <div class="catalog-product__img"><img src="./img/content/product-1.png" alt="product"></div>
+                  <p class="catalog-product__title">Грунтовка ГФ-017</p>
+                  <p class="catalog-product__desc">ТУ 2312-007-881698636-2012</p>
+                  <p class="catalog-product__price">
+                    Цена: 75.00 руб.
+                    
+                  </p></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="content-width">
+          <div class="clients__items">
+            <div class="client__item"><img src="./img/content/client-1.png" alt="client"></div>
+            <div class="client__item"><img src="./img/content/client-2.png" alt="client"></div>
+            <div class="client__item"><img src="./img/content/client-3.png" alt="client"></div>
+            <div class="client__item"><img src="./img/content/client-4.png" alt="client"></div>
+            <div class="client__item"><img src="./img/content/client-5.png" alt="client"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="content-width">
+          <div class="logo footer__logo"><a class="logo__link" href="#"><img src="./img/decor/logo_light.png" alt="logo"></a></div>
+          <div class="footer__contacts">
+            <div class="contact contact_phone">
+              <p class="contact__text">+7 (343) 344-34-96</p>
+            </div>
+            <div class="contact contact_adress">
+              <p class="contact__text">Екатеринбург, ул. Фронтовых Бригад, 35</p>
+            </div>
+            <div class="contact contact_email"><a class="contact__text" href="#">
+                uzli2000@mail.ru
+                </a></div>
+          </div>
+          <div class="footer__soc">
+            <h3 class="footer__title">Мы в соцсетях</h3>
+            <div class="footer__soc-list"><a class="footer__soc-vk" href="#"></a><a class="footer__soc-fb" href="#"></a><a class="footer__soc-twitt" href="#"></a><a class="footer__soc-od" href="#"></a></div>
+          </div>
+          <div class="footer__links">
+            <div class="footer__links-list"><a href="#">Каталог</a><a href="#">Для поставщиков</a><a href="#">О компании</a></div>
+            <div class="footer__links-list"><a href="#">Акции</a><a href="#">Контакты</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="content-width">
+          <p>&copy;&nbsp;&laquo;Уральский завод лакокрасочных изделий&raquo;, 2000&ndash;2017</p>
+        </div>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
