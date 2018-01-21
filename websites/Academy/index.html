@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Academy</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      //- Loader
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d')
+      //- Detect client config
+      document.body.classList.remove('no-js')
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header-top">
+        <div class="header-top__content content-width">
+          <div class="consult-btn-wrap">
+            <button class="btn-plain btn-plain_consult">Получить консультацию</button>
+          </div>
+          <div class="btn-plain-group">
+            <button class="btn-plain btn-plain_user">Вход</button><a class="btn-plain btn-plain_desires" href="./basket.html">Желания</a><a class="btn-plain btn-plain_basket" href="./basket.html">Корзина</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="header-main__content content-width">
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo.png" alt="logo"></a></div>
+          <button class="side-menu-btn clear-btn"></button>
+          <nav class="main-nav">
+            <div class="main-nav__overlay"></div>
+            <ul class="main-nav__list animate trs clear-ul">
+              <li class="main-nav__item"><a class="main-nav__link" href="././index.html">МАГАЗИН</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./repair.html">ТРЕНИНГИ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./buy.html">РАСПИСАНИЕ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./sale.html">О ЦЕНТРЕ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./contacts.html">СТАТЬИ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./contacts.html">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="main-nav__mob-button"></div>
+          </nav>
+          <div class="main-search">
+            <button class="main-search__btn clear-btn"></button>
+          </div>
+        </div>
+      </div>
+      <div class="side-menu-wrap">
+        <div class="side-menu-overlay"></div>
+        <div class="side-menu trs animate">
+          <div class="side-menu-close"></div>
+          <div class="side-menu__content">
+            <div class="side-menu__block">
+              <h3 class="side-menu__title">КАТЕГОРИИ ТОВАРОВ</h3>
+              <ul class="side-menu__list clear-ul">
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДЛЯ ДВОИХ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДЛЯ ЖЕНЩИН</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДЛЯ МУЖЧИН</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">КОСМЕТИКА</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">БЕЛЬЁ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ПОДАРКИ</a></li>
+              </ul>
+            </div>
+            <div class="side-menu__block">
+              <h3 class="side-menu__title">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h3>
+              <ul class="side-menu__list clear-ul">
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ГАРАНТИИ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДОСТАВКА И ОПЛАТА</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">АКЦИИ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ПОДАРКИ И БОНУСЫ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome">
+        <div class="welcome__content">
+          <div class="welcome-carousel">
+            <div class="welcome-carousel__item img-overlay" style="background-image: url('./img/content/welcome-slide-1.png');">
+              <div class="welcome-carousel__item-content content-width">
+                <p class="welcome-carousel__item-tag">ТРЕНИНГ</p>
+                <h2 class="welcome-carousel__item-title">«ТАЙНЫ ЖЕНСКИХ ОРГАЗМОВ»</h2><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+              </div>
+            </div>
+            <div class="welcome-carousel__item img-overlay" style="background-image: url('./img/content/welcome-slide-1.png');">
+              <div class="welcome-carousel__item-content content-width">
+                <p class="welcome-carousel__item-tag">ТРЕНИНГ</p>
+                <h2 class="welcome-carousel__item-title">«ТАЙНЫ ЖЕНСКИХ ОРГАЗМОВ»</h2><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+              </div>
+            </div>
+            <div class="welcome-carousel__item img-overlay" style="background-image: url('./img/content/welcome-slide-1.png');">
+              <div class="welcome-carousel__item-content content-width">
+                <p class="welcome-carousel__item-tag">ТРЕНИНГ</p>
+                <h2 class="welcome-carousel__item-title">«ТАЙНЫ ЖЕНСКИХ ОРГАЗМОВ»</h2><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-us section">
+        <div class="about-us__content content-width">
+          <h2 class="section-title">ПАРУ СЛОВ О НАС</h2>
+          <p class="text-center">
+            «Академия Сексологии» – уникальный проект, где Вы узнаете как укрепить семью,
+            построить счастливые и долгосрочные отношения. Здесь Вы сможете развиться во всех аспектах,
+            важных для гармоничных семейных отношений: психологическом, сексуальном и в сфере здоровья.
+            Сейчас тренинг-центр «Академия Сексологии» можно посетить в городе Челябинск!
+            
+          </p>
+          <div class="about-us__items">
+            <div class="info-card">
+              <div class="info-card__img img-overlay"><img src="./img/content/about-us-1.jpg" alt="about"></div>
+              <p class="info-card__title">Гармоничные отношения</p>
+              <p class="info-card__text">Это залог любой крепкой <br>и здоровой семьи. Уметь любить, понимать своего партнера нужно учиться и мы в этом поможем.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__img img-overlay"><img src="./img/content/about-us-2.jpg" alt="about"></div>
+              <p class="info-card__title">Крепкая семья</p>
+              <p class="info-card__text">Построить крепкую семью – это искусство, которому учатся годами.<br> Мы рассказываем на собственном опыте как построить крепкую семью.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__img img-overlay"><img src="./img/content/about-us-3.jpg" alt="about"></div>
+              <p class="info-card__title">Здоровые дети</p>
+              <p class="info-card__text">
+                Главная часть жизни любого родителя – это ответственный подход к правильному воспитанию и развитию ребенка с первых дней.
+                
+              </p>
+            </div>
+          </div>
+          <div class="btn-main-wrap"><a class="btn-main" href="#">О ЦЕНТРЕ</a></div>
+        </div>
+      </section>
+      <section class="trainings section section_bg_light">
+        <div class="trainings__content content-width">
+          <h2 class="section-title">ПОПУЛЯРНЫЕ ТРЕНИНГИ</h2>
+          <div class="trainings__items">
+            <div class="training-card">
+              <div class="training-card__img img-overlay"><img src="./img/content/training-1.jpg" alt="training"></div>
+              <div class="training-card__info">
+                <h3 class="training-card__title">Любовь <br>в отношениях</h3>
+                <p class="training-card__desc">Если вам не безразлично, что и как происходит в вашей жизни, если вы хотите качественных отношений, ждём вас на нашем тренинге.</p>
+                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
+                <div class="training-card__bottom">
+                  <p class="training-card__price"><span class="training-card__price-value">2 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="training-card">
+              <div class="training-card__img img-overlay"><img src="./img/content/training-2.jpg" alt="training"></div>
+              <div class="training-card__info">
+                <h3 class="training-card__title">Оргазм на кончиках пальцев</h3>
+                <p class="training-card__desc">Все о психологии и технике самого яркого и продолжительного женского оргазма, симулировать который невозможно!</p>
+                <div class="training-card__props"><span class="training-card__tag training-card__tag_man">Для мужчин</span><span class="training-card__time">1 ч 30 мин</span></div>
+                <div class="training-card__bottom">
+                  <p class="training-card__price"><span class="training-card__price-value">4 500</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="training-card">
+              <div class="training-card__img img-overlay"><img src="./img/content/training-3.jpg" alt="training"></div>
+              <div class="training-card__info">
+                <h3 class="training-card__title">От прелюдии<br> к оргазму</h3>
+                <p class="training-card__desc">Данный тренинг объединяет в себе все главные и волнующие темы сексуального мастерства. Вы пройдете весь путь от прелюдии</p>
+                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">3 ч 00 мин</span></div>
+                <div class="training-card__bottom">
+                  <p class="training-card__price"><span class="training-card__price-value">4 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="training-card">
+              <div class="training-card__img img-overlay"><img src="./img/content/training-4.jpg" alt="training"></div>
+              <div class="training-card__info">
+                <h3 class="training-card__title">Искусство <br>идеального минета</h3>
+                <p class="training-card__desc">Хотите стать для мужа одной единственной и любимой на всю жизнь? Не знать ни соперниц, ни измен, ни внезапного охлаждения</p>
+                <div class="training-card__props"><span class="training-card__tag training-card__tag_woman">Для женщин</span><span class="training-card__time">1 ч 00 мин</span></div>
+                <div class="training-card__bottom">
+                  <p class="training-card__price"><span class="training-card__price-value">1 500</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-main-wrap"><a class="btn-main" href="#">ВСЕ ТРЕНИНГИ</a></div>
+        </div>
+      </section>
+      <section class="reviews section">
+        <div class="reviews__content content-width">
+          <h2 class="section-title">ОТЗЫВЫ О ТРЕНИНГАХ</h2>
+          <div class="review-carousel-wrap">
+            <div class="review-carousel">
+              <div class="review">
+                <div class="review__content">
+                  <div class="review__img"><img src="./img/content/review-1.png" alt="review"></div>
+                  <div class="review__info">
+                    <h3 class="review__title">Чернышова Евгения</h3>
+                    <p class="review__text">
+                      Давно искала полную информацию о данной процедуре, но везде как то
+                      написано не точно и не найти полную информацию, а тут случайно получила листовку с тренингами Академии сексологии и нашла то, что искала. Ура!
+                      Все четко и понятно мне тренер рассказал и ответил на все интересующие
+                      меня вопросы. Результатом я доволна!
+                      
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__content">
+                  <div class="review__img"><img src="./img/content/review-1.png" alt="review"></div>
+                  <div class="review__info">
+                    <h3 class="review__title">Чернышова Евгения</h3>
+                    <p class="review__text">
+                      Давно искала полную информацию о данной процедуре, но везде как то
+                      написано не точно и не найти полную информацию, а тут случайно получила листовку с тренингами Академии сексологии и нашла то, что искала. Ура!
+                      Все четко и понятно мне тренер рассказал и ответил на все интересующие
+                      меня вопросы. Результатом я доволна!
+                      
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__content">
+                  <div class="review__img"><img src="./img/content/review-1.png" alt="review"></div>
+                  <div class="review__info">
+                    <h3 class="review__title">Чернышова Евгения</h3>
+                    <p class="review__text">
+                      Давно искала полную информацию о данной процедуре, но везде как то
+                      написано не точно и не найти полную информацию, а тут случайно получила листовку с тренингами Академии сексологии и нашла то, что искала. Ура!
+                      Все четко и понятно мне тренер рассказал и ответил на все интересующие
+                      меня вопросы. Результатом я доволна!
+                      
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__content">
+                  <div class="review__img"><img src="./img/content/review-1.png" alt="review"></div>
+                  <div class="review__info">
+                    <h3 class="review__title">Чернышова Евгения</h3>
+                    <p class="review__text">
+                      Давно искала полную информацию о данной процедуре, но везде как то
+                      написано не точно и не найти полную информацию, а тут случайно получила листовку с тренингами Академии сексологии и нашла то, что искала. Ура!
+                      Все четко и понятно мне тренер рассказал и ответил на все интересующие
+                      меня вопросы. Результатом я доволна!
+                      
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trainers section section_bg_light">
+        <div class="trainers__content content-width">
+          <h2 class="section-title">НАШИ ТРЕНЕРЫ</h2>
+          <div class="trainers-carousel-wrap">
+            <div class="trainers-carousel">
+              <div class="trainers-carousel__item">
+                <div class="trainer-card">
+                  <div class="trainer-card__img"><img src="./img/content/trainer.png" alt="trainer"></div>
+                  <div class="trainer-card__info">
+                    <p class="trainer-card__title">ВАЛЕРИЯ ШЕВЧЕНКО</p>
+                    <p class="trainer-card__text">Сексолог и психотерапевт высшей квалификационной категории</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trainers-carousel__item">
+                <div class="trainer-card">
+                  <div class="trainer-card__img"><img src="./img/content/trainer.png" alt="trainer"></div>
+                  <div class="trainer-card__info">
+                    <p class="trainer-card__title">ЕЛЕНА РОМАНОВА</p>
+                    <p class="trainer-card__text">Практикующий секс-тренер, маркетолог</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trainers-carousel__item">
+                <div class="trainer-card">
+                  <div class="trainer-card__img"><img src="./img/content/trainer.png" alt="trainer"></div>
+                  <div class="trainer-card__info">
+                    <p class="trainer-card__title">ВАЛЕРИЯ КРАСАВИНА</p>
+                    <p class="trainer-card__text">Бизнес-тренер, психолог, медицинский психолог</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trainers-carousel__item">
+                <div class="trainer-card">
+                  <div class="trainer-card__img"><img src="./img/content/trainer.png" alt="trainer"></div>
+                  <div class="trainer-card__info">
+                    <p class="trainer-card__title">ВАЛЕРИЯ ШЕВЧЕНКО</p>
+                    <p class="trainer-card__text">Сексолог и психотерапевт высшей квалификационной категории</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trainers-carousel__item">
+                <div class="trainer-card">
+                  <div class="trainer-card__img"><img src="./img/content/trainer.png" alt="trainer"></div>
+                  <div class="trainer-card__info">
+                    <p class="trainer-card__title">ЕЛЕНА РОМАНОВА</p>
+                    <p class="trainer-card__text">Практикующий секс-тренер, маркетолог</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trainers-carousel__item">
+                <div class="trainer-card">
+                  <div class="trainer-card__img"><img src="./img/content/trainer.png" alt="trainer"></div>
+                  <div class="trainer-card__info">
+                    <p class="trainer-card__title">ВАЛЕРИЯ КРАСАВИНА</p>
+                    <p class="trainer-card__text">Бизнес-тренер, психолог, медицинский психолог</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="events section">
+        <div class="events__content">
+          <div class="content-width">
+            <h2 class="section-title">БЛИЖАЙШИЕ МЕРОПРИЯТИЯ</h2>
+          </div>
+          <div class="events-carousel-wrap">
+            <div class="events-carousel">
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>21</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>22</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>23</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>24</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>25</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>26</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>27</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>28</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card">
+                <div class="event-card__content">
+                  <div class="event-card__img"><img src="./img/content/events-1.png" alt="event"></div>
+                  <div class="event-card__info">
+                    <p class="event-card__time"><strong>29</strong><span>июля</span></p>
+                    <div class="event-card__delim"><img src="./img/decor/hurt-2.png" alt="hurt"></div>
+                    <div class="event-card__title"><span>Тренинг</span>
+                      <p>«Любовь в отношениях»</p>
+                    </div>
+                    <p class="event-card__tag">Для всех</p><a class="btn-main" href="#">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content content-width">
+        <div class="logo footer__logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo_dark.png" alt="logo"></a></div>
+        <div class="footer-nav">
+          <h3 class="footer-title">О ЦЕНТРЕ</h3>
+          <ul class="footer-nav__list clear-ul">
+            <li><a href="#">Миссия</a></li>
+            <li><a href="#">Ценности</a></li>
+            <li><a href="#">Команда</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer-title">ТРЕНИНГИ</h3>
+          <ul class="footer-nav__list clear-ul">
+            <li><a href="#">Для всех</a></li>
+            <li><a href="#">Для женщин</a></li>
+            <li><a href="#">Для мужчин</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer-title">ПОЛЕЗНОЕ</h3>
+          <ul class="footer-nav__list clear-ul">
+            <li><a href="#">Расписание</a></li>
+            <li><a href="#">Статьи</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <h3 class="footer-title">КОНТАКТЫ</h3>
+          <p class="footer-contact footer-contact_adress">Челябинск, пр. Ленина, 81, оф. 713</p>
+          <p class="footer-contact footer-contact_phone">8 (910) 235-50-05</p>
+          <div class="footer-soc-links"><a class="vk" href="#"></a><a class="insta" href="#"></a><a class="youtube" href="#"></a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="content-width">
+          <p>&copy;&nbsp;2017 &laquo;Академия сексологии&raquo;. Все права защищены.</p>
+        </div>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
