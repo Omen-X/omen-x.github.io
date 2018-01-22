@@ -2,7 +2,7 @@
 
 // ========>> FUNCTIONS <<========
 
-function sideNav() {
+function sideMenu() {
   if ($('.side-menu').length) {
     var navListWrap = document.querySelector('.side-menu');
     var $navButton = $('.side-menu-btn');
@@ -126,7 +126,7 @@ function documentReady() {
 
   // ========>> FUNCTIONS CALL <<========
 
-  sideNav();
+  sideMenu();
   carouselMain();
   welcomeCarousel();
   reviewCarousel();
