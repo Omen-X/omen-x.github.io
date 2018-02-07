@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Academy</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d');
+      document.body.classList.remove('no-js');
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header-top">
+        <div class="header-top__content content-width">
+          <div class="consult-btn-wrap">
+            <button class="btn-plain btn-plain_consult">Получить консультацию</button>
+          </div>
+          <div class="btn-plain-group">
+            <button class="btn-plain btn-plain_user">Вход</button><a class="btn-plain btn-plain_desires" href="./basket.html">Желания</a><a class="btn-plain btn-plain_basket" href="./basket.html">Корзина</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="header-main__content content-width">
+          <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo.png" alt="logo"></a></div>
+          <button class="side-menu-btn clear-btn"></button>
+          <nav class="main-nav">
+            <div class="main-nav__overlay"></div>
+            <ul class="main-nav__list animate trs clear-ul">
+              <li class="main-nav__item"><a class="main-nav__link" href="././catalog.html">МАГАЗИН</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./trainings.html">ТРЕНИНГИ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./buy.html">РАСПИСАНИЕ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./about.html">О ЦЕНТРЕ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./articles.html">СТАТЬИ</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="./contacts.html">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="main-nav__mob-button"></div>
+          </nav>
+          <div class="main-search">
+            <button class="main-search__btn clear-btn"></button>
+          </div>
+        </div>
+      </div>
+      <div class="side-menu-wrap">
+        <div class="side-menu-overlay"></div>
+        <div class="side-menu trs animate">
+          <div class="side-menu-close"></div>
+          <div class="side-menu__content">
+            <div class="side-menu__block">
+              <h3 class="side-menu__title">КАТЕГОРИИ ТОВАРОВ</h3>
+              <ul class="side-menu__list clear-ul">
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДЛЯ ДВОИХ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДЛЯ ЖЕНЩИН</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДЛЯ МУЖЧИН</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">КОСМЕТИКА</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">БЕЛЬЁ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ПОДАРКИ</a></li>
+              </ul>
+            </div>
+            <div class="side-menu__block">
+              <h3 class="side-menu__title">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h3>
+              <ul class="side-menu__list clear-ul">
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ГАРАНТИИ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ДОСТАВКА И ОПЛАТА</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">АКЦИИ</a></li>
+                <li class="side-menu__item"><a class="side-menu__link" href="#">ПОДАРКИ И БОНУСЫ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="breadcrumbs">
+        <div class="breadcrumbs__content content-width"><a class="breadcrumbs__link" href="./index.html">Главная</a><span class="breadcrumbs__current">Для нее</span></div>
+      </section>
+      <section class="catalog section">
+        <div class="content-width">
+          <h2 class="section-title">ДЛЯ НЕЁ</h2>
+          <div class="catalog__desc">
+            <h4 class="catalog__desc-title">Товары для неё</h4>
+            <p class="catalog__desc-text">
+              Среди интимных товаров секс-игрушки для женщин занимают особое место. Женское тело подобно музыкальному инструменту, оно так же нуждается в заботе
+              и внимании, а чтобы извлечь из него прекрасную чувственную мелодию, потребуется настоящий талант. Именно с таким подходом и производятся лучшие интимные игрушки для женщин, представленные в нашем каталоге – каждый девайс создан с учетом специфики женской физиологии. А оригинальный дизайн изделий сразу настраивает владельцев на игривый лад. Если Вы хотите испытать целую гамму эротических переживаний и ощутить незабываемое сексуальное наслаждение,
+              
+            </p>
+            <p class="text-expander-target catalog__desc-text">
+              Попробуйте разнообразить любовную игру с помощью умного вибромассажера, трепетного стимулятора для клитора или вагинальных шариков, вызывающих нежную истому.
+              
+              Все интимные товары для женщин, которые Вы найдете в этом разделе нашего магазина, выполнены из высококачественных гипоаллергенных материалов. Эротическими игрушками для женщин Вы сможете наслаждаться в одиночестве или же использовать их
+              в парной любовной игре.
+              
+            </p>
+            <div class="text-expander">
+              <button class="text-expander__btn">Читать полностью</button>
+            </div>
+          </div>
+          <div class="catalog__info">
+            <h4 class="catalog__info-title">для неё</h4>
+            <p class="catalog__info-count"><span>256</span> товаров</p>
+          </div>
+          <div class="catalog-items">
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_new"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-1.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_3"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>WE-VIBE Sensations in Sync</p>
+                  <p>Набор Sync +Tango</p>
+                </div>
+                <p class="product-card__desc">We-Vibe Sync уникален тем, что может принимать форму вашего тела. В вибраторе предусмотрены две зоны</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>16 800</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__photo"><img src="./img/content/product-card-2.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_3"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Вагинальные шарики Lelo Luna</p>
+                  <p>Beads Mini</p>
+                </div>
+                <p class="product-card__desc">Такие вагинальные шарики – уменьшенный вариант классических Luna Beads. Эти шарики созданы</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>4 500</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_hit"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-3.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_5"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Luna &amp; Selene</p>
+                  <p>вибростимулятор с ДУ</p>
+                </div>
+                <p class="product-card__desc">Luna &amp; Selene – это комплект из двух массажеров в виде классического водонепроницаемого вибратора</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>9 300</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_new"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-4.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_4"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Вибромассажер</p>
+                  <p>VELA</p>
+                </div>
+                <p class="product-card__desc">Стильный и компактный вибромассажер VELA, выполненный в дизайнерской технике «зеркальный</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>4 200</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_new"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-1.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_3"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>WE-VIBE Sensations in Sync</p>
+                  <p>Набор Sync +Tango</p>
+                </div>
+                <p class="product-card__desc">We-Vibe Sync уникален тем, что может принимать форму вашего тела. В вибраторе предусмотрены две зоны</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>16 800</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__photo"><img src="./img/content/product-card-2.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_3"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Вагинальные шарики Lelo Luna</p>
+                  <p>Beads Mini</p>
+                </div>
+                <p class="product-card__desc">Такие вагинальные шарики – уменьшенный вариант классических Luna Beads. Эти шарики созданы</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>4 500</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_hit"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-3.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_5"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Luna &amp; Selene</p>
+                  <p>вибростимулятор с ДУ</p>
+                </div>
+                <p class="product-card__desc">Luna &amp; Selene – это комплект из двух массажеров в виде классического водонепроницаемого вибратора</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>9 300</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_new"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-4.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_4"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Вибромассажер</p>
+                  <p>VELA</p>
+                </div>
+                <p class="product-card__desc">Стильный и компактный вибромассажер VELA, выполненный в дизайнерской технике «зеркальный</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>4 200</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_new"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-1.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_3"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>WE-VIBE Sensations in Sync</p>
+                  <p>Набор Sync +Tango</p>
+                </div>
+                <p class="product-card__desc">We-Vibe Sync уникален тем, что может принимать форму вашего тела. В вибраторе предусмотрены две зоны</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>16 800</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__photo"><img src="./img/content/product-card-2.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_3"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Вагинальные шарики Lelo Luna</p>
+                  <p>Beads Mini</p>
+                </div>
+                <p class="product-card__desc">Такие вагинальные шарики – уменьшенный вариант классических Luna Beads. Эти шарики созданы</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>4 500</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_hit"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-3.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_5"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Luna &amp; Selene</p>
+                  <p>вибростимулятор с ДУ</p>
+                </div>
+                <p class="product-card__desc">Luna &amp; Selene – это комплект из двух массажеров в виде классического водонепроницаемого вибратора</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>9 300</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__tag product-card__tag_new"></div>
+              <div class="product-card__photo"><img src="./img/content/product-card-4.jpg" alt="product">
+                <button class="product-card__like"></button>
+              </div>
+              <div class="product-card__info">
+                <div class="star-rating star-rating_value_4"><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span><span class="star-rating__item"></span></div>
+                <div class="product-card__title">
+                  <p>Вибромассажер</p>
+                  <p>VELA</p>
+                </div>
+                <p class="product-card__desc">Стильный и компактный вибромассажер VELA, выполненный в дизайнерской технике «зеркальный</p>
+                <div class="product-card__footer">
+                  <p class="product-card__price"><strong>4 200</strong> р.</p>
+                  <button class="btn-main btn-main_tiny">В КОРЗИНУ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination"><a class="arrow arrow_disabled" href="#"></a>
+            <div class="pagination__links"><a class="pagination__link pagination__link_current" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link" href="#">3</a><a class="pagination__link" href="#">4</a><a class="pagination__link" href="#">5</a></div><a class="arrow arrow_next" href="#"></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content content-width">
+        <div class="logo footer__logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo_dark.png" alt="logo"></a></div>
+        <div class="footer-nav">
+          <h3 class="footer-title">О ЦЕНТРЕ</h3>
+          <ul class="footer-nav__list clear-ul">
+            <li><a href="#">Миссия</a></li>
+            <li><a href="#">Ценности</a></li>
+            <li><a href="#">Команда</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer-title">ТРЕНИНГИ</h3>
+          <ul class="footer-nav__list clear-ul">
+            <li><a href="#">Для всех</a></li>
+            <li><a href="#">Для женщин</a></li>
+            <li><a href="#">Для мужчин</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer-title">ПОЛЕЗНОЕ</h3>
+          <ul class="footer-nav__list clear-ul">
+            <li><a href="#">Расписание</a></li>
+            <li><a href="#">Статьи</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <h3 class="footer-title">КОНТАКТЫ</h3>
+          <p class="footer-contact footer-contact_adress">Челябинск, пр. Ленина, 81, оф. 713</p>
+          <p class="footer-contact footer-contact_phone">8 (910) 235-50-05</p>
+          <div class="footer-soc-links"><a class="vk" href="#"></a><a class="insta" href="#"></a><a class="youtube" href="#"></a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="content-width">
+          <p>&copy;&nbsp;2017 &laquo;Академия сексологии&raquo;. Все права защищены.</p>
+        </div>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>

@@ -40,6 +40,9 @@ function sideMenu() {
   }
 }
 
+/**
+ * Общий конфиг для слайдеров
+ */
 function carouselMain() {
   // Запускаем поле инициализации слайдеров
   setTimeout(function () {
@@ -93,6 +96,25 @@ function trainersCarousel() {
       arrows: true,
       dots: false,
       prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      responsive: [{
+        breakpoint: 899,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  }
+}
+
+function similarCarousel() {
+  if ($('.similar-carousel').length) {
+    $('.similar-carousel').slick({
+      slidesToShow: 4,
+      speed: 1000,
+      arrows: true,
+      dots: false,
+      prevArrow: '<button type="button" class="slick-prev"></button>',
       nextArrow: '<button type="button" class="slick-next"></button>'
     });
   }
@@ -108,7 +130,96 @@ function eventsCarousel() {
       arrows: true,
       dots: false,
       prevArrow: '<button type="button" class="slick-prev"></button>',
-      nextArrow: '<button type="button" class="slick-next"></button>'
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      responsive: [{
+        breakpoint: 899,
+        settings: {
+          centerMode: false,
+          centerPadding: 0,
+          slidesToShow: 3
+        }
+      }]
+    });
+  }
+}
+
+/**
+ * Кладем текст для раскрытия рядом с .text-expander
+ */
+function textExpander() {
+  if ($('.text-expander').length) {
+    var $trigger = $('.text-expander__btn');
+
+    $trigger.click(function () {
+      var $this = $(this);
+      var $wrapper = $this.parent();
+      var currTarget = $wrapper.siblings('.text-expander-target');
+
+      currTarget.slideDown(350, function () {
+        return $wrapper.addClass('text-expander_hidden');
+      });
+    });
+  }
+}
+
+function product() {
+  if ($('.product').length) {
+    $('.product-carousel').lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      thumbMargin: 30,
+      thumbItem: 4
+    });
+  }
+}
+
+function myCounter() {
+  if ($('.my-counter').length) {
+    var $btnUp = $('.my-counter__btn-up');
+    var $btnDown = $('.my-counter__btn-down');
+    var disabledClass = 'my-counter__btn_disabled';
+
+    $btnUp.click(function (event) {
+      var $btn = $(event.target);
+      var $field = $btn.siblings('.my-counter__value');
+      var value = +$field.val();
+
+      $field.val(value + 1);
+      if (value > 1) $btn.siblings('.my-counter__btn-down').removeClass(disabledClass);
+    });
+
+    $btnDown.click(function (event) {
+      var $btn = $(event.target);
+      var $field = $btn.siblings('.my-counter__value');
+      var value = +$field.val();
+
+      if (value <= 1) {
+        $btn.addClass(disabledClass);
+        return;
+      }
+
+      $field.val(value - 1);
+    });
+  }
+}
+
+function productTabs() {
+  if ($('.product-spec__nav').length) {
+    var $link = $('.product-spec__nav-item');
+
+    $link.click(function () {
+      var $this = $(this);
+      var $tabs = $this.parent().siblings('.product-spec__tabs');
+      var $tab = $tabs.children();
+
+      var currTab = $this.attr('data-tab-for');
+
+      $tab.removeClass('product-spec__tab_active');
+      $link.removeClass('product-spec__nav-item_active');
+
+      $this.addClass('product-spec__nav-item_active');
+      $tabs.children('.product-spec__tab[data-tab=' + currTab + ']').addClass('product-spec__tab_active');
     });
   }
 }
@@ -132,6 +243,11 @@ function documentReady() {
   reviewCarousel();
   trainersCarousel();
   eventsCarousel();
+  textExpander();
+  product();
+  myCounter();
+  productTabs();
+  similarCarousel();
 } // end document ready
 
 // ========>> UTILS <<========
