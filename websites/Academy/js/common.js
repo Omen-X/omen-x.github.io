@@ -35,6 +35,11 @@ function sideMenu() {
       }
     };
 
+    $('.side-menu').niceScroll({
+      cursorcolor: '#fca1af',
+      cursorwidth: '7px'
+    });
+
     $navButton.click(navToggle);
     $close.click(navToggle);
   }
@@ -100,10 +105,45 @@ function trainersCarousel() {
       responsive: [{
         breakpoint: 899,
         settings: {
+          slidesToShow: 1,
+          centerMode: false
+        }
+      }]
+    });
+  }
+}
+
+function articlesCarousel() {
+  if ($('.articles-carousel').length) {
+    $('.articles-carousel').slick({
+      slidesToShow: 3,
+      // autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 1000,
+      arrows: true,
+      dots: false,
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 575,
+        settings: {
           slidesToShow: 1
         }
       }]
     });
+  }
+}
+
+function lazyLoadMap() {
+  if ($('.map').length) {
+    var mapFrame = $('.map iframe');
+    var src = mapFrame.attr('data-src');
+    mapFrame.attr('src', src);
   }
 }
 
@@ -115,7 +155,23 @@ function similarCarousel() {
       arrows: true,
       dots: false,
       prevArrow: '<button type="button" class="slick-prev"></button>',
-      nextArrow: '<button type="button" class="slick-next"></button>'
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      responsive: [{
+        breakpoint: 1420,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
     });
   }
 }
@@ -132,11 +188,17 @@ function eventsCarousel() {
       prevArrow: '<button type="button" class="slick-prev"></button>',
       nextArrow: '<button type="button" class="slick-next"></button>',
       responsive: [{
-        breakpoint: 899,
+        breakpoint: 991,
         settings: {
           centerMode: false,
           centerPadding: 0,
           slidesToShow: 3
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false
         }
       }]
     });
@@ -224,6 +286,22 @@ function productTabs() {
   }
 }
 
+function scrollButton() {
+  if ($('.scroll-button').length) {
+    $('.scroll-button').click(function () {
+      var $this = $(this);
+      var configOffset = $this.attr('data-scroll-offset') || 0;
+      var $target = $($this.attr('data-target-scroll'));
+
+      var offset = configOffset ? eval($target.offset().top + configOffset[0] + configOffset.substr(1)) : $target.offset().top;
+
+      $('html, body').animate({
+        scrollTop: offset
+      }, 700);
+    });
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -242,12 +320,15 @@ function documentReady() {
   welcomeCarousel();
   reviewCarousel();
   trainersCarousel();
+  articlesCarousel();
   eventsCarousel();
   textExpander();
   product();
   myCounter();
   productTabs();
   similarCarousel();
+  scrollButton();
+  lazyLoadMap();
 } // end document ready
 
 // ========>> UTILS <<========
