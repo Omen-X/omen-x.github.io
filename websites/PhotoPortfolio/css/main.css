@@ -206,8 +206,8 @@ template, [hidden] {
   margin-right: auto; }
   @media only screen and (max-width: 1200px) {
     .content-width {
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
 
 .clearfix:before {
   content: "";
@@ -946,7 +946,10 @@ textarea {
   opacity: .8; }
 
 .gallery {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto; }
   .gallery .slick-arrow {
     top: -50px; }
   .gallery .slick-prev {
@@ -954,6 +957,10 @@ textarea {
     right: 130px; }
   .gallery .slick-next {
     right: 70px; }
+
+.gallery__content {
+  margin-left: auto;
+  margin-right: auto; }
 
 .gallery-carousel__item {
   padding-left: 12px;
@@ -1018,8 +1025,8 @@ textarea {
   margin-right: auto; }
   @media only screen and (max-width: 1200px) {
     .content-width {
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
 
 .clearfix:before {
   content: "";
@@ -1092,11 +1099,11 @@ html.modal-open {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    width: calc(100% + 30px);
+    width: calc(100% + 48px);
     background: #42d28d;
     margin-top: 10px;
-    margin-left: -15px;
-    margin-right: -15px; }
+    margin-left: -24px;
+    margin-right: -24px; }
   .slick-dots {
     bottom: 20px; }
   .welcome-carousel__item-content {
@@ -1121,12 +1128,15 @@ html.modal-open {
     padding: 40px 15px; }
   .services .section-title {
     font-size: 25px; }
+  .services-grid {
+    margin-left: -12px;
+    margin-right: -12px; }
   .services-grid__item {
     width: calc(50% - 24px); }
   .services-grid__item_wide {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0; }
+    margin-left: 12px;
+    margin-right: 12px; }
   .offer__content {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1215,17 +1225,28 @@ html.modal-open {
   .services .section-title {
     font-size: 18px; }
   .services-grid {
-    margin-top: 40px; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0; }
   .services-grid__item {
     width: 100%;
     max-width: 305px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     height: 240px; }
     .services-grid__item:nth-child(1) .services-grid__item-content {
       text-align: left; }
   .services-grid__item_wide {
-    max-width: none; }
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0; }
   .services-grid__item-text {
     text-align: left; }
   .offer__info {

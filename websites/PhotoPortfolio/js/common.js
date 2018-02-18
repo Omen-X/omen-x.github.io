@@ -36,7 +36,7 @@ function portfolioCarousel() {
 function galleryCarousel() {
   if ($('.gallery-carousel').length) {
     $('.gallery-carousel').slick({
-      slidesToShow: 4,
+      slidesToShow: 8,
       arrows: true,
       dots: false,
       centerMode: true,
@@ -44,6 +44,16 @@ function galleryCarousel() {
       prevArrow: '<button type="button" class="slick-prev"></button>',
       nextArrow: '<button type="button" class="slick-next"></button>',
       responsive: [{
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 6
+        }
+      }, {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
         breakpoint: 599,
         settings: {
           slidesToShow: 1,
