@@ -231,7 +231,14 @@ function product() {
       item: 1,
       loop: true,
       thumbMargin: 30,
-      thumbItem: 4
+      thumbItem: 4,
+      vertical: true,
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          thumbItem: 3
+        }
+      }]
     });
   }
 }
