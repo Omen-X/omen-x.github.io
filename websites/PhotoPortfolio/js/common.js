@@ -23,12 +23,14 @@ function portfolioCarousel() {
       dots: false,
       prevArrow: '<button type="button" class="slick-prev"></button>',
       nextArrow: '<button type="button" class="slick-next"></button>',
-      responsive: [{
-        breakpoint: 899,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
+      responsive: [
+        // {
+        //   breakpoint: 899,
+        //   settings: {
+        //     slidesToShow: 1
+        //   }
+        // }
+      ]
     });
   }
 }
@@ -56,7 +58,7 @@ function galleryCarousel() {
       }, {
         breakpoint: 599,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           centerMode: false
         }
       }]

@@ -1081,6 +1081,8 @@ html.modal-open {
     padding-right: 30px; } }
 
 @media only screen and (max-width: 56.1875em) {
+  .slick-arrow {
+    width: 22px; }
   .section {
     padding-top: 35px;
     padding-bottom: 35px; }
@@ -1113,8 +1115,8 @@ html.modal-open {
   .welcome-carousel__item-title {
     font-size: 30px; }
   .portfolio__items-wrap {
-    margin-top: 40px;
-    max-width: 350px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1268,13 +1270,12 @@ html.modal-open {
     .gallery .slick-arrow {
       top: 50%; }
     .gallery .slick-prev {
-      left: -40px;
+      left: -25px;
       right: auto; }
     .gallery .slick-next {
-      right: -40px; }
+      right: -25px; }
   .gallery__content {
-    max-width: 300px;
-    padding-left: 50px !important;
-    padding-right: 50px !important; }
+    padding-left: 30px;
+    padding-right: 30px; }
   .footer__title {
     margin-bottom: 15px; } }
