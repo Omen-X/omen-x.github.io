@@ -309,6 +309,53 @@ function scrollButton() {
   }
 }
 
+function basketPage() {
+  if ($('.basket').length) {
+    var $btnRemove = $('.basket-table__del');
+
+    $btnRemove.click(function () {
+      var $target = $(this);
+
+      $target.closest('tr').remove();
+    });
+
+    var $total = $('.basket-total_aside');
+    var totalTop = $total.offset().top;
+
+    $(window).on('scroll', function () {
+      if ($('html').scrollTop() > totalTop) $total.addClass('fixed');else $total.removeClass('fixed');
+    });
+
+    $('.form__field_select').select2();
+  }
+}
+
+function popupForms() {
+  if ($('.form-popup-wrap').length) {
+    var formWrap = document.querySelector('.form-popup-wrap');
+
+    document.body.addEventListener('click', function (event) {
+      if (event.target.classList.contains('form-trigger')) {
+        event.preventDefault();
+
+        var currFormSelector = $(event.target).attr('data-form');
+
+        formWrap.classList.add('visible');
+        document.documentElement.classList.add('modal-open');
+        $(currFormSelector).show();
+      }
+    });
+
+    formWrap.addEventListener('click', function (event) {
+      if (event.target.classList.contains('form-popup-wrap') || event.target.classList.contains('form-close')) {
+        $('.form-popup-wrap .form').hide();
+        formWrap.classList.remove('visible');
+        document.documentElement.classList.remove('modal-open');
+      }
+    });
+  }
+}
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -336,6 +383,8 @@ function documentReady() {
   similarCarousel();
   scrollButton();
   lazyLoadMap();
+  basketPage();
+  popupForms();
 } // end document ready
 
 // ========>> UTILS <<========

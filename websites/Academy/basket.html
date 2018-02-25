@@ -87,115 +87,203 @@
     </header>
     <main class="main">
       <section class="breadcrumbs">
-        <div class="breadcrumbs__content content-width"><a class="breadcrumbs__link" href="./index.html">Главная</a><span class="breadcrumbs__current">Тренинги</span></div>
+        <div class="breadcrumbs__content content-width"><a class="breadcrumbs__link" href="./index.html">Главная</a><span class="breadcrumbs__current">Оформление заказа</span></div>
       </section>
-      <section class="section">
+      <section class="section basket">
         <div class="content-width">
-          <h2 class="section-title">ТРЕНИНГИ</h2>
-          <div class="sub-menu"><span class="sub-menu__link sub-menu__link_current">ВСЕ ТРЕНИНГИ</span><span class="sub-menu__link">ДЛЯ ВСЕХ</span><span class="sub-menu__link">ДЛЯ ЖЕНЩИН</span><span class="sub-menu__link">ДЛЯ МУЖЧИН</span></div>
-          <div class="training-card-wrap">
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-1.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Любовь в отношениях</h3>
-                <p class="training-card__desc">Если вам не безразлично, что и как происходит в вашей жизни, если вы хотите качественных отношений, ждём вас на нашем тренинге.</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">2 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+          <h2 class="section-title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+          <div class="inner-section">
+            <div class="inner-section__content">
+              <div class="basket-counter">
+                <p class="basket-counter__val"><span>1</span></p>
+                <p class="basket-counter__text">ТОВАРЫ В КОРЗИНЕ</p>
+              </div>
+              <div class="basket-table-wrap">
+                <table class="basket-table">
+                  <tr>
+                    <th>Наименование</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-preview">
+                        <div class="product-preview__img"><img src="./img/content/product-nav-1.jpg" alt="product"></div>
+                        <div class="product-preview__info">
+                          <p class="product-preview__title">Okamoto Platinum 003</p>
+                          <p class="product-preview__text">Самые тонкие и прочные латексные <br> презервативы в мире!</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-counter"><span class="my-counter__btn my-counter__btn-down">–</span>
+                        <input class="my-counter__value" type="text" value="1"><span class="my-counter__btn my-counter__btn-up">+</span>
+                      </div>
+                    </td>
+                    <td><span>111700</span> р.</td>
+                    <td><span>111 400</span> р.</td>
+                    <td>
+                      <button class="basket-table__del btn-close"></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-preview">
+                        <div class="product-preview__img"><img src="./img/content/product-nav-1.jpg" alt="product"></div>
+                        <div class="product-preview__info">
+                          <p class="product-preview__title">Okamoto Platinum 003</p>
+                          <p class="product-preview__text">Самые тонкие и прочные латексные <br> презервативы в мире!</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-counter"><span class="my-counter__btn my-counter__btn-down">–</span>
+                        <input class="my-counter__value" type="text" value="1"><span class="my-counter__btn my-counter__btn-up">+</span>
+                      </div>
+                    </td>
+                    <td><span>111700</span> р.</td>
+                    <td><span>111 400</span> р.</td>
+                    <td>
+                      <button class="basket-table__del btn-close"></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-preview">
+                        <div class="product-preview__img"><img src="./img/content/product-nav-1.jpg" alt="product"></div>
+                        <div class="product-preview__info">
+                          <p class="product-preview__title">Okamoto Platinum 003</p>
+                          <p class="product-preview__text">Самые тонкие и прочные латексные <br> презервативы в мире!</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-counter"><span class="my-counter__btn my-counter__btn-down">–</span>
+                        <input class="my-counter__value" type="text" value="1"><span class="my-counter__btn my-counter__btn-up">+</span>
+                      </div>
+                    </td>
+                    <td><span>111700</span> р.</td>
+                    <td><span>111 400</span> р.</td>
+                    <td>
+                      <button class="basket-table__del btn-close"></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-preview">
+                        <div class="product-preview__img"><img src="./img/content/product-nav-1.jpg" alt="product"></div>
+                        <div class="product-preview__info">
+                          <p class="product-preview__title">Okamoto Platinum 003</p>
+                          <p class="product-preview__text">Самые тонкие и прочные латексные <br> презервативы в мире!</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-counter"><span class="my-counter__btn my-counter__btn-down">–</span>
+                        <input class="my-counter__value" type="text" value="1"><span class="my-counter__btn my-counter__btn-up">+</span>
+                      </div>
+                    </td>
+                    <td><span>111700</span> р.</td>
+                    <td><span>111 400</span> р.</td>
+                    <td>
+                      <button class="basket-table__del btn-close"></button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="basket-counter">
+                <p class="basket-counter__val"><span>2</span></p>
+                <p class="basket-counter__text">ЛИЧНАЯ ИНФОРМАЦИЯ</p>
+              </div>
+              <div class="login-alert">
+                <p class="login-alert__title bordered-title">Вы уже совершали покупки у нас?</p>
+                <p class="login-alert__text">Оформите заказ используя свой аккаунт и получайте больше скидок и бонусов.</p><a class="btn-main" href="#">ВОЙТИ И ОФОРМИТЬ ЗАКАЗ</a>
+              </div>
+              <div class="basket-login-form">
+                <div class="form-fields">
+                  <input class="form__field" type="text" placeholder="Имя">
+                  <input class="form__field" type="text" placeholder="Телефон">
+                  <input class="form__field" type="text" placeholder="E-mail">
                 </div>
               </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-2.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Тайны женских оргазмов</h3>
-                <p class="training-card__desc">Симуляция женского оргазма стала привычным делом. 95% женщин хотя бы раз имитировали наслаждение. Они стесняются</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для женщин</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">3 500</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+              <div class="basket-counter">
+                <p class="basket-counter__val"><span>3</span></p>
+                <p class="basket-counter__text">СПОСОБ ДОСТАВКИ</p>
+              </div>
+              <div class="sub-menu sub-menu_align_left"><span class="sub-menu__link">ПОЧТА (+150 р.)</span><span class="sub-menu__link sub-menu__link_current">КУРЬЕР (+350 р.)</span><span class="sub-menu__link">САМОВЫВОЗ</span></div>
+              <div class="form-fields">
+                <input class="form__field form__field_wide" type="text" placeholder="Город">
+                <input class="form__field form__field_wide" type="text" placeholder="Улица">
+                <input class="form__field" type="text" placeholder="Дом">
+                <input class="form__field" type="text" placeholder="Квартира">
+                <select class="form__field form__field_select">
+                  <option value="1">с 10:00 до 15:00</option>
+                  <option value="2">с 12:00 до 15:00</option>
+                  <option value="3">с 14:00 до 15:00</option>
+                  <option value="4">с 16:00 до 17:00</option>
+                </select>
+              </div>
+              <div class="basket-counter">
+                <p class="basket-counter__val"><span>4</span></p>
+                <p class="basket-counter__text">СПОСОБ ОПЛАТЫ</p>
+              </div>
+              <div class="sub-menu sub-menu_align_left"><span class="sub-menu__link sub-menu__link_current">НАЛИЧНЫМИ</span><span class="sub-menu__link">VISA / MASTERCARD</span><span class="sub-menu__link">ЯНДЕКСДЕНЬГИ</span></div>
+              <p class="form__label">КОММЕНТАРИИ К ЗАКАЗУ</p>
+              <div class="form-fields">
+                <textarea class="form__field form__field_full_width basket__comment" rows="10"></textarea>
+              </div>
+              <div class="basket-total basket-total_mobile">
+                <div class="basket-total__title">
+                  <p>ВАШ ЗАКАЗ</p>
+                </div>
+                <ul class="basket-total__info clear-ul">
+                  <li>
+                    <p>Товаров</p><span>4</span>
+                  </li>
+                  <li>
+                    <p>На сумму</p><span>20 000 р.</span>
+                  </li>
+                  <li>
+                    <p>Доставка</p><span>250 р.</span>
+                  </li>
+                  <li>
+                    <p>Скидка</p><span>1 000 р.</span>
+                  </li>
+                </ul>
+                <div class="basket-total__price">
+                  <p class="basket-total__price-title">ИТОГО:</p>
+                  <p class="basket-total__price-val"><span>21 250</span> р.</p>
                 </div>
               </div>
+              <button class="btn-main">ОФОРМИТЬ ЗАКАЗ</button>
             </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-3.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Оргазм на кончиках<br> пальцев</h3>
-                <p class="training-card__desc">Загадочный и самый сексуальный вид оргазма – сквирт… Он означает абсолютное доверие и самые сильные ощущения. Во время сквирта</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">4 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
+            <aside class="inner-section__aside">
+              <div class="basket-total basket-total_aside">
+                <div class="basket-total__title">
+                  <p>ВАШ ЗАКАЗ</p>
+                </div>
+                <ul class="basket-total__info clear-ul">
+                  <li>
+                    <p>Товаров</p><span>4</span>
+                  </li>
+                  <li>
+                    <p>На сумму</p><span>20 000 р.</span>
+                  </li>
+                  <li>
+                    <p>Доставка</p><span>250 р.</span>
+                  </li>
+                  <li>
+                    <p>Скидка</p><span>1 000 р.</span>
+                  </li>
+                </ul>
+                <div class="basket-total__price">
+                  <p class="basket-total__price-title">ИТОГО:</p>
+                  <p class="basket-total__price-val"><span>21 250</span> р.</p>
                 </div>
               </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-1.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Любовь в отношениях</h3>
-                <p class="training-card__desc">Если вам не безразлично, что и как происходит в вашей жизни, если вы хотите качественных отношений, ждём вас на нашем тренинге.</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">2 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
-                </div>
-              </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-2.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Тайны женских оргазмов</h3>
-                <p class="training-card__desc">Симуляция женского оргазма стала привычным делом. 95% женщин хотя бы раз имитировали наслаждение. Они стесняются</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для женщин</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">3 500</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
-                </div>
-              </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-3.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Оргазм на кончиках<br> пальцев</h3>
-                <p class="training-card__desc">Загадочный и самый сексуальный вид оргазма – сквирт… Он означает абсолютное доверие и самые сильные ощущения. Во время сквирта</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">4 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
-                </div>
-              </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-1.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Любовь в отношениях</h3>
-                <p class="training-card__desc">Если вам не безразлично, что и как происходит в вашей жизни, если вы хотите качественных отношений, ждём вас на нашем тренинге.</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">2 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
-                </div>
-              </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-2.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Тайны женских оргазмов</h3>
-                <p class="training-card__desc">Симуляция женского оргазма стала привычным делом. 95% женщин хотя бы раз имитировали наслаждение. Они стесняются</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для женщин</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">3 500</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
-                </div>
-              </div>
-            </div>
-            <div class="training-card training-card_vertical">
-              <div class="training-card__img img-overlay img-bg" style="background-image: url('./img/content/training-sect-3.png');"></div>
-              <div class="training-card__info">
-                <h3 class="training-card__title">Оргазм на кончиках<br> пальцев</h3>
-                <p class="training-card__desc">Загадочный и самый сексуальный вид оргазма – сквирт… Он означает абсолютное доверие и самые сильные ощущения. Во время сквирта</p>
-                <div class="training-card__props"><span class="training-card__tag training-card__tag_all">Для всех</span><span class="training-card__time">2 ч 30 мин</span></div>
-                <div class="training-card__bottom">
-                  <p class="training-card__price"><span class="training-card__price-value">4 000</span><span class="training-card__price-unit"> р.</span></p><a class="training-card__link" href="#">Подробнее</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pagination"><a class="arrow arrow_disabled" href="#"></a>
-            <div class="pagination__links"><a class="pagination__link pagination__link_current" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link" href="#">3</a><a class="pagination__link" href="#">4</a><a class="pagination__link" href="#">5</a></div><a class="arrow arrow_next" href="#"></a>
+            </aside>
           </div>
         </div>
       </section>
