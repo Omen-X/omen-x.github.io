@@ -3880,8 +3880,6 @@ html.modal-open {
   .header-main__content {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .header__logo {
-    display: none; }
   .side-menu {
     width: 270px; }
   .side-menu-close {
@@ -3905,7 +3903,7 @@ html.modal-open {
     font-size: 23px; }
   .welcome-carousel__item-tag {
     font-size: 16px; }
-  .training-card {
+  .trainings__items .training-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -3913,7 +3911,7 @@ html.modal-open {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto; }
-    .training-card:nth-child(even) .training-card__img {
+    .trainings__items .training-card:nth-child(even) .training-card__img {
       -webkit-box-ordinal-group: 1 !important;
           -ms-flex-order: 0 !important;
               order: 0 !important; }
