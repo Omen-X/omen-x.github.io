@@ -798,6 +798,12 @@ p {
     -webkit-box-shadow: 0 0 1px 1px #fca1af;
             box-shadow: 0 0 1px 1px #fca1af; }
 
+.visible-tablet {
+  display: none; }
+  @media only screen and (max-width: 61.9375em) {
+    .visible-tablet {
+      display: block; } }
+
 /*!
  * =============================
  *
@@ -3095,15 +3101,7 @@ p {
     display: none; }
 
 .form-popup {
-  position: relative;
-  z-index: 10;
   max-width: 570px;
-  left: 50%;
-  top: 10%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-bottom: 20px;
   background: #FFF;
   -webkit-box-shadow: 0 5px 15px rgba(191, 163, 170, 0.4);
           box-shadow: 0 5px 15px rgba(191, 163, 170, 0.4);
@@ -3477,6 +3475,33 @@ html.modal-open {
   .slick-arrow {
     width: 35px;
     height: 35px; }
+  .header-main .main-nav {
+    display: none; }
+  .header-main__content {
+    height: auto; }
+    .header-main__content .main-search {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+  .header__logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .logo__link {
+    display: inline-block;
+    max-width: 70px; }
+  .side-menu {
+    width: 340px; }
+  .side-menu__content {
+    padding: 30px; }
+  .side-menu__block {
+    margin-bottom: 30px; }
   .welcome-carousel__item-content {
     padding-top: 50px;
     padding-bottom: 65px; }
@@ -3784,7 +3809,6 @@ html.modal-open {
     max-width: 100%;
     min-width: 725px; }
   .form-popup {
-    max-width: calc(100% - 40px);
     top: 50px; }
   .form-close {
     width: 30px;
@@ -3853,6 +3877,24 @@ html.modal-open {
       .header-top__content .btn-plain-group .btn-plain {
         margin-left: 10px;
         margin-right: 10px; }
+  .header-main__content {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .header__logo {
+    display: none; }
+  .side-menu {
+    width: 270px; }
+  .side-menu-close {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 7px; }
+  .side-menu__content {
+    padding: 15px; }
+  .side-menu__title {
+    margin-bottom: 18px; }
+  .side-menu__link {
+    margin-bottom: 10px; }
   .welcome-carousel .slick-prev {
     left: 10px; }
   .welcome-carousel .slick-next {
@@ -4041,4 +4083,11 @@ html.modal-open {
     margin-right: 10px;
     max-width: 20px; }
   .training-welcome__item .welcome-carousel__item-content {
-    padding-top: 30px; } }
+    padding-top: 30px; }
+  .form-close {
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    right: 5px; }
+  .form-popup__title {
+    padding-right: 35px; } }

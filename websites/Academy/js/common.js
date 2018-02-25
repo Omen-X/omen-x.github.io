@@ -330,32 +330,6 @@ function basketPage() {
   }
 }
 
-function popupForms() {
-  if ($('.form-popup-wrap').length) {
-    var formWrap = document.querySelector('.form-popup-wrap');
-
-    document.body.addEventListener('click', function (event) {
-      if (event.target.classList.contains('form-trigger')) {
-        event.preventDefault();
-
-        var currFormSelector = $(event.target).attr('data-form');
-
-        formWrap.classList.add('visible');
-        document.documentElement.classList.add('modal-open');
-        $(currFormSelector).show();
-      }
-    });
-
-    formWrap.addEventListener('click', function (event) {
-      if (event.target.classList.contains('form-popup-wrap') || event.target.classList.contains('form-close')) {
-        $('.form-popup-wrap .form').hide();
-        formWrap.classList.remove('visible');
-        document.documentElement.classList.remove('modal-open');
-      }
-    });
-  }
-}
-
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -384,7 +358,6 @@ function documentReady() {
   scrollButton();
   lazyLoadMap();
   basketPage();
-  popupForms();
 } // end document ready
 
 // ========>> UTILS <<========
