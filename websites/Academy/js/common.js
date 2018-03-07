@@ -205,6 +205,38 @@ function eventsCarousel() {
   }
 }
 
+function sheduleCarousel() {
+  if ($('.shedule-carousel').length) {
+    $('.shedule-carousel').slick({
+      slidesToShow: 7,
+      autoplay: false,
+      speed: 900,
+      arrows: true,
+      dots: false,
+      prevArrow: '.shedule__nav_prev',
+      nextArrow: '.shedule__nav_next',
+      responsive: [{
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 5
+        }
+      }, {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          prevArrow: '<button type="button" class="slick-prev"></button>',
+          nextArrow: '<button type="button" class="slick-next"></button>'
+        }
+      }]
+    });
+  }
+}
+
 /**
  * Кладем текст для раскрытия рядом с .text-expander
  */
@@ -358,6 +390,7 @@ function documentReady() {
   scrollButton();
   lazyLoadMap();
   basketPage();
+  sheduleCarousel();
 } // end document ready
 
 // ========>> UTILS <<========
