@@ -113,6 +113,44 @@ function trainersCarousel() {
   }
 }
 
+function trainingCarousel() {
+  if ($('.training-carousel').length) {
+    $('.training-carousel').slick({
+      slidesToShow: 3,
+      speed: 800,
+      arrows: true,
+      dots: false,
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  }
+}
+
+function similarTrainingsCarousel() {
+  if ($('.similar-trainings-carousel').length) {
+    $('.similar-trainings-carousel').slick({
+      slidesToShow: 3,
+      speed: 800,
+      arrows: true,
+      dots: false,
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      responsive: [{
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  }
+}
+
 function articlesCarousel() {
   if ($('.articles-carousel').length) {
     $('.articles-carousel').slick({
@@ -229,6 +267,13 @@ function sheduleCarousel() {
         breakpoint: 767,
         settings: {
           slidesToShow: 3,
+          prevArrow: '<button type="button" class="slick-prev"></button>',
+          nextArrow: '<button type="button" class="slick-next"></button>'
+        }
+      }, {
+        breakpoint: 670,
+        settings: {
+          slidesToShow: 1,
           prevArrow: '<button type="button" class="slick-prev"></button>',
           nextArrow: '<button type="button" class="slick-next"></button>'
         }
@@ -362,6 +407,29 @@ function basketPage() {
   }
 }
 
+/**
+ * Выравнивает элементы по высоте, на основе большей в группе
+ * @param  {string[]} selectors - Массив с селекторами элементов
+ * @return {undefined}
+ */
+var equalHeight = function equalHeight(selectors) {
+  selectors.forEach(function (s) {
+    var maxHeight = 0;
+    var group = document.querySelectorAll(s);
+
+    if (group.length) {
+      Array.prototype.reduce.call(group, function (a, b) {
+        maxHeight = Math.max($(a).height(), $(b).height());
+        return b;
+      });
+
+      $(group).each(function (i, e) {
+        return $(e).height(maxHeight);
+      });
+    }
+  });
+};
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -390,7 +458,10 @@ function documentReady() {
   scrollButton();
   lazyLoadMap();
   basketPage();
+  trainingCarousel();
+  similarTrainingsCarousel();
   sheduleCarousel();
+  equalHeight(['.similar-trainings-carousel .training-card']);
 } // end document ready
 
 // ========>> UTILS <<========
