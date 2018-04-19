@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>Sitis</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      #loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999;opacity:0;transition:opacity .25s}
+      #loader.active{opacity: 1}
+    </style>
+  </head>
+  <body class="no-js">
+    <script>
+      /*loader*/
+      document.body.insertAdjacentHTML('afterbegin', '<div id="loader" class="active"></d');
+      /*Detect client config*/
+      document.body.classList.remove('no-js');
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__content content-width">
+        <div class="logo header__logo"><a class="logo__link" href="#"><img src="./img/decor/logo.png" alt="logo"></a></div>
+        <div class="header__middle">
+          <div class="contacts-block header__contacts-block">
+            <div class="contacts-item contacts-item_shedule">
+              <p>пн-пт: 9:00-18:00</p>
+            </div>
+            <div class="contacts-item contacts-item_mail">
+              <p>info@mail.ru</p>
+            </div>
+          </div>
+          <nav class="nav">
+            <div class="nav__overlay"></div>
+            <ul class="nav__list animate trs clear-ul">
+              <li class="nav__item active"><a class="nav__link" href="././index.html">О нас</a></li>
+              <li class="nav__item"><a class="nav__link" href="./services.html">Услуги</a></li>
+              <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+              <li class="nav__item"><a class="nav__link" href="./price.html">Прайс</a></li>
+              <li class="nav__item"><a class="nav__link" href="./index.html">Контакты</a></li>
+              <li class="nav__item"><a class="nav__link" href="./reviews.html">Отзывы</a></li>
+            </ul>
+            <div class="nav__mob-button"></div>
+          </nav>
+        </div>
+        <div class="header__aside">
+          <button class="btn-main">обратный звонок</button>
+          <p class="header__phone">8 800<strong>123-45-67</strong></p>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="content-width"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">Хлебные</a><span class="breadcrumbs__curr">Крошки</span></div>
+      </div>
+      <section class="section">
+        <div class="content-width">
+          <h2 class="section-title">Портфолио</h2>
+          <div class="portfolio">
+            <div class="portfolio__item">
+              <div class="portfolio__item-img"><img src="./img/content/portfolio-1.png" alt="portfolio"></div>
+              <div class="portfolio__item-content">
+                <p class="portfolio__item-title">АДС-Бокс</p>
+                <p class="portfolio__item-sub-title">Описание</p>
+                <p class="portfolio__item-desc">
+                  Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и
+                  Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и
+                </p><a class="portfolio__item-link" href="#">www.ads-box.ru</a>
+              </div>
+            </div>
+            <div class="portfolio__item">
+              <div class="portfolio__item-img"><img src="./img/content/portfolio-2.png" alt="portfolio"></div>
+              <div class="portfolio__item-content">
+                <p class="portfolio__item-title">АДС-Бокс</p>
+                <p class="portfolio__item-sub-title">Описание</p>
+                <p class="portfolio__item-desc">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и</p><a class="portfolio__item-link" href="#">www.ads-box.ru</a>
+              </div>
+            </div>
+            <div class="portfolio__item">
+              <div class="portfolio__item-img"><img src="./img/content/portfolio-3.png" alt="portfolio"></div>
+              <div class="portfolio__item-content">
+                <p class="portfolio__item-title">АДС-Бокс</p>
+                <p class="portfolio__item-sub-title">Описание</p>
+                <p class="portfolio__item-desc">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и</p><a class="portfolio__item-link" href="#">www.ads-box.ru</a>
+              </div>
+            </div>
+            <div class="portfolio__item">
+              <div class="portfolio__item-img"><img src="./img/content/portfolio-1.png" alt="portfolio"></div>
+              <div class="portfolio__item-content">
+                <p class="portfolio__item-title">АДС-Бокс</p>
+                <p class="portfolio__item-sub-title">Описание</p>
+                <p class="portfolio__item-desc">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и</p><a class="portfolio__item-link" href="#">www.ads-box.ru</a>
+              </div>
+            </div>
+            <div class="portfolio__item">
+              <div class="portfolio__item-img"><img src="./img/content/portfolio-2.png" alt="portfolio"></div>
+              <div class="portfolio__item-content">
+                <p class="portfolio__item-title">АДС-Бокс</p>
+                <p class="portfolio__item-sub-title">Описание</p>
+                <p class="portfolio__item-desc">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и</p><a class="portfolio__item-link" href="#">www.ads-box.ru</a>
+              </div>
+            </div>
+            <div class="portfolio__item">
+              <div class="portfolio__item-img"><img src="./img/content/portfolio-3.png" alt="portfolio"></div>
+              <div class="portfolio__item-content">
+                <p class="portfolio__item-title">АДС-Бокс</p>
+                <p class="portfolio__item-sub-title">Описание</p>
+                <p class="portfolio__item-desc">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и</p><a class="portfolio__item-link" href="#">www.ads-box.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="btn-main-wrap">
+            <button class="btn-main">показать еще</button>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-width">
+          <h2 class="section-title">Отзывы</h2>
+          <div class="reviews-carousel">
+            <div class="reviews-carousel__item">
+              <div class="review">
+                <div class="review__img"><img src="./img/content/user.png" alt="avatar"></div>
+                <div class="review__rate review__rate_count_5"></div>
+                <p class="review__name">Иванов И.И.</p>
+                <p class="review__pos">Директор компании</p>
+                <p class="review__text">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и SEO-продвижение в поисковых системах, сервисы повышения</p>
+              </div>
+            </div>
+            <div class="reviews-carousel__item">
+              <div class="review">
+                <div class="review__img"><img src="./img/content/user.png" alt="avatar"></div>
+                <div class="review__rate review__rate_count_5"></div>
+                <p class="review__name">Иванов И.И.</p>
+                <p class="review__pos">Директор компании</p>
+                <p class="review__text">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и SEO-продвижение в поисковых системах, сервисы повышения</p>
+              </div>
+            </div>
+            <div class="reviews-carousel__item">
+              <div class="review">
+                <div class="review__img"><img src="./img/content/user.png" alt="avatar"></div>
+                <div class="review__rate review__rate_count_5"></div>
+                <p class="review__name">Иванов И.И.</p>
+                <p class="review__pos">Директор компании</p>
+                <p class="review__text">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и SEO-продвижение в поисковых системах, сервисы повышения</p>
+              </div>
+            </div>
+            <div class="reviews-carousel__item">
+              <div class="review">
+                <div class="review__img"><img src="./img/content/user.png" alt="avatar"></div>
+                <div class="review__rate review__rate_count_5"></div>
+                <p class="review__name">Иванов И.И.</p>
+                <p class="review__pos">Директор компании</p>
+                <p class="review__text">Мы предлагаем создание сайтов в Москве и по всей России: от визиток до Интернет-магазинов. А также контекстное и SEO-продвижение в поисковых системах, сервисы повышения</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-width footer__content">
+        <div class="logo footer__logo"><a class="logo__link" href="#"><img src="./img/decor/logo.png" alt="logo"></a></div>
+        <ul class="footer-nav clear-ul">
+          <li class="active"><a href="#">О нас</a></li>
+          <li><a href="#">Прайс</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Портфолио</a></li>
+          <li><a href="#">Отзывы</a></li>
+        </ul>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
