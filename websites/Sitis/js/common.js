@@ -13,6 +13,16 @@ var reviewsCarousel = function reviewsCarousel() {
   });
 };
 
+var welcomeCarousel = function welcomeCarousel() {
+  return $('.welcome-carousel').lightSlider({
+    item: 1,
+    slideMargin: 0,
+    loop: true,
+    controls: false,
+    speed: 1000
+  });
+};
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -71,6 +81,7 @@ function documentReady() {
   // ========>> FUNCTIONS CALL <<========
 
   reviewsCarousel();
+  welcomeCarousel();
 } // end document ready
 
 // ========>> UTILS <<========
