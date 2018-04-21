@@ -526,6 +526,7 @@ textarea {
     background: #4baf2e; }
 
 .card-main__desc {
+  max-width: 100%;
   margin-bottom: 0;
   text-align: center;
   font-size: 14px;
@@ -774,6 +775,10 @@ textarea {
   border-right: 1px solid  #e3e6e7;
   margin-bottom: 20px;
   padding: 30px 15px; }
+  body.ie .portfolio__item-content {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none; }
   .portfolio__item-content:after {
     content: '';
     display: block;
@@ -904,6 +909,10 @@ textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+  body.ie .feedback_inline {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none; }
 
 .form__fields {
   display: -webkit-box;
