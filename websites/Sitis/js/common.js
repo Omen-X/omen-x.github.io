@@ -7,9 +7,19 @@ var reviewsCarousel = function reviewsCarousel() {
     item: 3,
     slideMargin: 30,
     loop: true,
-    pager: false
-    // prevHtml: '<button class="carousel-prev"></button>',
-    // nextHtml: '<button class="carousel-next"></button>'
+    pager: false,
+    speed: 800,
+    responsive: [{
+      breakpoint: 991,
+      settings: {
+        item: 2
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        item: 1
+      }
+    }]
   });
 };
 
@@ -22,6 +32,16 @@ var welcomeCarousel = function welcomeCarousel() {
     speed: 1000
   });
 };
+
+// ========>> LAZY LOADING FOR MAP <<========
+
+function lazyLoadMap() {
+  if ($('.map').length) {
+    var mapFrame = $('.map iframe');
+    var src = mapFrame.attr('data-src');
+    mapFrame.attr('src', src);
+  }
+}
 
 // ========>> DOCUMENT READY <<========
 
@@ -37,7 +57,7 @@ function documentReady() {
   // Responsive main-nav
 
   var navList = document.querySelector('nav .nav__list');
-  var navButton = document.querySelector('nav .nav__mob-button');
+  var navButton = document.querySelector('.nav__mob-button');
   var navOverlay = document.querySelector('nav .nav__overlay');
 
   // navList.classList.add('animate');
@@ -82,6 +102,7 @@ function documentReady() {
 
   reviewsCarousel();
   welcomeCarousel();
+  lazyLoadMap();
 } // end document ready
 
 // ========>> UTILS <<========
