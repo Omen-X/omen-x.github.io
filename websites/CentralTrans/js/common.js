@@ -7,7 +7,14 @@ var clientsCarousel = function clientsCarousel() {
     $('.clients-carousel').lightSlider({
       item: 6,
       loop: true,
-      pager: false
+      pager: false,
+      controls: false,
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          item: 3
+        }
+      }]
     });
   }
 };
@@ -48,7 +55,7 @@ function documentReady() {
   // ========>> FUNCTIONS CALL <<========
 
   clientsCarousel();
-  equalHeight(['.transport__item', '.services__item-img', '.flow-item__img']);
+  equalHeight(['.transport__item', '.services__item-img', '.flow-item__img', 'contacts__item']);
 } // end document ready
 
 // ========>> UTILS <<========
@@ -79,7 +86,6 @@ function navToggle() {
     navListWrap.classList.toggle('animate');
     navOverlay.classList.remove('nav__overlay_animate');
     document.documentElement.classList.remove('modal-open');
-    $('nav .nav__list-inner').slideUp();
 
     // fix fast double-click on overlay
     navOverlay.removeEventListener('click', navToggle);
@@ -96,7 +102,7 @@ $navButton.click(navToggle);
 
 $(window).on('resize', function () {
 
-  if ($(window).width() >= 768) {
+  if ($(window).width() >= 991) {
     navListWrap.classList.add('animate');
     navOverlay.classList.remove('nav__overlay_visible');
   }

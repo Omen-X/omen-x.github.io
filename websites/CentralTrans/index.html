@@ -68,7 +68,7 @@
                 <button class="btn-main btn-main_icon_docs"><span>Онлайн заявка</span></button>
               </div>
               <form class="form-search">
-                <input class="form-search__input" type="text" placeholder="Какой груз перевезти?">
+                <input class="form-field form-search__input" type="text" placeholder="Какой груз перевезти?">
                 <button class="form-search__submit"></button>
               </form>
             </div>
@@ -143,7 +143,7 @@
                 </div>
               </div>
             </section>
-            <section class="section limitations">
+            <section class="section section_bg_accent limitations">
               <div class="content-width limitations__content">
                 <h2 class="section-title">Честно о пяти наших недостатках</h2>
                 <div class="limitations__items">
@@ -196,32 +196,19 @@
       <section class="section section_bg_accent transport">
         <div class="content-width transport__content">
           <h2 class="section-title">Транспортные услуги</h2>
-          <div class="transport__items">
-            <div class="transport__item">
+          <div class="transport__items"><a class="transport__item" href="#">
               <div class="transport__item-img"><img src="./img/decor/transport-1.png"></div>
-              <p class="transport__item-title">Стандартные грузы</p>
-            </div>
-            <div class="transport__item">
+              <p class="transport__item-title">Стандартные грузы</p></a><a class="transport__item" href="#">
               <div class="transport__item-img"><img src="./img/decor/transport-2.png"></div>
-              <p class="transport__item-title">Негабаритные и тяжеловесные грузы</p>
-            </div>
-            <div class="transport__item">
+              <p class="transport__item-title">Негабаритные и тяжеловесные грузы</p></a><a class="transport__item" href="#">
               <div class="transport__item-img"><img src="./img/decor/transport-3.png"></div>
-              <p class="transport__item-title">Насыпные и инертные грузы</p>
-            </div>
-            <div class="transport__item">
+              <p class="transport__item-title">Насыпные и инертные грузы</p></a><a class="transport__item" href="#">
               <div class="transport__item-img"><img src="./img/decor/transport-4.png"></div>
-              <p class="transport__item-title">Наливные грузы</p>
-            </div>
-            <div class="transport__item">
+              <p class="transport__item-title">Наливные грузы</p></a><a class="transport__item" href="#">
               <div class="transport__item-img"><img src="./img/decor/transport-5.png"></div>
-              <p class="transport__item-title">Температурные грузы</p>
-            </div>
-            <div class="transport__item">
+              <p class="transport__item-title">Температурные грузы</p></a><a class="transport__item" href="#">
               <div class="transport__item-img"><img src="./img/decor/transport-6.png"></div>
-              <p class="transport__item-title">Услуги спецтехники</p>
-            </div>
-          </div>
+              <p class="transport__item-title">Услуги спецтехники</p></a></div>
         </div>
       </section>
       <section class="section services">
@@ -265,14 +252,17 @@
             </div>
             <div class="offers__item offers__item-3">
               <p class="offers__item-title">Cкидка 5%</p>
-              <p class="offers__item-desc">для постоянных клиентов за отзыв о работе с нами</p>
+              <p class="offers__item-desc">
+                для постоянных клиентов за отзыв о работе с нами
+                
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <div class="section truck">
+      <section class="section truck">
         <div class="content-width truck__content"><img src="./img/decor/truck.png"></div>
-      </div>
+      </section>
       <div class="section section_bg_accent flow-section">
         <div class="content-width">
           <h2 class="section-title">Как мы работаем?</h2>
@@ -319,6 +309,13 @@
       <section class="section delivery">
         <div class="content-width">
           <h2 class="section-title">Узнать стоимость</h2>
+          <form class="form-delivery">
+            <div class="form-fields">
+              <input class="form-field" type="text" placeholder="Отправка">
+              <input class="form-field" type="text" placeholder="Назначение">
+            </div>
+            <p class="form-delivery__counter">Расстояние<span>1172</span>км</p>
+          </form>
           <form class="price-form">
             <div class="meta-fields">
               <input class="form-field form-field_width_25" type="text" placeholder="Вес, кг">
@@ -333,9 +330,70 @@
               <button class="btn-main"><span>Узнать стоимость</span></button>
             </div>
           </form>
+          <div class="delivery__map"></div>
         </div>
       </section>
-    </main><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <section class="section section_bg_accent contacts">
+        <div class="content-width">
+          <h2 class="section-title">Контакты</h2>
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <div class="main-contacts">
+                <p class="main-contacts__phone">+7 (343)<strong>317-11-07</strong></p>
+                <div class="soc-links"><a class="soc-link soc-link_tg" href="#"></a><a class="soc-link soc-link_ws" href="#"></a></div>
+              </div>
+              <p class="contacts__text">Сотрудники отдела логистики готовы принять ваш заказ ежедневно по будням с 09:00 до 18:00.</p>
+              <p class="contacts__mail">info@centraltrans.ru</p>
+              <p class="contacts__address">620073, г. Екатеринбург, ул. Крестинского, д. 44, офис 706</p>
+            </div>
+            <div class="contacts__item">
+              <form class="contacts-form">
+                <div class="form-fields">
+                  <input class="form-field" type="text" placeholder="Ваше имя">
+                  <input class="form-field" type="text" placeholder="Телефон">
+                </div>
+                <button class="btn-main"><span>Отправить</span></button>
+              </form>
+            </div>
+            <div class="contacts__item contacts__map"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-width footer__content">
+        <div class="logo footer__logo"><a class="logo__link" href="#"><img src="./img/decor/logo_footer.png"></a></div>
+        <ul class="clear-ul footer__nav">
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">О Компани</a></li>
+          <li><a href="#">Новости</a></li>
+        </ul>
+        <ul class="clear-ul footer__nav footer__nav_color_light">
+          <li><a href="#">Борт</a></li>
+          <li><a href="#">Контейнеровоз</a></li>
+          <li><a href="#">Трал</a></li>
+          <li><a href="#">Манипулятор</a></li>
+        </ul>
+        <ul class="clear-ul footer__nav footer__nav_color_light">
+          <li><a href="#">Фура</a></li>
+          <li><a href="#">Рефрижератор</a></li>
+          <li><a href="#">Самосвал</a></li>
+          <li><a href="#">Цистрена</a></li>
+        </ul>
+        <div class="footer__search">
+          <form class="form-search">
+            <input class="form-field form-search__input" type="text" placeholder="Какой груз перевезти?">
+            <button class="form-search__submit"></button>
+          </form>
+          <div class="main-contacts main-contacts_revert">
+            <p class="main-contacts__phone">+7 (343)<strong>317-11-07</strong></p>
+            <div class="soc-links"><a class="soc-link soc-link_tg" href="#"></a><a class="soc-link soc-link_ws" href="#"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script>
       var ver = 1;
