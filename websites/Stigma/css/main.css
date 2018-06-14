@@ -101,13 +101,13 @@ html {
 
 body {
   min-height: 100%;
-  background: #FFF;
+  background: #f5f5f5;
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 100%;
-  color: #666666; }
+  color: #323232; }
 
 img {
   max-width: 100%;
@@ -155,7 +155,7 @@ textarea {
   border: none;
   background-color: transparent;
   font-family: "Roboto Condensed", sans-serif;
-  color: #666666; }
+  color: #323232; }
 
 .clear-ul {
   margin-bottom: 0;
@@ -164,12 +164,13 @@ textarea {
 
 .section-title {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  margin-top: 60px;
   padding-bottom: 10px;
   text-align: center;
   font-size: 40px;
   font-weight: 700;
-  color: #ffffff;
+  color: #165078;
   text-transform: uppercase;
   letter-spacing: 0.8px; }
   .section-title:after {
@@ -184,9 +185,68 @@ textarea {
     width: 170px;
     height: 6px;
     background: #7cb5de; }
+  .section-title span {
+    display: block;
+    margin-top: 10px;
+    color: #323232;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+    font-size: 14px; }
+
+.section-title_light {
+  color: #ffffff; }
+  .section-title_light span {
+    color: #ffffff; }
 
 .full-screen-sect {
   min-height: calc(100vh - 180px); }
+
+.form-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.form-fields_triple .form-field {
+  width: calc(100 / 3 * 1% - 30px); }
+
+.form-field {
+  border: none;
+  margin-left: 15px;
+  margin-right: 15px;
+  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background: #ffffff;
+  padding: 14px 20px 12px;
+  text-align: center;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  -o-transition: box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s; }
+  .form-field:focus {
+    -webkit-box-shadow: 0px 0px 1px 2px #FFF;
+            box-shadow: 0px 0px 1px 2px #FFF; }
+
+.form-submit-btn {
+  background: #7cb5de;
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  padding: 14px 20px 12px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: 700;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; }
+  .form-submit-btn:hover {
+    background: #165078;
+    -webkit-box-shadow: 0 0 1px 1px #fff;
+            box-shadow: 0 0 1px 1px #fff; }
 
 /*!
  * =============================
@@ -195,6 +255,9 @@ textarea {
  *
  * =============================
  */
+.header {
+  background: #ffffff; }
+
 .home-header {
   height: 120px;
   position: relative;
@@ -630,6 +693,151 @@ textarea {
   background-position: center;
   background-color: #165078; }
 
+/*!
+ * =============================
+ *
+ *     #COMPANY
+ *
+ * =============================
+ */
+.company-sect {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: url("../img/decor/company-bg-2.png") no-repeat center;
+  background-color: #165078;
+  background-size: cover; }
+
+.company {
+  max-width: 490px;
+  padding-top: 115px;
+  padding-bottom: 115px; }
+
+.company__title {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  background: #ffffff;
+  margin-bottom: 0;
+  color: #165078; }
+  .company__title span {
+    padding-left: 10px;
+    color: #7cb5de; }
+
+.company__text {
+  margin-bottom: 0;
+  padding: 18px 30px;
+  background: rgba(22, 80, 120, 0.9);
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0.28px;
+  color: #ffffff; }
+
+.realty-exp-sect {
+  padding-bottom: 60px; }
+
+.realty-exp {
+  padding: 60px 30px 30px;
+  background: #ffffff; }
+
+.realty-exp__logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 195px; }
+
+.realty-exp__text:last-child {
+  margin-bottom: 0; }
+
+.crypto-exp-sect {
+  background: url("../img/decor/crypto-exp-bg.png") no-repeat center;
+  background-size: cover;
+  background-color: #165078;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+
+.crypto-exp__text {
+  color: #ffffff; }
+
+.crypto-exp__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.crypto-exp__item {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100 / 3 * 1% - 30px);
+  margin-bottom: 30px;
+  padding-left: 80px;
+  background: url("../img/decor/checkbox.png") no-repeat left top;
+  font-size: 15px;
+  color: #ffffff; }
+
+.advantages-items {
+  margin-left: -15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.advantages-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100 / 3 * 1% - 30px);
+  margin-bottom: 30px; }
+
+.advantages-item__img {
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.advantagse-item__text {
+  margin-bottom: 0;
+  font-size: 15px; }
+
+.advantages__logo {
+  max-width: 290px;
+  margin-left: auto; }
+
+/*!
+ * =============================
+ *
+ *     #FEEDBACK
+ *
+ * =============================
+ */
+.feedback-sect {
+  padding-top: 40px;
+  padding-bottom: 110px;
+  background: url("../img/decor/feedback-bg.png") no-repeat center;
+  background-size: cover;
+  background-color: #165078; }
+  .feedback-sect .section-title {
+    font-size: 39px; }
+
+.feedback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .feedback-form .form-fields {
+    width: 75%; }
+  .feedback-form .form-submit-btn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-left: 30px;
+    max-width: 320px; }
+
 .content-width {
   max-width: 1170px;
   min-width: 320px;
@@ -715,11 +923,18 @@ html.modal-open {
   .invest-item__img {
     height: 170px; }
   .invest-item__tilte {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .feedback-sect {
+    padding-top: 1px;
+    padding-bottom: 70px; }
+    .feedback-sect .section-title {
+      font-size: 32px; } }
 
 @media only screen and (max-width: 61.9375em) {
   .full-screen-sect {
     min-height: calc(100vh - 160px); }
+  .section-title {
+    margin-top: 30px; }
   .welcome__link {
     padding: 15px 40px;
     font-size: 22px; }
@@ -744,10 +959,67 @@ html.modal-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 10px; } }
+    padding-top: 10px; }
+  .company {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .company__title {
+    font-size: 30px;
+    padding: 10px 25px; }
+  .company__text {
+    padding: 10px 25px; }
+  .realty-exp-sect {
+    padding-bottom: 15px; }
+  .realty-exp {
+    padding: 20px; }
+  .realty-exp__text {
+    font-size: 14px; }
+  .realty-exp__logo {
+    margin-bottom: 30px; }
+  .crypto-exp__text {
+    margin-bottom: 40px;
+    font-size: 14px; }
+  .crypto-exp__items {
+    margin-left: 0;
+    margin-top: 40px;
+    margin-right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .crypto-exp__item {
+    width: 100%;
+    margin-left: 0;
+    background-size: 40px auto;
+    padding-left: 70px;
+    margin-right: 0; }
+  .advantages-item {
+    width: calc(50% - 30px); }
+  .advantages__logo {
+    max-width: 200px; }
+  .feedback-sect {
+    padding-bottom: 40px; }
+    .feedback-sect .section-title {
+      font-size: 24px; }
+  .feedback-form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .feedback-form .form-fields {
+      width: calc(100% + 30px);
+      margin-bottom: 40px; }
+    .feedback-form .form-submit-btn {
+      margin-left: 0; } }
 
 @media only screen and (max-width: 47.9375em) {
   .section-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
     font-size: 25px; }
     .section-title:after {
       height: 3px;
@@ -755,6 +1027,19 @@ html.modal-open {
       bottom: -5px; }
   .full-screen-sect {
     min-height: calc(100vh - 112px); }
+  .form-fields {
+    margin-left: 0;
+    margin-right: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .form-field {
+    width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 10px 20px 8px; }
+  .form-submit-btn {
+    padding: 10px 20px 8px; }
   .welcome__link {
     padding: 15px 25px; }
   .home-header {
@@ -804,7 +1089,40 @@ html.modal-open {
     margin-left: 0;
     margin-right: 0; }
   .invest-item__tilte {
-    min-height: 60px; } }
+    min-height: 60px; }
+  .company {
+    max-width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .company__title {
+    padding: 8px 20px;
+    font-size: 22px; }
+  .company__text {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 12px 20px; }
+  .advantages-items {
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+  .advantages-item__img {
+    max-width: 40px; }
+  .advantages-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .advantages__logo {
+    display: none; }
+  .feedback-sect .section-title {
+    font-size: 20px; }
+  .feedback-form .form-fields {
+    margin-bottom: 10px; } }
 
 @media only screen and (max-width: 35.9375em) {
   .section-title {
@@ -845,4 +1163,27 @@ html.modal-open {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-right: 0;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .crypto-exp__item {
+    padding-left: 0;
+    padding-top: 45px;
+    background-position: center top;
+    background-size: 30px auto;
+    font-size: 14px;
+    text-align: center; }
+  .advantages-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px; }
+    .advantages-item:last-child {
+      margin-bottom: 0; }
+  .advantages-item__img {
+    margin-bottom: 15px; }
+  .advantagse-item__text {
+    text-align: center;
+    font-size: 14px; } }
