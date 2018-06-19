@@ -2,6 +2,48 @@
 
 // ========>> FUNCTIONS <<========
 
+var cardCarousel = function cardCarousel() {
+  if ($(".product").length) {
+    $(".product #light-slider").lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      thumbMargin: 30,
+      thumbItem: 3
+    });
+  }
+};
+
+var certsGallery = function certsGallery() {
+  if ($(".certs-gallery").length) {
+    $(".certs-gallery").lightGallery({});
+  }
+};
+
+function lazyLoadMap() {
+  if ($(".map").length) {
+    var mapFrame = $(".map iframe");
+    var src = mapFrame.attr("data-src");
+    mapFrame.attr("src", src);
+  }
+}
+
+var equalWidth = function equalWidth(selectors) {
+  selectors.forEach(function (s) {
+    var group = document.querySelectorAll(s);
+
+    if (group.length) {
+      var h = Array.prototype.map.call(group, function (x) {
+        return $(x).width();
+      }).sort().pop();
+
+      $(group).each(function (i, e) {
+        return $(e).width(h);
+      });
+    }
+  });
+};
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -49,6 +91,12 @@ function documentReady() {
   }).resize(); // end resize
 
   // ========>> FUNCTIONS CALL <<========
+
+  // TODO
+  lazyLoadMap();
+  cardCarousel();
+  equalWidth([]);
+  certsGallery();
 } // end document ready
 
 // ========>> UTILS <<========
