@@ -20,6 +20,12 @@ var certsGallery = function certsGallery() {
   }
 };
 
+var mainGallery = function mainGallery() {
+  if ($(".gallery").length) {
+    $(".gallery").lightGallery({});
+  }
+};
+
 function lazyLoadMap() {
   if ($(".map").length) {
     var mapFrame = $(".map iframe");
@@ -97,6 +103,7 @@ function documentReady() {
   cardCarousel();
   equalWidth([]);
   certsGallery();
+  mainGallery();
 } // end document ready
 
 // ========>> UTILS <<========
