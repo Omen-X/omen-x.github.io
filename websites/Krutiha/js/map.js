@@ -72,7 +72,7 @@ function initMap() {
         lat: 56.839067,
         lng: 60.572305
       },
-      icon: '../img/decor/marker.png'
+      icon: './img/decor/marker.png'
     };
     var marker = new google.maps.Marker(markerOptions);
   })();
