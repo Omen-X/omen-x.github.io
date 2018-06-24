@@ -52,51 +52,38 @@
     </header>
     <main class="main">
       <section class="breadcrumbs">
-        <div class="content-width breadcrumbs__content"><a class="breadcrumbs__link" href="./index.html"><span>Главная</span></a><span class="breadcrumbs__curr">О компании</span></div>
+        <div class="content-width breadcrumbs__content"><a class="breadcrumbs__link" href="./index.html"><span>Главная</span></a><span class="breadcrumbs__curr">Онлайн заявка</span></div>
       </section>
-      <section class="company-sect">
+      <section class="order">
         <div class="content-width">
-          <h2 class="section-title section-title_with_padding">О компании</h2>
-        </div>
-        <div class="section-preview">
-          <div class="section-preview__img" style="background-image: url('./img/content/company-preview.jpg')"></div>
-          <div class="section-preview__text">
-            <p>
-              Завод Крутиха ведет разработку месторождений гранитного камня и предлагает услуги по поставке сыпучих нерудных материалов, таких как щебень и отсев. Основанная в 2002 году, компания входит в десятку самых востребованных карьеров на рынке Свердловской области и имеет большой опыт сотрудничества как с крупными оптовыми предприятиями, так и с розничными покупателями. В 2008 году компания вошла в состав Группы ЛСР. На предприятии работают около 70 человек.
-              
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="company-info">
-        <div class="content-width company-info__content">
-          <div class="company-table">
-            <div class="company-table__row"><span class="company-table__cell">Полное наименование организации</span><span class="company-table__cell">Банк ФАКБ «Российский капитал» (ОАО) Псковский в г.Пскове</span></div>
-            <div class="company-table__row"><span class="company-table__cell">Общество с ограниченной ответственностью «ЭкоПромСервис»</span><span class="company-table__cell">БИК 045 805 739</span></div>
-            <div class="company-table__row"><span class="company-table__cell">Краткое наименование организации ООО «ЭПС»</span><span class="company-table__cell">Корр. счет 301 018 106 000 000 007 39</span></div>
-            <div class="company-table__row"><span class="company-table__cell">Юридический адрес 180503, Псковская обл., Псковский р-н, д. Дуброво</span><span class="company-table__cell">Расчетный счет 407 028 104 140 000 008 28</span></div>
-            <div class="company-table__row"><span class="company-table__cell">Фактический адрес 180000, Псков, ул.Советская 52, оф. 20 Тел/факс: (8112) 66-27-37</span><span class="company-table__cell">Директор Буренков Виктор Сергеевич. Действует на основании устава.</span></div>
-          </div>
-          <div class="company-certs"><img src="./img/decor/company-certs.png"></div>
-        </div>
-      </section>
-      <section class="section jobs">
-        <div class="content-width">
-          <h2 class="section-title section-title_with_padding">Вакансии</h2>
-          <div class="jobs-items"><a class="jobs-item" href="#"><span class="jobs-item__title">Водитель автомобиля Белаз</span><span class="jobs-item__desc">Полная занятость. ЗП от 40 000 руб.</span></a><a class="jobs-item" href="#"><span class="jobs-item__title">Водитель автомобиля Белаз</span><span class="jobs-item__desc">Полная занятость. ЗП от 30 000 руб.</span></a><a class="jobs-item" href="#"><span class="jobs-item__title">Дробильщик КСД</span><span class="jobs-item__desc">Полная занятость. ЗП от 50 000 руб.</span></a></div>
-        </div>
-      </section>
-      <section class="section feedback">
-        <div class="content-width feedback__content">
-          <h2 class="feedback__title"><span>Отправим бесплатно образцы щебня</span></h2>
-          <form class="form-transparent form-feedback">
-            <div class="form-fields">
-              <input class="form-field" type="text" placeholder="Имя">
-              <input class="form-field" type="text" placeholder="Телефон">
-              <input class="form-field" type="text" placeholder="E-mail">
+          <h2 class="section-title section-title_with_padding">Онлайн заявка</h2>
+          <div class="order__content">
+            <form class="form-order">
+              <div class="form-order__fields">
+                <input type="text" placeholder="Компания">
+                <select class="form-order__select form-order__field_half_width">
+                  <option></option>
+                  <option value="Щебень гранитный">Щебень гранитный</option>
+                  <option value="Отсев">Отсев</option>
+                  <option value="Скала">Скала</option>
+                </select>
+                <input class="form-order__field_half_width" type="text" placeholder="Объем">
+                <input type="text" placeholder="Имя">
+                <textarea placeholder="Комментарий"></textarea>
+                <input class="form-order__field_half_width" type="text" placeholder="Телефон">
+                <input class="form-order__field_half_width" type="text" placeholder="E-mail">
+              </div>
+              <div class="form-order__uploads">
+                <label class="upload-label" for="form-order__upload">Прикрепить файл</label>
+                <input id="form-order__upload" type="file" placeholder="Прикрепить файл">
+              </div>
+              <button class="btn-second">Отправить</button>
+            </form>
+            <div class="order__desc">
+              <p class="order__desc-text">Завод Крутиха ведет разработку месторождений гранитного камня и предлагает услуги по поставке сыпучих нерудных материалов, таких как щебень и отсев. Основанная в 2002 году, компания входит в десятку самых востребованных карьеров на рынке Свердловской области и имеет большой опыт сотрудничества как с крупными оптовыми предприятиями, так и с розничными покупателями. В 2008 году компания вошла в состав Группы ЛСР. На предприятии работают около 70 человек.</p>
+              <div class="order__desc-img"><img src="./img/decor/order-pile.png"></div>
             </div>
-            <button class="btn-second">Отправить</button>
-          </form>
+          </div>
         </div>
       </section>
     </main>

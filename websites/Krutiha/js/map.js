@@ -1,12 +1,14 @@
 "use strict";
 
 function initMap() {
+  var isContactsMap = !!$('.contacts__map').length;
+
   var opts = {
     center: {
       lat: 56.844533,
       lng: 60.601287
     },
-    zoom: 12,
+    zoom: isContactsMap ? 13 : 12,
     styles: [{ "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }] }, {
       "featureType": "all",
       "elementType": "labels.text.stroke",
@@ -36,11 +38,12 @@ function initMap() {
     minZoom: 0,
     mapTypeId: "roadmap"
   };
+
   opts.clickableIcons = true;
   opts.disableDoubleClickZoom = false;
   opts.draggable = true;
   opts.keyboardShortcuts = false;
-  opts.scrollwheel = false;
+  opts.scrollwheel = isContactsMap;
 
   var setControlOptions = function setControlOptions(key, enabled, position, style, mapTypeIds) {
     opts[key + "Control"] = enabled;
