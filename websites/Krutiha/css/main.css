@@ -716,6 +716,9 @@ textarea {
 .advantages-item__desc_font_large {
   font-size: 25px; }
 
+.advantages-item__text {
+  max-width: 100%; }
+
 /*!
  * =============================
  *
