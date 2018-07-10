@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>PromsGroup</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="no-js">
+    <script>
+      /*Detect client config*/
+      document.body.classList.remove('no-js');
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="content-width header__content">
+        <div class="logo header__logo"><a class="logo__link" href="#"><img src="./img/decor/logo.png"></a></div>
+        <div class="header__items">
+          <div class="info-items"><a class="info-item info-item_icon_document" href="#">
+              <p class="info-item__text">Скачать прайс</p></a>
+            <div class="info-item info-item_icon_address">
+              <p class="info-item__text">г. Екатеринбург</p>
+            </div>
+            <div class="info-item info-item_icon_mail">
+              <p class="info-item__text">Psg@promsgroup.ru</p>
+            </div>
+          </div>
+          <div class="header__search-wrap">
+            <form class="form-search">
+              <input class="form-field" type="text" placeholder="Поиск продукции">
+              <button class="form-search__submit"></button>
+            </form>
+            <div class="contact-phone">
+              <p class="contact-phone__text"><span>+7 343</span>287 54 87</p>
+            </div>
+          </div>
+        </div>
+        <div class="header__buttons">
+          <div class="basket-block">
+            <button class="basket-block__btn btn-accent"><span class="basket-link__items">2 т.</span><span class="basket-link__count"> на 25000 ₽</span></button>
+            <div class="basket-block__popover">
+              <div class="basket-block__items">
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span><span class="basket-block__counter-val">4 шт.</span><span class="basket-block__counter-inc">+</span></div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span><span class="basket-block__counter-val">4 шт.</span><span class="basket-block__counter-inc">+</span></div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span><span class="basket-block__counter-val">4 шт.</span><span class="basket-block__counter-inc">+</span></div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span><span class="basket-block__counter-val">4 шт.</span><span class="basket-block__counter-inc">+</span></div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+              </div>
+              <div class="basket-block__link"><a class="btn-main" href="#">Оформить заказ</a></div>
+            </div>
+          </div>
+          <button class="btn-main">Заказать звонок</button>
+        </div>
+      </div>
+      <div class="nav-wrap">
+        <div class="content-width">
+          <nav class="nav">
+            <div class="nav__overlay"></div>
+            <ul class="clear-ul nav__list animate trs">
+              <li class="nav__item active"><a class="nav__link" href="./index.html">Главная</a></li>
+              <li class="nav__item"><a class="nav__link" href="./catalog.html">Каталог ЖБИ</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Производство</a></li>
+              <li class="nav__item"><a class="nav__link" href="./mine.html">Логистика</a></li>
+              <li class="nav__item"><a class="nav__link" href="./company.html">Строительство</a></li>
+              <li class="nav__item"><a class="nav__link" href="./contacts.html">О компании</a></li>
+              <li class="nav__item"><a class="nav__link" href="./contacts.html">Новости</a></li>
+              <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome">
+        <div class="content-width welcome__content">
+          <div class="welcome__items">
+            <div class="welcome__item">
+              <p class="welcome__item-text">Производство ЖБИ</p>
+            </div>
+            <div class="welcome__item welcome__item_accent">
+              <p class="welcome__item-text">Продажа ЖБИ</p>
+            </div>
+            <div class="welcome__item">
+              <p class="welcome__item-text">Логистика</p>
+            </div>
+            <div class="welcome__item">
+              <p class="welcome__item-text">Строительство</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products section">
+        <div class="content-width">
+          <h2 class="section-title">Продукция</h2>
+          <div class="products-cards"><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-1.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Плиты дорожные</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-2.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Тротуарная плитка</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-3.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Тротуарная плитка</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-4.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Перемычки железобетонные</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-1.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Плиты дорожные</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-2.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Тротуарная плитка</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-3.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Тротуарная плитка</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-4.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Перемычки железобетонные</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-1.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Плиты дорожные</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-2.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Тротуарная плитка</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-3.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Тротуарная плитка</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a><a class="product-card" href="#">
+              <div class="product-card__img"><img src="./img/content/product-4.jpg"></div>
+              <div class="product-card__content">
+                <p class="product-card__title">Перемычки железобетонные</p>
+                <p class="product-card__price">от 1000 руб.</p>
+              </div></a>
+          </div>
+          <div class="products-more">
+            <button class="btn-main">Вся продукция</button>
+          </div>
+        </div>
+      </section>
+      <section class="section info-section">
+        <div class="content-width">
+          <h2 class="section-title">Завод ЖБИ — железобетонные <br>изделия от производителя</h2>
+        </div>
+        <div class="info-section__wrap">
+          <div class="info-section__photo" style="background-image: url(&quot;./img/decor/company-bg.png&quot;)"></div>
+          <div class="info-section__content">
+            <div class="info-section__desc">
+              <p>Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+              <p>Также мы внимательно следим за потребительскими интересами и открываем новые производства. Наши специалисты постоянно проводят исследования рынка продаж, следствием которого являются одни из самых низких цен в РФ.</p>
+              <p>Основным приоритетом в работе ООО «ПромСтрой Групп» является особое внимание к качеству выпускаемой продукции, что достигается путем строжайшего контроля компонентов, из которых изготавливаются наши железобетонные изделия. Отдел технического контроля и лаборатория ежегодно проходят плановую аттестацию.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages__top">
+          <div class="content-width">
+            <h2 class="section-title">Наши преимущества</h2>
+            <div class="advantages__items">
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-1.png"></div>
+                <p class="advantages__item-title">Производственные <br>мощности и опыт</p>
+                <p class="advantages__item-text">За многолетний период работы ПСГ создал несколько крупных и локальных производств, партнерских объединений с предприятиями, на которых, в том числе, разместил свое оборудование, осуществляет поставку инертных материалов и металла.</p>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-2.png"></div>
+                <p class="advantages__item-title">Современные технологии производства и оборудование</p>
+                <p class="advantages__item-text">Постоянный анализ поставщиков металлоформ, оборудования и добавок (как иностранного, так и отечественного происхождения), необходимый набор современного контрольно- измерительного инструмента и другая ежедневная мозговая работа, обеспечивает передовые показатели в качестве продукции.</p>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-3.png"></div>
+                <p class="advantages__item-title">Профессиональный кадровый ресурс на каждом уровне производства продукта</p>
+                <p class="advantages__item-text">Постоянное повышение квалификации и вовлеченность в общее дело каждого сотрудника от формовщика-бетонщика до руководителей предприятия дает отличный результат на конечном продукте для наших клиентов.</p>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-4.png"></div>
+                <p class="advantages__item-title">Высококачественные материалы</p>
+                <p class="advantages__item-text">Мы работаем только с проверенными поставщиками материалов. Наша лаборатория ведет ежедневный анализ качества продукции как по основным показателям (прочность, водонипроницаемость, морозостойкость), так и дополнительным ( истираемость, трещиностойкость, водопоглащение и др.).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="advantages__bot">
+          <div class="content-width">
+            <div class="advantages__items">
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-5.png"></div>
+                <p class="advantages__item-title">Полный пакет необходимых документов на продукцию для любого заказчика</p>
+                <p class="advantages__item-text">На нашу продукцию при отгрузке выдается паспорт качества, на некоторые серийные изделия мы имеем сертификат качество. Также нами пройдены большинство аккредитаций крупных нефтегазовых, энергетических и строительных организаций (таких как ГК Роснефть, ГК Газпромнефть, ГК СТНГ, ГК Транснефть, ГК РАО ЕЭС и др).</p>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-6.png"></div>
+                <p class="advantages__item-title">Высокий уровень организации логистики</p>
+                <p class="advantages__item-text">Размещая заказ на производстве, ближайшем к месту поставки, мы осуществляем поставку автомобильным, железнодорожных или водным( в том числе морским) транспортом. Большой опыт сложных поставок: с несколькими перевалками, по зимнику, речными баржами, морскими судами, вездеходами, вертолетами, в специальной высокопрочной обрешетке и др.</p>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-7.png"></div>
+                <p class="advantages__item-title">Удобные формы оплаты продукции</p>
+                <p class="advantages__item-text">
+                  01. Особый подход к постоянным клиентам.<br>
+                  02. Специальные цены для строительных организаций.<br>
+                  03. Возможность отсрочки платежа благодаря значительному финансовому плечу и многолетней работе с крупными финансовыми институтами.<br>
+                  04. Рассматриваем бартерный расчет зданиями, сооружениями, техникой и др.
+                </p>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-img"><img src="./img/decor/advantages-8.png"></div>
+                <p class="advantages__item-title">Надежность ПромСтрой Групп</p>
+                <p class="advantages__item-text">За многолетнюю работу мы заработали авторитет и уважение наших клиентов. Службы безопасности в самых крупных организациях РФ всегда одобряют работу с нами. Рекомендательные письма, аккредитации вы можете посмотреть в специальном разделе, при необходимости мы можем предоставить вам телефоны руководителей организаций, работающих с нами, для подтверждения надежности.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="content-width">
+          <h2 class="section-title">География поставок</h2>
+          <div id="map"><img src="./img/decor/map.png"></div>
+        </div>
+      </section>
+      <section class="partners section">
+        <div class="content-width">
+          <h2 class="section-title">Партнеры</h2>
+          <div class="partners__items">
+            <div class="partners__item"><img src="./img/content/partner-1.png"></div>
+            <div class="partners__item"><img src="./img/content/partner-2.png"></div>
+            <div class="partners__item"><img src="./img/content/partner-3.png"></div>
+            <div class="partners__item"><img src="./img/content/partner-4.png"></div>
+            <div class="partners__item"><img src="./img/content/partner-5.png"></div>
+            <div class="partners__item"><img src="./img/content/partner-6.png"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section info-section production">
+        <div class="content-width">
+          <h2 class="section-title">Производство</h2>
+        </div>
+        <div class="info-section__wrap">
+          <div class="info-section__content">
+            <div class="info-section__desc">
+              <p>Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+              <p>Также мы внимательно следим за потребительскими интересами и открываем новые производства. Наши специалисты постоянно проводят исследования рынка продаж, следствием которого являются одни из самых низких цен в РФ.</p>
+            </div>
+          </div>
+          <div class="info-section__photo" style="background-image: url(&quot;./img/decor/production-photo.jpg&quot;)"></div>
+        </div>
+      </section>
+      <section class="stats section">
+        <div class="content-width">
+          <h2 class="section-title">Каждый день мы производим</h2>
+          <div class="stats__items">
+            <div class="stats__item">
+              <p class="stats__item-val">124</p>
+              <p class="stats__item-prop">Дорожные <br>плиты</p>
+            </div>
+            <div class="stats__item">
+              <p class="stats__item-val">77</p>
+              <p class="stats__item-prop">Ригелей <br>железобетонных</p>
+            </div>
+            <div class="stats__item">
+              <p class="stats__item-val">150</p>
+              <p class="stats__item-prop">Перемычек <br>железобетонных</p>
+            </div>
+            <div class="stats__item">
+              <p class="stats__item-val">220</p>
+              <p class="stats__item-prop">Утяжелителей <br>железобетонных</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section info-section shipping section_bg_accent">
+        <div class="content-width">
+          <h2 class="section-title">Логистика</h2>
+        </div>
+        <div class="info-section__wrap">
+          <div class="info-section__photo" style="background-image: url(&quot;./img/decor/shipping-bg.jpg&quot;)"></div>
+          <div class="info-section__content info-stats__wrap">
+            <div class="info-stats">
+              <p class="info-stats__title">Каждый день мы доставляем</p>
+              <div class="info-stats__items">
+                <div class="info-stats__item">
+                  <p class="info-stats__item-val">124</p>
+                  <p class="info-stats__item-prop">Дорожные <br>плиты</p>
+                </div>
+                <div class="info-stats__item">
+                  <p class="info-stats__item-val">77</p>
+                  <p class="info-stats__item-prop">Ригелей <br>железобетонных</p>
+                </div>
+                <div class="info-stats__item">
+                  <p class="info-stats__item-val">150</p>
+                  <p class="info-stats__item-prop">Перемычек <br>железобетонных</p>
+                </div>
+                <div class="info-stats__item">
+                  <p class="info-stats__item-val">220</p>
+                  <p class="info-stats__item-prop">Утяжелителей <br>железобетонных</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section text-section">
+        <div class="content-width">
+          <p>Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+          <p>Также мы внимательно следим за потребительскими интересами и открываем новые производства. Наши специалисты постоянно проводят исследования рынка продаж, следствием которого являются одни из самых низких цен в РФ.</p>
+          <p>
+            Основным приоритетом в работе ООО «ПромСтрой Групп» является особое внимание к качеству выпускаемой продукции, что достигается путем строжайшего контроля компонентов, из которых изготавливаются наши железобетонные изделия. Отдел технического контроля и лаборатория ежегодно проходят плановую аттестацию.
+            
+          </p>
+        </div>
+      </section>
+      <section class="section info-section building">
+        <div class="content-width">
+          <h2 class="section-title">Строительство</h2>
+        </div>
+        <div class="info-section__wrap">
+          <div class="info-section__content">
+            <div class="info-section__desc">
+              <p>Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+              <p>Также мы внимательно следим за потребительскими интересами и открываем новые производства. Наши специалисты постоянно проводят исследования рынка продаж, следствием которого являются одни из самых низких цен в РФ.</p>
+            </div>
+          </div>
+          <div class="info-section__photo" style="background-image: url(&quot;./img/decor/building-bg.jpg&quot;)"></div>
+        </div>
+      </section>
+      <section class="stats section">
+        <div class="content-width">
+          <h2 class="section-title">Каждый год у нас заказывают</h2>
+          <div class="stats__items">
+            <div class="stats__item">
+              <p class="stats__item-val">1200</p>
+              <p class="stats__item-prop">Дорожных <br>плит</p>
+            </div>
+            <div class="stats__item">
+              <p class="stats__item-val">700</p>
+              <p class="stats__item-prop">Ригелей <br>железобетонных</p>
+            </div>
+            <div class="stats__item">
+              <p class="stats__item-val">300</p>
+              <p class="stats__item-prop">Перемычек <br>железобетонных</p>
+            </div>
+            <div class="stats__item">
+              <p class="stats__item-val">500</p>
+              <p class="stats__item-prop">Утяжелителей <br>железобетонных</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="accent-section">
+        <div class="content-width">
+          <h2 class="section-title">Объекты с использованием нашей продукции</h2>
+          <p class="accent-section__text">
+            Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.
+            
+          </p>
+        </div>
+      </section>
+      <section class="section gallery-section">
+        <div class="content-width">
+          <div class="gallery">
+            <div class="gallery__items">
+              <div class="gallery__item" style="background-image: url(&quot;./img/content/gallery-1.jpg&quot;)"></div>
+              <div class="gallery__item" style="background-image: url(&quot;./img/content/gallery-2.jpg&quot;)"></div>
+              <div class="gallery__item" style="background-image: url(&quot;./img/content/gallery-3.jpg&quot;)"></div>
+              <div class="gallery__item" style="background-image: url(&quot;./img/content/gallery-4.jpg&quot;)"></div>
+            </div>
+            <div class="gallery__main" style="background-image: url(&quot;./img/content/gallery-main.jpg&quot;)"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section news">
+        <div class="content-width">
+          <h2 class="section-title">Новости</h2>
+          <div class="news__items"><a class="news__item" href="#">
+              <div class="news__item-img" style="background-image: url(&quot;./img/content/news-1.jpg&quot;)"></div>
+              <div class="news__item-content"><span class="news__item-date">23.05.2017</span>
+                <p class="news__item-desc">С 1 июня 2017 года поставщики подвижного состава значительно поднимают ставку предоставления полувагонов и платформ</p>
+              </div></a><a class="news__item" href="#">
+              <div class="news__item-img" style="background-image: url(&quot;./img/content/news-2.jpg&quot;)"></div>
+              <div class="news__item-content"><span class="news__item-date">14.12.2016</span>
+                <p class="news__item-desc">С 1 июня 2017 года поставщики подвижного состава значительно поднимают ставку предоставления полувагонов и платформ</p>
+              </div></a><a class="news__item" href="#">
+              <div class="news__item-img" style="background-image: url(&quot;./img/content/news-3.jpg&quot;)"></div>
+              <div class="news__item-content"><span class="news__item-date">01.06.2016</span>
+                <p class="news__item-desc">С 1 июня 2017 года поставщики подвижного состава значительно поднимают ставку предоставления полувагонов и платформ</p>
+              </div></a></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-width footer__content">
+        <p class="copyright">&copy;&nbsp;ПромСтройГрупп</p>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог ЖБИ</a></li>
+          <li><a href="#">Производство</a></li>
+          <li><a href="#">Логистика</a></li>
+        </ul>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Строительство</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Плиты дорожные</a></li>
+          <li><a href="#">Тротуарная плитка</a></li>
+          <li><a href="#">Прогоны железобетонные</a></li>
+          <li><a href="#">Перемычки железобетонные</a></li>
+        </ul>
+        <div class="footer__phone-wrap">
+          <button class="btn-main">Заказать звонок</button>
+          <div class="contact-phone">
+            <p class="contact-phone__text"><span>+7 343</span>287 54 87</p>
+          </div>
+        </div>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      //- {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
