@@ -692,20 +692,18 @@ a:hover {
  * =============================
  */
 .welcome {
-  background: url("../img/decor/welcome-bg.jpg") no-repeat center;
-  background-size: cover; }
+  position: relative; }
 
-.welcome__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 100px; }
+.welcome-carousel {
+  min-height: 570px; }
 
-.welcome__items {
+.welcome__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 570px; }
+
+.welcome__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,30 +714,45 @@ a:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-left: auto;
-  margin-right: auto; }
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
-.welcome__item {
+.welcome__nav-item {
   background: #ffffff;
   min-width: 340px;
   padding: 15px 45px;
+  margin-bottom: 0;
   color: #3b695e;
   font-size: 48px;
   text-align: center;
-  font-family: "RistrettoPro", sans-serif; }
-  .welcome__item:nth-child(1) {
+  font-family: "RistrettoPro", sans-serif;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  -o-transition: box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s; }
+  .welcome__nav-item:hover {
+    -webkit-box-shadow: inset 0 0 0 2px #3b695e;
+            box-shadow: inset 0 0 0 2px #3b695e; }
+  .welcome__nav-item:nth-child(1) {
     margin-left: 100px; }
-  .welcome__item:nth-child(2) {
+  .welcome__nav-item:nth-child(2) {
     margin-left: 200px; }
-  .welcome__item:nth-child(3) {
+  .welcome__nav-item:nth-child(3) {
     margin-left: 100px; }
 
-.welcome__item_accent {
+.welcome__nav-item_active {
   background: #3b695e;
   color: #ffffff; }
-
-.welcome__item-text {
-  margin-bottom: 0; }
+  .welcome__nav-item_active:hover {
+    -webkit-box-shadow: inset 0 0 0 2px #fff;
+            box-shadow: inset 0 0 0 2px #fff; }
 
 /*!
  * =============================
