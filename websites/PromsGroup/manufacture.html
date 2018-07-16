@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>PromsGroup</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="no-js">
+    <script>
+      /*Detect client config*/
+      document.body.classList.remove('no-js');
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="content-width header__content">
+        <div class="logo header__logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo.png"></a></div>
+        <div class="header__items">
+          <div class="info-items"><a class="info-item info-item_icon_document" href="#">
+              <p class="info-item__text">Скачать прайс</p></a>
+            <div class="info-item info-item_icon_address">
+              <p class="info-item__text">г. Екатеринбург</p>
+            </div>
+            <div class="info-item info-item_icon_mail">
+              <p class="info-item__text">Psg@promsgroup.ru</p>
+            </div>
+          </div>
+          <div class="header__search-wrap">
+            <form class="form-search">
+              <input class="form-field" type="text" placeholder="Поиск продукции">
+              <button class="form-search__submit"></button>
+            </form>
+            <div class="nav__mob-button"></div>
+            <div class="contact-phone">
+              <p class="contact-phone__text"><span>+7 343</span>287 54 87</p>
+            </div>
+          </div>
+        </div>
+        <div class="header__buttons">
+          <div class="basket-block">
+            <button class="basket-block__btn btn-accent dotted-overlay">
+              <div class="basket-link__items"><span>2</span> т.</div>
+              <div class="basket-link__count">на<span>25000</span> ₽</div>
+            </button>
+            <div class="basket-block__popover">
+              <div class="basket-block__items">
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span>
+                    <div class="basket-block__counter-val"><span>4</span> шт.</div><span class="basket-block__counter-inc">+</span>
+                  </div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span>
+                    <div class="basket-block__counter-val"><span>4</span> шт.</div><span class="basket-block__counter-inc">+</span>
+                  </div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span>
+                    <div class="basket-block__counter-val"><span>4</span> шт.</div><span class="basket-block__counter-inc">+</span>
+                  </div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+                <div class="basket-block__item">
+                  <div class="basket-block__item-photo" style="background-image: url(&quot;./img/decor/product-preview.png&quot;)"></div>
+                  <p class="basket-block__item-title">Плита перекрытия ПБ 2ПБ 100</p>
+                  <div class="basket-block__counter"><span class="basket-block__counter-dec"></span>
+                    <div class="basket-block__counter-val"><span>4</span> шт.</div><span class="basket-block__counter-inc">+</span>
+                  </div>
+                  <p class="basket-block__item-price">5650 ₽</p>
+                  <div class="basket-block__item-delete"></div>
+                </div>
+              </div>
+              <div class="basket-block__link"><a class="btn-main" href="#"><span>Оформить заказ</span></a></div>
+            </div>
+          </div>
+          <button class="btn-main"><span>Заказать звонок</span></button>
+          <div class="nav__mob-button"></div>
+        </div>
+      </div>
+      <div class="nav-wrap dotted-overlay">
+        <div class="content-width">
+          <nav class="nav">
+            <div class="nav__overlay"></div>
+            <ul class="clear-ul nav__list animate trs">
+              <li class="nav__item active"><a class="nav__link dotted-overlay" href="./index.html"><span>Главная</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./catalog.html"><span>Каталог ЖБИ</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./production.html"><span>Производство</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./shipping.html"><span>Логистика</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./company.html"><span>Строительство</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./contacts.html"><span>О компании</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./contacts.html"><span>Новости</span></a></li>
+              <li class="nav__item"><a class="nav__link dotted-overlay" href="./contacts.html"><span>Контакты</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="breadcrumbs">
+        <div class="content-width"><a class="breadcrumbs__link" href="#">Главная</a><span class="breadcrumbs__current">Производство</span></div>
+      </section>
+      <section>
+        <div class="content-width">
+          <h2 class="section-title section-title_align_left">Производство</h2>
+          <div class="desc-blocks">
+            <div class="desc-block">
+              <div class="desc-block__img"><img src="./img/content/dev-bg.jpg"></div>
+              <div class="desc-block__text">
+                <h4 class="desc-block__title">Завод Спасский</h4>
+                <p>Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+                <p>Также мы внимательно следим за потребительскими интересами и открываем новые производства. Наши специалисты постоянно проводят исследования рынка продаж, следствием которого являются одни из самых низких цен в РФ.</p>
+              </div>
+            </div>
+            <div class="desc-block">
+              <div class="desc-block__img"><img src="./img/content/desc-block-2.jpg"></div>
+              <div class="desc-block__text">
+                <h4 class="desc-block__title">Завод Вилби</h4>
+                <p>Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+                <p>Также мы внимательно следим за потребительскими интересами и открываем новые производства. Наши специалисты постоянно проводят исследования рынка продаж, следствием которого являются одни из самых низких цен в РФ.</p>
+              </div>
+            </div>
+            <div class="titled-block">
+              <h3 class="titled-block__title">Заводы партнеры</h3>
+              <p class="titled-block__text">Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+            </div>
+            <div class="titled-block">
+              <h3 class="titled-block__title">Другие производственные площадки</h3>
+              <p class="titled-block__text">Возведение современных зданий и сооружений невозможно без использования конструктивных элементов из железобетона. Уникальное сочетание в ЖБИ стальной арматуры и бетона от ООО «ПромСтрой Групп»  придает изделиям особую прочность и устойчивость к растяжению. Поэтому каждый застройщик, работающий с нами, уверен, что получит надежную и выносливуюконструкцию здания.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer dotted-overlay dotted-overlay_stick">
+      <div class="content-width footer__content">
+        <p class="copyright">&copy;&nbsp;ПромСтройГрупп</p>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог ЖБИ</a></li>
+          <li><a href="#">Производство</a></li>
+          <li><a href="#">Логистика</a></li>
+        </ul>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Строительство</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Плиты дорожные</a></li>
+          <li><a href="#">Тротуарная плитка</a></li>
+          <li><a href="#">Прогоны железобетонные</a></li>
+          <li><a href="#">Перемычки железобетонные</a></li>
+        </ul>
+        <div class="footer__phone-wrap">
+          <button class="btn-main">Заказать звонок</button>
+          <div class="contact-phone">
+            <p class="contact-phone__text"><span>+7 343</span>287 54 87</p>
+          </div>
+        </div>
+      </div>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
