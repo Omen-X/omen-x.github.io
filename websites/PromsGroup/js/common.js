@@ -7,13 +7,6 @@ var basketPopover = function basketPopover() {
     var $incBtn = $('.basket-block__counter-inc');
     var $decBtn = $('.basket-block__counter-dec');
 
-    // TODO
-    var updateButtonText = function updateButtonText() {
-      var $btn = $('.basket-block__btn');
-      var $items = $('.basket-link__items span', $btn);
-      var $sum = $('.basket-link__count span', $btn);
-    };
-
     // Counter buttons
     $incBtn.click(function () {
       var $currCounter = $(this).siblings('.basket-block__counter-val').children('span');
@@ -75,9 +68,61 @@ var welcomeCarousel = function welcomeCarousel() {
   }
 };
 
+var productCarousel = function productCarousel() {
+  if ($('.product').length) {
+    $('.product #light-slider').lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      thumbMargin: 10,
+      thumbItem: 3
+    });
+  }
+};
+
+var mainCounter = function mainCounter() {
+  var $class = '.main-counter';
+
+  if ($($class).length) {
+    var $incBtn = $('.main-counter__inc');
+    var $decBtn = $('.main-counter__dec');
+
+    $incBtn.click(function () {
+      var $currCounter = $(this).siblings('.main-counter__value').children('span');
+      $currCounter.text(Number($currCounter.text()) + 1);
+    });
+
+    $decBtn.click(function () {
+      var $currCounter = $(this).siblings('.main-counter__value').children('span');
+
+      var currVal = Number($currCounter.text());
+      if (currVal === 1) return;
+
+      $currCounter.text(Number($currCounter.text()) - 1);
+    });
+  }
+};
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
+
+  // Не грузим карты на девайсах
+  if ($(window).width() >= 768) {
+    var scriptsBlock = document.querySelector('#map-scripts');
+    var mapScript = document.createElement('script');
+    var googleScript = document.createElement('script');
+
+    mapScript.setAttribute('src', './js/map.min.js');
+    googleScript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGXFr7VFYNEMCgCKeW2ucF7q8RodUxYQ&language=ru&callback=initMap');
+    googleScript.setAttribute('async', true);
+    googleScript.setAttribute('defer', true);
+
+    scriptsBlock.appendChild(mapScript);
+    scriptsBlock.appendChild(googleScript);
+  } else {
+    $('.contact-block__map').hide();
+  }
 
   // ========>> MAIN NAV <<========
 
@@ -125,6 +170,8 @@ function documentReady() {
 
   basketPopover();
   welcomeCarousel();
+  productCarousel();
+  mainCounter();
 } // end document ready
 
 // ========>> UTILS <<========
