@@ -103,10 +103,27 @@ var mainCounter = function mainCounter() {
   }
 };
 
+var categoryCards = function categoryCards() {
+  if ($('.category-cards__basket').length) {
+    var $delBtn = $('.category-card__del-btn');
+
+    $delBtn.click(function () {
+      $(this).closest('.category-card').hide();
+    });
+  }
+};
+
+var documentsGallery = function documentsGallery() {
+  var $gallery = $('.documents');
+
+  if ($gallery.length) {
+    $gallery.lightGallery({});
+  }
+};
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
-
   // Не грузим карты на девайсах
   try {
     if ($(window).width() >= 768 && $('#map-scripts').length) {
@@ -116,8 +133,6 @@ function documentReady() {
 
       mapScript.setAttribute('src', './js/map.min.js');
       googleScript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGXFr7VFYNEMCgCKeW2ucF7q8RodUxYQ&language=ru&callback=initMap');
-      googleScript.setAttribute('async', true);
-      googleScript.setAttribute('defer', true);
 
       scriptsBlock.appendChild(mapScript);
       scriptsBlock.appendChild(googleScript);
@@ -176,6 +191,8 @@ function documentReady() {
   welcomeCarousel();
   productCarousel();
   mainCounter();
+  categoryCards();
+  documentsGallery();
 } // end document ready
 
 // ========>> UTILS <<========
