@@ -108,20 +108,24 @@ var mainCounter = function mainCounter() {
 function documentReady() {
 
   // Не грузим карты на девайсах
-  if ($(window).width() >= 768) {
-    var scriptsBlock = document.querySelector('#map-scripts');
-    var mapScript = document.createElement('script');
-    var googleScript = document.createElement('script');
+  try {
+    if ($(window).width() >= 768 && $('#map-scripts').length) {
+      var scriptsBlock = document.querySelector('#map-scripts');
+      var mapScript = document.createElement('script');
+      var googleScript = document.createElement('script');
 
-    mapScript.setAttribute('src', './js/map.min.js');
-    googleScript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGXFr7VFYNEMCgCKeW2ucF7q8RodUxYQ&language=ru&callback=initMap');
-    googleScript.setAttribute('async', true);
-    googleScript.setAttribute('defer', true);
+      mapScript.setAttribute('src', './js/map.min.js');
+      googleScript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGXFr7VFYNEMCgCKeW2ucF7q8RodUxYQ&language=ru&callback=initMap');
+      googleScript.setAttribute('async', true);
+      googleScript.setAttribute('defer', true);
 
-    scriptsBlock.appendChild(mapScript);
-    scriptsBlock.appendChild(googleScript);
-  } else {
-    $('.contact-block__map').hide();
+      scriptsBlock.appendChild(mapScript);
+      scriptsBlock.appendChild(googleScript);
+    } else {
+      $('.contact-block__map').hide();
+    }
+  } catch (e) {
+    console.warn(e);
   }
 
   // ========>> MAIN NAV <<========
