@@ -234,7 +234,7 @@ textarea {
 .form-field {
   outline: none !important;
   border: 2px solid #000000;
-  padding: 15px 20px 13px 20px;
+  padding: 13px 20px 11px 20px;
   -webkit-transition: border-color .2s;
   -o-transition: border-color .2s;
   transition: border-color .2s; }
@@ -267,7 +267,7 @@ a:hover {
   background: #3b695e;
   border: none;
   min-width: 200px;
-  padding: 15px 25px 13px 25px;
+  padding: 16px 25px 13px 25px;
   font-weight: 500;
   color: #ffffff;
   text-align: center;
@@ -367,7 +367,7 @@ a:hover {
     right: 0;
     top: 0;
     width: 50%;
-    height: 57px;
+    height: 53px;
     background: #f9f9f9; }
 
 .header__content {
@@ -402,11 +402,14 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-left: 20px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  padding-top: 10px; }
   .header__items .info-items {
     max-width: 600px; }
 
@@ -456,7 +459,7 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 35px; }
+  margin-top: auto; }
   .header__search-wrap .nav__mob-button {
     display: none; }
   .header__search-wrap .form-search {
@@ -509,14 +512,14 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap; }
-  .header__buttons button,
   .header__buttons .basket-block {
     margin-bottom: 20px; }
-    .header__buttons button:last-child,
     .header__buttons .basket-block:last-child {
       margin-bottom: 0; }
 
@@ -2470,6 +2473,8 @@ html.modal-open {
   .section-title {
     margin-bottom: 30px;
     font-size: 42px; }
+  .header {
+    position: static; }
   .header__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
@@ -2501,7 +2506,8 @@ html.modal-open {
       .header__buttons button:last-child {
         margin-right: 0; }
   .nav__mob-button {
-    margin-left: 30px; }
+    margin-left: 30px;
+    margin-top: 15px; }
   .nav-wrap {
     position: inherit; }
     .nav-wrap > * {
@@ -2777,13 +2783,20 @@ html.modal-open {
     padding: 10px 15px 8px 15px; }
   .section-title {
     font-size: 35px; }
+  .header:after,
+  .header__content:after {
+    display: none; }
   .header__logo {
     max-width: 120px; }
   .basket-block__btn {
     padding-left: 39px;
     background-size: 20px auto; }
+  .header__buttons {
+    -ms-flex-item-align: center;
+        align-self: center; }
   .nav__mob-button {
-    margin-left: 0; }
+    margin-left: 0;
+    margin-top: 10px; }
   .form-search .form-field {
     padding-right: 35px; }
   .form-search__submit {
