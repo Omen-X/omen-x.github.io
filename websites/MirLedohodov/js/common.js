@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 // ========>> FUNCTIONS <<========
 
 var certGallery = function certGallery() {
-  var $items = $('.cert-items');
+  var $items = $(".cert-items");
 
   if ($items.length) {
     $items.lightGallery({});
@@ -11,7 +11,7 @@ var certGallery = function certGallery() {
 };
 
 var reviewsCarousel = function reviewsCarousel() {
-  var $items = $('.reviews');
+  var $items = $(".reviews");
 
   if ($items.length) {
     $items.lightSlider({
@@ -40,6 +40,21 @@ var reviewsCarousel = function reviewsCarousel() {
   }
 };
 
+var productCarousel = function productCarousel() {
+  if ($(".product").length) {
+    $(".product #light-slider").lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      thumbMargin: 30,
+      vThumbWidth: 93,
+      thumbItem: 4,
+      vertical: true,
+      verticalHeight: 379
+    });
+  }
+};
+
 var equalHeight = function equalHeight(selectors) {
   selectors.forEach(function (s) {
     var group = document.querySelectorAll(s);
@@ -54,6 +69,97 @@ var equalHeight = function equalHeight(selectors) {
       });
     }
   });
+};
+
+var mainGallery = function mainGallery() {
+  var $items = $(".gallery");
+
+  if ($items.length) {
+    $items.lightGallery({});
+  }
+};
+
+var partnersReviewCarousel = function partnersReviewCarousel() {
+  var $wrapper = $(".partners-reviews");
+
+  if ($wrapper.length) {
+    $wrapper.lightSlider({
+      item: 3,
+      loop: true,
+      slideMargin: 30,
+      controls: false,
+      speed: 800,
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          item: 1
+        }
+      }],
+      onSliderLoad: function onSliderLoad() {
+        var maxHeight = 0;
+
+        $wrapper.children().each(function () {
+          var h = $(this).outerHeight();
+          if (h > maxHeight) maxHeight = h;
+        });
+
+        $wrapper.height(maxHeight);
+      }
+    });
+
+    $wrapper.lightGallery({});
+  }
+};
+
+var loadMaps = function loadMaps() {
+  var mapTabs = function mapTabs() {
+    var $tabs = $(".maps__tabs");
+
+    if ($tabs.length) {
+      $tabs.children().each(function (i, e) {
+
+        $(e).click(function () {
+          var $this = $(this);
+
+          if ($this.hasClass("active")) return;
+
+          $this.siblings().removeClass("active");
+          $this.addClass("active");
+
+          $('.maps__items > *').removeClass('active');
+          $(".maps__items > *:nth-child(" + (i + 1) + ")").addClass('active');
+        });
+      });
+    }
+  };
+
+  try {
+    if ($(window).width() >= 768 && $("#map-scripts").length) {
+      var scriptsBlock = document.querySelector("#map-scripts");
+      var mapScript = document.createElement("script");
+      var googleScript = document.createElement("script");
+
+      mapScript.setAttribute("src", "./js/map.min.js");
+      googleScript.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGXFr7VFYNEMCgCKeW2ucF7q8RodUxYQ&v=3.31&language=ru&libraries=places,geometry&callback=initMap");
+
+      scriptsBlock.appendChild(mapScript);
+      scriptsBlock.appendChild(googleScript);
+
+      mapTabs();
+    }
+  } catch (e) {
+    console.warn(e);
+  }
+};
+
+var showContactsForPhones = function showContactsForPhones() {
+  var $mobileContactsWrapper = $('.mobile-contacts');
+  var $cards = $('.maps__item-card');
+  console.log($cards);
+
+  $mobileContactsWrapper.append($cards.each(function (i, e) {
+    return e;
+  }));
 };
 
 // ========>> DOCUMENT READY <<========
@@ -99,6 +205,8 @@ function documentReady() {
     if ($(window).width() >= 768) {
       navListWrap.classList.add("animate");
       navOverlay.classList.remove("nav__overlay_visible");
+    } else {
+      showContactsForPhones();
     }
   }).resize(); // end resize
 
@@ -109,6 +217,10 @@ function documentReady() {
 
   certGallery();
   reviewsCarousel();
+  productCarousel();
+  mainGallery();
+  partnersReviewCarousel();
+  loadMaps();
 } // end document ready
 
 // ========>> UTILS <<========
