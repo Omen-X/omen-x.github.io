@@ -47,10 +47,17 @@ var productCarousel = function productCarousel() {
       item: 1,
       loop: true,
       thumbMargin: 30,
-      vThumbWidth: 93,
       thumbItem: 4,
       vertical: true,
-      verticalHeight: 379
+      verticalHeight: 430,
+      controls: false,
+      responsive: [{
+        breakpoint: 991,
+        settings: {
+          thumbItem: 3,
+          verticalHeight: 320
+        }
+      }]
     });
   }
 };
@@ -126,8 +133,8 @@ var loadMaps = function loadMaps() {
           $this.siblings().removeClass("active");
           $this.addClass("active");
 
-          $('.maps__items > *').removeClass('active');
-          $(".maps__items > *:nth-child(" + (i + 1) + ")").addClass('active');
+          $(".maps__items > *").removeClass("active");
+          $(".maps__items > *:nth-child(" + (i + 1) + ")").addClass("active");
         });
       });
     }
@@ -153,8 +160,8 @@ var loadMaps = function loadMaps() {
 };
 
 var showContactsForPhones = function showContactsForPhones() {
-  var $mobileContactsWrapper = $('.mobile-contacts');
-  var $cards = $('.maps__item-card');
+  var $mobileContactsWrapper = $(".mobile-contacts");
+  var $cards = $(".maps__item-card");
   console.log($cards);
 
   $mobileContactsWrapper.append($cards.each(function (i, e) {

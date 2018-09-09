@@ -453,6 +453,9 @@ a:hover {
   .section_bg_grey .section-title {
     color: #368cf6; }
 
+.section_bg_dark-grey {
+  background: #d2dbdf; }
+
 .section-title {
   color: #322f78;
   font-size: 36px;
@@ -1881,11 +1884,18 @@ a.spike-item:hover .spike-item__title {
  *
  * =============================
  */
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .product__carousel {
   max-width: 570px;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
   .product__carousel .lSSlideOuter {
-    padding-left: 86px;
+    padding-left: 110px;
     padding-right: 0 !important; }
   .product__carousel .lSGallery {
     right: auto !important;
@@ -1897,15 +1907,17 @@ a.spike-item:hover .spike-item__title {
     width: 100px !important;
     height: 100px !important;
     margin: 0 !important;
+    margin-bottom: 10px !important;
     background: #FFF;
     -webkit-transition: -webkit-box-shadow .2s;
     transition: -webkit-box-shadow .2s;
     -o-transition: box-shadow .2s;
     transition: box-shadow .2s;
     transition: box-shadow .2s, -webkit-box-shadow .2s;
-    -webkit-box-shadow: inset 0 0 0 1px #000;
-            box-shadow: inset 0 0 0 1px #000;
+    border: 7px solid #d2dbdf;
     border-radius: 0 !important; }
+    .product__carousel .lSSlideOuter .lSPager.lSGallery li.active {
+      border-color: #ffcd53; }
     .product__carousel .lSSlideOuter .lSPager.lSGallery li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1932,6 +1944,14 @@ a.spike-item:hover .spike-item__title {
   width: 100%;
   height: 100%; }
 
+.product-info {
+  padding: 15px; }
+
+.product-description ol {
+  padding-left: 15px; }
+  .product-description ol li {
+    margin-bottom: 15px; }
+
 /*!
  * =============================
  *
@@ -1946,6 +1966,8 @@ a.spike-item:hover .spike-item__title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .info-section + .info-section {
+    margin-top: 80px; }
 
 .info-section_right_gallery .info-section__gallery {
   -webkit-box-ordinal-group: 2;
@@ -1968,13 +1990,12 @@ a.spike-item:hover .spike-item__title {
 
 .info-section__thumb {
   position: absolute;
-  bottom: -70px;
+  top: 240px;
   right: -100px; }
 
 .info-section__content {
   width: 50%;
-  padding-left: 15px;
-  padding-top: 50px; }
+  padding-left: 15px; }
   .info-section__content .section-title {
     margin-bottom: 30px; }
 
@@ -1989,6 +2010,9 @@ a.spike-item:hover .spike-item__title {
   .info-section__desc ul li:before {
     content: '–';
     margin-right: 10px; }
+
+.info-section__desc ol {
+  padding-left: 15px; }
 
 /*!
  * =============================
@@ -3018,9 +3042,7 @@ html.modal-open {
     width: 67%;
     padding-top: 10px; }
   .info-section__thumb {
-    width: 45%;
-    right: -16%;
-    bottom: -14%; }
+    display: none; }
   .text-card {
     width: calc(50% - 30px); }
   .delivery {
@@ -3060,7 +3082,13 @@ html.modal-open {
     max-width: 230px; }
   .maps__item-card-address,
   .maps__item-card-phones {
-    padding-left: 30px; } }
+    padding-left: 30px; }
+  .product__carousel {
+    max-width: 350px; }
+    .product__carousel .lSSlideOuter .lightSlider > * {
+      border: 4px solid #d2dbdf; }
+    .product__carousel .lSSlideOuter .lSPager.lSGallery li {
+      border-width: 4px; } }
 
 @media only screen and (max-width: 47.9375em) {
   .inner-page {
@@ -3223,16 +3251,24 @@ html.modal-open {
     font-size: 11px; }
   .inner-page {
     padding-top: 15px; }
+  .info-section_right_gallery .info-section__gallery {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .info-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap; }
+    .info-section + .info-section {
+      margin-top: 15px; }
   .info-section__content {
     width: 100%;
     padding-left: 0; }
   .info-section__gallery {
-    width: 32%; }
+    width: 32%;
+    margin-bottom: 25px;
+    margin-right: 0; }
   .info-section__img,
   .info-section__thumb {
     border-width: 4px; }
@@ -3568,4 +3604,6 @@ html.modal-open {
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    max-width: 320px; } }
+    max-width: 320px; }
+  .info-section__gallery {
+    margin-bottom: 10px; } }
