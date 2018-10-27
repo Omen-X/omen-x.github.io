@@ -50,12 +50,23 @@ var productCarousel = function productCarousel() {
       thumbItem: 4,
       vertical: true,
       verticalHeight: 430,
-      controls: false,
       responsive: [{
         breakpoint: 991,
         settings: {
           thumbItem: 3,
           verticalHeight: 320
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          gallery: false,
+          verticalHeight: 280
+        }
+      }, {
+        breakpoint: 575,
+        settings: {
+          verticalHeight: 200,
+          gallery: false
         }
       }]
     });

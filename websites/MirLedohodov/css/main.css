@@ -437,6 +437,10 @@ a:hover {
   .btn-narrow_white:hover {
     background: #ffcd53; }
 
+.btn-narrow_blue {
+  background: #368cf6;
+  color: #ffffff; }
+
 .section {
   padding-top: 70px;
   padding-bottom: 90px; }
@@ -928,6 +932,7 @@ a.spike-item:hover .spike-item__title {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 27px;
+  font-weight: 700;
   color: #368cf6; }
   .hits__item-price [class*='icon'] {
     margin-right: 15px; }
@@ -1930,6 +1935,28 @@ a.spike-item:hover .spike-item__title {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+  .product__carousel .lSAction .lSNext,
+  .product__carousel .lSAction .lSPrev {
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/decor/carousel-arr.png");
+    background-repeat: no-repeat;
+    background-position: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    top: 50% !important;
+    bottom: auto !important;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: auto !important; }
+  .product__carousel .lSAction .lSPrev {
+    left: 40px !important; }
+  .product__carousel .lSAction .lSNext {
+    right: 40px !important;
+    -webkit-transform: translateY(-50%) rotate(180deg);
+        -ms-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg); }
 
 .product__carousel-img {
   display: -webkit-box;
@@ -1945,7 +1972,98 @@ a.spike-item:hover .spike-item__title {
   height: 100%; }
 
 .product-info {
-  padding: 15px; }
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 30px; }
+
+.product-info-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .product .product-info-items {
+    margin-bottom: 57px; }
+
+.product-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #322f78;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #ffffff;
+  height: 35px;
+  border-radius: 25px;
+  min-width: 170px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.product-counter-btn {
+  display: inline-block;
+  width: 25px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer; }
+  .product-counter-btn:last-child {
+    line-height: 39px; }
+
+.product-counter-value {
+  line-height: 37px;
+  font-size: 18px; }
+
+.product-info-title {
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #322f78; }
+
+.spike-type-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px; }
+  .spike-type-options > div {
+    width: calc(20%);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-bottom: 10px; }
+    .spike-type-options > div input[type='radio'] {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: -100; }
+    .spike-type-options > div label {
+      border-radius: 50%;
+      margin-bottom: 10px;
+      text-align: center;
+      border: 6px solid transparent;
+      cursor: pointer; }
+    .spike-type-options > div input:checked + label {
+      border-color: #ffcd53; }
+    .spike-type-options > div span {
+      display: block;
+      font-size: 12px;
+      font-weight: 700; }
+
+.product-order {
+  background-color: #edf5f8;
+  padding: 20px; }
 
 .product-description ol {
   padding-left: 15px; }
@@ -2780,7 +2898,21 @@ html.modal-open {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     .catalog-items .hits__item {
-      width: calc(50% - 30px); } }
+      width: calc(50% - 30px); }
+  .product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+  .product-info {
+    padding-left: 0;
+    margin-bottom: 30px;
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto; }
+  .product__carousel {
+    margin-left: auto;
+    margin-right: auto; } }
 
 @media only screen and (max-width: 73.875em) {
   .catalog-section__sidebar_grey_bg:after {
@@ -3083,12 +3215,10 @@ html.modal-open {
   .maps__item-card-address,
   .maps__item-card-phones {
     padding-left: 30px; }
-  .product__carousel {
-    max-width: 350px; }
-    .product__carousel .lSSlideOuter .lightSlider > * {
-      border: 4px solid #d2dbdf; }
-    .product__carousel .lSSlideOuter .lSPager.lSGallery li {
-      border-width: 4px; } }
+  .product__carousel .lSSlideOuter .lightSlider > * {
+    border: 4px solid #d2dbdf; }
+  .product__carousel .lSSlideOuter .lSPager.lSGallery li {
+    border-width: 4px; } }
 
 @media only screen and (max-width: 47.9375em) {
   .inner-page {
@@ -3352,7 +3482,41 @@ html.modal-open {
   .form-rate__title {
     font-size: 10px; }
   .maps {
-    display: none; } }
+    display: none; }
+  .product__carousel .lSSlideOuter {
+    padding-left: 0; }
+  .product__carousel {
+    margin-bottom: 25px; }
+  .product-info-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center; }
+    .product .product-info-items {
+      margin-bottom: 25px; }
+    .product-info-items > * {
+      margin-bottom: 25px; }
+    .product-info-items .product-price {
+      margin-bottom: 10px; }
+  .product-info-title {
+    margin-bottom: 10px; }
+  .spike-type-options {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .spike-type-options > div {
+      width: 33%; }
+  .product-info-title,
+  .product-order {
+    text-align: center; }
+  .product__carousel .lSAction .lSNext {
+    right: 20px !important; }
+  .product__carousel .lSAction .lSPrev {
+    left: 20px !important; } }
 
 @media only screen and (max-width: 35.9375em) {
   .btn-play {
