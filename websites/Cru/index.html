@@ -16,7 +16,6 @@
   </head>
   <body class="no-js">
     <script>
-      /*Detect client config*/
       document.body.classList.remove('no-js');
       var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
       if (isTouch) document.body.classList.add('touch');
@@ -46,7 +45,7 @@
                   </ul>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="./index.html">Вакансии</a></li>
-                <li class="nav__item"><a class="nav__link" href="./index.html">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакты</a></li>
                 <li class="nav__item"><a class="nav__link" href="./index.html">Избранное</a></li>
               </ul>
             </div>
@@ -61,17 +60,15 @@
             <p class="contact-item"><i class="icon icon-marker"></i>г. Екатеринбург,<br> ул. Малышева, д.3, оф.1</p>
             <p class="contact-item contact-item_phone"><i class="icon icon-call"></i>+7 (343) 200-43-23</p>
           </div>
-          <button class="btn-main btn-main_transparent">Заказать звонок</button>
+          <button class="btn-main btn-main_transparent modal-trigger" data-toggle="modal" data-target="#modal-callback">Заказать звонок</button>
         </div>
       </div>
       <div class="services-nav-wrap">
         <div class="services-nav content-width">
-          <div class="services-nav__left">
-            <p class="services-nav__title">Аренда</p>
+          <div class="services-nav__left"><a class="services-nav__title" href="#">Аренда</a>
             <div class="services-nav__links"><a href="#">Квартиры</a><a href="#">Коммерческая недвижимость</a></div>
           </div>
-          <div class="services-nav__right">
-            <p class="services-nav__title">Продажа</p>
+          <div class="services-nav__right"><a class="services-nav__title" href="#">Продажа</a>
             <div class="services-nav__links"><a href="#">Квартиры</a><a href="#">Новостройки</a><a href="#">Дома/коттеджи</a><a href="#">Земельные участки</a><a href="#">Коммерческая недвижимость</a></div>
           </div>
         </div>
@@ -220,14 +217,245 @@
           </div>
         </div>
       </section>
-    </main><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <section class="section">
+        <div class="content-width">
+          <div class="section-title">
+            <div>Наши ценности</div>
+          </div>
+          <div class="info-items info-items_count_3">
+            <div class="info-item"><i class="icon icon_green icon_large icon-shield"></i>
+              <p class="info-item__desc">Ответственность за свою работу</p>
+            </div>
+            <div class="info-item"><i class="icon icon_green icon_large icon-exam"></i>
+              <p class="info-item__desc">Для нас претензия или жалоба-это подарок, потому что это помогает нам стать лучше, качественнее оказывать услугу.</p>
+            </div>
+            <div class="info-item"><i class="icon icon_green icon_large icon-handshake"></i>
+              <p class="info-item__desc">Доверие клиентов</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-width">
+          <div class="section-title">
+            <div>Наши преимущества</div>
+          </div>
+          <div class="info-items info-items_count_4">
+            <div class="info-item"><i class="icon icon_large icon-shield"></i>
+              <p class="info-item__desc">Работаем на рынке недвижимости более 5 лет</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-house-2"></i>
+              <p class="info-item__desc">Большой опыт сдачи жилья в найм долгосрочно. Работаем с собственниками. Доверительное управление недвиижимостью</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-town"></i>
+              <p class="info-item__desc">Сделки с другими городами РФ, в т.ч. Москва, Санкт-Петербург, в том числе новостройки</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-lawyer"></i>
+              <p class="info-item__desc">Проверка юридической чистоты объекта. Продажа объектов с обременением (ипотека)</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-enterprise"></i>
+              <p class="info-item__desc">Один наш специалист  работает за Семерых: маркетолог, инженер, психолог, юрист, администратор, менеджер, ипотечный брокер, экономя Ваши силы, время и деньги.</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-house"></i>
+              <p class="info-item__desc">Работаем во всех направлениях жилой и коммерческой  недвижимости-подбор, сдача, продажа и т д.</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-handshake"></i>
+              <p class="info-item__desc">Профессиональная деятельность нашего агентства застрахована, выплаты от …</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-exam"></i>
+              <p class="info-item__desc">При покупке или продаже вашей недвижимости, оформим ипотеку бесплатно</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-money-bag"></i>
+              <p class="info-item__desc">Работаем с крупными банками нашего города</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-hourglass"></i>
+              <p class="info-item__desc">Продадим ваш объект недвижимости за 2 месяца</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section_decor-bg">
+        <div class="content-width">
+          <div class="section-title">
+            <div>Почему выгодно обращаться именно к нам</div>
+          </div>
+          <div class="info-list">
+            <div class="info-list-item"><i class="icon icon_large icon_green icon-bank"></i>
+              <p class="info-list-item__title">Мы не требуем предоплаты</p>
+            </div>
+            <div class="info-list-item"><i class="icon icon_large icon_green icon-low-price"></i>
+              <p class="info-list-item__title">Стоимость наших услуг ниже среднего рыночного уровня;</p>
+            </div>
+            <div class="info-list-item"><i class="icon icon_large icon_green icon-hourglass-2"></i>
+              <p class="info-list-item__title">Мы оперативно подыскиваем варианты</p>
+            </div>
+            <div class="info-list-item"><i class="icon icon_large icon_green icon-town"></i>
+              <p class="info-list-item__title">Работаем с вами вплоть до фактического заселения</p>
+            </div>
+            <div class="info-list-item"><i class="icon icon_large icon_green icon-house"></i>
+              <p class="info-list-item__title">В случае вашего выселения из квартиры в течение первого месяца проживания, мы бесплатно подыщем замену</p>
+            </div>
+            <div class="info-list-item"><i class="icon icon_large icon_green icon-dialogue"></i>
+              <p class="info-list-item__title">Помогаем вам разрешить возникшие споры с собственниками квартиры</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-width">
+          <div class="section-title">
+            <div>Кто наши клиенты</div>
+          </div>
+          <div class="info-items">
+            <div class="info-item"><i class="icon icon_large icon-team"></i>
+              <p class="info-item__desc info-item__desc_large">Организации</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-cap"></i>
+              <p class="info-item__desc info-item__desc_large">Студенты</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-couple"></i>
+              <p class="info-item__desc info-item__desc_large">Молодые пары</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-enterprise"></i>
+              <p class="info-item__desc info-item__desc_large">Дольщики</p>
+            </div>
+            <div class="info-item"><i class="icon icon_large icon-team-2"></i>
+              <p class="info-item__desc info-item__desc_large">Гости из ближнего зарубежья</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section_decor-bg reviews-section">
+        <div class="content-width">
+          <div class="section-title">
+            <h2>Отзывы довольных клиентов</h2>
+          </div>
+          <div class="carousel-wrap">
+            <div class="carousel-nav"><span class="prev"></span><span class="next"></span></div>
+            <div class="reviews">
+              <div class="review">
+                <div class="review__inner">
+                  <div class="review__img"><img src="./img/content/ava-1.png"></div>
+                  <div class="review__content">
+                    <p class="review__title">Щербакова Анна Николаевна</p>
+                    <p class="review__text">
+                      Я обратилась в риелторскую компанию "Центр Риелторских Услуг" , чтобы продать квартиру.
+                      Со мной работал Васиф, очень спокойный, грамотный, дипломатичный и выдержанный человек. Вопросы решал, подсказывал, направлял. Я знаю, что мне самой было бы не справится с документами.С Васифом мне было спокойно, надежно. Я и впредь буду обращаться к нему  и в эту компанию "ЦРУ".
+                      Я к ним и до этого обращалась и очень им благодарна
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__inner">
+                  <div class="review__img"><img src="./img/content/ava-2.png"></div>
+                  <div class="review__content">
+                    <p class="review__title">Марина</p>
+                    <p class="review__text">Узнала о вас в интернете.  Оперативность в работе специалиста по недвижимости Владимира, владение ситуацией, быстрое оформление сделки.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__inner">
+                  <div class="review__img"><img src="./img/content/ava-1.png"></div>
+                  <div class="review__content">
+                    <p class="review__title">Щербакова Анна Николаевна</p>
+                    <p class="review__text">
+                      Я обратилась в риелторскую компанию "Центр Риелторских Услуг" , чтобы продать квартиру.
+                      Со мной работал Васиф, очень спокойный, грамотный, дипломатичный и выдержанный человек. Вопросы решал, подсказывал, направлял. Я знаю, что мне самой было бы не справится с документами.С Васифом мне было спокойно, надежно. Я и впредь буду обращаться к нему  и в эту компанию "ЦРУ".
+                      Я к ним и до этого обращалась и очень им благодарна
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-main-wrap">
+            <button class="btn-main modal-trigger" data-toggle="modal" data-target="#modal-review">Добавить свой отзыв</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-width footer__content">
+        <div class="logo footer__logo"><a class="logo__link" href="./index.html"><img src="./img/decor/logo_light.png"></a></div>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О Нас</a></li>
+          <li><a href="#">Ипотека</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="clear-ul footer-nav">
+          <li><a href="#">Аренда квартир</a></li>
+          <li><a href="#">Квартиры</a></li>
+          <li><a href="#">Комнаты</a></li>
+          <li><a href="#">Новостройки</a></li>
+          <li><a href="#">Дома/Коттеджи</a></li>
+          <li><a href="#">Земельные участки</a></li>
+          <li><a href="#">Коммерческая недвижимость</a></li>
+        </ul>
+        <div class="footer__info">
+          <p class="footer__info-item"><i class="icon icon_transparent icon-call"></i>+7 (343) 200-43-23</p>
+          <p class="footer__info-item"><i class="icon icon_transparent icon-email"></i>rieltor@cru.ru</p>
+          <p class="footer__info-item"><i class="icon icon_transparent icon-marker"></i>г. Екатеринбург,<br>ул. Малышева, д.3, оф.1</p>
+          <form class="subscription">
+            <p class="subscription__title">Подпишитесь на обновления:</p>
+            <input class="subscription__input" type="email" placeholder="Email">
+            <button class="btn-main btn-main_transparent" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <button class="to-top"><i></i><span>Наверх</span></button>
+    <div class="modal fade" id="modal-callback" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-form-wrap">
+            <div class="modal-form-close">&times;</div>
+            <form class="modal-form">
+              <p class="modal-form__title">Заполните форму</p>
+              <p class="modal-form__sub-title">И наш менеджер свяжется с Вами</p>
+              <div class="modal-form__fields">
+                <input class="modal-form__field" placeholder="Имя" type="text">
+                <input class="modal-form__field" placeholder="Телефон" type="text">
+              </div>
+              <div class="modal-form__submit">
+                <button class="btn-main" type="submit">Отправить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-form-wrap">
+            <div class="modal-form-close">&times;</div>
+            <form class="modal-form">
+              <p class="modal-form__title">Оставить отзыв</p>
+              <p class="modal-form__sub-title">Заполните форму и поделитесь своим отзывом</p>
+              <div class="modal-form__fields">
+                <input class="modal-form__field" placeholder="Имя" type="text">
+                <textarea class="modal-form__field" placeholder="Текст отзыва"></textarea>
+              </div>
+              <div class="modal-form__submit">
+                <button class="btn-main" type="submit">Оставить отзыв</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script>
       var ver = 1;
       //- ver = Math.floor(Math.random() * 100);
       var scr = {"scripts":[
-      //- {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
-      {"src" : "js/common.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false}
       ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
     </script>
   </body>
