@@ -698,13 +698,6 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-.my-nav__content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  padding: 15px; }
-
 .nav-list-wrap {
   position: relative; }
 
@@ -943,6 +936,12 @@ html.modal-open {
     body.no-js .my-nav {
       position: static;
       width: auto; }
+  .my-nav__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 15px; }
   .nav__mob-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1153,4 +1152,6 @@ html.modal-open {
     .nav__list > .nav__item.active > .nav__link {
       color: #1a1718; }
       .nav__list > .nav__item.active > .nav__link:after {
-        display: block; } }
+        display: block; }
+  .nav-info {
+    display: none; } }
