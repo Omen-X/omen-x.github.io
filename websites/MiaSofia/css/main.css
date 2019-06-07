@@ -809,7 +809,7 @@ body {
     display: none; }
 
 .nav-info {
-  margin-top: 35px; }
+  margin-top: auto; }
 
 .nav-info__title {
   display: -webkit-box;
@@ -937,10 +937,18 @@ html.modal-open {
       position: static;
       width: auto; }
   .my-nav__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
+    bottom: 0;
     padding: 15px; }
   .nav__mob-button {
     display: -webkit-box;
@@ -956,7 +964,8 @@ html.modal-open {
     overflow: hidden;
     position: relative; }
   .nav-list-wrap {
-    overflow: hidden; }
+    overflow: hidden;
+    margin-bottom: 30px; }
   .nav__list {
     width: auto;
     display: block;
@@ -1113,6 +1122,22 @@ html.modal-open {
             transform: translateX(-50%); }
   .location-select {
     display: block; } }
+
+@media only screen and (max-width: 28.75em) {
+  .header__content {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .nav__mob-button {
+    margin-right: 8px; }
+  .header__content .order-btn {
+    margin-left: 7px; }
+  .header__content .logo {
+    max-width: 100px;
+    top: 21px; } }
+
+@media only screen and (max-width: 22.5em) {
+  .header__content .logo {
+    max-width: 65px; } }
 
 @media only screen and (min-width: 48em) {
   .mobile-search {
