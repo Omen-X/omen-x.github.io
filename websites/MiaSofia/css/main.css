@@ -255,7 +255,8 @@ textarea {
  * =============================
  */
 body {
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin: 0; }
 
 .visible {
   visibility: visible !important; }
