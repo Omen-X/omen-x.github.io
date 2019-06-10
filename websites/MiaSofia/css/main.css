@@ -935,7 +935,8 @@ html.modal-open {
     z-index: 1000;
     top: 0;
     right: 0;
-    width: 100%;
+    left: 0;
+    bottom: 0;
     background: #FFFFFF;
     min-height: calc(100vh);
     -webkit-transition: all .2s;
@@ -958,13 +959,6 @@ html.modal-open {
       position: static;
       width: auto; }
   .my-nav__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
     position: absolute;
     left: 0;
     top: 0;
@@ -1193,7 +1187,7 @@ html.modal-open {
     display: none;
     position: absolute;
     z-index: 10;
-    padding: 10px;
+    padding: 10px 10px 10px 1px;
     background: #ffffff;
     border: 1px solid #3197f9;
     left: -10px; }
@@ -1236,8 +1230,7 @@ html.modal-open {
   .nav__link {
     display: block;
     white-space: nowrap;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding: 5px 10px 10px;
     border-bottom: none; }
     .nav__list > .nav__item.active > .nav__link {
       color: #1a1718; }
@@ -1260,13 +1253,13 @@ html.modal-open {
         bottom: -1px;
         left: -10px;
         right: -10px;
-        top: -11px;
+        top: -8px;
         z-index: 11;
         border: 1px solid #3197f9;
         border-bottom: none; }
-    .nav__list > .nav__item:first-child .nav__link {
+    .nav__list > .nav__item:first-child > .nav__link {
       padding-left: 0; }
-    .nav__list > .nav__item:last-child .nav__link {
+    .nav__list > .nav__item:last-child > .nav__link {
       padding-right: 0; }
     .nav__list > .nav__item > .nav__link {
       font-size: 16px;
@@ -1294,6 +1287,7 @@ html.modal-open {
   .nav__inner-title {
     display: block;
     margin-bottom: 10px;
+    padding-left: 10px;
     font-size: 22px;
     color: #1a1718; }
     .nav__inner-title:hover {
@@ -1314,10 +1308,10 @@ html.modal-open {
 
 @media only screen and (min-width: 78.125em) {
   .nav__inner-wrap {
-    left: -25px;
+    left: -22px;
     border: 5px solid #ffffff;
     border-top: none;
-    padding: 20px 20px 20px 20px; }
+    padding: 20px 20px 20px 6px; }
     .nav__inner-wrap:before {
       content: '';
       display: block;
@@ -1333,8 +1327,8 @@ html.modal-open {
     left: auto;
     border-right: none; }
   .nav__list > .nav__item:hover > .nav__link[data-nav-list-id]:after {
-    left: -19px;
-    right: -19px; }
+    left: -16px;
+    right: -16px; }
   .nav__list > .nav__item:hover > .nav__link[data-nav-list-id]:before {
-    right: -20px;
-    left: -20px; } }
+    right: -17px;
+    left: -17px; } }
