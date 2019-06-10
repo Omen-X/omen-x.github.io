@@ -20,6 +20,7 @@ var mobileNav = function mobileNav() {
     $('.nav-list-wrap').css('min-height', currMenuHeight + 'px');
 
     $nav.addClass('inner-list-visible');
+    $('.my-nav').scrollTop(0);
   });
 
   // back-button handler
@@ -27,6 +28,7 @@ var mobileNav = function mobileNav() {
     $nav.removeClass('inner-list-visible');
     $innerListWrap.removeClass('visible');
     $('.nav-list-wrap').css('min-height', 'auto');
+    $('.my-nav').scrollTop(0);
   });
 };
 
@@ -98,11 +100,6 @@ function documentReady() {
       var $innerWrap = $(this).siblings('.nav__inner-wrap');
 
       $innerWrap.find('.nav__list-img img').attr('src', $(this).data('image'));
-
-      // TODO: remove later
-      // const availableWidth = $('.nav__list').outerWidth() - $(this).closest('.nav__item').position().left;
-      // const innerWrapWidth = $innerWrap.outerWidth();
-      // if (availableWidth < innerWrapWidth) $innerWrap.css({left: 'auto', right: '-20px'})
     });
 
     $innerNavLink.hover(function () {
@@ -119,9 +116,7 @@ function documentReady() {
 
   var header = $('header.header');
 
-  // if (window.matchMedia('(min-width: 992px)').matches) {
   if (window.pageYOffset > 0) header.addClass('fixed');
-  // }
 
   var fixedHeader = function fixedHeader(currentScrollTop) {
     if (currentScrollTop > 0) header.addClass('fixed');else header.removeClass('fixed');
@@ -151,9 +146,7 @@ function documentReady() {
     }
 
     // fixed header
-    // if (window.matchMedia('(min-width: 992px)').matches) {
     fixedHeader(currentScrollTop);
-    // }
 
     lastScrollTop = currentScrollTop;
     return raf(handleWindowScroll);
@@ -162,6 +155,7 @@ function documentReady() {
   handleWindowScroll();
 
   // end scroll handler
+
 
   $(window).on('resize', function () {
     if ($(window).width() <= 991) {

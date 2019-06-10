@@ -534,7 +534,7 @@ body {
     background: #3197f9;
     height: 1px;
     width: 13px;
-    bottom: -18px; }
+    bottom: -19px; }
   .phone-contact__modal-arrow:before {
     -webkit-transform: rotate(35deg);
         -ms-transform: rotate(35deg);
@@ -550,7 +550,7 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    bottom: -25px;
+    bottom: -26px;
     height: 10px;
     width: 15px;
     background: #fff; }
@@ -559,13 +559,13 @@ body {
         -ms-transform: rotate(35deg);
             transform: rotate(35deg);
     left: 8px;
-    bottom: -30px; }
+    bottom: -31px; }
   .phone-contact__modal-arrow span:after {
     -webkit-transform: rotate(-35deg);
         -ms-transform: rotate(-35deg);
             transform: rotate(-35deg);
     left: -4px;
-    bottom: -30px; }
+    bottom: -31px; }
 
 .phone-contact__icon {
   position: relative; }
@@ -592,6 +592,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 20px; }
   .contact-card:last-child {
     margin-bottom: 0; }
@@ -605,11 +608,13 @@ body {
   margin-right: 20px; }
 
 .contact-card__title {
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  margin-top: 0;
   font-size: 14px;
   font-weight: 700; }
 
 .contact-card__text {
+  margin-top: 0;
   margin-bottom: 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 25px; }
@@ -677,8 +682,6 @@ body {
 
 .nav-wrap {
   border-bottom: 2px solid #ebf5fd; }
-  .header.fixed .nav-wrap {
-    border-bottom-color: #ffffff; }
 
 .nav__header {
   display: none; }
@@ -716,9 +719,9 @@ body {
   position: absolute;
   cursor: pointer;
   margin-right: 15px;
-  -webkit-transform: translateX(-48px);
-      -ms-transform: translateX(-48px);
-          transform: translateX(-48px);
+  -webkit-transform: translateX(-63px);
+      -ms-transform: translateX(-63px);
+          transform: translateX(-63px);
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   -o-transition: transform .4s;
@@ -948,8 +951,9 @@ html.modal-open {
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0); }
     .my-nav.visible {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
     .my-nav.trs {
       -webkit-transition: -webkit-transform .4s;
       transition: -webkit-transform .4s;
@@ -962,7 +966,7 @@ html.modal-open {
   .my-nav__content {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 63px;
     right: 0;
     bottom: 0;
     padding: 15px; }
@@ -978,10 +982,15 @@ html.modal-open {
         -ms-flex-pack: justify;
             justify-content: space-between;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-bottom: 15px; }
+    padding: 15px; }
   .nav-list-wrap {
     overflow: hidden;
     margin-bottom: 30px;
