@@ -1329,7 +1329,7 @@ html.modal-open {
       top: 0;
       border: 1px solid #3197f9; }
   .nav__inner-wrap_columns {
-    right: -85px;
+    right: -92px;
     left: auto;
     border-right: none; }
   .nav__list > .nav__item:hover > .nav__link[data-nav-list-id]:after {
