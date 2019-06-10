@@ -927,6 +927,14 @@ body {
 html.modal-open {
   overflow: hidden; }
 
+@media only screen and (max-width: 74.9375em) {
+  .nav__link .nav__list-inner {
+    font-size: 16px; }
+  .nav__list > .nav__item > .nav__link {
+    font-size: 16px;
+    padding-left: 1px;
+    padding-right: 1px; } }
+
 @media only screen and (max-width: 61.9375em) {
   .header__content {
     -ms-flex-wrap: wrap;
@@ -998,7 +1006,10 @@ html.modal-open {
     position: relative; }
   .nav-list-wrap {
     overflow: hidden;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
   .nav__list {
     width: auto;
     display: block;
@@ -1014,8 +1025,11 @@ html.modal-open {
       -webkit-transform: translateX(-100px);
           -ms-transform: translateX(-100px);
               transform: translateX(-100px); }
+  .nav__list-inner {
+    overflow-y: auto; }
   .nav__inner-wrap {
     position: absolute;
+    overflow-y: auto;
     z-index: 10;
     background: #ffffff;
     left: 100px;
@@ -1039,15 +1053,26 @@ html.modal-open {
       display: none; }
   .nav__item {
     margin-bottom: 8px; }
+  .nav__inner-title,
+  ._manufacturers-link {
+    display: block;
+    background: #f6fbff;
+    color: #1a1718;
+    font-size: 20px;
+    padding: 8px 30px 8px 15px;
+    letter-spacing: 1px;
+    margin-bottom: 8px; }
   .nav__link {
     display: block;
     position: relative;
     border-radius: 5px;
     background: #f6fbff;
     color: #3197f9;
-    font-size: 20px;
-    padding: 8px 30px 8px 15px;
+    font-size: 20px !important;
+    padding: 8px 30px 8px 15px !important;
     letter-spacing: 1px; }
+    .nav__columns .nav__link {
+      text-transform: none; }
     .nav__item.active .nav__link {
       color: #3197f9; }
       .nav__item.active .nav__link:after {
@@ -1177,14 +1202,15 @@ html.modal-open {
     display: none; } }
 
 @media only screen and (min-width: 62em) {
+  .visible-mobile {
+    display: none !important; }
   .nav__inner-wrap {
     display: none;
     position: absolute;
     z-index: 10;
-    padding: 20px 15px;
+    padding: 20px 15px 20px 5px;
     background: #ffffff;
-    -webkit-box-shadow: 0px 0px 4px 1px rgba(49, 151, 249, 0.9);
-            box-shadow: 0px 0px 4px 1px rgba(49, 151, 249, 0.9);
+    border: 1px solid #3197f9;
     left: 0; }
   .nav__list-img,
   .nav__list-inner {
@@ -1205,11 +1231,68 @@ html.modal-open {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+      .nav__item:hover .nav__inner-wrap.nav__inner-wrap_columns {
+        display: block;
+        padding-bottom: 10px; }
   .nav__link {
-    white-space: nowrap; }
+    display: block;
+    white-space: nowrap;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 5px;
+    border: 1px solid transparent; }
     .nav__list > .nav__item.active > .nav__link {
       color: #1a1718; }
       .nav__list > .nav__item.active > .nav__link:after {
         display: block; }
+    .nav__list > .nav__item:hover > .nav__link[data-nav-list-id] {
+      border: 1px solid #3197f9;
+      border-bottom: none; }
+      .nav__list > .nav__item:hover > .nav__link[data-nav-list-id]:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 15;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #fff; }
+    .nav__list-inner .nav__link {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: 20px;
+      line-height: 24px; }
+      .nav__list-inner .nav__link:hover {
+        background: #e9f2fa;
+        color: #1a1718; }
+    .nav__columns .nav__link {
+      white-space: normal;
+      text-transform: none;
+      font-size: 22px; }
   .nav-info {
-    display: none; } }
+    display: none; }
+  .nav__columns {
+    width: 540px;
+    -webkit-columns: 10em;
+       -moz-columns: 10em;
+            columns: 10em; }
+  .nav__inner-title {
+    display: block;
+    padding-left: 12px;
+    font-size: 26px;
+    color: #1a1718; }
+    .nav__inner-title:hover {
+      background: #e9f2fa;
+      color: #1a1718; }
+  ._manufacturers-link {
+    margin-left: 5px;
+    border-top: 1px solid #3197f9;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 7px; }
+    ._manufacturers-link a {
+      display: block;
+      color: #3197f9; }
+      ._manufacturers-link a:hover {
+        color: #1a1718; } }
