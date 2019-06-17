@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Content">
+    <title>MiaSofia</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="no-js">
+    <script>
+      document.body.classList.remove('no-js');
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__top">
+        <div class="content-width"><a class="location-button" href="#" onclick="if (typeof yaCounter22467994 != 'undefined') yaCounter22467994.reachGoal('select_city');"><span class="svg-icon-marker"></span><span class="location-button__text font-title" title="Если город определился не правильно, то нажмите, чтобы выбрать верный вариант.">Петропавловск-камчатский</span></a>
+          <div class="header-nav"><a class="header-nav__link font-title" href="#">Контакты</a><a class="header-nav__link font-title" href="#">Обратный звонок</a><a class="header-nav__link font-title" href="#">Оплата и гарантии</a><a class="header-nav__link font-title" href="#">Доставка</a><a class="header-nav__link font-title" href="#">Как сделать заказ</a></div>
+          <div class="main-search font-title">
+            <div class="main-search__btn"><span class="svg-icon-search"></span><span class="main-search__btn-text">ПОИСК</span></div>
+            <div class="main-search__modal">
+              <div class="search-form-wrap">
+                <form class="search-form search-form_active-submit">
+                  <button class="search-form__submit" type="submit"><i class="svg-icon-search"></i></button>
+                  <input class="search-form__field" type="text" placeholder="Поиск мебели или коллекции">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="soc-links"><a class="soc-link soc-link_vk" href="#" target="_blank"></a><a class="soc-link soc-link_fb" href="#" target="_blank"></a><a class="soc-link soc-link_insta" href="#" target="_blank"></a></div>
+        </div>
+      </div>
+      <div class="header__content content-width">
+        <div class="nav__mob-button"><i class="icon icon-menu"></i></div>
+        <div class="phone-contact"><span class="phone-contact__icon"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"><path fill="none" stroke="#3ea0f1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" d="M18.076 13.728v2.559a1.706 1.706 0 0 1-1.86 1.706 16.882 16.882 0 0 1-7.362-2.619 16.635 16.635 0 0 1-5.118-5.118 16.882 16.882 0 0 1-2.62-7.396A1.706 1.706 0 0 1 2.816 1h2.559A1.706 1.706 0 0 1 7.08 2.467c.108.82.308 1.623.597 2.397a1.706 1.706 0 0 1-.384 1.8L6.21 7.748a13.649 13.649 0 0 0 5.118 5.118l1.083-1.083a1.706 1.706 0 0 1 1.8-.384 10.95 10.95 0 0 0 2.398.597 1.706 1.706 0 0 1 1.467 1.732z"/></svg><span class="phone-contact__modal-arrow"><span></span></span></span><span class="phone-contact__text font-title">+7 (343) 288-55-91</span>
+          <div class="phone-contact__modal">
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="svg-icon-phone-call"></i></div>
+              <div class="contact-card__content">
+                <p class="contact-card__title">Позвоните нам</p>
+                <p class="contact-card__text">+7 912 345 67 89</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="icon icon svg-icon-wzzup"></i></div>
+              <div class="contact-card__content">
+                <p class="contact-card__title">или напишите в WhatsApp</p>
+                <p class="contact-card__text">+7 912 345 67 89</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="w-hours text-grey">Время работы 10:00 – 20:00</p>
+        <div class="logo logo_centered"><a class="logo__link" href="./index.html"><img src="./img/decor/logo.svg"></a></div><a class="fav-products font-title" href="#"><span class="fav-products__icon"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="16"><path fill="#fff" d="M9.5 14.687s8-4.03 8-9-4.927-6.017-8-3c-2.996-2.937-8-1.97-8 3s8 9 8 9z"/><path fill="none" stroke="#fd336a" stroke-miterlimit="50" stroke-width="2" d="M9.5 14.687s8-4.03 8-9-4.927-6.017-8-3c-2.996-2.937-8-1.97-8 3s8 9 8 9z"/></svg></span><span class="fav-products__text font-title">ИЗБРАННОЕ</span><span class="fav-products__counter text-grey">12</span></a><a class="order-btn btn-main" href="#"><span class="order-btn__icon"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" d="M7.183 17.225a.773.773 0 1 0 0-1.545.773.773 0 0 0 0 1.545zM15.683 17.225a.773.773 0 1 0 0-1.545.773.773 0 0 0 0 1.545zM1 1h3.09l2.072 10.347a1.545 1.545 0 0 0 1.545 1.244h7.511c.749.014 1.4-.51 1.546-1.244L18 4.864H4.864"/></svg></span><span class="order-btn__counter">24</span><span class="order-btn__price font-title">
+            <!-- TODO: formatting?--><span class="order-btn__price-value">2 345 789</span><span> ₽</span></span><span class="order-btn__arrow"></span></a>
+        <div class="location-select"><span>Магазин детской мебели в</span><a class="location-button" href="#" onclick="if (typeof yaCounter22467994 != 'undefined') yaCounter22467994.reachGoal('select_city');"><span class="location-button__text font-title" title="Если город определился не правильно, то нажмите, чтобы выбрать верный вариант.">Петропавловске-Камчатском</span></a></div>
+      </div>
+      <div class="main-nav">
+        <div class="nav-wrap">
+          <div class="content-width">
+            <nav class="my-nav trs">
+              <div class="my-nav__content">
+                <div class="nav__header">
+                  <div class="nav__back"><i class="icon svg-icon-arrow_blue svg-icon-arrow_blue_back"></i></div>
+                  <div class="search-form-wrap"><i class="icon svg-icon-search"></i>
+                    <form class="search-form">
+                      <input class="search-form__field" type="text" placeholder="Поиск мебели или коллекции">
+                    </form>
+                  </div>
+                  <div class="nav__close"><i class="icon svg-icon-cross"></i></div>
+                </div>
+                <div class="nav-list-wrap">
+                  <ul class="clear-ul nav__list font-title">
+                    <li class="nav__item active"><a class="nav__link" href="#1" data-nav-list-id="1" data-image="./img/content/lego.jpg"><span>Мебель для девочки</span></a>
+                      <div class="nav__inner-wrap" data-nav-list-id="1">
+                        <ul class="clear-ul nav__list-inner">
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/lego.jpg"><span>Регулируемые парты</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/racer.jpg"><span>Фабрики</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/lego.jpg"><span>Акции</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/racer.jpg"><span>Акции</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/lego.jpg"><span>Акции</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/racer.jpg"><span>Акции</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html" data-image="./img/content/lego.jpg"><span>Акции</span></a></li>
+                        </ul>
+                        <div class="nav__list-img"><img src="#"></div>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#2" data-nav-list-id="2" data-image="./img/content/racer.jpg"><span>Мебель для мальчика</span></a>
+                      <div class="nav__inner-wrap" data-nav-list-id="2">
+                        <ul class="clear-ul nav__list-inner">
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Мебель для подростка</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Детские кровати</span></a></li>
+                        </ul>
+                        <div class="nav__list-img"><img src="#"></div>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="./index.html" data-nav-list-id="3"><span>Мебель для подростка</span></a>
+                      <div class="nav__inner-wrap" data-nav-list-id="3">
+                        <ul class="clear-ul nav__list-inner">
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Мебель для подростка</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Детские кровати</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="./index.html" data-nav-list-id="4"><span>Детские кровати</span></a>
+                      <div class="nav__inner-wrap" data-nav-list-id="4">
+                        <ul class="clear-ul nav__list-inner">
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Мебель для подростка</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Детские кровати</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="./index.html" data-nav-list-id="5"><span>Регулируемые парты</span></a>
+                      <div class="nav__inner-wrap" data-nav-list-id="5">
+                        <ul class="clear-ul nav__list-inner">
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Мебель для подростка</span></a></li>
+                          <li class="nav__item"><a class="nav__link" href="./index.html"><span>Детские кровати</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="./index.html" data-nav-list-id="7"><span>Фабрики</span></a>
+                      <div class="nav__inner-wrap nav__inner-wrap_columns" data-nav-list-id="7">
+                        <div class="nav__columns">
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Россия</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>TCT Nanotec</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Турция</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Cilek</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Китай</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Италия</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Fratelli Barri</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Беларусь</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Мебель-Неман</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Минский Мебельный Центр</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Польша</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="nav__inner-block"><a class="nav__inner-title" href="#">Тайвань</a>
+                            <ul class="clear-ul nav__list-inner">
+                              <li class="nav__item"><a class="nav__link" href="./index.html"><span>Rifforma</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="_manufacturers-link"><a href="#">Все фабрики</a></div>
+                      </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="./index.html"><span><i class="svg-icon-percent visible-mobile"></i>Акции</span></a></li>
+                  </ul>
+                </div>
+                <div class="nav-info">
+                  <p class="nav-info__title font-title"><i class="svg-icon-warn"></i>Информация</p>
+                  <div class="nav-info__links"><a href="#">Контакты</a><a href="#">О нас</a><a href="#">Условия действующих акций</a><a href="#">Производители</a><a href="#">Предложение для дизайнера</a><a href="#">Политика конфиденциальности</a><a href="#">Полезные статьи</a></div>
+                  <div class="nav-info__links"><a href="#">Условия продажи</a><a href="#">Доставка</a><a href="#">Оплата и гарантии</a><a href="#">Как сделать заказ</a></div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-search content-width">
+        <div class="search-form-wrap">
+          <form class="search-form search-form_active-submit">
+            <button class="search-form__submit" type="submit"><i class="svg-icon-search"></i></button>
+            <input class="search-form__field" type="text" placeholder="Поиск мебели или коллекции">
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="content-width"><a class="breadcrumbs__link" href="./index.html">Главная</a><a class="breadcrumbs__link" href="./index.html">Статьи</a><span class="breadcrumbs__curr">Декорирование и стиль</span></div>
+      </div>
+      <section>
+        <div class="content-width">
+          <p class="section-title">Декорирование и стиль<a class="art-all-link" href="#">12 статей</a></p>
+          <div class="art-previews">
+            <div class="art-preview">
+              <div class="art-preview__img"><img src="./img/content/art-preview-1.jpg"></div>
+              <div class="art-preview__content"><a class="art-preview__title" href="#">Детская комната для мальчика и девочки — цвет и зонирование</a>
+                <div class="art-preview__meta">
+                  <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                </div>
+              </div>
+            </div>
+            <div class="art-preview__block">
+              <div class="art-preview">
+                <div class="art-preview__img"><img src="./img/content/art-preview-2.jpg"></div>
+                <div class="art-preview__content"><a class="art-preview__title" href="#">Дизайн комнаты для мальчика-подростка</a>
+                  <div class="art-preview__meta">
+                    <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                  </div>
+                </div>
+              </div>
+              <div class="art-preview">
+                <div class="art-preview__img"><img src="./img/content/art-preview-3.jpg"></div>
+                <div class="art-preview__content"><a class="art-preview__title" href="#">Детская комната для мальчика и девочки — цвет и зонирование</a>
+                  <div class="art-preview__meta">
+                    <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a></div><span class="art-preview__date">22.11.17</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="art-preview__block">
+              <div class="art-preview art-preview_people art-preview_bg-green">
+                <div class="art-preview__content"><a class="art-preview__title" href="#">Ильзе Кроуфорд, шведский дизайнер о растущей мебели</a>
+                  <div class="art-preview__meta">
+                    <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                  </div>
+                </div>
+                <div class="art-preview__img"><img src="./img/content/ava-1.png"></div>
+              </div>
+              <div class="art-preview">
+                <div class="art-preview__img"><img src="./img/content/art-preview-2.jpg"></div>
+                <div class="art-preview__content"><a class="art-preview__title" href="#">Дизайн комнаты для мальчика-подростка</a>
+                  <div class="art-preview__meta">
+                    <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="art-preview">
+              <div class="art-preview__img"><img src="./img/content/art-preview-1.jpg"></div>
+              <div class="art-preview__content"><a class="art-preview__title" href="#">Детская комната для мальчика и девочки — цвет и зонирование</a>
+                <div class="art-preview__meta">
+                  <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                </div>
+              </div>
+            </div>
+            <div class="art-preview">
+              <div class="art-preview__img"><img src="./img/content/art-preview-1.jpg"></div>
+              <div class="art-preview__content"><a class="art-preview__title" href="#">Детская комната для мальчика и девочки — цвет и зонирование</a>
+                <div class="art-preview__meta">
+                  <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                </div>
+              </div>
+            </div>
+            <div class="art-previews__banner">
+              <p class="art-previews__banner-text">Скоро мы напишем ещё</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="content-width">
+          <div class="insta-block section-bordered">
+            <div class="insta-row">
+              <div class="insta-row__content">
+                <div class="insta-row__img"><img src="./img/decor/logo-pic.png"></div>
+                <div class="insta-row__text">
+                  <div class="insta-row__title">Подписывайтесь на наш уютный Инстаграмчик</div>
+                  <div class="insta-row__desc">Новости, акции и советы по обыстройству детской</div>
+                </div>
+              </div><a class="insta-link" href="#"><i class="svg-icon-insta"></i><span class="insta-link__text">miasofia2013</span></a>
+            </div>
+            <div class="photos-row">
+              <div class="photos-row__item"><img src="./img/content/insta-1.jpg"></div>
+              <div class="photos-row__item"><img src="./img/content/insta-1.jpg"></div>
+              <div class="photos-row__item"><img src="./img/content/insta-1.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="content-width">
+          <div class="mailing section-bordered">
+            <div class="mailing__img"><img src="./img/decor/mail-icon.png"></div>
+            <div class="mailing__content">
+              <div class="mailing__title">Узнавайте про наши новые акции в почтовой рассылке и в социальных сетях</div>
+              <form class="form-mailing" action="">
+                <input class="form-mailing__field" type="text" placeholder="Укажите электронную почту">
+                <button class="btn-main" type="submit">Подписаться на новости</button>
+              </form>
+              <div class="mailing-links"><a class="mailing-link" href="#"><i class="svg-icon-insta svg-icon-insta_large"></i></a><a class="mailing-link" href="#"><i class="svg-icon-fb"></i></a><a class="mailing-link" href="#"><i class="svg-icon-vk"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="content-width">
+          <p class="section-title">Статьи о детских интерьерах</p>
+          <div class="section-tags">
+            <div class="section-tag"><a href="#">Безопасность</a><span>29</span></div>
+            <div class="section-tag"><a href="#">Декор и стиль</a><span>16</span></div>
+            <div class="section-tag"><a href="#">Зонирование</a><span>14</span></div>
+            <div class="section-tag"><a href="#">Как выбрать</a><span>29</span></div>
+            <div class="section-tag"><a href="#">Популярное</a><span>29</span></div>
+          </div>
+          <div class="art-block">
+            <div class="art-preview art-preview_wide">
+              <div class="art-preview__img"><img src="./img/content/art-preview-5.jpg"></div>
+              <div class="art-preview__content"><a class="art-preview__title" href="#">Идеи оформления комнаты для девочки</a>
+                <div class="art-preview__meta">
+                  <div class="art-preview__tags"><a class="art-preview__tag" href="#">Популярное</a><a class="art-preview__tag" href="#">Декор и стиль</a><a class="art-preview__tag" href="#">Для девочки</a></div><span class="art-preview__date">22.11.17</span>
+                </div>
+              </div>
+            </div>
+            <div class="art-related">
+              <div class="art-related__title">Последние публикации</div>
+              <div class="art-related__links"><a class="art-related__link" href="#">Комната для девочки в классическом стиле</a><a class="art-related__link" href="#">Стили меблировки комнаты девочки-подростка</a><a class="art-related__link" href="#">Примеры оформления детской комнаты для девочки с фото</a><a class="art-related__link" href="#">5 советов по выбору кроватей для девочки</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-width footer__content"></div>
+    </footer>
+    <script>
+      var ver = 1;
+      //- ver = Math.floor(Math.random() * 100);
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js?dev=" + ver, "async" : false},
+      {"src" : "js/common.min.js?dev=" + ver, "async" : false}
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>
