@@ -81,12 +81,6 @@ function technologyNav() {
 // ========>> DOCUMENT READY <<========
 
 $(function () {
-  // Preloader
-  $('#loader').fadeOut(200);
-  setTimeout(function () {
-    $('#loader').remove();
-  }, 210);
-
   // Prevent dragging img
   $('img').on('dragstart', function (event) {
     return event.preventDefault();
