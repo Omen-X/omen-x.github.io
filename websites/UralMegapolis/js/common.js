@@ -92,7 +92,7 @@ $(function () {
       $('[data-img-src]').each(function (i, e) {
         $(e).attr('src', $(e).attr('data-img-src'));
       });
-    }, 300);
+    }, 0);
   } else {
     $('.lazy-img').removeClass('lazy-img');
     $('[data-img-src]').each(function (i, e) {
