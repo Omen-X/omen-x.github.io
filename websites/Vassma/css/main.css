@@ -1957,6 +1957,12 @@ textarea {
     max-width: 500px; } }
 
 @media only screen and (max-width: 56.1875em) {
+  .welcome-carousel__item:first-child {
+    background-image: url("../img/content/slide-1_2_min.jpg") !important; }
+  .welcome-carousel__item:nth-child(2) {
+    background-image: url("../img/content/slide-2_min.jpg") !important; }
+  .welcome-carousel__item:nth-child(3) {
+    background-image: url("../img/content/slide-3_min.jpg") !important; }
   .search form {
     position: absolute;
     right: 30px;
