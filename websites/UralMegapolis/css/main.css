@@ -234,6 +234,9 @@ template, [hidden] {
 html.modal-open {
   overflow: hidden; }
 
+.lazy-img {
+  background-image: none !important; }
+
 /* TYPOGRAPHY */
 *::-webkit-input-placeholder {
   color: #BABABA;
@@ -520,6 +523,9 @@ textarea {
   padding-top: 30px;
   padding-bottom: 65px;
   box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5); }
+  @media only screen and (max-width: 56.1875em) {
+    .welcome {
+      background-image: url("../img/decor/welcome-bg_min.jpg"); } }
 
 .welcome__title {
   position: relative;
@@ -641,6 +647,10 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
+  @media only screen and (max-width: 56.1875em) {
+    .set {
+      background-image: none;
+      background-color: #4B413E; } }
 
 .set__items .col-xs-12:nth-child(2) .set__item-list {
   margin-right: -15px;
@@ -1193,6 +1203,9 @@ textarea {
 html.modal-open {
   overflow: hidden; }
 
+.lazy-img {
+  background-image: none !important; }
+
 @media only screen and (max-width: 93.75em) {
   .price {
     background-position: left 95% bottom 11%, center; } }
@@ -1261,12 +1274,18 @@ html.modal-open {
     border-right: none !important; }
   .price {
     background: url("../img/decor/pattern.png");
+    background-repeat: repeat;
     background-position: center;
     background-size: auto; }
   .home-contacts {
     padding-top: 60px; }
   .planning__item-desc {
     padding-top: 20px; }
+  .details__properties {
+    padding-left: 0;
+    font-size: 1.375rem; }
+    .details__properties li {
+      margin-bottom: 8px; }
   .price-list__item-title {
     max-width: none;
     font-size: 0.9375rem; }
@@ -1359,10 +1378,10 @@ html.modal-open {
       background: #544232; }
   .price__items .col-xs-12:last-child .price__item:after, .price__items .col-xs-12:last-child .product:after {
     display: none; }
-  .price__item-properties, .details__properties, .product__properties {
+  .price__item-properties {
     padding-left: 0;
     font-size: 1.375rem; }
-    .price__item-properties li, .details__properties li, .product__properties li {
+    .price__item-properties li {
       margin-bottom: 8px; }
   .price__item-value, .product__price {
     font-size: 1.375rem; }
@@ -1382,6 +1401,11 @@ html.modal-open {
     text-align: center; }
   .product:after {
     display: none; }
+  .product__properties {
+    padding-left: 0;
+    font-size: 1.375rem; }
+    .product__properties li {
+      margin-bottom: 8px; }
   .technology__link {
     margin-right: 15px; } }
 

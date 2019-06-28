@@ -90,6 +90,20 @@ $(function () {
     return event.preventDefault();
   });
 
+  if ($(window).scrollTop() === 0) {
+    setTimeout(function () {
+      $('.lazy-img').removeClass('lazy-img');
+      $('[data-img-src]').each(function (i, e) {
+        $(e).attr('src', $(e).attr('data-img-src'));
+      });
+    }, 300);
+  } else {
+    $('.lazy-img').removeClass('lazy-img');
+    $('[data-img-src]').each(function (i, e) {
+      $(e).attr('src', $(e).attr('data-img-src'));
+    });
+  }
+
   // ========>> FUNCTIONS CALL <<========
 
   welcomeCarousel();
