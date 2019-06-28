@@ -22,7 +22,9 @@ function welcomeCarousel() {
 
 function advantagesSection() {
   if ($('.advantages').length) {
-    $('.advantages__item-title').matchHeight();
+    setTimeout(function () {
+      $('.advantages__item-title').matchHeight();
+    }, 0);
   }
 }
 
@@ -30,7 +32,9 @@ function advantagesSection() {
 
 function priceSection() {
   if ($('.price').length) {
-    $('.price__item-img').matchHeight();
+    setTimeout(function () {
+      $('.price__item-img').matchHeight();
+    }, 0);
   }
 }
 
@@ -38,7 +42,9 @@ function priceSection() {
 
 function setSection() {
   if ($('.set').length) {
-    $('.set__item-img').matchHeight();
+    setTimeout(function () {
+      $('.set__item-img').matchHeight();
+    }, 0);
   }
 }
 
