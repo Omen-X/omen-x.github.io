@@ -190,6 +190,9 @@ function documentReady() {
     }, 300);
   } else {
     $('.lazy-img').removeClass('lazy-img');
+    $('[data-img-src]').each(function (i, e) {
+      $(e).attr('src', $(e).attr('data-img-src'));
+    });
   }
 
   // ========>> MAIN NAV <<========
