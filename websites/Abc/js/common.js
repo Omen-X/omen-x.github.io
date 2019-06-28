@@ -187,7 +187,7 @@ function documentReady() {
       $('[data-img-src]').each(function (i, e) {
         $(e).attr('src', $(e).attr('data-img-src'));
       });
-    }, 1000);
+    }, 300);
   } else {
     $('.lazy-img').removeClass('lazy-img');
   }
