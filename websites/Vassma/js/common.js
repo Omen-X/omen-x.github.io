@@ -324,6 +324,17 @@ $(function () {
 		$('#loader').remove();
 	}, 210);
 
+	if ($(window).scrollTop() === 0) {
+		setTimeout(function () {
+			$('.lazy-img').removeClass('lazy-img');
+			$('[data-img-src]').each(function (i, e) {
+				$(e).attr('src', $(e).attr('data-img-src'));
+			});
+		}, 300);
+	} else {
+		$('.lazy-img').removeClass('lazy-img');
+	}
+
 	// ========>> FUNCTIONS CALL <<========
 
 	mainNav();
