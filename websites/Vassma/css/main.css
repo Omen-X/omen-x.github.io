@@ -316,6 +316,9 @@ button {
  *
  * =============================
  */
+.lazy-img {
+  background: none !important; }
+
 a {
   transition: color .2s; }
   body.no-touch a:hover {
