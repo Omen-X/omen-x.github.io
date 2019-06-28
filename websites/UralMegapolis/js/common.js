@@ -46,9 +46,11 @@ function setSection() {
 
 function lazyLoadMap() {
   if ($('.map').length) {
-    var mapFrame = $('.map iframe');
-    var src = mapFrame.attr('data-src');
-    mapFrame.attr('src', src);
+    setTimeout(function () {
+      var mapFrame = $('.map iframe');
+      var src = mapFrame.attr('data-src');
+      mapFrame.attr('src', src);
+    }, 10000);
   }
 }
 
