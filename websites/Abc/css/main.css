@@ -238,6 +238,9 @@ template, [hidden] {
 html.modal-open {
   overflow: hidden; }
 
+.lazy-img {
+  background-image: none !important; }
+
 /* TYPOGRAPHY */
 *::-webkit-input-placeholder {
   color: #969696;
@@ -2731,6 +2734,9 @@ button[class*='btn-main_icon'] {
 html.modal-open {
   overflow: hidden; }
 
+.lazy-img {
+  background-image: none !important; }
+
 @media only screen and (max-width: 115.625em) {
   .card__title {
     max-width: 500px; }
@@ -2994,7 +3000,7 @@ html.modal-open {
   .tabs__nav-item {
     font-size: 1.125rem;
     padding: 12px 15px 10px 20px; }
-  .complect__price-old, .card__price-old {
+  .complect__price-old {
     font-size: 1rem; }
   .complect__price-curr {
     font-size: 1.375rem; }
@@ -3248,6 +3254,8 @@ html.modal-open {
     width: 100%;
     margin-right: 0;
     margin-bottom: 15px; }
+  .card__price-old {
+    font-size: 1rem; }
   .card__buttons {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
