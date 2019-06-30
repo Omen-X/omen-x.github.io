@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Otvetka</title>
+    <!-- TODO: grid--><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="no-js">
+    <script>
+      document.body.classList.remove('no-js');
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <section class="welcome">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <form class="form form-login" action="#">
+              <div class="user-ava"><img src="img/decor/ava.png"></div>
+              <div class="form-links">
+                <p>Вход / Регистрация</p>
+              </div>
+              <p class="form-login__phone-title">Телефон</p>
+              <div class="form-field-wrap">
+                <input class="form-field form-field__phone" type="text" name="phone">
+                <div class="phone-select">
+                  <div class="phone-select__curr">
+                    <!-- 28x22--><img src="./img/content/rus.png" data-phone-code="7"><span class="phone-select__arr"></span>
+                  </div>
+                  <div class="phone-select__opt"><img src="./img/content/rus.png" data-phone-code="7"><img src="./img/content/flag.png" data-phone-code="8"></div>
+                </div>
+              </div>
+              <p class="form__conf">Нажимая кнопку «Войти в игру», я подтверждаю, что ознакомился и принимаю<a href="#">Правилами игры</a></p>
+              <button class="btn-main" type="submit">Войти в игру</button>
+              <div class="form-status">
+                <div class="form-status__loading">
+                  <div class="form-status__img"><div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+                  <p class="form-status__desc">Сейчас мы тебе звоним — прими вызов и подтверди номер телефона</p>
+                </div>
+                <div class="form-status__error">
+                  <div class="form-status__img"><img src="./img/decor/icon-cross.png"></div>
+                  <p class="form-status__desc">Дозвониться не получилось Кажется, ты не взял трубку<a class="form-login__submit-link" href="#"> Попробовать еще раз</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-7 order-first order-lg-last">
+            <div class="welcome__content">
+              <p class="welcome__title">Ответка</p>
+              <p class="welcome__sub-title">Интеллектуально-развлекательная игра</p>
+              <p class="welcome__desc">
+                Отвечай на вопросы, зарабатывай баллы, получай призы. Играй в одиночку и с друзьями. Держи мозг в тонусе - получай по телефону интересные вопросы.
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="game-info">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="section-title">Об игре Ответка</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-item">
+              <div class="info-item__img"><img src="./img/decor/info-1.png" alt="info"></div>
+              <div class="info-item__content">
+                <p class="sub-title">Как играть?</p>
+                <p class="info-item__desc">Получай интересные вопросы по телефону и отвечай на них в самый неожиданный момент!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="info-item">
+              <div class="info-item__img"><img src="./img/decor/info-2.png" alt="info"></div>
+              <div class="info-item__content">
+                <p class="sub-title">Почему играть?</p>
+                <p class="info-item__desc">Получай баллы за правильные ответы. Меняй баллы на призы.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="info-item">
+              <div class="info-item__img"><img src="./img/decor/info-3.png" alt="info"></div>
+              <div class="info-item__content">
+                <p class="sub-title">С кем играть?</p>
+                <p class="info-item__desc">Объединяйся с друзьями в команды. Следи за игрой друзей. Зарабатывай баллы на успехе друзей.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="info-item">
+              <div class="info-item__img"><img src="./img/decor/info-4.png" alt="info"></div>
+              <div class="info-item__content">
+                <p class="sub-title">Зачем играть?</p>
+                <p class="info-item__desc">Держи мозг в тонусе. Отвечай на интересные вопросы. Расширяй кругозор и развивай эрудицию.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="rules">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="section-title">Правила ответки</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="info-item info-item_icon-plus">
+              <div class="info-item__content">
+                <p class="sub-title">Отвечай на вопросы и копи баллы</p>
+                <p class="info-item__desc">Получай звонки и отвечай на интересные вопросы. За правильный ответ — плюс 10 баллов.  За неправильный — минус 10.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 offset-lg-1">
+            <div class="info-item info-item_icon-arrow">
+              <div class="info-item__content">
+                <p class="sub-title">Подключай <br class="d-none d-lg-block"> друзей и копи баллы</p>
+                <p class="info-item__desc">Добавляй друзей к себе в команду. Следи за успехами друзей. Соревнуйся. Получай 10% от баллов, накопленных каждым другом.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1">
+            <div class="rules__advantages">
+              <p class="sub-title">Получай удовольствие от игры</p>
+              <p class="sub-title">Меняй накопленные баллы на оригинальные подарки</p>
+              <p class="sub-title">Развивай свой кругозор</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="support">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="section-title section-title_color_white">Техническая поддержка</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-support-wrap">
+              <p class="form-support__title">Срок рассмотрения обращений — от 7 до 14 дней</p>
+              <form class="form-support" action="#">
+                <div class="form-fields">
+                  <label><span class="form-field-title">Имя</span>
+                    <input class="form-field" type="text">
+                  </label>
+                  <label><span class="form-field-title">Телефон в игре</span>
+                    <input class="form-field" type="text">
+                  </label>
+                  <label><span class="form-field-title">E-mail</span>
+                    <input class="form-field" type="email">
+                  </label>
+                  <label><span class="form-field-title">Суть обращения</span>
+                    <textarea class="form-field" rows="5"></textarea>
+                    <p class="form-field__desc">Пожалуйста, не создавайте несколько копий обращений. Ответ будет предоставлен на Email в установленный срок</p>
+                  </label>
+                </div>
+                <button class="btn-main" type="submit">Отправить сообщение</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-9 col-sm-10">
+            <p class="cp-text">&copy;&nbsp;Интеллектуально-развлекательная игра &laquo;Ответка&raquo;, 2019</p>
+          </div>
+          <div class="col-3 col-sm-2">
+            <div class="cp-rate"><span>18+</span></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+      google: {
+      	families: ['OpenSans:400,700,700i:cyrillic', 'Neucha:400,700:cyrillic,cyrillic-ext']
+      	}
+      });
+      
+    </script><script src="https://unpkg.com/imask"></script>
+    <script>
+      var scr = {
+      	"scripts": [
+      		{"src": "js/main.min.js", "async": false}
+      	]
+      };
+      
+      (function(t, n, r) {
+      "use strict";
+      	var c = function (t) {
+      		if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+      		for (var r = 0; r < t.length; r++) {
+      			var c = n.createElement("script"), e = t[r];
+      			c.src = e.src, c.async = e.async, n.body.appendChild(c)
+      		}
+      		return !0
+      	};
+      	t.addEventListener ? t.addEventListener("load", function () {
+      		c(r.scripts);
+      	}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+      		c(r.scripts)
+      	}) : t.onload = function () {
+      		c(r.scripts)
+      	}
+      	}(window, document, scr));
+    </script>
+  </body>
+</html>
