@@ -643,7 +643,7 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  margin-left: -10px;
+  margin-left: -11px;
   margin-right: -10px;
   background: url("../img/decor/logo-bg.png") no-repeat 43% top;
   margin-bottom: 20px;
