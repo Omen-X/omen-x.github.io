@@ -36,6 +36,22 @@
                         <span class="m_icon-classic"></span>
                         <span>World of Warcraft: Classic</span>
                     </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-destiny"></span>
+                        <span>Destiny 2</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-division"></span>
+                        <span>Division 2</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-apex"></span>
+                        <span>Apex Legends</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-overwatch"></span>
+                        <span>Overwatch</span>
+                    </a>
                 </div>
                 <div class="mob-nav__title">
                     <span class="mob-nav__title-text">Social:</span>
@@ -57,8 +73,21 @@
             <div class="header__link">
                 <a href="#" class="m_icon-bfa"></a>
             </div>
-            <div class="header__link header__link_right_border">
+            <div class="header__link">
                 <a href="#" class="m_icon-classic"></a>
+            </div>
+
+            <div class="header__link">
+                <a href="#" class="m_icon-destiny"></a>
+            </div>
+            <div class="header__link">
+                <a href="#" class="m_icon-division"></a>
+            </div>
+            <div class="header__link">
+                <a href="#" class="m_icon-apex"></a>
+            </div>
+            <div class="header__link header__link_right_border">
+                <a href="#" class="m_icon-overwatch"></a>
             </div>
         </div>
         <div class="soc-links hidden-sm">
@@ -76,14 +105,16 @@
                     <a href="#"><b>Mythi</b>c+ Dungeons [Keys up to +23]</a>
                 </div>
                 <div class="form-search__all">
-                    <a href="#">All</a>
+                    <a href="#">Show All Results(25)</a>
                 </div>
             </div>
             <div class="form-search__close"></div>
         </form>
         <div class="header__links">
             <div class="header__link">
-                <a href="#" class="m_icon-basket"></a>
+                <a href="#" class="m_icon-basket enabled basket-wrap">
+                    <span class="basket-counter">10</span>
+                </a>
             </div>
             <div class="header__link hidden-xs">
                 <a href="#" class="m_icon-eu enabled"></a>
@@ -119,9 +150,13 @@
     <section class="section">
         <div class="content-block">
             <div class="categories-nav">
-                <a href="#1" class="categories-nav__item active">Clients’ Choise</a>
-                <a href="#2" class="categories-nav__item">WoW: Battle for Azeroth</a>
+                <a href="#1" class="categories-nav__item active">Top Deals</a>
+                <a href="#2" class="categories-nav__item">WoW: BFA</a>
                 <a href="#3" class="categories-nav__item">WoW: Classic</a>
+                <a href="#3" class="categories-nav__item">Destiny 2</a>
+                <a href="#3" class="categories-nav__item">Division 2</a>
+                <a href="#3" class="categories-nav__item">Apex Legends</a>
+                <a href="#3" class="categories-nav__item">Overwatch</a>
             </div>
 
             <div class="cat-filter active">
@@ -180,35 +215,43 @@
                     <span class="btn-filter__text">Mythic+Dungeons</span>
                     <span class="btn-filter__tag btn-filter__tag_discount">-10%</span>
                 </div>
-                <div class="btn-filter">
+            </div><div class="cat-filter active">
+                <div class="cat-filter__trigger-wrap">
+                    <span class="cat-filter__trigger btn-trigger active">Filters</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Raids</span>
+                    <span class="btn-filter__tag btn-filter__tag_new">NEW</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Dungeons</span>
+                    <span class="btn-filter__tag btn-filter__tag_hot">HOT</span>
+                </div>
+                <div class="btn-filter active">
                     <span class="btn-filter__text">Power Leveling</span>
                 </div>
-                <div class="btn-filter">
+                <div class="btn-filter active">
                     <span class="btn-filter__text">Achievements</span>
                 </div>
-                <div class="btn-filter">
+                <div class="btn-filter active">
                     <span class="btn-filter__text">PvP</span>
                 </div>
-                <div class="btn-filter">
+                <div class="btn-filter active">
                     <span class="btn-filter__text">Mounts</span>
                 </div>
-                <div class="btn-filter">
+                <div class="btn-filter active">
                     <span class="btn-filter__text">8.2 Services</span>
                 </div>
-                <div class="btn-filter">
+                <div class="btn-filter active">
                     <span class="btn-filter__text">Hot Offers</span>
                 </div>
-                <div class="btn-filter">
-                    <span class="btn-filter__text">Mythic+Dungeons</span>
-                    <span class="btn-filter__tag btn-filter__tag_discount">-10%</span>
-                </div>
-            </div>
+        </div>
         </div>
 
         <div class="content-block">
             <div class="cards">
 
-                <div class="card hot">
+                <a href="#" class="card hot">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mythic+dungeons.png')"></div>
                         <div class="card__img-content">
@@ -240,12 +283,17 @@
                             your...
                         </p>
                         <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                            <p class="card__buy-price">
+                                <span class="card__buy-from">from</span>
+                                <span class="card__buy-price-new">€ 374</span>
+                            </p>
+                            <button class="btn-main">Deal Details</button>
+                            <button class="btn-with-icon modal-trigger btn-with-icon_cart" data-modal-id="cart-modal"></button>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card hot">
+                <a href="#" class="card hot">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/leveling service.png')"></div>
                         <div class="card__img-content">
@@ -258,132 +306,15 @@
                             your...
                         </p>
                         <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                            <p class="card__buy-price">
+                                <span class="card__buy-price-old">€ 370</span>
+                                <span class="card__buy-price-new">€ 374</span>
+                            </p>
+                            <button class="btn-main">Deal Details</button>
+                            <button class="btn-with-icon modal-trigger btn-with-icon_cart" data-modal-id="cart-modal"></button>
                         </div>
                     </div>
-                </div>
-
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/azshara.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Azshara's Eternal Palace HEROIC Loot Run Service</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/eternal palace.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Azshara's Eternal Palace NORMAL Loot Run Service</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/mythic+score.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Mythic+ Score [Season 3 Raider IO]</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/eternal palace.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Azshara's Eternal Palace NORMAL Loot Run Service</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__img">
-                        <div class="card__img-bg" style="background-image: url('img/cards/mythic+score.png')"></div>
-                        <div class="card__img-content">
-                            <span class="card__title">Mythic+ Score [Season 3 Raider IO]</span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                        <p class="card__desc">
-                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
-                            your...
-                        </p>
-                        <div class="card__buy">
-                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -550,8 +481,7 @@
                                 <p class="cart-price__new">€ 374</p>
                             </div>
                         </div>
-                        <button type="submit" class="btn-with-icon btn-with-icon_cart product__submit">Add to cart
-                        </button>
+                        <a href="#cart" class="btn-with-icon btn-with-icon_cart to-cart product__submit">ADD TO CART</a>
                     </div>
                 </div>
             </div>
@@ -563,7 +493,7 @@
             <p class="section-title">RELATED SERVICES</p>
 
             <div class="cards">
-                <div class="card">
+                <a href="#" class="card">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
                         <div class="card__img-content">
@@ -579,8 +509,8 @@
                             <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
                         <div class="card__img-content">
@@ -596,8 +526,8 @@
                             <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
                         <div class="card__img-content">
@@ -613,8 +543,8 @@
                             <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
                         <div class="card__img-content">
@@ -630,8 +560,8 @@
                             <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
                         <div class="card__img-content">
@@ -647,8 +577,8 @@
                             <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#" class="card">
                     <div class="card__img">
                         <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
                         <div class="card__img-content">
@@ -664,7 +594,7 @@
                             <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -705,10 +635,19 @@
                             We're always eager to help our Clients. Got a problem? We've got a solution!
                         </p>
                     </div>
+                    <div class="advantages-item">
+                        <div class="advantages-item__icon">
+                            <img src="img/icons/handshake.svg" alt="">
+                        </div>
+                        <p class="advantages-item__title">BECAUSE WE ARE FOCUSED TO ASSIST, NOT ARGUE!</p>
+                        <p class="advantages-item__text">
+                            We're always eager to help our Clients. Got a problem? We've got a solution!
+                        </p>
+                    </div>
                 </div>
-                <div class="advantages__img">
-                    <img src="img/decor/advantages-img.png" alt="">
-                </div>
+<!--                <div class="advantages__img">-->
+<!--                    <img src="img/decor/advantages-img.png" alt="">-->
+<!--                </div>-->
             </div>
         </div>
     </section>
@@ -884,19 +823,20 @@
                         </div>
                     </div>
                     <div class="form-checkout__right">
-                       <div class="checkout__block">
+                        <div class="checkout__block">
                             <p class="form-checkout__title">ADDITIONAL</p>
-                           <div class="form__fields form-fields_full">
-                               <div class="form-field-wrap">
-                                   <span class="form-field__title">Comment</span>
-                                   <textarea name="comment" id="" placeholder="Comment" rows="7" class="form-field"></textarea>
-                               </div>
-                               <div class="form-field-wrap">
-                                   <span class="form-field__title">Where did you find us?</span>
-                                   <textarea name="comment" id="" rows="7" class="form-field"></textarea>
-                               </div>
-                           </div>
-                       </div>
+                            <div class="form__fields form-fields_full">
+                                <div class="form-field-wrap">
+                                    <span class="form-field__title">Comment</span>
+                                    <textarea name="comment" id="" placeholder="Comment" rows="7"
+                                              class="form-field"></textarea>
+                                </div>
+                                <div class="form-field-wrap">
+                                    <span class="form-field__title">Where did you find us?</span>
+                                    <textarea name="comment" id="" rows="7" class="form-field"></textarea>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form__agreement">
                         <p class="form__agreement-title">AGREEMENTS</p>
@@ -906,7 +846,8 @@
                             <label for="agr-1">I play on EU region</label>
                             <input class="check-group__input" type="checkbox" name="agreement-2" value="2"
                                    id="agr-2">
-                            <label for="agr-2"><a class="underline" href="#">I’ve read and accept</a> the terms & conditions</label>
+                            <label for="agr-2"><a class="underline" href="#">I’ve read and accept</a> the terms &
+                                conditions</label>
                         </div>
                     </div>
                     <div class="checkout__submit-wrap">
@@ -1113,7 +1054,7 @@
                     </div>
 
                     <a href="#" class="btn-main cart-desc__link">More info</a>
-                    <button type="submit" class="btn-with-icon btn-with-icon_cart form-cart__submit">Add to cart
+                    <button type="submit" class="btn-with-icon btn-with-icon_cart to-cart form-cart__submit">ADD TO CART
                     </button>
                 </div>
             </form>
