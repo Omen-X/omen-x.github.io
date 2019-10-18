@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1" shrink-to-fit="no">
+    <title>Yeti Boost</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/main.css?v101019">
+    <link rel="stylesheet" href="dist/media.css">
+</head>
+<body>
+<script>
+  var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+  if (isTouch) document.body.classList.add('touch');
+  else document.body.classList.add('no-touch');
+</script>
+<header class="header">
+    <div class="header__content">
+        <div class="mob-nav">
+            <div class="mob-nav-trigger-wrap">
+                <div class="mob-nav-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mob-nav__overlay"></div>
+            <div class="mob-nav__content">
+                <div class="mob-nav__title">
+                    <span class="mob-nav__title-text">Games:</span>
+                    <a href="#" class="visible-xs"><span class="m_icon-eu enabled"></span></a>
+                    <a href="#" class="visible-xs"><span class="m_icon-us"></span></a>
+                </div>
+                <div class="mob-nav__games">
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-bfa enabled" data-lazy-img-src="img/icons/bfa_enabled.png"></span>
+                        <span>World of Warcraft: Battle for Azeroth</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-classic" data-lazy-img-src="img/icons/classic_enabled.png"></span>
+                        <span>World of Warcraft: Classic</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-destiny" data-lazy-img-src="img/icons/destiny_enabled.png"></span>
+                        <span>Destiny 2</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-division" data-lazy-img-src="img/icons/division_enabled.png"></span>
+                        <span>Division 2</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-apex" data-lazy-img-src="img/icons/apex_enabled.png"></span>
+                        <span>Apex Legends</span>
+                    </a>
+                    <a href="#" class="mob-nav__game">
+                        <span class="m_icon-overwatch" data-lazy-img-src="img/icons/overwatch_enabled.png"></span>
+                        <span>Overwatch</span>
+                    </a>
+                </div>
+                <div class="mob-nav__title">
+                    <span class="mob-nav__title-text">Social:</span>
+                </div>
+                <div class="mob-nav__soc">
+                    <a href="#"><span class="m_icon-tg"></span></a>
+                    <a href="#"><span class="m_icon-disc"></span></a>
+                    <a href="#"><span class="m_icon-skype"></span></a>
+                    <a href="#"><span class="m_icon-wz"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="logo header__logo">
+            <a href="./index.html">
+                <img src="img/icons/logo.png" alt="YetiBoost">
+            </a>
+        </div>
+        <div class="header__links hidden-sm">
+            <div class="header__link">
+                <a href="#" class="m_icon-bfa" data-lazy-img-src="img/icons/bfa_enabled.png"></a>
+            </div>
+            <div class="header__link">
+                <a href="#" class="m_icon-classic" data-lazy-img-src="img/icons/classic_enabled.png"></a>
+            </div>
+
+            <div class="header__link">
+                <a href="#" class="m_icon-destiny" data-lazy-img-src="img/icons/destiny_enabled.png"></a>
+            </div>
+            <div class="header__link">
+                <a href="#" class="m_icon-division" data-lazy-img-src="img/icons/division_enabled.png"></a>
+            </div>
+            <div class="header__link">
+                <a href="#" class="m_icon-apex" data-lazy-img-src="img/icons/apex_enabled.png"></a>
+            </div>
+            <div class="header__link header__link_right_border">
+                <a href="#" class="m_icon-overwatch" data-lazy-img-src="img/icons/overwatch_enabled.png"></a>
+            </div>
+        </div>
+        <div class="soc-links hidden-sm">
+            <a href="#" class="soc-link m_icon-tg" data-lazy-img-src="img/icons/soc-tg_enabled.png"></a>
+            <a href="#" class="soc-link m_icon-disc" data-lazy-img-src="img/icons/soc-disc_enabled.png"></a>
+            <a href="#" class="soc-link m_icon-skype" data-lazy-img-src="img/icons/soc-skype_enabled.png"></a>
+            <a href="#" class="soc-link m_icon-wz" data-lazy-img-src="img/icons/soc-wz_enabled.png"></a>
+        </div>
+        <form action="" class="form form-search" autocomplete="off">
+            <button class="form-search__submit"></button>
+            <input class="form-search__input" name="search" type="text" placeholder="Search...">
+            <div class="form-search__results">
+                <div class="form-search__results-list">
+                    <a href="#"><b>Mythi</b>c+ Dungeons [Keys up to +23]</a>
+                    <a href="#"><b>Mythi</b>c+ Dungeons [Keys up to +23]</a>
+                </div>
+                <div class="form-search__all">
+                    <a href="#">Show All Results (25)</a>
+                </div>
+            </div>
+            <div class="form-search__close"></div>
+        </form>
+        <div class="header__links">
+            <div class="header__link">
+                <a href="#" class="m_icon-basket enabled basket-wrap">
+                    <span class="basket-counter">10</span>
+                </a>
+            </div>
+            <div class="header__link hidden-xs">
+                <a href="#" class="m_icon-eu enabled" data-lazy-img-src="img/icons/eu_enabled.png"></a>
+            </div>
+            <div class="header__link hidden-xs">
+                <a href="#" class="m_icon-us" data-lazy-img-src="img/icons/us_enabled.png"></a>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <section>
+        <div class="carousel-main">
+            <a href="#" class="carousel-main__img-wrap active">
+                <div class="carousel-main__img" style="background-image: url('img/content/banner.jpg')"></div>
+                <span class="carousel-main__link">GO TO</span>
+            </a>
+            <a href="#" class="carousel-main__img-wrap">
+                <div class="carousel-main__img" style="background-image: url('img/content/banner.jpg')"></div>
+                <span class="carousel-main__link">GO TO</span>
+            </a>
+            <a href="#" class="carousel-main__img-wrap">
+                <div class="carousel-main__img" style="background-image: url('img/content/banner.jpg')"></div>
+                <span class="carousel-main__link">GO TO</span>
+            </a>
+            <a href="#" class="carousel-main__img-wrap">
+                <div class="carousel-main__img" style="background-image: url('img/content/banner.jpg')"></div>
+                <span class="carousel-main__link">GO TO</span>
+            </a>
+        </div>
+    </section>
+    <section class="section">
+        <div class="content-block">
+            <div class="categories-nav-wrap">
+                <div class="categories-nav categories-nav_breadcrumbs">
+                    <a href="#1" class="categories-nav__item">Wow</a>
+                    <a href="#1" class="categories-nav__item">Wow: Battle for Azeroth</a>
+                    <a href="#2" class="categories-nav__item">Raids</a>
+                    <span class="categories-nav__item active">1-60 Classic</span>
+                </div>
+            </div>
+
+            <div class="cat-filter active">
+                <div class="cat-filter__trigger-wrap">
+                    <span class="cat-filter__trigger btn-trigger active">Categories</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Raids</span>
+                    <span class="btn-filter__tag btn-filter__tag_new">NEW</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Dungeons</span>
+                    <span class="btn-filter__tag btn-filter__tag_hot">HOT</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Power Leveling</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Achievements</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">PvP</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Mounts</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">8.2 Services</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Hot Offers</span>
+                </div>
+                <div class="btn-filter active">
+                    <span class="btn-filter__text">Mythic+Dungeons</span>
+                    <span class="btn-filter__tag btn-filter__tag_discount">-10%</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">Power Leveling</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">Achievements</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">PvP</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">Mounts</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">8.2 Services</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">Hot Offers</span>
+                </div>
+                <div class="btn-filter">
+                    <span class="btn-filter__text">Mythic+Dungeons</span>
+                    <span class="btn-filter__tag btn-filter__tag_discount">-10%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="content-block xs-no-padding">
+            <div class="product-wrap">
+                <div class="product hot">
+                    <div class="product__content">
+                        <div class="product__img">
+                            <div class="product__img-bg" style="background-image: url('img/content/product.png')"></div>
+                            <div class="product__img-content">
+                                <div class="product__title-wrap">
+                                    <p class="product__title">1-60 Classic Leveling Boost Free Gift: 60% Mount</p>
+                                    <p class="product__sub-title">Buy WoW Classic 1-60 Leveling Character Boost | Get
+                                        Pre-Raid Gear in Dungeons, and join us to your first 40ppl epic raid!</p>
+                                </div>
+                                <div class="card__counter">
+                                    <span class="card__counter-title">Discount ends in:</span>
+
+                                    <div class="counter">
+                                        <div class="counter__block">
+                                            <span class="counter__block-value">22</span>
+                                            <span class="counter__block-units">Hours</span>
+                                        </div>
+                                        <div class="counter__block">
+                                            <span class="counter__block-value">01</span>
+                                            <span class="counter__block-units">Minutes</span>
+                                        </div>
+                                        <div class="counter__block">
+                                            <span class="counter__block-value">12</span>
+                                            <span class="counter__block-units">Seconds</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__desc">
+                            <p>PRODUCT DESCRIPTION</p>
+                            <p>Buy 1-60 Classic Leveling Boost today and you will
+                                get</p>
+                            <ul>
+                                <li>Leveling to 60 completed in chosen time frames: 2, 3 or 4 weeks</li>
+                                <li>Free 60% speed mount</li>
+                                <li>Choosen professions or secondary skills developed to the maximum level</li>
+                                <li>Full dungeon rare gear for your level 60 character if you choose this option</li>
+                                <li>Exalted reputation with choosen city</li>
+                            </ul>
+                            <p>Yeti Classic Leveling boost conditions:</p>
+                            <ul>
+                                <li>Classic leveling is a piloted service - our manager will contact you and provide a
+                                    professional booster with flexible schedule, according to your preferences
+                                </li>
+                                <li>Our boosters can offer a live-stream of 1-60 service</li>
+                                <li>Once service done, the placement of your action bars will be brought back to their
+                                    positions.
+                                </li>
+                                <li>All gold during the leveling will be used only for leveling and nothing else</li>
+                                <li>All boe items will be send to your bank or your bank twink</li>
+                                <li>We will keep you posted throughout the leveling process and you always can ask
+                                    yeti-manager for update
+                                </li>
+                                <li>Once service done all bars and keybinds will be returned to yours</li>
+                            </ul>
+                            <p>Safety first!</p>
+                            <ul>
+                                <li>We never use any programs or bots, only hand work (to prove it we are able to
+                                    provide screens or stream on your request)
+                                </li>
+                                <li>Throughout leveling our booster will use VPN mathing your location: city and
+                                    country
+                                </li>
+                                <li>For additional safety we're highly recommended to not login on your account until
+                                    the completion of the order
+                                </li>
+                            </ul>
+                            <p>Our yeti-manager happy to answer all your questions!</p>
+                        </div>
+                    </div>
+                    <div class="trust-pilot-block"></div>
+                </div>
+                <div class="product-aside">
+                    <form class="cart-options">
+                        <div class="cart-options__item">
+                            <p class="cart-options__title">Please choose time frame</p>
+                            <div class="radio-group">
+                                <input class="radio-group__input" checked type="radio" name="time-frame"
+                                       id="time-frame-4"
+                                       value="1">
+                                <label for="time-frame-4">4 weeks: € 279</label>
+                                <input class="radio-group__input" type="radio" name="time-frame" id="time-frame-5"
+                                       value="2">
+                                <label for="time-frame-5">3 weeks: € 279</label>
+                                <input class="radio-group__input" type="radio" name="time-frame" id="time-frame-6"
+                                       value="3">
+                                <label for="time-frame-6">2 weeks: € 279</label>
+                            </div>
+                        </div>
+                        <div class="cart-options__item">
+                            <p class="cart-options__title">Select mount speed</p>
+                            <div class="radio-group">
+                                <input class="radio-group__input" type="radio" name="mount-speed" id="mount-speed-3"
+                                       value="1">
+                                <label for="mount-speed-3">60% speed: <i class="color-green">€ 0</i></label>
+                                <input class="radio-group__input" checked type="radio" name="mount-speed"
+                                       id="mount-speed-4"
+                                       value="2">
+                                <label for="mount-speed-4">100% speed: € 299</label>
+                            </div>
+                        </div>
+                        <div class="cart-options__item">
+                            <p class="cart-options__title">Add 1st Profession:</p>
+                            <select class="select-main" name="profession-1">
+                                <option value="1">I dont need it: € 0</option>
+                                <option value="2">Blacksmithing</option>
+                                <option value="3">Enchanting</option>
+                            </select>
+                        </div>
+                        <div class="cart-options__item">
+                            <p class="cart-options__title">Add 2nd Profession:</p>
+                            <select class="select-main" name="profession-2">
+                                <option value="1">I dont need it: € 0</option>
+                                <option value="2">Blacksmithing</option>
+                                <option value="3">Enchanting</option>
+                            </select>
+                        </div>
+                        <div class="cart-options__item">
+                            <p class="cart-options__title">Add Secondary Skills</p>
+                            <div class="check-group">
+                                <input class="check-group__input" type="checkbox" name="secondary-skill" value="1"
+                                       id="secondary-skill-4">
+                                <label for="secondary-skill-4">Fishing: € 95</label>
+                                <input class="check-group__input" type="checkbox" name="secondary-skill" value="2"
+                                       id="secondary-skill-5">
+                                <label for="secondary-skill-5">Cooking: € 95</label>
+                                <input class="check-group__input" type="checkbox" name="secondary-skill" value="3"
+                                       id="secondary-skill-6">
+                                <label for="secondary-skill-6">First Aid: € 95</label>
+                            </div>
+                        </div>
+                        <div class="cart-options__item">
+                            <p class="cart-options__title">Advanced options:</p>
+                            <div class="check-group">
+                                <input class="check-group__input" type="checkbox" name="advanced" value="1"
+                                       id="advanced-3">
+                                <label for="advanced-3">Full Dungeon Gear: € 189</label>
+                                <input class="check-group__input" type="checkbox" name="advanced" value="2"
+                                       id="advanced-4">
+                                <label for="advanced-4">Add Exalted with Chosen City: € 289</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="product-counter">
+                        <div class="cart-counter">
+                            <div class="my-counter">
+                                <span class="my-counter__btn my-counter__btn-down">–</span>
+                                <input class="my-counter__value" type="text" value="1">
+                                <span class="my-counter__btn my-counter__btn-up">+</span>
+                            </div>
+                            <div class="cart-price">
+                                <p class="cart-price__title">Final total:</p>
+                                <p class="cart-price__old">€ 399</p>
+                                <p class="cart-price__new">€ 374</p>
+                            </div>
+                        </div>
+                        <a href="#cart" class="btn-with-icon btn-with-icon_cart to-cart product__submit">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="content-block">
+            <p class="section-title">RELATED SERVICES</p>
+
+            <div class="cards">
+                <a href="#" class="card">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
+                        <div class="card__img-content">
+                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__desc">
+                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
+                            your...
+                        </p>
+                        <div class="card__buy">
+                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
+                        <div class="card__img-content">
+                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__desc">
+                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
+                            your...
+                        </p>
+                        <div class="card__buy">
+                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
+                        <div class="card__img-content">
+                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__desc">
+                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
+                            your...
+                        </p>
+                        <div class="card__buy">
+                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
+                        <div class="card__img-content">
+                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__desc">
+                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
+                            your...
+                        </p>
+                        <div class="card__buy">
+                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
+                        <div class="card__img-content">
+                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__desc">
+                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
+                            your...
+                        </p>
+                        <div class="card__buy">
+                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mechagon run.png')"></div>
+                        <div class="card__img-content">
+                            <span class="card__title">Operation: Mechagon run [Normal & Hardmode]</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__desc">
+                            Hurry up to buy BFA Mythic+ Dungeons with YetiBoost! This is fastest way to get geared
+                            your...
+                        </p>
+                        <div class="card__buy">
+                            <button class="btn-main modal-trigger" data-modal-id="cart-modal">Deal Details</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer__content">
+            <div class="footer__block">
+                <p class="footer__block-title">CONTACT US</p>
+                <div class="footer__links">
+                    <a href="#"><i class="soc-icon-skype"></i>Skype</a>
+                    <a href="#"><i class="soc-icon-discord"></i>Discord</a>
+                    <a href="#"><i class="soc-icon-wz"></i>WhatsApp</a>
+                    <a href="#"><i class="soc-icon-telegram"></i>Telegram</a>
+                    <a href="#"><i class="soc-icon-gmail"></i>E-mail</a>
+                    <a href="#"><i class="soc-icon-fb"></i>Facebook</a>
+                    <a href="#"><i class="soc-icon-insta"></i>Instagram</a>
+                    <a href="#"><i class="soc-icon-twitter"></i>Twitter</a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <p class="footer__block-title">BFA SERVICES</p>
+                <div class="footer__links">
+                    <a href="#">BFA Raids & Gearing</a>
+                    <a href="#">Mythic+ Dungeons</a>
+                    <a href="#">Leveling & Farming</a>
+                    <a href="#">Achivements</a>
+                    <a href="#">PvP BoostMounts</a>
+                    <a href="#">8.2 BFA Services</a>
+                    <a href="#">15% Sale Offers</a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <p class="footer__block-title">WOW CLASSIC</p>
+                <div class="footer__links">
+                    <a href="#">Leveling & Professions</a>
+                    <a href="#">PvE Gearing</a>
+                    <a href="#">Dunfeons</a>
+                    <a href="#">Raids & Attunes</a>
+                    <a href="#">Reputations</a>
+                    <a href="#">PvP Boost</a>
+                    <a href="#">Legendaries</a>
+                    <a href="#">Quests & Mounts</a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <p class="footer__block-title">WOW CLASSIC</p>
+                <div class="footer__links">
+                    <a href="#">Leveling & Professions</a>
+                    <a href="#">PvE Gearing</a>
+                    <a href="#">Dunfeons</a>
+                    <a href="#">Raids & Attunes</a>
+                    <a href="#">Reputations</a>
+                    <a href="#">PvP Boost</a>
+                    <a href="#">Legendaries</a>
+                    <a href="#">Quests & Mounts</a>
+                </div>
+            </div>
+            <div class="footer__block">
+                <p class="footer__block-title">WOW CLASSIC</p>
+                <div class="footer__links">
+                    <a href="#">Leveling & Professions</a>
+                    <a href="#">PvE Gearing</a>
+                    <a href="#">Dunfeons</a>
+                    <a href="#">Raids & Attunes</a>
+                    <a href="#">Reputations</a>
+                    <a href="#">PvP Boost</a>
+                    <a href="#">Legendaries</a>
+                    <a href="#">Quests & Mounts</a>
+                </div>
+            </div>
+
+            <div class="footer__payment">
+                <div class="footer__block-title">WE LOVE OUR CUSTOMERS!</div>
+                <img src="img/decor/trustpilot.png" alt="">
+                <img src="img/decor/paypal.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="content-wide">
+            <p class="copyright">All mentioned brand names are registered and property of&nbsp;the respective companies.&nbsp;&copy;&nbsp;YetiBoost.com&nbsp;&mdash;
+                2019</p>
+        </div>
+    </div>
+</footer>
+<div class="modals">
+    <div class="modal-wrap" id="cart-modal">
+        <div class="modal cart-modal">
+            <span class="modal-close"></span>
+            <form action="" class="form-cart">
+                <div class="cart-options">
+                    <div class="cart-options__item">
+                        <p class="cart-options__title">Please choose time frame</p>
+                        <div class="radio-group">
+                            <input class="radio-group__input" checked type="radio" name="time-frame" id="time-frame-1"
+                                   value="1">
+                            <label for="time-frame-1">4 weeks: € 279</label>
+                            <input class="radio-group__input" type="radio" name="time-frame" id="time-frame-2"
+                                   value="2">
+                            <label for="time-frame-2">3 weeks: € 279</label>
+                            <input class="radio-group__input" type="radio" name="time-frame" id="time-frame-3"
+                                   value="3">
+                            <label for="time-frame-3">2 weeks: € 279</label>
+                        </div>
+                    </div>
+                    <div class="cart-options__item">
+                        <p class="cart-options__title">Select mount speed</p>
+                        <div class="radio-group">
+                            <input class="radio-group__input" type="radio" name="mount-speed" id="mount-speed-1"
+                                   value="1">
+                            <label for="mount-speed-1">60% speed: <i class="color-green">€ 0</i></label>
+                            <input class="radio-group__input" checked type="radio" name="mount-speed" id="mount-speed-2"
+                                   value="2">
+                            <label for="mount-speed-2">100% speed: € 299</label>
+                        </div>
+                    </div>
+                    <div class="cart-options__item">
+                        <p class="cart-options__title">Add 1st Profession:</p>
+                        <select class="select-main" name="profession-1">
+                            <option value="1">I dont need it: € 0</option>
+                            <option value="2">Blacksmithing</option>
+                            <option value="3">Enchanting</option>
+                        </select>
+                    </div>
+                    <div class="cart-options__item">
+                        <p class="cart-options__title">Add 2nd Profession:</p>
+                        <select class="select-main" name="profession-2">
+                            <option value="1">I dont need it: € 0</option>
+                            <option value="2">Blacksmithing</option>
+                            <option value="3">Enchanting</option>
+                        </select>
+                    </div>
+                    <div class="cart-options__item">
+                        <p class="cart-options__title">Add Secondary Skills</p>
+                        <div class="check-group">
+                            <input class="check-group__input" type="checkbox" name="secondary-skill" value="1"
+                                   id="secondary-skill-1">
+                            <label for="secondary-skill-1">Fishing: € 95</label>
+                            <input class="check-group__input" type="checkbox" name="secondary-skill" value="2"
+                                   id="secondary-skill-2">
+                            <label for="secondary-skill-2">Cooking: € 95</label>
+                            <input class="check-group__input" type="checkbox" name="secondary-skill" value="3"
+                                   id="secondary-skill-3">
+                            <label for="secondary-skill-3">First Aid: € 95</label>
+                        </div>
+                    </div>
+                    <div class="cart-options__item">
+                        <p class="cart-options__title">Advanced options:</p>
+                        <div class="check-group">
+                            <input class="check-group__input" type="checkbox" name="advanced" value="1" id="advanced-1">
+                            <label for="advanced-1">Full Dungeon Gear: € 189</label>
+                            <input class="check-group__input" type="checkbox" name="advanced" value="2" id="advanced-2">
+                            <label for="advanced-2">Add Exalted with Chosen City: € 289</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-desc hot">
+                    <div class="card__img">
+                        <div class="card__img-bg" style="background-image: url('img/cards/mythic+dungeons.png')"></div>
+                        <div class="card__img-content">
+                            <div class="card__counter">
+                                <span class="card__counter-title">Discount ends in:</span>
+
+                                <div class="counter">
+                                    <div class="counter__block">
+                                        <span class="counter__block-value">22</span>
+                                        <span class="counter__block-units">Hours</span>
+                                    </div>
+                                    <div class="counter__block">
+                                        <span class="counter__block-value">01</span>
+                                        <span class="counter__block-units">Minutes</span>
+                                    </div>
+                                    <div class="counter__block">
+                                        <span class="counter__block-value">12</span>
+                                        <span class="counter__block-units">Seconds</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <span class="card__title">Mythic+ Dungeons [Keys up to +23]</span>
+                        </div>
+                    </div>
+
+                    <p class="cart-desc__title">1-60 Classic Leveling Boost ️Free Gift: 60% Mount</p>
+
+                    <div class="cart-counter">
+                        <div class="my-counter">
+                            <span class="my-counter__btn my-counter__btn-down">–</span>
+                            <input class="my-counter__value" type="text" value="1">
+                            <span class="my-counter__btn my-counter__btn-up">+</span>
+                        </div>
+                        <div class="cart-price">
+                            <p class="cart-price__old">€ 399</p>
+                            <p class="cart-price__new">€ 374</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-main cart-desc__link">More info</a>
+                    <button type="submit" class="btn-with-icon btn-with-icon_cart to-cart form-cart__submit">ADD TO CART
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+
+<script type="text/javascript" src="dist/manifest.js" defer></script>
+<script type="text/javascript" src="dist/vendor.js" defer></script>
+<script type="text/javascript" src="dist/app.js" defer></script>
+</html>
