@@ -189,6 +189,7 @@
                             <div class="cart__product-price">
                                 <p class="cart__product-header">PRICE</p>
                                 <p class="cart__product-text">€ 44</p>
+                                <span class="card__buy-price-old">€ 50</span>
                             </div>
 
                             <div class="cart__product-count">
@@ -201,6 +202,7 @@
                                 <p class="cart__product-text">€ 44</p>
                             </div>
                         </div>
+
                         <div class="cart__product">
                             <div class="cart-product">
                                 <p class="cart__product-header">PRODUCT</p>
@@ -224,6 +226,44 @@
                             <div class="cart__product-price">
                                 <p class="cart__product-header">PRICE</p>
                                 <p class="cart__product-text">€ 44</p>
+                                <span class="card__buy-price-old">€ 50</span>
+                            </div>
+
+                            <div class="cart__product-count">
+                                <p class="cart__product-header">QUANTITY</p>
+                                <input type="text" class="cart__field" value="1">
+                            </div>
+
+                            <div class="cart__product-total">
+                                <p class="cart__product-header">TOTAL</p>
+                                <p class="cart__product-text">€ 44</p>
+                            </div>
+                        </div>
+
+                        <div class="cart__product">
+                            <div class="cart-product">
+                                <p class="cart__product-header">PRODUCT</p>
+                                <div class="cart-product__content">
+                                    <span class="cart-product__close close"></span>
+                                    <div class="cart-product__img">
+                                        <img src="img/content/cart-product.png" alt="Product">
+                                    </div>
+                                    <p class="cart-product__title">BFA Mythic+ Dungeons</p>
+                                    <div class="cart-product__desc">
+                                        <p>Please choose difficulty: Mythic+10 = € 14</p>
+                                        <p>Advanced options: Selfplay = € 0</p>
+                                        <p>Advanced options: Beat the Timer = € 2</p>
+                                        <p>Advanced options: +1 armor type player = € 2</p>
+                                        <p>Advanced options: I want Specific Dungeon = € 3</p>
+                                        <p>Advanced options: I want 3 runs = € 23 </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__product-price">
+                                <p class="cart__product-header">PRICE</p>
+                                <p class="cart__product-text">€ 44</p>
+                                <span class="card__buy-price-old">€ 50</span>
                             </div>
 
                             <div class="cart__product-count">
@@ -240,7 +280,7 @@
 
                     <div class="cart__discount">
                         <input type="text" class="disc-input" placeholder="COUPON">
-                        <button class="btn-main btn-main_revert">Apply</button>
+                        <button class="btn-main btn-main_revert cart__discount-submit">Apply</button>
                     </div>
                 </div>
                 <div class="cart__price-wrap">
@@ -274,7 +314,7 @@
 
     <section class="section">
         <div class="content-block">
-            <div class="checkout">
+            <div class="checkout hidden">
                 <p class="checkout-title">Procesed to checkout</p>
                 <form action="" class="form-checkout">
                     <div class="form-checkout__left">
@@ -449,6 +489,9 @@
         </div>
     </div>
 </footer>
+<div class="notification active">
+    <p class="notification__text">All mentioned brand names are registered</p>
+</div>
 <div class="modals">
     <div class="modal-wrap" id="cart-modal">
         <div class="modal cart-modal">
