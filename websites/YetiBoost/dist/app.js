@@ -17,7 +17,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendors_sticky_kit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_vendors_sticky_kit__WEBPACK_IMPORTED_MODULE_2__);
 
 
- // IE CustomEvent polyfill
+
+
+var checkIE = function checkIE() {
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf('MSIE ');
+
+  if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, return version number
+    {
+      document.body.classList.add('ie');
+    }
+}; // IE CustomEvent polyfill
+
 
 (function () {
   if (typeof window.CustomEvent === 'function') return false; //If not IE
@@ -542,6 +553,7 @@ function documentReady() {
   }); //
   //
 
+  checkIE();
   mainNav();
   mainCarousel();
   formSearch();

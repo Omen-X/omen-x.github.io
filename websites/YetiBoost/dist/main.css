@@ -218,94 +218,94 @@ textarea {
 }
 
 .m_icon-bfa {
-  background-image: url("../../img/icons/bfa.png");
+  background-image: url("../img/icons/bfa.png");
 }
 .m_icon-bfa.enabled, .m_icon-bfa:hover {
-  background-image: url("../../img/icons/bfa_enabled.png");
+  background-image: url("../img/icons/bfa_enabled.png");
 }
 
 .m_icon-classic {
-  background-image: url("../../img/icons/classic.png");
+  background-image: url("../img/icons/classic.png");
 }
 .m_icon-classic.enabled, .m_icon-classic:hover {
-  background-image: url("../../img/icons/classic_enabled.png");
+  background-image: url("../img/icons/classic_enabled.png");
 }
 
 .m_icon-destiny {
-  background-image: url("../../img/icons/destiny.png");
+  background-image: url("../img/icons/destiny.png");
 }
 .m_icon-destiny.enabled, .m_icon-destiny:hover {
-  background-image: url("../../img/icons/destiny_enabled.png");
+  background-image: url("../img/icons/destiny_enabled.png");
 }
 
 .m_icon-division {
-  background-image: url("../../img/icons/division.png");
+  background-image: url("../img/icons/division.png");
 }
 .m_icon-division.enabled, .m_icon-division:hover {
-  background-image: url("../../img/icons/division_enabled.png");
+  background-image: url("../img/icons/division_enabled.png");
 }
 
 .m_icon-apex {
-  background-image: url("../../img/icons/apex.png");
+  background-image: url("../img/icons/apex.png");
 }
 .m_icon-apex.enabled, .m_icon-apex:hover {
-  background-image: url("../../img/icons/apex_enabled.png");
+  background-image: url("../img/icons/apex_enabled.png");
 }
 
 .m_icon-overwatch {
-  background-image: url("../../img/icons/overwatch.png");
+  background-image: url("../img/icons/overwatch.png");
 }
 .m_icon-overwatch.enabled, .m_icon-overwatch:hover {
-  background-image: url("../../img/icons/overwatch_enabled.png");
+  background-image: url("../img/icons/overwatch_enabled.png");
 }
 
 .m_icon-basket {
-  background-image: url("../../img/icons/basket.png");
+  background-image: url("../img/icons/basket.png");
 }
 .m_icon-basket.enabled {
-  background-image: url("../../img/icons/basket_enabled.png");
+  background-image: url("../img/icons/basket_enabled.png");
 }
 
 .m_icon-eu {
-  background-image: url("../../img/icons/eu.png");
+  background-image: url("../img/icons/eu.png");
 }
 .m_icon-eu.enabled, .m_icon-eu:hover {
-  background-image: url("../../img/icons/eu_enabled.png");
+  background-image: url("../img/icons/eu_enabled.png");
 }
 
 .m_icon-us {
-  background-image: url("../../img/icons/us.png");
+  background-image: url("../img/icons/us.png");
 }
 .m_icon-us.enabled, .m_icon-us:hover {
-  background-image: url("../../img/icons/us_enabled.png");
+  background-image: url("../img/icons/us_enabled.png");
 }
 
 .m_icon-tg {
-  background-image: url("../../img/icons/soc-tg.png");
+  background-image: url("../img/icons/soc-tg.png");
 }
 .m_icon-tg:hover {
-  background-image: url("../../img/icons/soc-tg_enabled.png");
+  background-image: url("../img/icons/soc-tg_enabled.png");
 }
 
 .m_icon-disc {
-  background-image: url("../../img/icons/soc-disc.png");
+  background-image: url("../img/icons/soc-disc.png");
 }
 .m_icon-disc:hover {
-  background-image: url("../../img/icons/soc-disc_enabled.png");
+  background-image: url("../img/icons/soc-disc_enabled.png");
 }
 
 .m_icon-skype {
-  background-image: url("../../img/icons/soc-skype.png");
+  background-image: url("../img/icons/soc-skype.png");
 }
 .m_icon-skype:hover {
-  background-image: url("../../img/icons/soc-skype_enabled.png");
+  background-image: url("../img/icons/soc-skype_enabled.png");
 }
 
 .m_icon-wz {
-  background-image: url("../../img/icons/soc-wz.png");
+  background-image: url("../img/icons/soc-wz.png");
 }
 .m_icon-wz:hover {
-  background-image: url("../../img/icons/soc-wz_enabled.png");
+  background-image: url("../img/icons/soc-wz_enabled.png");
 }
 
 [class*=soc-icon] {
@@ -317,35 +317,35 @@ textarea {
 }
 
 .soc-icon-skype {
-  background-image: url("../../img/soc-icons/skype.svg");
+  background-image: url("../img/soc-icons/skype.svg");
 }
 
 .soc-icon-discord {
-  background-image: url("../../img/soc-icons/discord.svg");
+  background-image: url("../img/soc-icons/discord.svg");
 }
 
 .soc-icon-wz {
-  background-image: url("../../img/soc-icons/whatsapp.svg");
+  background-image: url("../img/soc-icons/whatsapp.svg");
 }
 
 .soc-icon-telegram {
-  background-image: url("../../img/soc-icons/telegram.svg");
+  background-image: url("../img/soc-icons/telegram.svg");
 }
 
 .soc-icon-gmail {
-  background-image: url("../../img/soc-icons/gmail.svg");
+  background-image: url("../img/soc-icons/gmail.svg");
 }
 
 .soc-icon-fb {
-  background-image: url("../../img/soc-icons/facebook.svg");
+  background-image: url("../img/soc-icons/facebook.svg");
 }
 
 .soc-icon-insta {
-  background-image: url("../../img/soc-icons/instagram.svg");
+  background-image: url("../img/soc-icons/instagram.svg");
 }
 
 .soc-icon-twitter {
-  background-image: url("../../img/soc-icons/twitter.svg");
+  background-image: url("../img/soc-icons/twitter.svg");
 }
 
 /* Slider */
@@ -468,7 +468,7 @@ textarea {
   border-radius: 50%;
   width: 42px;
   height: 42px;
-  background: url("../../img/icons/close.svg") no-repeat center;
+  background: url("../img/icons/close.svg") no-repeat center;
 }
 
 .form-search__submit {
@@ -477,7 +477,7 @@ textarea {
   outline: none !important;
   top: 50%;
   transform: translateY(-50%);
-  background: url("../../img/icons/search.svg") no-repeat center;
+  background: url("../img/icons/search.svg") no-repeat center;
   width: 30px;
   height: 31px;
 }
@@ -543,7 +543,7 @@ textarea {
   right: 0;
   width: 19px;
   height: 16px;
-  background: url("../../img/icons/arrow-blue.svg") no-repeat center;
+  background: url("../img/icons/arrow-blue.svg") no-repeat center;
   transition: transform 0.2s;
 }
 .form-search__all a:hover:after {
@@ -787,7 +787,7 @@ textarea {
   position: absolute;
   top: 16px;
   right: 10px;
-  background: url("../../img/icons/arrow.svg") no-repeat center;
+  background: url("../img/icons/arrow.svg") no-repeat center;
   transition: transform 0.2s;
 }
 .select-styled:hover {
@@ -1088,7 +1088,7 @@ body {
 }
 
 .btn-with-icon_cart {
-  background-image: url("../../img/icons/cart.svg");
+  background-image: url("../img/icons/cart.svg");
 }
 
 .btn-trigger {
@@ -1115,7 +1115,7 @@ body {
   width: 8px;
   height: 12px;
   margin-left: 12px;
-  background-image: url("../../img/icons/arrow-white.svg");
+  background-image: url("../img/icons/arrow-white.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   transition: transform 0.3s;
@@ -1341,7 +1341,7 @@ header [class*=m_icon] {
   font-weight: 500;
 }
 .categories-nav_breadcrumbs a.categories-nav__item {
-  background-image: url("../../img/icons/arrow-right.svg");
+  background-image: url("../img/icons/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: right 10px top 24px;
 }
@@ -1485,7 +1485,7 @@ header [class*=m_icon] {
   right: 0;
   bottom: 0;
   top: 0;
-  background: url("../../img/decor/mask.png") no-repeat center;
+  background: url("../img/decor/mask.png") no-repeat center;
   background-size: cover;
 }
 
@@ -1762,7 +1762,7 @@ header [class*=m_icon] {
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
-  background: url("../../img/icons/left.svg") no-repeat center;
+  background: url("../img/icons/left.svg") no-repeat center;
   transition: opacity 0.2s;
 }
 .carousel-main .slick-prev:hover,
@@ -1915,7 +1915,7 @@ header [class*=m_icon] {
   right: 0;
   bottom: 0;
   top: 0;
-  background: url(../../img/decor/product-mask.png) no-repeat center;
+  background: url(../img/decor/product-mask.png) no-repeat center;
   background-size: cover;
 }
 
@@ -2049,6 +2049,10 @@ header [class*=m_icon] {
   margin-top: 10px;
 }
 
+.cart-counter .my-counter__value {
+  width: 150px;
+}
+
 .cart__submit {
   width: 100%;
   background-color: transparent;
@@ -2086,6 +2090,9 @@ header [class*=m_icon] {
   border-radius: 5px;
   overflow: hidden;
 }
+body.ie .cart__product {
+  flex: 5;
+}
 
 .cart__product-header {
   background: #CBCEDD;
@@ -2101,6 +2108,11 @@ header [class*=m_icon] {
 .cart__product-total,
 .cart__product-count {
   text-align: center;
+}
+body.ie .cart__product-price,
+body.ie .cart__product-total,
+body.ie .cart__product-count {
+  flex: 1;
 }
 
 .cart__product-price .card__buy-price-old {
@@ -2130,7 +2142,7 @@ header [class*=m_icon] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background: url("../../img/icons/del.svg") no-repeat center;
+  background: url("../img/icons/del.svg") no-repeat center;
 }
 
 .cart-product__close {
