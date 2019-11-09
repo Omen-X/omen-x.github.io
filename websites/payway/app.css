@@ -107,6 +107,13 @@ a:hover {
 	color: #FCBF0E;
 }
 
+body.touch a:hover {
+	color: #272728;
+}
+
+p {
+	line-height: 1.2;
+}
 
 @font-face {
     font-family: 'DINPro';
@@ -188,39 +195,42 @@ body {
     z-index: -1;
 }
 
-main {
-}
+
 
 @media (min-width: 768px) {
-    .hidden-tablet {
-        display: none !important;
-    }
+  .hidden-tablet-up {
+    display: none !important;
+  }
 
-    main {
-        padding-left: 180px;
-    }
+  main {
+    padding-left: 180px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .hidden-desktop {
-        display: none !important;
-    }
+  .hidden-desktop-up {
+    display: none !important;
+  }
 
-    main {
-        padding-left: 240px;
-    }
+  main {
+    padding-left: 240px;
+  }
 }
 
 @media (max-width: 767px) {
-    .visible-tablet {
-        display: none !important;
-    }
+  .visible-tablet-up {
+    display: none !important;
+  }
 }
 
 @media (max-width: 1023px) {
-    .visible-desktop {
-        display: none !important;
-    }
+  .visible-desktop-up {
+    display: none !important;
+  }
+
+  .hidden-tablet-down {
+    display: none !important;
+  }
 }
 
 
