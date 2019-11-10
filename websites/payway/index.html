@@ -1,35 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Payway</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Payway</title>
 <link rel="shortcut icon" href="favicon.ico"><link href="app.css" rel="stylesheet"></head>
 <body>
-    <script>
-      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
-      if (isTouch) document.body.classList.add('touch');
-    </script>
-    <div id="root"></div>
+<div id="root"></div>
 
-    <!--    particles-js-->
-    <div id="particles-js"></div>
-    <script>
-        if (window.screen.width > 768) {
-          const script = document.createElement('script');
 
-          script.onload = function() {
-            const script2 = document.createElement('script');
-            script2.innerHTML= "particlesJS.load('particles-js', 'js/particlesjs-config.json')";
-            document.body.append(script2)
-          };
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/5860cb32e7588f12124b2abf/default';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
+<!--Start of tawk.to Status Code-->
+<script type="text/javascript">
+  Tawk_API = Tawk_API || {};
+  Tawk_API.onStatusChange = function (status) {
+    var docStatus = $('.tawk-status:visible');
+    if (status === 'online') {
+      docStatus.text('Online');
+    } else if (status === 'away') {
+      docStatus.text('is Away');
+    } else if (status === 'offline') {
+      docStatus.text('is Offline');
+    }
+  };
+</script>
+<!--End of tawk.to Status Code -->
 
-          script.src = 'js/particles.js';
-          document.body.append(script)
-        }
-    </script>
-    <!---->
-<script type="text/javascript" src="vendors~app.e88d1f43fb57e4669527.js" defer></script><script type="text/javascript" src="app.e88d1f43fb57e4669527.js" defer></script></body>
+<script type="text/javascript" src="vendors~app.ecaaaa96d6b86882a1a3.js" defer></script><script type="text/javascript" src="app.ecaaaa96d6b86882a1a3.js" defer></script></body>
 </html>
