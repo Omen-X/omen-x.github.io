@@ -216,6 +216,7 @@ main {
   }
 
   main {
+    position: relative;
     padding-left: 180px;
   }
 
@@ -253,6 +254,12 @@ main {
     display: none !important;
   }
 }
+@media (max-width: 380px) {
+  .hidden-xs-down {
+    display: none !important;
+  }
+}
+
 
 
 /*# sourceMappingURL=app.css.map*/
