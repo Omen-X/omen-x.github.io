@@ -188,6 +188,12 @@ body {
   background: linear-gradient(to right, rgba(232, 232, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+}
+
 #root {
   display: flex;
   flex-flow: column nowrap;
@@ -211,6 +217,10 @@ body {
 
   main {
     padding-left: 180px;
+  }
+
+  #root {
+    min-height: calc(100vh + 200px);
   }
 }
 
