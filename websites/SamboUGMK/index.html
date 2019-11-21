@@ -83,10 +83,10 @@
       <div class="carousel active-first uk-section-muted">
         <div class="carousel-slideshow">
           <ul class="uk-slideshow-items">
-            <li><img uk-cover src="./img/content/slide-1.jpg"></li>
-            <li><img uk-cover src="./img/content/slide-2.jpg"></li>
-            <li><img uk-cover src="./img/content/slide-1.jpg"></li>
-            <li><img uk-cover src="./img/content/slide-2.jpg"></li>
+            <li><img uk-cover data-src="./img/content/slide-1.jpg" uk-img></li>
+            <li><img uk-cover data-src="./img/content/slide-2.jpg" uk-img></li>
+            <li><img uk-cover data-src="./img/content/slide-1.jpg" uk-img></li>
+            <li><img uk-cover data-src="./img/content/slide-2.jpg" uk-img></li>
           </ul>
           <div class="carousel__nav-wrap uk-container">
             <ul class="carousel__nav clear-ul uk-grid uk-grid-collapse uk-flex-nowrap uk-child-width-expand">
@@ -130,12 +130,12 @@
           <div class="uk-grid uk-grid-match uk-flex-center info-cards uk-child-width-1-4@l uk-child-width-1-2@s">
             <div>
               <div class="info-card card-skew">
-                <div class="card-skew__content info-card__content"><span class="info-card__title">Клуб поддерживает</span><img src="./img/content/info-card-1.png"></div>
+                <div class="card-skew__content info-card__content"><span class="info-card__title">Клуб поддерживает</span><img data-src="./img/content/info-card-1.png" uk-img></div>
               </div>
             </div>
             <div>
               <div class="info-card card-skew">
-                <div class="card-skew__content info-card__content"><span class="info-card__title">Официальный участник</span><img src="./img/content/info-card-2.png"></div>
+                <div class="card-skew__content info-card__content"><span class="info-card__title">Официальный участник</span><img data-src="./img/content/info-card-2.png" uk-img></div>
               </div>
             </div>
           </div>
@@ -145,28 +145,28 @@
         <div class="uk-container"><span class="section-title">Календарь мероприятий</span>
           <div class="uk-grid uk-grid-match uk-child-width-1-1 uk-flex-wrap uk-flex-center uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l">
             <div><a class="uk-card uk-card-default event-card uk-flex uk-flex-column hover-border" href="#">
-                <div class="uk-card-media-top"><img src="img/content/event-1.jpg"></div>
+                <div class="uk-card-media-top"><img data-src="img/content/event-1.jpg" uk-img></div>
                 <div class="uk-card-body uk-flex-1 uk-flex uk-flex-column">
                   <div class="uk-card-title event-card__title"><span>27—26</span><span>ноября 2019</span></div>
                   <p class="event-card__text">Первенство Москвы среди клубов по месту жительства первенство по самбо</p>
                   <p class="event-card__location color-muted uk-margin-auto-top"><span class="my-icon my-icon_flag"></span><span>Москва, Россия</span></p>
                 </div></a></div>
             <div><a class="uk-card uk-card-default event-card uk-flex uk-flex-column hover-border" href="#">
-                <div class="uk-card-media-top"><img src="img/content/event-2.jpg"></div>
+                <div class="uk-card-media-top"><img data-src="img/content/event-2.jpg" uk-img></div>
                 <div class="uk-card-body uk-flex-1 uk-flex uk-flex-column">
                   <div class="uk-card-title event-card__title"><span>18-22</span><span>ноября 2019</span></div>
                   <p class="event-card__text">Международный турнир «мемориал М. Бурдикова» турнир по самбо</p>
                   <p class="event-card__location color-muted uk-margin-auto-top"><span class="my-icon my-icon_flag"></span><span>Екатеринбург, Россия</span></p>
                 </div></a></div>
             <div><a class="uk-card uk-card-default event-card uk-flex uk-flex-column hover-border" href="#">
-                <div class="uk-card-media-top"><img src="img/content/event-3.jpg"></div>
+                <div class="uk-card-media-top"><img data-src="img/content/event-3.jpg" uk-img></div>
                 <div class="uk-card-body uk-flex-1 uk-flex uk-flex-column">
                   <div class="uk-card-title event-card__title"><span>8-13</span><span>ноября 2019</span></div>
                   <p class="event-card__text">Первенство по самбо ЦС «Динамо» среди образовательных организаций</p>
                   <p class="event-card__location color-muted uk-margin-auto-top"><span class="my-icon my-icon_flag"></span><span>Москва, Россия</span></p>
                 </div></a></div>
             <div><a class="uk-card uk-card-default event-card uk-flex uk-flex-column hover-border" href="#">
-                <div class="uk-card-media-top"><img src="img/content/event-4.jpg"></div>
+                <div class="uk-card-media-top"><img data-src="img/content/event-4.jpg" uk-img></div>
                 <div class="uk-card-body uk-flex-1 uk-flex uk-flex-column">
                   <div class="uk-card-title event-card__title"><span>18</span><span>января 2020</span></div>
                   <p class="event-card__text">Кубок по самбо «Командующего космическими войсками»</p>
@@ -196,84 +196,82 @@
         </div>
         <div class="gallery">
           <div class="gallery-slider">
-            <ul class="uk-slider-items uk-flex-center uk-child-width-1-6">
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-              <li>
-                <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
-                <div class="gallery__content-wrap">
-                  <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
-                </div>
-              </li>
-            </ul>
-            <div class="gallery__nav">
-              <div class="uk-container">
-                <div class="uk-flex uk-flex-center"><span uk-slider-item="previous" uk-icon="triangle-left"></span><span uk-slider-item="next" uk-icon="triangle-right"></span></div>
-              </div>
+            <div class="gallery__nav"><span uk-slider-item="previous" uk-icon="chevron-left"></span><span uk-slider-item="next" uk-icon="chevron-right"></span></div>
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-6@xl">
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-1.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="gallery__image" style="background-image: url(&quot;img/content/gallery-2.jpg&quot;)"></div>
+                  <div class="gallery__content-wrap">
+                    <div class="gallery__content uk-flex uk-flex-between uk-flex-middle"><span class="gallery__text">Всероссийский день самбо в клубе им. И.И. Латышева</span><a class="btn-skew btn-skew_white" href="#"><span class="btn-skew__text">смотреть <span>21</span> фото</span></a></div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -284,19 +282,19 @@
       <div class="uk-section">
         <div class="uk-container"><span class="section-title">Новости</span>
           <div class="news"><a class="news__item uk-card uk-card-default uk-flex hover-border" href="#">
-              <div class="news__item-img uk-card-media-left uk-cover-container"><img src="img/content/news-1.jpg"></div>
+              <div class="news__item-img uk-card-media-left uk-cover-container"><img data-src="img/content/news-1.jpg" uk-img></div>
               <div>
                 <div class="uk-card-body uk-flex uk-flex-column"><span class="news__item-badge">Чемпионат ЕВРО2020</span><span class="news__item-date">29 ноября 2019</span><span class="news__item-title">Чемпионат Европы — 2020 по самбо пройдет в Екатеринбурге</span>
                   <p class="news__item-text">Конгресс Европейской федерации самбо утвердил Екатеринбург местом проведения чемпионата Европы 2020 года.</p>
                 </div>
               </div></a><a class="news__item uk-card uk-card-default uk-flex hover-border" href="#">
-              <div class="news__item-img uk-card-media-left uk-cover-container"><img src="img/content/news-2.jpg"></div>
+              <div class="news__item-img uk-card-media-left uk-cover-container"><img data-src="img/content/news-2.jpg" uk-img></div>
               <div>
                 <div class="uk-card-body uk-flex uk-flex-column"><span class="news__item-date">1 сентября 2019</span><span class="news__item-title">УГМК оснастила ещё один школьный зал самбо в Кировграде</span>
                   <p class="news__item-text">Алексей Клюкин стал обладателем этого почетного трофея в шестой раз</p>
                 </div>
               </div></a><a class="news__item uk-card uk-card-default uk-flex hover-border" href="#">
-              <div class="news__item-img uk-card-media-left uk-cover-container"><img src="img/content/news-3.jpg"></div>
+              <div class="news__item-img uk-card-media-left uk-cover-container"><img data-src="img/content/news-3.jpg" uk-img></div>
               <div>
                 <div class="uk-card-body uk-flex uk-flex-column"><span class="news__item-date">28 августа 2019</span><span class="news__item-title">Флаг Клуба самбо УГМК поднимется на Казбек</span>
                   <p class="news__item-text">Восхождение приурочено к 80-летию  нашего национального единоборства</p>
