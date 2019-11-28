@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Sambo - 2020</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="menu-active">
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="uk-flex uk-flex-middle">
+        <nav class="nav"><span class="nav__btn"><span uk-icon="menu"></span></span>
+          <div class="nav__list"><a class="nav__logo" href="./index.html"><img src="img/decor/nav-logo-1.svg"><img src="img/decor/nav-logo-2.svg"></a>
+            <div class="nav__item"><a class="nav__link" href="#">Новости</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Результаты матчей</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Турнирная таблица</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Страны</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Спортсмены</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">История чемпионата</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Фото и видеогалерея</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Болельщикам</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Екатеринбург-2020</a></div>
+          </div>
+        </nav>
+        <p class="header__title"><strong>Чемпионат Европы</strong>по самбо 2020</p>
+        <div class="header__sponsor"><span class="header__sponsor-title">официальный спонсор</span><img src="img/decor/sponsor.svg"></div>
+        <div class="header__star"><img src="img/decor/star.svg"></div>
+        <div class="lang"><span class="lang__btn"><span class="lang__curr" data-value="RU">RU</span><span uk-icon="chevron-down"></span></span>
+          <div uk-dropdown="mode: click"><span class="lang__option" data-value="RU">RU</span><span class="lang__option" data-value="ENG">ENG</span></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="welcome-sect" style="background-image: url(&quot;img/decor/home-bg.png&quot;)">
+        <div class="uk-container">
+          <div class="welcome-sect__content">
+            <p class="welcome-sect__title">Чемпионат<br> Европы ПО</p>
+            <p class="welcome-sect__sub-title">Самбо 2020</p>
+            <p class="welcome-sect__location">Россия, Екатеринбург</p>
+            <p class="welcome-sect__date">21—25 мая</p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="uk-container"><span class="select-title">
+            <p class="select-title__text">Более</p><span class="color-red">500 спортсменов</span>
+            <div class="dropdown-title"><span class="dropdown-title__current">Мужчин</span><span uk-dropdown="mode: click"><span>Мужчин</span><span>Женщин</span></span></div>
+            <div class="dropdown-title"><span class="dropdown-title__current">до 52 кг</span><span uk-dropdown="mode: click"><span>до 60 кг</span><span>до 70 кг</span></span></div></span>
+          <div class="photo-cards">
+            <div class="photo-card border-gold">
+              <div class="photo-card__img"><img src="img/content/at-1.jpg"></div><span class="photo-card__title"><span>Тигран</span><span>Киракосян</span></span>
+            </div>
+            <div class="photo-card border-gray">
+              <div class="photo-card__img"><img src="img/content/at-2.jpg"></div><span class="photo-card__title"><span>Евгений</span><span>Еремин</span></span>
+            </div>
+            <div class="photo-card border-bronze">
+              <div class="photo-card__img"><img src="img/content/at-3.jpg"></div><span class="photo-card__title"><span>Левани</span><span>Берберашвили</span></span>
+            </div>
+            <div class="photo-card border-gold">
+              <div class="photo-card__img"><img src="img/content/at-1.jpg"></div><span class="photo-card__title"><span>Тигран</span><span>Киракосян</span></span>
+            </div>
+            <div class="photo-card border-gray">
+              <div class="photo-card__img"><img src="img/content/at-2.jpg"></div><span class="photo-card__title"><span>Евгений</span><span>Еремин</span></span>
+            </div>
+            <div class="photo-card border-bronze">
+              <div class="photo-card__img"><img src="img/content/at-3.jpg"></div><span class="photo-card__title"><span>Левани</span><span>Берберашвили</span></span>
+            </div>
+          </div>
+          <div class="more-items">
+            <button class="more-items__btn">развернуть</button>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="uk-container"><span class="select-title">
+            <p class="select-title__text">Более</p><span class="color-red">40 стран</span>
+            <div class="dropdown-title"><span class="dropdown-title__current">Восточная европа</span><span uk-dropdown="mode: click"><span>Восточная европа</span><span>Западная европа</span></span></div></span>
+          <div class="photo-cards photo-cards_flags">
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/azerbaijan.svg"></div><span class="photo-card__title"><span>Азербайджан</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/armenia.svg"></div><span class="photo-card__title"><span>Армения</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/belarus.svg"></div><span class="photo-card__title"><span>Белоруссия</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/georgia.svg"></div><span class="photo-card__title"><span>Грузия</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/latvia.svg"></div><span class="photo-card__title"><span>Латвия</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/lithuania.svg"></div><span class="photo-card__title"><span>Литва</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/moldova.svg"></div><span class="photo-card__title"><span>Молдова</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/russia.svg"></div><span class="photo-card__title"><span>Россия</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/ukraine.svg"></div><span class="photo-card__title"><span>Украина</span></span>
+            </div>
+            <div class="photo-card">
+              <div class="photo-card__img"><img src="img/flags/estonia.svg"></div><span class="photo-card__title"><span>Эстония</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section_right-triangle">
+        <div class="uk-container"><span class="select-title">
+            <p class="select-title__text">последние</p><span class="color-red">новости</span></span>
+          <div class="news-cards"><a class="news-card" href="#" style="background-image: url(&quot;img/content/news-1.jpg&quot;)"><span class="news-card__title">Екатеринбург, хозяин ЧЕ-2020</span><span class="news-card__text">В 2020 году Екатеринбург примет чемпионат Европы по самбо.</span></a><a class="news-card" href="#" style="background-image: url(&quot;img/content/news-2.jpg&quot;)"><span class="news-card__title">Выбор сделан</span><span class="news-card__text">Клубу самбо УГМК передано право на проведение чемпионата Европы по самбо, который пройдет с 21 по 25 мая 2020 года в Екатеринбурге.</span></a><a class="news-card" href="#" style="background-image: url(&quot;img/content/news-3.jpg&quot;)"><span class="news-card__title">Дневник самбиста</span><span class="news-card__text">В канун учебного года Федерация самбо Свердловской области и Клуб самбо УГМК выпустили дневники юного самбиста.</span></a><a class="news-card" href="#" style="background-image: url(&quot;img/content/news-4.jpg&quot;)"><span class="news-card__title">Губернаторская поддержка</span><span class="news-card__text">Евгений Куйвашев подписал распоряжение о подготовке к проведению чемпионата Европы по самбо 2020.</span></a><a class="news-card" href="#" style="background-image: url(&quot;img/content/news-5.jpg&quot;)"><span class="news-card__title">Екатеринбург, хозяин ЧЕ-2020</span><span class="news-card__text">В 2020 году Екатеринбург примет чемпионат Европы по самбо.</span></a></div>
+        </div>
+      </div>
+      <div class="section gallery-sect">
+        <div class="uk-container"><span class="section-title">Фото и видео галерея</span>
+          <div class="gallery-wrap">
+            <div class="gallery__info"><span class="gallery__info-day">01</span><span class="gallery__info-text"><span>день</span><span>соревнований</span></span><span class="gallery__info-date">21 мая</span></div>
+            <div class="gallery__lightbox" uk-lightbox="animation: fade"><a href="img/content/g-1.jpg"><img src="img/content/g-1.jpg"></a><a href="img/content/g-2.jpg"><img src="img/content/g-2.jpg"></a><a href="img/content/g-3.jpg"><img src="img/content/g-3.jpg"></a><a href="img/content/g-4.jpg"><img src="img/content/g-4.jpg"></a><a href="img/content/g-5.jpg"><img src="img/content/g-5.jpg"></a></div>
+          </div>
+          <div class="more-items more-items_no-border">
+            <button class="more-items__btn">развернуть</button>
+          </div>
+          <div class="gallery-wrap">
+            <div class="gallery__info"><span class="gallery__info-day">02</span><span class="gallery__info-text"><span>день</span><span>соревнований</span></span><span class="gallery__info-date">22 мая</span></div>
+            <div class="gallery__lightbox" uk-lightbox="animation: fade"><a href="img/content/g-1.jpg"><img src="img/content/g-1.jpg"></a><a href="img/content/g-2.jpg"><img src="img/content/g-2.jpg"></a><a href="img/content/g-3.jpg"><img src="img/content/g-3.jpg"></a><a href="img/content/g-4.jpg"><img src="img/content/g-4.jpg"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="uk-container">
+          <div class="sponsors-row">
+            <div class="sponsors">
+              <p class="sponsors__title">организаторы</p>
+              <div class="sponsors__items"><img src="img/content/sponsor-1.svg"><img src="img/content/sponsor-1.svg"><img src="img/content/sponsor-2.svg"><img src="img/content/sponsor-3.svg"><img src="img/content/sponsor-4.svg"><img src="img/content/sponsor-1.svg"><img src="img/content/sponsor-2.svg"><img src="img/content/sponsor-3.svg"><img src="img/content/sponsor-4.svg"><img src="img/content/sponsor-1.svg"><img src="img/content/sponsor-2.svg"><img src="img/content/sponsor-3.svg"><img src="img/content/sponsor-4.svg"><img src="img/content/sponsor-2.svg"><img src="img/content/sponsor-3.svg"><img src="img/content/sponsor-4.svg"><img src="img/content/sponsor-5.svg"></div>
+            </div>
+          </div>
+          <div class="sponsors-row">
+            <div class="sponsors">
+              <p class="sponsors__title">генеральный спонсор</p>
+              <div class="sponsors__items"><img src="img/decor/sponsor-7.svg"></div>
+            </div>
+            <div class="sponsors">
+              <p class="sponsors__title">спонсоры</p>
+              <div class="sponsors__items"><img src="img/content/sponsor-6.svg"><img src="img/content/sponsor-6.svg"><img src="img/content/sponsor-6.svg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section city-sect">
+        <div class="uk-container"><span class="section-title">Екатеринбург 2020</span>
+          <div class="city">
+            <div class="city__info">
+              <div class="city__info-item"><span class="city__info-title">основан</span><span class="city__info-text">в 1723 году</span></div>
+              <div class="city__info-item"><span class="city__info-title">население</span><span class="city__info-text">1.4 млн. жителей</span></div>
+              <div class="city__info-item"><span class="city__info-title">расстояние до москвы</span><span class="city__info-text">1755 км</span></div>
+            </div>
+            <div class="city__content">
+              <p class="content-text">Весной 1723 года по указу императора Петра I на берегах реки Исеть было начато строительство крупнейшего в России «железоделательного» завода. Завод-крепость назвали Екатеринбургом в честь императрицы Екатерины I, супруги Петра I.</p>
+              <p class="content-text">
+                Екатеринбург занимает четвертое место в стране по численности населения после Москвы, Санкт-Петербурга и Новосибирска.
+                Город стоит на границе между Европой и Азией. Разделяя два континента, он является своего рода воротами в загадочный и удивительный мир Южного Урала и бескрайней сибирской тайги.
+              </p>
+              <p class="content-text">Екатеринбург вошел в рейтинг «Великие города будущего», занял первое место в рейтинге самых перспективных городов-миллионеров России, возглавил список «Самые привлекательные для бизнеса города России». Екатеринбург – один из ведущих спортивных центров страны. Чемпионами России становились екатеринбургские команды по мужскому и женскому волейболу, баскетболу, мини-футболу, хоккею с мячом, хоккею на траве.</p>
+              <button class="btn-main">развернуть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section_bg-gray">
+        <div class="uk-container"><span class="section-title">История чемпионата</span>
+          <p class="accent-text">Чемпионаты Европы по самбо — международные соревнования самбистов, проходящие под эгидой Международной федерации самбо. Первый чемпионат прошёл в 1972 году в Риге.</p>
+          <div class="history-wrap">
+            <div class="history uk-overflow-auto">
+              <table class="history__table">
+                <thead>
+                  <tr>
+                    <th>чемпионат</th>
+                    <th>дата</th>
+                    <th>год</th>
+                    <th>место проведения</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1-й чемпионат</td>
+                    <td>26-27 ноября</td>
+                    <td>1972</td>
+                    <td><span class="icon-flag-russia"></span>СССР, Рига</td>
+                  </tr>
+                  <tr>
+                    <td>2-й чемпионат</td>
+                    <td>27-29 июня</td>
+                    <td>1974</td>
+                    <td><span class="icon-flag-spain"></span>Испания, Мадрид</td>
+                  </tr>
+                  <tr>
+                    <td>3-й чемпионат</td>
+                    <td>12-23 апреля</td>
+                    <td>1976</td>
+                    <td><span class="icon-flag-russia"></span>СССР, Ленинград</td>
+                  </tr>
+                  <tr>
+                    <td>4-й чемпионат</td>
+                    <td>19-21 апреля</td>
+                    <td>1982</td>
+                    <td><span class="icon-flag-nrb"></span>НРБ, Варна</td>
+                  </tr>
+                  <tr>
+                    <td>5-й чемпионат</td>
+                    <td>9-10 июля</td>
+                    <td>1984</td>
+                    <td><span class="icon-flag-spain"></span>Испания, Бильбао</td>
+                  </tr>
+                  <tr>
+                    <td>6-й чемпионат</td>
+                    <td>17-18 мая</td>
+                    <td>1986</td>
+                    <td><span class="icon-flag-russia"></span>СССР, Лениград</td>
+                  </tr>
+                  <tr>
+                    <td>7-й чемпионат</td>
+                    <td>6-7 июня</td>
+                    <td>1987</td>
+                    <td><span class="icon-flag-nrb"></span>НРБ, София</td>
+                  </tr>
+                  <tr>
+                    <td>8-й чемпионат</td>
+                    <td>19-20 мая</td>
+                    <td>1989</td>
+                    <td><span class="icon-flag-great-britain"></span>Великобритания, Херн-Бей</td>
+                  </tr>
+                  <tr>
+                    <td>9-й чемпионат</td>
+                    <td>июнь</td>
+                    <td>1990</td>
+                    <td><span class="icon-flag-israel"></span>Израиль, Тель-Авив</td>
+                  </tr>
+                  <tr>
+                    <td>10-й чемпионат</td>
+                    <td>июнь</td>
+                    <td>1991</td>
+                    <td><span class="icon-flag-france"></span>Франция, Турин</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="more-items">
+              <button class="more-items__btn">развернуть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__top"><a class="footer__logo" href="#"><img src="img/decor/footer-logo.svg"></a>
+            <div class="footer__sponsor"><span class="header__sponsor-title">официальный спонсор</span><img src="img/decor/sponsor.svg"><img src="img/decor/star.svg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__nav"><a href="#">новости</a><a href="#">турнирная таблица</a><a href="#">результаты</a><a href="#">спортсмены</a><a href="#">страны</a><a href="#">билеты</a></div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__nav"><a href="#">фото и видео галерея</a><a href="#">екатеринбург 2020</a><a href="#">история чемпионата</a><a href="#">болельщикам и туристам</a></div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__contacts">
+            <div class="footer__contact"><span class="footer__contact-title">приемная</span><span class="footer__contact-value">+375 17 308 72 50</span></div>
+            <div class="footer__contact"><span class="footer__contact-title">факс</span><span class="footer__contact-value">+375 17 308 72 50</span></div>
+            <div class="soc-links"><a class="soc-link" uk-icon="vk" href="#"></a><a class="soc-link" uk-icon="fb" href="#"></a><a class="soc-link" uk-icon="insta" href="#"></a><a class="soc-link" uk-icon="tg" href="#"></a><a class="soc-link" uk-icon="wz" href="#"></a></div>
+            <div class="lang"><span class="lang__btn"><span class="lang__curr" data-value="RU">RU</span><span uk-icon="chevron-down"></span></span>
+              <div uk-dropdown="mode: click"><span class="lang__option" data-value="RU">RU</span><span class="lang__option" data-value="ENG">ENG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="uk-container">
+          <div class="footer__bottom-content"><span class="footer__copy">&copy;&nbsp;Дирекция Чемпионата Европы по&nbsp;Самбо 2020</span>
+            <div class="footer__dev">Дизайн и разработка<a href="#"><img src="img/decor/sitis-logo.svg"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var scr = {
+      	"scripts": [
+      		{"src": "js/libs.js", "async": false},
+      		{"src": "js/main.min.js", "async": false}
+      	]
+      };
+      
+      (function(t, n, r) {
+      "use strict";
+      	var c = function (t) {
+      		if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+      		for (var r = 0; r < t.length; r++) {
+      			var c = n.createElement("script"), e = t[r];
+      			c.src = e.src, c.async = e.async, n.body.appendChild(c)
+      		}
+      		return !0
+      	};
+      	t.addEventListener ? t.addEventListener("load", function () {
+      		c(r.scripts);
+      	}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+      		c(r.scripts)
+      	}) : t.onload = function () {
+      		c(r.scripts)
+      	}
+      	}(window, document, scr));
+    </script>
+  </body>
+</html>
