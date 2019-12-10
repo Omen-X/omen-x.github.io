@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Sambo - 2020</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="menu-active">
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="uk-flex uk-flex-middle">
+        <nav class="nav"><span class="nav__btn"><span uk-icon="menu"></span></span>
+          <div class="nav__list"><a class="nav__logo" href="./index.html"><img src="img/decor/nav-logo-1.svg"><img src="img/decor/nav-logo-2.svg"></a>
+            <div class="nav__item"><a class="nav__link" href="#">Новости</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Результаты матчей</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Турнирная таблица</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Страны</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Спортсмены</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">История чемпионата</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Фото и видеогалерея</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Болельщикам</a></div>
+            <div class="nav__item"><a class="nav__link" href="#">Екатеринбург-2020</a></div>
+          </div>
+        </nav>
+        <p class="header__title"><strong>Чемпионат Европы</strong>по самбо 2020</p>
+        <div class="header__sponsor"><span class="header__sponsor-title">официальный спонсор</span><img src="img/decor/sponsor.svg"></div>
+        <div class="header__star"><img src="img/decor/star.svg"></div>
+        <div class="lang"><span class="lang__btn"><span class="lang__curr" data-value="RU">RU</span><span uk-icon="chevron-down"></span></span>
+          <div uk-dropdown="mode: click"><span class="lang__option" data-value="RU">RU</span><span class="lang__option" data-value="ENG">ENG</span></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section">
+        <div class="uk-container"><span class="section-title">Болельщикам</span>
+          <div class="city-links city-links_wrap"><span><a href="#stage">Место проведения</a></span><span><a href="#info">Справочная информация</a></span><span><a href="#hotels">Гостицины и аренда жилья</a></span><span><a href="#showplace">Достопримечательности</a></span><span><a href="#tickets">Билеты на соревнования</a></span><span><a href="#airports">Аэропорт, кассы</a></span><span><a href="#food">Рестораны, фаст-фуд, кафе</a></span><span><a href="#hospitals">Медицинские организации</a></span></div>
+          <div class="information-img img-red-triangle"><img uk-img data-src="img/decor/fans.jpg"></div>
+        </div>
+      </section>
+      <section class="info-blocks-section">
+        <div class="uk-container">
+          <div class="info-block" id="stage">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-1.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Место проведения</span>
+              <p class="info-block__overview">
+                Дворец игровых видов спорта (ДИВС)<br>
+                Екатеринбург,<br>
+                Олимпийская набережная, 3<br>
+                Станиция метро «Динамо»
+              </p>
+              <p class="content-text">В Екатеринбурге действуют четыре вида общественного транспорта: метро, автобус (маршрутные такси), трамвай и троллейбус. Стоимость проезда в метро - 32₽ (около 0,46€), остальные – 28₽ (около 0,4€).</p>
+              <p class="content-text">Вместимость главной арены составляет 5000 зрителей. Деятельность комплекса ориентирована на проведение соревнований по таким игровым видам спорта как волейбол, баскетбол, мини-футбол, индорхоккей. Кроме того, здесь периодически проводятся соревнования по различным видам единоборств, спортивной и художественной гимнастике, спортивным танцам и теннису. Также ДИВС используется как одна из концертных площадок города.</p>
+            </div>
+          </div>
+          <div class="info-map">
+            <div class="map-wrap">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="info-block" id="showplace">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-6.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Что посмотреть?</span>
+              <p class="content-text">Дворец  игровых видов спорта, где пройдут поединки чемпионата Европы по самбо-2020,  очень удобно расположен в центральной части города, буквально в двух шагах от станции метро «Динамо».  Если проехать одну остановку до станции «Площадь 1905 года», то можно оказаться уже в самом центре города, на этой самой площади, откуда берет начало главная пешеходная улица Екатеринбурга – Вайнера. Но лучше прогуляться от ДИВСа  до центра пешком вдоль набережной Городского пруда. Дорога займет не больше 15 минут, а в качестве бонуса вас ждет встреча сразу с несколькими знаковыми для Екатеринбурга достопримечательностями.</p>
+              <div class="article__content-img"><img uk-img data-src="img/content/info-1.jpg"></div>
+              <p class="content-text">Дворец  игровых видов спорта, где пройдут поединки чемпионата Европы по самбо-2020,  очень удобно расположен в центральной части города, буквально в двух шагах от станции метро «Динамо».  Если проехать одну остановку до станции «Площадь 1905 года», то можно оказаться уже в самом центре города, на этой самой площади, откуда берет начало главная пешеходная улица Екатеринбурга – Вайнера. Но лучше прогуляться от ДИВСа  до центра пешком вдоль набережной Городского пруда. Дорога займет не больше 15 минут, а в качестве бонуса вас ждет встреча сразу с несколькими знаковыми для Екатеринбурга достопримечательностями.</p>
+              <div class="article__content-img"><img uk-img data-src="img/content/info-2.jpg"></div>
+              <p class="content-text">Далее по подземному или пешеходному переходу пересекаем главную улицу Екатеринбурга – проспект Ленина и попадаем на «Плотинку», знакомое каждому жителю города место проведения многочисленных народных гуляний и праздников. В 20-х годах XVIII века строительство плотины на реке Исеть положило начало основанию завода,  а затем и города. Сейчас это гидротехническое сооружение носит декоративный характер, но разбитый  вокруг нее нынешний Исторический сквер до сих пор содержит отдельные постройки и элементы тех времен -  сегодня в нескольких сохранившихся зданиях бывшего завода располагается музей истории архитектуры и промышленной техники Урала. Рядом находится  старинная водонапорная башня, построенная в конце XIX века из камня и дерева. Кстати, с  2018 года на первом этаже башни разместился гостевой центр Екатеринбурга: здесь можно приобрести «Карту гостя» (CityPass), предоставляющую право бесплатного посещения экскурсий и галерей, а также скидки и бонусы на посещение кафе, ресторанов, театров, размещение в гостиницах и т.д. Здесь же, на Площади Труда можно отдать дань уважения основателям Екатеринбурга Василию Татищеву и Вильгельму де Геннину, памятник которым открыли в 1998 году, в честь 285-летия города.</p>
+              <div class="article__content-img"><img uk-img data-src="img/content/info-3.jpg"></div>
+              <p class="content-text">
+                А если же на выходе из ДИВСа пройти налево от набережной в сторону ул. Карла-Либхнехта, то через пятьсот метров откроется прекрасный вид на величественный Храм-на-Крови, построенный на мести гибели семьи последнего русского императора Николая II.
+                Тем же, кто хочет подробнее познакомиться с историческим центром Екатеринбурга, предлагаем воспользоваться народным волонтерским проектом Красная линия, который поможет вам в течение 2-3 часов совершить пешеходный 6,5-километровый  маршрут. За это время  вы сможете увидеть и оценить наиболее интересные достопримечательности Екатеринбурга – всего около 35 объектов, от памятников и купеческих усадеб до целых улиц и площадей.
+              </p>
+            </div>
+          </div>
+          <div class="info-block" id="food">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-4.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Рестораны, фаст-фуд, кафе</span>
+              <p class="content-text">Жители Екатеринбурга просто обожают майонез.  Согласно некоторым источникам, по потреблению этого продукта на душу населения город занимает первое место в мире. Говорят, секрет особого вкуса местного майонеза кроется в пропорциях добавляемой в него горчицы. Да, это не самый полезный продукт, но один раз все же стоит попробовать. Тем более, с уральскими же пельменями.</p>
+            </div>
+          </div>
+          <div class="info-block" id="hotels">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-2.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Гостицины и аренда жилья</span>
+              <p class="content-text">Жители Екатеринбурга просто обожают майонез.  Согласно некоторым источникам, по потреблению этого продукта на душу населения город занимает первое место в мире. Говорят, секрет особого вкуса местного майонеза кроется в пропорциях добавляемой в него горчицы. Да, это не самый полезный продукт, но один раз все же стоит попробовать. Тем более, с уральскими же пельменями.</p>
+            </div>
+          </div>
+          <div class="info-block" id="tickets">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-3.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Билеты на соревнования</span>
+              <p class="content-text">Жители Екатеринбурга просто обожают майонез.  Согласно некоторым источникам, по потреблению этого продукта на душу населения город занимает первое место в мире. Говорят, секрет особого вкуса местного майонеза кроется в пропорциях добавляемой в него горчицы. Да, это не самый полезный продукт, но один раз все же стоит попробовать. Тем более, с уральскими же пельменями.</p>
+            </div>
+          </div>
+          <div class="info-block" id="info">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-5.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Справочная информация</span>
+              <p class="content-text">Жители Екатеринбурга просто обожают майонез.  Согласно некоторым источникам, по потреблению этого продукта на душу населения город занимает первое место в мире. Говорят, секрет особого вкуса местного майонеза кроется в пропорциях добавляемой в него горчицы. Да, это не самый полезный продукт, но один раз все же стоит попробовать. Тем более, с уральскими же пельменями.</p>
+            </div>
+          </div>
+          <div class="info-block" id="hospitals">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-8.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Медицинские организации</span>
+              <p class="content-text">Жители Екатеринбурга просто обожают майонез.  Согласно некоторым источникам, по потреблению этого продукта на душу населения город занимает первое место в мире. Говорят, секрет особого вкуса местного майонеза кроется в пропорциях добавляемой в него горчицы. Да, это не самый полезный продукт, но один раз все же стоит попробовать. Тем более, с уральскими же пельменями.</p>
+            </div>
+          </div>
+          <div class="info-block" id="airports">
+            <div class="info-block__img"><img uk-img data-src="img/decor/ref-card-7.svg"></div>
+            <div class="info-block__content"><span class="info-block__title">Аэропорт, кассы</span>
+              <p class="content-text">Жители Екатеринбурга просто обожают майонез.  Согласно некоторым источникам, по потреблению этого продукта на душу населения город занимает первое место в мире. Говорят, секрет особого вкуса местного майонеза кроется в пропорциях добавляемой в него горчицы. Да, это не самый полезный продукт, но один раз все же стоит попробовать. Тем более, с уральскими же пельменями.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__top"><a class="footer__logo" href="#"><img src="img/decor/footer-logo.svg"></a>
+            <div class="footer__sponsor"><span class="header__sponsor-title">официальный спонсор</span><img src="img/decor/sponsor.svg"><img src="img/decor/star.svg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__nav"><a href="#">новости</a><a href="#">турнирная таблица</a><a href="#">результаты</a><a href="#">спортсмены</a><a href="#">страны</a><a href="#">билеты</a></div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__nav"><a href="#">фото и видео галерея</a><a href="#">екатеринбург 2020</a><a href="#">история чемпионата</a><a href="#">болельщикам и туристам</a></div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="uk-container">
+          <div class="footer__contacts">
+            <div class="footer__contact"><span class="footer__contact-title">приемная</span><span class="footer__contact-value">+375 17 308 72 50</span></div>
+            <div class="footer__contact"><span class="footer__contact-title">факс</span><span class="footer__contact-value">+375 17 308 72 50</span></div>
+            <div class="soc-links"><a class="soc-link" uk-icon="vk" href="#"></a><a class="soc-link" uk-icon="fb" href="#"></a><a class="soc-link" uk-icon="insta" href="#"></a><a class="soc-link" uk-icon="tg" href="#"></a><a class="soc-link" uk-icon="wz" href="#"></a></div>
+            <div class="lang"><span class="lang__btn"><span class="lang__curr" data-value="RU">RU</span><span uk-icon="chevron-down"></span></span>
+              <div uk-dropdown="mode: click"><span class="lang__option" data-value="RU">RU</span><span class="lang__option" data-value="ENG">ENG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="uk-container">
+          <div class="footer__bottom-content"><span class="footer__copy">&copy;&nbsp;Дирекция Чемпионата Европы по&nbsp;Самбо 2020</span>
+            <div class="footer__dev">Дизайн и разработка<a href="#"><img src="img/decor/sitis-logo.svg"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var scr = {
+      	"scripts": [
+      		{"src": "js/libs.js", "async": false},
+      		{"src": "js/main.min.js", "async": false}
+      	]
+      };
+      
+      (function(t, n, r) {
+      "use strict";
+      	var c = function (t) {
+      		if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+      		for (var r = 0; r < t.length; r++) {
+      			var c = n.createElement("script"), e = t[r];
+      			c.src = e.src, c.async = e.async, n.body.appendChild(c)
+      		}
+      		return !0
+      	};
+      	t.addEventListener ? t.addEventListener("load", function () {
+      		c(r.scripts);
+      	}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+      		c(r.scripts)
+      	}) : t.onload = function () {
+      		c(r.scripts)
+      	}
+      	}(window, document, scr));
+    </script>
+  </body>
+</html>
