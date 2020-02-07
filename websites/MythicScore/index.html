@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
-  <body>
+  <body class="live-bar">
     <script>
       var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
       if (isTouch) document.body.classList.add('touch');
@@ -20,11 +20,11 @@
       <div class="live-content-wrap"><span class="live-trigger live-trigger_opened"></span>
         <div class="live-content"><span class="live-title">LIVE</span><a class="live-more" href="./live.html">More</a><span class="live-trigger live-trigger_default"></span>
           <div class="live-streams">
-            <div class="live-stream"><img src="./img/content/live-1.svg"></div>
-            <div class="live-stream"><img src="./img/content/live-1.svg"></div>
-            <div class="live-stream"><img src="./img/content/live-1.svg"></div>
-            <div class="live-stream"><img src="./img/content/live-1.svg"></div>
-            <div class="live-stream"><img src="./img/content/live-1.svg"></div>
+            <div class="live-stream"><img src="./img/content/live-1.png"></div>
+            <div class="live-stream"><img src="./img/content/live-1.png"></div>
+            <div class="live-stream"><img src="./img/content/live-1.png"></div>
+            <div class="live-stream"><img src="./img/content/live-1.png"></div>
+            <div class="live-stream"><img src="./img/content/live-1.png"></div>
           </div>
           <div class="live-soc-wrap">
             <div class="trust-pilot"><img src="./img/content/trustpilot.svg"></div>
@@ -41,7 +41,7 @@
         </form><a class="live-link" href="./live.html">LIVE</a>
       </div>
       <div class="content-block header__content">
-        <div class="header__title-wrap"><a class="logo" href="#"><img src="img/decor/logo.svg"></a>
+        <div class="header__title-wrap"><a class="logo" href="./index.html"><img src="img/decor/logo.svg"></a>
           <div class="header__title">
             <p class="header__title-top">Best Mythic+ Boosting Service</p>
             <p class="header__title-bottom">MythicScore.com</p>
@@ -61,14 +61,14 @@
         <div class="soc-links"><a class="soc-link soc-icon-skype" href="#"></a><a class="soc-link soc-icon-disc" href="#"></a><a class="soc-link soc-icon-tg" href="#"></a><a class="soc-link soc-icon-wz" href="#"></a><a class="soc-link soc-icon-fb" href="#"></a><a class="soc-link soc-icon-insta" href="#"></a></div>
       </div>
     </header>
-    <main>
-      <section class="categories-nav-section">
-        <div class="content-block">
-          <div class="categories-nav-wrap">
-            <div class="categories-nav"><a class="categories-nav__item active" href="#1"><span title="BFA Mythic+ Dungeons">BFA Mythic+ Dungeons</span></a><a class="categories-nav__item" href="#2"><span title="BFA Mythic+ Score">BFA Mythic+ Score</span></a><a class="categories-nav__item" href="#3"><span title="Mythic+ subscription">Mythic+ subscription</span></a><a class="categories-nav__item" href="#4"><span title="BFA Mythic Dungeons">BFA Mythic Dungeons</span></a></div>
-          </div>
+    <section class="categories-nav-section">
+      <div class="content-block">
+        <div class="categories-nav-wrap">
+          <div class="categories-nav"><a class="categories-nav__item active" href="#1"><span title="BFA Mythic+ Dungeons">BFA Mythic+ Dungeons</span></a><a class="categories-nav__item" href="#2"><span title="BFA Mythic+ Score">BFA Mythic+ Score</span></a><a class="categories-nav__item" href="#3"><span title="Mythic+ subscription">Mythic+ subscription</span></a><a class="categories-nav__item" href="#4"><span title="BFA Mythic Dungeons">BFA Mythic Dungeons</span></a></div>
         </div>
-      </section>
+      </div>
+    </section>
+    <main>
       <section class="product-section">
         <div class="product-wrap content-block">
           <div class="product hot">
@@ -215,12 +215,23 @@
         </div>
       </section>
     </main>
+    <section class="hidden-lg-up">
+      <div class="footer-info">
+        <div class="content-block footer-info__content">
+          <div class="trust-pilot"><img src="./img/content/trustpilot.svg"></div>
+          <div class="soc-links"><a class="soc-link soc-icon-skype" href="#"></a><a class="soc-link soc-icon-disc" href="#"></a><a class="soc-link soc-icon-tg" href="#"></a><a class="soc-link soc-icon-wz" href="#"></a><a class="soc-link soc-icon-fb" href="#"></a><a class="soc-link soc-icon-insta" href="#"></a></div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="content-block footer__content">
         <p class="footer__copy">All mentioned brand names are registered and property of the respective companies.&nbsp;&copy;&nbsp;MythicScore.com &mdash; 2019</p>
         <div class="footer__links"><a href="#">Account Share GUIDE</a><a href="#">Job Offers</a></div>
       </div>
     </footer>
+    <div class="notification">
+      <p class="notification__text"></p>
+    </div>
     <script>
       var scr = {
         "scripts": [
