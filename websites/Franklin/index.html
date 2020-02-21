@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Content">
-    <title>Franklin</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Franklin</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.css"/>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -13,6 +15,17 @@
       var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
       if (isTouch) document.body.classList.add('touch');
       else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
       
     </script>
     <header class="header">
@@ -29,7 +42,7 @@
             </div>
           </div>
         </div>
-        <button class="btn-main modal-trigger" data-modal-id="modal-login">Вход</button>
+        <button class="btn-main modal-trigger" data-modal-id="modal-login"><span class="btn-main__title">Вход</span></button>
       </div>
       <div class="mob-nav">
         <div class="mob-nav__header">
