@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Franklin</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+    </script>
+    <header class="header">
+      <div class="header__content">
+        <div class="menu-btn mob-nav-trigger hidden-tb-up"><span></span><span></span><span></span></div><a class="logo" href="./index.html"><img src="./img/decor/logo.svg"></a>
+        <div class="theme-toggle hidden-sm-down" title="Изменить цветовую тему"><i class="m-icon m-icon_moon"></i></div>
+        <div class="header__lang-select hidden-sm-down">
+          <div class="lang-select">
+            <div class="lang-select__content">
+              <div class="lang-select__option"><span class="lang-select__option-icon"><i class="m-icon m-icon_rus"></i></span><span class="lang-select__option-title">RUS</span></div><span class="lang-select__icon"><i class="m-icon m-icon_down"></i></span>
+            </div>
+            <div class="lang-select__options">
+              <div class="lang-select__option"><span class="lang-select__option-icon"><i class="m-icon m-icon_eng"></i></span><span class="lang-select__option-title">ENG</span></div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-main modal-trigger" data-modal-id="modal-login">Вход</button>
+      </div>
+      <div class="mob-nav">
+        <div class="mob-nav__header">
+          <div class="mob-nav__close"><i class="m-icon m-icon_cross"></i></div>
+        </div>
+        <div class="mob-nav__content">
+          <div class="mob-nav__top-links">
+            <div class="lang-select">
+              <div class="lang-select__content">
+                <div class="lang-select__option"><span class="lang-select__option-icon"><i class="m-icon m-icon_rus"></i></span><span class="lang-select__option-title">RUS</span></div><span class="lang-select__icon"><i class="m-icon m-icon_down"></i></span>
+              </div>
+              <div class="lang-select__options">
+                <div class="lang-select__option"><span class="lang-select__option-icon"><i class="m-icon m-icon_eng"></i></span><span class="lang-select__option-title">ENG</span></div>
+              </div>
+            </div>
+            <div class="theme-toggle" title="Изменить цветовую тему"><i class="m-icon m-icon_moon"></i></div>
+          </div>
+          <div class="soc-links"><a class="soc-link soc-link_facebook" href="#"><i class="m-icon m-icon_facebook"></i></a><a class="soc-link soc-link_vk" href="#"><i class="m-icon m-icon_vk"></i></a></div>
+        </div>
+        <div class="mob-nav__footer"><a class="logo" href="./index.html"><img src="./img/decor/logo.svg"></a></div>
+      </div>
+    </header>
+    <main>
+      <div class="page-content-wrap">
+        <div class="side-bar">
+          <div class="toolbar">
+            <div class="toolbar__buttons"><span class="toolbar__button chat-trigger" title="Чат"><svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.412 10.998L18.054 5.35705C18.1469 5.26434 18.2206 5.15425 18.2709 5.03307C18.3212 4.91188 18.3472 4.78197 18.3472 4.65075C18.3473 4.51954 18.3216 4.38959 18.2714 4.26833C18.2213 4.14708 18.1478 4.03688 18.055 3.94405C16.158 2.04505 13.653 0.998047 10.998 0.998047C5.48405 0.998047 0.998047 5.48505 0.998047 10.998C0.998047 16.512 5.48405 20.998 10.998 20.998C13.652 20.998 16.158 19.953 18.055 18.053C18.1478 17.9602 18.2213 17.85 18.2714 17.7288C18.3216 17.6075 18.3473 17.4776 18.3472 17.3463C18.3472 17.2151 18.3212 17.0852 18.2709 16.964C18.2206 16.8428 18.1469 16.7327 18.054 16.64L12.412 10.998ZM9.49805 7.99605C9.301 7.99598 9.10589 7.9571 8.92387 7.88164C8.74184 7.80617 8.57647 7.69559 8.43718 7.55621C8.29789 7.41683 8.18742 7.25138 8.11207 7.0693C8.03673 6.88723 7.99798 6.6921 7.99805 6.49505C7.99811 6.298 8.03699 6.10289 8.11246 5.92087C8.18793 5.73884 8.29851 5.57347 8.43789 5.43418C8.57727 5.29489 8.74272 5.18442 8.92479 5.10907C9.10687 5.03373 9.302 4.99498 9.49905 4.99505C9.897 4.99518 10.2786 5.15339 10.5599 5.43489C10.8412 5.71638 10.9992 6.09809 10.999 6.49605C10.9989 6.894 10.8407 7.27561 10.5592 7.55691C10.2777 7.83822 9.896 7.99618 9.49805 7.99605Z" fill="#717589"/>
+</svg></span><span class="toolbar__button" title="Информация"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 0C4.486 0 0 4.487 0 10C0 15.515 4.486 20 10 20C15.514 20 20 15.515 20 10C20 4.487 15.514 0 10 0ZM10 4.751C10.3315 4.751 10.6495 4.8827 10.8839 5.11712C11.1183 5.35154 11.25 5.66948 11.25 6.001C11.25 6.33252 11.1183 6.65046 10.8839 6.88488C10.6495 7.1193 10.3315 7.251 10 7.251C9.66848 7.251 9.35054 7.1193 9.11612 6.88488C8.8817 6.65046 8.75 6.33252 8.75 6.001C8.75 5.66948 8.8817 5.35154 9.11612 5.11712C9.35054 4.8827 9.66848 4.751 10 4.751ZM13 15H7V13H9V10H8V8H10C10.2652 8 10.5196 8.10536 10.7071 8.29289C10.8946 8.48043 11 8.73478 11 9V13H13V15Z" fill="#717589"/>
+</svg></span><span class="toolbar__button" title="Депозит"><svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.525 0.150167C15.3801 0.0604641 15.2147 0.00916761 15.0445 0.00111917C14.8742 -0.00692928 14.7047 0.0285359 14.552 0.104167L11.072 1.84717L8.554 0.168167C8.38963 0.0591166 8.19675 0.000953465 7.9995 0.000953465C7.80225 0.000953465 7.60937 0.0591166 7.445 0.168167L4.928 1.84717L1.448 0.104167C1.2953 0.0285705 1.12586 -0.00687932 0.95566 0.00116208C0.785461 0.00920348 0.620117 0.060471 0.475224 0.150128C0.330332 0.239785 0.210669 0.364876 0.127522 0.513601C0.0443764 0.662325 0.000488785 0.829779 0 1.00017V19.0002C0.000791363 19.2651 0.106402 19.519 0.293767 19.7064C0.481133 19.8938 0.735027 19.9994 1 20.0002C1.15524 20.0003 1.30835 19.964 1.447 19.8942L4.927 18.1542L7.445 19.8322C7.60923 19.9416 7.80216 20 7.9995 20C8.19684 20 8.38977 19.9416 8.554 19.8322L11.071 18.1542L14.552 19.8942C14.7045 19.9706 14.8739 20.0067 15.0443 19.9992C15.2146 19.9916 15.3802 19.9406 15.5253 19.851C15.6704 19.7614 15.7902 19.6362 15.8733 19.4873C15.9564 19.3384 16 19.1707 16 19.0002V1.00017C16 0.829715 15.9563 0.662102 15.8732 0.513307C15.79 0.364511 15.6702 0.239493 15.525 0.150167ZM11 8.00017H7.5C7.36739 8.00017 7.24021 8.05285 7.14645 8.14661C7.05268 8.24038 7 8.36756 7 8.50017C7 8.63278 7.05268 8.75995 7.14645 8.85372C7.24021 8.94749 7.36739 9.00017 7.5 9.00017H8.5C9.879 9.00017 11 10.1222 11 11.5002C11 12.7082 10.14 13.7172 9 13.9502V15.0002H7V14.0002H5V12.0002H8.5C8.63261 12.0002 8.75979 11.9475 8.85355 11.8537C8.94732 11.76 9 11.6328 9 11.5002C9 11.3676 8.94732 11.2404 8.85355 11.1466C8.75979 11.0528 8.63261 11.0002 8.5 11.0002H7.5C6.8372 10.9994 6.20178 10.7357 5.73311 10.2671C5.26444 9.79839 5.00079 9.16296 5 8.50017C5 7.29217 5.86 6.28317 7 6.05117V4.99917H9V5.99917H11V8.00017Z" fill="#717589"/>
+</svg></span><span class="toolbar__button" title="Тех подддержка"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M10.067 7H1.99805C0.895047 7 -0.00195312 7.897 -0.00195312 9V18C-0.00195312 19.103 0.895047 20 1.99805 20H2.99805V24L8.33105 20H14.998C16.101 20 16.998 19.103 16.998 18V13.931C15.2373 13.709 13.6005 12.9073 12.3456 11.6524C11.0907 10.3975 10.2891 8.76074 10.067 7Z" fill="#717589"/>
+<path d="M24 7V5H22.898C22.7691 4.37354 22.5202 3.77794 22.165 3.246L22.949 2.462L21.535 1.048L20.75 1.832C20.2195 1.47761 19.6252 1.22968 19 1.102V0H17V1.102C16.3741 1.23047 15.7788 1.47869 15.247 1.833L14.463 1.05L13.049 2.464L13.832 3.247C13.4783 3.7791 13.2301 4.37423 13.101 5H11.999V7H13.101C13.231 7.638 13.485 8.229 13.833 8.754L13.049 9.538L14.464 10.951L15.247 10.167C15.7789 10.5214 16.3741 10.77 17 10.899V12.001H19V10.898C19.6259 10.7687 20.2211 10.5202 20.753 10.166L21.537 10.949L22.95 9.534L22.166 8.752C22.5209 8.22076 22.7695 7.62579 22.898 7H24ZM17.999 8C17.7363 7.99993 17.4762 7.94812 17.2335 7.84753C16.9908 7.74693 16.7703 7.59952 16.5846 7.41371C16.3989 7.2279 16.2516 7.00733 16.1511 6.7646C16.0507 6.52186 15.999 6.26171 15.999 5.999C15.9991 5.73629 16.0509 5.47617 16.1515 5.23348C16.2521 4.99079 16.3995 4.7703 16.5853 4.58458C16.7711 4.39886 16.9917 4.25156 17.2345 4.15109C17.4772 4.05061 17.7373 3.99893 18 3.999C18.5306 3.999 19.0394 4.20977 19.4146 4.58493C19.7898 4.9601 20.0005 5.46893 20.0005 5.9995C20.0005 6.53007 19.7898 7.0389 19.4146 7.41407C19.0394 7.78923 18.5296 8 17.999 8Z" fill="#717589"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg></span><span class="toolbar__rounded-button toolbar__rounded-button_chat hidden-xl-up"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.998 0H2.99805C2.46761 0 1.95891 0.210714 1.58383 0.585786C1.20876 0.960859 0.998047 1.46957 0.998047 2V14C0.998047 14.5304 1.20876 15.0391 1.58383 15.4142C1.95891 15.7893 2.46761 16 2.99805 16H3.99805V20L7.99805 16H18.998C19.5285 16 20.0372 15.7893 20.4123 15.4142C20.7873 15.0391 20.998 14.5304 20.998 14V2C20.998 1.46957 20.7873 0.960859 20.4123 0.585786C20.0372 0.210714 19.5285 0 18.998 0ZM13.998 3.75C14.3209 3.76292 14.6263 3.90026 14.8501 4.13327C15.074 4.36628 15.199 4.67687 15.199 5C15.199 5.32313 15.074 5.63372 14.8501 5.86673C14.6263 6.09974 14.3209 6.23708 13.998 6.25C13.6752 6.23708 13.3698 6.09974 13.146 5.86673C12.9221 5.63372 12.7971 5.32313 12.7971 5C12.7971 4.67687 12.9221 4.36628 13.146 4.13327C13.3698 3.90026 13.6752 3.76292 13.998 3.75ZM7.99805 3.75C8.32092 3.76292 8.62626 3.90026 8.85013 4.13327C9.07401 4.36628 9.19904 4.67687 9.19904 5C9.19904 5.32313 9.07401 5.63372 8.85013 5.86673C8.62626 6.09974 8.32092 6.23708 7.99805 6.25C7.67518 6.23708 7.36983 6.09974 7.14596 5.86673C6.92209 5.63372 6.79706 5.32313 6.79706 5C6.79706 4.67687 6.92209 4.36628 7.14596 4.13327C7.36983 3.90026 7.67518 3.76292 7.99805 3.75ZM10.998 12C10.0259 11.9995 9.07493 11.7154 8.26178 11.1825C7.44863 10.6497 6.80857 9.89118 6.42005 9H15.576C15.1875 9.89118 14.5475 10.6497 13.7343 11.1825C12.9212 11.7154 11.9702 11.9995 10.998 12Z" fill="#422800"/>
+</svg></span></div>
+            <div class="soc-links toolbar__soc-links hidden-sm-down"><a class="soc-link soc-link_facebook" href="#"><i class="m-icon m-icon_facebook"></i></a><a class="soc-link soc-link_vk" href="#"><i class="m-icon m-icon_vk"></i></a></div>
+          </div>
+          <div class="m-chat active">
+            <div class="m-chat__header"><span class="m-chat__title">Чат</span>
+              <div class="m-chat__lang"><span class="m-chat__lang-option active"><i class="m-icon m-icon_rus"></i></span><span class="m-chat__lang-option"><i class="m-icon m-icon_eng"></i></span></div>
+              <div class="m-chat__counter"><span class="m-chat__counter-value">132</span></div>
+              <div class="chat-trigger hidden-xl-up"><i class="m-icon m-icon_cross"></i></div>
+            </div>
+            <div class="m-chat__stream-wrap">
+              <div class="m-chat__stream">
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Привет, парни, как вывести баланс?</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Так-то все супер, доволен как слон</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Привет, парни, как вывести баланс?</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Ты спрашиваешь, как вывести баланс? Это очень просто. Кликни на иконку слева</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Привет, парни, как вывести баланс?</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Так-то все супер, доволен как слон</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Привет, парни, как вывести баланс?</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Ты спрашиваешь, как вывести баланс? Это очень просто. Кликни на иконку слева</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Привет, парни, как вывести баланс?</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Так-то все супер, доволен как слон</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Привет, парни, как вывести баланс?</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Ты спрашиваешь, как вывести баланс? Это очень просто. Кликни на иконку слева</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Обалдеть, поднял 2к за 15 минут вчера. Попытаю удачу и сегодня</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Еееееееееееееееее!</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg m-chat__msg-user">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Не спами в чате</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Я сейчас сорвал куш в 130к, извините парни, эмоции выходят так, больше не буду)</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Так-то все супер, доволен как слон</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Еееее победа!</p>
+                  </div>
+                </div>
+                <div class="m-chat__msg">
+                  <div class="m-chat__msg-ava"><img src="./img/content/ava.png"></div>
+                  <div class="m-chat__msg-content"><span class="m-chat__msg-title">superplayer@gmail.com</span>
+                    <p class="m-chat__msg-text">Все класс)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="m-chat__form">
+              <input class="m-chat__input" type="text" placeholder="Ваше сообщение...">
+              <div class="m-chat__icons center-icon"><span class="m-chat__icons-trigger"><i class="m-icon m-icon_smile"></i></span>
+                <div class="m-chat__icons-emoji-wrap">
+                  <div class="m-chat__icons-emoji"><span style="background-image: url(&quot;./img/emoji/emoji-1.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-2.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-3.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-4.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-5.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-6.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-7.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-8.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-9.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-10.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-11.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-12.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-13.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-14.svg&quot;)"></span><span style="background-image: url(&quot;./img/emoji/emoji-15.svg&quot;)"></span>
+                  </div>
+                </div>
+              </div>
+              <button class="m-chat__submit center-icon" type="submit"><i class="m-icon m-icon_send"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="page-content"></div>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+    <div class="modals">
+      <div class="modal-overlay"></div>
+      <div class="modal" id="modal-login">
+        <div class="modal__content-wrap">
+          <div class="modal__header">
+            <div class="modal__icon center-icon"><i class="m-icon m-icon_login"></i></div><span class="modal__title">Вход</span>
+            <div class="modal__close"><i class="m-icon m-icon_cross"></i></div>
+          </div>
+          <div class="modal__content">
+            <p class="modal__text center-text">Войдите через соц. сети</p>
+            <div class="soc-buttons"><a class="soc-button soc-button_facebook" href="#"><i class="m-icon m-icon_facebook"></i>FACEBOOK</a><a class="soc-button soc-button_vk" href="#"><i class="m-icon m-icon_vk"></i>VKONTAKTE</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var scr = {
+        "scripts": [
+          // {"src": "js/libs.js", "async": false},
+          {"src": "js/main.min.js", "async": false}
+        ]
+      };
+      
+      (function(t, n, r) {
+      "use strict";
+        var c = function (t) {
+          if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+          for (var r = 0; r < t.length; r++) {
+            var c = n.createElement("script"), e = t[r];
+            c.src = e.src, c.async = e.async, n.body.appendChild(c)
+          }
+          return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+          c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+          c(r.scripts)
+        }) : t.onload = function () {
+          c(r.scripts)
+        }
+        }(window, document, scr));
+    </script>
+  </body>
+</html>
