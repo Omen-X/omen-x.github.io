@@ -141,11 +141,171 @@
               <p class="section-title">Оформление заказа</p>
               <p class="checkout-product-title">Ткань синтетическая ОКСФОРД 420 ПУ ПЛЮС</p>
               <form class="form-checkout">
-                <div class="radio-group">
-                  <input class="radio-group__input" checked type="radio" name="client-type" id="client-type-1" value="1">
-                  <label for="client-type-1">Частное лицо</label>
-                  <input class="radio-group__input" checked type="radio" name="client-type" id="client-type-2" value="1">
-                  <label for="client-type-2">Юридическое лицо</label>
+                <div class="product-tabs-wrap">
+                  <div class="product-tabs-nav">
+                    <div class="product-tabs">
+                      <div class="product-tab active"><span>Частное лицо</span></div>
+                      <div class="product-tab"><span>Юридическое лицо</span></div>
+                    </div>
+                  </div>
+                  <div class="product-tabs-content">
+                    <div class="product-tabs__block active">
+                      <div class="checkout-fields">
+                        <div class="form-field-wrap">
+                          <label>ФИО:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Телефон:</label>
+                          <input class="form-field" type="tel">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Почта:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                      </div>
+                      <div class="checkout-fields">
+                        <div class="form-field-wrap">
+                          <label>Способ доставки:</label>
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Транспортная компания</option>
+                              <option value="2">Самовывоз</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap">
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Транспортная компания 1</option>
+                              <option value="2">Транспортная компания 2</option>
+                            </select>
+                            <div class="select-placeholder"><span>Ввод другой компании</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-fields">
+                        <div class="form-field-wrap">
+                          <label>Название компании:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Адрес доставки:</label>
+                          <input class="form-field" type="text" placeholder="Страна, Город, Улица, Дом">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Способ оплаты:</label>
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Безналичная оплата</option>
+                              <option value="2">Наличные</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Реквизиты:</label>
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Банковская карта</option>
+                              <option value="2">Банковская карта 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Номер карты:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_comment">
+                          <label>Комментарий:</label>
+                          <textarea class="form-field"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-tabs__block">
+                      <div class="checkout-fields">
+                        <div class="form-field-wrap">
+                          <label>ФИО:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Название организации:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Телефон:</label>
+                          <input class="form-field" type="tel">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Почта:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                      </div>
+                      <div class="checkout-fields">
+                        <div class="form-field-wrap">
+                          <label>Способ доставки:</label>
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Транспортная компания</option>
+                              <option value="2">Самовывоз</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap">
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Транспортная компания 1</option>
+                              <option value="2">Транспортная компания 2</option>
+                            </select>
+                            <div class="select-placeholder"><span>Ввод другой компании</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-fields">
+                        <div class="form-field-wrap">
+                          <label>Название компании:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Адрес доставки:</label>
+                          <input class="form-field" type="text" placeholder="Страна, Город, Улица, Дом">
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Способ оплаты:</label>
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Безналичная оплата</option>
+                              <option value="2">Наличные</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Реквизиты:</label>
+                          <div class="select-wrap">
+                            <select class="select-main" name="">
+                              <option value="1">Банковская карта</option>
+                              <option value="2">Банковская карта 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap">
+                          <label>Номер карты:</label>
+                          <input class="form-field" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_comment">
+                          <label>Комментарий:</label>
+                          <textarea class="form-field"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculator-total">
+                  <p class="calculator-total__title">Итог:</p>
+                  <p class="calculator-total__value">150 000 руб</p>
+                  <div class="calculator-total__buttons">
+                    <button class="btn-main">Оформить</button>
+                    <button class="btn-main btn-main_white">Продолжить покупки</button>
+                  </div>
                 </div>
               </form>
             </div>
