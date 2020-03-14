@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Content">
-    <title>Acom</title>
+    <title>Acom</title><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
@@ -21,7 +21,7 @@
         <div class="logo header__logo"><a class="logo__link" href="./index.html">ООО &laquo;Альянс Коммуникации&raquo;</a></div>
         <div class="header__contacts hidden-sm-down">
           <div class="contact-block"><span class="contact-block__icon"><i class="m-icon m-icon_mail"></i></span><span class="contact-block__text">info@a-com.tv</span><span class="contact-block__btn">Написать нам</span></div>
-          <div class="contact-block"><span class="contact-block__icon"><i class="m-icon m-icon_phone"></i></span><span class="contact-block__text">(34535) 3-49-85</span><span class="contact-block__btn">Заказать звонок</span></div>
+          <div class="contact-block"><span class="contact-block__icon"><i class="m-icon m-icon_phone"></i></span><span class="contact-block__text">(34535) 3-49-85</span><span class="contact-block__btn modal-trigger" data-target-modal-id="form-modal-callback">Заказать звонок</span></div>
         </div>
         <div class="header__soc-links hidden-xs-down"><a class="soc-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13"><g><g clip-path="url(#clip-455ae9f4-3357-4c0d-841f-c3c9528f4289)"><path fill="#fff" d="M17.426 7.4c-.34-.43-.242-.62 0-1.003.005-.005 2.807-3.878 3.096-5.19l.002-.002c.143-.478 0-.83-.694-.83h-2.296c-.585 0-.854.302-.999.64 0 0-1.169 2.798-2.822 4.612-.534.524-.78.692-1.072.692-.144 0-.367-.168-.367-.647V1.205c0-.574-.164-.83-.647-.83h-3.61c-.367 0-.585.268-.585.517 0 .544.827.67.912 2.2v3.323c0 .728-.132.862-.425.862-.78 0-2.675-2.81-3.798-6.025C3.895.628 3.673.376 3.084.376H.788C.132.376 0 .678 0 1.016c0 .596.78 3.563 3.63 7.483 1.898 2.676 4.573 4.126 7.005 4.126 1.462 0 1.64-.322 1.64-.876 0-2.557-.131-2.798.601-2.798.34 0 .924.168 2.29 1.459 1.56 1.53 1.816 2.215 2.689 2.215h2.296c.655 0 .986-.322.795-.957-.436-1.336-3.387-4.085-3.52-4.268z"/></g></g></svg></a><a class="soc-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21"><g><g clip-path="url(#clip-e198bbaa-7b35-4fa9-a9ce-ffde445df61d)"><g><path fill="#fff" d="M.132 11.27c-.537 1.055.072 1.559 1.462 2.42 1.18.73 2.813.996 3.86 1.103l-.878.845c-1.245 1.186-2.426 2.334-3.252 3.129-1.202 1.152.733 3.001 1.935 1.873l3.252-3.136c1.245 1.197 2.439 2.345 3.252 3.14 1.202 1.133 3.137-.7 1.948-1.873l-3.252-3.128-.891-.846c1.061-.106 2.669-.389 3.836-1.103h-.001c1.39-.866 1.998-1.37 1.47-2.424-.32-.598-1.18-1.099-2.327-.233 0 0-1.547 1.185-4.044 1.185s-4.044-1.185-4.044-1.185c-1.146-.87-2.01-.365-2.326.233z"/></g><g><path fill="#fff" d="M6.5 2.694c1.495 0 2.715 1.173 2.715 2.624 0 1.438-1.22 2.612-2.715 2.612-1.496 0-2.715-1.174-2.715-2.612C3.784 3.866 5.003 2.694 6.5 2.694zm0 7.93c3.043 0 5.528-2.378 5.528-5.306C12.028 2.378 9.543 0 6.5 0 3.456 0 .97 2.378.97 5.318c0 2.928 2.486 5.306 5.53 5.306z"/></g></g></g></svg></a></div>
         <div class="mob-nav hidden-tb-up">
@@ -40,7 +40,7 @@
             <div class="mob-nav__soc-links hidden-sm-up"><a class="soc-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13"><g><g clip-path="url(#clip-455ae9f4-3357-4c0d-841f-c3c9528f4289)"><path fill="#fff" d="M17.426 7.4c-.34-.43-.242-.62 0-1.003.005-.005 2.807-3.878 3.096-5.19l.002-.002c.143-.478 0-.83-.694-.83h-2.296c-.585 0-.854.302-.999.64 0 0-1.169 2.798-2.822 4.612-.534.524-.78.692-1.072.692-.144 0-.367-.168-.367-.647V1.205c0-.574-.164-.83-.647-.83h-3.61c-.367 0-.585.268-.585.517 0 .544.827.67.912 2.2v3.323c0 .728-.132.862-.425.862-.78 0-2.675-2.81-3.798-6.025C3.895.628 3.673.376 3.084.376H.788C.132.376 0 .678 0 1.016c0 .596.78 3.563 3.63 7.483 1.898 2.676 4.573 4.126 7.005 4.126 1.462 0 1.64-.322 1.64-.876 0-2.557-.131-2.798.601-2.798.34 0 .924.168 2.29 1.459 1.56 1.53 1.816 2.215 2.689 2.215h2.296c.655 0 .986-.322.795-.957-.436-1.336-3.387-4.085-3.52-4.268z"/></g></g></svg></a><a class="soc-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21"><g><g clip-path="url(#clip-e198bbaa-7b35-4fa9-a9ce-ffde445df61d)"><g><path fill="#fff" d="M.132 11.27c-.537 1.055.072 1.559 1.462 2.42 1.18.73 2.813.996 3.86 1.103l-.878.845c-1.245 1.186-2.426 2.334-3.252 3.129-1.202 1.152.733 3.001 1.935 1.873l3.252-3.136c1.245 1.197 2.439 2.345 3.252 3.14 1.202 1.133 3.137-.7 1.948-1.873l-3.252-3.128-.891-.846c1.061-.106 2.669-.389 3.836-1.103h-.001c1.39-.866 1.998-1.37 1.47-2.424-.32-.598-1.18-1.099-2.327-.233 0 0-1.547 1.185-4.044 1.185s-4.044-1.185-4.044-1.185c-1.146-.87-2.01-.365-2.326.233z"/></g><g><path fill="#fff" d="M6.5 2.694c1.495 0 2.715 1.173 2.715 2.624 0 1.438-1.22 2.612-2.715 2.612-1.496 0-2.715-1.174-2.715-2.612C3.784 3.866 5.003 2.694 6.5 2.694zm0 7.93c3.043 0 5.528-2.378 5.528-5.306C12.028 2.378 9.543 0 6.5 0 3.456 0 .97 2.378.97 5.318c0 2.928 2.486 5.306 5.53 5.306z"/></g></g></g></svg></a></div>
             <div class="mob-nav__contacts">
               <div class="contact-block"><span class="contact-block__icon"><i class="m-icon m-icon_mail"></i></span><span class="contact-block__text">info@a-com.tv</span><span class="contact-block__btn">Написать нам</span></div>
-              <div class="contact-block"><span class="contact-block__icon"><i class="m-icon m-icon_phone"></i></span><span class="contact-block__text">(34535) 3-49-85</span><span class="contact-block__btn">Заказать звонок</span></div>
+              <div class="contact-block"><span class="contact-block__icon"><i class="m-icon m-icon_phone"></i></span><span class="contact-block__text">(34535) 3-49-85</span><span class="contact-block__btn modal-trigger" data-target-modal-id="form-modal-callback">Заказать звонок</span></div>
             </div>
           </div>
         </div>
@@ -49,8 +49,7 @@
     <main>
       <section>
         <div class="main-carousel-wrap">
-          <div class="main-carousel__menu hidden-sm-down"><span class="main-carousel__menu-btn">
-               Меню<i class="m-icon m-icon_menu"></i><i class="m-icon m-icon_close"></i></span>
+          <div class="main-carousel__menu hidden-sm-down"><span class="main-carousel__menu-btn">Меню<i class="m-icon m-icon_menu"></i><i class="m-icon m-icon_close"></i></span>
             <div class="main-carousel__menu-list"><a href="#">Интернет</a><a href="#">Телевидение</a><a href="#">Абонентам</a><a href="#">Оплатить</a><a href="#">Контакты</a></div>
           </div>
           <div class="main-carousel__counter">
@@ -88,8 +87,8 @@
                 </div>
                 <div class="product-text-block">
                   <p>SNR-CPE-W4N (rev.M), ПО Wive-NG-mt - это обновленная версия Wi-Fi роутера SNR-CPE-W4N</p>
-                  <p>Предназначен для проводного и беспроводного (по технологии wi fi) подключения домашних пользователей и малых офисов. </p>
-                  <p>Выполненный на базе оптимального для SOHO роутеров чипа MT7620N, маршрутизатор обладает высокой пропускной способностью, обеспечивает работу (в том числе туннельных протоколов L2TP и PPPoE) на скорости интерфейса без потерь производительности, вызванных загрузкой процессора. Wi fi роутер SNR-CPE-W4N (rev.M) поставляется с предустановленным ПО Wive-NG-mt , разработанным и оптимизированным под используемую аппаратную базу. Wive-NG-mt является российской разработкой, что обеспечивает универсальность и соответствие всем требованиям при использовании в операторских сетях с различной топологией. </p>
+                  <p>Предназначен для проводного и беспроводного (по технологии wi fi) подключения домашних пользователей и малых офисов.</p>
+                  <p>Выполненный на базе оптимального для SOHO роутеров чипа MT7620N, маршрутизатор обладает высокой пропускной способностью, обеспечивает работу (в том числе туннельных протоколов L2TP и PPPoE) на скорости интерфейса без потерь производительности, вызванных загрузкой процессора. Wi fi роутер SNR-CPE-W4N (rev.M) поставляется с предустановленным ПО Wive-NG-mt , разработанным и оптимизированным под используемую аппаратную базу. Wive-NG-mt является российской разработкой, что обеспечивает универсальность и соответствие всем требованиям при использовании в операторских сетях с различной топологией.</p>
                 </div>
               </div>
             </div>
@@ -106,7 +105,7 @@
                     <p>Медиаконвертер предназначен для преобразования 100Base-FX / 100Base-T. Оптический интерфейс: встроенный WDM трансивер 1x9 (SC-коннектор), Tx/Rx: 1310/1550нм (20км), медный: RJ45 (до 100м).</p>
                   </div>
                 </div>
-                <div class="product-info__offer news-offer news-offer_half-width" style="background-image: url(&quot;./img/content/offer-2.jpg&quot;)">
+                <div class="product-info__offer news-offer news-offer_half-width" style="background-image: url(&quot;./img/decor/add_equipment.jpg&quot;)">
                   <div class="news-offer__content">
                     <p class="news-offer__title">СКИДКИ НА ТАРИФЫ</p>
                     <p class="news-offer__sub-title">Успей купить до 1 февраля!</p>
@@ -165,6 +164,50 @@
         </div>
       </div>
     </footer>
+    <div class="modals">
+      <div class="modal-wrap" id="form-modal-callback">
+        <div class="modal-overlay"></div>
+        <form class="form-modal">
+          <div class="form-modal-content-wrap">
+            <div class="modal-close"><i class="m-icon m-icon_close-dark"></i></div>
+            <p class="form-modal__title">ПРИСОЕДИНЯЙСЯ К НАМ:</p>
+            <div class="form-modal__content">
+              <div class="form__row">
+                <div class="form__field-wrap">
+                  <input class="form__field" type="text" name="name" required><span class="form__field-placeholder">Ваше имя</span>
+                </div>
+                <div class="form__field-wrap">
+                  <select class="select-main" name="main-service" required>
+                    <option value="1">Интернет</option>
+                    <option value="2">Телевидение</option>
+                  </select><span class="form__field-placeholder">Выбрать услугу</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field-wrap">
+                  <input class="form__field" type="tel" name="phone" required><span class="form__field-placeholder">Ваш телефон</span>
+                </div>
+                <div class="form__field-wrap">
+                  <input class="form__field" type="text" name="address" required><span class="form__field-placeholder">Ваш адрес</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field-wrap">
+                  <input class="form__field" type="email" name="email" required><span class="form__field-placeholder">Ваш e-mail</span>
+                </div>
+                <div class="form__field-wrap">
+                  <input class="form__field" type="text" name="information"><span class="form__field-placeholder">Доп. информация</span>
+                </div>
+              </div>
+              <div class="form__submit center-content">
+                <button class="btn-main"><span>ОТПРАВИТЬ</span></button>
+              </div>
+              <p class="form__agreement"><span>Нажимая "отправить", Вы соглашаетесь с нашей</span><a href="#">политикой конфиденциальности</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script>
       var scr = {
         "scripts": [
