@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>CreditShop</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+      
+    </script>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="header__content"><a class="logo" href="./index.html"><img src="./img/decor/logo.png" alt="CreditShop"></a><a class="link-dotted header__map-link hidden-xs-down" href="#"><span class="link-dotted__icon"><svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M5.5 0C2.4673 0 0 2.36566 0 5.27344C0 6.25588 0.283831 7.21465 0.820997 8.04645L5.18693 14.7923C5.27056 14.9215 5.4179 15 5.57636 15C5.57758 15 5.57877 15 5.57999 15C5.73983 14.9988 5.88748 14.9179 5.96958 14.7864L10.2242 7.9752C10.7318 7.16098 11 6.22673 11 5.27344C11 2.36566 8.5327 0 5.5 0ZM9.43757 7.52396L5.56942 13.7164L1.6001 7.58338C1.15298 6.89104 0.910556 6.09229 0.910556 5.27344C0.910556 2.85029 2.97275 0.873047 5.5 0.873047C8.02725 0.873047 10.0864 2.85029 10.0864 5.27344C10.0864 6.068 9.85994 6.84633 9.43757 7.52396Z" fill="#131B21"/>
+<path d="M5.5 2.63672C3.98365 2.63672 2.75 3.81955 2.75 5.27344C2.75 6.71804 3.96358 7.91016 5.5 7.91016C7.05537 7.91016 8.25 6.70216 8.25 5.27344C8.25 3.81955 7.01635 2.63672 5.5 2.63672ZM5.5 7.03711C4.48381 7.03711 3.66056 6.24513 3.66056 5.27344C3.66056 4.30418 4.4891 3.50977 5.5 3.50977C6.5109 3.50977 7.33639 4.30418 7.33639 5.27344C7.33639 6.23095 6.53229 7.03711 5.5 7.03711Z" fill="#131B21"/>
+</g>
+</svg></span><span>Санкт-Петербург</span></a>
+          <nav class="m-nav">
+            <div class="m-nav__overlay"></div>
+            <div class="m-nav__content">
+              <div class="m-nav__close hidden-lg-up"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0395 1.15918L18.8778 0L10.0197 8.84112L1.1617 0L0 1.15918L8.85804 10.0004L0 18.8409L1.1617 20L10.0197 11.1595L18.8778 20L20.0395 18.8409L11.1808 10.0004L20.0395 1.15918Z" fill="rgba(255,255,255,.7)"/>
+</svg>
+              </div>
+              <div class="m-nav__links"><a href="#">Кредиты</a><a href="#">Ипотека</a><a href="#">Вклады</a><a href="#">Займы</a><a href="#">Банки</a><a href="#">Еще</a></div>
+              <div class="m-nav__contacts hidden-sm-up"><a class="m-nav__contact" href="./index.html"><span class="link-dotted__icon"><svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M5.5 0C2.4673 0 0 2.36566 0 5.27344C0 6.25588 0.283831 7.21465 0.820997 8.04645L5.18693 14.7923C5.27056 14.9215 5.4179 15 5.57636 15C5.57758 15 5.57877 15 5.57999 15C5.73983 14.9988 5.88748 14.9179 5.96958 14.7864L10.2242 7.9752C10.7318 7.16098 11 6.22673 11 5.27344C11 2.36566 8.5327 0 5.5 0ZM9.43757 7.52396L5.56942 13.7164L1.6001 7.58338C1.15298 6.89104 0.910556 6.09229 0.910556 5.27344C0.910556 2.85029 2.97275 0.873047 5.5 0.873047C8.02725 0.873047 10.0864 2.85029 10.0864 5.27344C10.0864 6.068 9.85994 6.84633 9.43757 7.52396Z" fill="#131B21"/>
+<path d="M5.5 2.63672C3.98365 2.63672 2.75 3.81955 2.75 5.27344C2.75 6.71804 3.96358 7.91016 5.5 7.91016C7.05537 7.91016 8.25 6.70216 8.25 5.27344C8.25 3.81955 7.01635 2.63672 5.5 2.63672ZM5.5 7.03711C4.48381 7.03711 3.66056 6.24513 3.66056 5.27344C3.66056 4.30418 4.4891 3.50977 5.5 3.50977C6.5109 3.50977 7.33639 4.30418 7.33639 5.27344C7.33639 6.23095 6.53229 7.03711 5.5 7.03711Z" fill="#131B21"/>
+</g>
+</svg></span><span>Санкт-Петербург</span></a></div>
+              <div class="m-nav__logo hidden-lg-up"><a class="logo" href="#"><img src="./img/decor/logo_gray.svg" alt="CreditShop"></a></div>
+            </div>
+          </nav>
+          <div class="header__buttons"><a class="link-icon" href="#"><svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.35" d="M12.1429 12.7003C12.1429 13.3897 11.9436 13.981 11.5452 14.4743C11.1531 14.9676 10.6788 15.2143 10.1222 15.2143H2.02065C1.4641 15.2143 0.986607 14.9676 0.58817 14.4743C0.196057 13.981 0 13.3897 0 12.7003C0 12.1628 0.0252976 11.6568 0.0758929 11.1825C0.132813 10.7018 0.234003 10.2212 0.379464 9.74051C0.524926 9.25353 0.708333 8.83929 0.929688 8.49777C1.15737 8.14993 1.45461 7.86849 1.82143 7.65346C2.19457 7.43211 2.62147 7.32143 3.10212 7.32143C3.93062 8.13095 4.92039 8.53571 6.07143 8.53571C7.22247 8.53571 8.21224 8.13095 9.04074 7.32143C9.52139 7.32143 9.94513 7.43211 10.3119 7.65346C10.6851 7.86849 10.9823 8.14993 11.2037 8.49777C11.4314 8.83929 11.6179 9.25353 11.7634 9.74051C11.9089 10.2212 12.0069 10.7018 12.0575 11.1825C12.1144 11.6568 12.1429 12.1628 12.1429 12.7003ZM8.6423 1.71484C9.35696 2.42318 9.71429 3.28013 9.71429 4.28571C9.71429 5.29129 9.35696 6.15141 8.6423 6.86607C7.93397 7.5744 7.07701 7.92857 6.07143 7.92857C5.06585 7.92857 4.20573 7.5744 3.49107 6.86607C2.78274 6.15141 2.42857 5.29129 2.42857 4.28571C2.42857 3.28013 2.78274 2.42318 3.49107 1.71484C4.20573 1.00019 5.06585 0.642856 6.07143 0.642856C7.07701 0.642856 7.93397 1.00019 8.6423 1.71484Z" fill="#131B21"/>
+</svg></a><span class="search-trigger link-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.35" d="M9.67634 10.3287C10.5112 9.49386 10.9286 8.49144 10.9286 7.32143C10.9286 6.15141 10.5112 5.15216 9.67634 4.32366C8.84784 3.48884 7.84859 3.07143 6.67857 3.07143C5.50856 3.07143 4.50614 3.48884 3.67132 4.32366C2.84282 5.15216 2.42857 6.15141 2.42857 7.32143C2.42857 8.49144 2.84282 9.49386 3.67132 10.3287C4.50614 11.1572 5.50856 11.5714 6.67857 11.5714C7.84859 11.5714 8.84784 11.1572 9.67634 10.3287ZM15.7857 15.2143C15.7857 15.5432 15.6656 15.8278 15.4252 16.0681C15.1849 16.3084 14.9003 16.4286 14.5714 16.4286C14.2299 16.4286 13.9453 16.3084 13.7176 16.0681L10.4637 12.8237C9.33166 13.6079 8.06994 14 6.67857 14C5.77418 14 4.90774 13.8261 4.07924 13.4782C3.25707 13.1241 2.54557 12.6497 1.94475 12.0552C1.35026 11.4544 0.87593 10.7429 0.521763 9.92076C0.173921 9.09226 0 8.22582 0 7.32143C0 6.41704 0.173921 5.55376 0.521763 4.73158C0.87593 3.90309 1.35026 3.19159 1.94475 2.5971C2.54557 1.99628 3.25707 1.52195 4.07924 1.17411C4.90774 0.81994 5.77418 0.642856 6.67857 0.642856C7.58296 0.642856 8.44624 0.81994 9.26842 1.17411C10.0969 1.52195 10.8084 1.99628 11.4029 2.5971C12.0037 3.19159 12.4781 3.90309 12.8259 4.73158C13.1801 5.55376 13.3571 6.41704 13.3571 7.32143C13.3571 8.7128 12.965 9.97452 12.1808 11.1066L15.4347 14.3605C15.6687 14.5945 15.7857 14.8791 15.7857 15.2143Z" fill="#131B21"/>
+</svg></span>
+            <div class="m-nav-trigger hidden-lg-up"><span class="m-icon-menu"></span></div>
+          </div>
+          <div class="search">
+            <form class="form search-form">
+              <input class="form-field search-form__input" type="text" name="search" placeholder="Поиск по сайту" autocomplete="off">
+              <button class="search-form__submit clean-button icon-link" type="submit"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3839 11.6808C12.3661 10.6987 12.8571 9.51934 12.8571 8.14286C12.8571 6.76637 12.3661 5.59077 11.3839 4.61607C10.4092 3.63393 9.23363 3.14286 7.85714 3.14286C6.48066 3.14286 5.30134 3.63393 4.3192 4.61607C3.34449 5.59077 2.85714 6.76637 2.85714 8.14286C2.85714 9.51934 3.34449 10.6987 4.3192 11.6808C5.30134 12.6555 6.48066 13.1429 7.85714 13.1429C9.23363 13.1429 10.4092 12.6555 11.3839 11.6808ZM18.5714 17.4286C18.5714 17.8155 18.4301 18.1503 18.1473 18.433C17.8646 18.7158 17.5298 18.8571 17.1429 18.8571C16.7411 18.8571 16.4063 18.7158 16.1384 18.433L12.3103 14.6161C10.9784 15.5387 9.49405 16 7.85714 16C6.79316 16 5.77381 15.7954 4.79911 15.3862C3.83185 14.9695 2.99479 14.4115 2.28795 13.7121C1.58854 13.0052 1.03051 12.1682 0.613839 11.2009C0.204613 10.2262 0 9.20684 0 8.14286C0 7.07887 0.204613 6.06324 0.613839 5.09598C1.03051 4.12128 1.58854 3.28423 2.28795 2.58482C2.99479 1.87798 3.83185 1.31994 4.79911 0.910713C5.77381 0.494047 6.79316 0.285713 7.85714 0.285713C8.92113 0.285713 9.93676 0.494047 10.904 0.910713C11.8787 1.31994 12.7158 1.87798 13.4152 2.58482C14.122 3.28423 14.6801 4.12128 15.0893 5.09598C15.506 6.06324 15.7143 7.07887 15.7143 8.14286C15.7143 9.77976 15.253 11.2641 14.3304 12.596L18.1585 16.4241C18.4338 16.6994 18.5714 17.0342 18.5714 17.4286Z" fill="#131B21"/>
+</svg>
+              </button>
+              <div class="dropdown-list search__results">
+                <div class="dropdown-list__item"><span class="c-blue">Ипотека</span><span>- Инвест</span></div>
+                <div class="dropdown-list__item"><span class="c-blue">Ипотека</span><span>Сбербанк</span></div>
+                <div class="dropdown-list__item"><span>Гпб</span><span class="c-blue">Ипотека</span></div>
+              </div>
+            </form>
+            <div class="search__close icon-link"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0395 1.15918L18.8778 0L10.0197 8.84112L1.1617 0L0 1.15918L8.85804 10.0004L0 18.8409L1.1617 20L10.0197 11.1595L18.8778 20L20.0395 18.8409L11.1808 10.0004L20.0395 1.15918Z" fill="#131B21"/>
+</svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-master">
+        <div class="content-wrap">
+          <div class="master-wrap">
+            <div class="master" data-stage="">
+              <div class="section-title-wrap">
+                <p class="section-title">Мастер подбора ипотеки</p>
+                <p class="section-title master__verification-title">Проверка номера телефона</p>
+              </div>
+              <div class="master__progress">
+                <div class="master__progress-item active"></div>
+                <div class="master__progress-item"></div>
+                <div class="master__progress-item"></div>
+                <div class="master__progress-item"></div>
+              </div>
+              <div class="master__stages">
+                <div class="master__stage active">
+                  <form class="master-form">
+                    <div class="master-form__block">
+                      <p class="master-form__title">Основная информация</p>
+                      <div class="form-fields master-form__fields">
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Сумма кредита</span>
+                          <input class="form-field form-field_range masked-number" name="credit-amount" type="text" required placeholder="Выберите сумму" autocomplete="off" data-min-value="100" data-max-value="10e5" data-curr-value="1000">
+                          <div class="form-field-range">
+                            <input class="js-range-slider" type="text">
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Первоначальный взнос</span>
+                          <input class="form-field form-field_range masked-number" name="credit-ante" type="text" required placeholder="Выберите сумму" autocomplete="off" data-min-value="100" data-max-value="10e5" data-curr-value="1000">
+                          <div class="form-field-range">
+                            <input class="js-range-slider" type="text">
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Объект</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="credit-object" required value="">
+                              <option value="1">Покупка авто</option>
+                              <option value="2">Оплата обучения</option>
+                              <option value="3">Развитие бизнеса</option>
+                            </select>
+                            <div class="select-placeholder"><span>Выберите объект</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Фамилия</span>
+                          <input class="form-field" name="client-family-name" required placeholder="Ваша фамилия" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Имя</span>
+                          <input class="form-field" name="client-first-name" required placeholder="Ваше имя" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Отчество</span>
+                          <input class="form-field" name="client-third-name" required placeholder="Ваше отчество" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Город проживания</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-home-city" required>
+                              <option value="1">Москва</option>
+                              <option value="2">Санкт-Петербург</option>
+                              <option value="3">Вологда</option>
+                              <option value="4">Челябинск</option>
+                              <option value="5">Нижний Новгород</option>
+                              <option value="6">Казань</option>
+                              <option value="7">Волгоград</option>
+                              <option value="8">Москва</option>
+                              <option value="9">Санкт-Петербург</option>
+                              <option value="10">Вологда</option>
+                              <option value="11">Челябинск</option>
+                              <option value="12">Нижний Новгород</option>
+                              <option value="13">Казань</option>
+                              <option value="14">Волгоград</option>
+                              <option value="15">Москва</option>
+                              <option value="16">Санкт-Петербург</option>
+                              <option value="17">Вологда</option>
+                              <option value="18">Челябинск</option>
+                              <option value="19">Нижний Новгород</option>
+                              <option value="20">Казань</option>
+                            </select>
+                            <div class="select-placeholder"><span>Город</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Телефон</span>
+                          <input class="form-field masked-phone" name="client-phone" required type="text" placeholder="+7(___) ___ __ __">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">E-mail</span>
+                          <input class="form-field" name="client-email" required type="email" placeholder="Ваш e-mail">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="master-form__nav">
+                      <div class="form-agreement">
+                        <div class="form-checkbox">
+                          <input class="form-field-checkbox" id="master-agreement-rules" type="checkbox" required name="client-rules-agreement" checked>
+                          <label for="master-agreement-rules"><span>Согласен с</span><a href="#">Правилами предоставления информации</a></label>
+                        </div>
+                      </div>
+                      <div class="master-form__buttons">
+                        <button class="button-form master-form__next-btn">Далее</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="master__stage">
+                  <form class="master-form">
+                    <div class="master-form__block">
+                      <p class="master-form__title">Дополнительная информация</p>
+                      <div class="form-fields master-form__fields">
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Доходы</span>
+                          <input class="form-field form-field_range masked-number" name="client-salary" type="text" required placeholder="Сумма дохода в мес." autocomplete="off" data-min-value="1000" data-max-value="500000" data-curr-value="1000">
+                          <div class="form-field-range">
+                            <input class="js-range-slider" type="text">
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Работа</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-job-scope" required>
+                              <option value="1">Частное образование</option>
+                              <option value="2">Строительство</option>
+                              <option value="3">Предприниматель</option>
+                            </select>
+                            <div class="select-placeholder"><span>Выберите сферу</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Стаж</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-job-exp" required>
+                              <option value="1">1 год</option>
+                              <option value="2">2 года</option>
+                              <option value="3">3 года</option>
+                            </select>
+                            <div class="select-placeholder"><span>Полных лет, месяцев</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Расходы по кредитам</span>
+                          <input class="form-field form-field_range masked-number" name="client-credit-charges" type="text" required placeholder="Сумма в мес." autocomplete="off" data-min-value="100" data-max-value="100000" data-curr-value="100">
+                          <div class="form-field-range">
+                            <input class="js-range-slider" type="text">
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Кредитная история</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-credit-score" required>
+                              <option value="1">Кредитная история 1</option>
+                              <option value="2">Кредитная история 2</option>
+                              <option value="3">Кредитная история 3</option>
+                            </select>
+                            <div class="select-placeholder"><span>Выберите вариант</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Образование</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-education" required>
+                              <option value="1">Среднее общее</option>
+                              <option value="2">Профессиональное</option>
+                              <option value="3">Высшее</option>
+                            </select>
+                            <div class="select-placeholder"><span>Выберите образование</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Наличие недвижимости</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-property" required>
+                              <option value="1">Да</option>
+                              <option value="2">Нет</option>
+                            </select>
+                            <div class="select-placeholder"><span>Выберите вариант</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Наличие автомобиля</span>
+                          <div class="select-wrap form-field">
+                            <select class="select-main" name="client-car" required>
+                              <option value="1">Да</option>
+                              <option value="2">Нет</option>
+                            </select>
+                            <div class="select-placeholder"><span>Выберите вариант</span></div>
+                          </div>
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Аренда жилья</span>
+                          <input class="form-field form-field_range masked-number" name="client-rent" type="text" required placeholder="Сумма в мес." autocomplete="off" data-min-value="1000" data-max-value="80000" data-curr-value="1000">
+                          <div class="form-field-range">
+                            <input class="js-range-slider" type="text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="master-form__nav">
+                        <div class="master-form__buttons">
+                          <button class="button-form button-form_transparent master-form__prev-btn">Назад</button>
+                          <button class="button-form master-form__next-btn">Далее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="master__stage">
+                  <form class="master-form">
+                    <div class="master-form__block">
+                      <p class="master-form__title">Паспортные данные</p>
+                      <div class="form-fields master-form__fields">
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Дата рождения</span>
+                          <input class="form-field form-field_datepicker" name="client-birthday" readonly required placeholder="Дата рождения" autocomplete="off" data-start-date="1/1/1900" data-end-date="today">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Место рождения</span>
+                          <input class="form-field" name="client-home-city" required placeholder="Город, село и тд." type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Серия и № паспорта</span>
+                          <input class="form-field masked-passport" name="client-passport-number" required placeholder="____ ___ ___" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Дата выдачи паспорта</span>
+                          <input class="form-field form-field_datepicker" name="client-passport-date" readonly required placeholder="Дата выдачи" autocomplete="off" data-start-date="1/1/1900" data-end-date="today">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Код подразделения</span>
+                          <input class="form-field masked-passport-code" name="client-passport-code" required placeholder="___ ___" type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_100"><span class="form-label">Кем выдан</span>
+                          <input class="form-field" name="client-passport-department" required placeholder="Наименование выдавшего органа, как в паспорте" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="master-form__block">
+                      <p class="master-form__title">Адрес регистрации</p>
+                      <div class="form-fields mastet-form__fields">
+                        <div class="form-field-wrap form-field-wrap_66"><span class="form-label">Населенный пунт</span>
+                          <input class="form-field" name="client-reg-city" required placeholder="Город, село и тд." type="text">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_16"><span class="form-label">Дом</span>
+                          <input class="form-field" name="client-reg-home" required placeholder="№ дома" type="number">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_16"><span class="form-label">Квартира</span>
+                          <input class="form-field" name="client-reg-apartment" required placeholder="№ кв." type="number">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Дата регистрации</span>
+                          <input class="form-field form-field_datepicker" name="client-reg-date" readonly required placeholder="Дата регистрации" autocomplete="off" data-start-date="1/1/1900" data-end-date="today">
+                        </div>
+                        <div class="form-field-wrap form-field-wrap_33"><span class="form-label">Телефон (н/o)</span>
+                          <input class="form-field masked-phone" name="client-reg-phone" type="text" placeholder="+7(___) ___ __ __">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="master-form__nav">
+                      <div class="form-agreement">
+                        <div class="form-checkbox">
+                          <input class="form-field-checkbox" id="master-agreement-reg" type="checkbox" name="client-reg-agreement" required checked>
+                          <label for="master-agreement-reg"><span>Адрес проживания совпадает с адресом регистрации</span></label>
+                        </div>
+                      </div>
+                      <div class="master-form__buttons">
+                        <button class="button-form button-form_transparent master-form__prev-btn">Назад</button>
+                        <button class="button-form master-form__next-btn">Далее</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="master__stage" data-stage-id="verification">
+                  <div class="master-verification">
+                    <div class="master-verification__img"><img src="./img/decor/phone-check.svg"></div>
+                    <div class="master-verification__content">
+                      <p class="master-verification__text">Подтвердите номер телефона, и получите доступ к  кредитному рейтингу и кредитным предложениям с самой высокой вероятностью одобрения:</p>
+                      <form class="form verification-form" action="">
+                        <p class="verification-form__desc">Код, который был отправлен вам в SMS</p>
+                        <div class="form-fields">
+                          <div class="form-field-wrap form-field-wrap_25">
+                            <input class="form-field masked-single-digit" type="number">
+                          </div>
+                          <div class="form-field-wrap form-field-wrap_25">
+                            <input class="form-field masked-single-digit" type="number">
+                          </div>
+                          <div class="form-field-wrap form-field-wrap_25">
+                            <input class="form-field masked-single-digit" type="number">
+                          </div>
+                          <div class="form-field-wrap form-field-wrap_25">
+                            <input class="form-field masked-single-digit" type="number">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="master-loader hidden">
+              <div class="master-loader__img"><div id="floatingCirclesG">
+<div class="f_circleG" id="frotateG_01"></div>
+<div class="f_circleG" id="frotateG_02"></div>
+<div class="f_circleG" id="frotateG_03"></div>
+<div class="f_circleG" id="frotateG_04"></div>
+<div class="f_circleG" id="frotateG_05"></div>
+<div class="f_circleG" id="frotateG_06"></div>
+<div class="f_circleG" id="frotateG_07"></div>
+<div class="f_circleG" id="frotateG_08"></div>
+</div>
+              </div>
+              <p class="master-loader__title">Подождите</p>
+              <p class="master-loader__text">Подбираем лучшие предложения</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer_narrow">
+      <div class="footer__top">
+        <div class="content-wrap">
+          <div class="footer__top-content"><a class="logo" href="./index.html"><img src="./img/decor/logo_gray.png" alt="CreditShop"></a>
+            <div class="footer-rights">
+              <p>&copy;&nbsp;2020&nbsp;ООО &laquo;Кредитшоп&raquo;</p>
+            </div>
+            <div class="soc-links"><a class="soc-link" href="#"><svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.6139 3.09869C1.6139 3.5019 1.6139 5.30158 1.6139 5.30158H0V7.99528H1.6139V16H4.92921V7.9955H7.15393C7.15393 7.9955 7.36229 6.70389 7.46328 5.29165C7.17372 5.29165 4.94175 5.29165 4.94175 5.29165C4.94175 5.29165 4.94175 3.72454 4.94175 3.44985C4.94175 3.17458 5.30321 2.80429 5.66048 2.80429C6.01707 2.80429 6.7697 2.80429 7.46678 2.80429C7.46678 2.43754 7.46678 1.17034 7.46678 9.62225e-09C6.5362 9.62225e-09 5.47749 9.62225e-09 5.01083 9.62225e-09C1.53195 -0.000185988 1.6139 2.69619 1.6139 3.09869Z" fill="#53595D"/>
+</svg></a><a class="soc-link" href="#"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5 1.65642C16.8559 1.93751 16.1648 2.12814 15.4387 2.21324C16.1801 1.77597 16.7476 1.08239 17.0166 0.258473C16.3211 0.663419 15.5535 0.957461 14.7355 1.11686C14.0805 0.428658 13.1488 0 12.1153 0C10.1327 0 8.52523 1.5832 8.52523 3.53473C8.52523 3.81151 8.55694 4.08184 8.61819 4.34034C5.63501 4.19277 2.98973 2.78514 1.21928 0.646183C0.909801 1.16747 0.733743 1.77487 0.733743 2.42325C0.733743 3.64997 1.368 4.73236 2.33033 5.36562C1.742 5.34624 1.18866 5.18684 0.704233 4.92189V4.96605C0.704233 6.67849 1.94213 8.10766 3.58353 8.43294C3.2828 8.51264 2.96568 8.5568 2.63761 8.5568C2.4058 8.5568 2.18161 8.53418 1.9618 8.49109C2.41889 9.89659 3.74429 10.9187 5.31463 10.9467C4.08657 11.8944 2.5381 12.4577 0.856243 12.4577C0.566463 12.4577 0.28103 12.4405 0 12.4093C1.58893 13.4141 3.4753 14 5.50273 14C12.1066 14 15.7165 8.61281 15.7165 3.94077L15.7044 3.48305C16.4097 2.98759 17.0199 2.3651 17.5 1.65642Z" fill="#53595D"/>
+</svg></a><a class="soc-link" href="#"><svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8939 9.93421C19.8697 9.8839 19.8471 9.84216 19.8262 9.80873C19.4792 9.20627 18.8161 8.46681 17.8372 7.59011L17.8166 7.57004L17.8062 7.56019L17.7957 7.5501H17.7852C17.341 7.14187 17.0597 6.86738 16.9419 6.72685C16.7263 6.45915 16.678 6.18818 16.7959 5.91362C16.8791 5.70618 17.1917 5.2681 17.733 4.59877C18.0178 4.24405 18.2433 3.95975 18.4098 3.74556C19.6109 2.20629 20.1316 1.22268 19.9719 0.794338L19.9098 0.69424C19.8681 0.633977 19.7606 0.578847 19.5872 0.52857C19.4134 0.478397 19.1914 0.4701 18.9206 0.503537L15.9216 0.523507C15.8731 0.506912 15.8037 0.508458 15.7133 0.52857C15.623 0.548681 15.5779 0.558772 15.5779 0.558772L15.5257 0.58391L15.4843 0.614112C15.4495 0.634082 15.4114 0.669207 15.3697 0.719414C15.3282 0.769445 15.2935 0.828161 15.2658 0.895069C14.9393 1.70482 14.5681 2.45768 14.1515 3.15362C13.8946 3.56861 13.6587 3.92825 13.4432 4.23276C13.2281 4.53717 13.0476 4.76145 12.9019 4.90522C12.756 5.04912 12.6244 5.16441 12.5061 5.2515C12.388 5.33862 12.2979 5.37544 12.2355 5.36197C12.173 5.3485 12.1141 5.33514 12.0583 5.32178C11.9612 5.26152 11.883 5.17956 11.8241 5.07584C11.765 4.97213 11.7252 4.84158 11.7043 4.68431C11.6836 4.52694 11.6714 4.39158 11.6679 4.27777C11.6646 4.1641 11.6661 4.00331 11.6732 3.79588C11.6804 3.58833 11.6836 3.44791 11.6836 3.37428C11.6836 3.11994 11.6888 2.84391 11.6991 2.54611C11.7096 2.24831 11.7181 2.01236 11.7252 1.83853C11.7323 1.66453 11.7356 1.48043 11.7356 1.28636C11.7356 1.09228 11.7233 0.940072 11.6991 0.829602C11.6752 0.719273 11.6384 0.612178 11.59 0.508353C11.5413 0.404634 11.4701 0.3244 11.3766 0.267443C11.2829 0.210555 11.1664 0.165411 11.0277 0.131869C10.6598 0.0516004 10.1912 0.00817886 9.62183 0.0014283C8.33067 -0.0119322 7.50103 0.0684415 7.1331 0.242444C6.98732 0.315962 6.8554 0.416412 6.73745 0.543477C6.61245 0.690759 6.59502 0.771133 6.68525 0.784353C7.10184 0.84451 7.39676 0.988416 7.57033 1.21593L7.63288 1.33649C7.68153 1.42348 7.73012 1.57747 7.77873 1.79827C7.82728 2.01907 7.85861 2.26332 7.87239 2.53088C7.90704 3.01949 7.90704 3.43774 7.87239 3.78568C7.83764 4.13376 7.80481 4.40473 7.77348 4.59881C7.74215 4.79288 7.69532 4.95015 7.63288 5.07057C7.57033 5.19103 7.52872 5.26465 7.50785 5.29137C7.48703 5.31809 7.46967 5.33493 7.45588 5.34154C7.36565 5.37487 7.2718 5.39186 7.17468 5.39186C7.0774 5.39186 6.95945 5.34495 6.82064 5.25122C6.68186 5.15748 6.53783 5.02873 6.38855 4.86475C6.23927 4.70073 6.07091 4.47153 5.88341 4.17711C5.69605 3.88268 5.50165 3.53471 5.30032 3.1332L5.13375 2.84201C5.02962 2.65468 4.88738 2.38191 4.70688 2.02396C4.52627 1.66586 4.36663 1.31947 4.22785 0.984865C4.17237 0.844334 4.08904 0.737345 3.97798 0.663722L3.92586 0.63352C3.89121 0.606799 3.83559 0.578425 3.75929 0.548188C3.68288 0.517987 3.60315 0.496328 3.51977 0.483003L0.66657 0.502974C0.37501 0.502974 0.177183 0.566647 0.0730178 0.693817L0.0313298 0.753975C0.0105041 0.787481 0 0.840994 0 0.914652C0 0.988276 0.0208258 1.07863 0.0625138 1.18562C0.479029 2.1293 0.93198 3.03939 1.42137 3.91605C1.91075 4.79271 2.33602 5.49888 2.69692 6.03393C3.05789 6.56937 3.42582 7.07471 3.80072 7.54971C4.17562 8.02489 4.42378 8.3294 4.5452 8.46318C4.66676 8.59721 4.76224 8.69741 4.83165 8.76432L5.09203 9.0052C5.25863 9.16584 5.50329 9.35823 5.82611 9.58237C6.149 9.80665 6.50646 10.0274 6.89869 10.2451C7.29099 10.4624 7.74737 10.6398 8.26808 10.7769C8.78873 10.9142 9.29548 10.9693 9.7884 10.9427H10.9859C11.2288 10.9225 11.4128 10.8489 11.5379 10.7218L11.5793 10.6715C11.6072 10.6316 11.6333 10.5695 11.6573 10.486C11.6817 10.4024 11.6938 10.3102 11.6938 10.21C11.6867 9.92229 11.7094 9.66299 11.7613 9.43214C11.8132 9.20135 11.8724 9.02735 11.9386 8.91016C12.0047 8.79308 12.0793 8.69429 12.1624 8.61419C12.2456 8.53392 12.3049 8.4853 12.3397 8.46856C12.3743 8.45172 12.4019 8.4403 12.4227 8.43344C12.5893 8.37993 12.7854 8.43175 13.0112 8.58916C13.2369 8.74643 13.4485 8.94061 13.6465 9.17139C13.8444 9.40239 14.0821 9.66155 14.3597 9.94926C14.6375 10.2371 14.8804 10.451 15.0886 10.5918L15.2968 10.7122C15.4358 10.7926 15.6163 10.8662 15.8385 10.9331C16.0603 11 16.2546 11.0167 16.4215 10.9833L19.0872 10.9432C19.3508 10.9432 19.556 10.9011 19.7015 10.8176C19.8473 10.734 19.9339 10.6418 19.9619 10.5416C19.9897 10.4412 19.9912 10.3274 19.9672 10.2001C19.9425 10.0732 19.9181 9.98438 19.8939 9.93421Z" fill="#53595D"/>
+</svg></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./js/libs.js"></script>
+    <script defer src="./js/main.min.js"></script>
+  </body>
+</html>
