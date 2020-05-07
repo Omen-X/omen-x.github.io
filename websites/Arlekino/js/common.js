@@ -1,1 +1,297 @@
-"use strict";var mobileNav=function(){var e=document.querySelector(".m-nav");document.querySelector(".m-nav__trigger").addEventListener("click",function(){e.classList.contains("active")?document.documentElement.classList.remove("modal-open"):document.documentElement.classList.add("modal-open"),e.classList.toggle("active")})},validateInput=function(e){var t=e.value,n={isValid:!0,error:"",meta:{}};if(e.required)switch(e.type){case"text":default:""===t&&(n.isValid=!1,n.error="Обязательное поле")}if(n.isValid)switch(e.name){case"login":RegExp(/^[A-Za-zА-Яа-я0-9_]*$/).test(t)||(n.isValid=!1,n.error="Недопустимые символы. Введите буквы, цифры или “_”"),"existing_user"===t&&(n.isValid=!1,n.error="Этот логин уже занят. Попробуйте",n.meta.availableLogins=["Denisov_alex","alexey_denisov"]);break;case"password":t.length<6&&(n.isValid=!1,n.error="Введите не менее 6 символов.");break;case"password-confirm":t!==e.closest(".form").querySelector("input[name=password]").value&&(n.isValid=!1,n.error="Введенные пароли не совпадают");break;case"email":RegExp(/\S+@\S+\.\S+/).test(t)||(n.isValid=!1,n.error="Некорректный e-mail")}var r,i=e.closest(".form__field"),o=i.querySelector(".form__field-error"),c=n.isValid,a=n.meta,l=n.error;return c?(i.classList.remove("invalid"),i.classList.add("valid"),o.innerHTML=""):(o.innerHTML=l,a.availableLogins&&(r=a.availableLogins.map(function(e){return"<span data-suggested-login=".concat(e,' class="form__suggested-login">').concat(e,"</span>")}),o.innerHTML="".concat(o.innerHTML,' <span class="c-purple">').concat(r.join(", "),"</span>")),i.classList.remove("valid"),i.classList.add("invalid")),n.isValid},customFormLogic=function(){document.querySelectorAll(".form__toggle-hidden").forEach(function(t){t.addEventListener("click",function(){t.classList.toggle("active");var e=t.parentElement.parentElement.querySelector(".form__input");t.classList.contains("active")?e.setAttribute("type","text"):e.setAttribute("type","password")})}),document.querySelectorAll(".form__copy").forEach(function(n){n.addEventListener("click",function(){var e=n.parentElement.parentElement.querySelector(".form__input"),t=e.type;"password"===t&&(e.type="text"),e.select(),e.setSelectionRange(0,99999),document.execCommand("copy"),"password"===t&&(e.type="password"),e.blur()})}),document.querySelectorAll(".form__field-error").forEach(function(r){r.addEventListener("click",function(e){var t,n;e.target.classList.contains("form__suggested-login")&&(t=e.target.dataset.suggestedLogin,(n=r.closest(".form__field").querySelector(".form__input")).value=t,validateInput(n))})})},mSelect=function(){document.querySelectorAll(".m-select").forEach(function(n){n.addEventListener("click",function(e){e.stopPropagation()});var e=n.querySelector(".m-select__list");new SimpleBar(e,{autoHide:!1}),n.querySelector(".m-select__trigger").addEventListener("click",function(){n.classList.toggle("active")});var t=n.querySelector(".m-select__input"),r=n.querySelector(".m-select__value"),i=n.querySelector(".m-select__search-input");e.addEventListener("click",function(e){e.target.classList.contains("m-select__list-item")&&(t.value=e.target.innerHTML,r.innerHTML=e.target.innerHTML,n.classList.remove("active"),i.value="",n.querySelectorAll(".m-select__list-item").forEach(function(e){return e.classList.remove("hidden")}))}),i.addEventListener("keyup",function(){var t=i.value.toLowerCase();n.querySelectorAll(".m-select__list-item").forEach(function(e){e.innerHTML.toLowerCase().startsWith(t)?e.classList.remove("hidden"):e.classList.add("hidden")})})})},formFieldsValidation=function(){document.querySelectorAll(".form__input").forEach(function(e){var t=e.closest(".form__field"),n=t.querySelector(".form__field-error");e.addEventListener("blur",function(){return validateInput(e)}),e.addEventListener("keydown",function(){t.classList.remove("invalid"),n.innerHTML=""})})},formsHandler=function(){document.querySelectorAll(".form").forEach(function(t){t.addEventListener("submit",function(e){e.preventDefault(),Array.from(t.querySelectorAll(".form__input")).map(function(e){return validateInput(e)}).some(function(e){return!e})?console.log("invalid form"):console.log("valid form")})})},dynamicStyles=function(){var e,t,n,r,i,o,c=document.querySelector(".welcome-section");c&&(e=c.querySelector(".welcome__form").clientHeight+80+70,t=.385*window.innerWidth,n=.239*window.innerWidth,r=c.clientHeight-t+2,i=e-n,o=Math.max(r,i,0),c.style.backgroundPosition="center ".concat(o,"px"))};function documentReady(){document.body.addEventListener("click",function(){document.querySelectorAll(".m-select").forEach(function(e){return e.classList.remove("active")}),document.querySelectorAll(".m-select__search-input").forEach(function(e){e.value=""}),document.querySelectorAll(".m-select__list-item").forEach(function(e){return e.classList.remove("hidden")})}),window.addEventListener("resize",function(){dynamicStyles()}),mobileNav(),customFormLogic(),formFieldsValidation(),formsHandler(),mSelect(),dynamicStyles()}!function e(){"complete"!==document.readyState?setTimeout(e,10):documentReady()}();
+const mobileNav = () => {
+  const nav = document.querySelector('.m-nav');
+  const navTrigger = document.querySelector('.m-nav__trigger');
+
+  function navToggle() {
+    if (nav.classList.contains('active')) {
+      document.documentElement.classList.remove('modal-open');
+    } else {
+      document.documentElement.classList.add('modal-open');
+    }
+
+    nav.classList.toggle('active');
+  }
+
+  navTrigger.addEventListener('click', navToggle);
+};
+
+const validateInput = (input) => {
+  const {value} = input;
+  const validation = {isValid: true, error: '', meta: {}};
+
+  // Common validation
+  if (input.required) {
+    switch (input.type) {
+      case 'text':
+      default:
+        if (value === '') {
+          validation.isValid = false;
+          validation.error = 'Обязательное поле';
+        }
+    }
+  }
+
+  // Custom validation
+  if (validation.isValid) {
+    switch (input.name) {
+      case 'login':
+        // Incorrect characters
+        if (!RegExp(/^[A-Za-zА-Яа-я0-9_]*$/).test(value)) {
+          validation.isValid = false;
+          validation.error = 'Недопустимые символы. Введите буквы, цифры или “_”';
+        }
+
+        // Existing login
+        if (value === 'existing_user') {
+          validation.isValid = false;
+          validation.error = 'Этот логин уже занят. Попробуйте';
+          validation.meta.availableLogins = ['Denisov_alex', 'alexey_denisov'];
+        }
+
+        break;
+      case 'password':
+        // Password too short
+        if (value.length < 6) {
+          validation.isValid = false;
+          validation.error = 'Введите не менее 6 символов.';
+        }
+
+        break;
+      case 'password-confirm': {
+        // Password mismatch
+        const password = input.closest('.form').querySelector('input[name=password]').value;
+
+        if (value !== password) {
+          validation.isValid = false;
+          validation.error = 'Введенные пароли не совпадают';
+        }
+
+        break;
+      }
+      case 'email':
+        if (!RegExp(/\S+@\S+\.\S+/).test(value)) {
+          validation.isValid = false;
+          validation.error = 'Некорректный e-mail';
+        }
+
+        break;
+      default:
+    }
+  }
+
+  // Show validation result for user
+  const field = input.closest('.form__field');
+  const errorField = field.querySelector('.form__field-error');
+  const {isValid, meta, error} = validation;
+
+  if (isValid) {
+    field.classList.remove('invalid');
+    field.classList.add('valid');
+
+    errorField.innerHTML = '';
+  } else {
+    errorField.innerHTML = error;
+
+    if (meta.availableLogins) {
+      const suggestedLogins = meta.availableLogins
+        .map(login => `<span data-suggested-login=${login} class="form__suggested-login">${login}</span>`);
+
+      errorField.innerHTML = `${errorField.innerHTML} <span class="c-purple">${suggestedLogins.join(', ')}</span>`;
+    }
+
+    field.classList.remove('valid');
+    field.classList.add('invalid');
+  }
+
+  return validation.isValid;
+};
+
+// Custom logic for forms
+const customFormLogic = () => {
+  // Toggle hidden button
+  document.querySelectorAll('.form__toggle-hidden').forEach((toggler) => {
+    toggler.addEventListener('click', () => {
+      toggler.classList.toggle('active');
+
+      const input = toggler.parentElement.parentElement.querySelector('.form__input');
+
+      if (toggler.classList.contains('active')) input.setAttribute('type', 'text');
+      else input.setAttribute('type', 'password');
+    });
+  });
+
+  // Copy button
+  document.querySelectorAll('.form__copy').forEach((copy) => {
+    copy.addEventListener('click', () => {
+      const input = copy.parentElement.parentElement.querySelector('.form__input');
+      const inputType = input.type;
+
+      if (inputType === 'password') input.type = 'text';
+
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+
+      if (inputType === 'password') input.type = 'password';
+
+      input.blur();
+    });
+  });
+
+  // Suggested logins
+  document.querySelectorAll('.form__field-error').forEach((error) => {
+    error.addEventListener('click', (event) => {
+      if (event.target.classList.contains('form__suggested-login')) {
+        const login = event.target.dataset.suggestedLogin;
+        const input = error.closest('.form__field').querySelector('.form__input');
+
+        input.value = login;
+        validateInput(input);
+      }
+    });
+  });
+};
+
+const mSelect = () => {
+  document.querySelectorAll('.m-select').forEach((select) => {
+    select.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+
+    // Custom scrollbar
+    const list = select.querySelector('.m-select__list');
+    new SimpleBar(list, {autoHide: false});
+
+    // Trigger handler
+    select.querySelector('.m-select__trigger').addEventListener('click', () => {
+      select.classList.toggle('active');
+    });
+
+    // Option selection
+    const input = select.querySelector('.m-select__input');
+    const value = select.querySelector('.m-select__value');
+    const search = select.querySelector('.m-select__search-input');
+
+    list.addEventListener('click', (event) => {
+      if (event.target.classList.contains('m-select__list-item')) {
+        input.value = event.target.innerHTML;
+        value.innerHTML = event.target.innerHTML;
+
+        select.classList.remove('active');
+        search.value = '';
+        select.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
+      }
+    });
+
+    // Search
+
+    search.addEventListener('keyup', () => {
+      const searchValue = search.value.toLowerCase();
+
+      select.querySelectorAll('.m-select__list-item')
+        .forEach((option) => {
+          const optionValue = option.innerHTML.toLowerCase();
+
+          if (optionValue.startsWith(searchValue)) option.classList.remove('hidden');
+          else option.classList.add('hidden');
+        });
+    });
+  });
+};
+
+
+/**
+ * Instant validation for inputs
+ */
+const formFieldsValidation = () => {
+  document.querySelectorAll('.form__input').forEach((input) => {
+    const field = input.closest('.form__field');
+    const error = field.querySelector('.form__field-error');
+
+    input.addEventListener('blur', () => validateInput(input));
+
+    input.addEventListener('keydown', () => {
+      field.classList.remove('invalid');
+      error.innerHTML = '';
+    });
+  });
+};
+
+/**
+ * Form submit handler
+ */
+const formsHandler = () => {
+  document.querySelectorAll('.form').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Validate inputs
+      const validationResult = Array.from(form.querySelectorAll('.form__input'))
+        .map(input => validateInput(input));
+
+      if (validationResult.some(v => !v)) {
+        // Invalid form
+        console.log('invalid form');
+      } else {
+        // Valid form
+        console.log('valid form');
+      }
+    });
+  });
+};
+
+/**
+ * js-based styles
+ */
+const dynamicStyles = () => {
+  //
+  const welcomeSection = document.querySelector('.welcome-section');
+  if (welcomeSection) {
+    const welcomeForm = welcomeSection.querySelector('.welcome__form');
+    const welcomeFormHeight = welcomeForm.clientHeight;
+    const welcomeFormBottom = welcomeFormHeight + (30 + 50) + 70;
+
+    const arcHeight = window.innerWidth * 0.385;
+    const arcGapHeight = window.innerWidth * 0.239;
+
+    const resizeFix = 2;
+    const footerRelatedTop = welcomeSection.clientHeight - arcHeight + resizeFix;
+    const formRelatedTop = welcomeFormBottom - arcGapHeight;
+
+    const top = Math.max(footerRelatedTop, formRelatedTop, 0);
+
+    welcomeSection.style.backgroundPosition = `center ${top}px`;
+  }
+  //
+};
+
+// ========>> DOCUMENT READY <<========
+
+function documentReady() {
+  // Hide pop-up windows
+  document.body.addEventListener('click', () => {
+     document.querySelectorAll('.m-select').forEach(select => select.classList.remove('active'));
+     document.querySelectorAll('.m-select__search-input').forEach((s) => {
+       s.value = '';
+     });
+     document.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
+  });
+  //
+  window.addEventListener('resize', () => {
+    dynamicStyles();
+  });
+  //
+  mobileNav();
+  customFormLogic();
+  formFieldsValidation();
+  formsHandler();
+  mSelect();
+  dynamicStyles();
+}
+
+// ========>> UTILS <<========
+
+!(function checkLoad() {
+  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);
+  else documentReady();
+}());
