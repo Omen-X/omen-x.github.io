@@ -1,8 +1,6 @@
-"use strict";
-
-var mobileNav = function mobileNav() {
-  var nav = document.querySelector('.m-nav');
-  var navTrigger = document.querySelector('.m-nav__trigger');
+const mobileNav = () => {
+  const nav = document.querySelector('.m-nav');
+  const navTrigger = document.querySelector('.m-nav__trigger');
 
   function navToggle() {
     if (nav.classList.contains('active')) {
@@ -15,81 +13,93 @@ var mobileNav = function mobileNav() {
   }
 
   navTrigger.addEventListener('click', navToggle);
-}; // Custom logic for forms
+};
 
-
-var customFormLogic = function customFormLogic() {
+// Custom logic for forms
+const customFormLogic = () => {
   // Toggle hidden button
-  document.querySelectorAll('.form__toggle-hidden').forEach(function (toggler) {
-    toggler.addEventListener('click', function () {
+  document.querySelectorAll('.form__toggle-hidden').forEach((toggler) => {
+    toggler.addEventListener('click', () => {
       toggler.classList.toggle('active');
-      var input = toggler.parentElement.parentElement.querySelector('.form__input');
-      if (toggler.classList.contains('active')) input.setAttribute('type', 'text');else input.setAttribute('type', 'password');
-    });
-  }); // Copy button
 
-  document.querySelectorAll('.form__copy').forEach(function (copy) {
-    copy.addEventListener('click', function () {
-      var input = copy.parentElement.parentElement.querySelector('.form__input');
-      var inputType = input.type;
+      const input = toggler.parentElement.parentElement.querySelector('.form__input');
+
+      if (toggler.classList.contains('active')) input.setAttribute('type', 'text');
+      else input.setAttribute('type', 'password');
+    });
+  });
+
+  // Copy button
+  document.querySelectorAll('.form__copy').forEach((copy) => {
+    copy.addEventListener('click', () => {
+      const input = copy.parentElement.parentElement.querySelector('.form__input');
+      const inputType = input.type;
+
       if (inputType === 'password') input.type = 'text';
+
       input.select();
       input.setSelectionRange(0, 99999);
       document.execCommand('copy');
+
       if (inputType === 'password') input.type = 'password';
+
       input.blur();
     });
   });
 };
 
-var mSelect = function mSelect() {
-  document.querySelectorAll('.m-select').forEach(function (select) {
-    select.addEventListener('click', function (event) {
+const mSelect = () => {
+  document.querySelectorAll('.m-select').forEach((select) => {
+    select.addEventListener('click', (event) => {
       event.stopPropagation();
-    }); // Custom scrollbar
+    });
 
-    var list = select.querySelector('.m-select__list');
-    new SimpleBar(list, {
-      autoHide: false
-    }); // Trigger handler
+    // Custom scrollbar
+    const list = select.querySelector('.m-select__list');
+    new SimpleBar(list, {autoHide: false});
 
-    select.querySelector('.m-select__trigger').addEventListener('click', function () {
+    // Trigger handler
+    select.querySelector('.m-select__trigger').addEventListener('click', () => {
       select.classList.toggle('active');
-    }); // Option selection
+    });
 
-    var input = select.querySelector('.m-select__input');
-    var value = select.querySelector('.m-select__value');
-    var search = select.querySelector('.m-select__search-input');
-    list.addEventListener('click', function (event) {
+    // Option selection
+    const input = select.querySelector('.m-select__input');
+    const value = select.querySelector('.m-select__value');
+    const search = select.querySelector('.m-select__search-input');
+
+    list.addEventListener('click', (event) => {
       if (event.target.classList.contains('m-select__list-item')) {
         input.value = event.target.innerHTML;
         value.innerHTML = event.target.innerHTML;
+
         select.classList.remove('active');
         search.value = '';
-        select.querySelectorAll('.m-select__list-item').forEach(function (option) {
-          return option.classList.remove('hidden');
-        });
+        select.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
       }
-    }); // Search
+    });
 
-    search.addEventListener('keyup', function () {
-      var searchValue = search.value.toLowerCase();
-      select.querySelectorAll('.m-select__list-item').forEach(function (option) {
-        var optionValue = option.innerHTML.toLowerCase();
-        if (optionValue.startsWith(searchValue)) option.classList.remove('hidden');else option.classList.add('hidden');
-      });
+    // Search
+
+    search.addEventListener('keyup', () => {
+      const searchValue = search.value.toLowerCase();
+
+      select.querySelectorAll('.m-select__list-item')
+        .forEach((option) => {
+          const optionValue = option.innerHTML.toLowerCase();
+
+          if (optionValue.startsWith(searchValue)) option.classList.remove('hidden');
+          else option.classList.add('hidden');
+        });
     });
   });
 };
 
-var validateInput = function validateInput(input) {
-  var value = input.value;
-  var validation = {
-    isValid: true,
-    error: '',
-    meta: {}
-  }; // Common validation
+const validateInput = (input) => {
+  const {value} = input;
+  const validation = {isValid: true, error: '', meta: {}};
 
+  // Common validation
   if (input.required) {
     switch (input.type) {
       case 'text':
@@ -98,11 +108,10 @@ var validateInput = function validateInput(input) {
           validation.isValid = false;
           validation.error = 'Обязательное поле';
         }
-
     }
-  } // Custom validation
+  }
 
-
+  // Custom validation
   if (validation.isValid) {
     switch (input.name) {
       case 'login':
@@ -110,9 +119,9 @@ var validateInput = function validateInput(input) {
         if (!RegExp(/^[A-Za-zА-Яа-я0-9_]*$/).test(value)) {
           validation.isValid = false;
           validation.error = 'Недопустимые символы. Введите буквы, цифры или “_”';
-        } // Existing login
+        }
 
-
+        // Existing login
         if (value === 'existing_user') {
           validation.isValid = false;
           validation.error = 'Этот логин уже занят. Попробуйте';
@@ -120,7 +129,6 @@ var validateInput = function validateInput(input) {
         }
 
         break;
-
       case 'password':
         // Password too short
         if (value.length < 6) {
@@ -129,20 +137,17 @@ var validateInput = function validateInput(input) {
         }
 
         break;
+      case 'password-confirm': {
+        // Password mismatch
+        const password = input.closest('.form').querySelector('input[name=password]').value;
 
-      case 'password-confirm':
-        {
-          // Password mismatch
-          var password = input.closest('.form').querySelector('input[name=password]').value;
-
-          if (value !== password) {
-            validation.isValid = false;
-            validation.error = 'Введенные пароли не совпадают';
-          }
-
-          break;
+        if (value !== password) {
+          validation.isValid = false;
+          validation.error = 'Введенные пароли не совпадают';
         }
 
+        break;
+      }
       case 'email':
         if (!RegExp(/\S+@\S+\.\S+/).test(value)) {
           validation.isValid = false;
@@ -150,27 +155,25 @@ var validateInput = function validateInput(input) {
         }
 
         break;
-
       default:
     }
-  } // Show validation result for user
+  }
 
-
-  var field = input.closest('.form__field');
-  var errorField = field.querySelector('.form__field-error');
-  var isValid = validation.isValid,
-      meta = validation.meta,
-      error = validation.error;
+  // Show validation result for user
+  const field = input.closest('.form__field');
+  const errorField = field.querySelector('.form__field-error');
+  const {isValid, meta, error} = validation;
 
   if (isValid) {
     field.classList.remove('invalid');
     field.classList.add('valid');
+
     errorField.innerHTML = '';
   } else {
     errorField.innerHTML = error;
 
     if (meta.availableLogins) {
-      errorField.innerHTML = "".concat(errorField.innerHTML, " <span class=\"c-purple\">").concat(meta.availableLogins.join(', '), "</span>");
+      errorField.innerHTML = `${errorField.innerHTML} <span class="c-purple">${meta.availableLogins.join(', ')}</span>`;
     }
 
     field.classList.remove('valid');
@@ -179,41 +182,37 @@ var validateInput = function validateInput(input) {
 
   return validation.isValid;
 };
+
 /**
  * Instant validation for inputs
  */
+const formFieldsValidation = () => {
+  document.querySelectorAll('.form__input').forEach((input) => {
+    const field = input.closest('.form__field');
+    const error = field.querySelector('.form__field-error');
 
+    input.addEventListener('blur', () => validateInput(input));
 
-var formFieldsValidation = function formFieldsValidation() {
-  document.querySelectorAll('.form__input').forEach(function (input) {
-    var field = input.closest('.form__field');
-    var error = field.querySelector('.form__field-error');
-    input.addEventListener('blur', function () {
-      return validateInput(input);
-    });
-    input.addEventListener('keydown', function () {
+    input.addEventListener('keydown', () => {
       field.classList.remove('invalid');
       error.innerHTML = '';
     });
   });
 };
+
 /**
  * Form submit handler
  */
+const formsHandler = () => {
+  document.querySelectorAll('.form').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
+      // Validate inputs
+      const validationResult = Array.from(form.querySelectorAll('.form__input'))
+        .map(input => validateInput(input));
 
-var formsHandler = function formsHandler() {
-  document.querySelectorAll('.form').forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault(); // Validate inputs
-
-      var validationResult = Array.from(form.querySelectorAll('.form__input')).map(function (input) {
-        return validateInput(input);
-      });
-
-      if (validationResult.some(function (v) {
-        return !v;
-      })) {
+      if (validationResult.some(v => !v)) {
         // Invalid form
         console.log('invalid form');
       } else {
@@ -222,32 +221,30 @@ var formsHandler = function formsHandler() {
       }
     });
   });
-}; // ========>> DOCUMENT READY <<========
+};
 
+// ========>> DOCUMENT READY <<========
 
 function documentReady() {
   // Hide pop-up windows
-  document.body.addEventListener('click', function () {
-    document.querySelectorAll('.m-select').forEach(function (select) {
-      return select.classList.remove('active');
-    });
-    document.querySelectorAll('.m-select__search-input').forEach(function (s) {
-      s.value = '';
-    });
-    document.querySelectorAll('.m-select__list-item').forEach(function (option) {
-      return option.classList.remove('hidden');
-    });
-  }); //
-
+  document.body.addEventListener('click', () => {
+     document.querySelectorAll('.m-select').forEach(select => select.classList.remove('active'));
+     document.querySelectorAll('.m-select__search-input').forEach((s) => {
+       s.value = '';
+     });
+     document.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
+  });
+  //
   mobileNav();
   customFormLogic();
   formFieldsValidation();
   formsHandler();
   mSelect();
-} // ========>> UTILS <<========
-//eslint-disable-next-line
+}
 
+// ========>> UTILS <<========
 
-!function checkLoad() {
-  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);else documentReady();
-}();
+!(function checkLoad() {
+  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);
+  else documentReady();
+}());

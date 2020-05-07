@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Arlekino</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+      
+    </script>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="header__content"><a class="logo" href="./index.html">Arlekino.tv</a>
+          <nav class="m-nav">
+            <div class="m-nav__buttons hidden-lg-up">
+              <div><i class="m-icon-user"></i></div><span class="m-nav__trigger"></span>
+            </div>
+            <div class="m-nav__content">
+              <div class="m-nav__links"><a href="#">Как настроить</a><a href="#">Частые вопросы</a><a href="#">Новости</a></div>
+              <div class="m-nav__links hidden-lg-up">
+                <div class="lang-select"><span>RU</span></div>
+                <button class="button-main">ВХОД/РЕГИСТРАЦИЯ</button>
+              </div>
+            </div>
+          </nav>
+          <div class="header__buttons">
+            <div class="lang-select"><span>RU</span></div>
+            <button class="button-transparent">ВХОД/РЕГИСТРАЦИЯ</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="welcome-section">
+        <div class="content-wrap">
+          <div class="welcome">
+            <p class="welcome__title">Ура! Ты уже почти<span class="c-accent"> с нами!</span></p>
+            <div class="welcome__form">
+              <div class="welcome-info">
+                <p class="welcome-info__title">Осталось только подтвердить почту</p>
+                <p class="welcome-info__text">Мы выслали ссылку для завершения регистрации<br class="hidden-lg-down">на твой email.</p>
+                <p class="welcome-info__text">Не упусти свой шанс получить бесплатный доступ!</p>
+              </div>
+              <div class="welcome__check-email">
+                <button class="button-main">проверить почту</button><span class="text-link">Отправить ссылку повторно</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-wrap">
+        <div class="footer__content">
+          <p class="footer__copy">Copyright © 2011-2020</p>
+          <div class="footer__payment hidden-sm-down">
+            <p class="footer__payment-title">Мы принимаем:</p>
+            <div class="footer__payment-list">
+              <div class="footer__payment-item"><img src="./img/content/paypal.svg"><span class="footer__payment-item-title">Pay Pal</span></div>
+              <div class="footer__payment-item"><img src="./img/content/sprypay.png"></div>
+              <div class="footer__payment-item"><img src="./img/content/webmoney.svg"><span class="footer__payment-item-title">WebMoney</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--script(defer src='./js/jquery.min.js')-->
+    <!--script(defer src='./js/bootstrap.min.js')-->
+    <script defer src="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.min.js"></script>
+    <script defer src="./js/polyfills.js"></script>
+    <script defer src="./js/common.js"></script>
+  </body>
+</html>

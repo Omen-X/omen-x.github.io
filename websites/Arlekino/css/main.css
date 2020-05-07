@@ -760,6 +760,12 @@ html.modal-open, body.modal-open {
     background: #FF9800;
     border-color: #FF9800; }
 
+.form-signin {
+  padding-top: 120px; }
+
+.form-forgot-password {
+  padding-top: 190px; }
+
 .form__fields {
   margin-bottom: 20px; }
 
@@ -774,13 +780,21 @@ html.modal-open, body.modal-open {
     border-top-color: #FF1744; }
   .form__field.valid .form__input {
     border-top-color: #27AE60; }
+  .form__field.show-info .form__field-info {
+    display: block; }
 
-.form__field-error {
+.form__field-error,
+.form__field-info {
   display: none;
   font-size: 13px;
   line-height: 20px;
-  margin-top: 5px;
+  margin-top: 5px; }
+
+.form__field-error {
   color: #FF1744; }
+
+.form__field-info {
+  color: #27AE60; }
 
 .form__field_with_links {
   margin-bottom: 8px; }
@@ -808,6 +822,10 @@ html.modal-open, body.modal-open {
     box-shadow: 0px 1px 3px rgba(255, 152, 0, 0.2), 0px 2px 2px rgba(255, 152, 0, 0.12), 0px 0px 2px rgba(255, 152, 0, 0.14); }
   .form__field-buttons + .form__input {
     padding-right: 100px; }
+  .form__input[name='referral'] {
+    border-top-color: #27AE60;
+    background: #f5faf9;
+    color: rgba(32, 32, 32, 0.5); }
 
 .form__field-buttons {
   display: -webkit-box;
@@ -863,6 +881,11 @@ html.modal-open, body.modal-open {
   transition: color .2s; }
   .no-touch .form__field-link:hover {
     color: #FF9800; }
+  .form__field-link a {
+    color: #FF9800;
+    font-weight: 600; }
+    .no-touch .form__field-link a:hover {
+      text-decoration: underline; }
 
 .form__checkbox {
   visibility: hidden;
@@ -934,9 +957,27 @@ html.modal-open, body.modal-open {
   justify-content: flex-end;
   margin-bottom: 15px; }
 
+.form__submit {
+  margin-top: 30px; }
+
 @media only screen and (max-width: 1599px) {
+  .form-signin {
+    padding-top: 60px; }
+  .form-forgot-password {
+    padding-top: 100px; }
   .form__input {
     padding: 12px 16px 8px; } }
+
+@media only screen and (max-width: 767px) {
+  .form-signin {
+    padding-top: 25px; }
+  .form-forgot-password {
+    padding-top: 30px; } }
+
+@media only screen and (max-width: 575px) {
+  .form-signin,
+  .form-forgot-password {
+    padding-top: 0; } }
 
 .m-select {
   display: -webkit-box;
@@ -1057,6 +1098,16 @@ main {
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
+.text-link {
+  font-size: 13px;
+  line-height: 20px;
+  color: #4859A4;
+  cursor: pointer;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .no-touch .text-link:hover {
+    color: #FF9800; }
+
 .welcome-section {
   height: 100%;
   -webkit-box-flex: 1;
@@ -1088,6 +1139,18 @@ main {
   margin-right: 30px; }
 
 .welcome__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-height: 320px;
+  width: 100%;
   max-width: 455px;
   padding: 5px;
   -webkit-box-flex: 1;
@@ -1117,13 +1180,41 @@ main {
       text-decoration: none;
       pointer-events: none; }
 
+.welcome-info {
+  margin-bottom: 30px;
+  max-width: 420px; }
+
+.welcome-info__title {
+  font-size: 24px;
+  margin-bottom: 14px;
+  font-weight: 600; }
+
+.welcome-info__text {
+  line-height: 1.3; }
+
+.welcome__check-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .welcome__check-email .button-main, .welcome__check-email .button-transparent {
+    margin-right: 30px; }
+
 @media only screen and (max-width: 1599px) {
   .welcome-section {
     background-position: center 140%; }
   .welcome__title {
     font-size: 36px;
     max-width: 500px;
-    padding-top: 130px; } }
+    padding-top: 130px; }
+  .welcome__form {
+    min-height: 280px; } }
+
+@media only screen and (max-width: 1199px) {
+  .welcome__form {
+    min-height: 240px; } }
 
 @media only screen and (max-width: 991px) {
   .welcome {
@@ -1133,7 +1224,9 @@ main {
     max-width: 400px;
     line-height: 1.3; }
   .welcome__form {
-    padding: 0; } }
+    padding: 0; }
+  .welcome__form {
+    max-width: 390px; } }
 
 @media only screen and (max-width: 767px) {
   .welcome-section {
@@ -1146,7 +1239,10 @@ main {
     flex-flow: column nowrap;
     padding-top: 15px;
     padding-bottom: 150px; }
+  .welcome__links + .welcome__title {
+    margin-top: 0; }
   .welcome__title {
+    margin-top: 30px;
     padding-top: 0;
     margin-right: 0;
     margin-bottom: 30px;
@@ -1154,4 +1250,20 @@ main {
     max-width: none; }
   .welcome__form {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto;
+    min-height: auto; }
+  .welcome__check-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .welcome__check-email .button-main {
+      margin-right: 0;
+      margin-bottom: 15px; } }
+
+@media only screen and (max-width: 575px) {
+  .welcome-info__title {
+    font-size: 18px; } }
