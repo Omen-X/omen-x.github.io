@@ -283,6 +283,12 @@ button,
 textarea {
   font-family: "Gilroy", sans-serif; }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: #202020; }
+
 textarea {
   resize: none;
   font-size: 16px; }
@@ -975,9 +981,7 @@ html.modal-open, body.modal-open {
   .form-signin {
     padding-top: 60px; }
   .form-forgot-password {
-    padding-top: 100px; }
-  .form__input {
-    padding: 12px 16px 8px; } }
+    padding-top: 100px; } }
 
 @media only screen and (max-width: 767px) {
   .form-signin {
@@ -988,7 +992,9 @@ html.modal-open, body.modal-open {
 @media only screen and (max-width: 575px) {
   .form-signin,
   .form-forgot-password {
-    padding-top: 0; } }
+    padding-top: 0; }
+  .form__input {
+    padding: 12px 16px 8px; } }
 
 .m-select {
   display: -webkit-box;
@@ -1133,16 +1139,16 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 30px 45px 50px 0; }
 
 .welcome__title {
   -ms-flex-item-align: start;
   align-self: flex-start;
   background: #fff;
-  padding-top: 200px;
+  padding-top: 190px;
   max-width: 635px;
   font-weight: 700;
   font-size: 44px;
@@ -1217,7 +1223,7 @@ main {
   .welcome__title {
     font-size: 36px;
     max-width: 500px;
-    padding-top: 130px; }
+    padding-top: 100px; }
   .welcome__form {
     min-height: 280px; } }
 

@@ -15,6 +15,42 @@ const mobileNav = () => {
   navTrigger.addEventListener('click', navToggle);
 };
 
+/**
+ *
+ */
+const welcomeSectionBg = () => {
+  const welcomeSection = document.querySelector('.welcome-section');
+
+  if (welcomeSection) {
+    const welcomeForm = welcomeSection.querySelector('.welcome__form');
+
+    const updateBgPosition = () => {
+      const welcomeFormHeight = welcomeForm.clientHeight;
+      const welcomeFormBottom = welcomeFormHeight + (30 + 50);
+
+      const arcHeight = window.innerWidth * 0.385;
+      const arcGapHeight = window.innerWidth * 0.239;
+
+      const resizeFix = 2;
+      const footerRelatedTop = welcomeSection.clientHeight - arcHeight + resizeFix;
+      const formRelatedTop = welcomeFormBottom - arcGapHeight;
+
+      const top = Math.max(footerRelatedTop, formRelatedTop, 0);
+
+      // welcomeSection.style.backgroundPosition = `center ${top - 100}px`;
+      welcomeSection.style.backgroundPosition = `center ${top}px`;
+
+      welcomeSection.style.minHeight = `${arcHeight + top - 5}px`;
+    };
+
+    updateBgPosition();
+
+    //
+    const ro = new ResizeObserver(() => updateBgPosition());
+    ro.observe(welcomeForm);
+  }
+};
+
 const validateInput = (input) => {
   const {value} = input;
   const validation = {isValid: true, error: '', meta: {}};
@@ -240,30 +276,6 @@ const formsHandler = () => {
   });
 };
 
-/**
- * js-based styles
- */
-const dynamicStyles = () => {
-  //
-  const welcomeSection = document.querySelector('.welcome-section');
-  if (welcomeSection) {
-    const welcomeForm = welcomeSection.querySelector('.welcome__form');
-    const welcomeFormHeight = welcomeForm.clientHeight;
-    const welcomeFormBottom = welcomeFormHeight + (30 + 50) + 70;
-
-    const arcHeight = window.innerWidth * 0.385;
-    const arcGapHeight = window.innerWidth * 0.239;
-
-    const resizeFix = 2;
-    const footerRelatedTop = welcomeSection.clientHeight - arcHeight + resizeFix;
-    const formRelatedTop = welcomeFormBottom - arcGapHeight;
-
-    const top = Math.max(footerRelatedTop, formRelatedTop, 0);
-
-    welcomeSection.style.backgroundPosition = `center ${top}px`;
-  }
-  //
-};
 
 // ========>> DOCUMENT READY <<========
 
@@ -277,8 +289,10 @@ function documentReady() {
      document.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
   });
   //
+
+  //
   window.addEventListener('resize', () => {
-    dynamicStyles();
+    welcomeSectionBg();
   });
   //
   mobileNav();
@@ -286,7 +300,7 @@ function documentReady() {
   formFieldsValidation();
   formsHandler();
   mSelect();
-  dynamicStyles();
+  welcomeSectionBg();
 }
 
 // ========>> UTILS <<========
