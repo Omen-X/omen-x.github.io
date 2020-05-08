@@ -283,12 +283,6 @@ button,
 textarea {
   font-family: "Gilroy", sans-serif; }
 
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px white inset;
-  box-shadow: 0 0 0 1000px white inset;
-  -webkit-text-fill-color: #202020; }
-
 textarea {
   resize: none;
   font-size: 16px; }
@@ -775,6 +769,10 @@ html.modal-open, body.modal-open {
 .form-signin {
   padding-top: 100px; }
 
+.form-forgot-password {
+  padding-top: 190px;
+  padding-bottom: 150px; }
+
 .form__fields {
   margin-bottom: 20px; }
 
@@ -974,6 +972,11 @@ html.modal-open, body.modal-open {
 .form__suggested-login {
   cursor: pointer; }
 
+@media only screen and (max-width: 1599px) {
+  .form-forgot-password {
+    padding-top: 100px;
+    padding-bottom: 150px; } }
+
 @media only screen and (max-width: 767px) {
   .form-signin {
     padding-top: 25px; }
@@ -983,7 +986,8 @@ html.modal-open, body.modal-open {
 @media only screen and (max-width: 575px) {
   .form-signin,
   .form-forgot-password {
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 0; }
   .form__input {
     padding: 12px 16px 8px; } }
 
@@ -1154,15 +1158,17 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  min-height: 430px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   width: 100%;
   max-width: 455px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
+
+.welcome__form_info {
+  min-height: 430px; }
 
 .welcome__links {
   display: -webkit-box;
@@ -1190,6 +1196,13 @@ main {
   margin-bottom: 30px;
   max-width: 420px; }
 
+.welcome-info_check-email {
+  padding-top: 165px; }
+
+.welcome-info_registration-confirm,
+.welcome-info_registration-complete {
+  padding-top: 150px; }
+
 .welcome-info__title {
   font-size: 24px;
   margin-bottom: 14px;
@@ -1214,14 +1227,17 @@ main {
   .welcome__title {
     font-size: 36px;
     max-width: 500px;
-    padding-top: 100px; } }
+    padding-top: 115px; }
+  .welcome-info_check-email {
+    padding-top: 90px; }
+  .welcome-info_registration-confirm,
+  .welcome-info_registration-complete {
+    padding-top: 70px; } }
 
 @media only screen and (max-width: 1199px) {
   .welcome__title {
     margin-right: 40px;
-    padding-top: 110px; }
-  .welcome__form {
-    min-height: 240px; } }
+    padding-top: 110px; } }
 
 @media only screen and (max-width: 991px) {
   .welcome {
@@ -1266,7 +1282,11 @@ main {
     align-items: flex-start; }
     .welcome__check-email .button-main {
       margin-right: 0;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px; }
+  .welcome-info_check-email,
+  .welcome-info_registration-confirm,
+  .welcome-info_registration-complete {
+    padding-top: 0; } }
 
 @media only screen and (max-width: 575px) {
   .welcome-info__title {
