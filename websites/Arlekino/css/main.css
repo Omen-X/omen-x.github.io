@@ -782,7 +782,7 @@ html.modal-open, body.modal-open {
   .form__field:last-child {
     margin-bottom: 0; }
   .form__field.invalid .form__field-error {
-    display: block; }
+    height: 25px; }
   .form__field.invalid .form__input {
     border-top-color: #FF1744; }
   .form__field.valid .form__input {
@@ -795,9 +795,13 @@ html.modal-open, body.modal-open {
   display: none;
   font-size: 13px;
   line-height: 20px;
-  margin-top: 5px; }
+  padding-top: 5px; }
 
 .form__field-error {
+  display: block;
+  height: 0;
+  -webkit-transition: height .3s;
+  transition: height .3s;
   color: #FF1744; }
 
 .form__field-info {

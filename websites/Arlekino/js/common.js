@@ -31,14 +31,21 @@ const welcomeSectionBg = () => {
       const arcHeight = window.innerWidth * 0.385;
       const arcGapHeight = window.innerWidth * 0.239;
 
-      const resizeFix = 2;
-      const footerRelatedTop = welcomeSection.clientHeight - arcHeight + resizeFix;
+      const roundingFix = 2;
+      const wideDevicesFix = 100;
+      const formErrorsGap = welcomeForm.querySelectorAll('.form__field-error').length * 25;
+
+      const footerRelatedTop = welcomeSection.clientHeight - arcHeight + roundingFix;
       const formRelatedTop = welcomeFormBottom - arcGapHeight;
 
-      const top = Math.max(footerRelatedTop, formRelatedTop, 0);
+      let top = Math.max(footerRelatedTop, formRelatedTop, 0);
+
+      if (formRelatedTop > footerRelatedTop) {
+        top += formErrorsGap;
+      }
 
       if (window.innerWidth / window.innerHeight > 1.8) {
-        welcomeSection.style.backgroundPosition = `center ${top - 100}px`;
+        welcomeSection.style.backgroundPosition = `center ${top - wideDevicesFix}px`;
         welcomeSection.style.backgroundSize = '130% auto';
       } else {
         welcomeSection.style.backgroundPosition = `center ${top}px`;
@@ -49,9 +56,8 @@ const welcomeSectionBg = () => {
 
     updateBgPosition();
 
-    //
-    const ro = new ResizeObserver(() => updateBgPosition());
-    ro.observe(welcomeForm);
+    // const ro = new ResizeObserver(() => updateBgPosition());
+    // ro.observe(welcomeForm);
   }
 };
 
