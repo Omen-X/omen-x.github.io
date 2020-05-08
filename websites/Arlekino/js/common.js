@@ -37,8 +37,12 @@ const welcomeSectionBg = () => {
 
       const top = Math.max(footerRelatedTop, formRelatedTop, 0);
 
-      // welcomeSection.style.backgroundPosition = `center ${top - 100}px`;
-      welcomeSection.style.backgroundPosition = `center ${top}px`;
+      if (window.innerWidth / window.innerHeight > 1.8) {
+        welcomeSection.style.backgroundPosition = `center ${top - 100}px`;
+        welcomeSection.style.backgroundSize = '130% auto';
+      } else {
+        welcomeSection.style.backgroundPosition = `center ${top}px`;
+      }
 
       welcomeSection.style.minHeight = `${arcHeight + top - 5}px`;
     };
@@ -167,6 +171,10 @@ const customFormLogic = () => {
       input.select();
       input.setSelectionRange(0, 99999);
       document.execCommand('copy');
+
+      const confirmInput = input.closest('.form__fields').querySelector('input[name=password-confirm]');
+      confirmInput.value = input.value;
+      validateInput(confirmInput);
 
       if (inputType === 'password') input.type = 'password';
 
