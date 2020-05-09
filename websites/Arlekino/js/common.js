@@ -1,5 +1,8 @@
 const mobileNav = () => {
   const nav = document.querySelector('.m-nav');
+
+  if (!nav) return;
+
   const navTrigger = document.querySelector('.m-nav__trigger');
 
   function navToggle() {
@@ -290,6 +293,34 @@ const formsHandler = () => {
   });
 };
 
+const devicesCarousel = () => {
+  const $carousel = $('.devices');
+
+  if (!$carousel.length) return;
+
+  if (window.innerWidth < 576) {
+    $carousel.slick({
+      slidesToShow: 2.5,
+      infinite: false,
+      arrows: false,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 2.3
+          }
+        },
+        {
+          breakpoint: 349,
+          settings: {
+            slidesToShow: 1.5
+          }
+        }
+      ]
+    });
+  }
+};
 
 // ========>> DOCUMENT READY <<========
 
@@ -303,7 +334,9 @@ function documentReady() {
      document.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
   });
   //
-
+  document.querySelectorAll('.device__list-content').forEach((el) => {
+    new SimpleBar(el, {autoHide: false});
+  });
   //
   window.addEventListener('resize', () => {
     welcomeSectionBg();
@@ -315,6 +348,7 @@ function documentReady() {
   formsHandler();
   mSelect();
   welcomeSectionBg();
+  devicesCarousel();
 }
 
 // ========>> UTILS <<========

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Arlekino</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+    </script>
+        <header class="header header_blue">
+          <div class="content-wrap">
+            <div class="header__content"><a class="logo" href="./index.html">Arlekino.tv</a>
+              <nav class="m-nav">
+                <div class="m-nav__buttons hidden-lg-up"><a href="#"><i class="m-icon-user"></i></a><span class="m-nav__trigger"></span></div>
+                <div class="m-nav__content">
+                  <div class="m-nav__links"><a href="#">Как настроить</a><a href="#">Частые вопросы</a><a href="#">Новости</a></div>
+                  <div class="m-nav__links hidden-lg-up">
+                    <div class="lang-select"><span>RU</span></div>
+                    <button class="button-main">ВХОД/РЕГИСТРАЦИЯ</button>
+                  </div>
+                </div>
+              </nav>
+              <div class="header__buttons">
+                <div class="lang-select"><span>RU</span></div>
+                <button class="button-transparent">ВХОД/РЕГИСТРАЦИЯ</button>
+              </div>
+            </div>
+          </div>
+        </header>
+    <main>
+      <section class="section-banner section-accent">
+        <div class="content-wrap">
+          <div class="banner">
+            <div class="banner__info">
+              <p class="title-page banner__title">Смотри более<span class="c-accent"> 1800</span> каналов почти на шару прямо сейчас</p>
+              <p class="text-content banner__text">Оформляй подписку и скорее включай любимый канал на любом устройстве</p>
+              <button class="button-main hidden-sm-down">Оформить подписку</button>
+            </div>
+            <div class="banner__img"><img src="./img/decor/tv-home.png" alt="tv"></div>
+            <div class="banner__mob-button hidden-tb-up">
+              <button class="button-main">Оформить подписку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="content-wrap">
+          <div class="cta-block">
+            <div class="cta-block__content">
+              <p class="cta-block__title has-underline">Тестовый период бесплатно</p>
+              <div class="cta-block__text text-content">
+                <p>Отличные новости! Мы даем тестовый период ВСЕМ на 24 часа!</p>
+                <p>Нужно только зарегистрироваться.</p>
+              </div>
+              <div class="cta-block__button">
+                <button class="button-main">Жми на старт</button>
+              </div>
+              <div class="cta-block__desc text-content c-gray">
+                <p>Смотри TV и зарабатывай! Да, с нами еще и можно заработать деньги.</p>
+                <p>Все по-честному! Проверь в личном кабинете в разделе<a href="#">Мои рефералы</a></p>
+              </div>
+              <div class="cta-block__slogan"><i class="m-icon-group"></i>
+                <p>поделись реферальной ссылкой - получи бонус деньгами</p>
+              </div>
+            </div>
+            <div class="cta-block__img" style="background-image: url(&quot;./img/decor/cta-1.jpg&quot;)"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section-advantages section-accent">
+        <div class="content-wrap">
+          <p class="title-section has-underline">Смотреть TV с нами комфортно и лампово</p>
+          <div class="advantages">
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>+1800</div>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Каналов</p>
+                <p class="advantages__text text-content">Получи доступ к огромному каталогу каналов</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>28</div>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Категорий</p>
+                <p class="advantages__text text-content">Лучшие фильмы всех времен, спорт, новости - найди свое TV вместе с нами</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>+300</div>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Каналов в высоком качестве</p>
+                <p class="advantages__text text-content">Купил 4K телевизор? Не позволяй ему простаивать зря</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>15</div>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Футбольных каналов</p>
+                <p class="advantages__text text-content">Следи за победами любимых клубов в мировых турнирах и чемпионатах</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>-25%</div>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Скидки</p>
+                <p class="advantages__text text-content">В случае первого пополнения аккаунта - покупай годовую подписку и экономь до 25%</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>10</div>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Стран</p>
+                <p class="advantages__text text-content">Где бы ты ни был - смотри любимые каналы на родном языке</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img">
+                <div>3</div><i class="m-icon-video"></i>
+              </div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Архив за последние 3 дня</p>
+                <p class="advantages__text text-content">ТВ Архив с возможностью просмотра передач за последние 3 дня</p>
+              </div>
+            </div>
+            <div class="advantage">
+              <div class="advantage__img"><i class="m-icon-live"></i></div>
+              <div class="advantage__content">
+                <p class="advantage__title title-block">Редактор списка каналов</p>
+                <p class="advantages__text text-content">Создавайте список своих избранных каналов</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-padding section-dual">
+        <div class="content-wrap">
+          <div class="section-cta">
+            <p class="title-section has-underline">Начни смотреть<span class="c-accent"> TV</span> прямо сейчас</p>
+            <div class="cta-steps">
+              <div class="cta-step">
+                <div class="cta-step__content">
+                  <p class="cta-step__tag">ШАГ 1</p>
+                  <p class="cta-step__title title-block">Это элементарно, Ватсон</p>
+                  <p class="cta-step__text text-content">Пройди простую регистрацию, настрой TV под себя и СМОТРИ всё в супер качестве.</p>
+                  <div class="cta-step___button">
+                    <button class="button-main">Зарегистрироваться</button>
+                  </div>
+                </div>
+                <div class="cta-step__img"><img src="./img/decor/cta-step-1.png"></div>
+              </div>
+              <div class="cta-step">
+                <div class="cta-step__content">
+                  <p class="cta-step__tag">ШАГ 2</p>
+                  <p class="cta-step__title title-block">Копейка рубль бережет</p>
+                  <p class="cta-step__text text-content">Экономь вместе с нами. Оформляй подписку на 3 или 6 месяцев или 1 год и получай скидку</p>
+                  <div class="cta-step___button">
+                    <button class="button-blue">Подписаться</button>
+                  </div>
+                </div>
+                <div class="cta-step__img"><img src="./img/decor/cta-step-2.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="section-devices">
+            <p class="title-section has-underline">Работает на любом устройстве</p>
+            <div class="devices-wrap">
+              <div class="devices">
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-1.svg" alt="ПРИСТАВКА"></div>
+                    <p class="device__title">ПРИСТАВКА</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-2.svg" alt="КОМПЬЮТЕР"></div>
+                    <p class="device__title">КОМПЬЮТЕР</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-3.svg" alt="НОУТБУК"></div>
+                    <p class="device__title">НОУТБУК</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-4.svg" alt="ANDROID"></div>
+                    <p class="device__title">ANDROID</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-5.svg" alt="APPLE"></div>
+                    <p class="device__title">APPLE</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-6.svg" alt="ТЕЛЕВИЗОР"></div>
+                    <p class="device__title">ТЕЛЕВИЗОР</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-7.svg" alt="MINISTRA TV"></div>
+                    <p class="device__title">MINISTRA TV</p>
+                    <div class="device__list">
+                      <div class="device__list-content">
+                        <div>OttPlayer,</div>
+                        <div>MAG250,</div>
+                        <div>STALKER,</div>
+                        <div>Enigma2,</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                        <div>IPTVplayer,</div>
+                        <div>LazyIPTV, DUNE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device">
+                  <div class="device__content">
+                    <div class="device__img"><img src="./img/decor/devices/device-8.svg" alt="undefined"></div>
+                    <p class="device__title">Приставки<br/>Set Top Box MAG
+                      <div class="device__list">
+                        <div class="device__list-content">
+                          <div>OttPlayer,</div>
+                          <div>MAG250,</div>
+                          <div>STALKER,</div>
+                          <div>Enigma2,</div>
+                        </div>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-wrap">
+        <div class="footer__content">
+          <p class="footer__copy">Copyright © 2011-2020</p>
+          <div class="footer__payment hidden-sm-down">
+            <p class="footer__payment-title">Мы принимаем:</p>
+            <div class="footer__payment-list">
+              <div class="footer__payment-item"><img src="./img/content/paypal.svg"><span class="footer__payment-item-title">Pay Pal</span></div>
+              <div class="footer__payment-item"><img src="./img/content/sprypay.png"></div>
+              <div class="footer__payment-item"><img src="./img/content/webmoney.svg"><span class="footer__payment-item-title">WebMoney</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./js/jquery.min.js"></script>
+    <script defer src="./js/slick.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.min.js"></script>
+    <script defer src="./js/ResizeObserver.global.js"></script>
+    <script defer src="./js/polyfills.js"></script>
+    <script defer src="./js/common.js"></script>
+  </body>
+</html>
