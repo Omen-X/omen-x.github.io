@@ -1859,6 +1859,11 @@ html.modal-open, body.modal-open {
     margin-bottom: 8px; }
   .player__programs .simplebar-track {
     right: -15px; }
+  .player__programs .simplebar-scrollbar:before,
+  .player__programs .simplebar-scrollbar.simplebar-visible:before {
+    background: #939393;
+    width: 3px;
+    opacity: 1; }
 
 .program-card {
   display: -webkit-box;
@@ -1977,8 +1982,189 @@ html.modal-open, body.modal-open {
 .player__date-curr {
   margin-right: 15px; }
 
-.player__settings > * {
-  margin-right: 15px; }
+.player__settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .player__settings > * {
+    margin-right: 15px; }
+    .player__settings > *:last-child {
+      margin-right: 0; }
+
+.player__filters-bottom {
+  padding-top: 13px;
+  max-width: 757px; }
+  .player__filters-bottom .simplebar-scrollbar:before,
+  .player__filters-bottom .simplebar-scrollbar.simplebar-visible:before {
+    background: rgba(121, 121, 121, 0.4);
+    height: 2px;
+    opacity: 1; }
+  .player__filters-bottom .tab-list {
+    padding-bottom: 11px; }
+
+.tab-list-wrap {
+  position: relative; }
+
+.tab-list__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.tab-list__item {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.16px;
+  margin-right: 40px;
+  white-space: nowrap;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .no-touch .tab-list__item:hover {
+    color: #FF9800; }
+  .tab-list__item:last-child {
+    margin-right: 0; }
+  .tab-list__item.active {
+    color: #FF9800; }
+
+.tab-list__arrow {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  top: 0;
+  background-color: #FAFAFA;
+  background-image: url("../img/icons/arr-double.svg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.tab-list__arrow_prev {
+  left: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.tab-list__arrow_next {
+  right: 0;
+  display: block; }
+
+.player-video {
+  height: 500px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px; }
+
+.player-video-placeholder {
+  background: url("../img/decor/player-video.png") no-repeat center;
+  background-size: cover;
+  height: 100%; }
+
+.player-channel .simplebar-scrollbar:before,
+.player-channel .simplebar-scrollbar.simplebar-visible:before {
+  background: #939393;
+  width: 3px; }
+
+.player-channel__content {
+  max-height: 600px; }
+
+.program {
+  padding: 15px 20px; }
+
+.program__item {
+  margin-bottom: 15px; }
+  .program__item:last-child {
+    margin-bottom: 0; }
+  .program__item.active .program__title-content-wrap {
+    position: relative;
+    padding-left: 20px; }
+    .program__item.active .program__title-content-wrap:before, .program__item.active .program__title-content-wrap:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 50%; }
+    .program__item.active .program__title-content-wrap:before {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #FF9800;
+      z-index: 1;
+      left: 0;
+      top: 1px; }
+    .program__item.active .program__title-content-wrap:after {
+      z-index: 2;
+      width: 6px;
+      height: 6px;
+      left: 5px;
+      top: 6px;
+      background: #FF9800; }
+
+.program__title {
+  margin-bottom: 11px; }
+
+.program__title-content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.16px; }
+
+.program__title-content {
+  margin-right: 20px; }
+
+.program__title-time {
+  display: inline-block;
+  margin-right: 15px;
+  min-width: 75px; }
+
+.program__title-text {
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .no-touch .program__item:not(.active) .program__title-text:hover {
+    cursor: pointer;
+    color: #FF9800; }
+
+.program__timer {
+  margin-left: auto; }
+
+.program__bar {
+  position: relative;
+  height: 4px;
+  margin-top: 6px;
+  background: #EFEEF3; }
+
+.program__bar-progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #FF9800;
+  width: 0;
+  max-width: 100%;
+  -webkit-transition: width .25s;
+  transition: width .25s; }
+
+.program__desc {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.16px; }
+
+.program__date {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #FF9800;
+  margin-bottom: 15px; }
 
 .search-dropdown {
   position: relative;
@@ -2008,7 +2194,8 @@ html.modal-open, body.modal-open {
     display: block; }
   .search-dropdown__list-wrap .simplebar-scrollbar:before,
   .search-dropdown__list-wrap .simplebar-scrollbar.simplebar-visible:before {
-    background: rgba(196, 196, 196, 0.4); }
+    background: rgba(196, 196, 196, 0.4);
+    width: 3px; }
 
 .search-dropdown__list {
   max-height: 300px; }
@@ -2049,8 +2236,8 @@ html.modal-open, body.modal-open {
 .select-main {
   position: relative; }
   .select-main.active .select-main__icon {
-    -webkit-transform: rotate(-270deg);
-    transform: rotate(-270deg); }
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
   .select-main.active .select-main__items {
     display: block; }
 
@@ -2066,6 +2253,7 @@ html.modal-open, body.modal-open {
   justify-content: space-between;
   cursor: pointer;
   border: 1px solid #ECECEC;
+  background: #ffffff;
   border-radius: 2px;
   padding: 4px 25px 2px 15px;
   -webkit-transition: border-color .2s;
@@ -2084,10 +2272,10 @@ html.modal-open, body.modal-open {
   position: absolute;
   right: 15px;
   top: 10px;
-  width: 6px;
-  height: 9px;
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  width: 10px;
+  height: 10px;
+  background: url("../img/icons/arr-select.svg") no-repeat center;
+  background-size: contain;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
@@ -2150,12 +2338,6 @@ main {
   transition: color .2s; }
   .no-touch .text-link:hover {
     color: #FF9800; }
-
-.simplebar-scrollbar:before,
-.simplebar-scrollbar.simplebar-visible:before {
-  background: #939393;
-  width: 3px;
-  opacity: 1; }
 
 .welcome-section {
   height: 100%;

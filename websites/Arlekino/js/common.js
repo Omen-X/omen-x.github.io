@@ -389,6 +389,17 @@ const mainSelect = () => {
     select.querySelector('.select-main__trigger').addEventListener('click', () => {
       select.classList.toggle('active');
     });
+
+    const selectValue = select.querySelector('.select-main__value');
+
+    select.querySelectorAll('.select-main__item').forEach((option) => {
+      option.addEventListener('click', () => {
+        const {value} = option.dataset;
+        selectValue.innerHTML = value;
+
+        select.classList.remove('active');
+      });
+    });
   });
 };
 
