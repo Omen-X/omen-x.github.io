@@ -250,8 +250,45 @@ const mSelect = () => {
         });
     });
   });
+
+
+  document.body.addEventListener('click', () => {
+    document.querySelectorAll('.m-select__search-input').forEach((s) => {
+      s.value = '';
+    });
+  });
 };
 
+const searchDropdown = () => {
+  document.querySelectorAll('.search-dropdown').forEach((search) => {
+    search.addEventListener('click', event => event.stopPropagation());
+
+    const input = search.querySelector('.search-dropdown__input');
+    const options = search.querySelectorAll('.search-dropdown__item');
+    const list = search.querySelector('.search-dropdown__list-wrap');
+
+    input.addEventListener('focus', () => {
+      list.classList.add('active');
+    });
+
+    input.addEventListener('keyup', () => {
+      const searchValue = input.value.toLowerCase();
+
+      options.forEach((option) => {
+          const optionValue = option.querySelector('.search-dropdown__item-title').innerHTML.toLowerCase();
+
+          if (optionValue.startsWith(searchValue)) option.classList.remove('hidden');
+          else option.classList.add('hidden');
+        });
+    });
+  });
+
+  document.body.addEventListener('click', () => {
+    document.querySelectorAll('.search-dropdown__input').forEach((s) => {
+      s.value = '';
+    });
+  });
+};
 
 /**
  * Instant validation for inputs
@@ -345,24 +382,33 @@ const epgCarousel = () => {
   }
 };
 
+const mainSelect = () => {
+  document.querySelectorAll('.select-main').forEach((select) => {
+    select.addEventListener('click', event => event.stopPropagation());
+
+    select.querySelector('.select-main__trigger').addEventListener('click', () => {
+      select.classList.toggle('active');
+    });
+  });
+};
+
 
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
   // Hide pop-up windows
   document.body.addEventListener('click', () => {
-     document.querySelectorAll('.m-select').forEach(select => select.classList.remove('active'));
-     document.querySelectorAll('.m-select__search-input').forEach((s) => {
-       s.value = '';
-     });
-     document.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
+    document.querySelectorAll('.m-select, .search-dropdown__list-wrap, .popup-block')
+      .forEach(select => select.classList.remove('active'));
+
+    document.querySelectorAll('.m-select__list-item, .search-dropdown__item')
+      .forEach(option => option.classList.remove('hidden'));
   });
 
   // Custom scrollbars
-  document.querySelectorAll('.device__list-content').forEach((el) => {
+  document.querySelectorAll('.device__list-content, .custom-scroll').forEach((el) => {
     new SimpleBar(el, {autoHide: false});
   });
-
   //
   window.addEventListener('resize', () => {
     welcomeSectionBg();
@@ -379,6 +425,8 @@ function documentReady() {
   devicesCarousel();
   dynamicStyles();
   epgCarousel();
+  searchDropdown();
+  mainSelect();
 }
 
 // ========>> UTILS <<========
