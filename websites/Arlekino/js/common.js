@@ -322,6 +322,30 @@ const devicesCarousel = () => {
   }
 };
 
+/**
+ * js-based styles for different sections
+ */
+const dynamicStyles = () => {
+  //
+};
+
+const epgCarousel = () => {
+  const $carousel = $('.epg-carousel');
+
+  if ($carousel.length) {
+    $carousel.slick({
+      slidesToShow: 1,
+      prevArrow: '<span class="slick-arrow slick-arrow_prev"><svg viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">\n'
+        + '<path d="M0.888707 5.99274L6.67387 0.207681C6.80767 0.0737718 6.98629 0 7.17674 0C7.3672 0 7.54581 0.0737718 7.67962 0.207681L8.10565 0.633613C8.38288 0.911155 8.38288 1.36224 8.10565 1.63936L3.24771 6.4973L8.11104 11.3606C8.24485 11.4945 8.31873 11.6731 8.31873 11.8634C8.31873 12.054 8.24485 12.2325 8.11104 12.3665L7.68501 12.7923C7.5511 12.9262 7.37259 13 7.18213 13C6.99168 13 6.81306 12.9262 6.67926 12.7923L0.888707 7.00198C0.754586 6.86764 0.680921 6.68829 0.681343 6.49762C0.680921 6.30622 0.754586 6.12697 0.888707 5.99274Z" fill="white"/>\n'
+        + '</svg>\n</span>',
+      nextArrow: '<span class="slick-arrow slick-arrow_next"><svg viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">\n'
+        + '<path d="M0.888707 5.99274L6.67387 0.207681C6.80767 0.0737718 6.98629 0 7.17674 0C7.3672 0 7.54581 0.0737718 7.67962 0.207681L8.10565 0.633613C8.38288 0.911155 8.38288 1.36224 8.10565 1.63936L3.24771 6.4973L8.11104 11.3606C8.24485 11.4945 8.31873 11.6731 8.31873 11.8634C8.31873 12.054 8.24485 12.2325 8.11104 12.3665L7.68501 12.7923C7.5511 12.9262 7.37259 13 7.18213 13C6.99168 13 6.81306 12.9262 6.67926 12.7923L0.888707 7.00198C0.754586 6.86764 0.680921 6.68829 0.681343 6.49762C0.680921 6.30622 0.754586 6.12697 0.888707 5.99274Z" fill="white"/>\n'
+        + '</svg>\n</span>'
+    });
+  }
+};
+
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady() {
@@ -333,14 +357,18 @@ function documentReady() {
      });
      document.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
   });
-  //
+
+  // Custom scrollbars
   document.querySelectorAll('.device__list-content').forEach((el) => {
     new SimpleBar(el, {autoHide: false});
   });
+
   //
   window.addEventListener('resize', () => {
     welcomeSectionBg();
+    dynamicStyles();
   });
+
   //
   mobileNav();
   customFormLogic();
@@ -349,6 +377,8 @@ function documentReady() {
   mSelect();
   welcomeSectionBg();
   devicesCarousel();
+  dynamicStyles();
+  epgCarousel();
 }
 
 // ========>> UTILS <<========
