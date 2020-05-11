@@ -1339,12 +1339,8 @@ html.modal-open, body.modal-open {
     line-height: 28px; } }
 
 .section-advantages {
-  background-image: url("../img/decor/advantages-mask.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(92, 112, 207, 0.93)), to(rgba(63, 80, 159, 0.93)));
-  background-image: url("../img/decor/advantages-mask.png"), linear-gradient(180deg, rgba(92, 112, 207, 0.93) 0%, rgba(63, 80, 159, 0.93) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 112, 207, 0.93)), to(rgba(63, 80, 159, 0.93)));
-  background-image: linear-gradient(180deg, rgba(92, 112, 207, 0.93) 0%, rgba(63, 80, 159, 0.93) 100%);
-  background-position: center;
-  background-repeat: no-repeat; }
+  background: url("../img/decor/advantages-bg.svg") no-repeat center;
+  background-size: cover; }
 
 .advantages {
   display: -webkit-box;
