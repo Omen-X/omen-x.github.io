@@ -16,12 +16,12 @@ $(document).ready(() => {
     });
   }
 
-  // Tabs list
+  // Channel group filter
   const $tabList = $('.tab-list', $player);
   if ($tabList.length) {
     const $tabListWrap = $('.tab-list-wrap', $player);
 
-    // Bar
+    // Custom scroll
     const simpleBar = new SimpleBar($tabList[0], {autoHide: false});
     const bar = simpleBar.getScrollElement();
 
@@ -77,6 +77,29 @@ $(document).ready(() => {
       if ((scroll + bar.clientWidth) === bar.scrollWidth) $nextArrow.hide();
       else if ((scroll + bar.clientWidth) < bar.scrollWidth) $nextArrow.show();
     });
+
+    // Channels filtering (sidebar + search dropdown)
+    const $tabs = $('.tab-list__item', $tabListWrap);
+
+    $tabs.click(function () {
+      const $tab = $(this);
+      const channelGroup = $tab.data('channel-group');
+
+      $tabs.removeClass('active');
+      $tab.addClass('active');
+
+      const $channels = $('.program-card', $player).add('.player__filters-top .search-dropdown__item', $player);
+
+      if (channelGroup === 'all') {
+        $channels.removeClass('filtered');
+        // $channels.show();
+      } else {
+        // $channels.not(`[data-channel-group=${channelGroup}]`).hide();
+        // $channels.filter(`[data-channel-group=${channelGroup}]`).show();
+        $channels.not(`[data-channel-group=${channelGroup}]`).addClass('filtered');
+        $channels.filter(`[data-channel-group=${channelGroup}]`).removeClass('filtered');
+      }
+    });
   }
 
   // Channel block
@@ -86,5 +109,24 @@ $(document).ready(() => {
     const $channelContent = $('.player-channel__content', $channel);
 
     new SimpleBar($channelContent[0], {autoHide: false});
+  }
+
+  // Channel change handler
+  $('.program-card, .search-dropdown__item', $player).click(() => {
+    $player.addClass('loading');
+
+    mockChannelFetch()
+      .then((res) => {
+      })
+      .finally(() => {
+        $player.removeClass('loading');
+      });
+  });
+
+  // Mock channel fetch
+  function mockChannelFetch() {
+    return new Promise((resolve) => {
+      setTimeout(resolve, 1500);
+    });
   }
 });
