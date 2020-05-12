@@ -89,7 +89,7 @@
           <div class="section-player">
             <p class="title-section">Смотреть телевизор с нами комфортно доступно более&nbsp;<span class="c-accent">1800&nbsp;</span>каналов
               <div class="player-wrap">
-                <div class="player">
+                <div class="player loading">
                   <div class="player__programs">
                     <div class="program-card active" data-channel-group="armenia">
                       <div class="program-card__content">
@@ -423,7 +423,7 @@
                     <div class="player__filters">
                       <div class="player__filters-top">
                         <div class="player__date"><span class="player__date-curr">Вт. 5 мая 2020 г.</span><span class="player__date-archive">Демо на 15 мин.</span></div>
-                        <div class="search-dropdown">
+                        <div class="search-dropdown hidden-sm-down">
                           <input class="search-dropdown__input" type="text" name="channel-search" placeholder="Поиск каналов">
                           <div class="search-dropdown__list-wrap">
                             <div class="search-dropdown__list custom-scroll text-content">
@@ -499,36 +499,269 @@
                         </div>
                       </div>
                       <div class="player__filters-bottom">
-                        <div class="tab-list-wrap">
+                        <div class="tab-list-wrap hidden-sm-down">
                           <div class="tab-list__arrow tab-list__arrow_prev"></div>
                           <div class="tab-list__arrow tab-list__arrow_next"></div>
                           <div class="tab-list">
                             <div class="tab-list__items">
-                              <div class="tab-list__item active" data-channel-group="all">Все каналы</div>
-                              <div class="tab-list__item" data-channel-group="armenia">AM Armenia</div>
-                              <div class="tab-list__item" data-channel-group="belarus">BL belarus</div>
-                              <div class="tab-list__item" data-channel-group="israel">iS israel</div>
-                              <div class="tab-list__item" data-channel-group="armenia">kZ kazakhstan</div>
-                              <div class="tab-list__item" data-channel-group="belarus">lV+lT</div>
-                              <div class="tab-list__item" data-channel-group="israel">uA украина</div>
-                              <div class="tab-list__item" data-channel-group="armenia">AM Armenia</div>
-                              <div class="tab-list__item" data-channel-group="belarus">BL belarus</div>
-                              <div class="tab-list__item" data-channel-group="israel">iS israel</div>
-                              <div class="tab-list__item" data-channel-group="armenia">kZ kazakhstan</div>
-                              <div class="tab-list__item" data-channel-group="belarus">lV+lT</div>
-                              <div class="tab-list__item" data-channel-group="israel">uA украина</div>
-                              <div class="tab-list__item" data-channel-group="armenia">AM Armenia</div>
-                              <div class="tab-list__item" data-channel-group="belarus">BL belarus</div>
-                              <div class="tab-list__item" data-channel-group="israel">iS israel</div>
-                              <div class="tab-list__item" data-channel-group="armenia">kZ kazakhstan</div>
-                              <div class="tab-list__item" data-channel-group="belarus">lV+lT</div>
-                              <div class="tab-list__item" data-channel-group="israel">uA украина</div>
-                              <div class="tab-list__item" data-channel-group="armenia">AM Armenia</div>
-                              <div class="tab-list__item" data-channel-group="belarus">BL belarus</div>
-                              <div class="tab-list__item" data-channel-group="israel">iS israel</div>
-                              <div class="tab-list__item" data-channel-group="armenia">kZ kazakhstan</div>
-                              <div class="tab-list__item" data-channel-group="belarus">lV+lT</div>
-                              <div class="tab-list__item" data-channel-group="israel">uA украина</div>
+                              <div class="tab-list__item active" data-channel-filter="all">Все каналы</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">AM Armenia</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">BL belarus</div>
+                              <div class="tab-list__item" data-channel-filter="israel">iS israel</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">kZ kazakhstan</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">lV+lT</div>
+                              <div class="tab-list__item" data-channel-filter="israel">uA украина</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">AM Armenia</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">BL belarus</div>
+                              <div class="tab-list__item" data-channel-filter="israel">iS israel</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">kZ kazakhstan</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">lV+lT</div>
+                              <div class="tab-list__item" data-channel-filter="israel">uA украина</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">AM Armenia</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">BL belarus</div>
+                              <div class="tab-list__item" data-channel-filter="israel">iS israel</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">kZ kazakhstan</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">lV+lT</div>
+                              <div class="tab-list__item" data-channel-filter="israel">uA украина</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">AM Armenia</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">BL belarus</div>
+                              <div class="tab-list__item" data-channel-filter="israel">iS israel</div>
+                              <div class="tab-list__item" data-channel-filter="armenia">kZ kazakhstan</div>
+                              <div class="tab-list__item" data-channel-filter="belarus">lV+lT</div>
+                              <div class="tab-list__item" data-channel-filter="israel">uA украина</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="select-main select-main_transparent popup-block hidden-tb-up">
+                          <div class="select-main__trigger"><span class="select-main__value">Выберите группу каналов</span><span class="select-main__icon"></span></div>
+                          <div class="select-main__items text-content">
+                            <div class="select-main__item" data-channel-filter="all" data-value="Все каналы">Все каналы</div>
+                            <div class="select-main__item" data-channel-filter="belarus" data-value="BL belarus">BL belarus</div>
+                            <div class="select-main__item" data-channel-filter="israel" data-value="IS israel">IS israel</div>
+                            <div class="select-main__item" data-channel-filter="armenia" data-value="KZ kazakhstan">KZ kazakhstan</div>
+                            <div class="select-main__item" data-channel-filter="belarus" data-value="LV+lT">LV+lT</div>
+                            <div class="select-main__item" data-channel-filter="israel" data-value="UA украина">UA украина</div>
+                            <div class="select-main__item" data-channel-filter="all" data-value="Все каналы">Все каналы</div>
+                            <div class="select-main__item" data-channel-filter="belarus" data-value="BL belarus">BL belarus</div>
+                            <div class="select-main__item" data-channel-filter="israel" data-value="IS israel">IS israel</div>
+                            <div class="select-main__item" data-channel-filter="armenia" data-value="KZ kazakhstan">KZ kazakhstan</div>
+                            <div class="select-main__item" data-channel-filter="belarus" data-value="LV+lT">LV+lT</div>
+                            <div class="select-main__item" data-channel-filter="israel" data-value="UA украина">UA украина</div>
+                          </div>
+                        </div>
+                        <div class="search-popup hidden-tb-up">
+                          <div class="search-popup__trigger"><span>поиск канала</span><span class="search-popup__trigger-icon"></span></div>
+                          <div class="search-dropdown">
+                            <input class="search-dropdown__input" type="text" name="channel-search" placeholder="Введите название">
+                            <div class="search-dropdown__list-wrap">
+                              <div class="search-dropdown__list custom-scroll text-content">
+                                <div class="search-dropdown__item" data-channel-group="armenia">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-1.png" alt="channel-1"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">Киев</p>
+                                      <div class="program-card__text">
+                                        <p>Сериал “Сваты”.</p>
+                                        <p>9 серия 1 сезон.</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="armenia">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-2.png" alt="channel-2"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">новости 24</p>
+                                      <div class="program-card__text">
+                                        <p>Экономика.</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 30%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="belarus">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-3.png" alt="channel-3"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">карусель</p>
+                                      <div class="program-card__text">
+                                        <p>Супер крылья. Джетт и его друзья</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 70%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="belarus">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-4.png" alt="channel-4"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">1+1</p>
+                                      <div class="program-card__text">
+                                        <p>Мой герой. Екатерина Градова</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="israel">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-5.png" alt="channel-5"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">моя планета</p>
+                                      <div class="program-card__text">
+                                        <p>Один день в городе. Сеул</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="israel">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-6.png" alt="channel-6"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">домашний</p>
+                                      <div class="program-card__text">
+                                        <p>Нарушая правила. 1-я - 4-я серии (16+)</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="armenia">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-1.png" alt="channel-1"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">Киев</p>
+                                      <div class="program-card__text">
+                                        <p>Сериал “Сваты”.</p>
+                                        <p>9 серия 1 сезон.</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="armenia">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-2.png" alt="channel-2"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">новости 24</p>
+                                      <div class="program-card__text">
+                                        <p>Экономика.</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 30%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="belarus">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-3.png" alt="channel-3"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">карусель</p>
+                                      <div class="program-card__text">
+                                        <p>Супер крылья. Джетт и его друзья</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 70%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="belarus">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-4.png" alt="channel-4"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">1+1</p>
+                                      <div class="program-card__text">
+                                        <p>Мой герой. Екатерина Градова</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="israel">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-5.png" alt="channel-5"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">моя планета</p>
+                                      <div class="program-card__text">
+                                        <p>Один день в городе. Сеул</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="search-dropdown__item" data-channel-group="israel">
+                                  <div class="search-dropdown__item-img"><img src="./img/content/channels/channel-6.png" alt="channel-6"></div>
+                                  <div class="search-dropdown__content">
+                                    <div class="program-card__info">
+                                      <p class="search-dropdown__item-title">домашний</p>
+                                      <div class="program-card__text">
+                                        <p>Нарушая правила. 1-я - 4-я серии (16+)</p>
+                                      </div>
+                                    </div>
+                                    <div class="program-card__timer">
+                                      <div class="program-card__timer-counter"><span class="program-card__timer-curr">0:00</span><span class="program-card__timer-delim">&nbsp;из&nbsp;</span><span class="program-card__timer-total">3:00</span></div>
+                                      <div class="program-card__timer-bar">
+                                        <div class="program-card__timer-progress" style="width: 50%"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

@@ -285,6 +285,9 @@ const searchDropdown = () => {
     options.forEach((option) => {
       option.addEventListener('click', () => {
         list.classList.remove('active');
+
+        const popup = list.closest('.search-popup');
+        if (popup) popup.classList.remove('active');
       });
     });
   });
@@ -293,6 +296,18 @@ const searchDropdown = () => {
   document.body.addEventListener('click', () => {
     document.querySelectorAll('.search-dropdown__input').forEach((s) => {
       s.value = '';
+    });
+  });
+
+  // Search popup
+
+  document.querySelectorAll('.search-popup').forEach((search) => {
+    search.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+
+    search.querySelector('.search-popup__trigger').addEventListener('click', () => {
+      search.classList.toggle('active');
     });
   });
 };
@@ -372,6 +387,10 @@ const mainSelect = () => {
         select.classList.remove('active');
       });
     });
+
+    //
+    const selectItems = select.querySelector('.select-main__items');
+    new SimpleBar(selectItems, {autoHide: false});
   });
 };
 
@@ -381,7 +400,7 @@ const mainSelect = () => {
 function documentReady() {
   // Hide pop-up windows
   document.body.addEventListener('click', () => {
-    document.querySelectorAll('.m-select, .search-dropdown__list-wrap, .popup-block, .device__content')
+    document.querySelectorAll('.m-select, .search-dropdown__list-wrap, .popup-block, .device__content, .search-popup')
       .forEach(select => select.classList.remove('active'));
 
     document.querySelectorAll('.m-select__list-item, .search-dropdown__item')
@@ -397,6 +416,9 @@ function documentReady() {
     welcomeSectionBg();
     dynamicStyles();
   });
+
+  //
+
 
   //
   mobileNav();

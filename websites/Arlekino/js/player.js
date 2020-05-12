@@ -16,6 +16,18 @@ $(document).ready(() => {
     });
   }
 
+  //
+  const filterChannels = (channelGroup) => {
+    const $channels = $('[data-channel-group]', $player);
+
+    if (channelGroup === 'all') {
+      $channels.removeClass('filtered');
+    } else {
+      $channels.not(`[data-channel-group=${channelGroup}]`).addClass('filtered');
+      $channels.filter(`[data-channel-group=${channelGroup}]`).removeClass('filtered');
+    }
+  };
+
   // Channel group filter
   const $tabList = $('.tab-list', $player);
   if ($tabList.length) {
@@ -78,29 +90,22 @@ $(document).ready(() => {
       else if ((scroll + bar.clientWidth) < bar.scrollWidth) $nextArrow.show();
     });
 
-    // Channels filtering (sidebar + search dropdown)
+    // Tabs
     const $tabs = $('.tab-list__item', $tabListWrap);
 
     $tabs.click(function () {
-      const $tab = $(this);
-      const channelGroup = $tab.data('channel-group');
-
       $tabs.removeClass('active');
-      $tab.addClass('active');
-
-      const $channels = $('.program-card', $player).add('.player__filters-top .search-dropdown__item', $player);
-
-      if (channelGroup === 'all') {
-        $channels.removeClass('filtered');
-        // $channels.show();
-      } else {
-        // $channels.not(`[data-channel-group=${channelGroup}]`).hide();
-        // $channels.filter(`[data-channel-group=${channelGroup}]`).show();
-        $channels.not(`[data-channel-group=${channelGroup}]`).addClass('filtered');
-        $channels.filter(`[data-channel-group=${channelGroup}]`).removeClass('filtered');
-      }
+      $(this).addClass('active');
     });
   }
+
+  // Channels filtering
+  $('[data-channel-filter]').click(function () {
+    const group = $(this).data('channel-filter');
+
+    filterChannels(group);
+  });
+
 
   // Channel block
   const $channel = $('.player-channel', $player);
@@ -129,4 +134,37 @@ $(document).ready(() => {
       setTimeout(resolve, 1500);
     });
   }
+
+  //
+  const truncateDescription = (elem) => {
+    const text = elem.innerText;
+
+    if (text.length > 400) {
+      const visibleText = text.slice(0, 400);
+      elem.innerText = `${visibleText}...`;
+
+      //
+      const button = document.createElement('div');
+      button.classList.add('read-more');
+      button.innerText = 'Читать полностью';
+
+      button.addEventListener('click', () => {
+        elem.innerText = text;
+        button.classList.add('hidden');
+      });
+      //
+
+      elem.parentElement.appendChild(button);
+    }
+  };
+
+  // Truncate description on mobile devices
+  if (window.innerWidth < 768) {
+    $('.program__desc p', $player).each((i, elem) => {
+      truncateDescription(elem);
+    });
+  }
+
+  //
+  $player.removeClass('loading');
 });
