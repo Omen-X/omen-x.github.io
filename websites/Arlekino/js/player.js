@@ -2,7 +2,7 @@ $(document).ready(() => {
   const $player = $('.player');
   if (!$player.length) return;
 
-  // Player program cards
+  // Player program cards(sidebar)
   const $programs = $('.player__programs', $player);
 
   if ($programs.length) {

@@ -1232,9 +1232,6 @@ html.modal-open, body.modal-open {
 
 @media only screen and (max-width: 767px) {
   .footer__content {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px; }
   .footer__copy {
@@ -1561,7 +1558,8 @@ html.modal-open, body.modal-open {
 .connection__info {
   padding-right: 20px; }
   .connection__info .title-block {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 600; }
 
 .connection__list {
   color: rgba(32, 32, 32, 0.6); }
@@ -1818,6 +1816,12 @@ html.modal-open, body.modal-open {
       width: 100%;
       margin-left: 0;
       margin-right: 0; } }
+
+.section-tv {
+  background-image: url("../img/decor/arc-gray.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom -240px;
+  background-size: 100% auto; }
 
 .section-player {
   padding-top: 50px; }
@@ -2223,6 +2227,14 @@ html.modal-open, body.modal-open {
   margin-top: 5px;
   margin-bottom: 5px; }
 
+@media (min-width: 1921px) {
+  .section-tv {
+    background-position: center top 300px; } }
+
+@media (max-width: 1920px) {
+  .section-tv {
+    background-size: 1920px auto; } }
+
 @media only screen and (max-width: 1299px) {
   .player-wrap {
     padding-left: 48px;
@@ -2257,6 +2269,8 @@ html.modal-open, body.modal-open {
     margin-right: 10px; } }
 
 @media only screen and (max-width: 991px) {
+  .section-tv {
+    background: none; }
   .player-wrap {
     height: 735px; }
   .player__programs {
@@ -2892,10 +2906,19 @@ main {
   max-width: 410px; }
 
 .banner__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   padding-top: 50px;
   margin-right: -10px;
   -ms-flex-negative: 0;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
 
 .cta-steps {
   display: -webkit-box;
@@ -2967,7 +2990,8 @@ main {
   line-height: 24px;
   font-weight: 600;
   margin-bottom: 10px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1; }
 
 .epg-block__text {
   margin-bottom: 45px; }
