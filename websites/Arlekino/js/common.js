@@ -16,6 +16,41 @@ const mobileNav = () => {
   }
 
   navTrigger.addEventListener('click', navToggle);
+
+  const $headerAccent = $('.header_blue');
+
+  if (window.innerWidth < 992 && $headerAccent.length) {
+    // Optimized window scroll handler
+    const raf = window.requestAnimationFrame;
+    let lastScrollTop = window.pageYOffset;
+
+    const handleWindowScroll = () => {
+      const currentScrollTop = window.pageYOffset;
+
+      if (lastScrollTop === currentScrollTop) {
+        raf(handleWindowScroll);
+        return false;
+      }
+
+      if (currentScrollTop === 0) {
+        $headerAccent.removeClass('fixed fixed-hidden');
+        // scroll up
+      } else if (lastScrollTop > currentScrollTop) {
+          $headerAccent.removeClass('fixed-hidden');
+          $headerAccent.addClass('fixed');
+          // scroll down
+        } else if (lastScrollTop < currentScrollTop) {
+          $headerAccent.removeClass('fixed');
+          $headerAccent.addClass('fixed-hidden');
+        }
+
+
+      lastScrollTop = currentScrollTop;
+      return raf(handleWindowScroll);
+    };
+
+    handleWindowScroll();
+  }
 };
 
 /**
@@ -416,8 +451,6 @@ function documentReady() {
     welcomeSectionBg();
     dynamicStyles();
   });
-
-  //
 
 
   //
