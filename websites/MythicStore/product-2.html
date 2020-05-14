@@ -28,9 +28,15 @@
       document.body.classList.add(sBrowser);
       
     </script>
-    <header class="header">
+    <header class="header header_product">
       <div class="content-wrap">
-        <div class="header__content"><a class="logo" href="./index.html">LOGO</a>
+        <div class="header__content"><a class="logo" href="./index.html"><img src="./img/decor/logo.png" alt="MythicScore"></a>
+          <div class="header__links-wrap popup-block">
+            <div class="header__links-button hidden-lg-up">
+              <div class="header__links-button-icon"><i class="m-icon-arrow-down"></i></div>
+            </div>
+            <div class="header__links"><a class="header__link active" href="./product-1.html">Raider.io Score Boost</a><a class="header__link" href="./product-2.html">Mythic+ Dungeons Boost</a><a class="header__link" href="./product-3.html">Fast 430-465 Full Gearing</a><a class="header__link" href="./product-4.html">Fast 430-465 Full Gearing</a><a class="header__link" href="./product-5.html">Keystone Master Season 4</a></div>
+          </div>
           <div class="user-button-wrap hidden-tb-up"><span class="user-button" data-target-side-block="login"></span><span class="user-button" data-target-side-block="account"></span></div>
           <div class="menu-button hidden-tb-up" id="menu-button"><i class="m-icon-menu"></i></div>
         </div>
@@ -250,95 +256,97 @@
     <main>
       <section class="product-section" style="background-image: url(&quot;./img/content/product-2.jpg&quot;)">
         <div class="content-wrap">
-          <div class="product-wrap">
-            <div class="product">
-              <div class="product__title">
-                <p class="product__name">Raider.io Score Boost</p>
-                <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
-              </div>
-              <form id="form-product">
-                <p class="product__block-title">Choose Difficulty:</p>
-                <div class="form__range-slider">
-                  <div class="range-slider">
-                    <p class="range-slider__title">Mythic</p>
-                    <div class="range-slider__input">
-                      <input class="js-range-slider" type="text" name="difficulty" data-min="400" data-max="2000" value="800" data-step="400">
-                    </div>
-                  </div>
+          <div class="product-scroll custom-scroll">
+            <div class="product-wrap">
+              <div class="product">
+                <div class="product__title">
+                  <p class="product__name">Raider.io Score Boost</p>
+                  <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
                 </div>
-                <div class="select-buttons">
-                  <div class="select-button popup-block">
-                    <select class="hidden" name="extra-armor">
-                      <option value="">Add Extra armor traders</option>
-                      <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                      <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                      <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                      <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                    </select>
-                  </div>
-                  <div class="select-button popup-block">
-                    <select class="hidden" name="extra-runs">
-                      <option value="">Add Extra Runs</option>
-                      <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                      <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                      <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                      <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                      <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
-                    </select>
-                  </div>
-                </div>
-                <div class="product__advanced">
-                  <p class="product__block-title">Advanced options:</p>
-                  <div class="checkbox-group">
-                    <div class="checkbox-field">
-                      <input type="checkbox" name="selfplay" id="player-selfplay" checked>
-                      <label for="player-selfplay"><span>Selfplay:</span><span class="c-accent">$0</span></label>
-                    </div>
-                    <div class="checkbox-field">
-                      <input type="checkbox" name="timer-guarantee" id="timer-guarantee" checked>
-                      <label for="timer-guarantee"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
-                    </div>
-                    <div class="checkbox-field">
-                      <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-2">
-                      <label for="timer-guarantee-2"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
+                <form id="form-product">
+                  <p class="product__block-title">Choose Difficulty:</p>
+                  <div class="form__range-slider">
+                    <div class="range-slider">
+                      <p class="range-slider__title">Mythic</p>
+                      <div class="range-slider__input">
+                        <input class="hidden js-range-slider" type="text" name="difficulty" data-min="400" data-max="2000" value="800" data-step="400">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="form__submit product__buttons">
-                  <div class="product__price">$33</div>
-                  <button class="button-main" type="submit">buy now</button>
-                  <button class="button-dark" type="button">add to cart</button>
-                </div>
-              </form>
-              <div class="faq">
-                <p class="product__block-title">FAQ:</p>
-                <div class="faq__items">
-                  <div class="faq__item"><span class="faq__item-button"><span></span></span>
-                    <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                    <div class="faq__item-text">
-                      <p>Online (secure): browse our range and add products to your basket.</p>
-                      <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                  <div class="select-buttons">
+                    <div class="select-button popup-block">
+                      <select class="hidden" name="extra-armor">
+                        <option value="">Add Extra armor traders</option>
+                        <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                        <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                        <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                        <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                      </select>
+                    </div>
+                    <div class="select-button popup-block">
+                      <select class="hidden" name="extra-runs">
+                        <option value="">Add Extra Runs</option>
+                        <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                        <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                        <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                        <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                        <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
+                      </select>
                     </div>
                   </div>
-                  <div class="faq__item"><span class="faq__item-button"><span></span></span>
-                    <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                    <div class="faq__item-text">
-                      <p>Online (secure): browse our range and add products to your basket.</p>
-                      <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                  <div class="product__advanced">
+                    <p class="product__block-title">Advanced options:</p>
+                    <div class="checkbox-group">
+                      <div class="checkbox-field">
+                        <input type="checkbox" name="selfplay" id="player-selfplay" checked>
+                        <label for="player-selfplay"><span>Selfplay:</span><span class="c-accent">$0</span></label>
+                      </div>
+                      <div class="checkbox-field">
+                        <input type="checkbox" name="timer-guarantee" id="timer-guarantee" checked>
+                        <label for="timer-guarantee"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
+                      </div>
+                      <div class="checkbox-field">
+                        <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-2">
+                        <label for="timer-guarantee-2"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
+                      </div>
                     </div>
                   </div>
-                  <div class="faq__item"><span class="faq__item-button"><span></span></span>
-                    <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                    <div class="faq__item-text">
-                      <p>Online (secure): browse our range and add products to your basket.</p>
-                      <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                    </div>
+                  <div class="form__submit product__buttons">
+                    <div class="product__price">$33</div>
+                    <button class="button-main" type="submit">buy now</button>
+                    <button class="button-dark" type="button">add to cart</button>
                   </div>
-                  <div class="faq__item"><span class="faq__item-button"><span></span></span>
-                    <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                    <div class="faq__item-text">
-                      <p>Online (secure): browse our range and add products to your basket.</p>
-                      <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                </form>
+                <div class="faq">
+                  <p class="product__block-title">FAQ:</p>
+                  <div class="faq__items">
+                    <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                      <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                      <div class="faq__item-text">
+                        <p>Online (secure): browse our range and add products to your basket.</p>
+                        <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                      </div>
+                    </div>
+                    <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                      <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                      <div class="faq__item-text">
+                        <p>Online (secure): browse our range and add products to your basket.</p>
+                        <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                      </div>
+                    </div>
+                    <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                      <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                      <div class="faq__item-text">
+                        <p>Online (secure): browse our range and add products to your basket.</p>
+                        <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                      </div>
+                    </div>
+                    <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                      <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                      <div class="faq__item-text">
+                        <p>Online (secure): browse our range and add products to your basket.</p>
+                        <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                      </div>
                     </div>
                   </div>
                 </div>
