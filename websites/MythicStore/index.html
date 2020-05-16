@@ -35,7 +35,8 @@
             <div class="header__links-button hidden-lg-up">
               <div class="header__links-button-icon"><i class="m-icon-arrow-down"></i></div>
             </div>
-            <div class="header__links"><a class="header__link active" href="./product-1.html">Raider.io Score Boost</a><a class="header__link" href="./product-2.html">Mythic+ Dungeons Boost</a><a class="header__link" href="./product-3.html">Fast 430-465 Full Gearing</a><a class="header__link" href="./product-4.html">Fast 430-465 Full Gearing</a><a class="header__link" href="./product-5.html">Keystone Master Season 4</a></div>
+            <div class="header__links-cursor"></div>
+            <div class="header__links"><a class="header__link" href="./product-1.html">Raider.io Score Boost</a><a class="header__link" href="./product-2.html">Mythic+ Dungeons Boost</a><a class="header__link" href="./product-3.html">Fast 430-465 Full Gearing</a><a class="header__link" href="./product-4.html">Fast 430-465 Full Gearing</a><a class="header__link" href="./product-5.html">Keystone Master Season 4</a></div>
           </div>
           <div class="user-button-wrap hidden-tb-up"><span class="user-button" data-target-side-block="login"></span><span class="user-button" data-target-side-block="account"></span></div>
           <div class="menu-button hidden-tb-up" id="menu-button"><i class="m-icon-menu"></i></div>
@@ -268,7 +269,7 @@
                         <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
                       </div>
                       <div class="product__content">
-                        <form id="form-product">
+                        <form class="form-product">
                           <div class="radio-buttons">
                             <div class="radio-button">
                               <input type="radio" name="product-type" id="product-type-1" value="1">
@@ -360,7 +361,9 @@
                           </div>
                           <div class="form__submit product__buttons">
                             <div class="product__price">$33</div>
-                            <button class="button-main" type="submit">buy now</button>
+                            <button class="button-main" type="submit">
+                              <buy>now</buy><span class="c-accent">$33</span>
+                            </button>
                             <button class="button-dark" type="button">add to cart</button>
                           </div>
                         </form>
@@ -408,136 +411,92 @@
                   <div class="product-wrap">
                     <div class="product">
                       <div class="product__title">
-                        <p class="product__name">Mythic+ Dungeons Boost</p>
+                        <p class="product__name">Raider.io Score Boost</p>
                         <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
                       </div>
-                      <div class="product__content">
-                        <form id="form-product">
-                          <div class="radio-buttons">
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-1" value="1">
-                              <label for="product-type-1">
-                                <p class="radio-button__title">Mythic +10</p>
-                                <p class="radio-button__price">$20</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-2" value="2" checked>
-                              <label for="product-type-2">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-3" value="3">
-                              <label for="product-type-3">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-4" value="4">
-                              <label for="product-type-4">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-5" value="5">
-                              <label for="product-type-5">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-6" value="6">
-                              <label for="product-type-6">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-7" value="7">
-                              <label for="product-type-7">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
+                      <form class="form-product">
+                        <p class="product__block-title">Choose Difficulty:</p>
+                        <div class="form__range-slider">
+                          <div class="range-slider">
+                            <p class="range-slider__title">Mythic</p>
+                            <div class="range-slider__input">
+                              <input class="hidden js-range-slider" type="text" name="difficulty" data-min="400" data-max="2000" value="800" data-step="400">
                             </div>
                           </div>
-                          <div class="select-buttons">
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-armor">
-                                <option value="">Add Extra armor traders</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
+                        </div>
+                        <div class="select-buttons">
+                          <div class="select-button popup-block">
+                            <select class="hidden" name="extra-armor">
+                              <option value="">Add Extra armor traders</option>
+                              <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                              <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                              <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                              <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                            </select>
+                          </div>
+                          <div class="select-button popup-block">
+                            <select class="hidden" name="extra-runs">
+                              <option value="">Add Extra Runs</option>
+                              <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                              <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                              <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                              <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                              <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="product__advanced">
+                          <p class="product__block-title">Advanced options:</p>
+                          <div class="checkbox-group">
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="selfplay" id="player-selfplay-2" checked>
+                              <label for="player-selfplay-2"><span>Selfplay:</span><span class="c-accent">$0</span></label>
                             </div>
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-runs">
-                                <option value="">Add Extra Runs</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                                <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="timer-guarantee" id="timer-guarantee-3" checked>
+                              <label for="timer-guarantee-3"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
+                            </div>
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-4">
+                              <label for="timer-guarantee-4"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
                             </div>
                           </div>
-                          <div class="product__advanced">
-                            <p class="product__block-title">Advanced options:</p>
-                            <div class="checkbox-group">
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="selfplay" id="player-selfplay" checked>
-                                <label for="player-selfplay"><span>Selfplay:</span><span class="c-accent">$0</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee" id="timer-guarantee" checked>
-                                <label for="timer-guarantee"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-2">
-                                <label for="timer-guarantee-2"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
-                              </div>
+                        </div>
+                        <div class="form__submit product__buttons">
+                          <div class="product__price">$33</div>
+                          <button class="button-main" type="submit">buy now</button>
+                          <button class="button-dark" type="button">add to cart</button>
+                        </div>
+                      </form>
+                      <div class="faq">
+                        <p class="product__block-title">FAQ:</p>
+                        <div class="faq__items">
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
-                          <div class="form__submit product__buttons">
-                            <div class="product__price">$33</div>
-                            <button class="button-main" type="submit">buy now</button>
-                            <button class="button-dark" type="button">add to cart</button>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                            </div>
                           </div>
-                        </form>
-                        <div class="faq">
-                          <p class="product__block-title">FAQ:</p>
-                          <div class="faq__items">
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
+                          </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
                         </div>
@@ -552,136 +511,109 @@
                   <div class="product-wrap">
                     <div class="product">
                       <div class="product__title">
-                        <p class="product__name">Mythic+ Dungeons Boost</p>
+                        <p class="product__name">Rent High Keys Pro Team</p>
                         <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
                       </div>
-                      <div class="product__content">
-                        <form id="form-product">
-                          <div class="radio-buttons">
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-1" value="1">
-                              <label for="product-type-1">
-                                <p class="radio-button__title">Mythic +10</p>
-                                <p class="radio-button__price">$20</p>
-                              </label>
+                      <form class="form-product">
+                        <div class="radio-buttons radio-buttons_large">
+                          <div class="radio-button">
+                            <input type="radio" name="keys" id="keys-3" value="1" checked>
+                            <label for="keys-3">
+                              <p class="radio-button__title">+15/+18 Keys</p>
+                            </label>
+                          </div>
+                          <div class="radio-button">
+                            <input type="radio" name="keys" id="keys-4" value="2">
+                            <label for="keys-4">
+                              <p class="radio-button__title">+19/+22 Keys</p>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="radio-buttons">
+                          <div class="radio-button">
+                            <input type="radio" name="product-type" id="product-type-11" value="1">
+                            <label for="product-type-11">
+                              <p class="radio-button__title">Mythic +10</p>
+                              <p class="radio-button__price">$20</p>
+                            </label>
+                          </div>
+                          <div class="radio-button">
+                            <input type="radio" name="product-type" id="product-type-12" value="2" checked>
+                            <label for="product-type-12">
+                              <p class="radio-button__title">Mythic +15</p>
+                              <p class="radio-button__price">$30</p>
+                            </label>
+                          </div>
+                          <div class="radio-button">
+                            <input type="radio" name="product-type" id="product-type-8" value="3">
+                            <label for="product-type-8">
+                              <p class="radio-button__title">Mythic +20</p>
+                              <p class="radio-button__price">$40</p>
+                            </label>
+                          </div>
+                          <div class="radio-button">
+                            <input type="radio" name="product-type" id="product-type-9" value="4">
+                            <label for="product-type-9">
+                              <p class="radio-button__title">Mythic +15</p>
+                              <p class="radio-button__price">$30</p>
+                            </label>
+                          </div>
+                          <div class="radio-button">
+                            <input type="radio" name="product-type" id="product-type-10" value="5">
+                            <label for="product-type-10">
+                              <p class="radio-button__title">Mythic +15</p>
+                              <p class="radio-button__price">$35</p>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product__advanced">
+                          <p class="product__block-title">Advanced options:</p>
+                          <div class="checkbox-group">
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="selfplay" id="player-selfplay-3" checked>
+                              <label for="player-selfplay-3"><span>Selfplay:</span><span class="c-accent">$0</span></label>
                             </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-2" value="2" checked>
-                              <label for="product-type-2">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-3" value="3">
-                              <label for="product-type-3">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-4" value="4">
-                              <label for="product-type-4">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-5" value="5">
-                              <label for="product-type-5">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-6" value="6">
-                              <label for="product-type-6">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-7" value="7">
-                              <label for="product-type-7">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="timer-guarantee" id="timer-guarantee-5" checked>
+                              <label for="timer-guarantee-5"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
                             </div>
                           </div>
-                          <div class="select-buttons">
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-armor">
-                                <option value="">Add Extra armor traders</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
-                            </div>
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-runs">
-                                <option value="">Add Extra Runs</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                                <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
+                        </div>
+                        <div class="form__submit product__buttons">
+                          <div class="product__price">$33</div>
+                          <button class="button-main" type="submit">buy now</button>
+                          <button class="button-dark" type="button">add to cart</button>
+                        </div>
+                      </form>
+                      <div class="faq">
+                        <p class="product__block-title">FAQ:</p>
+                        <div class="faq__items">
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
-                          <div class="product__advanced">
-                            <p class="product__block-title">Advanced options:</p>
-                            <div class="checkbox-group">
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="selfplay" id="player-selfplay" checked>
-                                <label for="player-selfplay"><span>Selfplay:</span><span class="c-accent">$0</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee" id="timer-guarantee" checked>
-                                <label for="timer-guarantee"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-2">
-                                <label for="timer-guarantee-2"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
-                              </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
-                          <div class="form__submit product__buttons">
-                            <div class="product__price">$33</div>
-                            <button class="button-main" type="submit">buy now</button>
-                            <button class="button-dark" type="button">add to cart</button>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                            </div>
                           </div>
-                        </form>
-                        <div class="faq">
-                          <p class="product__block-title">FAQ:</p>
-                          <div class="faq__items">
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
                         </div>
@@ -696,136 +628,101 @@
                   <div class="product-wrap">
                     <div class="product">
                       <div class="product__title">
-                        <p class="product__name">Mythic+ Dungeons Boost</p>
+                        <p class="product__name">Raider.io Score Boost</p>
                         <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
                       </div>
-                      <div class="product__content">
-                        <form id="form-product">
-                          <div class="radio-buttons">
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-1" value="1">
-                              <label for="product-type-1">
-                                <p class="radio-button__title">Mythic +10</p>
-                                <p class="radio-button__price">$20</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-2" value="2" checked>
-                              <label for="product-type-2">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-3" value="3">
-                              <label for="product-type-3">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-4" value="4">
-                              <label for="product-type-4">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-5" value="5">
-                              <label for="product-type-5">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-6" value="6">
-                              <label for="product-type-6">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-7" value="7">
-                              <label for="product-type-7">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
+                      <form class="form-product">
+                        <p class="product__block-title">Choose Difficulty:</p>
+                        <div class="form__range-slider">
+                          <div class="range-slider">
+                            <p class="range-slider__title">Mythic</p>
+                            <div class="range-slider__input">
+                              <input class="hidden js-range-slider" type="text" name="difficulty" data-type="double" data-min="11" data-max="24" data-from="15" data-to="20" data-step="1">
                             </div>
                           </div>
-                          <div class="select-buttons">
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-armor">
-                                <option value="">Add Extra armor traders</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
+                        </div>
+                        <div class="select-buttons">
+                          <div class="select-button popup-block">
+                            <select class="hidden" name="extra-armor">
+                              <option value="">Add Extra armor traders</option>
+                              <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                              <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                              <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                              <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                            </select>
+                          </div>
+                          <div class="select-button popup-block">
+                            <select class="hidden" name="extra-runs">
+                              <option value="">Add Extra Runs</option>
+                              <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                              <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                              <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                              <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                              <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
+                            </select>
+                          </div>
+                          <div class="select-button popup-block">
+                            <select class="hidden" name="extra-options">
+                              <option value="">Add Extra Options</option>
+                              <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
+                              <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
+                              <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
+                              <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="product__advanced">
+                          <p class="product__block-title">Advanced options:</p>
+                          <div class="checkbox-group">
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="selfplay" id="player-selfplay-4" checked>
+                              <label for="player-selfplay-4"><span>Selfplay:</span><span class="c-accent">$0</span></label>
                             </div>
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-runs">
-                                <option value="">Add Extra Runs</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                                <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="timer-guarantee" id="timer-guarantee-6" checked>
+                              <label for="timer-guarantee-6"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
+                            </div>
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-7">
+                              <label for="timer-guarantee-7"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
                             </div>
                           </div>
-                          <div class="product__advanced">
-                            <p class="product__block-title">Advanced options:</p>
-                            <div class="checkbox-group">
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="selfplay" id="player-selfplay" checked>
-                                <label for="player-selfplay"><span>Selfplay:</span><span class="c-accent">$0</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee" id="timer-guarantee" checked>
-                                <label for="timer-guarantee"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-2">
-                                <label for="timer-guarantee-2"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
-                              </div>
+                        </div>
+                        <div class="form__submit product__buttons">
+                          <div class="product__price">$33</div>
+                          <button class="button-main" type="submit">buy now</button>
+                          <button class="button-dark" type="button">add to cart</button>
+                        </div>
+                      </form>
+                      <div class="faq">
+                        <p class="product__block-title">FAQ:</p>
+                        <div class="faq__items">
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
-                          <div class="form__submit product__buttons">
-                            <div class="product__price">$33</div>
-                            <button class="button-main" type="submit">buy now</button>
-                            <button class="button-dark" type="button">add to cart</button>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                            </div>
                           </div>
-                        </form>
-                        <div class="faq">
-                          <p class="product__block-title">FAQ:</p>
-                          <div class="faq__items">
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
+                          </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
                         </div>
@@ -840,136 +737,68 @@
                   <div class="product-wrap">
                     <div class="product">
                       <div class="product__title">
-                        <p class="product__name">Mythic+ Dungeons Boost</p>
+                        <p class="product__name">Rent High Keys Pro Team</p>
                         <p class="product__desc">Buy Weekly Mythic+ Dungeon Run today and you will get some cool stuff</p>
                       </div>
-                      <div class="product__content">
-                        <form id="form-product">
-                          <div class="radio-buttons">
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-1" value="1">
-                              <label for="product-type-1">
-                                <p class="radio-button__title">Mythic +10</p>
-                                <p class="radio-button__price">$20</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-2" value="2" checked>
-                              <label for="product-type-2">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-3" value="3">
-                              <label for="product-type-3">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-4" value="4">
-                              <label for="product-type-4">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-5" value="5">
-                              <label for="product-type-5">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-6" value="6">
-                              <label for="product-type-6">
-                                <p class="radio-button__title">Mythic +15</p>
-                                <p class="radio-button__price">$30</p>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <input type="radio" name="product-type" id="product-type-7" value="7">
-                              <label for="product-type-7">
-                                <p class="radio-button__title">Mythic +20</p>
-                                <p class="radio-button__price">$40</p>
-                              </label>
+                      <form class="form-product">
+                        <div class="radio-buttons radio-buttons_large">
+                          <div class="radio-button">
+                            <input type="radio" name="keys" id="keys-1" value="1" checked>
+                            <label for="keys-1">
+                              <p class="radio-button__title">Keystone master</p>
+                            </label>
+                          </div>
+                          <div class="radio-button">
+                            <input type="radio" name="keys" id="keys-2" value="2">
+                            <label for="keys-2">
+                              <p class="radio-button__title">+19/+22 Keys</p>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product__advanced">
+                          <p class="product__block-title">Advanced options:</p>
+                          <div class="checkbox-group">
+                            <div class="checkbox-field">
+                              <input type="checkbox" name="selfplay" id="player-selfplay-5" checked>
+                              <label for="player-selfplay-5"><span>Selfplay:</span><span class="c-accent">$0</span></label>
                             </div>
                           </div>
-                          <div class="select-buttons">
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-armor">
-                                <option value="">Add Extra armor traders</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
-                            </div>
-                            <div class="select-button popup-block">
-                              <select class="hidden" name="extra-runs">
-                                <option value="">Add Extra Runs</option>
-                                <option value="1" data-text="+1 Same armor type trade:" data-price="$20"></option>
-                                <option value="2" data-text="+2 Same armor type trade:" data-price="$22"></option>
-                                <option value="3" data-text="+3 Same armor:" data-price="$24"></option>
-                                <option value="4" data-text="+4 Same armor trade:" data-price="$26"></option>
-                                <option value="5" data-text="+4 Same armor trade:" data-price="$26"></option>
-                              </select>
+                        </div>
+                        <div class="form__submit product__buttons">
+                          <div class="product__price">$33</div>
+                          <button class="button-main" type="submit">buy now</button>
+                          <button class="button-dark" type="button">add to cart</button>
+                        </div>
+                      </form>
+                      <div class="faq">
+                        <p class="product__block-title">FAQ:</p>
+                        <div class="faq__items">
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
-                          <div class="product__advanced">
-                            <p class="product__block-title">Advanced options:</p>
-                            <div class="checkbox-group">
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="selfplay" id="player-selfplay" checked>
-                                <label for="player-selfplay"><span>Selfplay:</span><span class="c-accent">$0</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee" id="timer-guarantee" checked>
-                                <label for="timer-guarantee"><span>I want Timer Guarantee:</span><span class="c-accent">$2</span></label>
-                              </div>
-                              <div class="checkbox-field">
-                                <input type="checkbox" name="timer-guarantee-2" id="timer-guarantee-2">
-                                <label for="timer-guarantee-2"><span>I want Timer Guarantee:</span><span class="c-accent">$4</span></label>
-                              </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
-                          <div class="form__submit product__buttons">
-                            <div class="product__price">$33</div>
-                            <button class="button-main" type="submit">buy now</button>
-                            <button class="button-dark" type="button">add to cart</button>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
+                            </div>
                           </div>
-                        </form>
-                        <div class="faq">
-                          <p class="product__block-title">FAQ:</p>
-                          <div class="faq__items">
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
-                            </div>
-                            <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
-                              <p class="faq__item-title"><span>How can I buy a product?</span></p>
-                              <div class="faq__item-text">
-                                <p>Online (secure): browse our range and add products to your basket.</p>
-                                <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
-                              </div>
+                          <div class="faq__item popup-block"><span class="faq__item-button"><span></span></span>
+                            <p class="faq__item-title"><span>How can I buy a product?</span></p>
+                            <div class="faq__item-text">
+                              <p>Online (secure): browse our range and add products to your basket.</p>
+                              <p>Offline: please see the contact us page for telephone, fax, and email details (you can change your country by clicking on the link at the top of the page).</p>
                             </div>
                           </div>
                         </div>
@@ -980,11 +809,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="products">
-        <div class="content-wrap">
-          <!--include ../templates/product-1-->
         </div>
       </section>
     </main>
