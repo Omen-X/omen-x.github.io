@@ -1,107 +1,108 @@
 const mobileNav = () => {
-  const nav = document.querySelector('.m-nav');
+  const nav = document.querySelector('.m-nav')
 
-  if (!nav) return;
+  if (!nav) return
 
-  const navTrigger = document.querySelector('.m-nav__trigger');
+  const navTrigger = document.querySelector('.m-nav__trigger')
 
-  function navToggle() {
+  function navToggle () {
     if (nav.classList.contains('active')) {
-      document.documentElement.classList.remove('modal-open');
+      document.documentElement.classList.remove('modal-open')
     } else {
-      document.documentElement.classList.add('modal-open');
+      document.documentElement.classList.add('modal-open')
     }
 
-    nav.classList.toggle('active');
+    nav.classList.toggle('active')
   }
 
-  navTrigger.addEventListener('click', navToggle);
+  navTrigger.addEventListener('click', navToggle)
 
-  const $headerAccent = $('.header_blue');
+  const $headerAccent = window.$('.header_blue, .header_inner')
 
   if (window.innerWidth < 992 && $headerAccent.length) {
+    if (window.scrollY > 0) $headerAccent.addClass('fixed-hidden')
+
     // Optimized window scroll handler
-    const raf = window.requestAnimationFrame;
-    let lastScrollTop = window.pageYOffset;
+    const raf = window.requestAnimationFrame
+    let lastScrollTop = window.pageYOffset
 
     const handleWindowScroll = () => {
-      const currentScrollTop = window.pageYOffset;
+      const currentScrollTop = window.pageYOffset
 
       if (lastScrollTop === currentScrollTop) {
-        raf(handleWindowScroll);
-        return false;
+        raf(handleWindowScroll)
+        return false
       }
 
       if (currentScrollTop === 0) {
-        $headerAccent.removeClass('fixed fixed-hidden');
+        $headerAccent.removeClass('fixed fixed-hidden')
         // scroll up
       } else if (lastScrollTop > currentScrollTop) {
-          $headerAccent.removeClass('fixed-hidden');
-          $headerAccent.addClass('fixed');
-          // scroll down
-        } else if (lastScrollTop < currentScrollTop) {
-          $headerAccent.removeClass('fixed');
-          $headerAccent.addClass('fixed-hidden');
-        }
+        $headerAccent.removeClass('fixed-hidden')
+        $headerAccent.addClass('fixed')
+        // scroll down
+      } else if (lastScrollTop < currentScrollTop) {
+        $headerAccent.removeClass('fixed')
+        $headerAccent.addClass('fixed-hidden')
+      }
 
+      lastScrollTop = currentScrollTop
+      return raf(handleWindowScroll)
+    }
 
-      lastScrollTop = currentScrollTop;
-      return raf(handleWindowScroll);
-    };
-
-    handleWindowScroll();
+    handleWindowScroll()
   }
-};
+}
 
 /**
  *
  */
 const welcomeSectionBg = () => {
-  const welcomeSection = document.querySelector('.welcome-section');
+  const welcomeSection = document.querySelector('.welcome-section')
 
   if (welcomeSection) {
-    const welcomeForm = welcomeSection.querySelector('.welcome__form');
+    const welcomeForm = welcomeSection.querySelector('.welcome__form')
 
     const updateBgPosition = () => {
-      const welcomeFormHeight = welcomeForm.clientHeight;
-      const welcomeFormBottom = welcomeFormHeight + (30 + 50);
+      const welcomeFormHeight = welcomeForm.clientHeight
+      const welcomeFormBottom = welcomeFormHeight + (30 + 50)
 
-      const arcHeight = window.innerWidth * 0.385;
-      const arcGapHeight = window.innerWidth * 0.239;
+      const arcHeight = window.innerWidth * 0.385
+      const arcGapHeight = window.innerWidth * 0.239
 
-      const roundingFix = 2;
-      const wideDevicesFix = 100;
-      const formErrorsGap = welcomeForm.querySelectorAll('.form__field-error').length * 25;
+      const roundingFix = 2
+      const wideDevicesFix = 100
+      const formErrorsGap = welcomeForm.querySelectorAll('.form__field-error').length * 25
 
-      const footerRelatedTop = welcomeSection.clientHeight - arcHeight + roundingFix;
-      const formRelatedTop = welcomeFormBottom - arcGapHeight;
+      const footerRelatedTop = welcomeSection.clientHeight - arcHeight + roundingFix
+      const formRelatedTop = welcomeFormBottom - arcGapHeight
 
-      let top = Math.max(footerRelatedTop, formRelatedTop, 0);
+      let top = Math.max(footerRelatedTop, formRelatedTop, 0)
 
       if (formRelatedTop > footerRelatedTop) {
-        top += formErrorsGap;
+        top += formErrorsGap
       }
 
       if (window.innerWidth / window.innerHeight > 1.8) {
-        welcomeSection.style.backgroundPosition = `center ${top - wideDevicesFix}px`;
-        welcomeSection.style.backgroundSize = '130% auto';
+        welcomeSection.style.backgroundPosition = `center ${top - wideDevicesFix}px`
+        welcomeSection.style.backgroundSize = '130% auto'
       } else {
-        welcomeSection.style.backgroundPosition = `center ${top}px`;
+        welcomeSection.style.backgroundPosition = `center ${top}px`
       }
 
-      welcomeSection.style.minHeight = `${arcHeight + top - 5}px`;
-    };
+      welcomeSection.style.minHeight = `${arcHeight + top - 5}px`
+    }
 
-    updateBgPosition();
+    updateBgPosition()
 
     // const ro = new ResizeObserver(() => updateBgPosition());
     // ro.observe(welcomeForm);
   }
-};
+}
 
 const validateInput = (input) => {
-  const {value} = input;
-  const validation = {isValid: true, error: '', meta: {}};
+  const { value } = input
+  const validation = { isValid: true, error: '', meta: {} }
 
   // Common validation
   if (input.required) {
@@ -109,8 +110,8 @@ const validateInput = (input) => {
       case 'text':
       default:
         if (value === '') {
-          validation.isValid = false;
-          validation.error = 'Обязательное поле';
+          validation.isValid = false
+          validation.error = 'Обязательное поле'
         }
     }
   }
@@ -121,248 +122,246 @@ const validateInput = (input) => {
       case 'login':
         // Incorrect characters
         if (!RegExp(/^[A-Za-zА-Яа-я0-9_]*$/).test(value)) {
-          validation.isValid = false;
-          validation.error = 'Недопустимые символы. Введите буквы, цифры или “_”';
+          validation.isValid = false
+          validation.error = 'Недопустимые символы. Введите буквы, цифры или “_”'
         }
 
         // Existing login
         if (value === 'existing_user') {
-          validation.isValid = false;
-          validation.error = 'Этот логин уже занят. Попробуйте';
-          validation.meta.availableLogins = ['Denisov_alex', 'alexey_denisov'];
+          validation.isValid = false
+          validation.error = 'Этот логин уже занят. Попробуйте'
+          validation.meta.availableLogins = ['Denisov_alex', 'alexey_denisov']
         }
 
-        break;
+        break
       case 'password':
         // Password too short
         if (value.length < 6) {
-          validation.isValid = false;
-          validation.error = 'Введите не менее 6 символов.';
+          validation.isValid = false
+          validation.error = 'Введите не менее 6 символов.'
         }
 
-        break;
+        break
       case 'password-confirm': {
         // Password mismatch
-        const password = input.closest('.form').querySelector('input[name=password]').value;
+        const password = input.closest('.form').querySelector('input[name=password]').value
 
         if (value !== password) {
-          validation.isValid = false;
-          validation.error = 'Введенные пароли не совпадают';
+          validation.isValid = false
+          validation.error = 'Введенные пароли не совпадают'
         }
 
-        break;
+        break
       }
       case 'email':
         if (!RegExp(/\S+@\S+\.\S+/).test(value)) {
-          validation.isValid = false;
-          validation.error = 'Некорректный e-mail';
+          validation.isValid = false
+          validation.error = 'Некорректный e-mail'
         }
 
-        break;
+        break
       default:
     }
   }
 
   // Show validation result for user
-  const field = input.closest('.form__field');
-  const errorField = field.querySelector('.form__field-error');
-  const {isValid, meta, error} = validation;
+  const field = input.closest('.form__field')
+  const errorField = field.querySelector('.form__field-error')
+  const { isValid, meta, error } = validation
 
   if (isValid) {
-    field.classList.remove('invalid');
-    field.classList.add('valid');
+    field.classList.remove('invalid')
+    field.classList.add('valid')
 
-    errorField.innerHTML = '';
+    errorField.innerHTML = ''
   } else {
-    errorField.innerHTML = error;
+    errorField.innerHTML = error
 
     if (meta.availableLogins) {
       const suggestedLogins = meta.availableLogins
-        .map(login => `<span data-suggested-login=${login} class="form__suggested-login">${login}</span>`);
+        .map(login => `<span data-suggested-login=${login} class="form__suggested-login">${login}</span>`)
 
-      errorField.innerHTML = `${errorField.innerHTML} <span class="c-purple">${suggestedLogins.join(', ')}</span>`;
+      errorField.innerHTML = `${errorField.innerHTML} <span class="c-purple">${suggestedLogins.join(', ')}</span>`
     }
 
-    field.classList.remove('valid');
-    field.classList.add('invalid');
+    field.classList.remove('valid')
+    field.classList.add('invalid')
   }
 
-  return validation.isValid;
-};
+  return validation.isValid
+}
 
 // Custom logic for forms
 const customFormLogic = () => {
   // Toggle hidden button
   document.querySelectorAll('.form__toggle-hidden').forEach((toggler) => {
     toggler.addEventListener('click', () => {
-      toggler.classList.toggle('active');
+      toggler.classList.toggle('active')
 
-      const input = toggler.parentElement.parentElement.querySelector('.form__input');
+      const input = toggler.parentElement.parentElement.querySelector('.form__input')
 
-      if (toggler.classList.contains('active')) input.setAttribute('type', 'text');
-      else input.setAttribute('type', 'password');
-    });
-  });
+      if (toggler.classList.contains('active')) input.setAttribute('type', 'text')
+      else input.setAttribute('type', 'password')
+    })
+  })
 
   // Copy button
   document.querySelectorAll('.form__copy').forEach((copy) => {
     copy.addEventListener('click', () => {
-      const input = copy.parentElement.parentElement.querySelector('.form__input');
-      const inputType = input.type;
+      const input = copy.parentElement.parentElement.querySelector('.form__input')
+      const inputType = input.type
 
-      if (inputType === 'password') input.type = 'text';
+      if (inputType === 'password') input.type = 'text'
 
-      input.select();
-      input.setSelectionRange(0, 99999);
-      document.execCommand('copy');
+      input.select()
+      input.setSelectionRange(0, 99999)
+      document.execCommand('copy')
 
-      const confirmInput = input.closest('.form__fields').querySelector('input[name=password-confirm]');
-      confirmInput.value = input.value;
-      validateInput(confirmInput);
+      const confirmInput = input.closest('.form__fields').querySelector('input[name=password-confirm]')
+      confirmInput.value = input.value
+      validateInput(confirmInput)
 
-      if (inputType === 'password') input.type = 'password';
+      if (inputType === 'password') input.type = 'password'
 
-      input.blur();
-    });
-  });
+      input.blur()
+    })
+  })
 
   // Suggested logins
   document.querySelectorAll('.form__field-error').forEach((error) => {
     error.addEventListener('click', (event) => {
       if (event.target.classList.contains('form__suggested-login')) {
-        const login = event.target.dataset.suggestedLogin;
-        const input = error.closest('.form__field').querySelector('.form__input');
+        const login = event.target.dataset.suggestedLogin
+        const input = error.closest('.form__field').querySelector('.form__input')
 
-        input.value = login;
-        validateInput(input);
+        input.value = login
+        validateInput(input)
       }
-    });
-  });
-};
+    })
+  })
+}
 
 const mSelect = () => {
   document.querySelectorAll('.m-select').forEach((select) => {
     select.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
+      event.stopPropagation()
+    })
 
     // Custom scrollbar
-    const list = select.querySelector('.m-select__list');
-    new SimpleBar(list, {autoHide: false});
+    const list = select.querySelector('.m-select__list')
+    new window.SimpleBar(list, { autoHide: false })
 
     // Trigger handler
     select.querySelector('.m-select__trigger').addEventListener('click', () => {
-      select.classList.toggle('active');
-    });
+      select.classList.toggle('active')
+    })
 
     // Option selection
-    const input = select.querySelector('.m-select__input');
-    const value = select.querySelector('.m-select__value');
-    const search = select.querySelector('.m-select__search-input');
+    const input = select.querySelector('.m-select__input')
+    const value = select.querySelector('.m-select__value')
+    const search = select.querySelector('.m-select__search-input')
 
     list.addEventListener('click', (event) => {
       if (event.target.classList.contains('m-select__list-item')) {
-        input.value = event.target.innerHTML;
-        value.innerHTML = event.target.innerHTML;
+        input.value = event.target.innerHTML
+        value.innerHTML = event.target.innerHTML
 
-        select.classList.remove('active');
-        search.value = '';
-        select.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'));
+        select.classList.remove('active')
+        search.value = ''
+        select.querySelectorAll('.m-select__list-item').forEach(option => option.classList.remove('hidden'))
       }
-    });
+    })
 
     // Search
 
     search.addEventListener('keyup', () => {
-      const searchValue = search.value.toLowerCase();
+      const searchValue = search.value.toLowerCase()
 
       select.querySelectorAll('.m-select__list-item')
         .forEach((option) => {
-          const optionValue = option.innerHTML.toLowerCase();
+          const optionValue = option.innerHTML.toLowerCase()
 
-          if (optionValue.startsWith(searchValue)) option.classList.remove('hidden');
-          else option.classList.add('hidden');
-        });
-    });
-  });
-
+          if (optionValue.startsWith(searchValue)) option.classList.remove('hidden')
+          else option.classList.add('hidden')
+        })
+    })
+  })
 
   document.body.addEventListener('click', () => {
     document.querySelectorAll('.m-select__search-input').forEach((s) => {
-      s.value = '';
-    });
-  });
-};
+      s.value = ''
+    })
+  })
+}
 
 const searchDropdown = () => {
   document.querySelectorAll('.search-dropdown').forEach((search) => {
-    search.addEventListener('click', event => event.stopPropagation());
+    search.addEventListener('click', event => event.stopPropagation())
 
-    const input = search.querySelector('.search-dropdown__input');
-    const options = search.querySelectorAll('.search-dropdown__item');
-    const list = search.querySelector('.search-dropdown__list-wrap');
+    const input = search.querySelector('.search-dropdown__input')
+    const options = search.querySelectorAll('.search-dropdown__item')
+    const list = search.querySelector('.search-dropdown__list-wrap')
 
     input.addEventListener('focus', () => {
-      list.classList.add('active');
-    });
+      list.classList.add('active')
+    })
 
     input.addEventListener('keyup', () => {
-      const searchValue = input.value.toLowerCase();
+      const searchValue = input.value.toLowerCase()
 
       options.forEach((option) => {
-          const optionValue = option.querySelector('.search-dropdown__item-title').innerHTML.toLowerCase();
+        const optionValue = option.querySelector('.search-dropdown__item-title').innerHTML.toLowerCase()
 
-          if (optionValue.startsWith(searchValue)) option.classList.remove('hidden');
-          else option.classList.add('hidden');
-        });
-    });
+        if (optionValue.startsWith(searchValue)) option.classList.remove('hidden')
+        else option.classList.add('hidden')
+      })
+    })
 
     options.forEach((option) => {
       option.addEventListener('click', () => {
-        list.classList.remove('active');
+        list.classList.remove('active')
 
-        const popup = list.closest('.search-popup');
-        if (popup) popup.classList.remove('active');
-      });
-    });
-  });
-
+        const popup = list.closest('.search-popup')
+        if (popup) popup.classList.remove('active')
+      })
+    })
+  })
 
   document.body.addEventListener('click', () => {
     document.querySelectorAll('.search-dropdown__input').forEach((s) => {
-      s.value = '';
-    });
-  });
+      s.value = ''
+    })
+  })
 
   // Search popup
 
   document.querySelectorAll('.search-popup').forEach((search) => {
     search.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
+      event.stopPropagation()
+    })
 
     search.querySelector('.search-popup__trigger').addEventListener('click', () => {
-      search.classList.toggle('active');
-    });
-  });
-};
+      search.classList.toggle('active')
+    })
+  })
+}
 
 /**
  * Instant validation for inputs
  */
 const formFieldsValidation = () => {
   document.querySelectorAll('.form__input').forEach((input) => {
-    const field = input.closest('.form__field');
-    const error = field.querySelector('.form__field-error');
+    const field = input.closest('.form__field')
+    const error = field.querySelector('.form__field-error')
 
-    input.addEventListener('blur', () => validateInput(input));
+    input.addEventListener('blur', () => validateInput(input))
 
     input.addEventListener('keydown', () => {
-      field.classList.remove('invalid');
-      error.innerHTML = '';
-    });
-  });
-};
+      field.classList.remove('invalid')
+      error.innerHTML = ''
+    })
+  })
+}
 
 /**
  * Form submit handler
@@ -370,104 +369,101 @@ const formFieldsValidation = () => {
 const formsHandler = () => {
   document.querySelectorAll('.form').forEach((form) => {
     form.addEventListener('submit', (event) => {
-      event.preventDefault();
+      event.preventDefault()
 
       // Validate inputs
       const validationResult = Array.from(form.querySelectorAll('.form__input'))
-        .map(input => validateInput(input));
+        .map(input => validateInput(input))
 
       if (validationResult.some(v => !v)) {
         // Invalid form
-        console.log('invalid form');
+        console.log('invalid form')
       } else {
         // Valid form
-        console.log('valid form');
+        console.log('valid form')
       }
-    });
-  });
-};
-
+    })
+  })
+}
 
 /**
  * js-based styles for different sections
  */
 const dynamicStyles = () => {
   // Devices section
-  const deviceContent = document.querySelectorAll('.touch .device__content');
-    deviceContent.forEach((content) => {
+  const deviceContent = document.querySelectorAll('.touch .device__content')
+  deviceContent.forEach((content) => {
     content.addEventListener('click', (event) => {
-      event.stopPropagation();
+      event.stopPropagation()
 
-      deviceContent.forEach(el => el.classList.remove('active'));
-      content.classList.add('active');
-    });
-  });
-};
+      deviceContent.forEach(el => el.classList.remove('active'))
+      content.classList.add('active')
+    })
+  })
+}
 
 const mainSelect = () => {
   document.querySelectorAll('.select-main').forEach((select) => {
-    select.addEventListener('click', event => event.stopPropagation());
+    select.addEventListener('click', event => event.stopPropagation())
 
     select.querySelector('.select-main__trigger').addEventListener('click', () => {
-      select.classList.toggle('active');
-    });
+      select.classList.toggle('active')
+    })
 
-    const selectValue = select.querySelector('.select-main__value');
+    const selectValue = select.querySelector('.select-main__value')
 
     select.querySelectorAll('.select-main__item').forEach((option) => {
       option.addEventListener('click', () => {
-        const {value} = option.dataset;
-        selectValue.innerHTML = value;
+        const { value } = option.dataset
+        selectValue.innerHTML = value
 
-        select.classList.remove('active');
-      });
-    });
+        select.classList.remove('active')
+      })
+    })
 
     //
-    const selectItems = select.querySelector('.select-main__items');
-    new SimpleBar(selectItems, {autoHide: false});
-  });
-};
-
+    const selectItems = select.querySelector('.select-main__items')
+    new window.SimpleBar(selectItems, { autoHide: false })
+  })
+}
 
 // ========>> DOCUMENT READY <<========
 
-function documentReady() {
+function documentReady () {
   // Hide pop-up windows
   document.body.addEventListener('click', () => {
     document.querySelectorAll('.m-select, .search-dropdown__list-wrap, .popup-block, .device__content, .search-popup')
-      .forEach(select => select.classList.remove('active'));
+      .forEach(select => select.classList.remove('active'))
 
     document.querySelectorAll('.m-select__list-item, .search-dropdown__item')
-      .forEach(option => option.classList.remove('hidden'));
-  });
+      .forEach(option => option.classList.remove('hidden'))
+  })
 
   // Custom scrollbars
   document.querySelectorAll('.device__list-content, .custom-scroll').forEach((el) => {
-    new SimpleBar(el, {autoHide: false});
-  });
+    new window.SimpleBar(el, { autoHide: false })
+  })
   //
   window.addEventListener('resize', () => {
-    welcomeSectionBg();
-    dynamicStyles();
-  });
-
+    welcomeSectionBg()
+    dynamicStyles()
+  })
 
   //
-  mobileNav();
-  customFormLogic();
-  formFieldsValidation();
-  formsHandler();
-  mSelect();
-  welcomeSectionBg();
-  dynamicStyles();
-  searchDropdown();
-  mainSelect();
+  mobileNav()
+  customFormLogic()
+  formFieldsValidation()
+  formsHandler()
+  mSelect()
+  welcomeSectionBg()
+  dynamicStyles()
+  searchDropdown()
+  mainSelect()
 }
 
 // ========>> UTILS <<========
 
-!(function checkLoad() {
-  if (document.readyState !== 'complete') setTimeout(checkLoad, 10);
-  else documentReady();
-}());
+!(function checkLoad () {
+  if (document.readyState !== 'complete') setTimeout(checkLoad, 10)
+  else documentReady()
+}())

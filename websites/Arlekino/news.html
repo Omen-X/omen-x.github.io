@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Arlekino</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+    </script>
+    <header class="header header_inner">
+      <div class="content-wrap">
+        <div class="header__content"><a class="logo" href="./index.html">Arlekino.tv</a>
+          <nav class="m-nav">
+            <div class="m-nav__buttons hidden-lg-up"><a href="#"><i class="m-icon-user"></i></a><span class="m-nav__trigger"></span></div>
+            <div class="m-nav__content">
+              <div class="m-nav__links"><a href="#">Как настроить</a><a href="#">Частые вопросы</a><a href="#">Новости</a></div>
+              <div class="m-nav__links hidden-lg-up">
+                <div class="lang-select"><span>RU</span></div>
+                <button class="button-main">ВХОД/РЕГИСТРАЦИЯ</button>
+              </div>
+            </div>
+          </nav>
+          <div class="header__buttons">
+            <div class="lang-select"><span>RU</span></div>
+            <button class="button-main">ВХОД/РЕГИСТРАЦИЯ</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-news section-single">
+        <div class="content-wrap">
+          <p class="title-page">Наши новости <span class="c-accent">всегда</span> интереснее</p>
+          <div class="news">
+            <div class="news-block">
+              <p class="title-block">Изменения в бесплатном тесте</p>
+              <div class="news-block__text text-content">
+                <p>Уважаемые абоненты из за постоянного злоупотребления бесплатного теста многими абонентами нами было принято решение убрать бесплатный тест на кардшаринг, теперь для теста будет даваться только IPTV так же на сутки.</p>
+              </div>
+              <p class="news-block__date">5 мая 2020 г.</p>
+            </div>
+            <div class="news-block">
+              <p class="title-block">IPTV</p>
+              <div class="news-block__text text-content">
+                <p>Уважаемые абоненты 11.12 ориентировочно с 11.00 до 11.30 будет проводиться запланированная профилактика на серверах IPTV. Спасибо за понимание.</p>
+              </div>
+              <p class="news-block__date">3 мая 2020 г.</p>
+            </div>
+            <div class="news-block">
+              <p class="title-block">Новые категории каналов в плейлисте</p>
+              <div class="news-block__text text-content">
+                <p>По многочисленным просьбам, мы добавили функцию выбора категорий каналов, которые будут отображаться в плейлист после загрузки.</p>
+              </div><a class="link-text" href="#">Подробности на форуме</a>
+              <p class="news-block__date">29 апреля 2020 г.</p>
+            </div>
+            <div class="news-block">
+              <p class="title-block">Профилактические работы</p>
+              <div class="news-block__text text-content">
+                <p>16 января 2020 года с 2:00 до 10:00 по московскому времени будут проводится плановые профилактические работы на оборудовании провайдеров многих телеканалов.</p>
+                <p>В указанный период вещание некоторых телеканалов будет приостановлено.</p>
+              </div>
+              <p class="news-block__date">18 апреля 2020 г.</p>
+            </div>
+            <div class="news-block">
+              <p class="title-block">Кардшаринг! SkyDE</p>
+              <div class="news-block__text text-content">
+                <p>Уважаемые абоненты из за последних изменений у SkyDE пришлось сменить идент на 09C4 для продолжения просмотра тем у кого прописан идент в эмуляторах необходимо обновить настройки. Приносим свои извинения за доставленные неудобства.</p>
+              </div><a class="link-text" href="#">Читать подробно</a>
+              <p class="news-block__date">23 марта 2020 г.</p>
+            </div>
+            <div class="news-block">
+              <p class="title-block">Изменения в бесплатном тесте</p>
+              <div class="news-block__text text-content">
+                <p>Уважаемые абоненты из за постоянного злоупотребления бесплатного теста многими абонентами нами было принято решение убрать бесплатный тест на кардшаринг, теперь для теста будет даваться только IPTV так же на сутки.</p>
+              </div>
+              <p class="news-block__date">5 марта 2020 г.</p>
+            </div>
+          </div>
+          <div class="pagination"><a class="pagination__arr disabled clean-button" href="#"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5.015c0 .1-.03.2-.085.275l-2.5 3.75A.496.496 0 012 9.265H.5a.502.502 0 01-.5-.5c0-.1.03-.2.085-.275L2.4 5.015.085 1.54A.472.472 0 010 1.265c0-.275.225-.5.5-.5H2c.175 0 .325.09.415.225l2.5 3.75A.472.472 0 015 5.015z" fill="#FF9800"/><path d="M10 5.015c0 .1-.03.2-.085.275l-2.5 3.75A.496.496 0 017 9.265H5.5a.502.502 0 01-.5-.5c0-.1.03-.2.085-.275L7.4 5.015 5.085 1.54A.472.472 0 015 1.265c0-.275.225-.5.5-.5H7c.175 0 .325.09.415.225l2.5 3.75a.472.472 0 01.085.275z" fill="#FF9800"/></svg></a>
+            <div class="pagination__pages"><a class="pagination__page active" href="#">1</a><a class="pagination__page" href="#">2</a><a class="pagination__page" href="#">3</a><a class="pagination__page" href="#">4</a><a class="pagination__page" href="#">5</a><span class="pagination__delim">...</span><a class="pagination__page" href="#">135</a></div><a class="button pagination__arr clean-button" href="#"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5.015c0 .1-.03.2-.085.275l-2.5 3.75A.496.496 0 012 9.265H.5a.502.502 0 01-.5-.5c0-.1.03-.2.085-.275L2.4 5.015.085 1.54A.472.472 0 010 1.265c0-.275.225-.5.5-.5H2c.175 0 .325.09.415.225l2.5 3.75A.472.472 0 015 5.015z" fill="#FF9800"/><path d="M10 5.015c0 .1-.03.2-.085.275l-2.5 3.75A.496.496 0 017 9.265H5.5a.502.502 0 01-.5-.5c0-.1.03-.2.085-.275L7.4 5.015 5.085 1.54A.472.472 0 015 1.265c0-.275.225-.5.5-.5H7c.175 0 .325.09.415.225l2.5 3.75a.472.472 0 01.085.275z" fill="#FF9800"/></svg></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-wrap">
+        <div class="footer__content">
+          <p class="footer__copy">Copyright © 2011-2020</p>
+          <div class="footer__payment hidden-sm-down">
+            <p class="footer__payment-title">Мы принимаем:</p>
+            <div class="footer__payment-list">
+              <div class="footer__payment-item"><img src="./img/content/paypal.svg"><span class="footer__payment-item-title">Pay Pal</span></div>
+              <div class="footer__payment-item"><img src="./img/content/sprypay.png"></div>
+              <div class="footer__payment-item"><img src="./img/content/webmoney.svg"><span class="footer__payment-item-title">WebMoney</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./js/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.min.js"></script>
+    <script defer src="./js/ResizeObserver.global.js"></script>
+    <script defer src="./js/polyfills.js"></script>
+    <script defer src="./js/common.js"></script>
+  </body>
+</html>
