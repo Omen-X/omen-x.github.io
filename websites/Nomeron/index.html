@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Номерон</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+    </script>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="header__content"><a class="logo" href="./index.html"><img src="./img/decor/logo.svg" alt="Логотип"><span class="logo__title">НОМЕРОН</span></a>
+          <p class="header__slogan">Виртуальные телефонные номера по профессиональным ценам</p>
+          <div class="header__buttons">
+            <button class="link-text" data-target-modal="modal-signup">Регистрация</button>
+            <button class="button-main" data-target-modal="modal-signin">Вход</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-group">
+        <section class="section-offers">
+          <div class="content-wrap">
+            <p class="title-page">Продажа телефонных номеров</p>
+            <div class="cards-price"><a class="card-price" href="#" target="_blank">
+                <div class="card-price__content">
+                  <div class="card-price__number-wrap">
+                    <p class="card-price__number">+7(495) Москва</p>
+                    <p class="card-price__stock">В наличии 4595 шт.</p>
+                  </div>
+                  <div class="card-price__price"><strong class="card-price__value">100</strong>
+                    <p class="card-price__units"><span>₽</span><span>/год</span></p>
+                  </div>
+                </div>
+                <div class="card-price__footer"><span class="card-price__footer-text">Смотреть номера</span></div></a><a class="card-price" href="#" target="_blank">
+                <div class="card-price__content">
+                  <div class="card-price__number-wrap">
+                    <p class="card-price__number">+7(499) &nbsp;Москва</p>
+                    <p class="card-price__stock">В наличии 25 шт.</p>
+                  </div>
+                  <div class="card-price__price"><strong class="card-price__value">999</strong>
+                    <p class="card-price__units"><span>₽</span><span>/год</span></p>
+                  </div>
+                </div>
+                <div class="card-price__footer"><span class="card-price__footer-text">Смотреть номера</span></div></a></div>
+          </div>
+        </section>
+        <section class="section-advantages">
+          <div class="content-wrap">
+            <p class="title-section">Уникальные условия</p>
+            <div class="advantages-wrap">
+              <div class="list-advantages">
+                <div class="list-advantages__block">
+                  <p class="list-advantages__item">Профессиональная (низкая) цена</p>
+                  <p class="list-advantages__item">Абонентская плата - 1 раз в год</p>
+                  <p class="list-advantages__item">Платы за подключение номеров нет</p>
+                  <p class="list-advantages__item">Без скрытых платежей</p>
+                </div>
+                <div class="list-advantages__block">
+                  <p class="list-advantages__item">Неограниченная канальность</p>
+                  <p class="list-advantages__item">Моментальное подключение и отключение номеров</p>
+                  <p class="list-advantages__item">Работа через личный кабинет и по API</p>
+                </div>
+                <div class="list-advantages__block">
+                  <p class="list-advantages__item">Работа с физическими и юридическими лицами</p>
+                </div>
+              </div>
+              <div class="advantages">
+                <div class="advantages__item">
+                  <div class="advantages__item-img"><img src="./img/decor/advantages-1.svg" alt=""></div>
+                  <p class="advantages__item-title">Абонентская плата за номер<br/>— 100 рублей в год</p>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__item-img"><img src="./img/decor/advantages-2.svg" alt=""></div>
+                  <p class="advantages__item-title">Интерфейсы для массовых операций</p>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__item-img"><img src="./img/decor/advantages-3.svg" alt=""></div>
+                  <p class="advantages__item-title">АПИ-интерфейс<br/>для управления номерами</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-mods">
+          <div class="content-wrap">
+            <p class="title-section">Режимы включения номеров</p>
+            <p class="sub-title">Для всех номеров поддерживаются режимы работы:</p>
+            <div class="mods">
+              <div class="mods__item">
+                <div class="mods__item-img"><img src="./img/content/mod-1.svg" alt=""></div>
+                <div class="mods__item-content">
+                  <p class="mods__item-title">Переадресация вызовов на другой номер</p>
+                  <div class="mods__item-link"><a class="link-text" href="#" target="_blank">Тарифы</a></div>
+                </div>
+              </div>
+              <div class="mods__item">
+                <div class="mods__item-img"><img src="./img/content/mod-2.svg" alt=""></div>
+                <div class="mods__item-content">
+                  <p class="mods__item-title">Индивидуальный SIP-транк для каждого номера (SIP с регистрацией)</p>
+                  <div class="mods__item-link"><span class="mods__item-badge">бесплатно</span></div>
+                </div>
+              </div>
+              <div class="mods__item">
+                <div class="mods__item-img"><img src="./img/content/mod-3.svg" alt=""></div>
+                <div class="mods__item-content">
+                  <p class="mods__item-title">Общий SIP-транк для группы номеров (SIP с регистрацией)</p>
+                  <div class="mods__item-link"><span class="mods__item-badge">бесплатно</span></div>
+                </div>
+              </div>
+              <div class="mods__item">
+                <div class="mods__item-img"><img src="./img/content/mod-4.svg" alt=""></div>
+                <div class="mods__item-content">
+                  <p class="mods__item-title">SIP-транк на IP-адрес (SIP без регистрации)</p>
+                  <div class="mods__item-link"><span class="mods__item-badge">бесплатно</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section-stat">
+        <div class="content-wrap">
+          <p class="title-section">Исходящие соединения</p>
+          <div class="list-stat">
+            <div class="list-stat__item">
+              <p>Тарификация исходящего трафика (включая переадресацию) производится на <strong>посекундной основе</strong></p>
+            </div>
+            <div class="list-stat__item">
+              <p><strong>НДС не применяется</strong> в связи с применением УСН (упрощеной системы налогооблажения)</p>
+            </div>
+          </div>
+          <div class="cards-stat">
+            <div class="card-stat">
+              <p class="card-stat__title">Москва</p>
+              <p class="car-stat__sub-title">стационарные 495 и 499</p>
+              <div class="card-stat__price">
+                <p class="card-stat__price-value">0,5</p>
+                <p class="card-stat__price-units"><span>₽</span><span>/мин</span></p>
+              </div>
+            </div>
+            <div class="card-stat">
+              <p class="card-stat__title">Мобильные РФ</p>
+              <div class="card-stat__price">
+                <p class="card-stat__price-value">1,4</p>
+                <p class="card-stat__price-units"><span>₽</span><span>/мин</span></p>
+              </div>
+            </div>
+            <div class="card-stat">
+              <p class="card-stat__title">Другие<br/>направления</p><a class="card-stat__button link-text" href="#">Скачать прайс-лист</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-docs">
+        <div class="content-wrap">
+          <p class="title-section">API-управление номерами</p>
+          <p class="sub-title">Инструменты для автоматического управления номерами:</p>
+          <div class="docs">
+            <div class="docs__column">
+              <div class="docs__block">
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/1.svg&quot;)">Покупка номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/2.svg&quot;)">Получение списка доступных номеров</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/3.svg&quot;)">Резервирование номера на 24 часа</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/4.svg&quot;)">Снятие резерва с номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/5.svg&quot;)">Удаление номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+              </div>
+              <div class="docs__block">
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/6.svg&quot;)">Продление номера на 1 год</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/7.svg&quot;)">Включение автопродления номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/8.svg&quot;)">Отключение автопродления номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+              </div>
+            </div>
+            <div class="docs__column">
+              <div class="docs__block">
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/9.svg&quot;)">Получение подробной информации  о номере</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+              </div>
+              <div class="docs__block">
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/10.svg&quot;)">Установка режима работы номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/11.svg&quot;)">Установка комментария для номера</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+              </div>
+              <div class="docs__block">
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/12.svg&quot;)">Получение списка купленных номеров</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/13.svg&quot;)">Получение детализации</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+                <div class="docs__item">
+                  <p class="docs__item-title" style="background-image: url(&quot;./img/icons/docs/14.svg&quot;)">Получение баланса аккаунта</p><a class="link-text" href="#" target="_blank">Инструкция</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-wrap">
+        <div class="footer__content-wrap">
+          <div class="footer__logo"><a class="logo" href="./index.html"><img src="./img/decor/logo.svg" alt="Логотип"><span class="logo__title">НОМЕРОН</span></a></div>
+          <div class="footer__content">
+            <div class="footer__text">
+              <p>Виртуальные телефонные номера по профессиональным ценам</p>
+              <p>Лицензии XXXXX, XXXXX, XXXXX, XXXXX Минкомсвязи РФ</p>
+            </div>
+            <div class="footer__links">
+              <div class="footer__links-group"><a class="link-text" href="#" target="_blank">Договор оферты</a><a class="link-text" href="#" target="_blank">Тарифы сервиса</a></div>
+              <div class="footer__links-group"><a class="link-text" href="#" target="_blank">Доступные номера</a><a class="link-text" href="#" target="_blank">Инструкции по API</a></div>
+            </div>
+            <div class="footer__contacts"><a class="footer__contacts-phone" href="tel:+74951230000">+7(495)123-00-00</a><a class="footer__contacts-email link-text" href="mailto:support@nomeron.com">support@nomeron.com</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modals">
+      <div class="modal" id="modal-signin">
+        <div class="modal__content">
+          <form class="form" id="form-signin">
+            <div class="form__close"></div>
+            <p class="form__title">Вход в Личный кабинет</p>
+            <div class="form__fields">
+              <div class="form__field">
+                <input class="form__input" type="text" name="login" placeholder="Логин" required>
+              </div>
+              <div class="form__field">
+                <input class="form__input" type="password" name="password" placeholder="Пароль" required>
+                <p class="form__field-error">* неверный пароль</p>
+              </div>
+            </div>
+            <div class="form__submit">
+              <div class="form__links"><a class="link-text" href="#">Восстановить логин</a><a class="link-text" href="#">Восстановить пароль</a></div>
+              <button class="button-main button-main_large" type="submit">Вход</button>
+            </div>
+            <div class="form__footer">
+              <p class="form__footer__title">Еще нет учетной записи?</p>
+              <button class="link-text" type="button" data-target-modal="modal-signup">Регистрация</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="modal-signup">
+        <div class="modal__content">
+          <form class="form" id="form-signup">
+            <div class="form__close"></div>
+            <p class="form__title">Регистрация</p>
+            <div class="form__fields">
+              <div class="form__field">
+                <input class="form__input" type="text" name="login" placeholder="Логин" required>
+              </div>
+              <div class="form__field">
+                <input class="form__input" type="password" name="password" placeholder="Пароль" required>
+              </div>
+            </div>
+            <div class="form__submit">
+              <button class="button-main button-main_large" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script defer src="./js/common.js"></script>
+  </body>
+</html>
