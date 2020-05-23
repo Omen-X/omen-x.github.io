@@ -109,7 +109,6 @@
                 <button class="button-main">replenish balance</button>
               </div>
               <div class="account-offers">
-                <p class="account-offers__title">Profitable offer</p>
                 <div class="account-offers__items">
                   <div class="account-offer">
                     <p class="account-offer__title">Minimum benefit</p>
@@ -158,21 +157,31 @@
           <p class="sidebar__block-title">live</p>
           <div class="sidebar__block-scroll-content">
             <div class="sidebar__block-content">
-              <div class="live-preview"><a class="live-preview__item" href="#" target="_blank">
+              <div class="live-preview">
+                <div class="live-preview__item" href="#" target="_blank" data-target-modal="live">
                   <div class="live-preview__img" style="background-image: url(&quot;./img/content/live.png&quot;)"></div>
                   <p class="live-preview__title">Mythicscore Wow Pvp</p>
-                  <p class="live-preview__source">twitch.tv</p></a><a class="live-preview__item" href="#" target="_blank">
+                  <p class="live-preview__source">twitch.tv</p>
+                </div>
+                <div class="live-preview__item" href="#" target="_blank" data-target-modal="live">
                   <div class="live-preview__img" style="background-image: url(&quot;./img/content/live.png&quot;)"></div>
                   <p class="live-preview__title">Mythicscore Wow Pvp</p>
-                  <p class="live-preview__source">twitch.tv</p></a><a class="live-preview__item" href="#" target="_blank">
+                  <p class="live-preview__source">twitch.tv</p>
+                </div>
+                <div class="live-preview__item" href="#" target="_blank" data-target-modal="live">
                   <div class="live-preview__img" style="background-image: url(&quot;./img/content/live.png&quot;)"></div>
                   <p class="live-preview__title">Mythicscore Wow Pvp</p>
-                  <p class="live-preview__source">twitch.tv</p></a><a class="live-preview__item" href="#" target="_blank">
+                  <p class="live-preview__source">twitch.tv</p>
+                </div>
+                <div class="live-preview__item" href="#" target="_blank" data-target-modal="live">
                   <div class="live-preview__img" style="background-image: url(&quot;./img/content/live.png&quot;)"></div>
                   <p class="live-preview__title">Mythicscore Wow Pvp</p>
-                  <p class="live-preview__source">twitch.tv</p></a>
+                  <p class="live-preview__source">twitch.tv</p>
+                </div>
               </div>
-              <div class="fluid-wrap"><a class="button-main" href="./live.html" target="_blank">show more</a></div>
+              <div class="fluid-wrap">
+                <button class="button-main" id="live-more">show more</button>
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +193,18 @@
                 <div class="inventory__cards">
                   <div class="card-inventory added" style="background-image: url(&quot;./img/content/inventory-1.png&quot;)">
                     <div class="card-inventory__content">
-                      <p class="card-inventory__title">Raider.io Score Boost</p>
+                      <div class="card-inventory__header">
+                        <p class="card-inventory__title">Raider.io Score Boost</p>
+                        <p class="card-inventory__price">$ 30</p>
+                      </div>
+                      <div class="card-inventory__list">
+                        <p>Mythic+10 = € 15</p>
+                        <p>+1 same armor type trader = € 2</p>
+                        <p>I want 5 runs = € 56</p>
+                        <p>Selfplay = € 0</p>
+                        <p>I want Timer Guaratee = € 1</p>
+                        <p>I want Specific Dungeon = € 2</p>
+                      </div>
                       <div class="card-inventory__buttons">
                         <button class="card-inventory__remove-button clean-button"></button>
                         <button class="card-inventory__add-button clean-button"></button>
@@ -193,7 +213,18 @@
                   </div>
                   <div class="card-inventory added" style="background-image: url(&quot;./img/content/inventory-2.png&quot;)">
                     <div class="card-inventory__content">
-                      <p class="card-inventory__title">Mythic+ Dungeons Boost</p>
+                      <div class="card-inventory__header">
+                        <p class="card-inventory__title">Raider.io Score Boost</p>
+                        <p class="card-inventory__price">$ 30</p>
+                      </div>
+                      <div class="card-inventory__list">
+                        <p>Mythic+10 = € 15</p>
+                        <p>+1 same armor type trader = € 2</p>
+                        <p>I want 5 runs = € 56</p>
+                        <p>Selfplay = € 0</p>
+                        <p>I want Timer Guaratee = € 1</p>
+                        <p>I want Specific Dungeon = € 2</p>
+                      </div>
                       <div class="card-inventory__buttons">
                         <button class="card-inventory__remove-button clean-button"></button>
                         <button class="card-inventory__add-button clean-button"></button>
@@ -202,7 +233,18 @@
                   </div>
                   <div class="card-inventory added" style="background-image: url(&quot;./img/content/inventory-3.png&quot;)">
                     <div class="card-inventory__content">
-                      <p class="card-inventory__title">Fast 430-465 Full Gearing</p>
+                      <div class="card-inventory__header">
+                        <p class="card-inventory__title">Raider.io Score Boost</p>
+                        <p class="card-inventory__price">$ 30</p>
+                      </div>
+                      <div class="card-inventory__list">
+                        <p>Mythic+10 = € 15</p>
+                        <p>+1 same armor type trader = € 2</p>
+                        <p>I want 5 runs = € 56</p>
+                        <p>Selfplay = € 0</p>
+                        <p>I want Timer Guaratee = € 1</p>
+                        <p>I want Specific Dungeon = € 2</p>
+                      </div>
                       <div class="card-inventory__buttons">
                         <button class="card-inventory__remove-button clean-button"></button>
                         <button class="card-inventory__add-button clean-button"></button>
@@ -211,7 +253,18 @@
                   </div>
                   <div class="card-inventory added" style="background-image: url(&quot;./img/content/inventory-4.png&quot;)">
                     <div class="card-inventory__content">
-                      <p class="card-inventory__title">Fast 430-465 Full Gearing</p>
+                      <div class="card-inventory__header">
+                        <p class="card-inventory__title">Raider.io Score Boost</p>
+                        <p class="card-inventory__price">$ 30</p>
+                      </div>
+                      <div class="card-inventory__list">
+                        <p>Mythic+10 = € 15</p>
+                        <p>+1 same armor type trader = € 2</p>
+                        <p>I want 5 runs = € 56</p>
+                        <p>Selfplay = € 0</p>
+                        <p>I want Timer Guaratee = € 1</p>
+                        <p>I want Specific Dungeon = € 2</p>
+                      </div>
                       <div class="card-inventory__buttons">
                         <button class="card-inventory__remove-button clean-button"></button>
                         <button class="card-inventory__add-button clean-button"></button>
@@ -220,7 +273,18 @@
                   </div>
                   <div class="card-inventory added" style="background-image: url(&quot;./img/content/inventory-5.png&quot;)">
                     <div class="card-inventory__content">
-                      <p class="card-inventory__title">Raider.io Score Boost</p>
+                      <div class="card-inventory__header">
+                        <p class="card-inventory__title">Raider.io Score Boost</p>
+                        <p class="card-inventory__price">$ 30</p>
+                      </div>
+                      <div class="card-inventory__list">
+                        <p>Mythic+10 = € 15</p>
+                        <p>+1 same armor type trader = € 2</p>
+                        <p>I want 5 runs = € 56</p>
+                        <p>Selfplay = € 0</p>
+                        <p>I want Timer Guaratee = € 1</p>
+                        <p>I want Specific Dungeon = € 2</p>
+                      </div>
                       <div class="card-inventory__buttons">
                         <button class="card-inventory__remove-button clean-button"></button>
                         <button class="card-inventory__add-button clean-button"></button>
@@ -369,7 +433,7 @@
                             </div>
                           </div>
                           <div class="form__submit product__buttons">
-                            <button class="button-main" type="submit">buy now<span class="product__price">$345</span></button>
+                            <button class="button-transparent" type="submit">buy now<span class="button-delim">:</span><span class="product__price">$345</span></button>
                             <button class="button-dark" type="button">add to cart</button>
                           </div>
                         </form>
@@ -465,7 +529,7 @@
                           </div>
                         </div>
                         <div class="form__submit product__buttons">
-                          <button class="button-main" type="submit">buy now<span class="product__price">$345</span></button>
+                          <button class="button-transparent" type="submit">buy now<span class="button-delim">:</span><span class="product__price">$345</span></button>
                           <button class="button-dark" type="button">add to cart</button>
                         </div>
                       </form>
@@ -577,7 +641,7 @@
                           </div>
                         </div>
                         <div class="form__submit product__buttons">
-                          <button class="button-main" type="submit">buy now<span class="product__price">$345</span></button>
+                          <button class="button-transparent" type="submit">buy now<span class="button-delim">:</span><span class="product__price">$345</span></button>
                           <button class="button-dark" type="button">add to cart</button>
                         </div>
                       </form>
@@ -681,7 +745,7 @@
                           </div>
                         </div>
                         <div class="form__submit product__buttons">
-                          <button class="button-main" type="submit">buy now<span class="product__price">$345</span></button>
+                          <button class="button-transparent" type="submit">buy now<span class="button-delim">:</span><span class="product__price">$345</span></button>
                           <button class="button-dark" type="button">add to cart</button>
                         </div>
                       </form>
@@ -752,7 +816,7 @@
                           </div>
                         </div>
                         <div class="form__submit product__buttons">
-                          <button class="button-main" type="submit">buy now<span class="product__price">$345</span></button>
+                          <button class="button-transparent" type="submit">buy now<span class="button-delim">:</span><span class="product__price">$345</span></button>
                           <button class="button-dark" type="button">add to cart</button>
                         </div>
                       </form>
@@ -796,131 +860,173 @@
       <div class="modal" id="modal-cart">
         <div class="modal__content">
           <div class="cart">
-            <div class="cart__content">
+            <div class="cart__wrap">
               <div class="cart__title">
                 <p>cart</p>
                 <div class="cart__close"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 11 11"><path fill="#fff" d="M2.2 1.19l3.3 3.3L8.8 1.2a.67.67 0 01.5-.2.75.75 0 01.7.7.66.66 0 01-.2.48L6.49 5.5 9.8 8.82c.13.126.202.3.2.48a.75.75 0 01-.7.7.67.67 0 01-.5-.2L5.5 6.51 2.21 9.8a.67.67 0 01-.5.2.75.75 0 01-.71-.71.66.66 0 01.2-.48L4.51 5.5 1.19 2.18A.66.66 0 011 1.7a.75.75 0 01.7-.7.67.67 0 01.5.19z"/></svg></div>
               </div>
-              <form class="form" id="form-cart">
-                <div class="form__blocks">
-                  <div class="form-block">
-                    <div class="form-block__title">
-                      <p>contact</p>
-                    </div>
-                    <div class="form-block__content">
-                      <div class="form__fields">
-                        <div class="form__field">
-                          <div class="radio-group radio-group_icons">
-                            <div class="radio-field">
-                              <input type="radio" name="contact-service" id="contact-service-1" value="discord" checked>
-                              <label for="contact-service-1"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="22px" viewBox="0 0 24 24" width="22px"><g><path d="m3.58 21.196h14.259l-.681-2.205 1.629 1.398 1.493 1.338 2.72 2.273v-21.525c-.068-1.338-1.22-2.475-2.648-2.475l-16.767.003c-1.427 0-2.585 1.139-2.585 2.477v16.24c0 1.411 1.156 2.476 2.58 2.476zm10.548-15.513-.033.012.012-.012zm-7.631 1.269c1.833-1.334 3.532-1.27 3.532-1.27l.137.135c-2.243.535-3.26 1.537-3.26 1.537s.272-.133.747-.336c3.021-1.188 6.32-1.102 9.374.402 0 0-1.019-.937-3.124-1.537l.186-.183c.291.001 1.831.055 3.479 1.26 0 0 1.844 3.15 1.844 7.02-.061-.074-1.144 1.666-3.931 1.726 0 0-.472-.534-.808-1 1.63-.468 2.24-1.404 2.24-1.404-.535.337-1.023.537-1.419.737-.609.268-1.219.4-1.828.535-2.884.468-4.503-.315-6.033-.936l-.523-.266s.609.936 2.174 1.404c-.411.469-.818 1.002-.818 1.002-2.786-.066-3.802-1.806-3.802-1.806 0-3.876 1.833-7.02 1.833-7.02z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/><path d="m14.308 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.576-1.335-1.29-1.335v.003c-.708 0-1.288.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/><path d="m9.69 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.575-1.335-1.286-1.335l-.004.003c-.711 0-1.29.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/></g> </svg></label>
-                            </div>
-                            <div class="radio-field">
-                              <input type="radio" name="contact-service" id="contact-service-2" value="facebook">
-                              <label for="contact-service-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve"><g><g> <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/> </g></g> </svg></label>
-                            </div>
-                            <div class="radio-field">
-                              <input type="radio" name="contact-service" id="contact-service-3" value="whatsapp">
-                              <label for="contact-service-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="22px" height="22px"><g><g> <g> <path d="M256.064,0h-0.128C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104l98.4-31.456    C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z M405.024,361.504    c-6.176,17.44-30.688,31.904-50.24,36.128c-13.376,2.848-30.848,5.12-89.664-19.264C189.888,347.2,141.44,270.752,137.664,265.792    c-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624,26.176-62.304c6.176-6.304,16.384-9.184,26.176-9.184    c3.168,0,6.016,0.16,8.576,0.288c7.52,0.32,11.296,0.768,16.256,12.64c6.176,14.88,21.216,51.616,23.008,55.392    c1.824,3.776,3.648,8.896,1.088,13.856c-2.4,5.12-4.512,7.392-8.288,11.744c-3.776,4.352-7.36,7.68-11.136,12.352    c-3.456,4.064-7.36,8.416-3.008,15.936c4.352,7.36,19.392,31.904,41.536,51.616c28.576,25.44,51.744,33.568,60.032,37.024    c6.176,2.56,13.536,1.952,18.048-2.848c5.728-6.176,12.8-16.416,20-26.496c5.12-7.232,11.584-8.128,18.368-5.568    c6.912,2.4,43.488,20.48,51.008,24.224c7.52,3.776,12.48,5.568,14.304,8.736C411.2,329.152,411.2,344.032,405.024,361.504z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/> </g> </g></g> </svg></label>
-                            </div>
-                            <div class="radio-field">
-                              <input type="radio" name="contact-service" id="contact-service-4" value="telegram">
-                              <label for="contact-service-4"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="22px" viewBox="0 0 24 24" width="22px"><g><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/></g> </svg></label>
-                            </div>
-                            <div class="radio-field">
-                              <input type="radio" name="contact-service" id="contact-service-5" value="skype">
-                              <label for="contact-service-5"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="22px" viewBox="0 0 24 24" width="22px"><g><path d="m23.309 14.547c1.738-7.81-5.104-14.905-13.139-13.543-4.362-2.707-10.17.352-10.17 5.542 0 1.207.333 2.337.912 3.311-1.615 7.828 5.283 14.821 13.311 13.366 5.675 3.001 11.946-2.984 9.086-8.676zm-7.638 4.71c-2.108.867-5.577.872-7.676-.227-2.993-1.596-3.525-5.189-.943-5.189 1.946 0 1.33 2.269 3.295 3.194.902.417 2.841.46 3.968-.3 1.113-.745 1.011-1.917.406-2.477-1.603-1.48-6.19-.892-8.287-3.483-.911-1.124-1.083-3.107.037-4.545 1.952-2.512 7.68-2.665 10.143-.768 2.274 1.76 1.66 4.096-.175 4.096-2.207 0-1.047-2.888-4.61-2.888-2.583 0-3.599 1.837-1.78 2.731 2.466 1.225 8.75.816 8.75 5.603-.005 1.992-1.226 3.477-3.128 4.253z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/></g> </svg></label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form__field">
-                          <input class="form__input" type="text" name="contact-login" placeholder="Username" required>
-                        </div>
+              <div class="cart__content">
+                <form class="form" id="form-cart">
+                  <div class="form__blocks">
+                    <div class="form-block">
+                      <div class="form-block__title">
+                        <p>contact</p>
                       </div>
-                    </div>
-                  </div>
-                  <div class="form-block">
-                    <div class="form-block__title">contact</div>
-                    <div class="form-block__content">
-                      <div class="form__fields">
-                        <div class="form__field form__field_50">
-                          <input class="form__input" type="text" name="char-name" placeholder="Character name">
-                        </div>
-                        <div class="form__field form__field_50">
-                          <input class="form__input" type="text" name="server-name" placeholder="Server name">
-                        </div>
-                        <div class="form__field">
-                          <input class="form__input" type="text" name="faction" placeholder="Faction">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-block">
-                    <div class="form-block__title">contact</div>
-                    <div class="form-block__content">
-                      <div class="form__fields">
-                        <div class="form__field form__field_50">
-                          <input class="form__input" type="text" name="char-name" placeholder="Character name">
-                        </div>
-                        <div class="form__field form__field_50">
-                          <input class="form__input" type="text" name="server-name" placeholder="Server name">
-                        </div>
-                        <div class="form__field">
-                          <input class="form__input" type="text" name="faction" placeholder="Faction">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-block">
-                    <div class="form-block__title">Your Order</div>
-                    <div class="form-block__content">
-                      <div class="order">
-                        <div class="order__item" data-price="100"><span class="order__item-title">1. Raider.io Score Boost</span>
-                          <div class="counter">
-                            <input class="counter__value" type="number" name="product-1-quantity" value="1" required>
+                      <div class="form-block__content">
+                        <div class="form__fields">
+                          <div class="form__field">
+                            <div class="radio-group radio-group_icons">
+                              <div class="radio-field">
+                                <input type="radio" name="contact-service" id="contact-service-1" value="discord">
+                                <label for="contact-service-1"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="22px" viewBox="0 0 24 24" width="22px"><g><path d="m3.58 21.196h14.259l-.681-2.205 1.629 1.398 1.493 1.338 2.72 2.273v-21.525c-.068-1.338-1.22-2.475-2.648-2.475l-16.767.003c-1.427 0-2.585 1.139-2.585 2.477v16.24c0 1.411 1.156 2.476 2.58 2.476zm10.548-15.513-.033.012.012-.012zm-7.631 1.269c1.833-1.334 3.532-1.27 3.532-1.27l.137.135c-2.243.535-3.26 1.537-3.26 1.537s.272-.133.747-.336c3.021-1.188 6.32-1.102 9.374.402 0 0-1.019-.937-3.124-1.537l.186-.183c.291.001 1.831.055 3.479 1.26 0 0 1.844 3.15 1.844 7.02-.061-.074-1.144 1.666-3.931 1.726 0 0-.472-.534-.808-1 1.63-.468 2.24-1.404 2.24-1.404-.535.337-1.023.537-1.419.737-.609.268-1.219.4-1.828.535-2.884.468-4.503-.315-6.033-.936l-.523-.266s.609.936 2.174 1.404c-.411.469-.818 1.002-.818 1.002-2.786-.066-3.802-1.806-3.802-1.806 0-3.876 1.833-7.02 1.833-7.02z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/><path d="m14.308 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.576-1.335-1.29-1.335v.003c-.708 0-1.288.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/><path d="m9.69 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.575-1.335-1.286-1.335l-.004.003c-.711 0-1.29.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/></g> </svg></label>
+                              </div>
+                              <div class="radio-field">
+                                <input type="radio" name="contact-service" id="contact-service-2" value="facebook">
+                                <label for="contact-service-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve"><g><g> <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/> </g></g> </svg></label>
+                              </div>
+                              <div class="radio-field">
+                                <input type="radio" name="contact-service" id="contact-service-3" value="whatsapp">
+                                <label for="contact-service-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="22px" height="22px"><g><g> <g> <path d="M256.064,0h-0.128C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104l98.4-31.456    C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z M405.024,361.504    c-6.176,17.44-30.688,31.904-50.24,36.128c-13.376,2.848-30.848,5.12-89.664-19.264C189.888,347.2,141.44,270.752,137.664,265.792    c-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624,26.176-62.304c6.176-6.304,16.384-9.184,26.176-9.184    c3.168,0,6.016,0.16,8.576,0.288c7.52,0.32,11.296,0.768,16.256,12.64c6.176,14.88,21.216,51.616,23.008,55.392    c1.824,3.776,3.648,8.896,1.088,13.856c-2.4,5.12-4.512,7.392-8.288,11.744c-3.776,4.352-7.36,7.68-11.136,12.352    c-3.456,4.064-7.36,8.416-3.008,15.936c4.352,7.36,19.392,31.904,41.536,51.616c28.576,25.44,51.744,33.568,60.032,37.024    c6.176,2.56,13.536,1.952,18.048-2.848c5.728-6.176,12.8-16.416,20-26.496c5.12-7.232,11.584-8.128,18.368-5.568    c6.912,2.4,43.488,20.48,51.008,24.224c7.52,3.776,12.48,5.568,14.304,8.736C411.2,329.152,411.2,344.032,405.024,361.504z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/> </g> </g></g> </svg></label>
+                              </div>
+                              <div class="radio-field">
+                                <input type="radio" name="contact-service" id="contact-service-4" value="telegram">
+                                <label for="contact-service-4"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="22px" viewBox="0 0 24 24" width="22px"><g><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/></g> </svg></label>
+                              </div>
+                              <div class="radio-field">
+                                <input type="radio" name="contact-service" id="contact-service-5" value="skype">
+                                <label for="contact-service-5"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="22px" viewBox="0 0 24 24" width="22px"><g><path d="m23.309 14.547c1.738-7.81-5.104-14.905-13.139-13.543-4.362-2.707-10.17.352-10.17 5.542 0 1.207.333 2.337.912 3.311-1.615 7.828 5.283 14.821 13.311 13.366 5.675 3.001 11.946-2.984 9.086-8.676zm-7.638 4.71c-2.108.867-5.577.872-7.676-.227-2.993-1.596-3.525-5.189-.943-5.189 1.946 0 1.33 2.269 3.295 3.194.902.417 2.841.46 3.968-.3 1.113-.745 1.011-1.917.406-2.477-1.603-1.48-6.19-.892-8.287-3.483-.911-1.124-1.083-3.107.037-4.545 1.952-2.512 7.68-2.665 10.143-.768 2.274 1.76 1.66 4.096-.175 4.096-2.207 0-1.047-2.888-4.61-2.888-2.583 0-3.599 1.837-1.78 2.731 2.466 1.225 8.75.816 8.75 5.603-.005 1.992-1.226 3.477-3.128 4.253z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#A8B6BB"/></g> </svg></label>
+                              </div>
+                              <div class="radio-field">
+                                <input type="radio" name="contact-service" id="contact-service-6" value="email">
+                                <label for="contact-service-6"><svg viewBox="0 0 36 25" height="22px" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.162v20.386c0 1.109.812 2.007 1.93 2.007h31.815c1.117 0 1.93-.909 1.93-2.007V2.162C35.675.945 34.948 0 33.745 0H1.93C.68 0 0 .969 0 2.162m2.933 1.776c0-.491.298-.772.773-.772.293 0 11.854 7.325 12.554 7.755l1.81 1.125c.573-.384 1.15-.713 1.744-1.111 1.213-.776 12.011-7.77 12.308-7.77.477 0 .773.282.773.773 0 .52-1.002 1.037-1.655 1.435-4.1 2.5-8.2 5.224-12.26 7.816-.237.16-.695.503-1.04.45-.382-.059-12.146-7.617-14.287-8.875-.321-.19-.72-.363-.72-.826" fill="#A8B6BB" fill-rule="evenodd"/></svg></label>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="order__item" data-price="200"><span class="order__item-title">2. Mythic+ Dungeons Boost</span>
-                          <div class="counter">
-                            <input class="counter__value" type="number" name="product-2-quantity" value="1" required>
-                          </div>
-                        </div>
-                        <div class="order__item" data-price="300"><span class="order__item-title">3. Fast 430-465 Full Gearing</span>
-                          <div class="counter">
-                            <input class="counter__value" type="number" name="product-3-quantity" value="1" required>
-                          </div>
-                        </div>
-                        <div class="order__item" data-price="400"><span class="order__item-title">4. Mythic+ Dungeons Boost</span>
-                          <div class="counter">
-                            <input class="counter__value" type="number" name="product-4-quantity" value="1" required>
-                          </div>
-                        </div>
-                        <div class="order__item" data-price="500"><span class="order__item-title">5. Fast 430-465 Full Gearing</span>
-                          <div class="counter">
-                            <input class="counter__value" type="number" name="product-5-quantity" value="1" required>
+                          <div class="form__field">
+                            <input class="form__input" type="text" name="contact-login" placeholder="Username" required>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="form__agreement">
-                  <p class="form__agreement-title">Agreements</p>
-                  <div class="radio-group radio-group_text">
-                    <div class="radio-field">
-                      <input type="radio" name="player-region" id="player-region-1" value="eu" checked>
-                      <label for="player-region-1">I play on EU region</label>
+                    <div class="form-block">
+                      <div class="form-block__title">ingame info</div>
+                      <div class="form-block__content">
+                        <div class="form__fields">
+                          <div class="form__field form__field_50">
+                            <input class="form__input" type="text" name="char-name" placeholder="Character name">
+                          </div>
+                          <div class="form__field form__field_50">
+                            <input class="form__input" type="text" name="server-name" placeholder="Server name">
+                          </div>
+                          <div class="form__field form__field_50">
+                            <input class="form__input" type="text" name="battle-tag" placeholder="BattleTag">
+                          </div>
+                          <div class="form__field form__field_50">
+                            <div class="select-button popup-block">
+                              <select class="hidden" name="faction">
+                                <option value="">Choose Faction</option>
+                                <option value="1" data-text="Alliance"></option>
+                                <option value="2" data-text="Horde"></option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="radio-field">
-                      <input type="radio" name="player-region" id="player-region-2" value="us">
-                      <label for="player-region-2">I play on US region</label>
+                    <div class="form-block">
+                      <div class="form-block__title">additional</div>
+                      <div class="form-block__content">
+                        <div class="form__fields">
+                          <div class="form__field">
+                            <input class="form__input" type="text" name="order-notes" placeholder="Order notes">
+                          </div>
+                          <div class="form__field">
+                            <input class="form__input" type="text" name="find-us" placeholder="Where did you find us?">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-block">
+                      <div class="form-block__title">Your Order</div>
+                      <div class="form-block__content">
+                        <div class="order">
+                          <div class="order__item">
+                            <div class="order__item-header"><span class="order__item-title">1. Raider.io Score Boost</span><span class="order__item-price">$ 33</span></div>
+                            <div class="order__item-list">
+                              <p>Mythic+10 = € 15</p>
+                              <p>+1 same armor type trader = € 2</p>
+                              <p>I want 5 runs = € 56</p>
+                              <p>Selfplay = € 0</p>
+                              <p>I want Timer Guaratee = € 1</p>
+                              <p>I want Specific Dungeon = € 2</p>
+                            </div>
+                          </div>
+                          <div class="order__item">
+                            <div class="order__item-header"><span class="order__item-title">2. Raider.io Score Boost</span><span class="order__item-price">$ 80</span></div>
+                            <div class="order__item-list">
+                              <p>Mythic+10 = € 15</p>
+                              <p>+1 same armor type trader = € 2</p>
+                              <p>I want 5 runs = € 56</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-block">
+                      <div class="form-block__title">Coupon Code</div>
+                      <div class="form-block__content">
+                        <div class="form__fields">
+                          <div class="form__field form__field-with-button">
+                            <input class="form__input" type="text" name="coupon-code" placeholder="Coupon code">
+                            <button class="button-main button-apply" type="button">Apply</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-block">
+                      <div class="form-block__title">Tips for our service</div>
+                      <div class="form-block__content">
+                        <div class="form__fields">
+                          <div class="form__field form__field-with-button">
+                            <input class="form__input" type="text" name="tips" placeholder="Tips">
+                            <button class="button-main button-apply" type="button">Apply</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="form__submit">
-                  <button class="button-main" type="submit">buy $&nbsp;<span id="order-total-price">0</span></button>
-                </div>
-              </form>
+                  <div class="form__agreement">
+                    <div class="radio-group radio-group_text">
+                      <div class="radio-field">
+                        <input type="radio" name="player-region" id="player-region-1" value="eu" checked>
+                        <label for="player-region-1">I play on EU region</label>
+                      </div>
+                      <div class="radio-field">
+                        <input type="radio" name="player-region" id="player-region-2" value="us">
+                        <label for="player-region-2">I play on US region</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__submit">
+                    <button class="button-main" type="submit">buy $&nbsp;<span id="order-total-price">255</span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-live">
+        <div class="modal__content">
+          <div class="cart">
+            <div class="cart__wrap">
+              <div class="cart__title">
+                <p>live stream</p>
+                <div class="cart__close"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 11 11"><path fill="#fff" d="M2.2 1.19l3.3 3.3L8.8 1.2a.67.67 0 01.5-.2.75.75 0 01.7.7.66.66 0 01-.2.48L6.49 5.5 9.8 8.82c.13.126.202.3.2.48a.75.75 0 01-.7.7.67.67 0 01-.5-.2L5.5 6.51 2.21 9.8a.67.67 0 01-.5.2.75.75 0 01-.71-.71.66.66 0 01.2-.48L4.51 5.5 1.19 2.18A.66.66 0 011 1.7a.75.75 0 01.7-.7.67.67 0 01.5.19z"/></svg></div>
+              </div>
+              <div class="cart__content">
+                <div class="live__placeholder"></div>
+              </div>
             </div>
           </div>
         </div>
