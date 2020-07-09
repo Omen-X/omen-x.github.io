@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Migrain</title>
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+    </script>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="header__content"><a class="logo" href="#"><img src="./img/decor/logo.png" alt="Logo"></a>
+          <nav class="m-nav">
+            <div class="m-nav__trigger hidden-lg-up"><span></span><span></span><span></span></div>
+            <div class="m-nav__content">
+              <div class="m-nav__links"><a class="m-nav__link hidden-lg-up" href="./index.html">Главная</a><a class="m-nav__link" href="#"><span>О мигрени</span></a>
+                <div class="m-nav__sub-links">
+                  <div><a class="m-nav__sub-link" href="#">Что может быть причиной мигрени?</a><a class="m-nav__sub-link" href="#">Симптомы мигрени</a><a class="m-nav__sub-link" href="#">Как проявляется мигрень?</a><a class="m-nav__sub-link" href="#">Какие есть типы мигрени?</a></div>
+                </div><a class="m-nav__link" href="#" data-target-anchor="health">Профилактика и лечение</a><a class="m-nav__link" href="#" data-target-anchor="docs">Полезные материалы</a><a class="m-nav__link" href="#">Обсуждение с врачом</a><a class="m-nav__link" href="#" data-target-anchor="map">Карта клиник</a>
+              </div>
+              <div class="m-nav__buttons">
+                <button class="button-main hidden-tb-down">Запишитесь к врачу</button>
+                <button class="button-arrow hidden-lg-up">Запишитесь к врачу</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-welcome">
+        <div class="welcome">
+          <div class="welcome__content">
+            <div class="home-titles" data-interval="4000"><img class="active" src="./img/content/home-titles/title-1.png" alt="title-1"><img src="./img/content/home-titles/title-2.png" alt="title-2"><img src="./img/content/home-titles/title-3.png" alt="title-3"><img src="./img/content/home-titles/title-4.png" alt="title-4"><img src="./img/content/home-titles/title-5.png" alt="title-5"></div><svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+<defs>
+<filter id="filter-titles">
+<feTurbulence type="turbulence" baseFrequency="0.000001 0.000001" numOctaves="3" result="warp" seed="1"></feTurbulence>
+<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+</filter>
+</defs>
+</svg>
+            <div class="welcome__buttons">
+              <button class="button-arrow">Запишитесь к врачу</button>
+              <button class="button-arrow button-arrow_transparent" data-target-anchor="health">Узнайте о профилактике и лечении</button>
+            </div>
+          </div>
+          <div class="welcome__video">
+            <div class="welcome__trigger"><span></span><span></span></div>
+            <div class="welcome__trigger" data-video-button data-toggle-distance="100"><span></span><span></span></div>
+          </div>
+        </div>
+      </section>
+      <section class="section-test-short">
+        <div class="content-wrap">
+          <div class="section-title"><img src="./img/content/titles/title-test.png" alt="test"></div>
+          <div class="section-sub-title">
+            <p>Пройдите тест – за последние 3 месяца сопровождалась ли ваша головная боль следующими симптомами:</p>
+          </div>
+          <div class="test-short">
+            <form class="test-short__form" id="form-test-short">
+              <div class="test-short__form-content">
+                <div class="checkbox-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input hidden-input" type="checkbox" id="test-short-question-1" name="test-short" data-points="0">
+                    <label class="checkbox__label" for="test-short-question-1">
+                      <div class="checkbox__icon"></div>
+                      <p class="checkbox__text">Тошнотой или рвотой?</p>
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <input class="checkbox__input hidden-input" type="checkbox" id="test-short-question-2" name="test-short" data-points="1">
+                    <label class="checkbox__label" for="test-short-question-2">
+                      <div class="checkbox__icon"></div>
+                      <p class="checkbox__text">Непереносимостью света и звуков?</p>
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <input class="checkbox__input hidden-input" type="checkbox" id="test-short-question-3" name="test-short" data-points="1">
+                    <label class="checkbox__label" for="test-short-question-3">
+                      <div class="checkbox__icon"></div>
+                      <p class="checkbox__text">Ограничением работоспособности, учебы или повседневной активности как минимум на один день?</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="test-short__form-submit">
+                <button class="button-arrow" type="submit">Узнайте результат</button>
+              </div>
+            </form>
+            <div class="test-short__success">
+              <div class="test-short__success-title">
+                <p>Вы ответили ДА на</p><img src="./img/content/titles/title-test-short.png" alt="test-short">
+                <p>возможно, у вас мигрень, обратитесь к врачу!</p>
+              </div>
+              <div class="test-short__success-link">
+                <button class="button-arrow">Узнать адреса клиник</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-health">
+        <div class="content-wrap">
+          <div class="health" data-tabs-anchor data-block-anchor="health">
+            <div data-tabs-nav>
+              <div class="tab-link active"><span class="tab-link__text">о профилактике</span></div>
+              <div class="tab-link"><span class="tab-link__text">о лечении</span></div>
+            </div>
+            <div data-tabs-blocks>
+              <div class="tab-block active">
+                <div class="health__video">
+                  <div class="health__video-overlay">
+                    <div class="button-play"></div>
+                  </div>
+                  <div class="health__video-content">
+                    <div class="health__video-placeholder"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-block">
+                <div class="health__info">
+                  <div class="health__img">
+                    <div class="img-bordered img-bordered_revert"><img src="./img/content/health-info.png" alt=""></div>
+                  </div>
+                  <div class="health__info-content">
+                    <p class="health__info-text">Лечение мигрени в первую очередь направлено на облегчение заболевания: снижение частоты и тяжести приступов, предотвращение хронизации мигрени (перехода эпизодической мигрени в хроническую).</p>
+                    <div class="health__info-button"><a class="button-arrow" href="#">Читать далее</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-map">
+        <div class="content-wrap">
+          <div class="section-title"><img src="./img/content/titles/title-map.png" alt=""></div>
+          <div class="callback">
+            <div class="callback__info">
+              <div class="callback__icon"></div>
+              <div class="callback__info-content">
+                <p class="callback__title">Вы можете обратиться на горячую линию</p>
+                <p class="callback__text">Мы запишем вас на консультацию к врачу. Звонок бесплатный</p>
+              </div>
+            </div>
+            <div class="callback__phone" data-phone-hidden>
+              <p class="callback__phone-text" data-phone="+8 800 700 55 44"></p>
+              <button class="button-gray" data-phone-trigger>Показать</button>
+            </div>
+          </div>
+          <div class="map-wrap" data-block-anchor="map">
+            <div class="map" id="map">
+              <div class="map_outer">
+                <div class="map_sidebar">
+                  <div class="map_dropdown">
+                    <select></select>
+                  </div>
+                  <div class="map_list"></div>
+                </div>
+                <div class="map_inner" id="map-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-docs" data-block-anchor="docs">
+        <div class="content-wrap">
+          <div class="section-title"><img class="hidden-sm-down" src="./img/content/titles/title-docs.png" alt=""><img class="hidden-tb-up" src="./img/content/titles/title-docs-mob.png" alt=""></div>
+          <div class="docs" data-carousel-progress>
+            <div class="doc">
+              <div class="doc__img"><img src="./img/decor/doc-1.svg" alt=""></div>
+              <div class="doc__content">
+                <p class="doc__title">Дневник мигрени</p>
+                <div class="doc__buttons"><a class="button-transparent" href="#">Смотреть</a><a class="button-transparent" download="">Скачать</a></div>
+              </div>
+            </div>
+            <div class="doc">
+              <div class="doc__img"><img src="./img/decor/doc-2.svg" alt=""></div>
+              <div class="doc__content">
+                <p class="doc__title">Обсуждение мигрени с врачом</p>
+                <div class="doc__buttons"><a class="button-transparent" href="#">Смотреть</a><a class="button-transparent" download="">Скачать</a></div>
+              </div>
+            </div>
+            <div class="doc">
+              <div class="doc__img"><img src="./img/decor/doc-3.svg" alt=""></div>
+              <div class="doc__content">
+                <p class="doc__title">Питание при мигрени</p>
+                <div class="doc__buttons"><a class="button-transparent" href="#">Смотреть</a><a class="button-transparent" download="">Скачать</a></div>
+              </div>
+            </div>
+            <div class="doc">
+              <div class="doc__img"><img src="./img/decor/doc-4.svg" alt=""></div>
+              <div class="doc__content">
+                <p class="doc__title">Мигрень на работе</p>
+                <div class="doc__buttons"><a class="button-transparent" href="#">Смотреть</a><a class="button-transparent" download="">Скачать</a></div>
+              </div>
+            </div>
+            <div class="doc">
+              <div class="doc__img"><img src="./img/decor/doc-5.svg" alt=""></div>
+              <div class="doc__content">
+                <p class="doc__title">Облегчение мигрени  в праздники</p>
+                <div class="doc__buttons"><a class="button-transparent" href="#">Смотреть</a><a class="button-transparent" download="">Скачать</a></div>
+              </div>
+            </div>
+            <div class="doc">
+              <div class="doc__img"><img src="./img/decor/doc-6.svg" alt=""></div>
+              <div class="doc__content">
+                <p class="doc__title">Как поддержать близких при мигрени</p>
+                <div class="doc__buttons"><a class="button-transparent" href="#">Смотреть</a><a class="button-transparent" download="">Скачать</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-reviews">
+        <div class="content-wrap">
+          <div class="section-title"><img class="hidden-sm-down" src="./img/content/titles/title-reviews.png" alt=""><img class="hidden-tb-up" src="./img/content/titles/title-reviews-mob.png" alt=""></div>
+          <div class="section-sub-title">
+            <p>Лайфхаки от известных людей</p>
+          </div>
+          <div class="reviews">
+            <div class="review">
+              <div class="review__img img-bordered"><img src="./img/content/review-1.jpg" alt=""></div>
+              <div class="review__content">
+                <p class="review__text">Я срывалась дома, замыкалась на работе, это была не я - мигрень крала мою жизнь</p>
+                <p class="review__author">Маргарита Григорьева</p><a class="link-youtube" href="#" target="_blank">Смотреть историю</a>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__img img-bordered"><img src="./img/content/review-2.jpg" alt=""></div>
+              <div class="review__content">
+                <p class="review__text">Я срывалась дома, замыкалась на работе</p>
+                <p class="review__author">Анна Колесова</p><a class="link-youtube" href="#" target="_blank">Смотреть историю</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="float-buttons">
+        <button class="button-arrow">Запишитесь к врачу</button>
+        <button class="button-arrow button-arrow_transparent" data-target-anchor="health">Узнайте о профилактике и лечении</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="content-wrap">
+        <div class="footer__content"><a class="logo" href="#"><img src="./img/decor/logo.png" alt="Logo"></a>
+          <div class="footer__links"><a class="hidden-tb-up" href="./index.html">Главная</a><a href="#">О мигрени</a><a href="#">Профилактика и лечение</a><a href="#">Полезные материалы</a><a href="#">Обсуждение с врачом</a><a href="#">Карта клиник</a></div>
+          <div class="footer__buttons">
+            <button class="button-main">Запишитесь к врачу</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="content-wrap">
+          <div class="footer__copy-text">
+            <p>Материал разработан при поддержке ООО "Новартис Фарма" в целях повышения осведомленности пациентов о заболевании.</p>
+            <p>Информация в материале не заменяет консультацию Специалиста здравоохранения. Обратитесь к лечащему врачу</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modals">
+    </div>
+    <script defer src="./js/libs.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.0/mapbox-gl-language.js"></script>
+    <script defer src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <script defer src="./js/places.js"></script>
+    <script defer src="./js/map.js"></script>
+    <script defer src="./js/home.js"></script>
+  </body>
+</html>
