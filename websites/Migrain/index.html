@@ -69,6 +69,8 @@
             <div class="welcome__trigger"><span></span><span></span></div>
             <div class="welcome__trigger" data-video-button data-toggle-distance="100"><span></span><span></span></div>
           </div>
+          <div class="welcome__overlay-left"></div>
+          <div class="welcome__overlay-right"></div>
         </div>
       </section>
       <section class="section-test-short">
@@ -77,7 +79,7 @@
           <div class="section-sub-title">
             <p>Пройдите тест – за последние 3 месяца сопровождалась ли ваша головная боль следующими симптомами:</p>
           </div>
-          <div class="test-short">
+          <div class="test-short" data-waypoint data-waypoint-offset="70%">
             <form class="test-short__form" id="form-test-short">
               <div class="test-short__form-content">
                 <div class="checkbox-group">
@@ -120,7 +122,7 @@
           </div>
         </div>
       </section>
-      <section class="section-health">
+      <section class="section-health" data-waypoint data-waypoint-offset="90%">
         <div class="content-wrap">
           <div class="health" data-tabs-anchor data-block-anchor="health">
             <div data-tabs-nav>
@@ -155,7 +157,7 @@
       </section>
       <section class="section-map">
         <div class="content-wrap">
-          <div class="section-title"><img src="./img/content/titles/title-map.png" alt=""></div>
+          <div class="section-title" data-waypoint><img src="./img/content/titles/title-map.png" alt=""></div>
           <div class="callback">
             <div class="callback__info">
               <div class="callback__icon"></div>
@@ -186,8 +188,8 @@
       </section>
       <section class="section-docs" data-block-anchor="docs">
         <div class="content-wrap">
-          <div class="section-title"><img class="hidden-sm-down" src="./img/content/titles/title-docs.png" alt=""><img class="hidden-tb-up" src="./img/content/titles/title-docs-mob.png" alt=""></div>
-          <div class="docs" data-carousel-progress>
+          <div class="section-title" data-waypoint><img class="hidden-sm-down" src="./img/content/titles/title-docs.png" alt=""><img class="hidden-tb-up" src="./img/content/titles/title-docs-mob.png" alt=""></div>
+          <div class="docs" data-carousel-progress data-waypoint data-waypoint-offset="70%">
             <div class="doc">
               <div class="doc__img"><img src="./img/decor/doc-1.svg" alt=""></div>
               <div class="doc__content">
@@ -235,7 +237,7 @@
       </section>
       <section class="section-reviews">
         <div class="content-wrap">
-          <div class="section-title"><img class="hidden-sm-down" src="./img/content/titles/title-reviews.png" alt=""><img class="hidden-tb-up" src="./img/content/titles/title-reviews-mob.png" alt=""></div>
+          <div class="section-title" data-waypoint><img class="hidden-sm-down" src="./img/content/titles/title-reviews.png" alt=""><img class="hidden-tb-up" src="./img/content/titles/title-reviews-mob.png" alt=""></div>
           <div class="section-sub-title">
             <p>Лайфхаки от известных людей</p>
           </div>
@@ -259,7 +261,7 @@
       </section>
       <div class="float-buttons">
         <button class="button-arrow">Запишитесь к врачу</button>
-        <button class="button-arrow button-arrow_transparent" data-target-anchor="health">Узнайте о профилактике и лечении</button>
+        <button class="button-arrow button-arrow_transparent" data-target-anchor="health">Узнайте о профилактике<br />и лечении</button>
       </div>
     </main>
     <footer class="footer">
