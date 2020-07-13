@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 const mobileNav = () => {
   const nav = document.querySelector('.m-nav')
 
@@ -427,6 +428,138 @@ const mainSelect = () => {
   })
 }
 
+const modals = () => {
+  $('[data-target-modal-id]').click(function () {
+    const id = this.dataset.targetModalId
+    $(`#${id}`).addClass('active')
+  })
+
+  $('.modal').click(function () {
+    $(this).removeClass('active')
+  })
+
+  $('.modal__content').click(function (event) {
+    event.stopPropagation()
+  })
+
+  $('.modal__close').click(function () {
+    $(this).closest('.modal').removeClass('active')
+  })
+
+  $('.modal-card__form').submit(function (event) {
+    event.preventDefault()
+    $(this).closest('.modal').removeClass('active')
+  })
+}
+
+const hints = () => {
+  $(document.body).on('mouseenter', '[data-toggle-hint]', function () {
+    const id = $(this).attr('data-toggle-hint')
+    const $hint = $(`[data-hint-id=${id}]`)
+    const $hintsAnchor = $(this).closest('[data-hints-anchor]')
+
+    const contentWidth = $('.hint__content', $hint).innerWidth()
+    $hint.width(contentWidth)
+
+    // Detect page overflow
+    const isOverflow = (window.innerWidth - $(this).offset().left - contentWidth - 15) < 0
+
+    if (isOverflow) {
+      const right = $hintsAnchor.innerWidth() -
+          ($(this).offset().left - $hintsAnchor.offset().left) - $(this).innerWidth()
+
+      $hint.css({
+        left: 'auto',
+        right
+      })
+    } else {
+      const left = $(this).offset().left - $hintsAnchor.offset().left
+
+      $hint.css({
+        right: 'auto',
+        left
+      })
+    }
+
+    const bottom = $hintsAnchor.innerHeight() - ($(this).offset().top - $hintsAnchor.offset().top) + 5
+    $hint.css('bottom', bottom)
+
+    $hint.addClass('active')
+  })
+
+  $(document.body).on('mouseleave', '[data-toggle-hint]', function () {
+    const id = $(this).attr('data-toggle-hint')
+    const $hint = $(`[data-hint-id=${id}]`)
+
+    $hint.removeClass('active')
+  })
+}
+
+const closeButton = () => {
+  $('.close-button').click(function () {
+    const speed = $(this).attr('data-close-speed') || 300
+
+    const $anchor = $(this).closest('.close-anchor')
+
+    $anchor.addClass('closed')
+    $anchor.slideUp(speed)
+  })
+}
+
+const copyButton = () => {
+  $('[data-copy-button]').click(function () {
+    const value = $(this).closest('[data-copy-anchor]').find('[data-copy-value]').text()
+
+    const input = document.createElement('input')
+    input.style.position = 'absolute'
+    input.style.zIndex = '-1'
+    input.type = 'text'
+
+    document.body.appendChild(input)
+
+    input.value = value
+    input.select()
+    input.setSelectionRange(0, 99999)
+    document.execCommand('copy')
+
+    document.body.removeChild(input)
+  })
+}
+
+//
+
+/**
+ * Toggle 'active' state for blocks
+ */
+const toggleBlock = () => {
+  $(document.body).on('click', '[data-toggle-block]', function () {
+    const id = $(this).attr('data-toggle-block')
+    const $target = $(`[data-block-id=${id}]`)
+
+    if ($target.length) {
+      $target.toggleClass('active')
+    }
+  })
+
+  $(document.body).on('click', '[data-show-block]', function () {
+    const id = $(this).attr('data-show-block')
+    const $target = $(`[data-block-id=${id}]`)
+
+    if ($target.length) {
+      $target.addClass('active')
+    }
+  })
+
+  $(document.body).on('click', '[data-hide-block]', function () {
+    const id = $(this).attr('data-hide-block')
+    const $target = $(`[data-block-id=${id}]`)
+
+    if ($target.length) {
+      $target.removeClass('active')
+    }
+  })
+}
+
 // ========>> DOCUMENT READY <<========
 
 function documentReady () {
@@ -459,6 +592,11 @@ function documentReady () {
   dynamicStyles()
   searchDropdown()
   mainSelect()
+  modals()
+  hints()
+  closeButton()
+  copyButton()
+  toggleBlock()
 }
 
 // ========>> UTILS <<========

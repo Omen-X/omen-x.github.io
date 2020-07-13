@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Content">
+    <title>Arlekino</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <script>
+      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+      if (isTouch) document.body.classList.add('touch');
+      else document.body.classList.add('no-touch');
+      
+      var sBrowser, sUsrAg = navigator.userAgent;
+      if (sUsrAg.indexOf("Firefox") > -1) sBrowser = "firefox";
+      else if (sUsrAg.indexOf("SamsungBrowser") > -1) sBrowser = "samsung-internet";
+      else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) sBrowser = "opera";
+      else if (sUsrAg.indexOf("Trident") > -1) sBrowser = "ie";
+      else if (sUsrAg.indexOf("Edge") > -1) sBrowser = "edge";
+      else if (sUsrAg.indexOf("Chrome") > -1) sBrowser = "chrome";
+      else if (sUsrAg.indexOf("Safari") > -1) sBrowser = "safari";
+      else sBrowser = "unknown-browser";
+      document.body.classList.add(sBrowser);
+      
+    </script>
+        <header class="header header_acc">
+          <div class="content-wrap">
+            <div class="header__content"><a class="logo" href="./index.html">Arlekino.tv</a>
+              <div class="msg-button msg-button_dirty hidden-lg-up" data-toggle-block="acc-notifications"><span class="msg-button__icon m-icon-email-white"></span></div>
+              <nav class="m-nav">
+                <div class="m-nav__buttons hidden-lg-up"><a href="#"><i class="m-icon-user"></i></a><span class="m-nav__trigger"></span></div>
+                <div class="m-nav__content">
+                  <div class="m-acc-meta hidden-lg-up">
+                    <div class="m-acc-meta__info">
+                      <div class="m-acc-meta__ava"><img src="./img/content/acc/acc-ava.png"></div><span class="m-acc-meta__name">Валерий П.</span>
+                      <div class="m-acc-meta__buttons">
+                        <div class="m-acc-meta__balance"><span class="m-icon-wallet"></span>
+                          <div class="m-acc-meta__balance-text">23$</div>
+                        </div><span class="acc-configs-mob-trigger"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="acc-configs-mob hidden-lg-up active">
+                    <div class="acc-configs-mob__item">
+                      <div class="acc-configs-mob__item-content">
+                        <div class="acc-configs-mob__item-header">
+                          <div class="m-select settings-select">
+                            <div class="m-select__trigger">
+                              <input class="m-select__input hidden" type="text" value=""><span class="m-select__value">Выберите устройство</span><span class="m-select__trigger-icon"><i class="m-icon-arrow-orange"></i></span>
+                            </div>
+                            <div class="m-select__content">
+                              <div class="m-select__search">
+                                <input class="m-select__search-input" type="text" placeholder="Введите название">
+                              </div>
+                              <div class="m-select__list"><span class="m-select__list-item">Детская</span><span class="m-select__list-item">Спальня</span><span class="m-select__list-item">Телевизор на кухне</span><span class="m-select__list-item">Детская 2</span><span class="m-select__list-item">Спорткомплекс</span><span class="m-select__list-item">Игровая комната 1</span><span class="m-select__list-item">Детская</span><span class="m-select__list-item">Спальня</span><span class="m-select__list-item">Телевизор на кухне</span></div>
+                            </div>
+                          </div>
+                          <div class="acc-configs-mob__add" data-toggle-block="modal-device-add"><i class="m-icon-add"></i></div>
+                        </div>
+                        <div class="acc-configs-mob__item-toggle">
+                          <div class="mob-device-info">
+                            <div class="mob-device-info__header">
+                              <!-- TODO: remove or refactor-->
+                              <div class="device-id">
+                                <div class="device-id__title"><span class="device-id__text">OTT ID</span>
+                                  <button class="clean-button device-id__refresh"><i class="m-icon-refresh"></i></button>
+                                </div>
+                                <div class="device-id__content copy-anchor copy-anchor_disabled"><span class="device-id__value copy-value">Добавьте устройство</span>
+                                  <button class="copy-button"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mob-device-info__toggler"><i class="m-icon-arr-corner"></i></div>
+                            <div class="device-links">
+                              <div class="device-links__block">
+                                <p class="device-links__block-title device-links__list-toggler"><span>Прямые ссылки (http и https)</span><svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.85614 1.11503L8.56134 0.808169C8.46856 0.712338 8.34512 0.659544 8.21319 0.659544C8.08133 0.659544 7.95775 0.712338 7.86497 0.808169L4.50201 4.28457L1.13518 0.804312C1.04255 0.70848 0.918959 0.655762 0.787104 0.655762C0.655249 0.655762 0.53159 0.70848 0.438882 0.804312L0.144001 1.10928C-0.0480004 1.3076 -0.0480004 1.63064 0.144001 1.82896L4.15262 5.98753C4.24525 6.08328 4.36869 6.15075 4.50172 6.15075H4.50326C4.63518 6.15075 4.75862 6.08321 4.85126 5.98753L8.85614 1.84023C8.94893 1.74447 8.99985 1.61302 9 1.47672C9 1.34035 8.94893 1.21071 8.85614 1.11503Z" fill="#5C70CF"/>
+</svg>
+                                </p>
+                                <div class="device-links__list">
+                                  <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                                    <button data-copy-button data-toggle-block="modal-copy"></button>
+                                  </p>
+                                  <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                                    <button data-copy-button data-toggle-block="modal-copy"></button>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="device-links__block">
+                                <p class="device-links__block-title device-links__list-toggler"><span>Анонимные ссылки (http и https)</span><svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.85614 1.11503L8.56134 0.808169C8.46856 0.712338 8.34512 0.659544 8.21319 0.659544C8.08133 0.659544 7.95775 0.712338 7.86497 0.808169L4.50201 4.28457L1.13518 0.804312C1.04255 0.70848 0.918959 0.655762 0.787104 0.655762C0.655249 0.655762 0.53159 0.70848 0.438882 0.804312L0.144001 1.10928C-0.0480004 1.3076 -0.0480004 1.63064 0.144001 1.82896L4.15262 5.98753C4.24525 6.08328 4.36869 6.15075 4.50172 6.15075H4.50326C4.63518 6.15075 4.75862 6.08321 4.85126 5.98753L8.85614 1.84023C8.94893 1.74447 8.99985 1.61302 9 1.47672C9 1.34035 8.94893 1.21071 8.85614 1.11503Z" fill="#5C70CF"/>
+</svg>
+                                </p>
+                                <div class="device-links__list">
+                                  <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                                    <button data-copy-button data-toggle-block="modal-copy"></button>
+                                  </p>
+                                  <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                                    <button data-copy-button data-toggle-block="modal-copy"></button>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="device-links__block">
+                                <p class="device-links__block-title device-links__list-toggler"><span>Источники EPG</span><svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.85614 1.11503L8.56134 0.808169C8.46856 0.712338 8.34512 0.659544 8.21319 0.659544C8.08133 0.659544 7.95775 0.712338 7.86497 0.808169L4.50201 4.28457L1.13518 0.804312C1.04255 0.70848 0.918959 0.655762 0.787104 0.655762C0.655249 0.655762 0.53159 0.70848 0.438882 0.804312L0.144001 1.10928C-0.0480004 1.3076 -0.0480004 1.63064 0.144001 1.82896L4.15262 5.98753C4.24525 6.08328 4.36869 6.15075 4.50172 6.15075H4.50326C4.63518 6.15075 4.75862 6.08321 4.85126 5.98753L8.85614 1.84023C8.94893 1.74447 8.99985 1.61302 9 1.47672C9 1.34035 8.94893 1.21071 8.85614 1.11503Z" fill="#5C70CF"/>
+</svg>
+                                </p>
+                                <div class="device-links__list">
+                                  <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                                    <button data-copy-button data-toggle-block="modal-copy"></button>
+                                  </p>
+                                  <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                                    <button data-copy-button data-toggle-block="modal-copy"></button>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="device-links__block">
+                                <p class="device-links__block-title"><span>Picon</span><a class="device-links__block-link" href="#"><i class="m-icon-download"></i></a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="acc-configs-mob__item">
+                      <div class="acc-configs-mob__item-content">
+                        <div class="m-select settings-select">
+                          <div class="m-select__trigger">
+                            <input class="m-select__input hidden" type="text" value=""><span class="m-select__value">Мои плейлисты</span><span class="m-select__trigger-icon"><i class="m-icon-arrow-orange"></i></span>
+                          </div>
+                          <div class="m-select__content">
+                            <div class="m-select__search">
+                              <input class="m-select__search-input" type="text" placeholder="Введите название">
+                            </div>
+                            <div class="m-select__list"><span class="m-select__list-item">Плейлист 1</span><span class="m-select__list-item">Плейлист 2</span></div>
+                          </div>
+                        </div>
+                        <!--.acc-configs-mob__add(data-target-modal-id="modal-device-add")-->
+                        <!--  i.m-icon-add-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-acc-links hidden-lg-up"><a class="m-acc-link active" href="#">Настройки просмотра</a><a class="m-acc-link" href="#">Управление DNS</a><a class="m-acc-link" href="#">Лог работы</a><a class="m-acc-link" href="#">Мои рефералы</a></div>
+                  <div class="m-acc-player-link hidden-lg-up"><a href="#"><span class="acc-link-player__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M15.6941 10.9214L10.3919 8.02027C10.0871 7.85346 9.72671 7.85968 9.42788 8.03675C9.12887 8.21399 8.95053 8.5271 8.95053 8.87463V14.6271C8.95053 14.9729 9.12778 15.2855 9.42477 15.4629C9.57986 15.5556 9.7518 15.6021 9.9241 15.6021C10.0819 15.6021 10.2401 15.5631 10.3857 15.4847L15.688 12.6336C16.0028 12.4642 16.1993 12.137 16.2007 11.7794C16.202 11.4218 16.0079 11.0931 15.6941 10.9214ZM10.357 13.9034V9.60412L14.3197 11.7724L10.357 13.9034Z" fill="#5C70CF"/>
+<path d="M23.8234 7.19658L23.8223 7.18559C23.802 6.99242 23.5996 5.27416 22.7643 4.4002C21.7988 3.37225 20.7042 3.24737 20.1778 3.1875C20.1342 3.18256 20.0943 3.17798 20.0586 3.17322L20.0166 3.16882C16.8438 2.93811 12.0521 2.90662 12.0042 2.90643L12 2.90625L11.9957 2.90643C11.9478 2.90662 7.1561 2.93811 3.9547 3.16882L3.9124 3.17322C3.87834 3.17779 3.84081 3.18201 3.79997 3.18677C3.27959 3.24682 2.19671 3.37189 1.22845 4.43701C0.43286 5.30163 0.20288 6.98308 0.17926 7.17204L0.176513 7.19658C0.169372 7.27696 0 9.19059 0 11.1117V12.9076C0 14.8288 0.169372 16.7424 0.176513 16.8229L0.177795 16.835C0.198119 17.0251 0.400267 18.7119 1.23175 19.5862C2.13958 20.5797 3.28746 20.7112 3.90489 20.7819C4.00249 20.793 4.08653 20.8025 4.14384 20.8126L4.19932 20.8203C6.03129 20.9946 11.7751 21.0805 12.0186 21.084L12.026 21.0842L12.0333 21.084C12.0813 21.0838 16.8727 21.0523 20.0456 20.8216L20.0875 20.8172C20.1276 20.8119 20.1726 20.8071 20.2221 20.802C20.7395 20.7471 21.8166 20.633 22.7715 19.5823C23.567 18.7175 23.7972 17.0361 23.8206 16.8473L23.8234 16.8228C23.8305 16.7422 24.0001 14.8288 24.0001 12.9076V11.1117C23.9999 9.19059 23.8305 7.27714 23.8234 7.19658ZM22.5935 12.9076C22.5935 14.6857 22.4382 16.517 22.4236 16.6851C22.3639 17.1481 22.1213 18.212 21.7336 18.6333C21.136 19.2908 20.522 19.356 20.0738 19.4034C20.0196 19.4091 19.9694 19.4146 19.924 19.4203C16.8552 19.6422 12.2444 19.6763 12.032 19.6776C11.7938 19.6741 6.13401 19.5875 4.35789 19.4225C4.26689 19.4077 4.16856 19.3963 4.06493 19.3846C3.53923 19.3243 2.81963 19.2419 2.26629 18.6333L2.25329 18.6194C1.87243 18.2226 1.63677 17.2278 1.5769 16.6906C1.56573 16.5635 1.40643 14.7107 1.40643 12.9076V11.1117C1.40643 9.33561 1.56133 7.50639 1.57635 7.33482C1.64758 6.78935 1.89477 5.78997 2.26629 5.38604C2.88225 4.70855 3.53172 4.63348 3.96129 4.58386C4.0023 4.5791 4.04057 4.5747 4.07591 4.57012C7.18942 4.3471 11.8333 4.31396 12 4.31268C12.1666 4.31378 16.8088 4.3471 19.8947 4.57012C19.9326 4.57488 19.974 4.57964 20.0185 4.58477C20.4603 4.63513 21.1281 4.7113 21.7409 5.36498L21.7466 5.37102C22.1275 5.76781 22.3631 6.78002 22.423 7.32805C22.4336 7.44798 22.5935 9.30485 22.5935 11.1117V12.9076Z" fill="#5C70CF"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="24" height="23.9999" fill="white"/>
+</clipPath>
+</defs>
+</svg></span><span>Онлайн плеер</span></a></div>
+                  <div class="m-nav__links"><a href="#">Как настроить</a><a href="#">Частые вопросы</a><a href="#">Новости</a></div>
+                  <div class="m-nav__links hidden-lg-up">
+                    <div class="lang-select"><span>RU</span></div>
+                    <button class="button-transparent">ВЫЙТИ</button>
+                  </div>
+                </div>
+              </nav>
+              <div class="header__buttons">
+                <div class="lang-select"><span>RU</span></div>
+                <div class="acc-button">
+                  <div class="acc-button__ava"><img src="./img/content/acc/acc-ava.png"></div><span class="acc-button__title">Валерий П.</span>
+                  <div class="acc-button__arrow"><svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8242 0.794494L10.4639 0.43167C10.3505 0.31836 10.1996 0.255937 10.0383 0.255937C9.87719 0.255937 9.72614 0.31836 9.61274 0.43167L5.50246 4.54213L1.38744 0.427109C1.27422 0.313799 1.12317 0.251465 0.962016 0.251465C0.80086 0.251465 0.649721 0.313799 0.536411 0.427109L0.176001 0.787697C-0.0586671 1.02219 -0.0586671 1.40415 0.176001 1.63864L5.07542 6.55568C5.18864 6.6689 5.33951 6.74867 5.5021 6.74867H5.50398C5.66522 6.74867 5.8161 6.66881 5.92932 6.55568L10.8242 1.65196C10.9376 1.53874 10.9998 1.38331 11 1.22216C11 1.06091 10.9376 0.907625 10.8242 0.794494Z" fill="white"/>
+</svg>
+                  </div>
+                </div>
+                <button class="clean-button acc-logout-btn"><i class="m-icon-logout"></i></button>
+              </div>
+            </div>
+          </div>
+        </header>
+    <main>
+      <section class="section-acc">
+        <div class="acc-section">
+          <div class="content-wrap">
+            <div class="acc-section__content">
+              <div class="acc-header">
+                <div class="acc-header__title title-page">Личный<span class="c-accent">&nbsp;кабинет</span></div>
+              </div>
+            </div>
+            <div class="acc-section__aside">
+              <div class="acc-meta-info">
+                <div class="acc-meta-buttons">
+                  <div class="msg-button msg-button_dirty" data-toggle-block="acc-notifications"><span class="msg-button__icon m-icon-email"></span><span class="msg-button__text">2 новых</span></div>
+                  <div class="acc-meta-buttons__delim"></div>
+                  <div class="balance-button"><span class="m-icon-wallet"></span>
+                    <div class="balance-button__text">23$</div>
+                  </div>
+                  <button class="balance-add button-text">ПОПОЛНИТЬ</button>
+                </div>
+                <div class="acc-notifications" data-block-id="acc-notifications">
+                  <div class="acc-notifications__close" data-hide-block="acc-notifications"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.85756 5.15231L10.7514 1.2584C11.0048 1.00511 11.0048 0.595589 10.7514 0.342306C10.4981 0.089023 10.0886 0.089023 9.83528 0.342306L5.94135 4.23622L2.04755 0.342306C1.79415 0.089023 1.38474 0.089023 1.13146 0.342306C0.878056 0.595589 0.878056 1.00511 1.13146 1.2584L5.02526 5.15231L1.13146 9.04623C0.878056 9.29951 0.878056 9.70904 1.13146 9.96232C1.25768 10.0887 1.42365 10.1521 1.5895 10.1521C1.75535 10.1521 1.9212 10.0887 2.04755 9.96232L5.94135 6.0684L9.83528 9.96232C9.96162 10.0887 10.1275 10.1521 10.2933 10.1521C10.4592 10.1521 10.625 10.0887 10.7514 9.96232C11.0048 9.70904 11.0048 9.29951 10.7514 9.04623L6.85756 5.15231Z" fill="#202020"/>
+</svg>
+                  </div>
+                  <div class="notifications-carousel">
+                    <div class="notifications-carousel__item">
+                      <div class="msg-card">
+                        <div class="msg-card__header">
+                          <p class="msg-card__title">Информация по подписке</p>
+                        </div>
+                        <div class="msg-card__content">
+                          <p class="msg-card__text">Поздравляем с подпиской! Твоя подписка активна до 25 мая 2021 г.</p>
+                          <p class="msg-card__text">Если хочешь разные плейлисты на все устройства, нужна подписка на каждое устройство.</p>
+                        </div>
+                        <div class="msg-card__footer"><a class="msg-card__link link-text" href="#">Читать подробно</a><span class="msg-card__date">3 мая 2020 г.</span></div>
+                      </div>
+                    </div>
+                    <div class="notifications-carousel__item">
+                      <div class="msg-card">
+                        <div class="msg-card__header">
+                          <div class="msg-card__tag msg-card__tag_urgent"><span>срочно!</span></div>
+                          <p class="msg-card__title">Изменения в бесплатном тесте</p>
+                        </div>
+                        <div class="msg-card__content">
+                          <p class="msg-card__text">Уважаемые абоненты прием Webmoney отключен (заблокировали кошелек) и больше производится не будет!</p>
+                        </div>
+                        <div class="msg-card__footer"><a class="msg-card__link link-text" href="#">Читать подробно</a><span class="msg-card__date">3 мая 2020 г.</span></div>
+                      </div>
+                    </div>
+                    <div class="notifications-carousel__item">
+                      <div class="msg-card">
+                        <div class="msg-card__header">
+                          <div class="msg-card__tag msg-card__tag_urgent"><span>срочно!</span></div>
+                          <p class="msg-card__title">Изменения в бесплатном тесте (прием Webmoney отключен)</p>
+                        </div>
+                        <div class="msg-card__content">
+                          <p class="msg-card__text">Уважаемые абоненты прием Webmoney отключен (заблокировали кошелек) и больше производится не будет!</p>
+                        </div>
+                        <div class="msg-card__footer"><a class="msg-card__link link-text" href="#">Читать подробно</a><span class="msg-card__date">3 мая 2020 г.</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="devices-table" data-hints-anchor>
+                  <div class="hints-container"></div>
+                  <div class="devices-table__header">
+                    <p class="devices-table__title">Мои устройства и подписки</p>
+                    <button class="devices-table__add button-text" data-toggle-block="modal-device-add">Добавить</button>
+                  </div>
+                  <div class="devices-table__content-wrap">
+                    <div class="devices-table__content acc-custom-scroll">
+                      <div class="devices-table__list" data-devices-list="table">
+                        <div class="devices-table__empty"><span>Список пуст</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="acc-section acc-section-links hidden-tb-down">
+          <div class="content-wrap">
+            <div class="acc-section__content">
+              <div class="acc-nav"><a class="acc-nav__link active" href="#">Настройки просмотра</a><a class="acc-nav__link" href="#">Управление DNS</a><a class="acc-nav__link" href="#">Лог работы</a><a class="acc-nav__link" href="#">Мои рефералы</a></div>
+            </div>
+            <div class="acc-section__aside">
+              <div class="acc-link-player-wrap"><a class="acc-link-player" href="#" target="_blank"><span class="acc-link-player__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M15.6941 10.9214L10.3919 8.02027C10.0871 7.85346 9.72671 7.85968 9.42788 8.03675C9.12887 8.21399 8.95053 8.5271 8.95053 8.87463V14.6271C8.95053 14.9729 9.12778 15.2855 9.42477 15.4629C9.57986 15.5556 9.7518 15.6021 9.9241 15.6021C10.0819 15.6021 10.2401 15.5631 10.3857 15.4847L15.688 12.6336C16.0028 12.4642 16.1993 12.137 16.2007 11.7794C16.202 11.4218 16.0079 11.0931 15.6941 10.9214ZM10.357 13.9034V9.60412L14.3197 11.7724L10.357 13.9034Z" fill="#5C70CF"/>
+<path d="M23.8234 7.19658L23.8223 7.18559C23.802 6.99242 23.5996 5.27416 22.7643 4.4002C21.7988 3.37225 20.7042 3.24737 20.1778 3.1875C20.1342 3.18256 20.0943 3.17798 20.0586 3.17322L20.0166 3.16882C16.8438 2.93811 12.0521 2.90662 12.0042 2.90643L12 2.90625L11.9957 2.90643C11.9478 2.90662 7.1561 2.93811 3.9547 3.16882L3.9124 3.17322C3.87834 3.17779 3.84081 3.18201 3.79997 3.18677C3.27959 3.24682 2.19671 3.37189 1.22845 4.43701C0.43286 5.30163 0.20288 6.98308 0.17926 7.17204L0.176513 7.19658C0.169372 7.27696 0 9.19059 0 11.1117V12.9076C0 14.8288 0.169372 16.7424 0.176513 16.8229L0.177795 16.835C0.198119 17.0251 0.400267 18.7119 1.23175 19.5862C2.13958 20.5797 3.28746 20.7112 3.90489 20.7819C4.00249 20.793 4.08653 20.8025 4.14384 20.8126L4.19932 20.8203C6.03129 20.9946 11.7751 21.0805 12.0186 21.084L12.026 21.0842L12.0333 21.084C12.0813 21.0838 16.8727 21.0523 20.0456 20.8216L20.0875 20.8172C20.1276 20.8119 20.1726 20.8071 20.2221 20.802C20.7395 20.7471 21.8166 20.633 22.7715 19.5823C23.567 18.7175 23.7972 17.0361 23.8206 16.8473L23.8234 16.8228C23.8305 16.7422 24.0001 14.8288 24.0001 12.9076V11.1117C23.9999 9.19059 23.8305 7.27714 23.8234 7.19658ZM22.5935 12.9076C22.5935 14.6857 22.4382 16.517 22.4236 16.6851C22.3639 17.1481 22.1213 18.212 21.7336 18.6333C21.136 19.2908 20.522 19.356 20.0738 19.4034C20.0196 19.4091 19.9694 19.4146 19.924 19.4203C16.8552 19.6422 12.2444 19.6763 12.032 19.6776C11.7938 19.6741 6.13401 19.5875 4.35789 19.4225C4.26689 19.4077 4.16856 19.3963 4.06493 19.3846C3.53923 19.3243 2.81963 19.2419 2.26629 18.6333L2.25329 18.6194C1.87243 18.2226 1.63677 17.2278 1.5769 16.6906C1.56573 16.5635 1.40643 14.7107 1.40643 12.9076V11.1117C1.40643 9.33561 1.56133 7.50639 1.57635 7.33482C1.64758 6.78935 1.89477 5.78997 2.26629 5.38604C2.88225 4.70855 3.53172 4.63348 3.96129 4.58386C4.0023 4.5791 4.04057 4.5747 4.07591 4.57012C7.18942 4.3471 11.8333 4.31396 12 4.31268C12.1666 4.31378 16.8088 4.3471 19.8947 4.57012C19.9326 4.57488 19.974 4.57964 20.0185 4.58477C20.4603 4.63513 21.1281 4.7113 21.7409 5.36498L21.7466 5.37102C22.1275 5.76781 22.3631 6.78002 22.423 7.32805C22.4336 7.44798 22.5935 9.30485 22.5935 11.1117V12.9076Z" fill="#5C70CF"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="24" height="23.9999" fill="white"/>
+</clipPath>
+</defs>
+</svg></span><span>Онлайн плеер</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="acc-section">
+          <div class="content-wrap">
+            <div class="acc-section__content">
+              <div class="acc-stepper">
+                <div class="acc-stepper__item active">
+                  <div class="acc-stepper__item-number"><span>1</span></div>
+                  <p class="acc-stepper__item-title">Устройство</p>
+                </div>
+                <div class="acc-stepper__item">
+                  <div class="acc-stepper__item-number"><span>2</span></div>
+                  <p class="acc-stepper__item-title">Подписка</p>
+                </div>
+                <div class="acc-stepper__item">
+                  <div class="acc-stepper__item-number"><span>3</span></div>
+                  <p class="acc-stepper__item-title">Настройка</p>
+                </div>
+                <div class="acc-stepper__item">
+                  <div class="acc-stepper__item-number"><span>4</span></div>
+                  <p class="acc-stepper__item-title">Каналы</p>
+                </div>
+                <div class="acc-stepper__item">
+                  <div class="acc-stepper__item-number"><span>5</span></div>
+                  <p class="acc-stepper__item-title">Плейлист</p>
+                </div>
+              </div>
+              <div class="acc-helper close-anchor">
+                <div class="acc-helper__close close-button"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.85756 5.15231L10.7514 1.2584C11.0048 1.00511 11.0048 0.595589 10.7514 0.342306C10.4981 0.089023 10.0886 0.089023 9.83528 0.342306L5.94135 4.23622L2.04755 0.342306C1.79415 0.089023 1.38474 0.089023 1.13146 0.342306C0.878056 0.595589 0.878056 1.00511 1.13146 1.2584L5.02526 5.15231L1.13146 9.04623C0.878056 9.29951 0.878056 9.70904 1.13146 9.96232C1.25768 10.0887 1.42365 10.1521 1.5895 10.1521C1.75535 10.1521 1.9212 10.0887 2.04755 9.96232L5.94135 6.0684L9.83528 9.96232C9.96162 10.0887 10.1275 10.1521 10.2933 10.1521C10.4592 10.1521 10.625 10.0887 10.7514 9.96232C11.0048 9.70904 11.0048 9.29951 10.7514 9.04623L6.85756 5.15231Z" fill="#202020"/>
+</svg>
+                </div>
+                <p class="acc-helper__title title-block">Здесь все настраивается<span class="c-accent">&nbsp;под Вас!</span></p>
+                <div class="acc-helper__delim"></div>
+                <div class="acc-steps">
+                  <p class="acc-steps__title">Поехали!</p>
+                  <div class="helper-steps">
+                    <div class="helper-step">
+                      <div class="helper-step__header">
+                        <p class="helper-step__title">1 шаг</p><span class="helper-step__icon"><img src="./img/icons/helper-steps/helper-step-1.svg"></span>
+                      </div>
+                      <div class="helper-step__text">Пополняем<span class="c-accent">&nbsp;баланс</span>&nbsp;и создаем устройства, на которых будем смотреть</div>
+                    </div>
+                    <div class="helper-step">
+                      <div class="helper-step__header">
+                        <p class="helper-step__title">2 шаг</p><span class="helper-step__icon"><img src="./img/icons/helper-steps/helper-step-2.svg"></span>
+                      </div>
+                      <div class="helper-step__text">Доступ на 24 часа<br/>или</br>Выбор тарифа</div>
+                    </div>
+                    <div class="helper-step">
+                      <div class="helper-step__header">
+                        <p class="helper-step__title">3 шаг</p><span class="helper-step__icon"><img src="./img/icons/helper-steps/helper-step-3.svg"></span>
+                      </div>
+                      <div class="helper-step__text">Настраиваем<br/>IPTV<br/>под свое устройство</div>
+                    </div>
+                    <div class="helper-step">
+                      <div class="helper-step__header">
+                        <p class="helper-step__title">4 шаг</p><span class="helper-step__icon"><img src="./img/icons/helper-steps/helper-step-4.svg"></span>
+                      </div>
+                      <div class="helper-step__text">Выбираем каналы для просмотра и создаем плейлисты</div>
+                    </div>
+                    <div class="helper-step">
+                      <div class="helper-step__header">
+                        <p class="helper-step__title">5 шаг</p><span class="helper-step__icon"><img src="./img/icons/helper-steps/helper-step-5.svg"></span>
+                      </div>
+                      <div class="helper-step__text">Скачиваем плейлист<br/>или<br/>копируем ссылку</div>
+                    </div>
+                  </div>
+                  <p class="acc-steps__finish">Осталось вставить ссылку в устройство!</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc-section__aside">
+              <div class="gift-card close-anchor">
+                <div class="gift-card__close close-button"><svg width="9" height="9" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.85756 5.15231L10.7514 1.2584C11.0048 1.00511 11.0048 0.595589 10.7514 0.342306C10.4981 0.089023 10.0886 0.089023 9.83528 0.342306L5.94135 4.23622L2.04755 0.342306C1.79415 0.089023 1.38474 0.089023 1.13146 0.342306C0.878056 0.595589 0.878056 1.00511 1.13146 1.2584L5.02526 5.15231L1.13146 9.04623C0.878056 9.29951 0.878056 9.70904 1.13146 9.96232C1.25768 10.0887 1.42365 10.1521 1.5895 10.1521C1.75535 10.1521 1.9212 10.0887 2.04755 9.96232L5.94135 6.0684L9.83528 9.96232C9.96162 10.0887 10.1275 10.1521 10.2933 10.1521C10.4592 10.1521 10.625 10.0887 10.7514 9.96232C11.0048 9.70904 11.0048 9.29951 10.7514 9.04623L6.85756 5.15231Z" fill="#202020"/>
+</svg>
+                </div>
+                <div class="gift-card__img"><img src="./img/decor/gift.svg" alt="gift"></div>
+                <div class="gift-card__content">
+                  <p class="gift-card__title">Подарок ждет!</p>
+                  <div class="gift-card__text">
+                    <p>Смотрите IPTV 24 часа - бесплатно!</p>
+                  </div>
+                </div>
+                <div class="gift-card__footer">
+                  <div class="gift-card__tag"><span>После теста есть подписка</span></div><a class="link-text-blue" href="#">Начать просмотр</a>
+                </div>
+              </div>
+              <div class="acc-configs">
+                <div class="config-block" id="config-block-device" data-state="init">
+                  <div class="config-block__header config-block__header_device">
+                    <p class="config-block__title">Устройство</p>
+                    <div class="config-block__header-buttons">
+                      <button class="config-block__button-add link-text-blue" data-toggle-block="modal-device-add">
+                        Добавить<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4 6.22988H6.60004V1.26813C6.60004 0.925842 6.3312 0.647949 5.99996 0.647949C5.66884 0.647949 5.4 0.925842 5.4 1.26813V6.22988H0.599963C0.268835 6.22988 0 6.50778 0 6.85006C0 7.19246 0.268835 7.47035 0.599963 7.47035H5.4V12.432C5.4 12.7744 5.66884 13.0523 5.99996 13.0523C6.3312 13.0523 6.60004 12.7744 6.60004 12.432V7.47035H11.4C11.7312 7.47035 12 7.19246 12 6.85006C12 6.50778 11.7312 6.22988 11.4 6.22988Z" fill="#5C70CF"/>
+</svg>
+                      </button>
+                      <div class="m-select settings-select settings-select_align_right">
+                        <div class="m-select__trigger">
+                          <input class="m-select__input hidden" type="text" value=""><span class="m-select__value">не выбрано</span><span class="m-select__trigger-icon"><i class="m-icon-arrow-orange"></i></span>
+                        </div>
+                        <div class="m-select__content">
+                          <div class="m-select__search">
+                            <input class="m-select__search-input" type="text" placeholder="Введите название">
+                          </div>
+                          <div class="m-select__list" data-devices-list="select"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device-id">
+                    <div class="device-id__title"><span class="device-id__text">OTT ID</span>
+                      <button class="clean-button device-id__refresh"><i class="m-icon-refresh"></i></button>
+                    </div>
+                    <div class="device-id__content" data-copy-anchor><span class="device-id__value default">Добавьте устройство</span><span class="device-id__value not-selected">Выберите устройство</span><span class="device-id__value" data-copy-value data-device-ott-id></span>
+                      <button data-copy-button></button>
+                    </div>
+                  </div>
+                  <div class="device-links">
+                    <div class="device-links__block">
+                      <p class="device-links__block-title device-links__list-toggler"><span>Прямые ссылки (http и https)</span><svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.85614 1.11503L8.56134 0.808169C8.46856 0.712338 8.34512 0.659544 8.21319 0.659544C8.08133 0.659544 7.95775 0.712338 7.86497 0.808169L4.50201 4.28457L1.13518 0.804312C1.04255 0.70848 0.918959 0.655762 0.787104 0.655762C0.655249 0.655762 0.53159 0.70848 0.438882 0.804312L0.144001 1.10928C-0.0480004 1.3076 -0.0480004 1.63064 0.144001 1.82896L4.15262 5.98753C4.24525 6.08328 4.36869 6.15075 4.50172 6.15075H4.50326C4.63518 6.15075 4.75862 6.08321 4.85126 5.98753L8.85614 1.84023C8.94893 1.74447 8.99985 1.61302 9 1.47672C9 1.34035 8.94893 1.21071 8.85614 1.11503Z" fill="#5C70CF"/>
+</svg>
+                      </p>
+                      <div class="device-links__list">
+                        <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                          <button data-copy-button data-toggle-block="modal-copy"></button>
+                        </p>
+                        <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                          <button data-copy-button data-toggle-block="modal-copy"></button>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="device-links__block">
+                      <p class="device-links__block-title device-links__list-toggler"><span>Анонимные ссылки (http и https)</span><svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.85614 1.11503L8.56134 0.808169C8.46856 0.712338 8.34512 0.659544 8.21319 0.659544C8.08133 0.659544 7.95775 0.712338 7.86497 0.808169L4.50201 4.28457L1.13518 0.804312C1.04255 0.70848 0.918959 0.655762 0.787104 0.655762C0.655249 0.655762 0.53159 0.70848 0.438882 0.804312L0.144001 1.10928C-0.0480004 1.3076 -0.0480004 1.63064 0.144001 1.82896L4.15262 5.98753C4.24525 6.08328 4.36869 6.15075 4.50172 6.15075H4.50326C4.63518 6.15075 4.75862 6.08321 4.85126 5.98753L8.85614 1.84023C8.94893 1.74447 8.99985 1.61302 9 1.47672C9 1.34035 8.94893 1.21071 8.85614 1.11503Z" fill="#5C70CF"/>
+</svg>
+                      </p>
+                      <div class="device-links__list">
+                        <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                          <button data-copy-button data-toggle-block="modal-copy"></button>
+                        </p>
+                        <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                          <button data-copy-button data-toggle-block="modal-copy"></button>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="device-links__block">
+                      <p class="device-links__block-title device-links__list-toggler"><span>Источники EPG</span><svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.85614 1.11503L8.56134 0.808169C8.46856 0.712338 8.34512 0.659544 8.21319 0.659544C8.08133 0.659544 7.95775 0.712338 7.86497 0.808169L4.50201 4.28457L1.13518 0.804312C1.04255 0.70848 0.918959 0.655762 0.787104 0.655762C0.655249 0.655762 0.53159 0.70848 0.438882 0.804312L0.144001 1.10928C-0.0480004 1.3076 -0.0480004 1.63064 0.144001 1.82896L4.15262 5.98753C4.24525 6.08328 4.36869 6.15075 4.50172 6.15075H4.50326C4.63518 6.15075 4.75862 6.08321 4.85126 5.98753L8.85614 1.84023C8.94893 1.74447 8.99985 1.61302 9 1.47672C9 1.34035 8.94893 1.21071 8.85614 1.11503Z" fill="#5C70CF"/>
+</svg>
+                      </p>
+                      <div class="device-links__list">
+                        <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                          <button data-copy-button data-toggle-block="modal-copy"></button>
+                        </p>
+                        <p class="device-links__list-item" data-copy-anchor><span class="device-links__list-item-value" data-copy-value>http://1srv.org/iptv/p/UdDrXrhcqaadfoh123ho123sdf7094lj</span>
+                          <button data-copy-button data-toggle-block="modal-copy"></button>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="device-links__block">
+                      <p class="device-links__block-title"><span>Picon</span><a class="device-links__block-link" href="#"><i class="m-icon-download"></i></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="config-block config-list-anchor">
+                  <div class="config-block__header">
+                    <p class="config-block__title">Мои плейлисты</p>
+                    <div class="config-block__header-buttons">
+                      <button class="config-block__button-add link-text-blue" data-toggle-block="modal-playlist-add">
+                        Добавить<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4 6.22988H6.60004V1.26813C6.60004 0.925842 6.3312 0.647949 5.99996 0.647949C5.66884 0.647949 5.4 0.925842 5.4 1.26813V6.22988H0.599963C0.268835 6.22988 0 6.50778 0 6.85006C0 7.19246 0.268835 7.47035 0.599963 7.47035H5.4V12.432C5.4 12.7744 5.66884 13.0523 5.99996 13.0523C6.3312 13.0523 6.60004 12.7744 6.60004 12.432V7.47035H11.4C11.7312 7.47035 12 7.19246 12 6.85006C12 6.50778 11.7312 6.22988 11.4 6.22988Z" fill="#5C70CF"/>
+</svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="config-list-buttons">
+                    <button class="config-list-remove link-text clean-button" data-toggle-block="modal-playlists-remove">Удалить выбранное</button>
+                  </div>
+                  <div class="config-list">
+                    <div class="config-list__content acc-custom-scroll">
+                      <div class="config-list__empty"><span>Список пуст</span></div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content"><i class="m-icon-play"></i>
+                            <input data-config-input type="text" name="playlist-default" value="По умолчанию" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content"><i class="m-icon-play"></i>
+                            <input data-config-input type="text" name="playlist-1" value="Плейлист 1" disabled>
+                          </div>
+                        </div>
+                        <div class="config-list__item-buttons">
+                          <div data-config-buttons>
+                            <button data-config-save></button>
+                            <button data-config-edit></button>
+                            <button data-config-remove data-toggle-block="modal-playlist-remove"></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="config-block config-list-anchor">
+                  <div class="config-block__header">
+                    <p class="config-block__title">Мои серверы</p>
+                    <div class="config-block__header-buttons">
+                      <button class="config-block__button-add link-text-blue">Подобрать</button>
+                    </div>
+                  </div>
+                  <div class="config-list config-list_select_single">
+                    <div class="config-list__content acc-custom-scroll">
+                      <div class="config-list__empty"><span>Список пуст</span></div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-1" value="Server RU01 (Russia)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-2" value="Server NL01 (Amsterdam)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-3" value="Server CH01 (Zurich)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-4" value="Server AM01 (Amsterdam)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-5" value="Server FR01 (France)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-6" value="Server RU01 (Russia)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-7" value="Server NL01 (Amsterdam)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-8" value="Server CH01 (Zurich)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-9" value="Server AM01 (Amsterdam)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="config-list__item" data-config-item>
+                        <div class="config-list__item-select">
+                          <div class="config-list__item-box"></div>
+                          <div class="config-list__item-content">
+                            <input data-config-input type="text" name="server-10" value="Server FR01 (France)" disabled>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content-wrap">
+        <div class="footer__content">
+          <p class="footer__copy">Copyright © 2011-2020</p>
+          <div class="footer__payment hidden-sm-down">
+            <p class="footer__payment-title">Мы принимаем:</p>
+            <div class="footer__payment-list">
+              <div class="footer__payment-item"><img src="./img/content/paypal.svg"><span class="footer__payment-item-title">Pay Pal</span></div>
+              <div class="footer__payment-item"><img src="./img/content/sprypay.png"></div>
+              <div class="footer__payment-item"><img src="./img/content/webmoney.svg"><span class="footer__payment-item-title">WebMoney</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modals">
+      <div class="modal" data-block-id="modal-device-add">
+        <div class="modal__content">
+          <div class="modal-card modal-card_icon_add">
+            <div class="modal__close modal-card__close"></div>
+            <p class="modal-card__title">Создать новое устройство?</p>
+            <form class="modal-card__form" id="form-device-add">
+              <input class="modal-card__form-input" type="text" name="name" placeholder="Название устройства" required>
+              <button class="modal-card__form-submit" type="submit">создать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-block-id="modal-device-remove">
+        <div class="modal__content">
+          <div class="modal-card modal-card_icon_remove">
+            <div class="modal__close modal-card__close"></div>
+            <p class="modal-card__title">Хотите удалить устройство?</p>
+            <form class="modal-card__form" id="form-device-remove">
+              <input type="text" name="id" hidden value="">
+              <button class="button-main" type="submit">Удалить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-block-id="modal-playlist-add">
+        <div class="modal__content">
+          <div class="modal-card modal-card_icon_add">
+            <div class="modal__close modal-card__close"></div>
+            <p class="modal-card__title">Создать новый плейлист?</p>
+            <form class="modal-card__form" id="form-playlist-add">
+              <input class="modal-card__form-input" type="text" placeholder="Название плейлиста">
+              <button class="modal-card__form-submit" type="submit">создать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-block-id="modal-playlist-remove">
+        <div class="modal__content">
+          <div class="modal-card modal-card_icon_remove">
+            <div class="modal__close modal-card__close"></div>
+            <p class="modal-card__title">Хотите удалить плейлист?</p>
+            <form class="modal-card__form" id="form-playlist-remove">
+              <input type="text" name="id" hidden value="">
+              <button class="button-main" type="submit">Удалить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-block-id="modal-playlists-remove">
+        <div class="modal__content">
+          <div class="modal-card modal-card_icon_remove">
+            <div class="modal__close modal-card__close"></div>
+            <p class="modal-card__title">Хотите удалить выбранные плейлисты?</p>
+            <form class="modal-card__form" id="form-playlists-remove">
+              <input type="text" name="id" hidden value="">
+              <button class="button-main" type="submit">Удалить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-block-id="modal-copy">
+        <div class="modal__content">
+          <div class="modal-card modal-card_icon_copy">
+            <div class="modal__close modal-card__close"></div>
+            <p class="modal-card__title">Ссылка скопирована!</p>
+            <p class="modal-card__text">Можно смело вставлять ее<br/>в устройство!</p>
+          </div>
+        </div>
+      </div>
+      <!-- TODO: Remove later-->
+      <div class="testing">
+        <button class="button-text" id="test-init-devices">Загрузить девайсы</button>
+      </div>
+    </div>
+    <script defer src="./js/jquery.min.js"></script>
+    <script defer src="./js/jquery-ui.min.js"></script>
+    <script defer src="./js/slick.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/simplebar@5.1.0/dist/simplebar.min.js"></script>
+    <script defer src="./js/ResizeObserver.global.js"></script>
+    <script defer src="./js/polyfills.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/account.js"></script>
+    <script defer src="./js/account/devices.js"></script>
+    <script defer src="./js/account/configItems.js"></script>
+    <script defer src="./js/account/formHandlers.js"></script>
+    <!-- TODO: remove later-->
+    <script defer src="./js/account/testing.js"></script>
+  </body>
+</html>
